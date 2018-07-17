@@ -52,7 +52,7 @@
     <div class="text-right">
       <div class="credits">
 
-         SIM RSJ TAMPAN 2018
+         SISTEM REKAM MEDIS RSJ TAMPAN
         </div>
     </div>
   </div>
