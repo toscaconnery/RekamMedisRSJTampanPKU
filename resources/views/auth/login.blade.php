@@ -65,7 +65,7 @@
     <div class="text-right">
       <div class="credits">
 
-         SISTEM REKAM MEDIS RSJ TAMPAN HEHE
+         SISTEM REKAM MEDIS RSJ TAMPAN
         </div>
     </div>
   </div>
