@@ -29,16 +29,29 @@
 
   <div class="container">
 
-    <form class="login-form" action="index.html">
+    <form method="POST" class="login-form" action="{{ route('login') }}">
+      @csrf
       <div class="login-wrap">
         <p class="login-img"><i class="icon_lock_alt"></i></p>
+        {{-- username --}}
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_profile"></i></span>
-          <input type="text" class="form-control" placeholder="Username" autofocus>
+          <input type="text" name="email" class="form-control" placeholder="Username" autofocus>
+          @if ($errors->has('email'))
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $errors->first('email') }}</strong>
+            </span>
+          @endif
         </div>
+        {{-- password --}}
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" name="password" class="form-control" placeholder="Password">
+          @if ($errors->has('password'))
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $errors->first('password') }}</strong>
+            </span>
+          @endif
         </div>
         <!-- <label class="checkbox">
                 <input type="checkbox" value="remember-me"> Remember me 
@@ -52,7 +65,7 @@
     <div class="text-right">
       <div class="credits">
 
-         SISTEM REKAM MEDIS RSJ TAMPAN
+         SISTEM REKAM MEDIS RSJ TAMPAN HEHE
         </div>
     </div>
   </div>
