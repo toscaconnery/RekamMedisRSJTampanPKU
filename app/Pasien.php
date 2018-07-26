@@ -14,14 +14,14 @@ class Pasien extends Model
 
     protected $table = 'pasien';
 
-    protected $primary_key = 'id'
+    protected $primary_key = 'no_rm'
 
     public $incrementing = true;
 
     public $timestamps = true;
 
     protected $fillable = [
-        'nama', 'tanggal_lahir', 'jenis_kelamin', 'pernikahan', 'agama', 'pendidikan', 'pekerjaan', 'bahasa', 'nama_ayah', 'nama_ibu', 'suku', 'alamat', 'rt', 'rw', 'telepon', 'perubahan_alamat', 'nama_pj', 'alamat_pj', 'hubungan_pj', 'telepon_pj',
+        'nama_pasien', 'tanggal_lahir', 'jenis_kelamin',
     ];
 
     /**
@@ -33,27 +33,3 @@ class Pasien extends Model
         'password', 'remember_token',
     ];
 }
-
-
-$table->increments('id');
-            $table->string('nama');
-            $table->string('tanggal_lahir');
-            $table->smallInteger('jenis_kelamin');
-            $table->string('pernikahan');
-            $table->string('agama');
-            $table->string('pendidikan');
-            $table->string('pekerjaan');
-            $table->string('bahasa');
-            $table->string('nama_ayah');
-            $table->string('nama_ibu');
-            $table->string('suku');
-            $table->string('alamat');
-            $table->string('rt');
-            $table->string('rw');
-            $table->string('telepon');
-            $table->string('perubahan_alamat')->nullable();
-            $table->string('nama_pj');
-            $table->string('alamat_pj');
-            $table->string('hubungan_pj');
-            $table->string('telepon_pj')
-            $table->timestamps();
