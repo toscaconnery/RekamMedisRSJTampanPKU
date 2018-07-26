@@ -34,7 +34,7 @@ class CreatePasienTable extends Migration
             $table->string('nama_pj');
             $table->string('alamat_pj');
             $table->string('hubungan_pj');
-            $table->string('telepon_pj')
+            $table->string('telepon_pj');
             $table->timestamps();
         });
     }
