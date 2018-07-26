@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('login_page');
+    return view('form_identifikasi_pasien_baru');
 });
+
+Route::get('/form_validation', function()
+{
+    return view('form_validation');
+});
+
