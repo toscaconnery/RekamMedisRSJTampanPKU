@@ -4,17 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Pasien extends Model
+class Identifikasi extends Model
 {
-    protected $table = 'pasien';
+    protected $table = 'identifikasi';
 
-    protected $primary_key = 'no_rm'
+    protected $primary_key = 'id_regis';
 
     public $incrementing = true;
 
     public $timestamps = true;
 
     protected $fillable = [
-        'no_rm', 'nama_pasien', 'tanggal_lahir', 'jenis_kelamin',
+    	'no_rm',
     ];
 }

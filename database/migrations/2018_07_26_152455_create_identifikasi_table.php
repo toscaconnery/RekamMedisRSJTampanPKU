@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFormIdentifikasiBaruTable extends Migration
+class CreateIdentifikasiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateFormIdentifikasiBaruTable extends Migration
      */
     public function up()
     {
-        Schema::create('form_identifikasi_baru', function (Blueprint $table) {
-            $table->increments('id_reg');
+        Schema::create('identifikasi', function (Blueprint $table) {
+            $table->increments('id_regis');
             $table->integer('no_rm')->references('no_rm')->on('pasien');
             $table->timestamps();
         });
@@ -27,6 +27,6 @@ class CreateFormIdentifikasiBaruTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('form_identifikasi_baru');
+        Schema::dropIfExists('identifikasi');
     }
 }

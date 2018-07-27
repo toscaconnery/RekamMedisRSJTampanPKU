@@ -15,7 +15,7 @@ class Triase extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'id_reg', 'tanggal_masuk', 'jam', 'keluhan_utama', 'jalan_nafas', 'frek_nafas', 'sianosis', 'henti_nafas', 'mengi', 'henti_jantung', 'frek_nadi', 'pucat', 'akral_dingin', 'gcs', 'doa',
+        'id_regis', 'waktu_masuk', 'keluhan_utama', 'jalan_nafas', 'frek_nafas', 'sianosis', 'henti_nafas', 'mengi', 'henti_jantung', 'frek_nadi', 'pucat', 'akral_dingin', 'gcs', 'doa',
     ];
 }
 

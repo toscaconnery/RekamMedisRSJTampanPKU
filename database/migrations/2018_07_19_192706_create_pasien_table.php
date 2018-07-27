@@ -17,26 +17,7 @@ class CreatePasienTable extends Migration
             $table->increments('no_rm');
             $table->string('nama_pasien');
             $table->date('tanggal_lahir');
-            $table->string('jenis_kelamin');
-            // $table->string('tanggal_lahir');
-            // $table->smallInteger('jenis_kelamin');
-            // $table->string('pernikahan');
-            // $table->string('agama');
-            // $table->string('pendidikan');
-            // $table->string('pekerjaan');
-            // $table->string('bahasa');
-            // $table->string('nama_ayah');
-            // $table->string('nama_ibu');
-            // $table->string('suku');
-            // $table->string('alamat');
-            // $table->string('rt');
-            // $table->string('rw');
-            // $table->string('telepon');
-            // $table->string('perubahan_alamat')->nullable();
-            // $table->string('nama_pj');
-            // $table->string('alamat_pj');
-            // $table->string('hubungan_pj');
-            // $table->string('telepon_pj');
+            $table->string('jenis_kelamin', 12);
             $table->timestamps();
         });
     }
