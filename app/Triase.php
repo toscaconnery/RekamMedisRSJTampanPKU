@@ -8,7 +8,7 @@ class Triase extends Model
 {
     protected $table = 'triase';
 
-    protected $primary_key = 'id_triase'
+    protected $primaryKey = 'id_triase'
 
     public $incrementing = true;
 

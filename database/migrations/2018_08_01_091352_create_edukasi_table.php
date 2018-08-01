@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAsesmenRawatJalanTable extends Migration
+class CreateEdukasiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,19 @@ class CreateAsesmenRawatJalanTable extends Migration
      */
     public function up()
     {
-        Schema::create('asesmen_rawat_jalan', function (Blueprint $table) {
-            $table->increments('id_rj');
+        Schema::create('edukasi', function (Blueprint $table) {
+            $table->increments('id_edu');
             $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
             $table->integer('id_user')->reference('id_user')->on('users');
+            $table->boolean('penerjemah');
+            $table->boolean('baca_tulis');
+            $table->boolean('cara_belajar');
+            $table->string('hambatan', 100);
+            $table->string('kebutuhan', 100);
+            $table->boolean('kededidaan');
+            $table->string('nama_wali', 32);
+            $table->string('hubungan', 30);
             $table->date('tanggal');
-            $table->string('alasan_kunjungan', 100);
-            $table->boolean('hubungan_keluarga');
-            $table->string('status_psikologis', 20);
-            $table->string('keluhan_utama');
             $table->timestamps();
         });
     }
@@ -33,6 +37,6 @@ class CreateAsesmenRawatJalanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('asesmen_rawat_jalan');
+        Schema::dropIfExists('edukasi');
     }
 }
