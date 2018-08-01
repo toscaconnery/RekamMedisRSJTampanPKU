@@ -23,10 +23,14 @@ Route::get('/identifikasi', function () {
     return view('identifikasi');
 });
 
-Route::get('/surat_persetujuan', function () {
-    return view('surat_persetujuan');
+Route::get('/ri_surat_persetujuan', function () {
+    return view('ri_surat_persetujuan');
 });
 
 Route::get('/penundaan_pelayanan', function () {
     return view('penundaan_pelayanan');
+});
+
+Route::get('/rj_asesmen', function () {
+    return view('rj_asesmen');
 });
