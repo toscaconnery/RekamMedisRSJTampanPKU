@@ -156,7 +156,7 @@
           </li>
 
           <li>
-            <a class="" href="widgets.html">
+            <a class="" href="{{url('')}}/penundaan_pelayanan">
                           <i class="icon_document_alt"></i>
                           <span><font size="2">Penundaan Pelayanan</font></span>
                       </a>
