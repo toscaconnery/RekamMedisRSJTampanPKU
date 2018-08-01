@@ -26,3 +26,7 @@ Route::get('/identifikasi', function () {
 Route::get('/surat_persetujuan', function () {
     return view('surat_persetujuan');
 });
+
+Route::get('/penundaan_pelayanan', function () {
+    return view('penundaan_pelayanan');
+});

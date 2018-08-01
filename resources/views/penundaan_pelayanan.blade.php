@@ -7,9 +7,9 @@
   <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="shortcut icon" href="{{url('')}}/admin_bootstrap/img/favicon.png">
 
-  <title>Identifikasi Pasien Baru</title>
+  <title>Penundaan Pelayanan</title>
 
    <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +27,10 @@
   <!-- owl carousel -->
   <link rel="stylesheet" href="{{url('')}}/admin_bootstrap/css/owl.carousel.css" type="text/css">
   <link href="{{url('')}}/admin_bootstrap/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+  <!--datepicker styles -->
+  <link href="{{url('')}}/admin_bootstrap/css/daterangepicker.css" rel="stylesheet" />
+  <link href="{{url('')}}/admin_bootstrap/css/bootstrap-datepicker.css" rel="stylesheet" />
+  <link href="{{url('')}}/admin_bootstrap/css/bootstrap-colorpicker.css" rel="stylesheet" />
   <!-- Custom styles -->
   <link rel="stylesheet" href="{{url('')}}/admin_bootstrap/css/fullcalendar.css">
   <link href="{{url('')}}/admin_bootstrap/css/widgets.css" rel="stylesheet">
@@ -40,7 +44,7 @@
 <body>
  <section id="container" class="">
  <header class="header dark-bg">
- 		<a href="{{url('')}}/index" class="logo">REKAM MEDIS <span class="lite">RSJ TAMPAN</span></a>
+    <a href="{{url('')}}/index" class="logo">REKAM MEDIS <span class="lite">RSJ TAMPAN</span></a>
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">
@@ -152,7 +156,7 @@
           </li>
 
           <li>
-            <a class="" href="{{url('')}}/penundaan_pelayanan">
+            <a class="" href="widgets.html">
                           <i class="icon_document_alt"></i>
                           <span><font size="2">Penundaan Pelayanan</font></span>
                       </a>
@@ -170,7 +174,7 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-file-text-o"></i> IDENTIFIKASI PASIEN BARU</h3>
+            <h3 class="page-header"><i class="fa fa-file-text-o"></i> PENUNDAAN PELAYANAN</h3>
             <!--<ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_document_alt"></i>Forms</li>
@@ -197,7 +201,7 @@
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Dokumen Identifikasi Pasien
+                Dokumen Penundaan Pelayanan
               </header>
 
               <table class="table table-striped table-advance table-hover">
@@ -209,7 +213,7 @@
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
                   <tr>
-                    <td>Identifikasi Pasien</td>
+                    <td>Penundaan Pelayanan</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>
@@ -229,147 +233,12 @@
         <div class="row">
           <div class="col-lg-12">
 
-          	<section class="panel">
-              <header class="panel-heading">
-                Status
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-                  
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Pernikahan</label>
-                    <div class="col-lg-3">
-                      <select class="form-control m-bot15">
-                                              <option>Tidak Kawin</option>
-                                              <option>Kawin</option>
-                                              <option>Cerai Hidup</option>
-                                              <option>Cerai Mati</option>
-                                          </select>
-                    </div>
-
-                    <label class="control-label col-lg-2" for="inputSuccess">Agama</label>
-                    <div class="col-lg-3">
-                      <select class="form-control m-bot15">
-                                              <option>Islam</option>
-                                              <option>Kristen</option>
-                                              <option>Katholik</option>
-                                              <option>Hindu</option>
-                                              <option>Budha</option>
-                                              <option>Konghucu</option>
-                                          </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Pendidikan</label>
-                    <div class="col-lg-3">
-                      <select class="form-control m-bot15">
-                                              <option>Tidak Sekolah</option>
-                                              <option>SD</option>
-                                              <option>SMP</option>
-                                              <option>SMA</option>
-                                              <option>Akademi</option>
-                                              <option>Universitas</option>
-                                          </select>
-                    </div>
-
-                    <label class="control-label col-lg-2" for="inputSuccess">Pekerjaan</label>
-                    <div class="col-lg-3">
-                      <select class="form-control m-bot15">
-                                              <option>Tidak Kerja</option>
-                                              <option>Buruh</option>
-                                              <option>Tani</option>
-                                              <option>Swasta/Wiraswasta</option>
-                                              <option>PNS</option>
-                                              <option>TNI/POLRI</option>
-                                          </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Bahasa Sehari-hari</label>
-                    <div class="col-lg-5">
-                      <select class="form-control m-bot15">
-                                              <option>Indonesia</option>
-                                              <option>Melayu</option>
-                                              <option>Jawa</option>
-                                              <option>Minang</option>
-                                              <option>Batak</option>
-                                              <option>Lainnya</option>
-                                          </select>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
-
             <section class="panel">
               <header class="panel-heading">
-                Nama Orang Tua
+                Data Penundaan
               </header>
               <div class="panel-body">
-                <form class="form-horizontal " method="get">
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama Ayah</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama Ibu</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Budaya/Suku</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Alamat</label>
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control">
-                    </div>
-                    <label class="col-sm-1 control-label">RT</label>
-                    <div class="col-sm-1">
-                      <input type="text" class="form-control">
-                    </div>
-                    <label class="col-sm-1 control-label">RW</label>
-                    <div class="col-sm-1">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">No.Telp</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Perubahan Alamat</label>
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control">
-                    </div>
-                    <label class="col-sm-1 control-label">RT</label>
-                    <div class="col-sm-1">
-                      <input type="text" class="form-control">
-                    </div>
-                    <label class="col-sm-1 control-label">RW</label>
-                    <div class="col-sm-1">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
-            <section class="panel">
-              <header class="panel-heading">
-                Penanggung Jawab
-              </header>
-              <div class="panel-body">
+
                 <form class="form-horizontal " method="get">
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Nama</label>
@@ -378,19 +247,31 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Alamat</label>
+                    <label class="col-sm-2 control-label">Umur</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Hubungan</label>
+                    <label class="col-sm-2 control-label">Hubungan dengan Pasien</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Telp</label>
+                    <label class="col-sm-2 control-label">Poli/Ruangan</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Nama Dokter Pengirim</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Pemberi Informasi</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control">
                     </div>
@@ -399,12 +280,121 @@
               </div>
             </section>
 
+            <section class="panel">
+              <header class="panel-heading">
+                Dengan ini menyatakan bahwa saya telah menerima informasi terhadap penundaan pelayanan dan pengobatan dikarenakan:
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Penundaan pelayanan</label>
+                    <div class="col-lg-10">
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox1" value="option1"> Dokter berhalangan datang
+                                          </label>
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox2" value="option2"> Kerusakan alat
+                                          </label>
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox3" value="option3"> Pemberian obat di farmasi
+                                          </label>
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox3" value="option3"> Hasil pemeriksaan radiologi
+                                          </label>
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox3" value="option3"> Hasil pemeriksaan laboratorium
+                                          </label>
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox3" value="option3"> Lain-lain .....
+                                          </label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2"></div><h5>Maka dengan ini saya Setuju untuk dilakukan Penundaan Pelayanan dengan alternatif yang diberikan</h5>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Setuju menunda</label>
+                    <div class="col-lg-10">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                  Dijadwalkan ulang
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                  Jadwal yang akan datang
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                  Dirujuk ke Pelayanan / RS lain
+                                              </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-sm-2">Jadwal Penundaan</label>
+                    <div class="col-sm-3">
+                      <input id="dp1" type="text" value="28-10-2013" size="16" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Rumah Sakit Rujukan</label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+              </div>
+                </form>
+                
+            </section>
+            
+
             <div>
             <button type="submit" class="btn btn-primary">Submit</button>
             </div>
 
-
+            </div>
+          </div>
+        </section>
            
+  <!-- javascripts -->
+  <script src="{{url('')}}/js/jquery.js"></script>
+  <script src="{{url('')}}/js/bootstrap.min.js"></script>
+  <!-- nice scroll -->
+  <script src="{{url('')}}/js/jquery.scrollTo.min.js"></script>
+  <script src="{{url('')}}/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+  <!-- jquery ui -->
+  <script src="{{url('')}}/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+  <!--custom checkbox & radio-->
+  <script type="{{url('')}}/text/javascript" src="{{url('')}}/admin_bootstrap/js/ga.js"></script>
+  <!--custom switch-->
+  <script src="{{url('')}}/js/bootstrap-switch.js"></script>
+  <!--custom tagsinput-->
+  <script src="{{url('')}}/js/jquery.tagsinput.js"></script>
+
+  <!-- colorpicker -->
+
+  <!-- bootstrap-wysiwyg -->
+  <script src="{{url('')}}/js/jquery.hotkeys.js"></script>
+  <script src="{{url('')}}/js/bootstrap-wysiwyg.js"></script>
+  <script src="{{url('')}}/js/bootstrap-wysiwyg-custom.js"></script>
+  <script src="{{url('')}}/js/moment.js"></script>
+  <script src="{{url('')}}/js/bootstrap-colorpicker.js"></script>
+  <script src="{{url('')}}/js/daterangepicker.js"></script>
+  <script src="{{url('')}}/js/bootstrap-datepicker.js"></script>
+  <!-- ck editor -->
+  <script type="text/javascript" src="{{url('')}}/assets/ckeditor/ckeditor.js"></script>
+  <!-- custom form component script for this page-->
+  <script src="{{url('')}}/js/form-component.js"></script>
+  <!-- custome script for all page -->
+  <script src="{{url('')}}/js/scripts.js"></script>
+
   <!-- javascripts -->
   <script src="{{url('')}}/admin_bootstrap/js/jquery.js"></script>
   <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.10.4.min.js"></script>

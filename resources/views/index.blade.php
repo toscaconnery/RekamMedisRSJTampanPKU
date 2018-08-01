@@ -25,10 +25,10 @@
   <!-- easy pie chart-->
   <link href="{{url('')}}/admin_bootstrap/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
   <!-- owl carousel -->
-  <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="{{url('')}}/admin_bootstrap/css/owl.carousel.css" type="text/css">
   <link href="{{url('')}}/admin_bootstrap/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
   <!-- Custom styles -->
-  <link rel="stylesheet" href="css/fullcalendar.css">
+  <link rel="stylesheet" href="{{url('')}}/admin_bootstrap/css/fullcalendar.css">
   <link href="{{url('')}}/admin_bootstrap/css/widgets.css" rel="stylesheet">
   <link href="{{url('')}}/admin_bootstrap/css/style.css" rel="stylesheet">
   <link href="{{url('')}}/admin_bootstrap/css/style-responsive.css" rel="stylesheet" />
@@ -230,7 +230,7 @@
   <script src="{{url('')}}/admin_bootstrap/js/jquery.js"></script>
   <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.10.4.min.js"></script>
   <script src="{{url('')}}/admin_bootstrap/js/jquery-1.8.3.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+  <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
   <!-- bootstrap -->
   <script src="{{url('')}}/admin_bootstrap/js/bootstrap.min.js"></script>
   <!-- nice scroll -->
