@@ -12,11 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('form_identifikasi_pasien_baru');
+    return view('index');
 });
 
-Route::get('/form_validation', function()
-{
-    return view('form_validation');
+Route::get('/index', function () {
+    return view('index');
 });
 
+Route::get('/identifikasi', function () {
+    return view('identifikasi');
+});
+
+Route::get('/ri_surat_persetujuan', function () {
+    return view('ri_surat_persetujuan');
+});
+
+Route::get('/penundaan_pelayanan', function () {
+    return view('penundaan_pelayanan');
+});
+
+Route::get('/rj_asesmen', function () {
+    return view('rj_asesmen');
+});
