@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEvaluasiTerapiTable extends Migration
+class CreateAnakTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateEvaluasiTerapiTable extends Migration
      */
     public function up()
     {
-        Schema::create('evaluasi_terapi', function (Blueprint $table) {
-            $table->increments('id_evaluasi');
+        Schema::create('anak', function (Blueprint $table) {
+            $table->increments('id_anak');
             $table->integer('id_asesmen_tk')->reference('id_asesmen_tk')->on('asesmen_tk_psikolog');
-            $table->text('isi', 1000);
+            $table->string('nama', 30);
+            $table->string('jenis_kelamin', 12);
+            $table->integer('usia');
+            $table->integer('sekolah_pekerjaan', 30);
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateEvaluasiTerapiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('evaluasi_terapi');
+        Schema::dropIfExists('anak');
     }
 }
