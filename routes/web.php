@@ -38,3 +38,11 @@ Route::get('/rj_asesmen', function () {
 Route::get('/rj_informasi_edukasi', function () {
     return view('rj_informasi_edukasi');
 });
+
+Route::get('/rj_perkembangan_pasien', function () {
+    return view('rj_perkembangan_pasien');
+});
+
+Route::get('/ri_catatan_perkembangan', function () {
+    return view('ri_catatan_perkembangan');
+});
