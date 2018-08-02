@@ -34,3 +34,7 @@ Route::get('/penundaan_pelayanan', function () {
 Route::get('/rj_asesmen', function () {
     return view('rj_asesmen');
 });
+
+Route::get('/rj_informasi_edukasi', function () {
+    return view('rj_informasi_edukasi');
+});
