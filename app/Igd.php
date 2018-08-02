@@ -8,7 +8,7 @@ class Igd extends Model
 {
     protected $table = 'igd';
 
-    protected $primary_key = 'id_igd';
+    protected $primaryKey = 'id_igd';
 
     public $incrementing = true;
 
