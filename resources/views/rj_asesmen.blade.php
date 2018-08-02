@@ -1169,11 +1169,11 @@
                     <label class="control-label col-lg-2" for="inputSuccess">ELIMINASI</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>o Mandiri dan mampi mengontrol BAB/BAK</option>
-                                              <option>o Dower Catheter/Colostomy</option>
-                                              <option>o Eliminasi dengan bantuan</option>
-                                              <option>o Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)</option>
-                                              <option>o Inkontinesia tetapi mampu untuk mobilisasi</option>
+                                              <option>Mandiri dan mampi mengontrol BAB/BAK</option>
+                                              <option>Dower Catheter/Colostomy</option>
+                                              <option>Eliminasi dengan bantuan</option>
+                                              <option>Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)</option>
+                                              <option>Inkontinesia tetapi mampu untuk mobilisasi</option>
                                           </select>
                     </div>
                   </div>
@@ -1236,12 +1236,1493 @@
                     </div>
                   </div>
 
+
+
                 </form>
               </div>
             </section>
 
+                        <section class="panel">
+              <header class="panel-heading">
+                Diagnosa Keperawatan
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Diagnosa Keperawatan Umum</label>
+                    <div class="col-lg-4">
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Aktual/ Resiko bersihan jalan nafas tidak efektif
+                                              </label>
+                      </div>
+
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Aktual/ Resiko aspirasi
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Aktual/ Resiko pola nafas tidak efektif
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Aktual/ Resiko gangguan pertukaran gas
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Aktual/ penurunan curah jantung
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Aktual/ Resiko gangguan perfusi jaringan celebral/perifer
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Aktual/ Resiko gangguan keseimbangan cairan
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Aktual/ Resiko gangguan keseimbangan kontinuitas jaringan
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Aktual/ Resiko infeksi
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Resiko cedera / jatuh
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Hypertermi
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Nyeri
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Gangguan kebutuhan nutrisi
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Lainnya
+                                              </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Sebutkan </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Diagnosa keperawatan jiwa</label>
+                    <div class="col-lg-6">
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Gangguan persepsi sensori : halusinasi
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Perilaku kekerasan
+                                              </label>
+                      </div>
+
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Isolasi sosial
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Gangguan konsep diri
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Resiko bunuh diri
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Intoleransi aktifitas
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Waham
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Defisit perawatan diri
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Kerusakan komunitas verbal
+                                              </label>
+                      </div>
+
+                                            <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Koping individu tidak efektif
+                                              </label>
+                      </div>
+
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Aktual/Resiko Cemas/Takut
+                                              </label>
+                      </div>
+
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Lainnya
+                                              </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Sebutkan </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Obat Parental </label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">EKG </label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Evaluasi Tindakan Keperawatan
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Implementasi </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Evaluasi </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Data Medis
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Wawancara dengan </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keluhan Utama </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Riwayat Penyakit Sekarang </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Riwayat Penyakit Dahulu (gangguan kejiwaan) </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Riwayat Napza </label>
+                    <div class="col-lg-2">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak ada
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Ada
+                                              </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Lama Pemakaian </label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Cara Pemakaian</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Latar Belakang Pemakaian</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Riwayat Pendidikan </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Riwayat Pekerjaan </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Riwayat Perkawinan </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Riwayat Penyakit Lainnya</label>
+                    <div class="col-lg-6">
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Hipertensi
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Liver
+                                              </label>
+                      </div>
+
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Diabetes
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Cancer
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Jantung
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  TBC
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Stroke
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Glaukoma
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Dialysis
+                                              </label>
+                      </div>
+
+                                            <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  STD
+                                              </label>
+                      </div>
+
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Asthma
+                                              </label>
+                      </div>
+
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Perdarahan
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Kejang
+                                              </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                                                  <input type="checkbox" value="">
+                                                  Lainnya 
+                                              </label>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Riwayat Operasi</label>
+                    <div class="col-lg-2">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Ya
+                                              </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jenis </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Kapan </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Riwayat transfusi </label>
+                    <div class="col-lg-2">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Ya
+                                              </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Reaksi Transfusi </label>
+                    <div class="col-lg-2">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Ya
+                                              </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Reaksi yang timbul </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Riwayat Penyakit dalam keluarga  </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Riwayat Pengobatan </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Riwayat Alergi </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Obat yang Diminum Saat Ini
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Nama Obat</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Dibawa</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jumlah</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Tidak Dibawa</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keterangan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Pemeriksaan Fisik
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Kepala</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Leher</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Dada</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jantung</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Paru-paru</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Perut</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Anggota Gerak</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Status Lokalis</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Status Psikiatri
+              </header>
+              <div class="panel-body">
+                <form class="form-horizontal " method="get">
+                  <div class="col-lg-2"></div><h4>Keadaan Umum</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Penampilan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Kesadaran</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Orientasi</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Sikap & Tingkah laku </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-2"></div><h4>Gangguan Berpikir</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keterangan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Proses Pikir </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Bentuk Pikir </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Isi Pikir </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-2"></div><h4>Alam Perasaan</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Mood </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Afek </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-2"></div><h4>Persepsi</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Halusinasi </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Ilusi </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-2"></div><h4>Fungsi Intelektual</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Daya Konsentrasi  </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Daya Ingat  </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Pikiran Abstrak  </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Pengendalian Impuls  </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Daya Nilai  </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Tilikan/Insight  </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Taraf dapat dipercaya  </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Status Neurologi
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  <div class="col-lg-2"></div><h4>Pemeriksaan Khusus</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Meningeal Sight   </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Hasil Pemeriksaan Nervus Cranialis</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Pemeriksaan Sistem Motorik</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Koordinasi Gait Keseimbangan (fungsi cerebellum)</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Vegetatif </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Pemeriksaan Penunjang
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  <div class="col-lg-2"></div><h4>Laboratorium</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Pemeriksaan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam pemeriksaan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Hasil</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Koordinasi Gait Keseimbangan (fungsi cerebellum)</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam hasil</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keterangan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="col-lg-2"></div><h4>Radiologi</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Pemeriksaan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam pemeriksaan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Hasil</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Koordinasi Gait Keseimbangan (fungsi cerebellum)</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam hasil</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keterangan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="col-lg-2"></div><h4>EKG</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Pemeriksaan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam pemeriksaan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Hasil</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Koordinasi Gait Keseimbangan (fungsi cerebellum)</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam hasil</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keterangan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="col-lg-2"></div><h4>Lain-lain</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Pemeriksaan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam pemeriksaan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Hasil</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Koordinasi Gait Keseimbangan (fungsi cerebellum)</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam hasil</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keterangan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Instrumen Penilaian
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">P4. GADUH GELISAH</label>
+                    <div class="col-lg-3">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak ada - definisi tidak dipenuhi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Minimal – patologis diragukan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                                                  Ringan – sedikit agitatif, waspada berlebihan, atau sedikit mudah terangsang selama wawancara, tanpa episode yang jelas dari gaduh gelisah atau labilitas alam perasaan yang mecolok. Pembicaraan mungkin sedikit mendesah
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                                                  Sedang – agitasi atau mudah terangsang yang jelas, ledakan-ledakan episodik
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                                                  Agak berat – hiperaktivitas yang bermakna, sering terjadi ledakan-leadakan atau aktivitas mototrik, sulit untuk tetap duduk
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                                                  Berat – gaduh gelisah yang mencolok mempengaruhi fungsi sehari-hari seperti makan  dan tidur
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                                                  Sangat berat – gaduh gelisah yang mencolok, mempengaruhi kegiatan makan dan tidur, serta jelas tidak memungkinkan interaksi interpersonal. Percepatan dan pembicaraan dan aktivitas motorik dapat menimbulkan inkoherensi dan kelelahan
+                                              </label>
+                      </div>
+                    </div>
+                    <label class="control-label col-lg-2" for="inputSuccess">G8. KETIDAKOPERATIFAN</label>
+                    <div class="col-lg-3">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak ada - definisi tidak dipenuhi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Minimal – patologis diragukan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                                                  Ringan – patuh tapi disertai sikap marah tidak sabar atau sarkasme, mungkin ada penolakan yang tidak mengganggu terhadap penyelidikan yang sensitif selama wawancara
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                                                  Sedang – kadang-kadang terdapat penolakan langsung untuk patuh, memproyeksikan hostilitas, defensif atau bersifat negatif tetapi biasanya masih dapat diatasi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                                                  Agak berat – seringkali tidak patuh, jelas defensif atau iritabilitas terhadap pewawancara dan mungkin tidak bersedia menghadapi banyak pertanyaan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                                                  Berat – sangat tidak kooperatif, negativistik dan suka membangkang. Menolak untuk patuh, tidak mau memulai atau mengikuti wawancara sepenuhnya
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                                                  Sangat berat – resistensi aktif, menolak untuk ikut dalam aktivitas sosial apapun, mengurus kebersihan diri, bercakap-cakap dengan keluarga atau staf dan bahkan untuk berpartisipasi dalam wawancara singkat
+                                              </label>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">P7. PERMUSUHAN</label>
+                    <div class="col-lg-3">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak ada - definisi tidak dipenuhi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Minimal – patologis diragukan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                                                  Ringan – melampiaskan kemarahan secara tidak langsung atau ditahan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                                                  Sedang – sikap bermusuhan yang nyata
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                                                  Agak berat – pasien sangat mudah marah dan kadang-kadang memaki dengan kata-kata kasar atau mengancam
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                                                  Berat – tidak kooperatif dan mencaci maki dengan kasar atau mengancam, dapat beringas dan merusak tetapi tidak menyerang orang lain secara fisik
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                                                  Sangat berat – kemarahan yang hebat berakibat sangat tidak kooperatif, menghalangi interaksi, atau secara episodik melakukan penyerangan fisik terhadap orang lain
+                                              </label>
+                      </div>
+                    </div>
+                    <label class="control-label col-lg-2" for="inputSuccess">G14. PENGENDALIAN IMPULS</label>
+                    <div class="col-lg-3">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak ada - definisi tidak dipenuhi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Minimal – patologis diragukan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                                                  Ringan – cenderung mudah marah dan frustasi bila menghadapi stres atau pemuasannya ditolak tetapi jarang bertindak impulsif
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                                                  Sedang – dengan provokasi yang minimal, pasien menjadi marah dan mencaci maki. Mungkin sekali-kali mengancam, merusak atau terdapat satu atau dua episode yang melibatkan konfrontasi fisik atau perselisihan ringan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                                                  Agak berat – memperlihatkan episode impulsif yang berulang, termasuk mencaci maki, merusak harta benda atau ancaman fisik. Mungkin ada satu atau dua episode yang melibatkan serangn serius
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                                                  Berat – agresif secara impulsif, mengancam, menuntut dan merusak, tanpa pertimbangan terhadap konsekuensinya. Menunjukkan perilaku menyerang
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                                                  Sangat berat – memperlihatkan serangan kebrutalan dan berbahaya
+                                              </label>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">G4. Ketegangan</label>
+                    <div class="col-lg-3">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak ada - definisi tidak dipenuhi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Minimal – patologis diragukan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                                                  Ringan – postur dan gerakan-gerakan menunjukkan kekhawatiran ringan, ketidaktenangan yang sekali-kali, perubahan posisi, atau tremor tangan yang halus dan cepat
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                                                  Sedang – nyata-nyata gelisah seperti perilaku tidak tenang, tremor tangan yang nyata, keringat berlebihan, atau manerisme karena gugup
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                                                  Agak berat – ketegangan yang berat, manifestasi seperti gemetar karena gugup, keringat sangat berlebihan dan ketidaktenangan, perilaku selama wawancara tidak terpengaruh secara bermakna
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                                                  Berat – Ketegangan berat, taraf interaksi terganggu. Misalnya terus-menerus bergerak, tidak dapat tetap duduk, hiperventilasi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                                                  Sangat berat – ketegangan sangat mencolok, tanda panik atau percepatan gerakan motorik kaar, ketidak mampuan tetap duduk > 1 menit yang menyebabkan percakapan tidak mungkin diteruskan
+                                              </label>
+                      </div>
+                    </div>
+                  
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Bangsal   </label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Tanggal Pemeriksaan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+            <section class="panel">
+              <header class="panel-heading">
+                Diagnosis dan Tindakan Terapi
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  <div class="col-lg-2"></div><h4>Diagnosis Psikiatri</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Axis 1</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Axis 2</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Axies 3</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Axis 4</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Axis 5</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-2"></div><h4>Diagnosis Non Psikiatri</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Diagnosis Utama</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Diagnosis Sekunder</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Tindakan Terapi</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Daftar Masalah</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+            <section class="panel">
+              <header class="panel-heading">
+                Tindak Lanjut
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Tindak Lanjut</label>
+                    <div class="col-lg-10">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                                                  Pulang
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Dirawat
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                                                  Menolak dirawat
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                                                  Dirujuk
+                                              </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Jika pulang</label>
+                    <div class="col-lg-10">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak perlu kontrol
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Perlu Kontrol
+                                              </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Perlu kontrol pada tanggal</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Dirawat di ruang</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Indikasi Rawat Inap</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Alasan menolak dirawat</label>
+                    <div class="col-lg-10">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah biaya" checked>
+                                                  Masalah biaya
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah Lokasi Rumah" checked>
+                                                  Masalah lokasi rumah
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Kondisi pasien" checked>
+                                                  Kondisi pasien
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                                                  Lainnya
+                                              </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Sebutkan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Dirujuk ke</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Alasan Rujuk</label>
+                    <div class="col-lg-10">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah biaya" checked>
+                                                  Tempat Penuh
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah Lokasi Rumah" checked>
+                                                  Perlu Fasilitas Lebih
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Kondisi pasien" checked>
+                                                  Permintaan Pasien/Keluarga
+                                              </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2"></div><h4>Kondisi Pasien Saat Keluar</h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Kesadaran</label>
+                    <div class="col-lg-10">
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox1" value="Compos Mentis"> Compos Mentis
+                                          </label>
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox2" value="Apatis"> Apatis
+                                          </label>
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox3" value="Delirium"> Delirium
+                                          </label>
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox3" value="Sopor"> Sopor
+                                          </label>
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox3" value="Koma"> Koma
+                                          </label>
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox3" value="GCS"> GCS
+                                          </label>
+                      <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox3" value="Lain-lain"> Lain-lain
+                                          </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Sebutkan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-2"></div><h5>Tanda-tanda vital</h5>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Tensi</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+
+                    <label class="col-sm-2 control-label">Nadi</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Pernafasan</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-2 control-label">Suhu</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+
             <div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </div>
 
             </div>
