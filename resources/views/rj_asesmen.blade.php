@@ -2198,34 +2198,250 @@
               <div class="panel-body">
 
                 <form class="form-horizontal " method="get">
-                  <div class="col-lg-2"></div><h4>Pemeriksaan Khusus</h4>
-                  <div class="form-group"></div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Meningeal Sight   </label>
+                    <label class="control-label col-lg-2" for="inputSuccess">P4. GADUH GELISAH</label>
+                    <div class="col-lg-3">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak ada - definisi tidak dipenuhi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Minimal – patologis diragukan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                                                  Ringan – sedikit agitatif, waspada berlebihan, atau sedikit mudah terangsang selama wawancara, tanpa episode yang jelas dari gaduh gelisah atau labilitas alam perasaan yang mecolok. Pembicaraan mungkin sedikit mendesah
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                                                  Sedang – agitasi atau mudah terangsang yang jelas, ledakan-ledakan episodik
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                                                  Agak berat – hiperaktivitas yang bermakna, sering terjadi ledakan-leadakan atau aktivitas mototrik, sulit untuk tetap duduk
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                                                  Berat – gaduh gelisah yang mencolok mempengaruhi fungsi sehari-hari seperti makan  dan tidur
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                                                  Sangat berat – gaduh gelisah yang mencolok, mempengaruhi kegiatan makan dan tidur, serta jelas tidak memungkinkan interaksi interpersonal. Percepatan dan pembicaraan dan aktivitas motorik dapat menimbulkan inkoherensi dan kelelahan
+                                              </label>
+                      </div>
+                    </div>
+                    <label class="control-label col-lg-2" for="inputSuccess">G8. KETIDAKOPERATIFAN</label>
+                    <div class="col-lg-3">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak ada - definisi tidak dipenuhi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Minimal – patologis diragukan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                                                  Ringan – patuh tapi disertai sikap marah tidak sabar atau sarkasme, mungkin ada penolakan yang tidak mengganggu terhadap penyelidikan yang sensitif selama wawancara
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                                                  Sedang – kadang-kadang terdapat penolakan langsung untuk patuh, memproyeksikan hostilitas, defensif atau bersifat negatif tetapi biasanya masih dapat diatasi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                                                  Agak berat – seringkali tidak patuh, jelas defensif atau iritabilitas terhadap pewawancara dan mungkin tidak bersedia menghadapi banyak pertanyaan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                                                  Berat – sangat tidak kooperatif, negativistik dan suka membangkang. Menolak untuk patuh, tidak mau memulai atau mengikuti wawancara sepenuhnya
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                                                  Sangat berat – resistensi aktif, menolak untuk ikut dalam aktivitas sosial apapun, mengurus kebersihan diri, bercakap-cakap dengan keluarga atau staf dan bahkan untuk berpartisipasi dalam wawancara singkat
+                                              </label>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">P7. PERMUSUHAN</label>
+                    <div class="col-lg-3">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak ada - definisi tidak dipenuhi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Minimal – patologis diragukan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                                                  Ringan – melampiaskan kemarahan secara tidak langsung atau ditahan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                                                  Sedang – sikap bermusuhan yang nyata
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                                                  Agak berat – pasien sangat mudah marah dan kadang-kadang memaki dengan kata-kata kasar atau mengancam
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                                                  Berat – tidak kooperatif dan mencaci maki dengan kasar atau mengancam, dapat beringas dan merusak tetapi tidak menyerang orang lain secara fisik
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                                                  Sangat berat – kemarahan yang hebat berakibat sangat tidak kooperatif, menghalangi interaksi, atau secara episodik melakukan penyerangan fisik terhadap orang lain
+                                              </label>
+                      </div>
+                    </div>
+                    <label class="control-label col-lg-2" for="inputSuccess">G14. PENGENDALIAN IMPULS</label>
+                    <div class="col-lg-3">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak ada - definisi tidak dipenuhi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Minimal – patologis diragukan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                                                  Ringan – cenderung mudah marah dan frustasi bila menghadapi stres atau pemuasannya ditolak tetapi jarang bertindak impulsif
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                                                  Sedang – dengan provokasi yang minimal, pasien menjadi marah dan mencaci maki. Mungkin sekali-kali mengancam, merusak atau terdapat satu atau dua episode yang melibatkan konfrontasi fisik atau perselisihan ringan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                                                  Agak berat – memperlihatkan episode impulsif yang berulang, termasuk mencaci maki, merusak harta benda atau ancaman fisik. Mungkin ada satu atau dua episode yang melibatkan serangn serius
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                                                  Berat – agresif secara impulsif, mengancam, menuntut dan merusak, tanpa pertimbangan terhadap konsekuensinya. Menunjukkan perilaku menyerang
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                                                  Sangat berat – memperlihatkan serangan kebrutalan dan berbahaya
+                                              </label>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">G4. Ketegangan</label>
+                    <div class="col-lg-3">
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                                                  Tidak ada - definisi tidak dipenuhi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Tidak Baik" checked>
+                                                  Minimal – patologis diragukan
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                                                  Ringan – postur dan gerakan-gerakan menunjukkan kekhawatiran ringan, ketidaktenangan yang sekali-kali, perubahan posisi, atau tremor tangan yang halus dan cepat
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                                                  Sedang – nyata-nyata gelisah seperti perilaku tidak tenang, tremor tangan yang nyata, keringat berlebihan, atau manerisme karena gugup
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                                                  Agak berat – ketegangan yang berat, manifestasi seperti gemetar karena gugup, keringat sangat berlebihan dan ketidaktenangan, perilaku selama wawancara tidak terpengaruh secara bermakna
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                                                  Berat – Ketegangan berat, taraf interaksi terganggu. Misalnya terus-menerus bergerak, tidak dapat tetap duduk, hiperventilasi
+                                              </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                                                  Sangat berat – ketegangan sangat mencolok, tanda panik atau percepatan gerakan motorik kaar, ketidak mampuan tetap duduk > 1 menit yang menyebabkan percakapan tidak mungkin diteruskan
+                                              </label>
+                      </div>
+                    </div>
+                  
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Bangsal   </label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Hasil Pemeriksaan Nervus Cranialis</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Pemeriksaan Sistem Motorik</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Koordinasi Gait Keseimbangan (fungsi cerebellum)</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Vegetatif </label>
+                    <label class="col-sm-2 control-label">Tanggal Pemeriksaan</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
