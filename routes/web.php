@@ -46,3 +46,7 @@ Route::get('/rj_perkembangan_pasien', function () {
 Route::get('/ri_catatan_perkembangan', function () {
     return view('ri_catatan_perkembangan');
 });
+
+Route::get('/igd_triase_pasien', function () {
+    return view('igd_triase_pasien');
+});
