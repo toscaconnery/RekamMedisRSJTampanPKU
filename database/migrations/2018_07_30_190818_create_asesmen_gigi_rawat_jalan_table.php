@@ -17,7 +17,7 @@ class CreateAsesmenGigiRawatJalanTable extends Migration
             $table->increments('id_asesmen');
             $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
             $table->integer('id_user')->refernce('id_user')->on('users');
-            $talbe->boolean('signature');
+            $table->boolean('signature');
             $table->timestamps();
         });
     }

@@ -19,7 +19,7 @@ class CreateAnakTable extends Migration
             $table->string('nama', 30);
             $table->string('jenis_kelamin', 12);
             $table->integer('usia');
-            $table->integer('sekolah_pekerjaan', 30);
+            $table->string('sekolah_pekerjaan', 30);
             $table->timestamps();
         });
     }
