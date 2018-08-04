@@ -95,8 +95,7 @@
               <li><a class="" href="{{url('')}}/rj_perkembangan_pasien">Perkembangan Pasien</a></li>
               <li><a class="" href="{{url('')}}/rj_identifikasi_stresor">Identifikasi Stresor</a></li>
               <li><a class="" href="{{url('')}}/rj_tumbuh_kembang">Tumbuh Kembang</a></li>
-              <li><a class="" href="{{url('')}}/rj_konsultasi_psikiatri">Konsultasi Psikiatri</a></li>
-              <li><a class="" href="{{url('')}}/rj_pemeriksaan_fisioterapi">Pemeriksaan Fisioterapi</a></li>
+              <li><a class="" href="{{url('')}}/rj_resume_rawat">Resume Rawat Jalan</a></li>
             </ul>
           </li>
           <li class="sub-menu">

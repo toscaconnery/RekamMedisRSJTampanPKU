@@ -50,3 +50,23 @@ Route::get('/ri_catatan_perkembangan', function () {
 Route::get('/igd_triase_pasien', function () {
     return view('igd_triase_pasien');
 });
+
+Route::get('/rj_resume_rawat', function () {
+    return view('rj_resume_rawat');
+});
+
+Route::get('/rj_asesmen_gigi', function () {
+    return view('rj_asesmen_gigi');
+});
+
+Route::get('/rj_identifikasi_stresor', function () {
+    return view('rj_identifikasi_stresor');
+});
+
+Route::get('/igd_catatan_kemajuan', function () {
+    return view('igd_catatan_kemajuan');
+});
+
+Route::get('/igd_perkembangan_pasien', function () {
+    return view('igd_perkembangan_pasien');
+});
