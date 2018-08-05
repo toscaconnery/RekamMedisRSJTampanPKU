@@ -80,3 +80,23 @@ Route::get('/igd_catatan_kemajuan', function () {
 Route::get('/igd_perkembangan_pasien', function () {
     return view('igd_perkembangan_pasien');
 });
+
+Route::get('/ri_panss_ec', function () {
+    return view('ri_panss_ec');
+});
+
+Route::get('/ri_penilaian_edmunson', function () {
+    return view('ri_penilaian_edmunson');
+});
+
+Route::get('/ri_risiko_nyeri', function () {
+    return view('ri_risiko_nyeri');
+});
+
+Route::get('/ri_evaluasi_keperawatan', function () {
+    return view('ri_evaluasi_keperawatan');
+});
+
+Route::get('/ri_monitoring_observasi', function () {
+    return view('ri_monitoring_observasi');
+});
