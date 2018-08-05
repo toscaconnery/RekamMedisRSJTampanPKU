@@ -7,9 +7,9 @@
   <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="shortcut icon" href="{{url('')}}/admin_bootstrap/img/favicon.png">
 
-  <title>Surat dan Persetujuan</title>
+  <title>Mengidentifikasi Sumber Stres (Stresor) Anda</title>
 
    <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -18,15 +18,19 @@
   <!--external css-->
   <!-- font icon -->
   <link href="{{url('')}}/admin_bootstrap/css/elegant-icons-style.css" rel="stylesheet" />
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="{{url('')}}/admin_bootstrap/css/font-awesome.min.css" rel="stylesheet" />
   <!-- full calendar css-->
   <link href="{{url('')}}/admin_bootstrap/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
-  <link href="assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+  <link href="{{url('')}}/admin_bootstrap/assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
   <!-- easy pie chart-->
   <link href="{{url('')}}/admin_bootstrap/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
   <!-- owl carousel -->
   <link rel="stylesheet" href="{{url('')}}/admin_bootstrap/css/owl.carousel.css" type="text/css">
-  <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+  <link href="{{url('')}}/admin_bootstrap/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+  <!--datepicker styles -->
+  <link href="{{url('')}}/admin_bootstrap/css/daterangepicker.css" rel="stylesheet" />
+  <link href="{{url('')}}/admin_bootstrap/css/bootstrap-datepicker.css" rel="stylesheet" />
+  <link href="{{url('')}}/admin_bootstrap/css/bootstrap-colorpicker.css" rel="stylesheet" />
   <!-- Custom styles -->
   <link rel="stylesheet" href="{{url('')}}/admin_bootstrap/css/fullcalendar.css">
   <link href="{{url('')}}/admin_bootstrap/css/widgets.css" rel="stylesheet">
@@ -40,7 +44,7 @@
 <body>
  <section id="container" class="">
  <header class="header dark-bg">
- 		<a href="{{url('')}}/index" class="logo">REKAM MEDIS <span class="lite">RSJ TAMPAN</span></a> 
+    <a href="{{url('')}}/index" class="logo">REKAM MEDIS <span class="lite">RSJ TAMPAN</span></a>
       <div class="top-nav notification-row">
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">
@@ -80,7 +84,7 @@
                           <span><font size="2">Identifikasi Pasien Baru</font></span>
                       </a>
           </li>
-          
+        
           <li class="sub-menu">
             <a href="javascript:;" class="">
                           <i class="icon_document_alt"></i>
@@ -168,7 +172,7 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-file-text-o"></i> Surat dan Persetujuan</h3> 
+            <h3 class="page-header"><i class="fa fa-file-text-o"></i> MENGIDENTIFIKASI SUMBER STRES (STRESOR)</h3>
             <!--<ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_document_alt"></i>Forms</li>
@@ -190,159 +194,26 @@
                           </div>
                         </div>
                       </div>
-        <br>
+        
         <div class="row">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Daftar Dokumen
+                MENGIDENTIFIKASI SUMBER STRES (STRESOR)
               </header>
 
               <table class="table table-striped table-advance table-hover">
                 <tbody>
                   <tr>
-                    <th><i class="icon_document_alt"></i> Nama Dokumen</th>
-                    <th><i class="icon_calendar"></i> Tanggal Dokumen</th>
-                    <th><i class="icon_mail_alt"></i> Status Dokumen</th>
-
+                    <th><i class="icon_document_alt"></i> Dokumen</th>
+                    <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
+                    <th><i class="icon_profile"></i> Pengisi</th>
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
                   <tr>
-                    <td>Surat Pengantar Dirawat (SPD)</td>
-                    <td>14/09/2018</td>
-                    <td>Telah Diisi</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                     <td>Permintaan Kebutuhan Privasi</td>
-                    <td>14/09/2018</td>
-                    <td>Telah Diisi</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Permintaan Pelayanan Rohani</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Permintaan Pendapat Lain (Second Opinion)</td>
-                    <td>14/09/2018</td>
-                    <td>Telah Diisi</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Surat Pernyataan Jangan Dilakukan Resusitasi (Do Not Resucitate)</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Intruksi Jangan Dilakukan Resusitasi (Do Not Resucitate)</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Persetujuan Tindakan Kedokteran</td>
-                    <td>14/09/2018</td>
-                    <td>Telah Diisi</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Penolakan Tindakan Kedokteran</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Surat Pernyataan Pulang Paksa</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Surat Perjanjian Residen</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Surat Kuasa</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Surat Pernyataan</td>
-                    <td>-</td>
-                    <td>-</td>
+                    <td>Identifikasi Sumber Stres (Stresor)</td>
+                    <td>20/08/2018</td>
+                    <td>[Nama Pengisi]</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
@@ -357,9 +228,126 @@
           </div>
         </div>
 
+        <div class="row">
+          <div class="col-lg-12">
 
+            <section class="panel">
+              <header class="panel-heading">
+                Pengaruh
+              </header>
+              <div class="panel-body">
 
+                <form class="form-horizontal " method="get">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Lingkungan Fisik</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Sosisal, ekonomi, dan politik</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keluarga</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Pekerjaan dan Karir</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Hubungan antar pribadi dan lingkungan</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Simptom dan gejala
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Semua simptom-simptom (Gejala yang muncul) </label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Solusi
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Cara menghadapi dan mengatasinya</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+            </div>
+          </div>
+        </section>
            
+  <!-- javascripts -->
+  <script src="{{url('')}}/js/jquery.js"></script>
+  <script src="{{url('')}}/js/bootstrap.min.js"></script>
+  <!-- nice scroll -->
+  <script src="{{url('')}}/js/jquery.scrollTo.min.js"></script>
+  <script src="{{url('')}}/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+  <!-- jquery ui -->
+  <script src="{{url('')}}/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+  <!--custom checkbox & radio-->
+  <script type="{{url('')}}/text/javascript" src="{{url('')}}/admin_bootstrap/js/ga.js"></script>
+  <!--custom switch-->
+  <script src="{{url('')}}/js/bootstrap-switch.js"></script>
+  <!--custom tagsinput-->
+  <script src="{{url('')}}/js/jquery.tagsinput.js"></script>
+
+  <!-- colorpicker -->
+
+  <!-- bootstrap-wysiwyg -->
+  <script src="{{url('')}}/js/jquery.hotkeys.js"></script>
+  <script src="{{url('')}}/js/bootstrap-wysiwyg.js"></script>
+  <script src="{{url('')}}/js/bootstrap-wysiwyg-custom.js"></script>
+  <script src="{{url('')}}/js/moment.js"></script>
+  <script src="{{url('')}}/js/bootstrap-colorpicker.js"></script>
+  <script src="{{url('')}}/js/daterangepicker.js"></script>
+  <script src="{{url('')}}/js/bootstrap-datepicker.js"></script>
+  <!-- ck editor -->
+  <script type="text/javascript" src="{{url('')}}/assets/ckeditor/ckeditor.js"></script>
+  <!-- custom form component script for this page-->
+  <script src="{{url('')}}/js/form-component.js"></script>
+  <!-- custome script for all page -->
+  <script src="{{url('')}}/js/scripts.js"></script>
+
   <!-- javascripts -->
   <script src="{{url('')}}/admin_bootstrap/js/jquery.js"></script>
   <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.10.4.min.js"></script>
