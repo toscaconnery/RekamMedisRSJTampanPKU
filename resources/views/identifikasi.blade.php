@@ -58,19 +58,19 @@
           </div>
         </div>
         <div class="panel-body bio-graph-info">
-                        <h1>[No. RM]</h1>
-                        <div class="row">
-                          <div class="bio-row">
-                            <p><span>Nama Pasien </span>: [Nama Pasien] </p>
-                          </div>
-                          <div class="bio-row">
-                            <p><span>Tanggal Lahir</span>: 27 Agustus 1996</p>
-                          </div>
-                          <div class="bio-row">
-                            <p><span>Jenis Kelamin </span>: L</p>
-                          </div>
-                        </div>
-                      </div>
+          <h1>[No. RM]</h1>
+          <div class="row">
+            <div class="bio-row">
+              <p><span>Nama Pasien </span>: [Nama Pasien] </p>
+            </div>
+            <div class="bio-row">
+              <p><span>Tanggal Lahir</span>: 27 Agustus 1996</p>
+            </div>
+            <div class="bio-row">
+              <p><span>Jenis Kelamin </span>: L</p>
+            </div>
+          </div>
+        </div>
         
         <div class="row">
           <div class="col-lg-12">
@@ -167,7 +167,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Bahasa Sehari-hari</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Bahasa Sehari-Hari</label>
                     <div class="col-lg-5">
                       <select class="form-control m-bot15">
                                               <option>Indonesia</option>

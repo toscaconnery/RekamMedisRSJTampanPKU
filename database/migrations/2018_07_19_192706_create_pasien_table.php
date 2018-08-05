@@ -17,7 +17,7 @@ class CreatePasienTable extends Migration
             $table->increments('no_rm');
             $table->string('nama_pasien');
             $table->date('tanggal_lahir');
-            $table->string('jenis_kelamin', 12);
+            $table->string('jenis_kelamin', 1);
             $table->timestamps();
         });
     }

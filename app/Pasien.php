@@ -8,7 +8,7 @@ class Pasien extends Model
 {
     protected $table = 'pasien';
 
-    protected $primaryKey = 'no_rm'
+    protected $primaryKey = 'no_rm';
 
     public $incrementing = true;
 

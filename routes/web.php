@@ -26,6 +26,9 @@ Route::get('/index', function () {
     return view('index');
 });
 
+Route::get('/pendaftaran_pasien', 'PasienController@pendaftaran_pasien');
+Route::post('/pendaftaran_pasien', 'PasienController@store_pendaftaran_pasien');
+
 Route::get('/identifikasi', function () {
     return view('identifikasi');
 });
