@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Login Page 2 | Creative - Bootstrap 3 Responsive Admin Template</title>
+  <title>Login | RSJ Tampan Provinsi Riau</title>
 
   <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,10 +36,10 @@
         {{-- username --}}
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_profile"></i></span>
-          <input type="text" name="email" class="form-control" placeholder="Username" autofocus>
-          @if ($errors->has('email'))
+          <input type="text" name="username" class="form-control" placeholder="username" autofocus>
+          @if ($errors->has('username'))
             <span class="invalid-feedback" role="alert">
-              <strong>{{ $errors->first('email') }}</strong>
+              <strong>{{ $errors->first('username') }}</strong>
             </span>
           @endif
         </div>

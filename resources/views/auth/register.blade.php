@@ -10,31 +10,31 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
-                        {{-- name --}}
+                        {{-- nama --}}
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Nama Lengkap</label>
+                            <label for="nama" class="col-md-4 col-form-label text-md-right">Nama Lengkap</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="nama" type="text" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ old('nama') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('nama'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('nama') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        {{-- email --}}
+                        {{-- username --}}
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
+                            <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                                <input id="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
 
-                                @if ($errors->has('email'))
+                                @if ($errors->has('username'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('username') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -57,76 +57,45 @@
 
                         {{-- confirm password --}}
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Masukkan ulang password</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Konfirmasi password</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
 
-                        {{-- phone --}}
+
+                        {{-- kelamin --}}
                         <div class="form-group row">
-                            <label for="phone" class="col-md-4 col-form-label text-md-right">Nomor Telepon</label>
-
+                            <label for="kelamin" class="col-md-4 col-form-label text-md-right">Jenis Kelamin</label>
                             <div class="col-md-6">
-                                <input id="phone" type="text" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" required autofocus>
-
-                                @if ($errors->has('phone'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('phone') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        {{-- address --}}
-                        <div class="form-group row">
-                            <label for="address" class="col-md-4 col-form-label text-md-right">Alamat</label>
-
-                            <div class="col-md-6">
-                                <input id="address" type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{ old('address') }}" required autofocus>
-
-                                @if ($errors->has('address'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('address') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        {{-- sex --}}
-                        <div class="form-group row">
-                            <label for="sex" class="col-md-4 col-form-label text-md-right">Kelamin</label>
-                            <div class="col-md-6">
-                                <select name="sex" class="form-control">
+                                <select name="kelamin" class="form-control">
                                     <option value=""></option>
-                                    <option value="1">Pria</option>
-                                    <option value="0">Wanita</option>
+                                    <option value="Pria">Pria</option>
+                                    <option value="Wanita">Wanita</option>
                                 </select>
                             </div>
-                            {{-- <div class="col-md-6 form-group">
-                                <input id="sex1" type="radio" name="sex" value="1" required autofocus>
-                                <label for="sex1">Laki-laki</label><br>
-                            </div> --}}
                         </div>
-                        {{-- <div class="form-group row">
-                            <label for="sex" class="col-md-4 col-form-label text-md-right"></label>
-                            <div class="col-md-6 form-group">
-                                <input id="sex2" type="radio" name="sex" value="0" required autofocus>
-                                <label for="sex2">Perempuan</label>
-                            </div>
-                        </div> --}}
 
-                        {{-- job --}}
+                        {{-- pekerjaan --}}
                         <div class="form-group row">
-                            <label for="job" class="col-md-4 col-form-label text-md-right">Pekerjaan</label>
+                            <label for="pekerjaan" class="col-md-4 col-form-label text-md-right">Pekerjaan</label>
 
                             <div class="col-md-6">
-                                <input id="job" type="text" class="form-control{{ $errors->has('job') ? ' is-invalid' : '' }}" name="job" value="{{ old('job') }}" required autofocus>
+                                {{-- <input id="pekerjaan" type="text" class="form-control{{ $errors->has('pekerjaan') ? ' is-invalid' : '' }}" name="pekerjaan" value="{{ old('pekerjaan') }}" required autofocus> --}}
+                                <select name="pekerjaan" class="form-control">
+                                    <option value=""></option>
+                                    <option value="Ahli Gizi">Ahli Gizi</option>
+                                    <option value="Dokter DPJP">Dokter DPJP</option>
+                                    <option value="Fisioterapi">Fisioterapi</option>
+                                    <option value="Perawat">Perawat</option>
+                                    <option value="Psikolog">Psikolog</option>
+                                    <option value="Petugas Rekam Medis">Petugas Rekam Medis</option>
+                                </select>
 
-                                @if ($errors->has('job'))
+                                @if ($errors->has('pekerjaan'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('job') }}</strong>
+                                        <strong>{{ $errors->first('pekerjaan') }}</strong>
                                     </span>
                                 @endif
                             </div>
