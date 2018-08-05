@@ -39,56 +39,8 @@
 
 <body>
  <section id="container" class="">
- <header class="header dark-bg">
- 		<a href="{{url('')}}/index" class="logo">REKAM MEDIS <span class="lite">RSJ TAMPAN</span></a> 
-      <div class="top-nav notification-row">
-        <!-- notificatoin dropdown start-->
-        <ul class="nav pull-right top-menu">
-
-          <!-- task notificatoin start -->
-          
-          <!-- task notificatoin end -->
-          <!-- inbox notificatoin start-->
-          @if(!Auth::user())
-          <li>
-            <a href="login"><span class="username">Login</span></a>
-          </li>
-          @else
-          <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-              <span class="username">{{Auth::user()->nama}}</span>
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu extended logout">
-              <div class="log-arrow-up"></div>
-              <li class="eborder-top">
-                <a href="#"><i class="icon_profile"></i> My Profile</a>
-              </li>
-              <li>
-                <a href="{{ url('/logout') }}"><i class="icon_key_alt"></i> Log Out</a>
-              </li>
-            </ul>
-          </li>
-          @endif
-        </ul>
-      </div>
-    </header>
-
-    <aside>
-      <div id="sidebar" class="nav-collapse ">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu">
-          <li class="active">
-            <a class="" href="{{url('')}}/">
-                          <i class="icon_table"></i>
-                          <span>DAFTAR PASIEN</span>
-                      </a>
-          
-
-        </ul>
-        <!-- sidebar menu end-->
-      </div>
-    </aside>
+    @include('layouts.header')
+    @include('layouts.sidebar')
 
 
  </section>
