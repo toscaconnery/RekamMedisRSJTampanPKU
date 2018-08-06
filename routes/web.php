@@ -100,3 +100,32 @@ Route::get('/ri_evaluasi_keperawatan', function () {
 Route::get('/ri_monitoring_observasi', function () {
     return view('ri_monitoring_observasi');
 });
+
+Route::get('/ri_dpjp_case', function () {
+    return view('ri_dpjp_case');
+});
+
+Route::get('/ri_suicide_fisik', function () {
+    return view('ri_suicide_fisik');
+});
+
+Route::get('/ri_rawat_napza', function () {
+    return view('ri_rawat_napza');
+});
+
+Route::get('/ri_rencana_keperawatan', function () {
+    return view('ri_rencana_keperawatan');
+});
+
+Route::get('/ri_penggunaan_obat', function () {
+    return view('ri_penggunaan_obat');
+});
+
+Route::get('/ri_riwayat_obat', function () {
+    return view('ri_riwayat_obat');
+});
+
+Route::get('/ri_efek_samping', function () {
+    return view('ri_efek_samping');
+});
+
