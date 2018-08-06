@@ -3,7 +3,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
           <li>
-            <a class="" href="{{url('')}}/identifikasi">
+            <a class="" href="{{url('')}}/identifikasi_pasien_baru_1">
                           <i class="icon_document_alt"></i>
                           <span><font size="2">Identifikasi Pasien Baru</font></span>
                       </a>

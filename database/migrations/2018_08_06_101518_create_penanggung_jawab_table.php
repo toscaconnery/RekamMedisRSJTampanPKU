@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePersetujuanUmumTable extends Migration
+class CreatePenanggungJawabTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreatePersetujuanUmumTable extends Migration
      */
     public function up()
     {
-        Schema::create('persetujuan_umum', function (Blueprint $table) {
-            $table->increments('id_persetujuan_umum');
+        Schema::create('penanggung_jawab', function (Blueprint $table) {
+            $table->increments('id_pj');
             $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
-            $table->integer('id_admission')->reference('id_user')->on('users');
-            $table->string('keluarga', 30);
-            $table->boolean('signature');
+            $table->string('nama', 30);
+            $table->string('alamat', 30);
+            $table->string('hubungan', 20);
+            $table->string('no_telp', 15);
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreatePersetujuanUmumTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('persetujuan_umum');
+        Schema::dropIfExists('penanggung_jawab');
     }
 }

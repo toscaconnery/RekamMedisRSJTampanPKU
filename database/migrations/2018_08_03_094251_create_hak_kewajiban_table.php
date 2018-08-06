@@ -29,6 +29,6 @@ class CreateHakKewajibanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hak_kewajiban2');
+        Schema::dropIfExists('hak_kewajiban');
     }
 }

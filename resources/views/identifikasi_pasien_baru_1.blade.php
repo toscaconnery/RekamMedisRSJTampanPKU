@@ -49,7 +49,7 @@
   <section class="wrapper">
     <div class="row">
       <div class="col-lg-12">
-        <h3 class="page-header"><i class="fa fa-file-text-o"></i> PENDAFTARAN PASIEN BARU</h3>
+        <h3 class="page-header"><i class="fa fa-file-text-o"></i> IDENTIFIKASI PASIEN BARU</h3>
       </div>
     </div>
     <div class="panel-body bio-graph-info">
@@ -64,7 +64,7 @@
           Data Pasien
         </header>
         <div class="panel-body">
-          <form class="form-horizontal " method="post" action="pendaftaran_pasien">
+          <form class="form-horizontal " method="post" action="identifikasi_pasien_baru_2">
             {{ csrf_field() }}
             {{-- <div class="form-group">
               <label class="control-label col-lg-2" for="inputSuccess">No. RM</label>
@@ -96,7 +96,7 @@
             <div class="form-group">
               <div class="col-lg-2"></div>
               <div class="col-lg-1">
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" class="btn btn-primary">Berikutnya</button>
               </div>
             </div>
           </form>
