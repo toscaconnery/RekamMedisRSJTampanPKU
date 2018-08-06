@@ -14,24 +14,16 @@
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/home', function () {
-	return view('index');
-});
-
-Route::get('/index', function () {
-    return view('index');
-});
+Route::get('/', 'IndexController@get_index');
+Route::get('/index', 'IndexController@get_index');
+Route::get('/home', 'IndexController@get_index');
 
 Route::get('/pendaftaran_pasien', 'PasienController@pendaftaran_pasien');
 Route::post('/pendaftaran_pasien', 'PasienController@store_pendaftaran_pasien');
 
-Route::get('/identifikasi', function () {
-    return view('identifikasi');
-});
+Route::get('/identifikasi_pasien_baru_1', 'PasienController@identifikasi_pasien_baru_1');
+Route::post('/identifikasi_pasien_baru_2', 'PasienController@identifikasi_pasien_baru_2');
+Route::post('/identifikasi_pasien_baru_final', 'PasienController@identifikasi_pasien_baru_final');
 
 Route::get('/ri_surat_persetujuan', function () {
     return view('ri_surat_persetujuan');

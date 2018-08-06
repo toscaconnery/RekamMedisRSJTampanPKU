@@ -71,13 +71,25 @@
                   <tr>
                     <th><i class="icon_profile"></i> Nama Pasien</th>
                     <th><i class="icon_calendar"></i> Tanggal Lahir</th>
-                    <th><i class="icon_pin_alt"></i> Alamat</th>
+                    <th><i class="icon_pin_alt"></i> Jenis Kelamin</th>
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
-                  <tr>
+                  @foreach($pasien as $p)
+                    <tr>
+                      <td>{{$p->nama_pasien}}</td>
+                      <td>{{$p->tanggal_lahir}}</td>
+                      <td>{{$p->jenis_kelamin}}</td>
+                      <td>
+                        <div class="btn-group">
+                          <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
+                        </div>
+                      </td>
+                    </tr>
+                  @endforeach
+                  {{-- <tr>
                     <td>Angeline Mcclain</td>
                     <td>2004-07-06</td>
-                    <td>Rosser</td>
+                    <td>P</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
@@ -87,7 +99,7 @@
                   <tr>
                     <td>Sung Carlson</td>
                     <td>2011-01-10</td>
-                    <td>Robert Lee</td>
+                    <td>L</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
@@ -97,7 +109,7 @@
                   <tr>
                     <td>Bryon Osborne</td>
                     <td>2006-10-29</td>
-                    <td>York</td>
+                    <td>L</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
@@ -107,7 +119,8 @@
                   <tr>
                     <td>Dalia Marquez</td>
                     <td>2011-12-15</td>
-                    <td>Alton</td>                    <td>
+                    <td>P</td>                    
+                    <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
                       </div>
@@ -116,7 +129,7 @@
                   <tr>
                     <td>Selina Fitzgerald</td>
                     <td>2003-01-06</td>
-                    <td>Waelder</td>
+                    <td>P</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
@@ -126,7 +139,7 @@
                   <tr>
                     <td>Abraham Avery</td>
                     <td>2006-07-14</td>
-                    <td>Harker Heights</td>
+                    <td>L</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
@@ -136,7 +149,7 @@
                   <tr>
                     <td>Caren Mcdowell</td>
                     <td>2002-03-29</td>
-                    <td>Blackwell</td>
+                    <td>P</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
@@ -146,7 +159,7 @@
                   <tr>
                     <td>Owen Bingham</td>
                     <td>2013-04-06</td>
-                    <td>Rule</td>
+                    <td>L</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
@@ -156,7 +169,7 @@
                   <tr>
                     <td>Ahmed Dean</td>
                     <td>2008-03-19</td>
-                    <td>Darrouzett</td>
+                    <td>L</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
@@ -166,13 +179,13 @@
                   <tr>
                     <td>Mario Norris</td>
                     <td>2010-02-08</td>
-                    <td>Amarillo</td>
+                    <td>L</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
                       </div>
                     </td>
-                  </tr>
+                  </tr> --}}
                 </tbody>
               </table>
             </section>
