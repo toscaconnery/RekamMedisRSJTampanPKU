@@ -8,7 +8,7 @@ class CatatanKemajuan extends Model
 {
     protected $table = 'catatan_kemajuan';
 
-    protected $primary_key = 'id_catatan';
+    protected $primaryKey = 'id_catatan';
 
     public $incrementing = true;
 

@@ -11,7 +11,7 @@
 
   <title>Identifikasi Pasien Baru</title>
 
-   <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap-theme.css" rel="stylesheet">
@@ -39,17 +39,17 @@
 
 <body>
  <section id="container" class="">
-    @include('layouts.header')
-    @include('layouts.sidebar')
+  @include('layouts.header')
+  @include('layouts.sidebar')
 
 
- </section>
-  <!-- container section start -->
- <section id="main-content">
-      <section class="wrapper">
-        <div class="row">
-          <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-file-text-o"></i> IDENTIFIKASI PASIEN BARU</h3>
+</section>
+<!-- container section start -->
+<section id="main-content">
+  <section class="wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="page-header"><i class="fa fa-file-text-o"></i> IDENTIFIKASI PASIEN BARU</h3>
             <!--<ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_document_alt"></i>Forms</li>
@@ -108,14 +108,15 @@
         <div class="row">
           <div class="col-lg-12">
             <form class="form-horizontal " method="post" action="identifikasi_pasien_baru_final">
-          	<section class="panel">
-              <header class="panel-heading">
-                Status
-              </header>
-              <div class="panel-body">
+              {{ csrf_field() }}
+              <section class="panel">
+                <header class="panel-heading">
+                  Status
+                </header>
+                <div class="panel-body">
 
-                {{-- <fo/rm class="form-horizontal " method="post" action="identifikasi_pasien_baru_final"> --}}
-                  
+                  <input type="hidden" name="no_rm" value="{{$no_rm}}">
+
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Pernikahan</label>
                     <div class="col-lg-3">
@@ -242,134 +243,99 @@
               </div>
             </section>
 
-            <section class="panel">
+            <section class="panel" id="dynamic_field">
               <header class="panel-heading">
                 Penanggung Jawab
               </header>
               <div class="panel-body">
-                {{-- <fo/rm class="form-horizontal " method="get"> --}}
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control">
-                    </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Nama</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="nama_pj[]">
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Alamat</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control">
-                    </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Alamat</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="alamat_pj[]">
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Hubungan</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control">
-                    </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Hubungan</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="hubungan_pj[]">
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Telp</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control">
-                    </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Telp</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="no_telp_pj[]">
                   </div>
-               {{--  </form> --}}
+                </div>
               </div>
             </section>
 
             <div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-primary" name="add" id="add">Tambah PJ</button>
             </div>
 
-            </form>
-
-           
-  <!-- javascripts -->
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.10.4.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery-1.8.3.min.js"></script>
-  <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
-  <!-- bootstrap -->
-  <script src="{{url('')}}/admin_bootstrap/js/bootstrap.min.js"></script>
-  <!-- nice scroll -->
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.scrollTo.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.nicescroll.js" type="text/javascript"></script>
-  <!-- charts scripts -->
-  <script src="{{url('')}}/admin_bootstrap/assets/jquery-knob/js/jquery.knob.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.sparkline.js" type="text/javascript"></script>
-  <script src="{{url('')}}/admin_bootstrap/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/owl.carousel.js"></script>
-  <!-- jQuery full calendar -->
-  <script src="{{url('')}}/admin_bootstrap/js/fullcalendar.min.js"></script>
-    <!-- Full Google Calendar - Calendar -->
-    <script src="{{url('')}}/admin_bootstrap/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
-    <!--script for this page only-->
-    <script src="{{url('')}}/admin_bootstrap/js/calendar-custom.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.rateit.min.js"></script>
-    <!-- custom select -->
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.customSelect.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/assets/chart-master/Chart.js"></script>
-
-    <!--custome script for all page-->
-    <script src="{{url('')}}/admin_bootstrap/js/scripts.js"></script>
-    <!-- custom script for this page-->
-    <script src="{{url('')}}/admin_bootstrap/js/sparkline-chart.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/easy-pie-chart.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/xcharts.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.autosize.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.placeholder.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/gdp-data.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/morris.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
-    <script>
-      //knob
-      $(function() {
-        $(".knob").knob({
-          'draw': function() {
-            $(this.i).val(this.cv + '%')
-          }
-        })
-      });
-
-      //carousel
-      $(document).ready(function() {
-        $("#owl-slider").owlCarousel({
-          navigation: true,
-          slideSpeed: 300,
-          paginationSpeed: 400,
-          singleItem: true
-
-        });
-      });
-
-      //custom select box
-
-      $(function() {
-        $('select.styled').customSelect();
-      });
-
-      /* ---------- Map ---------- */
-      $(function() {
-        $('#map').vectorMap({
-          map: 'world_mill_en',
-          series: {
-            regions: [{
-              values: gdpData,
-              scale: ['#000', '#000'],
-              normalizeFunction: 'polynomial'
-            }]
-          },
-          backgroundColor: '#eef3f7',
-          onLabelShow: function(e, el, code) {
-            el.html(el.html() + ' (GDP - ' + gdpData[code] + ')');
-          }
-        });
-      });
-    </script>
-</body>
+          </form>
 
 
-<html>
+          <!-- javascripts -->
+          <script src="{{url('')}}/admin_bootstrap/js/jquery.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.10.4.min.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/jquery-1.8.3.min.js"></script>
+          <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
+          <!-- bootstrap -->
+          <script src="{{url('')}}/admin_bootstrap/js/bootstrap.min.js"></script>
+          <!-- nice scroll -->
+          <script src="{{url('')}}/admin_bootstrap/js/jquery.scrollTo.min.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/jquery.nicescroll.js" type="text/javascript"></script>
+          <!-- charts scripts -->
+          <script src="{{url('')}}/admin_bootstrap/assets/jquery-knob/js/jquery.knob.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/jquery.sparkline.js" type="text/javascript"></script>
+          <script src="{{url('')}}/admin_bootstrap/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/owl.carousel.js"></script>
+          <!-- jQuery full calendar -->
+          <script src="{{url('')}}/admin_bootstrap/js/fullcalendar.min.js"></script>
+          <!-- Full Google Calendar - Calendar -->
+          <script src="{{url('')}}/admin_bootstrap/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
+          <!--script for this page only-->
+          <script src="{{url('')}}/admin_bootstrap/js/calendar-custom.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/jquery.rateit.min.js"></script>
+          <!-- custom select -->
+          <script src="{{url('')}}/admin_bootstrap/js/jquery.customSelect.min.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/assets/chart-master/Chart.js"></script>
+
+          <!--custome script for all page-->
+          <script src="{{url('')}}/admin_bootstrap/js/scripts.js"></script>
+          <!-- custom script for this page-->
+          <script src="{{url('')}}/admin_bootstrap/js/sparkline-chart.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/easy-pie-chart.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-1.2.2.min.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-world-mill-en.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/xcharts.min.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/jquery.autosize.min.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/jquery.placeholder.min.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/gdp-data.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/morris.min.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
+          <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
+
+          <script>
+            $(document).ready( function() {
+              var i = 1;
+              $('#add').click( function() {
+                i++;
+                $('#dynamic_field').append('<div class="panel-body"><div class="form-group"><label class="col-sm-2 control-label">Nama</label><div class="col-sm-10"><input type="text" class="form-control" name="nama_pj[]"></div></div><div class="form-group"><label class="col-sm-2 control-label">Alamat</label><div class="col-sm-10"><input type="text" class="form-control" name="alamat_pj[]"></div></div><div class="form-group"><label class="col-sm-2 control-label">Hubungan</label><div class="col-sm-10"><input type="text" class="form-control" name="hubungan_pj[]"></div></div><div class="form-group"><label class="col-sm-2 control-label">Telp</label><div class="col-sm-10"><input type="text" class="form-control" name="no_telp_pj[]"></div></div></div>');
+              });
+            });
+          </script>
+
+        </body>
+
+
+        <html>

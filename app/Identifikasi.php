@@ -8,7 +8,7 @@ class Identifikasi extends Model
 {
     protected $table = 'identifikasi';
 
-    protected $primary_key = 'id_regis';
+    protected $primaryKey = 'id_regis';
 
     public $incrementing = true;
 

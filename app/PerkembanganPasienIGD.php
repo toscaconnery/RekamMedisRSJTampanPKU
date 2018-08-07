@@ -8,7 +8,7 @@ class PerkembanganPasienIGD extends Model
 {
     protected $table = 'perkembangan_pasien_igd';
 
-    protected $primary_key = 'id_perkembangan';
+    protected $primaryKey = 'id_perkembangan';
 
     public $incrementing = true;
 

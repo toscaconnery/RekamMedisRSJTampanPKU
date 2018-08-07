@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Pasien;
+use App\Identifikasi;
+use App\RincianPasien;
+use App\PenanggungJawab;
 
 class PasienController extends Controller
 {
@@ -54,6 +57,41 @@ class PasienController extends Controller
     {
         $rincian = new RincianPasien;
         $rincian->no_rm = $request->no_rm;
-        
+        $rincian->no_telp = $request->no_telp;
+        $rincian->pernikahan = $request->pernikahan;
+        $rincian->agama = $request->agama;
+        $rincian->pendidikan = $request->pendidikan;
+        $rincian->pekerjaan = $request->pekerjaan;
+        $rincian->bahasa = $request->bahasa;
+        $rincian->nama_ayah = $request->nama_ayah;
+        $rincian->nama_ibu = $request->nama_ibu;
+        $rincian->budaya = $request->budaya;
+        $rincian->alamat = $request->alamat;
+        $rincian->rt = $request->rt;
+        $rincian->rw = $request->rw;
+        $rincian->perubahan_alamat = $request->perubahan_alamat;
+        $rincian->perubahan_rt = $request->perubahan_rt;
+        $rincian->perubahan_rw = $request->perubahan_rw;
+        $rincian->save();
+
+        $identifikasi = new Identifikasi;
+        $identifikasi->no_rm = $request->no_rm;
+        $identifikasi->save();
+        // dd("id identifikasi : ", $identifikasi->id_regis);
+
+        $index = 0;
+        foreach($request->nama_pj as $nama) {
+            $pj = new PenanggungJawab;
+            $pj->id_regis = $identifikasi->id_regis;
+            $pj->nama = $request->nama_pj[$index];
+            $pj->alamat = $request->alamat_pj[$index];
+            $pj->hubungan = $request->hubungan_pj[$index];
+            $pj->no_telp = $request->no_telp_pj[$index];
+            $pj->save();
+            $index++;
+        }
+        //dd($request);
+
+        return redirect('index');
     }
 }
