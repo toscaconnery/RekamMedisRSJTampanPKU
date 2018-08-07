@@ -19,7 +19,7 @@ class CreateRincianPasienTable extends Migration
             $table->string('no_telp');
             $table->string('pernikahan', 15);
             $table->string('agama', 10);
-            $table->string('pendidikan', 13);
+            $table->string('pendidikan', 15);
             $table->string('pekerjaan', 20);
             $table->string('bahasa', 15);
             $table->string('nama_ayah');

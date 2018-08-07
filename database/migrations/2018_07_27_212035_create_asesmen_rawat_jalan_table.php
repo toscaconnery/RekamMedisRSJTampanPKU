@@ -21,7 +21,8 @@ class CreateAsesmenRawatJalanTable extends Migration
             $table->string('alasan_kunjungan', 100);
             $table->boolean('hubungan_keluarga');
             $table->string('status_psikologis', 20);
-            $table->string('keluhan_utama');
+            $table->string('dilaporkan_ke', 20)->nullable();
+            $table->string('psikologis_lainnya', 40)->nullable();
             $table->timestamps();
         });
     }

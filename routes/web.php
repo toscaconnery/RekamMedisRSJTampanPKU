@@ -18,12 +18,15 @@ Route::get('/', 'IndexController@get_index');
 Route::get('/index', 'IndexController@get_index');
 Route::get('/home', 'IndexController@get_index');
 
-Route::get('/pendaftaran_pasien', 'PasienController@pendaftaran_pasien');
-Route::post('/pendaftaran_pasien', 'PasienController@store_pendaftaran_pasien');
+// Route::get('/pendaftaran_pasien', 'PasienController@pendaftaran_pasien');
+// Route::post('/pendaftaran_pasien', 'PasienController@store_pendaftaran_pasien');
 
 Route::get('/identifikasi_pasien_baru_1', 'PasienController@identifikasi_pasien_baru_1');
 Route::post('/identifikasi_pasien_baru_2', 'PasienController@identifikasi_pasien_baru_2');
 Route::post('/identifikasi_pasien_baru_final', 'PasienController@identifikasi_pasien_baru_final');
+
+Route::get('/rj_asesmen_awal', 'RawatJalanController@asesmen_awal');
+Route::post('/rj_asesmen_awal', 'RawatJalanController@store_asesmen_awal');
 
 Route::get('/ri_surat_persetujuan', function () {
     return view('ri_surat_persetujuan');
@@ -33,9 +36,6 @@ Route::get('/penundaan_pelayanan', function () {
     return view('penundaan_pelayanan');
 });
 
-Route::get('/rj_asesmen', function () {
-    return view('rj_asesmen');
-});
 
 Route::get('/rj_informasi_edukasi', function () {
     return view('rj_informasi_edukasi');

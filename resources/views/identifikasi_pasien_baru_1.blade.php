@@ -38,34 +38,32 @@
 </head>
 
 <body>
- <section id="container" class="">
-  @include('layouts.header')
-  @include('layouts.sidebar')
-
-
-</section>
-<!-- container section start -->
-<section id="main-content">
-  <section class="wrapper">
-    <div class="row">
-      <div class="col-lg-12">
-        <h3 class="page-header"><i class="fa fa-file-text-o"></i> IDENTIFIKASI PASIEN BARU</h3>
+  <section id="container" class="">
+    @include('layouts.header')
+    @include('layouts.sidebar')
+  </section>
+  <!-- container section start -->
+  <section id="main-content">
+    <section class="wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="page-header"><i class="fa fa-file-text-o"></i> IDENTIFIKASI PASIEN BARU</h3>
+        </div>
       </div>
-    </div>
-    <div class="panel-body bio-graph-info">
-      <h4>Silahkan masukkan data pasien baru</h4>
-    </div>
+      <div class="panel-body bio-graph-info">
+        <h4>Silahkan masukkan data pasien baru</h4>
+      </div>
 
 
-    <div class="row">
-      <div class="col-lg-12">
-       <section class="panel">
-        <header class="panel-heading">
-          Data Pasien
-        </header>
-        <div class="panel-body">
-          <form class="form-horizontal " method="post" action="identifikasi_pasien_baru_2">
-            {{ csrf_field() }}
+      <div class="row">
+        <div class="col-lg-12">
+         <section class="panel">
+          <header class="panel-heading">
+            Data Pasien
+          </header>
+          <div class="panel-body">
+            <form class="form-horizontal " method="post" action="identifikasi_pasien_baru_2">
+              {{ csrf_field() }}
             {{-- <div class="form-group">
               <label class="control-label col-lg-2" for="inputSuccess">No. RM</label>
               <div class="col-lg-5">
@@ -194,6 +192,4 @@
       });
     </script>
   </body>
-
-
-  <html>
+<html>
