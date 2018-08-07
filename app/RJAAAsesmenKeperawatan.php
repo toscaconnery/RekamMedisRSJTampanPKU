@@ -4,18 +4,24 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class StatusMental extends Model
+class AsesmenRawatJalan extends Model
 {
-    protected $table = 'status_mental';
+    protected $table = 'rj_aa_asesmen_keperawatan';
 
-    protected $primaryKey = 'id_status';
+    protected $primaryKey = 'id_asesmen';
 
     public $incrementing = true;
 
     public $timestamps = true;
 
     protected $fillable = [
-        'id_regis',
+    	'id_regis',
+    	'id_user',
+    	'alasan_kunjungan',
+    	'hubungan_keluarga',
+    	'status_psikologis',
+    	'dilaporkan_ke',
+    	'psikologis_lainnya',
         'konsep_diri',
         'persepsi',
         'motorik',
@@ -23,6 +29,6 @@ class StatusMental extends Model
         'pikir',
         'perasaan',
         'status_fungsional',
-        'laporan',
+        'waktu_laporan',
     ];
 }

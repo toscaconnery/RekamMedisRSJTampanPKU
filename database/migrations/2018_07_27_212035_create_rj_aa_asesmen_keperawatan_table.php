@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAsesmenRawatJalanTable extends Migration
+class CreateRJAAAsesmenKeperawatanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,23 @@ class CreateAsesmenRawatJalanTable extends Migration
      */
     public function up()
     {
-        Schema::create('asesmen_rawat_jalan', function (Blueprint $table) {
-            $table->increments('id_rj');
+        Schema::create('rj_aa_asesmen_keperawatan', function (Blueprint $table) {
+            $table->increments('id_asesmen');
             $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
             $table->integer('id_user')->reference('id_user')->on('users');
-            $table->date('tanggal');
             $table->string('alasan_kunjungan', 100);
             $table->boolean('hubungan_keluarga');
             $table->string('status_psikologis', 20);
             $table->string('dilaporkan_ke', 20)->nullable();
             $table->string('psikologis_lainnya', 40)->nullable();
+            $table->string('konsep_diri', 20);
+            $table->string('persepsi', 20);
+            $table->string('motorik', 20);
+            $table->string('penampilan', 20);
+            $table->string('pikir', 20);
+            $table->string('perasaan', 20);
+            $table->string('status_fungsional', 20);
+            $table->dateTime('waktu_laporan');
             $table->timestamps();
         });
     }
@@ -34,6 +41,6 @@ class CreateAsesmenRawatJalanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('asesmen_rawat_jalan');
+        Schema::dropIfExists('rjaaasesmenkeperawatan');
     }
 }
