@@ -8,7 +8,7 @@ class AsesmenRawatJalan extends Model
 {
     protected $table = 'asesmen_rawat_jalan';
 
-    protected $primary_key = 'id_rj';
+    protected $primaryKey = 'id_rj';
 
     public $incrementing = true;
 

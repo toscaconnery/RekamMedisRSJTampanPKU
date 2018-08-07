@@ -15,8 +15,7 @@ class RincianPasien extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'id_rincian', 
-        'id_rm', 
+        'no_rm', 
         'alamat', 
         'no_telp', 
         'pernikahan', 

@@ -11,7 +11,7 @@
 
   <title>Asesmen Awal Rawat Jalan</title>
 
-   <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap-theme.css" rel="stylesheet">
@@ -42,137 +42,16 @@
 </head>
 
 <body>
- <section id="container" class="">
- <header class="header dark-bg">
-    <a href="{{url('')}}/index" class="logo">REKAM MEDIS <span class="lite">RSJ TAMPAN</span></a>
-      <div class="top-nav notification-row">
-        <!-- notificatoin dropdown start-->
-        <ul class="nav pull-right top-menu">
-
-          <!-- task notificatoin start -->
-          
-          <!-- task notificatoin end -->
-          <!-- inbox notificatoin start-->
-          
-          
-          <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="username">Syauki Aulia Thamrin</span>
-                            <b class="caret"></b>
-                        </a>
-            <ul class="dropdown-menu extended logout">
-              <div class="log-arrow-up"></div>
-              <li class="eborder-top">
-                <a href="#"><i class="icon_profile"></i> My Profile</a>
-              </li>
-              <li>
-                <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </header>
-
-    <aside>
-      <div id="sidebar" class="nav-collapse ">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu">
-          <li>
-            <a class="" href="{{url('')}}/identifikasi">
-                          <i class="icon_document_alt"></i>
-                          <span><font size="2">Identifikasi Pasien Baru</font></span>
-                      </a>
-          </li>
-        
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>RAWAT JALAN</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="{{url('')}}/rj_asesmen">Asesmen Awal</a></li>
-              <li><a class="" href="{{url('')}}/rj_asesmen_gigi">Asesmen Awal Gigi</a></li>
-              <li><a class="" href="{{url('')}}/rj_informasi_edukasi">Informasi dan Edukasi</a></li>
-              <li><a class="" href="{{url('')}}/rj_lapor_rehabilitasi">Lapor dan Rehabilitasi</a></li>
-              <li><a class="" href="{{url('')}}/rj_perkembangan_pasien">Perkembangan Pasien</a></li>
-              <li><a class="" href="{{url('')}}/rj_identifikasi_stresor">Identifikasi Stresor</a></li>
-              <li><a class="" href="{{url('')}}/rj_tumbuh_kembang">Tumbuh Kembang</a></li>
-              <li><a class="" href="{{url('')}}/rj_resume_rawat">Resume Rawat Jalan</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>IGD</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="{{url('')}}/igd_triase_pasien">Triase Pasien</a></li>
-              <li><a class="" href="{{url('')}}/igd_asesmen_darurat">Asesmen Rawat Darurat</a></li>
-              <li><a class="" href="{{url('')}}/igd_suicide_fisik">Suicide - Kekerasan Fisik</a></li>
-              <li><a class="" href="{{url('')}}/igd_catatan_kemajuan">Catatan Kemajuan</a></li>
-              <li><a class="" href="{{url('')}}/igd_perkembangan_pasien">Perkembangan Pasien</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>RAWAT INAP</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="{{url('')}}/ri_surat_persetujuan">Surat dan Persetujuan</a></li>
-              <li><a class="" href="{{url('')}}/ri_resume_medis">Resume Medis</a></li>
-              <li><a class="" href="{{url('')}}/ri_dpjp_case">DPJP dan Case Manager</a></li>
-              <li><a class="" href="{{url('')}}/ri_persetujuan_umum">Persetujuan Umum</a></li>
-              <li><a class="" href="{{url('')}}/ri_hak_kewajiban">Hak Kewajiban Pasien</a></li>
-              <li><a class="" href="{{url('')}}/ri_asesmen">Asesmen Rawat Inap</a></li>
-              <li><a class="" href="{{url('')}}/ri_suicide_fisik">Suicide Kekerasan Fisik</a></li>
-              <li><a class="" href="{{url('')}}/ri_rawat_napza">Keperawatan NAPZA</a></li>
-              <li><a class="" href="{{url('')}}/ri_penilaian_edmunson">Penilaian Edmunson</a></li>
-              <li><a class="" href="{{url('')}}/ri_risiko_nyeri">Penilaian Risiko Nyeri</a></li>
-              <li><a class="" href="{{url('')}}/ri_catatan_perkembangan">Catatan Perkembangan</a></li>
-              <li><a class="" href="{{url('')}}/ri_rencana_keperawatan">Rencana Keperawatan</a></li>
-              <li><a class="" href="{{url('')}}/ri_evaluasi_keperawatan">Evaluasi Keperawatan</a></li>
-              <li><a class="" href="{{url('')}}/ri_monitoring_observasi">Monitoring Observasi</a></li>
-              <li><a class="" href="{{url('')}}/ri_penggunaan_obat">Penggunaan Obat</a></li>
-              <li><a class="" href="{{url('')}}/ri_riwayat_obat">Riwayat Obat</a></li>
-              <li><a class="" href="{{url('')}}/ri_efek_samping">Efek Samping Obat</a></li>
-              <li><a class="" href="{{url('')}}/ri_edukasi">Edukasi Pasien Keluarga</a></li>
-              <li><a class="" href="{{url('')}}/ri_rencana_pemulangan">Rencana Pemulangan</a></li>
-              <li><a class="" href="{{url('')}}/ri_panss_ec">PANSS EC</a></li>
-              <li><a class="" href="{{url('')}}/ri_penilaian_panss">Penilaian PANSS EC</a></li>
-              <li><a class="" href="{{url('')}}/ri_lembar_konsultasi">Lembar Konsultasi</a></li>
-              <li><a class="" href="{{url('')}}/ri_transfer_internal">Transfer Internal</a></li>
-              <li><a class="" href="{{url('')}}/ri_transfer_eksternal">Transfer Eksternal</a></li>
-              <li><a class="" href="{{url('')}}/ri_pemberian_informasi">Pemberian Informasi</a></li>
-              <li><a class="" href="{{url('')}}/ri_pemeriksaan_psikologis">Pemeriksaan Psikologis</a></li>
-              <li><a class="" href="{{url('')}}/ri_serah_terima">Serah Terima Pulang</a></li>
-            </ul>
-          </li>
-
-          <li>
-            <a class="" href="{{url('')}}/penundaan_pelayanan">
-                          <i class="icon_document_alt"></i>
-                          <span><font size="2">Penundaan Pelayanan</font></span>
-                      </a>
-          </li>
-
-        </ul>
-        <!-- sidebar menu end-->
-      </div>
-    </aside>
-
-
- </section>
+  <section id="container" class="">
+    @include('layouts.header')
+    @include('layouts.sidebar')
+  </section>
   <!-- container section start -->
- <section id="main-content">
-      <section class="wrapper">
-        <div class="row">
-          <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-file-text-o"></i> ASESMEN AWAL RAWAT JALAN</h3>
+  <section id="main-content">
+    <section class="wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="page-header"><i class="fa fa-file-text-o"></i> ASESMEN AWAL RAWAT JALAN</h3>
             <!--<ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_document_alt"></i>Forms</li>
@@ -181,19 +60,19 @@
           </div>
         </div>
         <div class="panel-body bio-graph-info">
-                        <h1>[No. RM]</h1>
-                        <div class="row">
-                          <div class="bio-row">
-                            <p><span>Nama Pasien </span>: [Nama Pasien] </p>
-                          </div>
-                          <div class="bio-row">
-                            <p><span>Tanggal Lahir</span>: 27 Agustus 1996</p>
-                          </div>
-                          <div class="bio-row">
-                            <p><span>Jenis Kelamin </span>: L</p>
-                          </div>
-                        </div>
-                      </div>
+          <h1><input type="text" name="no_rm" placeholder="No. RM"></h1>
+          <div class="row">
+            <div class="bio-row">
+              <p><span>Nama Pasien </span>: [Nama Pasien] </p>
+            </div>
+            <div class="bio-row">
+              <p><span>Tanggal Lahir</span>: 27 Agustus 1996</p>
+            </div>
+            <div class="bio-row">
+              <p><span>Jenis Kelamin </span>: L</p>
+            </div>
+          </div>
+        </div>
         
         <div class="row">
           <div class="col-lg-12">
@@ -231,17 +110,19 @@
         <div class="row">
           <div class="col-lg-12">
 
-            <section class="panel">
-              <header class="panel-heading">
-                Asesmen Keperawatan
-              </header>
-              <div class="panel-body">
+            <form class="form-horizontal" method="post" action="rj_asesmen_awal">
+              <section class="panel">
+                <header class="panel-heading">
+                  Asesmen Keperawatan
+                </header>
+                <div class="panel-body">
 
-                <form class="form-horizontal " method="get">
+                  {{ csrf_field() }}
+                  <input type="hidden" name="no_rm" value="1">
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Alasan Kunjungan</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="alasan_kunjungan">
                     </div>
                   </div>
                   <div class="form-group">
@@ -249,15 +130,15 @@
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
-                                                  Baik
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" name="hubungan_keluarga" checked>
+                          Baik
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Tidak Baik
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="0" name="hubungan_keluarga">
+                          Tidak Baik
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -265,200 +146,200 @@
                     <label class="control-label col-lg-2" for="inputSuccess">Status Psikososial</label>
                     <div class="col-lg-10">
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox1" value="Baik"> Baik
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox1" value="1" name="psikososial1"> Baik
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox2" value="Cemas"> Cemas
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox2" value="2" name="psikososial2"> Cemas
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Takut"> Takut
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="3" name="psikososial3"> Takut
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Marah"> Marah
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="4" name="psikososial4"> Marah
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="option3"> Kecendrungan bunuh diri dilaporkan ke
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="5" name="psikososial5"> Kecendrungan bunuh diri dilaporkan ke
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Lain-lain"> Lain-lain
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="6" name="psikososial6"> Lain-lain
+                      </label>
                     </div>
                   </div>
                   
                   <div class="form-group">
-                   <label class="control-label col-lg-2" for="inputSuccess">Konsep Diri</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Konsep Diri</label>
                     <div class="col-lg-10">
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox1" value="Gangguan citra tubuh"> Gangguan citra tubuh
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox1" value="Gangguan citra tubuh"> Gangguan citra tubuh
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox2" value="Gangguan identitas"> Gangguan identitas
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox2" value="Gangguan identitas"> Gangguan identitas
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Harga diri rendah"> Harga diri rendah
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Harga diri rendah"> Harga diri rendah
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Gangguan peran"> Gangguan peran
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Gangguan peran"> Gangguan peran
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Tidak terkaji"> Tidak terkaji
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Tidak terkaji"> Tidak terkaji
+                      </label>
                     </div>
                   </div>
 
                   <div class="form-group">
-                   <label class="control-label col-lg-2" for="inputSuccess">Persepsi</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Persepsi</label>
                     <div class="col-lg-10">
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox1" value="Ilusi"> Ilusi
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox1" value="Ilusi"> Ilusi
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox2" value="Halusinasi dengar"> Halusinasi dengar
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox2" value="Halusinasi dengar"> Halusinasi dengar
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Halusinasi lihat"> Halusinasi lihat
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Halusinasi lihat"> Halusinasi lihat
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Halusinasi raba"> Halusinasi raba
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Halusinasi raba"> Halusinasi raba
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Halusinasi kecap"> Halusinasi kecap
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Halusinasi kecap"> Halusinasi kecap
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Halusinasi hidu"> Halusinasi hidu
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Halusinasi hidu"> Halusinasi hidu
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Tidak terkaji"> Tidak terkaji
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Tidak terkaji"> Tidak terkaji
+                      </label>
                     </div>
                   </div>
 
                   <div class="form-group">
-                   <label class="control-label col-lg-2" for="inputSuccess">Aktifitas Motorik</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Aktifitas Motorik</label>
                     <div class="col-lg-10">
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox1" value="Lesu"> Lesu
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox1" value="Lesu"> Lesu
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox2" value="Tegang"> Tegang
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox2" value="Tegang"> Tegang
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Gelisah"> Gelisah
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Gelisah"> Gelisah
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="TIK"> TIK  
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="TIK"> TIK  
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Grimasi"> Grimasi  
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Grimasi"> Grimasi  
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Halusinasi hidu"> Halusinasi hidu
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Halusinasi hidu"> Halusinasi hidu
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Tremor"> Tremor
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Tremor"> Tremor
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Konsulsif"> Konsulsif
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Konsulsif"> Konsulsif
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Tidak ada Masalah"> Tidak ada Masalah
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Tidak ada Masalah"> Tidak ada Masalah
+                      </label>
                     </div>
                   </div>
 
                   <div class="form-group">
-                   <label class="control-label col-lg-2" for="inputSuccess">Penampilan</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Penampilan</label>
                     <div class="col-lg-10">
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox1" value="Rapi"> Rapi
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox1" value="Rapi"> Rapi
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox2" value="Tidak rapi"> Tidak rapi
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox2" value="Tidak rapi"> Tidak rapi
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Penggunaan tidak sesuai"> Penggunaan tidak sesuai
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Penggunaan tidak sesuai"> Penggunaan tidak sesuai
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Cara berpakaian tidak seperti biasa"> Cara berpakaian tidak seperti biasa
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Cara berpakaian tidak seperti biasa"> Cara berpakaian tidak seperti biasa
+                      </label>
                     </div>
                   </div>
 
                   <div class="form-group">
-                   <label class="control-label col-lg-2" for="inputSuccess">Isi Pikir</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Isi Pikir</label>
                     <div class="col-lg-10">
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox1" value="Obsesi"> Obsesi
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox1" value="Obsesi"> Obsesi
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox2" value="Phobia"> Phobia
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox2" value="Phobia"> Phobia
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Hipokondria"> Hipokondria
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Hipokondria"> Hipokondria
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Depersonalisasi"> Depersonalisasi  
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Depersonalisasi"> Depersonalisasi  
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Ide terkait"> Ide terkait 
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Ide terkait"> Ide terkait 
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Pikiran magis"> Pikiran magis
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Pikiran magis"> Pikiran magis
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Waham agama"> Waham agama
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Waham agama"> Waham agama
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Waham somatik"> Waham somatik
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Waham somatik"> Waham somatik
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Waham besar"> Waham besar
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Waham besar"> Waham besar
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Waham curiga"> Waham curiga
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Waham curiga"> Waham curiga
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Waham nihilistik"> Waham nihilistik
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Waham nihilistik"> Waham nihilistik
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Sisip pikir"> Sisip pikir
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Sisip pikir"> Sisip pikir
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Siar pikir"> Siar pikir
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Siar pikir"> Siar pikir
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Kontrol pikir"> Kontrol pikir
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Kontrol pikir"> Kontrol pikir
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Tidak terkaji"> Tidak terkaji
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Tidak terkaji"> Tidak terkaji
+                      </label>
                     </div>
                   </div>
 
                   <div class="form-group">
-                   <label class="control-label col-lg-2" for="inputSuccess">Alam Perasaan</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Alam Perasaan</label>
                     <div class="col-lg-10">
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox1" value="option1"> Sedih
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Sedih
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox2" value="option2"> Ketakutan
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Ketakutan
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="option3"> Putus asa
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Putus asa
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="option3"> Khawatir
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Khawatir
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="option3"> Gembira berlebihan
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Gembira berlebihan
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="option3"> Isyarat/Percobaan bunuh diri
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Isyarat/Percobaan bunuh diri
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="option3"> Sesuai
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Sesuai
+                      </label>
                     </div>
                   </div>
 
@@ -467,21 +348,21 @@
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="fungsional" id="optionsRadios1" value="option1" checked>
-                                                  Mandiri
-                                              </label>
+                          <input type="radio" name="fungsional" id="optionsRadios1" value="option1" checked>
+                          Mandiri
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="fungsional" id="optionsRadios1" value="option1" checked>
-                                                  Perlu Bantuan
-                                              </label>
+                          <input type="radio" name="fungsional" id="optionsRadios1" value="option1" checked>
+                          Perlu Bantuan
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="fungsional" id="optionsRadios1" value="option1" checked>
-                                                  Ketergantungan Total
-                                              </label>
+                          <input type="radio" name="fungsional" id="optionsRadios1" value="option1" checked>
+                          Ketergantungan Total
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -499,17 +380,18 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
+            </form>
 
-            <section class="panel">
-              <header class="panel-heading">
-                Pemeriksaan Fisik dan Screening Gizi
-              </header>
-              <div class="panel-body">
 
-                <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Pemeriksaan Fisik dan Screening Gizi
+                </header>
+                <div class="panel-body">
+
 
                   <div class="form-group">
                     <label class="col-sm-2 control-label">TD</label>
@@ -543,28 +425,28 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                  
+
                   <div class="col-lg-2"></div><h5>Berdasarkan Malnutrition Universal Screening Tool (MUST)</h5>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Apakah pasien mengalami penurunan BB yang tidak diinginkan dalam 6 bulan terakhir?</label>
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                                  Tidak ada penurunan berat badan
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                          Tidak ada penurunan berat badan
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                                  Tidak yakin/ tidak tahu/ terasa baju longgar 
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                          Tidak yakin/ tidak tahu/ terasa baju longgar 
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                                  Ya
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                          Ya
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -573,11 +455,11 @@
                     <label class="control-label col-lg-2" for="inputSuccess">Jika ya berapa penurunan berat badan tersebut?</label>
                     <div class="col-lg-3">
                       <select class="form-control m-bot15">
-                                              <option>1 – 5 kg </option>
-                                              <option>6 – 10 kg </option>
-                                              <option>11 – 15 kg </option>
-                                              <option>> - 15 kg </option>
-                                          </select>
+                        <option>1 – 5 kg </option>
+                        <option>6 – 10 kg </option>
+                        <option>11 – 15 kg </option>
+                        <option>> - 15 kg </option>
+                      </select>
                     </div>
                   </div>
 
@@ -586,15 +468,15 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
-                                                  Ya 
-                                              </label>
+                          <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                          Ya 
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Tidak 
-                                              </label>
+                          <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                          Tidak 
+                        </label>
                       </div>
                     </div>
 
@@ -602,15 +484,15 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="khusus" id="optionsRadios1" value="Baik" checked>
-                                                  Ya 
-                                              </label>
+                          <input type="radio" name="khusus" id="optionsRadios1" value="Baik" checked>
+                          Ya 
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="khusus" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Tidak 
-                                              </label>
+                          <input type="radio" name="khusus" id="optionsRadios1" value="Tidak Baik" checked>
+                          Tidak 
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -622,31 +504,31 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="s1" id="optionsRadios1" value="Baik" checked>
-                                                  Ya 
-                                              </label>
+                          <input type="radio" name="s1" id="optionsRadios1" value="Baik" checked>
+                          Ya 
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="s1" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Tidak 
-                                              </label>
+                          <input type="radio" name="s1" id="optionsRadios1" value="Tidak Baik" checked>
+                          Tidak 
+                        </label>
                       </div>
                     </div>
-  
+
                     <label class="control-label col-lg-3" for="inputSuccess">Apakah terdapat penurunan BB selama satu bulan terakhir? Berdasarkan penilaian objektif data BB bila ada ATAU penilaian subjektif orangtua pasien ATAU untuk bayi < 1 tahun : BB tidak naik selama 3 bulan terakhi?r</label>
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="s2" id="optionsRadios1" value="Baik" checked>
-                                                  Ya 
-                                              </label>
+                          <input type="radio" name="s2" id="optionsRadios1" value="Baik" checked>
+                          Ya 
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="s2" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Tidak 
-                                              </label>
+                          <input type="radio" name="s2" id="optionsRadios1" value="Tidak Baik" checked>
+                          Tidak 
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -656,15 +538,15 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="s3" id="optionsRadios1" value="Baik" checked>
-                                                  Ya 
-                                              </label>
+                          <input type="radio" name="s3" id="optionsRadios1" value="Baik" checked>
+                          Ya 
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="s3" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Tidak 
-                                              </label>
+                          <input type="radio" name="s3" id="optionsRadios1" value="Tidak Baik" checked>
+                          Tidak 
+                        </label>
                       </div>
                     </div>
 
@@ -672,15 +554,15 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="s3" id="optionsRadios1" value="Baik" checked>
-                                                  Ya 
-                                              </label>
+                          <input type="radio" name="s3" id="optionsRadios1" value="Baik" checked>
+                          Ya 
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="s3" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Tidak 
-                                              </label>
+                          <input type="radio" name="s3" id="optionsRadios1" value="Tidak Baik" checked>
+                          Tidak 
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -690,122 +572,122 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Diare Kronik (lebih dari 2 minggu)
-                                              </label>
+                          <input type="checkbox" value="">
+                          Diare Kronik (lebih dari 2 minggu)
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  (Tersangka) Penyakit jantung bawaan
-                                              </label>
+                          <input type="checkbox" value="">
+                          (Tersangka) Penyakit jantung bawaan
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  (Tersangka) Infeksi Human Immunodeficiency Virus (HIV)
-                                              </label>
+                          <input type="checkbox" value="">
+                          (Tersangka) Infeksi Human Immunodeficiency Virus (HIV)
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  (Tersangka) Kanker
-                                              </label>
+                          <input type="checkbox" value="">
+                          (Tersangka) Kanker
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Penyakit hati kronik
-                                              </label>
+                          <input type="checkbox" value="">
+                          Penyakit hati kronik
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Penyakit ginjal kronik
-                                              </label>
+                          <input type="checkbox" value="">
+                          Penyakit ginjal kronik
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  TB Paru
-                                              </label>
+                          <input type="checkbox" value="">
+                          TB Paru
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Luka bakar luas
-                                              </label>
+                          <input type="checkbox" value="">
+                          Luka bakar luas
+                        </label>
                       </div>
-                      
+
                     </div>
                     <div class="col-lg-6">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Kelainan anatomi daerah mulut yang menyebabkan kesulitan makan (misal:bibir sumbing)
-                                              </label>
+                          <input type="checkbox" value="">
+                          Kelainan anatomi daerah mulut yang menyebabkan kesulitan makan (misal:bibir sumbing)
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Trauma
-                                              </label>
+                          <input type="checkbox" value="">
+                          Trauma
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Kelainan metabolik bawaan (Inborn Error Metabolism)
-                                              </label>
+                          <input type="checkbox" value="">
+                          Kelainan metabolik bawaan (Inborn Error Metabolism)
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  (Tersangka) Infeksi Human Immunodeficiency Virus (HIV)
-                                              </label>
+                          <input type="checkbox" value="">
+                          (Tersangka) Infeksi Human Immunodeficiency Virus (HIV)
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Retardasi mental
-                                              </label>
+                          <input type="checkbox" value="">
+                          Retardasi mental
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Rencana / paska operasi mayor (misal: laparatomi, tokaratomi)
-                                              </label>
+                          <input type="checkbox" value="">
+                          Rencana / paska operasi mayor (misal: laparatomi, tokaratomi)
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Terpasang stoma
-                                              </label>
+                          <input type="checkbox" value="">
+                          Terpasang stoma
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Lain-lain...
-                                              </label>
+                          <input type="checkbox" value="">
+                          Lain-lain...
+                        </label>
                       </div>
                     </div>
                   </div>
 
                   <div class="form-group">
-                  <label class="control-label col-lg-2" for="inputSuccess">Diberitahukan ke dokter?</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Diberitahukan ke dokter?</label>
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="cc" id="optionsRadios1" value="Baik" checked>
-                                                  Ya 
-                                              </label>
+                          <input type="radio" name="cc" id="optionsRadios1" value="Baik" checked>
+                          Ya 
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="cc" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Tidak 
-                                              </label>
+                          <input type="radio" name="cc" id="optionsRadios1" value="Tidak Baik" checked>
+                          Tidak 
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -815,26 +697,25 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-              </div>
-              </form>
-                
-            </section>
-            
-            <section class="panel">
-              <header class="panel-heading">
-                Penilaian Tingkat Nyeri
-              </header>
-              <div class="panel-body">
+                </div>
+              </section>
+            </form>
 
-                <form class="form-horizontal " method="get">
+
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Penilaian Tingkat Nyeri
+                </header>
+                <div class="panel-body">
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Tingkat nyeri</label>
                     <div class="col-lg-3">
                       <select class="form-control m-bot15">
-                                              <option>Tidak ada nyeri</option>
-                                              <option>Nyeri Kronis</option>
-                                              <option>Nyeri Akut</option>
-                                          </select>
+                        <option>Tidak ada nyeri</option>
+                        <option>Nyeri Kronis</option>
+                        <option>Nyeri Akut</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
@@ -866,33 +747,33 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Minum Obat
-                                              </label>
+                          <input type="checkbox" value="">
+                          Minum Obat
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Mendengar Musik
-                                              </label>
+                          <input type="checkbox" value="">
+                          Mendengar Musik
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Istirahat
-                                              </label>
+                          <input type="checkbox" value="">
+                          Istirahat
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Berubah posisi/tidur
-                                              </label>
+                          <input type="checkbox" value="">
+                          Berubah posisi/tidur
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Lain-lain
-                                              </label>
+                          <input type="checkbox" value="">
+                          Lain-lain
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -905,19 +786,19 @@
                   </div>
 
                   <div class="form-group">
-                  <label class="control-label col-lg-2" for="inputSuccess">Diberitahukan ke dokter?</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Diberitahukan ke dokter?</label>
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="cc" id="optionsRadios1" value="Baik" checked>
-                                                  Ya 
-                                              </label>
+                          <input type="radio" name="cc" id="optionsRadios1" value="Baik" checked>
+                          Ya 
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="cc" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Tidak 
-                                              </label>
+                          <input type="radio" name="cc" id="optionsRadios1" value="Tidak Baik" checked>
+                          Tidak 
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -928,68 +809,62 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
+                </div>
+              </section>
+            </form>
 
-                  
-                </form>
-              </div>
-            </section>
 
-            <section class="panel">
-              <header class="panel-heading">
-                Penilaian Risiko Jatuh
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Penilaian Risiko Jatuh
+                </header>
+                <div class="panel-body">
                   <div class="form-group">
-                  <label class="control-label col-lg-2" for="inputSuccess">Risiko Jatuh</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Risiko Jatuh</label>
                     <div class="col-lg-4">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="cc" id="optionsRadios1" value="Baik" checked>
-                                                  HUMPTY DUMPTY (Anak-anak) 
-                                              </label>
+                          <input type="radio" name="cc" id="optionsRadios1" value="Baik" checked>
+                          HUMPTY DUMPTY (Anak-anak) 
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="cc" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  MORSE (Dewasa) 
-                                              </label>
+                          <input type="radio" name="cc" id="optionsRadios1" value="Tidak Baik" checked>
+                          MORSE (Dewasa) 
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="cc" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  EDMUNSON (Jiwa) 
-                                              </label>
+                          <input type="radio" name="cc" id="optionsRadios1" value="Tidak Baik" checked>
+                          EDMUNSON (Jiwa) 
+                        </label>
                       </div>
                     </div>
                   </div>
+                </div>
+              </section>
+            </form>
 
-                  
-                </form>
-              </div>
-            </section>
 
-            <section class="panel">
-              <header class="panel-heading">
-                HUMPTY DUMPTY (Anak-anak)
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  HUMPTY DUMPTY (Anak-anak)
+                </header>
+                <div class="panel-body">
                   <div class="col-lg-2"></div><h4>HUMPTY DUMPTY (Anak-anak) </h4>
                   <div class="form-group"></div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">USIA</label>
                     <div class="col-lg-2">
                       <select class="form-control m-bot15">
-                                              <option>Dibawah 3 tahun </option>
-                                              <option>3 – 7 tahun </option>
-                                              <option>7 – 13 tahun </option>
-                                              <option>> 13 tahun </option>
-                                          </select>
+                        <option>Dibawah 3 tahun </option>
+                        <option>3 – 7 tahun </option>
+                        <option>7 – 13 tahun </option>
+                        <option>> 13 tahun </option>
+                      </select>
                     </div>
                   </div>
 
@@ -997,11 +872,11 @@
                     <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Kelainan Neurologi </option>
-                                              <option>Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
-                                              <option>Kelainan psikis / prilaku</option>
-                                              <option>Diagnosis lain</option>
-                                          </select>
+                        <option>Kelainan Neurologi </option>
+                        <option>Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
+                        <option>Kelainan psikis / prilaku</option>
+                        <option>Diagnosis lain</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1009,10 +884,10 @@
                     <label class="control-label col-lg-2" for="inputSuccess">GANGGUAN KOGNITIF</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Tidak sadar terhadap keterbatasan (gangguan kesadaran, retardasi mental</option>
-                                              <option>Lupa keterbatasan (anak yang hiperaktif)</option>
-                                              <option>Mengetahui kemampuan diri</option>
-                                          </select>
+                        <option>Tidak sadar terhadap keterbatasan (gangguan kesadaran, retardasi mental</option>
+                        <option>Lupa keterbatasan (anak yang hiperaktif)</option>
+                        <option>Mengetahui kemampuan diri</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1020,11 +895,11 @@
                     <label class="control-label col-lg-2" for="inputSuccess">FAKTOR LINGKUNGAN</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Riwayat jatuh dari tempat tidur saat bayi</option>
-                                              <option>Pasien menggunakan alat bantu atau box meubel</option>
-                                              <option>Pasien berada di tempat tidur</option>
-                                              <option>Di luar ruang rawat</option>
-                                          </select>
+                        <option>Riwayat jatuh dari tempat tidur saat bayi</option>
+                        <option>Pasien menggunakan alat bantu atau box meubel</option>
+                        <option>Pasien berada di tempat tidur</option>
+                        <option>Di luar ruang rawat</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1032,10 +907,10 @@
                     <label class="control-label col-lg-2" for="inputSuccess">RESPON TERHADAP OPERASI/OBAT PENENANG/EFEK ANASTESI</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Dalam 24 Jam</option>
-                                              <option>Dalam 48 Jam</option>
-                                              <option>> 48 Jam</option>
-                                          </select>
+                        <option>Dalam 24 Jam</option>
+                        <option>Dalam 48 Jam</option>
+                        <option>> 48 Jam</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1043,34 +918,33 @@
                     <label class="control-label col-lg-2" for="inputSuccess">PENGGUNAAN OBAT</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Bermacam-macam obat yang digunakan : obat sedatif (kecuali pasien ICU yang menggunakan sedasi dan paralisis), Hiptonik Barbitural, Fonotiazin, Antidepresan, Laksansia / Diuretikan, Narkotik</option>
-                                              <option>Salah satu Pengobatan di atas</option>
-                                              <option>Pengobatan lain</option>
-                                          </select>
+                        <option>Bermacam-macam obat yang digunakan : obat sedatif (kecuali pasien ICU yang menggunakan sedasi dan paralisis), Hiptonik Barbitural, Fonotiazin, Antidepresan, Laksansia / Diuretikan, Narkotik</option>
+                        <option>Salah satu Pengobatan di atas</option>
+                        <option>Pengobatan lain</option>
+                      </select>
                     </div>
                   </div>
 
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
+            </form>
 
-            <section class="panel">
-              <header class="panel-heading">
-                MORSE (Dewasa)
-              </header>
-              <div class="panel-body">
 
-                <form class="form-horizontal " method="get">
-
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  MORSE (Dewasa)
+                </header>
+                <div class="panel-body">
                   <div class="col-lg-2"></div><h4>MORSE (Dewasa) </h4>
                   <div class="form-group"></div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">RIWAYAT JATUH</label>
                     <div class="col-lg-1">
                       <select class="form-control m-bot15">
-                                              <option>Ya</option>
-                                              <option>Tidak</option>
-                                          </select>
+                        <option>Ya</option>
+                        <option>Tidak</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1078,9 +952,9 @@
                     <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS SEKUNDER</label>
                     <div class="col-lg-1">
                       <select class="form-control m-bot15">
-                                              <option>Ya</option>
-                                              <option>Tidak</option>
-                                          </select>
+                        <option>Ya</option>
+                        <option>Tidak</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1088,10 +962,10 @@
                     <label class="control-label col-lg-2" for="inputSuccess">ALAT BANTU</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Perabot</option>
-                                              <option>Tongkat/Alat Penopang</option>
-                                              <option>Tidak ada/Kursi Roda/Perawat/Tirah Baring</option>
-                                          </select>
+                        <option>Perabot</option>
+                        <option>Tongkat/Alat Penopang</option>
+                        <option>Tidak ada/Kursi Roda/Perawat/Tirah Baring</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1099,9 +973,9 @@
                     <label class="control-label col-lg-2" for="inputSuccess">TERPASANG INFUS</label>
                     <div class="col-lg-1">
                       <select class="form-control m-bot15">
-                                              <option>Ya</option>
-                                              <option>Tidak</option>
-                                          </select>
+                        <option>Ya</option>
+                        <option>Tidak</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1109,10 +983,10 @@
                     <label class="control-label col-lg-2" for="inputSuccess">GAYA BERJALAN</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Terganggu</option>
-                                              <option>Lemah</option>
-                                              <option>Normal/Tirah Baring/Imobilisasi</option>
-                                          </select>
+                        <option>Terganggu</option>
+                        <option>Lemah</option>
+                        <option>Normal/Tirah Baring/Imobilisasi</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1120,35 +994,33 @@
                     <label class="control-label col-lg-2" for="inputSuccess">STATUS MENTAL</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Sering lupa akan keterbatasan yang dimiliki</option>
-                                              <option>Orientasi baik terhadap kemampuan diri sendiri</option>
-                                          </select>
+                        <option>Sering lupa akan keterbatasan yang dimiliki</option>
+                        <option>Orientasi baik terhadap kemampuan diri sendiri</option>
+                      </select>
                     </div>
                   </div>
+                </div>
+              </section>
+            </form>
 
-                </form>
-              </div>
-            </section>
 
-            <section class="panel">
-              <header class="panel-heading">
-                EDMUNSON (Jiwa)
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  EDMUNSON (Jiwa)
+                </header>
+                <div class="panel-body">
                   <div class="col-lg-2"></div><h4>EDMUNSON (Jiwa) </h4>
                   <div class="form-group"></div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">STATUS MENTAL</label>
                     <div class="col-lg-2">
                       <select class="form-control m-bot15">
-                                              <option>Kesadaran baik/orientasi baik setiap saat </option>
-                                              <option>Agitasi/Ansietas</option>
-                                              <option>Kadang-kadang bingung</option>
-                                              <option>Bingung/Disorientasi</option>
-                                          </select>
+                        <option>Kesadaran baik/orientasi baik setiap saat </option>
+                        <option>Agitasi/Ansietas</option>
+                        <option>Kadang-kadang bingung</option>
+                        <option>Bingung/Disorientasi</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1156,11 +1028,11 @@
                     <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Kelainan Neurologi </option>
-                                              <option>Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
-                                              <option>Kelainan psikis / prilaku</option>
-                                              <option>Diagnosis lain</option>
-                                          </select>
+                        <option>Kelainan Neurologi </option>
+                        <option>Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
+                        <option>Kelainan psikis / prilaku</option>
+                        <option>Diagnosis lain</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1168,12 +1040,12 @@
                     <label class="control-label col-lg-2" for="inputSuccess">ELIMINASI</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Mandiri dan mampi mengontrol BAB/BAK</option>
-                                              <option>Dower Catheter/Colostomy</option>
-                                              <option>Eliminasi dengan bantuan</option>
-                                              <option>Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)</option>
-                                              <option>Inkontinesia tetapi mampu untuk mobilisasi</option>
-                                          </select>
+                        <option>Mandiri dan mampi mengontrol BAB/BAK</option>
+                        <option>Dower Catheter/Colostomy</option>
+                        <option>Eliminasi dengan bantuan</option>
+                        <option>Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)</option>
+                        <option>Inkontinesia tetapi mampu untuk mobilisasi</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1181,11 +1053,11 @@
                     <label class="control-label col-lg-2" for="inputSuccess">PENGOBATAN</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Tanpa obat-obatan</option>
-                                              <option>Obat-obatan jantung</option>
-                                              <option>Obat-obat psikotropika (termasuk Benzodiazepine dan Antidepresan)</option>
-                                              <option>Mendapat tambahan obat-obatan dan/atau obat-obat PRN (psikiatri, antinyeri) yang diberikan dalam 24 jam terakhir</option>
-                                          </select>
+                        <option>Tanpa obat-obatan</option>
+                        <option>Obat-obatan jantung</option>
+                        <option>Obat-obat psikotropika (termasuk Benzodiazepine dan Antidepresan)</option>
+                        <option>Mendapat tambahan obat-obatan dan/atau obat-obat PRN (psikiatri, antinyeri) yang diberikan dalam 24 jam terakhir</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1193,11 +1065,11 @@
                     <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSA</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Bipolar/ Gangguan Schizoaffective</option>
-                                              <option>Penggunaan Obat-obatan terlarang/ketergantungan alkohol</option>
-                                              <option>Gangguan Depresi Mayor</option>
-                                              <option>Dimensia/ Delirium</option>
-                                          </select>
+                        <option>Bipolar/ Gangguan Schizoaffective</option>
+                        <option>Penggunaan Obat-obatan terlarang/ketergantungan alkohol</option>
+                        <option>Gangguan Depresi Mayor</option>
+                        <option>Dimensia/ Delirium</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1205,12 +1077,12 @@
                     <label class="control-label col-lg-2" for="inputSuccess">AMBULASI /KESEIMBANGAN </label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Mandiri/Keseimbangan Baik/Immobilisasi</option>
-                                              <option>Dengan Alat Bantu (Kursi roda, walker,dll)</option>
-                                              <option>Vertigo/kelemahan</option>
-                                              <option>Goyah/membutuhkan mantuan dan menyadari kemampuan</option>
-                                              <option>Goyah tapi lupa keterbatasan</option>
-                                          </select>
+                        <option>Mandiri/Keseimbangan Baik/Immobilisasi</option>
+                        <option>Dengan Alat Bantu (Kursi roda, walker,dll)</option>
+                        <option>Vertigo/kelemahan</option>
+                        <option>Goyah/membutuhkan mantuan dan menyadari kemampuan</option>
+                        <option>Goyah tapi lupa keterbatasan</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1218,10 +1090,10 @@
                     <label class="control-label col-lg-2" for="inputSuccess">NUTRISI</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Mengkonsumsi sedikit makanan atau minuman  dalam 24 jam terakhir</option>
-                                              <option>Tidak ada kelainan dengan nafsu makan</option>
-                                              <option>Gangguan pola tidur yang dilaporkan oleh pasien, keluarga atau petugas</option>
-                                          </select>
+                        <option>Mengkonsumsi sedikit makanan atau minuman  dalam 24 jam terakhir</option>
+                        <option>Tidak ada kelainan dengan nafsu makan</option>
+                        <option>Gangguan pola tidur yang dilaporkan oleh pasien, keluarga atau petugas</option>
+                      </select>
                     </div>
                   </div>
 
@@ -1229,113 +1101,109 @@
                     <label class="control-label col-lg-2" for="inputSuccess">RIWAYAT JATUH</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15">
-                                              <option>Tidak ada riwayat jatuh</option>
-                                              <option>Ada riwayat jatuh dalam 3 bulan terakhir</option>
-                                          </select>
+                        <option>Tidak ada riwayat jatuh</option>
+                        <option>Ada riwayat jatuh dalam 3 bulan terakhir</option>
+                      </select>
                     </div>
                   </div>
+                </div>
+              </section>
+            </form>
 
 
-
-                </form>
-              </div>
-            </section>
-
-                        <section class="panel">
-              <header class="panel-heading">
-                Diagnosa Keperawatan
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Diagnosa Keperawatan
+                </header>
+                <div class="panel-body">
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Diagnosa Keperawatan Umum</label>
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Aktual/ Resiko bersihan jalan nafas tidak efektif
-                                              </label>
+                          <input type="checkbox" value="">
+                          Aktual/ Resiko bersihan jalan nafas tidak efektif
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Aktual/ Resiko aspirasi
-                                              </label>
+                          <input type="checkbox" value="">
+                          Aktual/ Resiko aspirasi
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Aktual/ Resiko pola nafas tidak efektif
-                                              </label>
+                          <input type="checkbox" value="">
+                          Aktual/ Resiko pola nafas tidak efektif
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Aktual/ Resiko gangguan pertukaran gas
-                                              </label>
+                          <input type="checkbox" value="">
+                          Aktual/ Resiko gangguan pertukaran gas
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Aktual/ penurunan curah jantung
-                                              </label>
+                          <input type="checkbox" value="">
+                          Aktual/ penurunan curah jantung
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Aktual/ Resiko gangguan perfusi jaringan celebral/perifer
-                                              </label>
+                          <input type="checkbox" value="">
+                          Aktual/ Resiko gangguan perfusi jaringan celebral/perifer
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Aktual/ Resiko gangguan keseimbangan cairan
-                                              </label>
+                          <input type="checkbox" value="">
+                          Aktual/ Resiko gangguan keseimbangan cairan
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Aktual/ Resiko gangguan keseimbangan kontinuitas jaringan
-                                              </label>
+                          <input type="checkbox" value="">
+                          Aktual/ Resiko gangguan keseimbangan kontinuitas jaringan
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Aktual/ Resiko infeksi
-                                              </label>
+                          <input type="checkbox" value="">
+                          Aktual/ Resiko infeksi
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Resiko cedera / jatuh
-                                              </label>
+                          <input type="checkbox" value="">
+                          Resiko cedera / jatuh
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Hypertermi
-                                              </label>
+                          <input type="checkbox" value="">
+                          Hypertermi
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Nyeri
-                                              </label>
+                          <input type="checkbox" value="">
+                          Nyeri
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Gangguan kebutuhan nutrisi
-                                              </label>
+                          <input type="checkbox" value="">
+                          Gangguan kebutuhan nutrisi
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Lainnya
-                                              </label>
+                          <input type="checkbox" value="">
+                          Lainnya
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1351,84 +1219,84 @@
                     <div class="col-lg-6">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Gangguan persepsi sensori : halusinasi
-                                              </label>
+                          <input type="checkbox" value="">
+                          Gangguan persepsi sensori : halusinasi
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Perilaku kekerasan
-                                              </label>
+                          <input type="checkbox" value="">
+                          Perilaku kekerasan
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Isolasi sosial
-                                              </label>
+                          <input type="checkbox" value="">
+                          Isolasi sosial
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Gangguan konsep diri
-                                              </label>
+                          <input type="checkbox" value="">
+                          Gangguan konsep diri
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Resiko bunuh diri
-                                              </label>
+                          <input type="checkbox" value="">
+                          Resiko bunuh diri
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Intoleransi aktifitas
-                                              </label>
+                          <input type="checkbox" value="">
+                          Intoleransi aktifitas
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Waham
-                                              </label>
+                          <input type="checkbox" value="">
+                          Waham
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Defisit perawatan diri
-                                              </label>
+                          <input type="checkbox" value="">
+                          Defisit perawatan diri
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Kerusakan komunitas verbal
-                                              </label>
-                      </div>
-
-                                            <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  Koping individu tidak efektif
-                                              </label>
+                          <input type="checkbox" value="">
+                          Kerusakan komunitas verbal
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Aktual/Resiko Cemas/Takut
-                                              </label>
+                          <input type="checkbox" value="">
+                          Koping individu tidak efektif
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Lainnya
-                                              </label>
+                          <input type="checkbox" value="">
+                          Aktual/Resiko Cemas/Takut
+                        </label>
+                      </div>
+
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="">
+                          Lainnya
+                        </label>
                       </div>
                     </div>
                   </div>
 
-                  
+
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Sebutkan </label>
                     <div class="col-sm-8">
@@ -1450,17 +1318,17 @@
                     </div>
                   </div>
 
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
+            </form>
 
-            <section class="panel">
-              <header class="panel-heading">
-                Evaluasi Tindakan Keperawatan
-              </header>
-              <div class="panel-body">
 
-                <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Evaluasi Tindakan Keperawatan
+                </header>
+                <div class="panel-body">
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Implementasi </label>
                     <div class="col-sm-8">
@@ -1473,17 +1341,17 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
+            </form>
 
-            <section class="panel">
-              <header class="panel-heading">
-                Data Medis
-              </header>
-              <div class="panel-body">
 
-                <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Data Medis
+                </header>
+                <div class="panel-body">
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Wawancara dengan </label>
                     <div class="col-sm-8">
@@ -1513,15 +1381,15 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
-                                                  Tidak ada
-                                              </label>
+                          <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                          Tidak ada
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Ada
-                                              </label>
+                          <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                          Ada
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1566,91 +1434,91 @@
                     <div class="col-lg-6">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Hipertensi
-                                              </label>
+                          <input type="checkbox" value="">
+                          Hipertensi
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Liver
-                                              </label>
+                          <input type="checkbox" value="">
+                          Liver
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Diabetes
-                                              </label>
+                          <input type="checkbox" value="">
+                          Diabetes
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Cancer
-                                              </label>
+                          <input type="checkbox" value="">
+                          Cancer
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Jantung
-                                              </label>
+                          <input type="checkbox" value="">
+                          Jantung
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  TBC
-                                              </label>
+                          <input type="checkbox" value="">
+                          TBC
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Stroke
-                                              </label>
+                          <input type="checkbox" value="">
+                          Stroke
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Glaukoma
-                                              </label>
+                          <input type="checkbox" value="">
+                          Glaukoma
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Dialysis
-                                              </label>
-                      </div>
-
-                                            <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  STD
-                                              </label>
+                          <input type="checkbox" value="">
+                          Dialysis
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Asthma
-                                              </label>
+                          <input type="checkbox" value="">
+                          STD
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Perdarahan
-                                              </label>
+                          <input type="checkbox" value="">
+                          Asthma
+                        </label>
+                      </div>
+
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="">
+                          Perdarahan
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Kejang
-                                              </label>
+                          <input type="checkbox" value="">
+                          Kejang
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Lainnya 
-                                              </label>
+                          <input type="checkbox" value="">
+                          Lainnya 
+                        </label>
                       </div>
 
                     </div>
@@ -1660,15 +1528,15 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
-                                                  Tidak
-                                              </label>
+                          <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                          Tidak
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Ya
-                                              </label>
+                          <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                          Ya
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1689,15 +1557,15 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
-                                                  Tidak
-                                              </label>
+                          <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                          Tidak
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Ya
-                                              </label>
+                          <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                          Ya
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1706,15 +1574,15 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
-                                                  Tidak
-                                              </label>
+                          <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                          Tidak
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Ya
-                                              </label>
+                          <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                          Ya
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1742,18 +1610,18 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                  </div>
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
+            </form>
 
-            <section class="panel">
-              <header class="panel-heading">
-                Obat yang Diminum Saat Ini
-              </header>
-              <div class="panel-body">
 
-                <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Obat yang Diminum Saat Ini
+                </header>
+                <div class="panel-body">
+
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Nama Obat</label>
                     <div class="col-sm-8">
@@ -1784,17 +1652,17 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
+            </form>
 
-            <section class="panel">
-              <header class="panel-heading">
-                Pemeriksaan Fisik
-              </header>
-              <div class="panel-body">
 
-                <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Pemeriksaan Fisik
+                </header>
+                <div class="panel-body">
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Kepala</label>
                     <div class="col-sm-8">
@@ -1843,16 +1711,17 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
+            </form>
 
-            <section class="panel">
-              <header class="panel-heading">
-                Status Psikiatri
-              </header>
-              <div class="panel-body">
-                <form class="form-horizontal " method="get">
+
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Status Psikiatri
+                </header>
+                <div class="panel-body">
                   <div class="col-lg-2"></div><h4>Keadaan Umum</h4>
                   <div class="form-group"></div>
                   <div class="form-group">
@@ -1977,17 +1846,18 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
+            </form>
 
-            <section class="panel">
-              <header class="panel-heading">
-                Status Neurologi
-              </header>
-              <div class="panel-body">
 
-                <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Status Neurologi
+                </header>
+                <div class="panel-body">
+
                   <div class="col-lg-2"></div><h4>Pemeriksaan Khusus</h4>
                   <div class="form-group"></div>
                   <div class="form-group">
@@ -2020,17 +1890,18 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
+            </form>
 
-            <section class="panel">
-              <header class="panel-heading">
-                Pemeriksaan Penunjang
-              </header>
-              <div class="panel-body">
 
-                <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Pemeriksaan Penunjang
+                </header>
+                <div class="panel-body">
+
                   <div class="col-lg-2"></div><h4>Laboratorium</h4>
                   <div class="form-group"></div>
                   <div class="form-group">
@@ -2186,106 +2057,106 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
+            </form>
 
-            <section class="panel">
-              <header class="panel-heading">
-                Instrumen Penilaian
-              </header>
-              <div class="panel-body">
 
-                <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Instrumen Penilaian
+                </header>
+                <div class="panel-body">
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">P4. GADUH GELISAH</label>
                     <div class="col-lg-3">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
-                                                  Tidak ada - definisi tidak dipenuhi
-                                              </label>
+                          <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                          Tidak ada - definisi tidak dipenuhi
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p4" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Minimal – patologis diragukan
-                                              </label>
+                          <input type="radio" name="p4" id="optionsRadios1" value="Tidak Baik" checked>
+                          Minimal – patologis diragukan
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
-                                                  Ringan – sedikit agitatif, waspada berlebihan, atau sedikit mudah terangsang selama wawancara, tanpa episode yang jelas dari gaduh gelisah atau labilitas alam perasaan yang mecolok. Pembicaraan mungkin sedikit mendesah
-                                              </label>
+                          <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                          Ringan – sedikit agitatif, waspada berlebihan, atau sedikit mudah terangsang selama wawancara, tanpa episode yang jelas dari gaduh gelisah atau labilitas alam perasaan yang mecolok. Pembicaraan mungkin sedikit mendesah
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
-                                                  Sedang – agitasi atau mudah terangsang yang jelas, ledakan-ledakan episodik
-                                              </label>
+                          <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                          Sedang – agitasi atau mudah terangsang yang jelas, ledakan-ledakan episodik
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
-                                                  Agak berat – hiperaktivitas yang bermakna, sering terjadi ledakan-leadakan atau aktivitas mototrik, sulit untuk tetap duduk
-                                              </label>
+                          <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                          Agak berat – hiperaktivitas yang bermakna, sering terjadi ledakan-leadakan atau aktivitas mototrik, sulit untuk tetap duduk
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
-                                                  Berat – gaduh gelisah yang mencolok mempengaruhi fungsi sehari-hari seperti makan  dan tidur
-                                              </label>
+                          <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                          Berat – gaduh gelisah yang mencolok mempengaruhi fungsi sehari-hari seperti makan  dan tidur
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
-                                                  Sangat berat – gaduh gelisah yang mencolok, mempengaruhi kegiatan makan dan tidur, serta jelas tidak memungkinkan interaksi interpersonal. Percepatan dan pembicaraan dan aktivitas motorik dapat menimbulkan inkoherensi dan kelelahan
-                                              </label>
+                          <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                          Sangat berat – gaduh gelisah yang mencolok, mempengaruhi kegiatan makan dan tidur, serta jelas tidak memungkinkan interaksi interpersonal. Percepatan dan pembicaraan dan aktivitas motorik dapat menimbulkan inkoherensi dan kelelahan
+                        </label>
                       </div>
                     </div>
                     <label class="control-label col-lg-2" for="inputSuccess">G8. KETIDAKOPERATIFAN</label>
                     <div class="col-lg-3">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
-                                                  Tidak ada - definisi tidak dipenuhi
-                                              </label>
+                          <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                          Tidak ada - definisi tidak dipenuhi
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g8" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Minimal – patologis diragukan
-                                              </label>
+                          <input type="radio" name="g8" id="optionsRadios1" value="Tidak Baik" checked>
+                          Minimal – patologis diragukan
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
-                                                  Ringan – patuh tapi disertai sikap marah tidak sabar atau sarkasme, mungkin ada penolakan yang tidak mengganggu terhadap penyelidikan yang sensitif selama wawancara
-                                              </label>
+                          <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                          Ringan – patuh tapi disertai sikap marah tidak sabar atau sarkasme, mungkin ada penolakan yang tidak mengganggu terhadap penyelidikan yang sensitif selama wawancara
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
-                                                  Sedang – kadang-kadang terdapat penolakan langsung untuk patuh, memproyeksikan hostilitas, defensif atau bersifat negatif tetapi biasanya masih dapat diatasi
-                                              </label>
+                          <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                          Sedang – kadang-kadang terdapat penolakan langsung untuk patuh, memproyeksikan hostilitas, defensif atau bersifat negatif tetapi biasanya masih dapat diatasi
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
-                                                  Agak berat – seringkali tidak patuh, jelas defensif atau iritabilitas terhadap pewawancara dan mungkin tidak bersedia menghadapi banyak pertanyaan
-                                              </label>
+                          <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                          Agak berat – seringkali tidak patuh, jelas defensif atau iritabilitas terhadap pewawancara dan mungkin tidak bersedia menghadapi banyak pertanyaan
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
-                                                  Berat – sangat tidak kooperatif, negativistik dan suka membangkang. Menolak untuk patuh, tidak mau memulai atau mengikuti wawancara sepenuhnya
-                                              </label>
+                          <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                          Berat – sangat tidak kooperatif, negativistik dan suka membangkang. Menolak untuk patuh, tidak mau memulai atau mengikuti wawancara sepenuhnya
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
-                                                  Sangat berat – resistensi aktif, menolak untuk ikut dalam aktivitas sosial apapun, mengurus kebersihan diri, bercakap-cakap dengan keluarga atau staf dan bahkan untuk berpartisipasi dalam wawancara singkat
-                                              </label>
+                          <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                          Sangat berat – resistensi aktif, menolak untuk ikut dalam aktivitas sosial apapun, mengurus kebersihan diri, bercakap-cakap dengan keluarga atau staf dan bahkan untuk berpartisipasi dalam wawancara singkat
+                        </label>
                       </div>
                     </div>
 
@@ -2296,90 +2167,90 @@
                     <div class="col-lg-3">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
-                                                  Tidak ada - definisi tidak dipenuhi
-                                              </label>
+                          <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                          Tidak ada - definisi tidak dipenuhi
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p7" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Minimal – patologis diragukan
-                                              </label>
+                          <input type="radio" name="p7" id="optionsRadios1" value="Tidak Baik" checked>
+                          Minimal – patologis diragukan
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
-                                                  Ringan – melampiaskan kemarahan secara tidak langsung atau ditahan
-                                              </label>
+                          <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                          Ringan – melampiaskan kemarahan secara tidak langsung atau ditahan
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
-                                                  Sedang – sikap bermusuhan yang nyata
-                                              </label>
+                          <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                          Sedang – sikap bermusuhan yang nyata
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
-                                                  Agak berat – pasien sangat mudah marah dan kadang-kadang memaki dengan kata-kata kasar atau mengancam
-                                              </label>
+                          <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                          Agak berat – pasien sangat mudah marah dan kadang-kadang memaki dengan kata-kata kasar atau mengancam
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
-                                                  Berat – tidak kooperatif dan mencaci maki dengan kasar atau mengancam, dapat beringas dan merusak tetapi tidak menyerang orang lain secara fisik
-                                              </label>
+                          <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                          Berat – tidak kooperatif dan mencaci maki dengan kasar atau mengancam, dapat beringas dan merusak tetapi tidak menyerang orang lain secara fisik
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
-                                                  Sangat berat – kemarahan yang hebat berakibat sangat tidak kooperatif, menghalangi interaksi, atau secara episodik melakukan penyerangan fisik terhadap orang lain
-                                              </label>
+                          <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                          Sangat berat – kemarahan yang hebat berakibat sangat tidak kooperatif, menghalangi interaksi, atau secara episodik melakukan penyerangan fisik terhadap orang lain
+                        </label>
                       </div>
                     </div>
                     <label class="control-label col-lg-2" for="inputSuccess">G14. PENGENDALIAN IMPULS</label>
                     <div class="col-lg-3">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
-                                                  Tidak ada - definisi tidak dipenuhi
-                                              </label>
+                          <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                          Tidak ada - definisi tidak dipenuhi
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g14" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Minimal – patologis diragukan
-                                              </label>
+                          <input type="radio" name="g14" id="optionsRadios1" value="Tidak Baik" checked>
+                          Minimal – patologis diragukan
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
-                                                  Ringan – cenderung mudah marah dan frustasi bila menghadapi stres atau pemuasannya ditolak tetapi jarang bertindak impulsif
-                                              </label>
+                          <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                          Ringan – cenderung mudah marah dan frustasi bila menghadapi stres atau pemuasannya ditolak tetapi jarang bertindak impulsif
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
-                                                  Sedang – dengan provokasi yang minimal, pasien menjadi marah dan mencaci maki. Mungkin sekali-kali mengancam, merusak atau terdapat satu atau dua episode yang melibatkan konfrontasi fisik atau perselisihan ringan
-                                              </label>
+                          <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                          Sedang – dengan provokasi yang minimal, pasien menjadi marah dan mencaci maki. Mungkin sekali-kali mengancam, merusak atau terdapat satu atau dua episode yang melibatkan konfrontasi fisik atau perselisihan ringan
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
-                                                  Agak berat – memperlihatkan episode impulsif yang berulang, termasuk mencaci maki, merusak harta benda atau ancaman fisik. Mungkin ada satu atau dua episode yang melibatkan serangn serius
-                                              </label>
+                          <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                          Agak berat – memperlihatkan episode impulsif yang berulang, termasuk mencaci maki, merusak harta benda atau ancaman fisik. Mungkin ada satu atau dua episode yang melibatkan serangn serius
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
-                                                  Berat – agresif secara impulsif, mengancam, menuntut dan merusak, tanpa pertimbangan terhadap konsekuensinya. Menunjukkan perilaku menyerang
-                                              </label>
+                          <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                          Berat – agresif secara impulsif, mengancam, menuntut dan merusak, tanpa pertimbangan terhadap konsekuensinya. Menunjukkan perilaku menyerang
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
-                                                  Sangat berat – memperlihatkan serangan kebrutalan dan berbahaya
-                                              </label>
+                          <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                          Sangat berat – memperlihatkan serangan kebrutalan dan berbahaya
+                        </label>
                       </div>
                     </div>
 
@@ -2389,48 +2260,48 @@
                     <div class="col-lg-3">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
-                                                  Tidak ada - definisi tidak dipenuhi
-                                              </label>
+                          <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                          Tidak ada - definisi tidak dipenuhi
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g4" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Minimal – patologis diragukan
-                                              </label>
+                          <input type="radio" name="g4" id="optionsRadios1" value="Tidak Baik" checked>
+                          Minimal – patologis diragukan
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
-                                                  Ringan – postur dan gerakan-gerakan menunjukkan kekhawatiran ringan, ketidaktenangan yang sekali-kali, perubahan posisi, atau tremor tangan yang halus dan cepat
-                                              </label>
+                          <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                          Ringan – postur dan gerakan-gerakan menunjukkan kekhawatiran ringan, ketidaktenangan yang sekali-kali, perubahan posisi, atau tremor tangan yang halus dan cepat
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
-                                                  Sedang – nyata-nyata gelisah seperti perilaku tidak tenang, tremor tangan yang nyata, keringat berlebihan, atau manerisme karena gugup
-                                              </label>
+                          <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                          Sedang – nyata-nyata gelisah seperti perilaku tidak tenang, tremor tangan yang nyata, keringat berlebihan, atau manerisme karena gugup
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
-                                                  Agak berat – ketegangan yang berat, manifestasi seperti gemetar karena gugup, keringat sangat berlebihan dan ketidaktenangan, perilaku selama wawancara tidak terpengaruh secara bermakna
-                                              </label>
+                          <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                          Agak berat – ketegangan yang berat, manifestasi seperti gemetar karena gugup, keringat sangat berlebihan dan ketidaktenangan, perilaku selama wawancara tidak terpengaruh secara bermakna
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
-                                                  Berat – Ketegangan berat, taraf interaksi terganggu. Misalnya terus-menerus bergerak, tidak dapat tetap duduk, hiperventilasi
-                                              </label>
+                          <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                          Berat – Ketegangan berat, taraf interaksi terganggu. Misalnya terus-menerus bergerak, tidak dapat tetap duduk, hiperventilasi
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
-                                                  Sangat berat – ketegangan sangat mencolok, tanda panik atau percepatan gerakan motorik kaar, ketidak mampuan tetap duduk > 1 menit yang menyebabkan percakapan tidak mungkin diteruskan
-                                              </label>
+                          <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                          Sangat berat – ketegangan sangat mencolok, tanda panik atau percepatan gerakan motorik kaar, ketidak mampuan tetap duduk > 1 menit yang menyebabkan percakapan tidak mungkin diteruskan
+                        </label>
                       </div>
                     </div>
-                  
+
                   </div>
 
                   <div class="form-group">
@@ -2445,22 +2316,23 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                   <div class="form-group">
+                  <div class="form-group">
                     <label class="col-sm-2 control-label">gaff   </label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                </form>
-              </div>
-            </section>
-            <section class="panel">
-              <header class="panel-heading">
-                Diagnosis dan Tindakan Terapi
-              </header>
-              <div class="panel-body">
+                </div>
+              </section>
+            </form>
 
-                <form class="form-horizontal " method="get">
+
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Diagnosis dan Tindakan Terapi
+                </header>
+                <div class="panel-body">
                   <div class="col-lg-2"></div><h4>Diagnosis Psikiatri</h4>
                   <div class="form-group"></div>
                   <div class="form-group">
@@ -2525,42 +2397,44 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                </form>
-              </div>
-            </section>
-            <section class="panel">
-              <header class="panel-heading">
-                Tindak Lanjut
-              </header>
-              <div class="panel-body">
+                </div>
+              </section>
+            </form>
 
-                <form class="form-horizontal " method="get">
+
+            <form class="form-horizontal " method="get">
+              <section class="panel">
+                <header class="panel-heading">
+                  Tindak Lanjut
+                </header>
+                <div class="panel-body">
+
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Tindak Lanjut</label>
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
-                                                  Pulang
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                          Pulang
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Dirawat
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Tidak Baik" checked>
+                          Dirawat
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
-                                                  Menolak dirawat
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                          Menolak dirawat
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
-                                                  Dirujuk
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                          Dirujuk
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -2569,15 +2443,15 @@
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
-                                                  Tidak perlu kontrol
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                          Tidak perlu kontrol
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Tidak Baik" checked>
-                                                  Perlu Kontrol
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Tidak Baik" checked>
+                          Perlu Kontrol
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -2605,27 +2479,27 @@
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah biaya" checked>
-                                                  Masalah biaya
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah biaya" checked>
+                          Masalah biaya
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah Lokasi Rumah" checked>
-                                                  Masalah lokasi rumah
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah Lokasi Rumah" checked>
+                          Masalah lokasi rumah
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Kondisi pasien" checked>
-                                                  Kondisi pasien
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Kondisi pasien" checked>
+                          Kondisi pasien
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
-                                                  Lainnya
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                          Lainnya
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -2646,21 +2520,21 @@
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah biaya" checked>
-                                                  Tempat Penuh
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah biaya" checked>
+                          Tempat Penuh
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah Lokasi Rumah" checked>
-                                                  Perlu Fasilitas Lebih
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah Lokasi Rumah" checked>
+                          Perlu Fasilitas Lebih
+                        </label>
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="Kondisi pasien" checked>
-                                                  Permintaan Pasien/Keluarga
-                                              </label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Kondisi pasien" checked>
+                          Permintaan Pasien/Keluarga
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -2670,26 +2544,26 @@
                     <label class="control-label col-lg-2" for="inputSuccess">Kesadaran</label>
                     <div class="col-lg-10">
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox1" value="Compos Mentis"> Compos Mentis
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox1" value="Compos Mentis"> Compos Mentis
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox2" value="Apatis"> Apatis
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox2" value="Apatis"> Apatis
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Delirium"> Delirium
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Delirium"> Delirium
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Sopor"> Sopor
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Sopor"> Sopor
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Koma"> Koma
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Koma"> Koma
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="GCS"> GCS
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="GCS"> GCS
+                      </label>
                       <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox3" value="Lain-lain"> Lain-lain
-                                          </label>
+                        <input type="checkbox" id="inlineCheckbox3" value="Lain-lain"> Lain-lain
+                      </label>
                     </div>
                   </div>
                   <div class="form-group">
@@ -2721,95 +2595,95 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
+            </form>
 
 
             <div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
 
-            </div>
           </div>
-        </section>
-           
-  <!-- javascripts -->
-  <script src="{{url('')}}/js/jquery.js"></script>
-  <script src="{{url('')}}/js/bootstrap.min.js"></script>
-  <!-- nice scroll -->
-  <script src="{{url('')}}/js/jquery.scrollTo.min.js"></script>
-  <script src="{{url('')}}/js/jquery.nicescroll.js" type="text/javascript"></script>
+        </div>
+      </section>
 
-  <!-- jquery ui -->
-  <script src="{{url('')}}/js/jquery-ui-1.9.2.custom.min.js"></script>
+      <!-- javascripts -->
+      <script src="{{url('')}}/js/jquery.js"></script>
+      <script src="{{url('')}}/js/bootstrap.min.js"></script>
+      <!-- nice scroll -->
+      <script src="{{url('')}}/js/jquery.scrollTo.min.js"></script>
+      <script src="{{url('')}}/js/jquery.nicescroll.js" type="text/javascript"></script>
 
-  <!--custom checkbox & radio-->
-  <script type="{{url('')}}/text/javascript" src="{{url('')}}/admin_bootstrap/js/ga.js"></script>
-  <!--custom switch-->
-  <script src="{{url('')}}/js/bootstrap-switch.js"></script>
-  <!--custom tagsinput-->
-  <script src="{{url('')}}/js/jquery.tagsinput.js"></script>
+      <!-- jquery ui -->
+      <script src="{{url('')}}/js/jquery-ui-1.9.2.custom.min.js"></script>
 
-  <!-- colorpicker -->
+      <!--custom checkbox & radio-->
+      <script type="{{url('')}}/text/javascript" src="{{url('')}}/admin_bootstrap/js/ga.js"></script>
+      <!--custom switch-->
+      <script src="{{url('')}}/js/bootstrap-switch.js"></script>
+      <!--custom tagsinput-->
+      <script src="{{url('')}}/js/jquery.tagsinput.js"></script>
 
-  <!-- bootstrap-wysiwyg -->
-  <script src="{{url('')}}/js/jquery.hotkeys.js"></script>
-  <script src="{{url('')}}/js/bootstrap-wysiwyg.js"></script>
-  <script src="{{url('')}}/js/bootstrap-wysiwyg-custom.js"></script>
-  <script src="{{url('')}}/js/moment.js"></script>
-  <script src="{{url('')}}/js/bootstrap-colorpicker.js"></script>
-  <script src="{{url('')}}/js/daterangepicker.js"></script>
-  <script src="{{url('')}}/js/bootstrap-datepicker.js"></script>
-  <!-- ck editor -->
-  <script type="text/javascript" src="{{url('')}}/assets/ckeditor/ckeditor.js"></script>
-  <!-- custom form component script for this page-->
-  <script src="{{url('')}}/js/form-component.js"></script>
-  <!-- custome script for all page -->
-  <script src="{{url('')}}/js/scripts.js"></script>
+      <!-- colorpicker -->
 
-  <!-- javascripts -->
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.10.4.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery-1.8.3.min.js"></script>
-  <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
-  <!-- bootstrap -->
-  <script src="{{url('')}}/admin_bootstrap/js/bootstrap.min.js"></script>
-  <!-- nice scroll -->
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.scrollTo.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.nicescroll.js" type="text/javascript"></script>
-  <!-- charts scripts -->
-  <script src="{{url('')}}/admin_bootstrap/assets/jquery-knob/js/jquery.knob.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.sparkline.js" type="text/javascript"></script>
-  <script src="{{url('')}}/admin_bootstrap/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/owl.carousel.js"></script>
-  <!-- jQuery full calendar -->
-  <script src="{{url('')}}/admin_bootstrap/js/fullcalendar.min.js"></script>
-    <!-- Full Google Calendar - Calendar -->
-    <script src="{{url('')}}/admin_bootstrap/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
-    <!--script for this page only-->
-    <script src="{{url('')}}/admin_bootstrap/js/calendar-custom.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.rateit.min.js"></script>
-    <!-- custom select -->
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.customSelect.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/assets/chart-master/Chart.js"></script>
+      <!-- bootstrap-wysiwyg -->
+      <script src="{{url('')}}/js/jquery.hotkeys.js"></script>
+      <script src="{{url('')}}/js/bootstrap-wysiwyg.js"></script>
+      <script src="{{url('')}}/js/bootstrap-wysiwyg-custom.js"></script>
+      <script src="{{url('')}}/js/moment.js"></script>
+      <script src="{{url('')}}/js/bootstrap-colorpicker.js"></script>
+      <script src="{{url('')}}/js/daterangepicker.js"></script>
+      <script src="{{url('')}}/js/bootstrap-datepicker.js"></script>
+      <!-- ck editor -->
+      <script type="text/javascript" src="{{url('')}}/assets/ckeditor/ckeditor.js"></script>
+      <!-- custom form component script for this page-->
+      <script src="{{url('')}}/js/form-component.js"></script>
+      <!-- custome script for all page -->
+      <script src="{{url('')}}/js/scripts.js"></script>
 
-    <!--custome script for all page-->
-    <script src="{{url('')}}/admin_bootstrap/js/scripts.js"></script>
-    <!-- custom script for this page-->
-    <script src="{{url('')}}/admin_bootstrap/js/sparkline-chart.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/easy-pie-chart.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/xcharts.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.autosize.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.placeholder.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/gdp-data.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/morris.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
-    <script>
+      <!-- javascripts -->
+      <script src="{{url('')}}/admin_bootstrap/js/jquery.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.10.4.min.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
+      <!-- bootstrap -->
+      <script src="{{url('')}}/admin_bootstrap/js/bootstrap.min.js"></script>
+      <!-- nice scroll -->
+      <script src="{{url('')}}/admin_bootstrap/js/jquery.scrollTo.min.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/jquery.nicescroll.js" type="text/javascript"></script>
+      <!-- charts scripts -->
+      <script src="{{url('')}}/admin_bootstrap/assets/jquery-knob/js/jquery.knob.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/jquery.sparkline.js" type="text/javascript"></script>
+      <script src="{{url('')}}/admin_bootstrap/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/owl.carousel.js"></script>
+      <!-- jQuery full calendar -->
+      <script src="{{url('')}}/admin_bootstrap/js/fullcalendar.min.js"></script>
+      <!-- Full Google Calendar - Calendar -->
+      <script src="{{url('')}}/admin_bootstrap/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
+      <!--script for this page only-->
+      <script src="{{url('')}}/admin_bootstrap/js/calendar-custom.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/jquery.rateit.min.js"></script>
+      <!-- custom select -->
+      <script src="{{url('')}}/admin_bootstrap/js/jquery.customSelect.min.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/assets/chart-master/Chart.js"></script>
+
+      <!--custome script for all page-->
+      <script src="{{url('')}}/admin_bootstrap/js/scripts.js"></script>
+      <!-- custom script for this page-->
+      <script src="{{url('')}}/admin_bootstrap/js/sparkline-chart.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/easy-pie-chart.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-1.2.2.min.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-world-mill-en.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/xcharts.min.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/jquery.autosize.min.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/jquery.placeholder.min.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/gdp-data.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/morris.min.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
+      <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
+      <script>
       //knob
       $(function() {
         $(".knob").knob({
@@ -2854,7 +2728,7 @@
         });
       });
     </script>
-</body>
+  </body>
 
 
-<html>
+  <html>

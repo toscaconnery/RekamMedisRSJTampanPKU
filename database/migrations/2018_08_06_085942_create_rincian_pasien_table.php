@@ -15,12 +15,12 @@ class CreateRincianPasienTable extends Migration
     {
         Schema::create('rincian_pasien', function (Blueprint $table) {
             $table->increments('id_rincian');
-            $table->integer('id_rm')->reference('id_rm')->on('pasien');
+            $table->integer('no_rm')->reference('no_rm')->on('pasien');
             $table->string('no_telp');
             $table->string('pernikahan', 15);
             $table->string('agama', 10);
-            $table->string('pendidikan', 10);
-            $table->string('perkerjaan', 11);
+            $table->string('pendidikan', 15);
+            $table->string('pekerjaan', 20);
             $table->string('bahasa', 15);
             $table->string('nama_ayah');
             $table->string('nama_ibu');

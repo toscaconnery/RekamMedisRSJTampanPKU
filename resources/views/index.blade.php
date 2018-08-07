@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Pasien</title>
+  <title>RSJ Tampan Provinsi Riau</title>
 
    <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -71,14 +71,14 @@
                   <tr>
                     <th><i class="icon_profile"></i> Nama Pasien</th>
                     <th><i class="icon_calendar"></i> Tanggal Lahir</th>
-                    <th><i class="icon_pin_alt"></i> Jenis Kelamin</th>
+                    <th><i class="icon_pin_alt"></i> Alamat</th>
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
                   @foreach($pasien as $p)
                     <tr>
                       <td>{{$p->nama_pasien}}</td>
                       <td>{{$p->tanggal_lahir}}</td>
-                      <td>{{$p->jenis_kelamin}}</td>
+                      <td>{{$p->alamat}}</td>
                       <td>
                         <div class="btn-group">
                           <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
