@@ -214,7 +214,7 @@
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="a2" id="optionsRadios1s1" value="option1" checked>
+                                                  <input type="radio" name="a1" id="optionsRadios1s1" value="option1" checked>
                                                   Tunda
                                               </label>
                       </div>
@@ -301,7 +301,7 @@
                       </div>
                       <div class="radio">
                         <label>
-                                                  <input type="radio" name="a2" id="optionsRadios1s1" value="option1" checked>
+                                                  <input type="radio" name="a1" id="optionsRadios1s1" value="option1" checked>
                                                   Tunda
                                               </label>
                       </div>
