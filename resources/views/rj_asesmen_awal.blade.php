@@ -381,7 +381,8 @@
             </form>
 
 
-            <form class="form-horizontal " method="get" action="rj_asesmen_awal_fisik_gizi">
+            <form class="form-horizontal " method="post" action="rj_asesmen_awal_fisik_gizi">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Pemeriksaan Fisik dan Screening Gizi
@@ -461,14 +462,14 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="must_2" value="1" checked>
-                          Ya 
+                          <input type="radio" name="must_2" value="0" checked>
+                          Tidak 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="must_2" value="0" checked>
-                          Tidak 
+                          <input type="radio" name="must_2" value="1" checked>
+                          Ya 
                         </label>
                       </div>
                     </div>
@@ -477,13 +478,13 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="must_3" id="must_3_1" value="1" checked>
+                          <input type="radio" name="must_3" id="must_3_1" value="True" checked>
                           Ya 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="must_3" id="must_3_2" value="0" checked>
+                          <input type="radio" name="must_3" id="must_3_2" value="False" checked>
                           Tidak 
                         </label>
                       </div>
@@ -572,13 +573,13 @@
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="sk_3" id="sk_3_1" value="0" checked disabled="">
+                          <input type="radio" id="sk_3_1" name="sk_3_show_only" checked disabled="">
                           Tidak 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="sk_3" id="sk_3_2" value="1" disabled="">
+                          <input type="radio" id="sk_3_2" name="sk_3_show_only" disabled="">
                           Ya 
                         </label>
                       </div>
@@ -608,50 +609,50 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_1">
                           Diare Kronik (lebih dari 2 minggu)
                         </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_2">
                           (Tersangka) Penyakit jantung bawaan
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_3">
                           (Tersangka) Infeksi Human Immunodeficiency Virus (HIV)
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_4">
                           (Tersangka) Kanker
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_5">
                           Penyakit hati kronik
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_6">
                           Penyakit ginjal kronik
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_7">
                           TB Paru
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_8">
                           Luka bakar luas
                         </label>
                       </div>
@@ -660,50 +661,50 @@
                     <div class="col-lg-6">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_9">
                           Kelainan anatomi daerah mulut yang menyebabkan kesulitan makan (misal:bibir sumbing)
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_10">
                           Trauma
                         </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_11">
                           Kelainan metabolik bawaan (Inborn Error Metabolism)
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_12">
                           (Tersangka) Infeksi Human Immunodeficiency Virus (HIV)
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_13">
                           Retardasi mental
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_14">
                           Rencana / paska operasi mayor (misal: laparatomi, tokaratomi)
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_15">
                           Terpasang stoma
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_malnutrisi_16">
                           Lain-lain...
                         </label>
                       </div>
@@ -715,13 +716,13 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="cc" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="pemberitahuan" id="pemberitahuan_1" value="1">
                           Ya 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="cc" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="pemberitahuan" id="pemberitahuan_2" value="0" checked>
                           Tidak 
                         </label>
                       </div>
@@ -730,7 +731,7 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Pukul</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" id="waktu_pemberitahuan" name="waktu_pemberitahuan" disabled="">
                     </div>
                   </div>
                   <button type="submit">Simpan</button>
@@ -2645,6 +2646,7 @@
         </div>
       </section>
 
+
       <!-- javascripts -->
       <script src="{{url('')}}/js/jquery.js"></script>
       <script src="{{url('')}}/js/bootstrap.min.js"></script>
@@ -2783,10 +2785,29 @@
             // alert("HAHAH");
             if(atLeastOneIsChecked == true) {
               $('#sk_3_2').prop('checked', true);
+              $('#sk_3_hidden').hide();
+              $('#sk_3_2').after('<input type="hidden" id="sk_3_hidden" name="sk_3" value="1"></input>');
             }
             else if(atLeastOneIsChecked == false) {
               $('#sk_3_1').prop('checked', true);
+              $('#sk_3_hidden').hide();
+              $('#sk_3_2').after('<input type="hidden" id="sk_3_hidden" name="sk_3" value="0"></input>');
             }
+          });
+        });
+      </script>
+
+      <script type="text/javascript">
+        $(document).ready( function() {
+          $('#pemberitahuan_1').click( function() {
+            $('#waktu_pemberitahuan').prop('disabled', false);
+          });
+        });
+      </script>
+      <script type="text/javascript">
+        $(document).ready( function() {
+          $('#pemberitahuan_2').click( function() {
+            $('#waktu_pemberitahuan').prop('disabled', true);
           });
         });
       </script>
