@@ -122,7 +122,7 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Alasan Kunjungan</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="alasan_kunjungan">
+                      <input type="text" class="form-control" name="alasan_kunjungan" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -381,96 +381,93 @@
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="get" action="rj_asesmen_awal_fisik_gizi">
               <section class="panel">
                 <header class="panel-heading">
                   Pemeriksaan Fisik dan Screening Gizi
                 </header>
                 <div class="panel-body">
-
-
                   <div class="form-group">
                     <label class="col-sm-2 control-label">TD</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="td">
                     </div>
                     <label class="col-sm-1 control-label">TB</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="tb">
                     </div>
                     <label class="col-sm-1 control-label">Nadi</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="nadi">
                     </div>
                     <label class="col-sm-1 control-label">BB</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="bb">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Pernafasan</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="pernafasan">
                     </div>
                     <label class="col-sm-1 control-label">Golongan Darah</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="golongan_darah">
                     </div>
                     <label class="col-sm-1 control-label">Suhu</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="suhu">
                     </div>
                   </div>
 
                   <div class="col-lg-2"></div><h5>Berdasarkan Malnutrition Universal Screening Tool (MUST)</h5>
-                  <div class="form-group">
+                  <div class="form-group" id="must_1_form">
                     <label class="control-label col-lg-2" for="inputSuccess">Apakah pasien mengalami penurunan BB yang tidak diinginkan dalam 6 bulan terakhir?</label>
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                          <input type="radio" name="must_1" id="must_1_1" value="0" checked>
                           Tidak ada penurunan berat badan
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                          <input type="radio" name="must_1" id="must_1_2" value="2">
                           Tidak yakin/ tidak tahu/ terasa baju longgar 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                          <input type="radio" name="must_1" id="must_1_3" value="0">
                           Ya
                         </label>
                       </div>
                     </div>
                   </div>
-
-                  <div class="form-group">
+                  {{-- <div class="form-group" id="must_1_bb_berkurang">
                     <label class="control-label col-lg-2" for="inputSuccess">Jika ya berapa penurunan berat badan tersebut?</label>
                     <div class="col-lg-3">
-                      <select class="form-control m-bot15">
-                        <option>1 – 5 kg </option>
-                        <option>6 – 10 kg </option>
-                        <option>11 – 15 kg </option>
-                        <option>> - 15 kg </option>
+                      <select class="form-control m-bot15" name="must_1_input_bb_berkurang">
+                        <option value="1">1 – 5 kg </option>
+                        <option value="2">6 – 10 kg </option>
+                        <option value="3">11 – 15 kg </option>
+                        <option value="4">> - 15 kg </option>
                       </select>
                     </div>
-                  </div>
+                  </div> --}}
 
-                  <div class="form-group">
+                  <div class="form-group" id="must_23_form">
                     <label class="control-label col-lg-2" for="inputSuccess">Apakah asupan makan berkurang karena tidak nafsu makan?</label>
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="must_2" value="1" checked>
                           Ya 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="must_2" value="0" checked>
                           Tidak 
                         </label>
                       </div>
@@ -480,18 +477,47 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="khusus" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="must_3" id="must_3_1" value="1" checked>
                           Ya 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="khusus" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="must_3" id="must_3_2" value="0" checked>
                           Tidak 
                         </label>
                       </div>
                     </div>
                   </div>
+
+                  {{-- <div class="form-group" id="list_diagnosis_khusus">
+                    <label class="control-label col-lg-2" for="inputSuccess"></label>
+                    <div class="col-lg-10">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="diagnosis_khusus_1"> DM
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="diagnosis_khusus_2"> Kemoterapi
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="diagnosis_khusus_3"> Hemodialisa
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="diagnosis_khusus_4"> Geriatri
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="diagnosis_khusus_5"> Immunitas Menurun
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="diagnosis_khusus_6"> Lain-lain
+                      </label>
+                      <label class="checkbox-inline">
+                        <div class="col-lg-4">
+                          <input type="text" class="form-control">
+                        </div>
+                      </label>
+                    </div>
+                  </div> --}}
 
                   <div class="col-lg-2"></div><h5>Berdasarkan Adaptasi Strong-Kid</h5>
 
@@ -500,14 +526,14 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="s1" id="optionsRadios1" value="Baik" checked>
-                          Ya 
+                          <input type="radio" name="sk_1" value="0" checked>
+                          Tidak 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="s1" id="optionsRadios1" value="Tidak Baik" checked>
-                          Tidak 
+                          <input type="radio" name="sk_1" value="1">
+                          Ya 
                         </label>
                       </div>
                     </div>
@@ -516,14 +542,14 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="s2" id="optionsRadios1" value="Baik" checked>
-                          Ya 
+                          <input type="radio" name="sk_2" id="optionsRadios1" value="0" checked>
+                          Tidak 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="s2" id="optionsRadios1" value="Tidak Baik" checked>
-                          Tidak 
+                          <input type="radio" name="sk_2" id="optionsRadios1" value="1">
+                          Ya 
                         </label>
                       </div>
                     </div>
@@ -531,40 +557,54 @@
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Apakah terdapat salah satu dari kondisi berikut?</label>
-                    <div class="col-lg-2">
-                      <div class="radio">
+                    <div class="col-lg-6">
+                      <div class="checkbox">
                         <label>
-                          <input type="radio" name="s3" id="optionsRadios1" value="Baik" checked>
-                          Ya 
+                          <input type="checkbox" name="sk_3_checkbox[]" id="sk_3_check_1">
+                          Diare ≥ 5 kali/hari dan atau muntah ? 3 kali/hari dalam seminggu terakhir
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="sk_3_checkbox[]" id="sk_3_check_2">
+                          Asupan makanan berkurang selama 1 minggu terakhir
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="s3" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="sk_3" id="sk_3_1" value="0" checked disabled="">
                           Tidak 
                         </label>
                       </div>
-                    </div>
-
-                    <label class="control-label col-lg-3" for="inputSuccess">Apa terdapat penyakit atau keadaan yang mengakibatkan pasien beresiko mengalami malnutrisi?</label>
-                    <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="s3" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="sk_3" id="sk_3_2" value="1" disabled="">
                           Ya 
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="s3" id="optionsRadios1" value="Tidak Baik" checked>
-                          Tidak 
                         </label>
                       </div>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Daftar Penyakit/keadaan yang bersiko mengakibatkan mainutrisi</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Apa terdapat penyakit atau keadaan yang mengakibatkan pasien beresiko mengalami malnutrisi?</label>
+                    <div class="col-lg-2">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="sk_4" value="0" checked>
+                          Tidak 
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="sk_4" value="1">
+                          Ya 
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Daftar Penyakit/keadaan yang bersiko mengakibatkan malnutrisi</label>
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
@@ -693,6 +733,7 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
+                  <button type="submit">Simpan</button>
                 </div>
               </section>
             </form>
@@ -2688,7 +2729,70 @@
           });
         });
       </script> --}}
+
+      {{-- status fungsional --}}
       <script type="text/javascript">
+        $(document).ready( function() {
+          $('input[type=radio][name=status_fungsional]').change(function() {
+            if(this.value == 'Perlu Bantuan') {
+              $('#status_fungsional').after('<div class="form-group" id="perlu_bantuan"><label class="col-sm-2 control-label">Perlu Bantuan</label><div class="col-sm-10"><input type="text" class="form-control" name="perlu_bantuan"></div></div>');
+            }
+            else if(this.value == 'Mandiri') {
+              $('#perlu_bantuan').hide();
+            }
+            else if(this.value == 'Ketergantungan Total') {
+              $('#perlu_bantuan').hide();
+            }
+          });
+        });
+      </script>
+
+      <script type="text/javascript">
+        $(document).ready( function() {
+          $('input[type=radio][name=must_1]').change(function() {
+            if(this.id == 'must_1_3') {
+              $('#must_1_form').after('<div class="form-group" id="must_1_bb_berkurang"><label class="control-label col-lg-2" for="inputSuccess">Jika ya berapa penurunan berat badan tersebut?</label><div class="col-lg-3"><select class="form-control m-bot15" name="must_1_input_bb_berkurang"><option value="1">1 – 5 kg </option><option value="2">6 – 10 kg </option><option value="3">11 – 15 kg </option><option value="4">> - 15 kg </option></select></div></div>');
+            }
+            else if(this.id == 'must_1_1') {
+              $('#must_1_bb_berkurang').hide();
+            }
+            else if(this.id == 'must_1_2') {
+              $('#must_1_bb_berkurang').hide();
+            }
+          });
+        })
+      </script>
+
+      <script type="text/javascript">
+        $(document).ready( function() {
+          $('input[type=radio][name=must_3]').change(function() {
+            if(this.id == 'must_3_1') {
+              $('#must_23_form').after('<div class="form-group" id="list_diagnosis_khusus"><label class="control-label col-lg-2" for="inputSuccess"></label><div class="col-lg-10"><label class="checkbox-inline"><input type="checkbox" name="diagnosis_khusus_1"> DM</label><label class="checkbox-inline"><input type="checkbox" name="diagnosis_khusus_2"> Kemoterapi</label><label class="checkbox-inline"><input type="checkbox" name="diagnosis_khusus_3"> Hemodialisa</label><label class="checkbox-inline"><input type="checkbox" name="diagnosis_khusus_4"> Geriatri</label><label class="checkbox-inline"><input type="checkbox" name="diagnosis_khusus_5"> Immunitas Menurun</label><label class="checkbox-inline"><input type="checkbox" name="diagnosis_khusus_6"> Lain-lain</label><label class="checkbox-inline"><div class="col-lg-4"><input type="text" class="form-control"></div></label></div></div>');
+            }
+            else if(this.id == 'must_3_2') {
+              $('#list_diagnosis_khusus').hide();
+            }
+          });
+        });
+      </script>
+
+      <script type="text/javascript">
+        $(document).ready( function() {
+          $('input[type=checkbox][name="sk_3_checkbox[]"]').change(function() {
+            var atLeastOneIsChecked = $('input[name="sk_3_checkbox[]"]:checked').length > 0;
+            // alert("HAHAH");
+            if(atLeastOneIsChecked == true) {
+              $('#sk_3_2').prop('checked', true);
+            }
+            else if(atLeastOneIsChecked == false) {
+              $('#sk_3_1').prop('checked', true);
+            }
+          });
+        });
+      </script>
+
+
+      {{-- <script type="text/javascript">
         $(document).ready( function() {
           $('#status_fungsional_2').click( function() {
             $("#status_fungsional").after('<div class="form-group" id="perlu_bantuan"><label class="col-sm-2 control-label">Perlu Bantuan</label><div class="col-sm-10"><input type="text" class="form-control" name="perlu_bantuan"></div></div>');
@@ -2697,18 +2801,41 @@
       </script>
       <script type="text/javascript">
         $(document).ready( function() {
-          $('#status_fungsional_1').click( function() {
+          $('#status_fungsional_1, #status_fungsional_3').click( function() {
             $('#perlu_bantuan').hide();
           });
         });
-      </script>
-      <script type="text/javascript">
+      </script> --}}
+      {{-- <script type="text/javascript">
         $(document).ready( function() {
           $('#status_fungsional_3').click( function() {
             $('#perlu_bantuan').hide();
           });
         });
+      </script> --}}
+
+      {{-- must --}}
+      {{-- <script type="text/javascript">
+        $(document).ready( function() {
+          $('#must_1_3').click( function() {
+            $('#must_1_form').after('<div class="form-group" id="must_1_bb_berkurang"><label class="control-label col-lg-2" for="inputSuccess">Jika ya berapa penurunan berat badan tersebut?</label><div class="col-lg-3"><select class="form-control m-bot15" name="must_1_input_bb_berkurang"><option value="1">1 – 5 kg </option><option value="2">6 – 10 kg </option><option value="3">11 – 15 kg </option><option value="4">> - 15 kg </option></select></div></div>');
+          });
+        });
       </script>
+      <script type="text/javascript">
+        $(document).ready( function() {
+          $('#must_1_1').click( function() {
+            $('#must_1_bb_berkurang').hide();
+          });
+        });
+      </script>
+      <script type="text/javascript">
+        $(document).ready( function() {
+          $('#must_1_2').click( function() {
+            $('#must_1_bb_berkurang').hide();
+          });
+        });
+      </script> --}}
   </body>
 
 

@@ -24,7 +24,7 @@ class CreateRJAAAsesmenKeperawatanTable extends Migration
             $table->string('persepsi', 20);
             $table->string('motorik', 20);
             $table->string('penampilan', 20);
-            $table->string('pikir', 20);
+            $table->string('pikir', 40);
             $table->string('perasaan', 20);
             $table->string('status_fungsional', 20);
             $table->string('perlu_bantuan', 40)->nullable();

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Auth;
 use App\RJAAAsesmenKeperawatan;
+use App\RJAAFisikGizi;
 class RawatJalanController extends Controller
 {
     public function asesmen_awal() 
@@ -205,6 +206,7 @@ class RawatJalanController extends Controller
         if(isset($request->perasaan7)) {
             $asesmen_keperawatan->perasaan .= "7-";
         }
+        $asesmen_keperawatan->perasaan = substr($asesmen_keperawatan->perasaan, 0, -1);
 
         $asesmen_keperawatan->status_fungsional = $request->status_fungsional;
 
@@ -221,5 +223,11 @@ class RawatJalanController extends Controller
     	$asesmen_keperawatan->save();
 
     	return redirect('index');
+    }
+
+    public function store_rj_asesmen_awal_fisik_gizi(Request $request)
+    {
+        $fisik_gizi = new RJAAFisikGizi;
+        return redirect('index');
     }
 }

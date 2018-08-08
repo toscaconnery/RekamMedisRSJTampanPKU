@@ -1,0 +1,51 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateRjAaFisikGiziTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('rj_aa_fisik_gizi', function (Blueprint $table) {
+            $table->increments('id_fisik_gizi');
+            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->string('td', 10);
+            $table->string('tb', 10);
+            $table->string('nadi', 10);
+            $table->string('bb', 10);
+            $table->string('pernafasan', 10);
+            $table->string('golongan_darah', 4);
+            $table->string('suhu', 10);
+            $table->smallInteger('must_1');
+            $table->smallInteger('must_2');
+            $table->smallInteger('must_3');
+            $table->integer('bb_berkurang');
+            $table->integer('skor_must');
+            $table->boolean('sk_1');
+            $table->boolean('sk_2');
+            $table->boolean('sk_3');
+            $table->boolean('sk_4');
+            $table->integer('skor_sk');
+            $table->boolean('pemberitahuan');
+            $table->string('waktu_pemberitahuan', 5);
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('rj_aa_fisik_gizi');
+    }
+}
