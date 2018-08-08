@@ -59,6 +59,7 @@
           <li><a class="" href="{{url('')}}/ri_risiko_nyeri">Penilaian Risiko Nyeri</a></li>
           <li><a class="" href="{{url('')}}/ri_catatan_perkembangan">Catatan Perkembangan</a></li>
           <li><a class="" href="{{url('')}}/ri_rencana_keperawatan">Rencana Keperawatan</a></li>
+          <li><a class="" href="{{url('')}}/ri_keperawatan_napza">Keperawatan NAPZA</a></li>
           <li><a class="" href="{{url('')}}/ri_evaluasi_keperawatan">Evaluasi Keperawatan</a></li>
           <li><a class="" href="{{url('')}}/ri_monitoring_observasi">Monitoring Observasi</a></li>
           <li><a class="" href="{{url('')}}/ri_penggunaan_obat">Penggunaan Obat</a></li>
