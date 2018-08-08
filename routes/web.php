@@ -26,7 +26,7 @@ Route::post('/identifikasi_pasien_baru_2', 'PasienController@identifikasi_pasien
 Route::post('/identifikasi_pasien_baru_final', 'PasienController@identifikasi_pasien_baru_final');
 
 Route::get('/rj_asesmen_awal', 'RawatJalanController@asesmen_awal');
-Route::post('/rj_asesmen_awal', 'RawatJalanController@store_asesmen_awal');
+Route::post('/rj_asesmen_awal_asesmen_keperawatan', 'RawatJalanController@store_rj_asesmen_awal_asesmen_keperawatan');
 
 Route::get('/ri_surat_persetujuan', function () {
     return view('ri_surat_persetujuan');

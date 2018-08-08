@@ -19,9 +19,7 @@ class CreateRJAAAsesmenKeperawatanTable extends Migration
             $table->integer('id_user')->reference('id_user')->on('users');
             $table->string('alasan_kunjungan', 100);
             $table->boolean('hubungan_keluarga');
-            $table->string('status_psikologis', 20);
-            $table->string('dilaporkan_ke', 20)->nullable();
-            $table->string('psikologis_lainnya', 40)->nullable();
+            $table->string('status_psikososial', 20);
             $table->string('konsep_diri', 20);
             $table->string('persepsi', 20);
             $table->string('motorik', 20);
@@ -29,6 +27,7 @@ class CreateRJAAAsesmenKeperawatanTable extends Migration
             $table->string('pikir', 20);
             $table->string('perasaan', 20);
             $table->string('status_fungsional', 20);
+            $table->string('perlu_bantuan', 40)->nullable();
             $table->dateTime('waktu_laporan');
             $table->timestamps();
         });

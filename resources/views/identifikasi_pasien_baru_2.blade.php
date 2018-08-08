@@ -327,9 +327,7 @@
 
           <script>
             $(document).ready( function() {
-              var i = 1;
               $('#add').click( function() {
-                i++;
                 $('#dynamic_field').append('<div class="panel-body"><div class="form-group"><label class="col-sm-2 control-label">Nama</label><div class="col-sm-10"><input type="text" class="form-control" name="nama_pj[]"></div></div><div class="form-group"><label class="col-sm-2 control-label">Alamat</label><div class="col-sm-10"><input type="text" class="form-control" name="alamat_pj[]"></div></div><div class="form-group"><label class="col-sm-2 control-label">Hubungan</label><div class="col-sm-10"><input type="text" class="form-control" name="hubungan_pj[]"></div></div><div class="form-group"><label class="col-sm-2 control-label">Telp</label><div class="col-sm-10"><input type="text" class="form-control" name="no_telp_pj[]"></div></div></div>');
               });
             });

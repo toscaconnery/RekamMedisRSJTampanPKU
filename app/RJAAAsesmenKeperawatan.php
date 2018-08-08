@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class AsesmenRawatJalan extends Model
+class RJAAAsesmenKeperawatan extends Model
 {
     protected $table = 'rj_aa_asesmen_keperawatan';
 
@@ -19,9 +19,7 @@ class AsesmenRawatJalan extends Model
     	'id_user',
     	'alasan_kunjungan',
     	'hubungan_keluarga',
-    	'status_psikologis',
-    	'dilaporkan_ke',
-    	'psikologis_lainnya',
+    	'status_psikososial',
         'konsep_diri',
         'persepsi',
         'motorik',
@@ -29,6 +27,7 @@ class AsesmenRawatJalan extends Model
         'pikir',
         'perasaan',
         'status_fungsional',
+    	'perlu_bantuan',
         'waktu_laporan',
     ];
 }
