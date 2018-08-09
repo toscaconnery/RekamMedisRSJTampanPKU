@@ -137,3 +137,8 @@ Route::get('/ri_serah_terima', function () {
 Route::get('/ri_pemberian_informasi', function () {
     return view('ri_pemberian_informasi');
 });
+
+Route::get('/igd_asesmen_darurat', function () {
+    return view('igd_asesmen_darurat');
+});
+
