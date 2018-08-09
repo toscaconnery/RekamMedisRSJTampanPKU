@@ -740,7 +740,8 @@
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="penilaian_tingkat_nyeri">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Penilaian Tingkat Nyeri
@@ -749,92 +750,104 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Tingkat nyeri</label>
                     <div class="col-lg-3">
-                      <select class="form-control m-bot15">
-                        <option>Tidak ada nyeri</option>
-                        <option>Nyeri Kronis</option>
-                        <option>Nyeri Akut</option>
+                      <select class="form-control m-bot15" name="tingkat">
+                        <option value="1">Tidak ada nyeri</option>
+                        <option value="2">Nyeri Kronis</option>
+                        <option value="3">Nyeri Akut</option>
                       </select>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Skala Nyeri </label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control">
+                      <select name="skala" class="form-control">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
                     </div>
 
                     <label class="col-sm-2 control-label">Lokasi Nyeri </label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="lokasi">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Durasi Nyeri</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="durasi">
                     </div>
 
                     <label class="col-sm-2 control-label">Frekuensi Nyeri</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="frekuensi">
                     </div>
                   </div>
 
-                  <div class="form-group">
+                  <div class="form-group" id="form_nyeri_hilang">
                     <label class="control-label col-lg-2" for="inputSuccess">Nyeri hilang, bila </label>
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="hilang1">
                           Minum Obat
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="hilang2">
                           Mendengar Musik
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="hilang3">
                           Istirahat
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="hilang4">
                           Berubah posisi/tidur
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="hilang5">
                           Lain-lain
                         </label>
                       </div>
                     </div>
                   </div>
 
-                  <div class="form-group">
+                  {{-- <div class="form-group" id="field_nyeri_hilang">
                     <label class="col-sm-2 control-label">Sebutkan </label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="nyeri_hilang_input_text" required="">
                     </div>
-                  </div>
+                  </div> --}}
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Diberitahukan ke dokter?</label>
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="cc" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="pemberitahuan" value="1">
                           Ya 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="cc" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="pemberitahuan" value="0">
                           Tidak 
                         </label>
                       </div>
@@ -844,9 +857,12 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Diberitahukan ke dokter pukul</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="waktu_pemberitahuan">
                     </div>
                   </div>
+
+                  <button type="submit">Simpan</button>
+
                 </div>
               </section>
             </form>
@@ -2812,6 +2828,20 @@
         });
       </script>
 
+      {{-- =====NYERI===== --}}
+      <script type="text/javascript">
+        $(document).ready( function() {
+          $('input[type=checkbox][name="hilang5"]').change(function() {
+            var checkboxIsChecked = $('input[type=checkbox][name="hilang5"]').prop('checked');
+            if(checkboxIsChecked) {
+              $('#form_nyeri_hilang').after('<div class="form-group" id="field_nyeri_hilang"><label class="col-sm-2 control-label">Sebutkan </label><div class="col-sm-2"><input type="text" class="form-control" name="nyeri_hilang_input_text" required=""></div></div>');
+            }
+            else {
+              $('#field_nyeri_hilang').hide();
+            }
+          });
+        });
+      </script>
 
       {{-- <script type="text/javascript">
         $(document).ready( function() {
