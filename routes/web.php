@@ -73,6 +73,10 @@ Route::get('/igd_perkembangan_pasien', function () {
     return view('igd_perkembangan_pasien');
 });
 
+Route::get('/igd_suicide_fisik', function () {
+    return view('igd_suicide_fisik');
+});
+
 Route::get('/ri_panss_ec', function () {
     return view('ri_panss_ec');
 });
@@ -121,3 +125,14 @@ Route::get('/ri_efek_samping', function () {
     return view('ri_efek_samping');
 });
 
+Route::get('/ri_pemeriksaan_psikologis', function () {
+    return view('ri_pemeriksaan_psikologis');
+});
+
+Route::get('/ri_serah_terima', function () {
+    return view('ri_serah_terima');
+});
+
+Route::get('/ri_pemberian_informasi', function () {
+    return view('ri_pemberian_informasi');
+});
