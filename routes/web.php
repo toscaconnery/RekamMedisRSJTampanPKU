@@ -25,9 +25,11 @@ Route::get('/identifikasi_pasien_baru_1', 'PasienController@identifikasi_pasien_
 Route::post('/identifikasi_pasien_baru_2', 'PasienController@identifikasi_pasien_baru_2');
 Route::post('/identifikasi_pasien_baru_final', 'PasienController@identifikasi_pasien_baru_final');
 
+// RAWAT JALAN
 Route::get('/rj_asesmen_awal', 'RawatJalanController@asesmen_awal');
 Route::post('/rj_asesmen_awal_asesmen_keperawatan', 'RawatJalanController@store_rj_asesmen_awal_asesmen_keperawatan');
 Route::post('/rj_asesmen_awal_fisik_gizi', 'RawatJalanController@store_rj_asesmen_awal_fisik_gizi');
+Route::post('/penilaian_tingkat_nyeri', 'RawatJalanController@penilaian_tingkat_nyeri');
 
 Route::get('/ri_surat_persetujuan', function () {
     return view('ri_surat_persetujuan');

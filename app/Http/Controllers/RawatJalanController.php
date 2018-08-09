@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
+use App\Nyeri;
 use App\RJAAAsesmenKeperawatan;
 use App\RJAAFisikGizi;
 class RawatJalanController extends Controller
@@ -337,8 +338,43 @@ class RawatJalanController extends Controller
             $fisik_gizi->waktu_pemberitahuan = $request->waktu_pemberitahuan;
         }
         $fisik_gizi->save();
+        return redirect('index');
+    }
 
-
+    public function penilaian_tingkat_nyeri(Request $request)
+    {
+        $nyeri = new Nyeri;
+        $nyeri->id_regis = 1;
+        $nyeri->tingkat = $request->tingkat;
+        $nyeri->skala = $request->skala;
+        $nyeri->lokasi = $request->lokasi;
+        $nyeri->lokasi = $request->lokasi;
+        $nyeri->durasi = $request->durasi;
+        $nyeri->frekuensi = $request->frekuensi;
+        $hilang = "";
+        if(isset($request->hilang1)) {
+            $hilang .= "Minum obat, ";
+        }
+        if(isset($request->hilang2)) {
+            $hilang .= "Mendengar musik, ";
+        }
+        if(isset($request->hilang3)) {
+            $hilang .= "Istirahat, ";
+        }
+        if(isset($request->hilang4)) {
+            $hilang .= "Berubah posisi/tidur, ";
+        }
+        if(isset($request->hilang5)) {
+            $hilang .= $request->nyeri_hilang_input_text;
+            $hilang .", ";
+        }
+        $hilang = substr($hilang, 0, -1);
+        $nyeri->hilang = $hilang;
+        $nyeri->pemberitahuan = $request->pemberitahuan;
+        if($request->pemberitahuan == '1') {
+            $nyeri->waktu_pemberitahuan = $request->waktu_pemberitahuan;
+        }
+        $nyeri->save();
         return redirect('index');
     }
 }
