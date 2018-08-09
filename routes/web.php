@@ -144,3 +144,18 @@ Route::get('/igd_asesmen_darurat', function () {
     return view('igd_asesmen_darurat');
 });
 
+Route::get('/ri_lembar_konsultasi', function () {
+    return view('ri_lembar_konsultasi');
+});
+
+Route::get('/ri_penilaian_panss', function () {
+    return view('ri_penilaian_panss');
+});
+
+Route::get('/ri_resume_medis', function () {
+    return view('ri_resume_medis');
+});
+
+Route::get('/ri_rencana_pemulangan', function () {
+    return view('ri_rencana_pemulangan');
+});
