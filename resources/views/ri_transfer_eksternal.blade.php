@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="{{url('')}}/admin_bootstrap/img/favicon.png">
 
-  <title>Resume Medis</title>
+  <title>Transfer Pasien Eksternal Rumah Sakit</title>
 
    <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-file-text-o"></i> RESUME MEDIS</h3>
+            <h3 class="page-header"><i class="fa fa-file-text-o"></i> TRANSFER PASIEN EKSTERNAL RUMAH SAKIT</h3>
             <!--<ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_document_alt"></i>Forms</li>
@@ -78,7 +78,7 @@
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Dokumen Resume Medis
+                Dokumen Transfer Pasien Eksternal Rumah Sakit
               </header>
 
               <table class="table table-striped table-advance table-hover">
@@ -90,7 +90,7 @@
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
                   <tr>
-                    <td>Resume Medis</td>
+                    <td>Transfer Pasien Eksternal Rumah Sakit</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>
@@ -112,32 +112,276 @@
 
             <section class="panel">
               <header class="panel-heading">
-                Data Umum
               </header>
-              <div class="panel-body">
+                <div class="panel-body">
+                  <form class="form-horizontal " method="get">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Nomor</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">RS Tujuan</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Petugas RS tujuan yang dihubungi</label>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control">
+                      </div>
+                      <label class="col-sm-1 control-label">Tanggal</label>
+                      <div class="col-sm-2">
+                        <input type="text" class="form-control">
+                      </div>
+                      <label class="col-sm-1 control-label">Jam</label>
+                      <div class="col-sm-2">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
 
-                <form class="form-horizontal " method="get">
-                  <div class="form-group"></div>
+                <div class="form-group">
+                  <label class="control-label col-lg-2" for="inputSuccess">Alasan/Tujuan Transfer</label>
+                  <div class="col-sm-2">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="a1" id="optionsRadios1" value="" checked>
+                        Alih Rawat
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="a1" id="optionsRadios1" value="" checked>
+                        Rujuk
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="a1" id="optionsRadios1" value="" checked>
+                        Lainnya
+                      </label>
+                    </div>
+                  </div>
+                  <label class="col-sm-2 control-label">Tanggal Transfer</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control">
+                  </div>
+                  <label class="col-sm-1 control-label">Jam Transfer</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-lg-2" for="inputSuccess">Atas Permintaan</label>
+                  <div class="col-sm-2">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="a2" id="optionsRadios1" value="" checked>
+                        Dokter
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="a2" id="optionsRadios1" value="" checked>
+                        Pasien/Keluarga
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-lg-2" for="inputSuccess">Kategori pasien transfer</label>
+                  <div class="col-sm-2">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="a3" id="optionsRadios1" value="" checked>
+                        Level 0
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="a3" id="optionsRadios1" value="" checked>
+                        Level 1
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="a3" id="optionsRadios1" value="" checked>
+                        Level 2
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="a3" id="optionsRadios1" value="" checked>
+                        Level 3
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="a3" id="optionsRadios1" value="" checked>
+                        Level 4
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                 
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Petugas Pendamping</label>
+                    <div class="col-lg-10">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="1" name=""> Dokter
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="2" name=""> Perawat
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="3" name=""> Pramu Ruang
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="4" name=""> Sopir 
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="5" name=""> Security  
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="6" name=""> ATLS
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="7" name=""> ACLS
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="8" name=""> EN
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="9" name=""> BTLS
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="9" name=""> BCLS
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="9" name=""> PPGD
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="9" name=""> BLS
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="9" name=""> APN
+                      </label>
+                    </div>
+                  </div>
+
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Tanggal Masuk RS</label>
                     <div class="col-sm-2">
                       <input type="text" class="form-control">
                     </div>
                   </div>
+
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Tanggal Keluar RS</label>
-                    <div class="col-sm-2">
+                    <label class="col-sm-2 control-label">Anamnesa</label>
+                    <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
+
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Ruang Rawat Terakhir</label>
+                    <label class="col-sm-2 control-label">Diagnosa</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Indikasi di Rawat</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Tindakan yang telah dilakukan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Terapi yang telah diberikan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Resiko</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+              Ringkasan Kondisi Pasien
+              </header>
+              <div class="panel-body">
+                <form class="form-horizontal " method="get">
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keadaan Umum</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">DPJP</label>
+                    <label class="col-sm-2 control-label">Kesadaran</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-sm-2 control-label">Pemeriksaan Fisik</label></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Tensi</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Suhu</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Nadi</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keluhan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Riwayat Penyakit</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Riwayat Alergi</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Alasan Pindah Ruangan</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
@@ -148,167 +392,32 @@
 
             <section class="panel">
               <header class="panel-heading">
-                Ringkasan Perawatan Pasien
+              Pemeriksaan Penunjang yang Sudah Dilakukan
               </header>
               <div class="panel-body">
-
                 <form class="form-horizontal " method="get">
                   <div class="form-group"></div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Alergi</label>
+                    <label class="col-sm-2 control-label">Laboratorium</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Diagnosa Masuk</label>
+                    <label class="col-sm-2 control-label">EKG</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Indikasi Dirawat/Alaasan dirawat</label>
+                    <label class="col-sm-2 control-label">Radiologi</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Hasil Pemeriksaan Penunjang</label>
+                    <label class="col-sm-2 control-label">CT scan</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Terapi yang diberikan saat di RS</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
-
-            <form class="form-horizontal " method="get">
-              <section class="panel">
-                <header class="panel-heading">
-                  Diagnosa
-                </header>
-                <div class="panel-body">
-                  <div class="col-lg-2"></div><h4>Diagnosis Psikiatri</h4>
-                  <div class="form-group"></div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Axis 1</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Kode ICD-10</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Axis 2</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Kode ICD-10</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Axies 3</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Kode ICD-10</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Axis 4</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Kode ICD-10</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Axis 5</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Kode ICD-10</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-2"></div><h4>Diagnosis Non Psikiatri</h4>
-                  <div class="form-group"></div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Diagnosis Utama</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Kode ICD-10</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Diagnosis Sekunder</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Kode ICD-10</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </form>
-
-            <section class="panel">
-              <header class="panel-heading">
-                Tindakan Kedokteran
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-                  <div class="form-group"></div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Tanggal</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama Tindakan Medis</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Kode ICD-9-CM</label>
-                    <div class="col-sm-2">
                       <input type="text" class="form-control">
                     </div>
                   </div>
@@ -318,163 +427,139 @@
 
             <section class="panel">
               <header class="panel-heading">
-                Penyebab Luar/Cedera/Kecelakaan (jika ada)
+              Tindakan Medis yang Sudah Dilakukan
               </header>
               <div class="panel-body">
-
                 <form class="form-horizontal " method="get">
-                  <div class="form-group"></div>
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Keadaan Keluar</label>
-                    <div class="col-lg-10">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="a1" id="optionsRadios1" value="" checked>
-                          Sembuh
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="a1" id="optionsRadios1" value="" checked>
-                          Membaik
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="a1" id="optionsRadios1" value="" checked>
-                          Perbaikan
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="a1" id="optionsRadios1" value="" checked>
-                          Mati < 48 jam
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="a1" id="optionsRadios1" value="" checked>
-                          Mati < 48 Jam
-                        </label>
-                      </div>
+                    <label class="col-sm-2 control-label">Tindakan Medis</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+              Pemberian Therapi
+              </header>
+              <div class="panel-body">
+                <form class="form-horizontal " method="get">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Infus</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Cara Pulang</label>
-                    <div class="col-lg-10">
+                    <label class="col-sm-2 control-label">Obat Injeksi</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Obat Oral</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Lain-Lainnya</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                   <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Transportasi yang digunakan</label>
+                    <div class="col-sm-3">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="a2" id="optionsRadios1" value="" checked>
-                          Diijinkan Pulang
+                          <input type="radio" name="a4" id="optionsRadios1" value="" checked>
+                          Ambulance
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="a2" id="optionsRadios1" value="" checked>
-                          Pulang Paksa
+                          <input type="radio" name="a4" id="optionsRadios1" value="" checked>
+                          Mobil Pribadi
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="a2" id="optionsRadios1" value="" checked>
-                          Rujuk Ke
+                          <input type="radio" name="a4" id="optionsRadios1" value="" checked>
+                          Taxi
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="a2" id="optionsRadios1" value="" checked>
-                          Pindah ke RS lain
+                          <input type="radio" name="a4" id="optionsRadios1" value="" checked>
+                          Angkutan Umum
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="a2" id="optionsRadios1" value="" checked>
                           Lainnya
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Sebutkan</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group"><label class="col-sm-2 control-label">Kondisi Pulang</label></div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Kondisi</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Jam Keluar</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">TD</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">HR</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">RR</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">T</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">BB</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Penerima Informasi</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
+
                 </form>
               </div>
             </section>
 
             <section class="panel">
               <header class="panel-heading">
-                Obat yang dibawa pulang
+                Ringkasan Kondisi Pasien
               </header>
               <div class="panel-body">
-
                 <form class="form-horizontal " method="get">
-                  <div class="form-group"></div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama Obat</label>
+                    <label class="col-sm-2 control-label">Dokter</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group"><label class="col-sm-2 control-label">Status Pasien Sebelum Transfer</label></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam</label>
                     <div class="col-sm-2">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Jumlah</label>
-                    <div class="col-sm-2">
+                    <label class="col-sm-2 control-label">Keadaan Umum</label>
+                    <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Aturan Pakai</label>
+                    <label class="col-sm-2 control-label">TD</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">HR</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">RR</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Suhu</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">SpO2</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Lainnya</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
@@ -485,49 +570,121 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
+
+                  <div class="form-group"><label class="col-sm-2 control-label">Status Pasien Selama Transfer</label></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keadaan Umum</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">TD</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">HR</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">RR</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Suhu</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">SpO2</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Lainnya</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keterangan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group"><label class="col-sm-2 control-label">Status Pasien Setelah Transfer</label></div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keadaan Umum</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">TD</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">HR</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">RR</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Suhu</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">SpO2</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Lainnya</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keterangan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
                 </form>
               </div>
             </section>
 
             <section class="panel">
               <header class="panel-heading">
+              Petugas
               </header>
               <div class="panel-body">
-
                 <form class="form-horizontal " method="get">
-                  <div class="form-group"><label class="col-sm-2 control-label">Edukasi Pasien</label></div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Penyakit</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Diet</label>
-                    <div class="col-lg-10">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="a3" id="optionsRadios1" value="" checked>
-                          Diet Khusus
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="a3" id="optionsRadios1" value="" checked>
-                          Makan Biasa
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Sebutkan</label>
+                    <label class="col-sm-2 control-label">Nama Petugas Menyerahkan</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                  <div class="form-group"><label class="col-sm-2 control-label">Instruksi</label></div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Perlu Kontrol/berobat jalan di</label>
+                    <label class="col-sm-2 control-label">Nama Petugas Penerima</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
@@ -537,10 +694,13 @@
                     <div class="col-sm-2">
                       <input type="text" class="form-control">
                     </div>
+                    <label class="col-sm-2 control-label">Jam</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control">
+                    </div>
                   </div>
-                  <div class="form-group"><label class="col-sm-2 control-label">Hasil pemeriksaan penunjang yang tertunda</label></div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Diambil Tanggal</label>
+                    <label class="col-sm-2 control-label">RS</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
@@ -548,8 +708,6 @@
                 </form>
               </div>
             </section>
-                      
-
 
             <div>
               <button type="submit" class="btn btn-primary">Submit</button>

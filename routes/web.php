@@ -60,12 +60,20 @@ Route::get('/rj_resume_rawat', function () {
     return view('rj_resume_rawat');
 });
 
+Route::get('/rj_rencana_pemulangan', function () {
+    return view('rj_rencana_pemulangan');
+});
+
 Route::get('/rj_asesmen_gigi', function () {
     return view('rj_asesmen_gigi');
 });
 
 Route::get('/rj_identifikasi_stresor', function () {
     return view('rj_identifikasi_stresor');
+});
+
+Route::get('/rj_tumbuh_kembang', function () {
+    return view('rj_tumbuh_kembang');
 });
 
 Route::get('/igd_catatan_kemajuan', function () {
@@ -159,3 +167,30 @@ Route::get('/ri_resume_medis', function () {
 Route::get('/ri_rencana_pemulangan', function () {
     return view('ri_rencana_pemulangan');
 });
+
+Route::get('/ri_asesmen', function () {
+    return view('ri_asesmen');
+});
+
+Route::get('/ri_edukasi', function () {
+    return view('ri_edukasi');
+});
+
+Route::get('/ri_hak_kewajiban', function () {
+    return view('ri_hak_kewajiban');
+});
+
+Route::get('/ri_persetujuan_umum', function () {
+    return view('ri_persetujuan_umum');
+});
+
+Route::get('/ri_transfer_internal', function () {
+    return view('ri_transfer_internal');
+});
+
+Route::get('/ri_transfer_eksternal', function () {
+    return view('ri_transfer_eksternal');
+});
+
+
+
