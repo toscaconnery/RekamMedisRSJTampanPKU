@@ -72,6 +72,11 @@ Route::get('/rj_identifikasi_stresor', function () {
     return view('rj_identifikasi_stresor');
 });
 
+Route::get('/rj_lapor_rehabilitasi', function () {
+    return view('rj_lapor_rehabilitasi');
+});
+
+
 Route::get('/rj_tumbuh_kembang', function () {
     return view('rj_tumbuh_kembang');
 });
