@@ -31,6 +31,8 @@ Route::post('/rj_asesmen_awal_asesmen_keperawatan', 'RawatJalanController@store_
 Route::post('/rj_asesmen_awal_fisik_gizi', 'RawatJalanController@store_rj_asesmen_awal_fisik_gizi');
 Route::post('/penilaian_tingkat_nyeri', 'RawatJalanController@penilaian_tingkat_nyeri');
 
+Route::get('/pdf', 'Pdf_controller@test_pdf');
+
 Route::get('/ri_surat_persetujuan', function () {
     return view('ri_surat_persetujuan');
 });
@@ -196,6 +198,16 @@ Route::get('/ri_transfer_internal', function () {
 Route::get('/ri_transfer_eksternal', function () {
     return view('ri_transfer_eksternal');
 });
+
+Route::get('/test_pdf', function () {
+    return view('test_pdf');
+});
+
+Route::get('/pdf_view', function () {
+    return view('pdf_view');
+});
+
+
 
 
 

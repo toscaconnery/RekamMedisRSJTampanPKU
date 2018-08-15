@@ -1,0 +1,729 @@
+body{
+ margin: 0 0 100px 0;
+}
+
+p {
+    display: inline;
+}
+
+table {
+	font-size: 11;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.footer{
+    padding-top: 0cm;
+    border: 1px solid black;
+    border-top-style: solid;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+th {
+    border: 1px solid black;
+    border-top-style: solid;
+    border-right: none;
+    border-bottom-style: solid;
+    border-left: none;
+    text-align: left;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: auto;
+    padding-left: auto;
+
+}
+
+td {
+    table-layout:fixed;
+}
+
+img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+}
+
+div.relative {
+    p
+    left: 30px;
+    border: 3px solid #73AD21;
+}
+
+div.relative_small {
+    position: relative;
+    left: 25px;
+    border: 3px solid #73AD21;
+}
+
+td.headermid {
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+}
+
+td.headerleft {
+	width: 37%;
+    line-height: 15px;
+	font-family: "Times New Roman", Times, serif;
+	text-align: left;
+}
+
+td.headerright {
+	text-align: left;
+    padding-left:230px; 
+    padding-right:15px; 
+    line-height: 15px;
+	font-family: "Times New Roman", Times, serif;
+    font-size: 125%;
+}
+
+
+td.ad_engine_headermid {
+    vertical-align: top;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+td.ad_engine_headerleft {
+    width: 33%;
+    padding: 0;
+    vertical-align: top;
+    font-family: "Times New Roman", Times, serif;
+    text-align: left;
+    line-height: 19px;
+}
+
+td.ad_engine_headerright {
+    text-align: left;
+    padding: 0;
+    line-height: 0px;
+    vertical-align: top;
+    padding-left:100px; 
+    padding-right:15px; 
+    font-family: "Times New Roman", Times, serif;
+    line-height: 19px;  
+}
+
+td.footerleft {
+    text-align: left;
+    width: 43%;
+    font-family: arial, sans-serif;
+    font-size: 105%;
+    padding: 0;
+}
+
+td.footermid {
+    text-align: left;
+    vertical-align: top;
+    width: 40%;
+    font-family: arial, sans-serif;
+    font-size: 105%;
+    padding: 0;
+}
+
+td.footerright {
+    padding: 0;
+    text-align: left;
+    vertical-align: top;
+    font-family: arial, sans-serif;
+    font-size: 105%;
+}
+
+td.page {
+    text-align: right;
+    font-family: arial, sans-serif;
+    font-size: 100%;
+}
+
+td.series {
+    text-align: left;
+    font-family: arial, sans-serif;
+    font-size: 100%;
+}
+
+div.button{
+
+    display:inline-block;
+}
+
+hr {
+    color: black;
+    text-align: left;
+    width: 40%;
+}
+
+td.head1{
+    vertical-align: top;
+    padding-top: 7px;
+    padding-bottom: 1px;
+    width: 4%;
+    text-align: left;
+    padding-right: 1%;
+    font-size: 11px;
+}
+
+td.head1air{
+    vertical-align: top;
+    padding-top: 7px;
+    padding-bottom: 1px;
+    width: 4%;
+    text-align: center;
+    padding-right: 1%;
+    font-size: 10px;
+}
+
+td.head1air2{
+    text-align: left;
+    vertical-align: top;
+    padding-top: 7px;
+    padding-bottom: 1px;
+    width: 4%;
+    padding-right: 1%;
+    font-size: 10px;
+}
+
+td.head2{
+    padding-top: 1%;
+    padding-right: 1%;
+    width: 11%;
+    vertical-align: top;
+}
+
+td.head3{
+    padding-top: 1%;
+    padding-right: 1%;
+    width: 7%;
+    vertical-align: top;
+}
+
+td.head4{
+    padding-top: 1%;
+    padding-right: 1%;
+    width: 24%;
+    line-height: 140%;
+    vertical-align: top;
+}
+
+td.head5{
+    padding-top: 1%;
+    padding-right: 1%;
+    width: 9%;
+    vertical-align: top;
+}
+
+td.head6{
+    padding-top: 1%;
+    padding-right: 1%;
+    width: 11%;
+    vertical-align: top;
+}
+
+td.head7{
+    padding-top: 1%;
+    padding-right: 1%;
+    width: 8.5%;
+    vertical-align: top;
+}
+
+td.head8{
+    padding-top: 1%;
+    padding-right: 1%;
+    width: 7%;
+    vertical-align: top;
+}
+
+td.head9{
+    padding-top: 1%;
+    padding-right: 1%;
+    width: 6%;
+    vertical-align: top;
+}
+
+td.head10{
+    padding-top: 1%;
+    padding-right: 1%;
+    vertical-align: top;
+}
+
+tr.tabhead{
+    vertical-align: top;
+}
+
+table.ad_engine{
+    font-size: 11;
+    vertical-align: top;
+}
+
+th.sbhead{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    padding-top: 1px;
+    padding-right: 20px;
+    padding-bottom: 1px;
+}
+
+th.sb_air-col1{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: center;
+    width: 3%;
+    text-align: left;
+}
+
+th.sb_air-col2{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    width: 8%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: top;
+}
+
+th.sb_air-col3{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 4%;
+    vertical-align: top;
+}
+
+th.sb_air-col4{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    width: 9%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    line-height: 140%;
+    vertical-align: top;
+}
+
+th.sb_air-col5{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    width: 24%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: top;
+    padding-right: 5px;
+}
+
+th.sb_air-col6{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 8%;
+    vertical-align: top;
+}
+
+th.sb_air-col7{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 8.5%;
+    vertical-align: top;
+}
+
+th.sb_air-col8{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 12%;
+    vertical-align: top;
+}
+
+th.sb_air-col9{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 12%;
+    vertical-align: top;
+}
+
+table.sb-air{
+    font-size: 12px;
+}
+
+td.sb_en-headermid {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+td.sb_en-headerleft {
+    width: 42%;
+    vertical-align: bottom;
+    line-height: 10px;
+    font-family: "Times New Roman", Times, serif;
+    text-align: left;
+}
+
+td.sb_en-headerright {
+    text-align: left;
+    padding-left:240px; 
+    vertical-align: bottom;
+    padding-right:5px; 
+    line-height: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 125%;
+}
+
+td.sb_air-headermid {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+td.sb_air-headerleft {
+    width: 37%;
+    vertical-align: top;
+    line-height: 15px;
+    font-family: "Times New Roman", Times, serif;
+    text-align: left;
+}
+
+td.sb_air-headerright {
+    text-align: left;
+    padding-left:220px; 
+    vertical-align: top;
+    padding-right:15px; 
+    line-height: 15px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 125%;
+}
+
+td.konten{
+    vertical-align: top;
+    padding-right: 2px;
+    padding-top: 7px;
+    font-size: 10px;
+}
+
+td.konten_sbengine{
+    vertical-align: top;
+    padding-top: 7px;
+    font-size: 11px;
+}
+
+td.konten_adengine{
+    vertical-align: top;
+    padding-top: 7px;
+    font-size: 9px;
+}
+
+th.sb_en-col1{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: center;
+    width: 3%;
+    text-align: left;
+    vertical-align: top;
+    font-size: 12;
+}
+
+th.sb_en-col2{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    width: 8%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: top;
+    vertical-align: top;
+    font-size: 12;
+}
+
+th.sb_en-col3{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 45%;
+    vertical-align: top;
+    vertical-align: top;
+    font-size: 12;
+}
+
+th.sb_en-col4{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    width: 6%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    line-height: 140%;
+    vertical-align: top;
+    vertical-align: top;
+    font-size: 12;
+}
+
+th.sb_en-col5{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    width: 8%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: top;
+    padding-right: 5px;
+    vertical-align: top;
+    font-size: 12;
+}
+
+th.sb_en-col6{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    padding-top:1px; 
+    padding-right:20px;
+    padding-bottom:1px;
+    width: 12%;
+    vertical-align: top;
+    font-size: 12;
+}
+
+th.sb_en-col7{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1;
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 10%;
+    vertical-align: top;
+    vertical-align: top;
+    font-size: 12;
+}
+
+th.ad_en-col1{
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: center;
+    width: 5%;
+    text-align: left;
+}
+
+th.ad_en-col2{
+    width: 12%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: top;
+}
+
+th.ad_en-col3{
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 7%;
+    vertical-align: top;
+}
+
+th.ad_en-col4{
+    width: 18%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    line-height: 140%;
+    vertical-align: top;
+}
+
+th.ad_en-col5{
+    width: 10%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: top;
+    padding-right: 5px;
+}
+
+th.ad_en-col6{
+    padding-top:1px; 
+    padding-right:3px;
+    padding-bottom:1px;
+    width: 9%;
+    vertical-align: top;
+}
+
+th.ad_en-col7{
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 8%;
+    vertical-align: top;
+}
+
+th.ad_en-col8{
+    width: 7%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: top;
+    padding-right: 5px;
+}
+
+th.ad_en-col9{
+    padding-top:1px; 
+    padding-right:3px;
+    padding-bottom:1px;
+    width: 7%;
+    vertical-align: top;
+}
+
+th.ad_en-col10{
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 15%;
+    vertical-align: top;
+
+}
+
+th.ad_src-col1{
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: center;
+    width: 3%;
+    text-align: left;
+}
+
+th.ad_src-col2{
+    width: 7%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: top;
+}
+
+th.ad_src-col3{
+    padding-top:1px;
+    padding-left:1px; 
+    padding-bottom:1px;
+    width: 5%;
+    vertical-align: top;
+}
+
+th.ad_src-col4{
+    width: 18%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    line-height: 140%;
+    vertical-align: top;
+}
+
+th.ad_src-col5{
+    width: 10%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: top;
+    padding-right: 5px;
+}
+
+th.ad_src-col6{
+    padding-top:1px; 
+    padding-right:3px;
+    padding-bottom:1px;
+    width: 10%;
+    vertical-align: top;
+}
+
+th.ad_src-col7{
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 7%;
+    vertical-align: top;
+}
+
+th.ad_src-col8{
+    width: 10%;
+    padding-top:1px; 
+    padding-bottom:1px;
+    vertical-align: top;
+    padding-right: 5px;
+}
+
+th.ad_src-col9{
+    padding-top:1px; 
+    padding-right:3px;
+    padding-bottom:1px;
+    width: 6%;
+    vertical-align: top;
+}
+
+th.ad_src-col10{
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 6%;
+    vertical-align: top;
+
+}
+
+th.ad_src-col11{
+    padding-top:1px; 
+    padding-bottom:1px;
+    width: 15%;
+    vertical-align: top;
+
+}
+
+td.containt{
+    padding-left: 0px;
+    font-size: 10;
+    padding-top: 6px;
+}
+
+th.sb_apu-col1{
+    width: 2px;
+    padding-left: 3px;
+}
+
+th.sb_apu-col2{
+    width: 70px;
+    padding-left: 3px;
+}
+
+th.sb_apu-col3{
+    width: 70px;
+    padding-left: 3px;
+}
+
+th.sb_apu-col4{
+    width: 200px;
+    padding-left: 3px;
+}
+
+th.sb_apu-col5{
+    width: 3px;
+     padding-left: 3px;
+}
+
+th.sb_apu-col6{
+    width: 140px;
+    padding-left: 3px;
+}
+
+th.sb_apu-col7{
+    width: 100px;
+    padding-left: 3px;
+}
+
+table.apu_sb{
+    font-family: arial, sans-serif;
+    font-size: 9;
+    padding: 0;
+}
+
+td.apu_head_left{
+    font-weight: 0.5px;
+    width: 300px;
+}
+
+td.apu_head_mid{
+    font-weight: 1px;
+
+}
+
+td.apu_head_right{
+    font-weight: 1px;
+    padding-left: 90px
+}
+
+td.apu_konten{
+    padding-top: 3px;
+    padding-left: 1000px;
+}
