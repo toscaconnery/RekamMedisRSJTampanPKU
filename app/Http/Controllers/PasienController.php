@@ -77,20 +77,20 @@ class PasienController extends Controller
         $identifikasi = new Identifikasi;
         $identifikasi->no_rm = $request->no_rm;
         $identifikasi->save();
-        // dd("id identifikasi : ", $identifikasi->id_regis);
 
         $index = 0;
         foreach($request->nama_pj as $nama) {
-            $pj = new PenanggungJawab;
-            $pj->id_regis = $identifikasi->id_regis;
-            $pj->nama = $request->nama_pj[$index];
-            $pj->alamat = $request->alamat_pj[$index];
-            $pj->hubungan = $request->hubungan_pj[$index];
-            $pj->no_telp = $request->no_telp_pj[$index];
-            $pj->save();
+            if(!empty($request->nama_pj[$index]) and !empty($request->alamat_pj[$index]) and !empty($request->hubungan_pj[$index]) and !empty($request->no_telp_pj[$index])) {
+                $pj = new PenanggungJawab;
+                $pj->id_regis = $identifikasi->id_regis;
+                $pj->nama = $request->nama_pj[$index];
+                $pj->alamat = $request->alamat_pj[$index];
+                $pj->hubungan = $request->hubungan_pj[$index];
+                $pj->no_telp = $request->no_telp_pj[$index];
+                $pj->save();
+            }
             $index++;
         }
-        //dd($request);
 
         return redirect('index');
     }
