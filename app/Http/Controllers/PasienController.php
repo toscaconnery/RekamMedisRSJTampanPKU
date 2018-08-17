@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use App\Pasien;
-use App\Identifikasi;
-use App\RincianPasien;
-use App\PenanggungJawab;
+use App\Models\Pasien;
+use App\Models\Identifikasi;
+use App\Models\RincianPasien;
+use App\Models\PenanggungJawab;
 
 class PasienController extends Controller
 {

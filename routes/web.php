@@ -28,11 +28,12 @@ Route::post('/identifikasi_pasien_baru_final', 'PasienController@identifikasi_pa
 // RAWAT JALAN
 Route::get('/rj_asesmen_awal', 'RawatJalanController@asesmen_awal');
 Route::post('/rj_asesmen_awal_asesmen_keperawatan', 'RawatJalanController@store_rj_asesmen_awal_asesmen_keperawatan');
-Route::post('/rj_asesmen_awal_fisik_gizi', 'RawatJalanController@store_rj_asesmen_awal_fisik_gizi');
+Route::post('/fisik_gizi', 'RawatJalanController@store_fisik_gizi');
 Route::post('/penilaian_tingkat_nyeri', 'RawatJalanController@store_penilaian_tingkat_nyeri');
 Route::post('/humpty_dumpty', 'RawatJalanController@store_humpty_dumpty');
 Route::post('/morse', 'RawatJalanController@store_morse');
 Route::post('/edmunson', 'RawatJalanController@store_edmunson');
+Route::post('/diagnosa_keperawatan_umum', 'RawatJalanController@store_diagnosa_keperawatan_umum');
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');
 

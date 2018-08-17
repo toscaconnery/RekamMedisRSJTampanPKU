@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRjAaFisikGiziTable extends Migration
+class CreateFisikGiziTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateRjAaFisikGiziTable extends Migration
      */
     public function up()
     {
-        Schema::create('rj_aa_fisik_gizi', function (Blueprint $table) {
-            $table->increments('id_fisik_gizi');
+        Schema::create('fisik_gizi', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->string('td', 10);
             $table->string('tb', 10);
@@ -48,6 +48,6 @@ class CreateRjAaFisikGiziTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rj_aa_fisik_gizi');
+        Schema::dropIfExists('fisik_gizi');
     }
 }

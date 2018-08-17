@@ -1,14 +1,12 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RJAAFisikGizi extends Model
+class FisikGizi extends Model
 {
-    protected $table = 'rj_aa_fisik_gizi';
-
-    protected $primaryKey = 'id_fisik_gizi';
+    protected $table = 'fisik_gizi';
 
     public $incrementing = true;
 
