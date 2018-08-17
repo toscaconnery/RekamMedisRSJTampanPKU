@@ -14,7 +14,7 @@ class CreateAsesmenTkPsikologTable extends Migration
     public function up()
     {
         Schema::create('asesmen_tk_psikolog', function (Blueprint $table) {
-            $table->increments('id_asesmen_tk');
+            $table->increments('id');
             $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
             $table->string('keadaan_kandungan', 30);
             $table->string('penyakit_mengandung', 30);

@@ -8,8 +8,6 @@ class RJAAAsesmenKeperawatan extends Model
 {
     protected $table = 'rj_aa_asesmen_keperawatan';
 
-    protected $primaryKey = 'id_asesmen';
-
     public $incrementing = true;
 
     public $timestamps = true;

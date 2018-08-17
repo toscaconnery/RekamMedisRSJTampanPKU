@@ -19,7 +19,7 @@ class RawatJalanController extends Controller
     {
     	$asesmen_keperawatan = new RJAAAsesmenKeperawatan;
     	$asesmen_keperawatan->id_regis = 1;
-    	$asesmen_keperawatan->id_user = Auth::user()->id_user;
+    	$asesmen_keperawatan->id_user = Auth::user()->id;
     	$asesmen_keperawatan->alasan_kunjungan = $request->alasan_kunjungan;
     	$asesmen_keperawatan->hubungan_keluarga = $request->hubungan_keluarga;
     	

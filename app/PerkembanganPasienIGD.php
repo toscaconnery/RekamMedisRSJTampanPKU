@@ -8,8 +8,6 @@ class PerkembanganPasienIGD extends Model
 {
     protected $table = 'perkembangan_pasien_igd';
 
-    protected $primaryKey = 'id_perkembangan';
-
     public $incrementing = true;
 
     public $timestamps = true;
