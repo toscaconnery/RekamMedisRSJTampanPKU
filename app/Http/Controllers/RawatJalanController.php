@@ -9,6 +9,7 @@ use App\Nyeri;
 use App\RJAAAsesmenKeperawatan;
 use App\RJAAFisikGizi;
 use App\HumptyDumpty;
+use App\Morse;
 class RawatJalanController extends Controller
 {
     public function asesmen_awal() 
@@ -392,15 +393,33 @@ class RawatJalanController extends Controller
         $humpty->save();
         return redirect('index');
     }
+
+    public function store_morse(Request $request)
+    {
+        $morse = new Morse;
+        $morse->id_regis = 1;
+        if($request->riwayat_jatuh == 'true') {
+            $morse->riwayat_jatuh = True;
+        }
+        else {
+            $morse->riwayat_jatuh = False;
+        }
+        if($request->diagnosis_sekunder == 'true') {
+            $morse->diagnosis_sekunder = True;
+        }
+        else {
+            $morse->diagnosis_sekunder = False;
+        }
+        $morse->alat_bantu = $request->alat_bantu;
+        if($request->terpasang_infus == 'true') {
+            $morse->terpasang_infus = True;
+        }
+        else {
+            $morse->terpasang_infus = False;
+        }
+        $morse->gaya_berjalan = $request->gaya_berjalan;
+        $morse->status_mental = $request->status_mental;
+        $morse->save();
+        return redirect('index');
+    }
 }
-
-
-
-// $table->increments('id');
-//             $table->integer('id_regis')->reference('id')->on('identifikasi');
-//             $table->string('usia');
-//             $table->string('diagnosis');
-//             $table->string('gangguan_kognitif');
-//             $table->string('faktor_lingkungan');
-//             $table->string('waktu_respon_obat');
-//             $table->string('penggunaan_obat');

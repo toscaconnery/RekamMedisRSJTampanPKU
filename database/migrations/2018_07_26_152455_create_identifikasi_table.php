@@ -14,7 +14,7 @@ class CreateIdentifikasiTable extends Migration
     public function up()
     {
         Schema::create('identifikasi', function (Blueprint $table) {
-            $table->increments('id_regis');
+            $table->increments('id');
             $table->integer('no_rm')->references('no_rm')->on('pasien');
             $table->timestamps();
         });

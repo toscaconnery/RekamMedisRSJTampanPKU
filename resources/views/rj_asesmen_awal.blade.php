@@ -987,7 +987,8 @@
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="morse">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   MORSE (Dewasa)
@@ -998,9 +999,9 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">RIWAYAT JATUH</label>
                     <div class="col-lg-1">
-                      <select class="form-control m-bot15">
-                        <option>Ya</option>
-                        <option>Tidak</option>
+                      <select class="form-control m-bot15" name="riwayat_jatuh">
+                        <option value="true">Ya</option>
+                        <option value="false">Tidak</option>
                       </select>
                     </div>
                   </div>
@@ -1008,9 +1009,9 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS SEKUNDER</label>
                     <div class="col-lg-1">
-                      <select class="form-control m-bot15">
-                        <option>Ya</option>
-                        <option>Tidak</option>
+                      <select class="form-control m-bot15" name="diagnosis_sekunder">
+                        <option value="true">Ya</option>
+                        <option value="false">Tidak</option>
                       </select>
                     </div>
                   </div>
@@ -1018,10 +1019,10 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">ALAT BANTU</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Perabot</option>
-                        <option>Tongkat/Alat Penopang</option>
-                        <option>Tidak ada/Kursi Roda/Perawat/Tirah Baring</option>
+                      <select class="form-control m-bot15" name="alat_bantu">
+                        <option value="1">Perabot</option>
+                        <option value="2">Tongkat/Alat Penopang</option>
+                        <option value="3">Tidak ada/Kursi Roda/Perawat/Tirah Baring</option>
                       </select>
                     </div>
                   </div>
@@ -1029,9 +1030,9 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">TERPASANG INFUS</label>
                     <div class="col-lg-1">
-                      <select class="form-control m-bot15">
-                        <option>Ya</option>
-                        <option>Tidak</option>
+                      <select class="form-control m-bot15" name="terpasang_infus">
+                        <option value="true">Ya</option>
+                        <option value="false">Tidak</option>
                       </select>
                     </div>
                   </div>
@@ -1039,10 +1040,10 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">GAYA BERJALAN</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Terganggu</option>
-                        <option>Lemah</option>
-                        <option>Normal/Tirah Baring/Imobilisasi</option>
+                      <select class="form-control m-bot15" name="gaya_berjalan">
+                        <option value="1">Terganggu</option>
+                        <option value="2">Lemah</option>
+                        <option value="3">Normal/Tirah Baring/Imobilisasi</option>
                       </select>
                     </div>
                   </div>
@@ -1050,12 +1051,15 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">STATUS MENTAL</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Sering lupa akan keterbatasan yang dimiliki</option>
-                        <option>Orientasi baik terhadap kemampuan diri sendiri</option>
+                      <select class="form-control m-bot15" name="status_mental">
+                        <option value="1">Sering lupa akan keterbatasan yang dimiliki</option>
+                        <option value="2">Orientasi baik terhadap kemampuan diri sendiri</option>
                       </select>
                     </div>
                   </div>
+                  
+                  <button type="submit">Simpan</button>
+
                 </div>
               </section>
             </form>
