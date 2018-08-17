@@ -1065,7 +1065,8 @@
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="edmunson">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   EDMUNSON (Jiwa)
@@ -1076,11 +1077,11 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">STATUS MENTAL</label>
                     <div class="col-lg-2">
-                      <select class="form-control m-bot15">
-                        <option>Kesadaran baik/orientasi baik setiap saat </option>
-                        <option>Agitasi/Ansietas</option>
-                        <option>Kadang-kadang bingung</option>
-                        <option>Bingung/Disorientasi</option>
+                      <select class="form-control m-bot15" name="status_mental">
+                        <option value="1">Kesadaran baik/orientasi baik setiap saat </option>
+                        <option value="2">Agitasi/Ansietas</option>
+                        <option value="3">Kadang-kadang bingung</option>
+                        <option value="4">Bingung/Disorientasi</option>
                       </select>
                     </div>
                   </div>
@@ -1088,11 +1089,11 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Kelainan Neurologi </option>
-                        <option>Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
-                        <option>Kelainan psikis / prilaku</option>
-                        <option>Diagnosis lain</option>
+                      <select class="form-control m-bot15" name="diagnosis">
+                        <option value="1">Kelainan Neurologi </option>
+                        <option value="2">Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
+                        <option value="3">Kelainan psikis / prilaku</option>
+                        <option value="4">Diagnosis lain</option>
                       </select>
                     </div>
                   </div>
@@ -1100,12 +1101,12 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">ELIMINASI</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Mandiri dan mampi mengontrol BAB/BAK</option>
-                        <option>Dower Catheter/Colostomy</option>
-                        <option>Eliminasi dengan bantuan</option>
-                        <option>Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)</option>
-                        <option>Inkontinesia tetapi mampu untuk mobilisasi</option>
+                      <select class="form-control m-bot15" name="eliminasi">
+                        <option value="1">Mandiri dan mampi mengontrol BAB/BAK</option>
+                        <option value="2">Dower Catheter/Colostomy</option>
+                        <option value="3">Eliminasi dengan bantuan</option>
+                        <option value="4">Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)</option>
+                        <option value="5">Inkontinesia tetapi mampu untuk mobilisasi</option>
                       </select>
                     </div>
                   </div>
@@ -1113,11 +1114,11 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">PENGOBATAN</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Tanpa obat-obatan</option>
-                        <option>Obat-obatan jantung</option>
-                        <option>Obat-obat psikotropika (termasuk Benzodiazepine dan Antidepresan)</option>
-                        <option>Mendapat tambahan obat-obatan dan/atau obat-obat PRN (psikiatri, antinyeri) yang diberikan dalam 24 jam terakhir</option>
+                      <select class="form-control m-bot15" name="pengobatan">
+                        <option value="1">Tanpa obat-obatan</option>
+                        <option value="2">Obat-obatan jantung</option>
+                        <option value="3">Obat-obat psikotropika (termasuk Benzodiazepine dan Antidepresan)</option>
+                        <option value="4">Mendapat tambahan obat-obatan dan/atau obat-obat PRN (psikiatri, antinyeri) yang diberikan dalam 24 jam terakhir</option>
                       </select>
                     </div>
                   </div>
@@ -1125,11 +1126,11 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSA</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Bipolar/ Gangguan Schizoaffective</option>
-                        <option>Penggunaan Obat-obatan terlarang/ketergantungan alkohol</option>
-                        <option>Gangguan Depresi Mayor</option>
-                        <option>Dimensia/ Delirium</option>
+                      <select class="form-control m-bot15" name="diagnosa">
+                        <option value="1">Bipolar/ Gangguan Schizoaffective</option>
+                        <option value="2">Penggunaan Obat-obatan terlarang/ketergantungan alkohol</option>
+                        <option value="3">Gangguan Depresi Mayor</option>
+                        <option value="4">Dimensia/ Delirium</option>
                       </select>
                     </div>
                   </div>
@@ -1137,12 +1138,12 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">AMBULASI /KESEIMBANGAN </label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Mandiri/Keseimbangan Baik/Immobilisasi</option>
-                        <option>Dengan Alat Bantu (Kursi roda, walker,dll)</option>
-                        <option>Vertigo/kelemahan</option>
-                        <option>Goyah/membutuhkan mantuan dan menyadari kemampuan</option>
-                        <option>Goyah tapi lupa keterbatasan</option>
+                      <select class="form-control m-bot15" name="ambulasi">
+                        <option value="1">Mandiri/Keseimbangan Baik/Immobilisasi</option>
+                        <option value="2">Dengan Alat Bantu (Kursi roda, walker,dll)</option>
+                        <option value="3">Vertigo/kelemahan</option>
+                        <option value="4">Goyah/membutuhkan mantuan dan menyadari kemampuan</option>
+                        <option value="5">Goyah tapi lupa keterbatasan</option>
                       </select>
                     </div>
                   </div>
@@ -1150,10 +1151,10 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">NUTRISI</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Mengkonsumsi sedikit makanan atau minuman  dalam 24 jam terakhir</option>
-                        <option>Tidak ada kelainan dengan nafsu makan</option>
-                        <option>Gangguan pola tidur yang dilaporkan oleh pasien, keluarga atau petugas</option>
+                      <select class="form-control m-bot15" name="nutrisi">
+                        <option value="1">Mengkonsumsi sedikit makanan atau minuman  dalam 24 jam terakhir</option>
+                        <option value="2">Tidak ada kelainan dengan nafsu makan</option>
+                        <option value="3">Gangguan pola tidur yang dilaporkan oleh pasien, keluarga atau petugas</option>
                       </select>
                     </div>
                   </div>
@@ -1161,12 +1162,15 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">RIWAYAT JATUH</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Tidak ada riwayat jatuh</option>
-                        <option>Ada riwayat jatuh dalam 3 bulan terakhir</option>
+                      <select class="form-control m-bot15" name="riwayat_jatuh">
+                        <option value="1">Tidak ada riwayat jatuh</option>
+                        <option value="2">Ada riwayat jatuh dalam 3 bulan terakhir</option>
                       </select>
                     </div>
                   </div>
+
+                  <button type="submit">Simpan</button>
+
                 </div>
               </section>
             </form>

@@ -14,7 +14,7 @@ class CreateLayananKonsultasiTable extends Migration
     public function up()
     {
         Schema::create('layanan_konsultasi', function (Blueprint $table) {
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('id_asesmen_tk')->reference('id_asesmen_tk')->on('asesmen_tk_psikolog');
             $table->string('anamnesis', 30);
             $table->string('fisik', 30);

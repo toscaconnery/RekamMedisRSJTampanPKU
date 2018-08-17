@@ -15,7 +15,7 @@ class CreateDpjpCasemanagerTable extends Migration
     {
         Schema::create('dpjp_casemanager', function (Blueprint $table) {
             $table->increments('id_dpjp');
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('id_user')->reference('id_user')->on('users');
             $table->string('diagnosa', 30);
             $table->string('ruang', 10);

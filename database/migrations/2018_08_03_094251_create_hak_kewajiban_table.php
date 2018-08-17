@@ -15,7 +15,7 @@ class CreateHakKewajibanTable extends Migration
     {
         Schema::create('hak_kewajiban', function (Blueprint $table) {
             $table->increments('id_hak_kewajiban');
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('id_user')->reference('id_user')->on('users');
             $table->boolean('signature');
             $table->timestamps();

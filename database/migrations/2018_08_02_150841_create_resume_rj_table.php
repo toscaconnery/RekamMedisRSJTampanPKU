@@ -15,7 +15,7 @@ class CreateResumeRjTable extends Migration
     {
         Schema::create('resume_rj', function (Blueprint $table) {
             $table->increments('id_resume');
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('id_petugas')->reference('id_user')->on('users');
             $table->date('tanggal_kunjungan');
             $table->string('diagnosis_prosedur', 50);

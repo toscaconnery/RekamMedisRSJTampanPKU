@@ -14,7 +14,7 @@ class CreateFisioterapiTable extends Migration
     public function up()
     {
         Schema::create('fisioterapi', function (Blueprint $table) {
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('id_asesmen_tk')->reference('id_asesmen_tk')->on('asesmen_tk_psikolog');
             $table->string('diagnosis_medis', 30);
             $table->string('catatan_klinis', 30);

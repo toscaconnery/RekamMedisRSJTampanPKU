@@ -15,7 +15,7 @@ class CreateSpdTable extends Migration
     {
         Schema::create('spd', function (Blueprint $table) {
             $table->increments('id_spd');
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('id_user')->reference('id_user')->on('users');
             $table->string('ruang_kelas', 30);
             $table->string('sebab_rawat', 200);

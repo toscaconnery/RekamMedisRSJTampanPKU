@@ -15,7 +15,7 @@ class CreateResumeRiTable extends Migration
     {
         Schema::create('resume_ri', function (Blueprint $table) {
             $table->increments('id_resume');
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('id_dokter')->reference('id_user')->on('users');
             $table->date('tanggal_masuk');
             $table->date('tanggal_keluar');

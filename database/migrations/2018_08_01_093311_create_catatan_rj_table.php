@@ -15,7 +15,7 @@ class CreateCatatanRjTable extends Migration
     {
         Schema::create('catatan_rj', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('id_user')->reference('id_user')->on('users');
             $table->dateTime('waktu');
             $table->string('hasil', 100);

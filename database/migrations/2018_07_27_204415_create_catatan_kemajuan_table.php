@@ -15,7 +15,7 @@ class CreateCatatanKemajuanTable extends Migration
     {
         Schema::create('catatan_kemajuan', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->dateTime('waktu');
             $table->string('catatan_kemajuan', 50);
             $table->string('tindakan_terapi', 30);

@@ -15,7 +15,7 @@ class CreatePersetujuanUmumTable extends Migration
     {
         Schema::create('persetujuan_umum', function (Blueprint $table) {
             $table->increments('id_persetujuan_umum');
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('id_admission')->reference('id_user')->on('users');
             $table->string('keluarga', 30);
             $table->boolean('signature');

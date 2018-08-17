@@ -82,7 +82,7 @@ class PasienController extends Controller
         foreach($request->nama_pj as $nama) {
             if(!empty($request->nama_pj[$index]) and !empty($request->alamat_pj[$index]) and !empty($request->hubungan_pj[$index]) and !empty($request->no_telp_pj[$index])) {
                 $pj = new PenanggungJawab;
-                $pj->id_regis = $identifikasi->id_regis;
+                $pj->id_regis = $identifikasi->id;
                 $pj->nama = $request->nama_pj[$index];
                 $pj->alamat = $request->alamat_pj[$index];
                 $pj->hubungan = $request->hubungan_pj[$index];

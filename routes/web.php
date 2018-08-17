@@ -32,6 +32,7 @@ Route::post('/rj_asesmen_awal_fisik_gizi', 'RawatJalanController@store_rj_asesme
 Route::post('/penilaian_tingkat_nyeri', 'RawatJalanController@store_penilaian_tingkat_nyeri');
 Route::post('/humpty_dumpty', 'RawatJalanController@store_humpty_dumpty');
 Route::post('/morse', 'RawatJalanController@store_morse');
+Route::post('/edmunson', 'RawatJalanController@store_edmunson');
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');
 

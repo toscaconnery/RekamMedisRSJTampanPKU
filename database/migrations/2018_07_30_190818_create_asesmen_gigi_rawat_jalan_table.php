@@ -15,7 +15,7 @@ class CreateAsesmenGigiRawatJalanTable extends Migration
     {
         Schema::create('asesmen_gigi_rawat_jalan', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('id_user')->refernce('id_user')->on('users');
             $table->boolean('signature');
             $table->timestamps();

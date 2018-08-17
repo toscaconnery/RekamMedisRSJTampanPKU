@@ -15,7 +15,7 @@ class CreateAsesmenMasalahTable extends Migration
     {
         Schema::create('asesmen_masalah', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->date('tanggal');
             $table->string('target', 30);
             $table->string('perkembangan', 30);

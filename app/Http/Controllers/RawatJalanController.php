@@ -10,6 +10,7 @@ use App\RJAAAsesmenKeperawatan;
 use App\RJAAFisikGizi;
 use App\HumptyDumpty;
 use App\Morse;
+use App\Edmunson;
 class RawatJalanController extends Controller
 {
     public function asesmen_awal() 
@@ -420,6 +421,22 @@ class RawatJalanController extends Controller
         $morse->gaya_berjalan = $request->gaya_berjalan;
         $morse->status_mental = $request->status_mental;
         $morse->save();
+        return redirect('index');
+    }
+
+    public function store_edmunson(Request $request)
+    {
+        $edmunson = new Edmunson;
+        $edmunson->id_regis = 1;
+        $edmunson->status_mental = $request->status_mental;
+        $edmunson->diagnosis = $request->diagnosis;
+        $edmunson->eliminasi = $request->eliminasi;
+        $edmunson->pengobatan = $request->pengobatan;
+        $edmunson->diagnosa = $request->diagnosa;
+        $edmunson->ambulasi = $request->ambulasi;
+        $edmunson->nutrisi = $request->nutrisi;
+        $edmunson->riwayat_jatuh = $request->riwayat_jatuh;
+        $edmunson->save();
         return redirect('index');
     }
 }

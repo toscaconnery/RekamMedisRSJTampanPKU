@@ -15,7 +15,7 @@ class CreateEdukasiTable extends Migration
     {
         Schema::create('edukasi', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('id_user')->reference('id_user')->on('users');
             $table->boolean('penerjemah');
             $table->boolean('baca_tulis');

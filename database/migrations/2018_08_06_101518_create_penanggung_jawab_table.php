@@ -15,7 +15,7 @@ class CreatePenanggungJawabTable extends Migration
     {
         Schema::create('penanggung_jawab', function (Blueprint $table) {
             $table->increments('id_pj');
-            $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->string('nama', 30);
             $table->string('alamat', 30);
             $table->string('hubungan', 20);
