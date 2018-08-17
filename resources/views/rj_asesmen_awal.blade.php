@@ -468,7 +468,7 @@
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="must_2" value="1" checked>
+                          <input type="radio" name="must_2" value="1">
                           Ya 
                         </label>
                       </div>
@@ -478,14 +478,14 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="must_3" id="must_3_1" value="True" checked>
-                          Ya 
+                          <input type="radio" name="must_3" id="must_3_2" value="False" checked>
+                          Tidak 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="must_3" id="must_3_2" value="False" checked>
-                          Tidak 
+                          <input type="radio" name="must_3" id="must_3_1" value="True">
+                          Ya 
                         </label>
                       </div>
                     </div>
@@ -902,7 +902,8 @@
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="humpty_dumpty">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   HUMPTY DUMPTY (Anak-anak)
@@ -913,11 +914,11 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">USIA</label>
                     <div class="col-lg-2">
-                      <select class="form-control m-bot15">
-                        <option>Dibawah 3 tahun </option>
-                        <option>3 – 7 tahun </option>
-                        <option>7 – 13 tahun </option>
-                        <option>> 13 tahun </option>
+                      <select class="form-control m-bot15" name="usia">
+                        <option value="1">Dibawah 3 tahun </option>
+                        <option value="2">3 – 7 tahun </option>
+                        <option value="3">7 – 13 tahun </option>
+                        <option value="4">> 13 tahun </option>
                       </select>
                     </div>
                   </div>
@@ -925,11 +926,11 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Kelainan Neurologi </option>
-                        <option>Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
-                        <option>Kelainan psikis / prilaku</option>
-                        <option>Diagnosis lain</option>
+                      <select class="form-control m-bot15" name="diagnosis">
+                        <option value="1">Kelainan Neurologi </option>
+                        <option value="2">Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
+                        <option value="3">Kelainan psikis / prilaku</option>
+                        <option value="4">Diagnosis lain</option>
                       </select>
                     </div>
                   </div>
@@ -937,10 +938,10 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">GANGGUAN KOGNITIF</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Tidak sadar terhadap keterbatasan (gangguan kesadaran, retardasi mental</option>
-                        <option>Lupa keterbatasan (anak yang hiperaktif)</option>
-                        <option>Mengetahui kemampuan diri</option>
+                      <select class="form-control m-bot15" name="gangguan_kognitif">
+                        <option value="1">Tidak sadar terhadap keterbatasan (gangguan kesadaran, retardasi mental</option>
+                        <option value="2">Lupa keterbatasan (anak yang hiperaktif)</option>
+                        <option value="3">Mengetahui kemampuan diri</option>
                       </select>
                     </div>
                   </div>
@@ -948,11 +949,11 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">FAKTOR LINGKUNGAN</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Riwayat jatuh dari tempat tidur saat bayi</option>
-                        <option>Pasien menggunakan alat bantu atau box meubel</option>
-                        <option>Pasien berada di tempat tidur</option>
-                        <option>Di luar ruang rawat</option>
+                      <select class="form-control m-bot15" name="faktor_lingkungan">
+                        <option value="1">Riwayat jatuh dari tempat tidur saat bayi</option>
+                        <option value="2">Pasien menggunakan alat bantu atau box meubel</option>
+                        <option value="3">Pasien berada di tempat tidur</option>
+                        <option value="4">Di luar ruang rawat</option>
                       </select>
                     </div>
                   </div>
@@ -960,10 +961,10 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">RESPON TERHADAP OPERASI/OBAT PENENANG/EFEK ANASTESI</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Dalam 24 Jam</option>
-                        <option>Dalam 48 Jam</option>
-                        <option>> 48 Jam</option>
+                      <select class="form-control m-bot15" name="waktu_respon_obat">
+                        <option value="1">Dalam 24 Jam</option>
+                        <option value="2">Dalam 48 Jam</option>
+                        <option value="3">> 48 Jam</option>
                       </select>
                     </div>
                   </div>
@@ -971,13 +972,15 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">PENGGUNAAN OBAT</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Bermacam-macam obat yang digunakan : obat sedatif (kecuali pasien ICU yang menggunakan sedasi dan paralisis), Hiptonik Barbitural, Fonotiazin, Antidepresan, Laksansia / Diuretikan, Narkotik</option>
-                        <option>Salah satu Pengobatan di atas</option>
-                        <option>Pengobatan lain</option>
+                      <select class="form-control m-bot15" name="penggunaan_obat">
+                        <option value="1">Bermacam-macam obat yang digunakan : obat sedatif (kecuali pasien ICU yang menggunakan sedasi dan paralisis), Hiptonik Barbitural, Fonotiazin, Antidepresan, Laksansia / Diuretikan, Narkotik</option>
+                        <option value="2">Salah satu Pengobatan di atas</option>
+                        <option value="3">Pengobatan lain</option>
                       </select>
                     </div>
                   </div>
+
+                  <button type="submit">Simpan</button>
 
                 </div>
               </section>
