@@ -8,8 +8,6 @@ class CatatanKemajuan extends Model
 {
     protected $table = 'catatan_kemajuan';
 
-    protected $primaryKey = 'id_catatan';
-
     public $incrementing = true;
 
     public $timestamps = true;

@@ -8,8 +8,6 @@ class Igd extends Model
 {
     protected $table = 'igd';
 
-    protected $primaryKey = 'id_igd';
-
     public $incrementing = true;
 
     public $timestamps = true;

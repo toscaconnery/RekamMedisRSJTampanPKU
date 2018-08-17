@@ -8,8 +8,6 @@ class Triase extends Model
 {
     protected $table = 'triase';
 
-    protected $primaryKey = 'id_triase'
-
     public $incrementing = true;
 
     public $timestamps = true;

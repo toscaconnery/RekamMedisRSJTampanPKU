@@ -14,7 +14,7 @@ class CreateTriaseTable extends Migration
     public function up()
     {
         Schema::create('triase', function (Blueprint $table) {
-            $table->increments('id_triase');
+            $table->increments('id');
             $table->integer('id_regis')->references('id_regis')->on('identifikasi');
             $table->dateTime('waktu_masuk');
             $table->string('keluhan_utama', 100);

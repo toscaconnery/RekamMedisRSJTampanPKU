@@ -14,7 +14,7 @@ class CreateIgdTable extends Migration
     public function up()
     {
         Schema::create('igd', function (Blueprint $table) {
-            $table->increments('id_igd');
+            $table->increments('id');
             $table->integer('id_regis')->reference('id_regis')->on('identifikasi');
             $table->dateTime('waktu_masuk');
             $table->boolean('cara_datang');

@@ -8,6 +8,7 @@ use Auth;
 use App\Nyeri;
 use App\RJAAAsesmenKeperawatan;
 use App\RJAAFisikGizi;
+use App\HumptyDumpty;
 class RawatJalanController extends Controller
 {
     public function asesmen_awal() 
@@ -19,7 +20,7 @@ class RawatJalanController extends Controller
     {
     	$asesmen_keperawatan = new RJAAAsesmenKeperawatan;
     	$asesmen_keperawatan->id_regis = 1;
-    	$asesmen_keperawatan->id_user = Auth::user()->id_user;
+    	$asesmen_keperawatan->id_user = Auth::user()->id;
     	$asesmen_keperawatan->alasan_kunjungan = $request->alasan_kunjungan;
     	$asesmen_keperawatan->hubungan_keluarga = $request->hubungan_keluarga;
     	
@@ -341,7 +342,7 @@ class RawatJalanController extends Controller
         return redirect('index');
     }
 
-    public function penilaian_tingkat_nyeri(Request $request)
+    public function store_penilaian_tingkat_nyeri(Request $request)
     {
         $nyeri = new Nyeri;
         $nyeri->id_regis = 1;
@@ -377,4 +378,29 @@ class RawatJalanController extends Controller
         $nyeri->save();
         return redirect('index');
     }
+
+    public function store_humpty_dumpty(Request $request)
+    {
+        $humpty = new HumptyDumpty;
+        $humpty->id_regis = 1;
+        $humpty->usia = $request->usia;
+        $humpty->diagnosis = $request->diagnosis;
+        $humpty->gangguan_kognitif = $request->gangguan_kognitif;
+        $humpty->faktor_lingkungan = $request->faktor_lingkungan;
+        $humpty->waktu_respon_obat = $request->waktu_respon_obat;
+        $humpty->penggunaan_obat = $request->penggunaan_obat;
+        $humpty->save();
+        return redirect('index');
+    }
 }
+
+
+
+// $table->increments('id');
+//             $table->integer('id_regis')->reference('id')->on('identifikasi');
+//             $table->string('usia');
+//             $table->string('diagnosis');
+//             $table->string('gangguan_kognitif');
+//             $table->string('faktor_lingkungan');
+//             $table->string('waktu_respon_obat');
+//             $table->string('penggunaan_obat');
