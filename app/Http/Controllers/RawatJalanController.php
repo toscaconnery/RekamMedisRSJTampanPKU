@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
-use App\Nyeri;
 use App\RJAAAsesmenKeperawatan;
-use App\RJAAFisikGizi;
-use App\HumptyDumpty;
-use App\Morse;
-use App\Edmunson;
+use App\Models\Nyeri;
+use App\Models\FisikGizi;
+use App\Models\HumptyDumpty;
+use App\Models\Morse;
+use App\Models\Edmunson;
+use App\Models\DiagnosaKeperawatan;
 class RawatJalanController extends Controller
 {
     public function asesmen_awal() 
@@ -229,9 +230,9 @@ class RawatJalanController extends Controller
     	return redirect('index');
     }
 
-    public function store_rj_asesmen_awal_fisik_gizi(Request $request)
+    public function store_fisik_gizi(Request $request)
     {
-        $fisik_gizi = new RJAAFisikGizi;
+        $fisik_gizi = new FisikGizi;
         $fisik_gizi->id_regis = 1;
         $fisik_gizi->td = $request->td;
         $fisik_gizi->tb = $request->tb;
@@ -437,6 +438,13 @@ class RawatJalanController extends Controller
         $edmunson->nutrisi = $request->nutrisi;
         $edmunson->riwayat_jatuh = $request->riwayat_jatuh;
         $edmunson->save();
+        return redirect('index');
+    }
+
+    public function store_diagnosa_keperawatan_umum(Request $request)
+    {
+        $diagnosa = new DiagnosaKeperawatan;
+
         return redirect('index');
     }
 }

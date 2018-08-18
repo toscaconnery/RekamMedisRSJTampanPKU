@@ -381,7 +381,7 @@
             </form>
 
 
-            <form class="form-horizontal " method="post" action="rj_asesmen_awal_fisik_gizi">
+            <form class="form-horizontal " method="post" action="fisik_gizi">
               {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
@@ -1176,7 +1176,7 @@
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="diagnosa_keperawatan_umum">
               <section class="panel">
                 <header class="panel-heading">
                   Diagnosa Keperawatan
@@ -1185,88 +1185,88 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Diagnosa Keperawatan Umum</label>
                     <div class="col-lg-4">
-                      <div class="checkbox">
+                      <div>
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="1" name="umum">
                           Aktual/ Resiko bersihan jalan nafas tidak efektif
                         </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="2" name="umum">
                           Aktual/ Resiko aspirasi
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="3" name="umum">
                           Aktual/ Resiko pola nafas tidak efektif
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="4" name="umum">
                           Aktual/ Resiko gangguan pertukaran gas
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="5" name="umum">
                           Aktual/ penurunan curah jantung
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="6" name="umum">
                           Aktual/ Resiko gangguan perfusi jaringan celebral/perifer
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="7" name="umum">
                           Aktual/ Resiko gangguan keseimbangan cairan
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="8" name="umum">
                           Aktual/ Resiko gangguan keseimbangan kontinuitas jaringan
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="9" name="umum">
                           Aktual/ Resiko infeksi
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="10" name="umum">
                           Resiko cedera / jatuh
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="11" name="umum">
                           Hypertermi
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="12" name="umum">
                           Nyeri
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="13" name="umum">
                           Gangguan kebutuhan nutrisi
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" value="14" name="umum">
                           Lainnya
                         </label>
                       </div>
@@ -1275,7 +1275,7 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Sebutkan </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="umum_lainnya">
                     </div>
                   </div>
 
@@ -1382,6 +1382,8 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
+
+                  <button type="submit">Simpan</button>
 
                 </div>
               </section>

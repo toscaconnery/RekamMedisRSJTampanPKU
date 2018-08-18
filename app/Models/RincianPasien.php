@@ -1,14 +1,12 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class RincianPasien extends Model
 {
     protected $table = 'rincian_pasien';
-
-    protected $primaryKey = 'id_rincian';
 
     public $incrementing = true;
 
