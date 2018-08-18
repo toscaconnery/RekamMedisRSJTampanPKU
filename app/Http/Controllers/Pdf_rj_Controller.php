@@ -9,7 +9,7 @@ use View;
 class Pdf_rj_Controller extends Controller
 {
 
-    public function pdf_igd_triase()
+    public function pdf_rj_asesmen()
     {
         ob_clean();
 
@@ -21,11 +21,12 @@ class Pdf_rj_Controller extends Controller
         'orientation' => 'P'
         ]);
 
-        $view = View::make('doc_igd_triase');
+        $view = View::make('doc_rj_asesmen');
         $contents = $view->render();
 
 
         $mpdf->SetHTMLHeader('
+
             <table width="100%" >
                 <tbody>
                         <tr>
@@ -65,18 +66,18 @@ class Pdf_rj_Controller extends Controller
                 <tr>
                     <td width="33%">{DATE j-m-Y}</td>
                     <td width="33%" align="center">{PAGENO}/{nbpg}</td>
-                    <td width="33%" style="text-align: right;">RM. 01.00.IGD JULI 2015</td>
+                    <td width="33%" style="text-align: right;">RM. 01.00.RJ JULI 2015</td>
                 </tr>
             </table>'); 
 
         $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
 
-        $mpdf->AddPage('P','','','','',10,10,30,10,10,10);
+        $mpdf->AddPage('P','','','','',10,10,35,20,10,10);
         //right,left
         $mpdf->WriteHTML($stylesheet, 1);
         $mpdf->WriteHTML($contents,2,true,false);
 
-        $mpdf->Output('igd_triase.pdf',\Mpdf\Output\Destination::INLINE);
+        $mpdf->Output('rj_asesmen.pdf',\Mpdf\Output\Destination::INLINE);
     }
 
     

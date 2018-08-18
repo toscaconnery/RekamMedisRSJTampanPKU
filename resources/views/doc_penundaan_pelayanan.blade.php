@@ -61,63 +61,26 @@ header('Content-Type: application/pdf');
           Pelayanan yang akan dilakukan
         </td>    
         <td class="konten_s_answer">  
-          : Tindakan keperawatan
+          : Tindak keperawatan
         </td>                
       </tr>
     </tbody>
   </table>
   <br>
 
-  <hr>
-  <h4><b>Data Orang Tua</b></h4>
-  <br>
-  <table>
-    <tbody>
-      <tr>
-        <td class="konten_s_question">
-          <p>Nama Ayah  </p><br>
-          <p>Nama Ibu       </p><br>
-          <p>Budaya/Suku  </p><br>
-          <p>Alamat   </p><br>  
-          <p>No.Telp</p><br>
-        </td>    
+  <p style="font-size:85%;">Dengan ini menyatakan bahwa saya telah menerima informasi terhadap penundaan pelayanan dan pengobatan dikarenakan:</p>
+  <ul>
+    <li>Dokter berhalangan datang</li>
+    <li>Kerusakan Alat</li>
+  </ul> 
 
-        <td class="konten_s_answer">
-          <p>:  Budi Arya</p><br>
-          <p>:  Lia Ananta</p><br>
-          <p>:  Melayu</p><br>
-          <p>:  Jl.Mawar 21</p><br>  
-          <p>:  081375993758</p><br>  
-        </td>                
-      </tr>
-    </tbody>
-  </table>
   <br>
-
-  <h4><b>Penanggung Jawab</b></h4>
-  <br>
-  <table>
-    <tbody>
-      <tr>
-        <td class="konten_s_question">
-          <p>Nama</p><br>
-          <p>Alamat</p><br>
-          <p>Hubungan</p><br>
-          <p>Telp</p><br>  
-        </td>    
-
-        <td class="konten_s_answer">
-          <p>:  Ani Ananta</p><br>
-          <p>:  Jl.Dahlia 6</p><br>
-          <p>:  Bibi</p><br>
-          <p>:  08217590036</p><br>    
-        </td>                
-      </tr>
-    </tbody>
-  </table>
+  <p style="font-size:85%;">Maka dengan ini saya <b>setuju</b> untuk dilakukan Penundaan Pelayanan dengan alternatif yang diberikan:</p>
+  <ul>
+    <li>Dijadwalkan ulang</li>
+  </ul> 
 
 
 </body>
-
 
 <html>
