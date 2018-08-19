@@ -412,8 +412,85 @@ header('Content-Type: application/pdf');
   </div>
 
   <h4>OBAT YANG DIMINUM SAAT INI</h4>
+  <br>
   <div style="font-size: 85%;">  
-    <p>kosong</p>
+            <div class="panel-body">
+            <table class="tabel">
+                <thead>
+                    <tr>   
+                        <th class="col1" data-field="name">No</th>
+                        <th class="col2" data-field="name">NAMA OBAT</th>
+                        <th class="col3" data-field="name">DIBAWA</th>
+                        <th class="col4" data-field="name">JUMLAH</th>
+                        <th class="col5" data-field="name">TIDAK DIBAWA</th>
+                        <th class="col6" data-field="name">KETERANGAN</th>
+                    </tr>    
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td style="text-align: center;padding-left:0px;" class="kolom">
+                      1
+                    </td>
+                    <td class="kolom">
+                      Obat
+                    </td>
+                    <td class="kolom">
+                      10
+                    </td> 
+                    <td class="kolom">
+                      Obat
+                    </td> 
+                    <td class="kolom">
+                      Obat
+                    </td> 
+                    <td class="kolom">
+                      Obat
+                    </td>     
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;padding-left:0px;" class="kolom">
+                      2
+                    </td>
+                    <td class="kolom">
+                      Obat
+                    </td>
+                    <td class="kolom">
+                      10
+                    </td> 
+                    <td class="kolom">
+                      Obat
+                    </td> 
+                    <td class="kolom">
+                      Obat
+                    </td> 
+                    <td class="kolom">
+                      Obat
+                    </td>     
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;padding-left:0px;" class="kolom">
+                      3
+                    </td>
+                    <td class="kolom">
+                      Obat
+                    </td>
+                    <td class="kolom">
+                      10
+                    </td> 
+                    <td class="kolom">
+                      Obat
+                    </td> 
+                    <td class="kolom">
+                      Obat
+                    </td> 
+                    <td class="kolom">
+                      Obat
+                    </td>     
+                  </tr>
+                </tbody>
+            </table>
+        </div>
   </div>
 
   <h4>PEMERIKSAAN FISIK</h4>
@@ -709,8 +786,83 @@ header('Content-Type: application/pdf');
   </div>
 
   <h4>PEMERIKSAAN PENUNJANG</h4>
+  <br>
   <div style="font-size: 85%;">  
-    <p>Nyeri Kronis</p>
+    <div class="panel-body">
+      <table class="tabel">
+          <thead>
+              <tr>   
+                  <th style="vertical-align: middle;" rowspan="2" class="col7" data-field="name">JENIS PEMERIKSAAN</th>
+                  <th style="text-align: center" class="col8" data-field="name">PEMERIKSAAN/PERMINTAAN</th>
+                  <th style="text-align: center" class="col8" data-field="name">HASIL</th>
+                  <th style="vertical-align: middle;" rowspan="2" class="col7" data-field="name">KETERANGAN</th>
+              </tr>    
+              <tr>   
+                  <th class="col8" data-field="name">JAM:</th>
+                  <th class="col8" data-field="name">JAM:</th>
+              </tr>    
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="kolom">
+                Laboratorium
+              </td>
+              <td class="kolom">
+                10
+              </td> 
+              <td class="kolom">
+                Obat
+              </td> 
+              <td class="kolom">
+                Obat
+              </td>     
+            </tr>
+            <tr>
+              <td class="kolom">
+                Radiologi
+              </td>
+              <td class="kolom">
+                10
+              </td> 
+              <td class="kolom">
+                Obat
+              </td> 
+              <td class="kolom">
+                Obat
+              </td>     
+            </tr>
+            <tr>
+              <td class="kolom">
+                EKG
+              </td>
+              <td class="kolom">
+                10
+              </td> 
+              <td class="kolom">
+                Obat
+              </td> 
+              <td class="kolom">
+                Obat
+              </td>     
+            </tr>
+            <tr>
+              <td class="kolom">
+                Lain-lain
+              </td>
+              <td class="kolom">
+                10
+              </td> 
+              <td class="kolom">
+                Obat
+              </td> 
+              <td class="kolom">
+                Obat
+              </td>     
+            </tr>
+          </tbody>
+      </table>
+    </div>
   </div>
 
   <h4>INSTRUMEN PENILAIAN</h4>
@@ -867,6 +1019,51 @@ header('Content-Type: application/pdf');
         <p>Diagnosis Sekunder :</p>
         <p>.....................</p>
       </div>
+    </div>
+    <div class="panel-body">
+      <table class="tabel">
+          <thead>
+              <tr>   
+                  <th class="col9" data-field="name">JAM</th>
+                  <th class="col10" data-field="name">TINDAKAN/TERAPI</th>
+              </tr>    
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="kolom">
+                14:00
+              </td>
+              <td class="kolom">
+                Tindakan ....
+              </td>     
+            </tr>
+            <tr>
+              <td class="kolom">
+                14:30
+              </td>
+              <td class="kolom">
+                Tindakan ....
+              </td>    
+            </tr>
+            <tr>
+              <td class="kolom">
+                15:00
+              </td>
+              <td class="kolom">
+                Tindakan ....
+              </td>     
+            </tr>
+            <tr>
+              <td class="kolom">
+                16:00
+              </td>
+              <td class="kolom">
+                Tindakan ....
+              </td>   
+            </tr>
+          </tbody>
+      </table>
     </div>
   </div>
 
