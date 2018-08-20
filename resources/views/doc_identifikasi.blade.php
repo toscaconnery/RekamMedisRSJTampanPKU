@@ -14,6 +14,7 @@ header('Content-Type: application/pdf');
 
   <br>
   <h4><b>Status Pasien</b></h4>
+  <br>
   <table>
     <tbody>
       <tr>

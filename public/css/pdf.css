@@ -965,5 +965,21 @@ td.kolom_big {
     height: 200%; 
 }
 
+th.default3{
+    width: 33,3%;
+    vertical-align: middle; 
+    border: 1px solid black;
+    text-align: center;
+}
+
+td.default3{
+    vertical-align: middle; 
+    width: 33,3%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+
 
 
