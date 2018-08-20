@@ -13,6 +13,7 @@ use App\Models\Morse;
 use App\Models\Edmunson;
 use App\Models\DiagnosaKeperawatan;
 use App\Models\EvaluasiTindakanKeperawatan;
+use App\Models\DataMedis;
 class RawatJalanController extends Controller
 {
     public function asesmen_awal() 
@@ -560,6 +561,138 @@ class RawatJalanController extends Controller
         $data->implementasi = $request->implementasi;
         $data->evaluasi = $request->evaluasi;
         $data->save();
+        return redirect('index');
+    }
+
+    public function store_data_medis(Request $request)
+    {
+        $data = new DataMedis;
+        $data->id_regis = 1;
+        $data->pewawancara = $request->pewawancara;
+        $data->keluhan_utama = $request->keluhan_utama;
+        
+        if(!empty($request->riwayat_penyakit_sekarang)) {
+            $data->riwayat_penyakit_sekarang = $request->riwayat_penyakit_sekarang;
+        }
+        
+        if(!empty($request->riwayat_penyakit_dahulu)) {
+            $data->riwayat_penyakit_dahulu = $request->riwayat_penyakit_dahulu;
+        }
+        
+        if($request->riwayat_napza == 'true') {
+            $data->riwayat_napza = True;
+        }
+        else {
+            $data->riwayat_napza = False;
+        }
+
+        if(!empty($request->lama_pemakaian)) {
+            $data->lama_pemakaian = $request->lama_pemakaian;
+        }
+
+        if(!empty($request->cara_pemakaian)) {
+            $data->cara_pemakaian = $request->cara_pemakaian;
+        }
+        if(!empty($request->latar_belakang_pemakaian)) {
+            $data->latar_belakang_pemakaian = $request->latar_belakang_pemakaian;
+        }
+        $data->riwayat_pendidikan = $request->riwayat_pendidikan;
+        $data->riwayat_pekerjaan = $request->riwayat_pekerjaan;
+        $data->riwayat_perkawinan = $request->riwayat_perkawinan;
+        
+        $riwayat = "";
+        if(isset($request->penyakit_1)) {
+            $riwayat .= "1-";
+        }
+        if(isset($request->penyakit_2)) {
+            $riwayat .= "2-";
+        }
+        if(isset($request->penyakit_3)) {
+            $riwayat .= "3-";
+        }
+        if(isset($request->penyakit_4)) {
+            $riwayat .= "4-";
+        }
+        if(isset($request->penyakit_5)) {
+            $riwayat .= "5-";
+        }
+        if(isset($request->penyakit_6)) {
+            $riwayat .= "6-";
+        }
+        if(isset($request->penyakit_7)) {
+            $riwayat .= "7-";
+        }
+        if(isset($request->penyakit_8)) {
+            $riwayat .= "8-";
+        }
+        if(isset($request->penyakit_9)) {
+            $riwayat .= "9-";
+        }
+        if(isset($request->penyakit_10)) {
+            $riwayat .= "10-";
+        }
+        if(isset($request->penyakit_11)) {
+            $riwayat .= "11-";
+        }
+        if(isset($request->penyakit_12)) {
+            $riwayat .= "12-";
+        }
+        if(isset($request->penyakit_13)) {
+            $riwayat .= "13-";
+        }
+        if(isset($request->penyakit_14)) {
+            $riwayat .= "14-";
+        }
+        if(!empty($riwayat)) {
+            $riwayat = substr($riwayat, 0, -1);
+            $data->riwayat_penyakit_lainnya = $riwayat;
+        }
+
+        if($request->riwayat_operasi == 'true') {
+            $data->riwayat_operasi = True;
+        }
+        else {
+            $data->riwayat_operasi = False;
+        }
+        if(!empty($request->jenis_operasi)) {
+            $data->jenis_operasi = $request->jenis_operasi;
+        }
+        if(!empty($request->waktu_operasi)) {
+            $data->waktu_operasi = $request->waktu_operasi;
+        }
+
+        if($request->riwayat_tranfusi == 'true') {
+            $data->riwayat_tranfusi = True;
+        }
+        else {
+            $data->riwayat_tranfusi = False;
+        }
+
+        if($request->reaksi_tranfusi == 'true') {
+            $data->reaksi_tranfusi = True;
+        }
+        else {
+            $data->reaksi_tranfusi = False;
+        }
+
+        if(!empty($request->reaksi_timbul)) {
+            $data->reaksi_timbul = $request->reaksi_timbul;
+        }
+
+        if(!empty($request->riwayat_penyakit_dalam_keluarga)) {
+            $data->riwayat_penyakit_dalam_keluarga = $request->riwayat_penyakit_dalam_keluarga;
+        }
+        
+        if(!empty($request->riwayat_pengobatan)) {
+            $data->riwayat_pengobatan = $request->riwayat_pengobatan;
+        }
+
+        if(!empty($request->riwayat_alergi)) {
+            $data->riwayat_alergi = $request->riwayat_alergi;
+        }
+
+        $data->save();
+
         return redirect('index');
     }
 }

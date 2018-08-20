@@ -35,6 +35,7 @@ Route::post('/morse', 'RawatJalanController@store_morse');
 Route::post('/edmunson', 'RawatJalanController@store_edmunson');
 Route::post('/diagnosa_keperawatan', 'RawatJalanController@store_diagnosa_keperawatan');
 Route::post('/evaluasi_tindakan_keperawatan', 'RawatJalanController@store_evaluasi_tindakan_keperawatan');
+Route::post('/data_medis', 'RawatJalanController@store_data_medis');
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');
 

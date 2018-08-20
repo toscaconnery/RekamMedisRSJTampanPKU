@@ -1418,7 +1418,8 @@
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="data_medis">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Data Medis
@@ -1427,25 +1428,25 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Wawancara dengan </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="pewawancara">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Keluhan Utama </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="keluhan_utama">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Riwayat Penyakit Sekarang </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="riwayat_penyakit_sekarang">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Riwayat Penyakit Dahulu (gangguan kejiwaan) </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="riwayat_penyakit_dahulu">
                     </div>
                   </div>
                   <div class="form-group">
@@ -1453,52 +1454,52 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="riwayat_napza" value="false" checked>
                           Tidak ada
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="riwayat_napza" value="true">
                           Ada
                         </label>
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Lama Pemakaian </label>
+                    <label class="col-sm-2 control-label">Lama Pemakaian</label>
                     <div class="col-sm-3">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="lama_pemakaian">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Cara Pemakaian</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="cara_pemakaian">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Latar Belakang Pemakaian</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="latar_belakang_pemakaian">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Riwayat Pendidikan </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="riwayat_pendidikan">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Riwayat Pekerjaan </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="riwayat_pekerjaan">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Riwayat Perkawinan </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="riwayat_perkawinan">
                     </div>
                   </div>
                   <div class="form-group">
@@ -1506,89 +1507,89 @@
                     <div class="col-lg-6">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_1">
                           Hipertensi
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_2">
                           Liver
                         </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_3">
                           Diabetes
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_4">
                           Cancer
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_5">
                           Jantung
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_6">
                           TBC
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_7">
                           Stroke
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_8">
                           Glaukoma
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_9">
                           Dialysis
                         </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_10">
                           STD
                         </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_11">
                           Asthma
                         </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_12">
                           Perdarahan
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_13">
                           Kejang
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="penyakit_14">
                           Lainnya 
                         </label>
                       </div>
@@ -1600,13 +1601,13 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="riwayat_operasi" value="false" checked>
                           Tidak
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="riwayat_operasi" value="true">
                           Ya
                         </label>
                       </div>
@@ -1615,13 +1616,13 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Jenis </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="jenis_operasi">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Kapan </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="waktu_operasi">
                     </div>
                   </div>
                   <div class="form-group">
@@ -1629,13 +1630,13 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="riwayat_tranfusi" value="false" checked>
                           Tidak
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="riwayat_tranfusi" value="true" checked>
                           Ya
                         </label>
                       </div>
@@ -1646,13 +1647,13 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="asupan" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="reaksi_tranfusi" value="false" checked>
                           Tidak
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="asupan" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="reaksi_tranfusi" value="true">
                           Ya
                         </label>
                       </div>
@@ -1661,27 +1662,30 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Reaksi yang timbul </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="reaksi_timbul">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Riwayat Penyakit dalam keluarga  </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="riwayat_penyakit_dalam_keluarga">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Riwayat Pengobatan </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="riwayat_pengobatan">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Riwayat Alergi </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="riwayat_alergi">
                     </div>
                   </div>
+
+                  <button type="submit">Simpan</button>
+
                 </div>
               </section>
             </form>
