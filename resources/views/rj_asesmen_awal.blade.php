@@ -1176,7 +1176,8 @@
             </form>
 
 
-            <form class="form-horizontal " method="post" action="diagnosa_keperawatan_umum">
+            <form class="form-horizontal " method="post" action="diagnosa_keperawatan">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Diagnosa Keperawatan
@@ -1187,86 +1188,86 @@
                     <div class="col-lg-4">
                       <div>
                         <label>
-                          <input type="checkbox" value="1" name="umum">
+                          <input type="checkbox" name="umum_1">
                           Aktual/ Resiko bersihan jalan nafas tidak efektif
                         </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="2" name="umum">
+                          <input type="checkbox" name="umum_2">
                           Aktual/ Resiko aspirasi
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="3" name="umum">
+                          <input type="checkbox" name="umum_3">
                           Aktual/ Resiko pola nafas tidak efektif
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="4" name="umum">
+                          <input type="checkbox" name="umum_4">
                           Aktual/ Resiko gangguan pertukaran gas
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="5" name="umum">
+                          <input type="checkbox" name="umum_5">
                           Aktual/ penurunan curah jantung
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="6" name="umum">
+                          <input type="checkbox" name="umum_6">
                           Aktual/ Resiko gangguan perfusi jaringan celebral/perifer
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="7" name="umum">
+                          <input type="checkbox" name="umum_7">
                           Aktual/ Resiko gangguan keseimbangan cairan
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="8" name="umum">
+                          <input type="checkbox" name="umum_8">
                           Aktual/ Resiko gangguan keseimbangan kontinuitas jaringan
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="9" name="umum">
+                          <input type="checkbox" name="umum_9">
                           Aktual/ Resiko infeksi
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="10" name="umum">
+                          <input type="checkbox" name="umum_10">
                           Resiko cedera / jatuh
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="11" name="umum">
+                          <input type="checkbox" name="umum_11">
                           Hypertermi
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="12" name="umum">
+                          <input type="checkbox" name="umum_12">
                           Nyeri
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="13" name="umum">
+                          <input type="checkbox" name="umum_13">
                           Gangguan kebutuhan nutrisi
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="14" name="umum">
+                          <input type="checkbox" name="umum_14">
                           Lainnya
                         </label>
                       </div>
@@ -1284,77 +1285,77 @@
                     <div class="col-lg-6">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="jiwa_1">
                           Gangguan persepsi sensori : halusinasi
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="jiwa_2">
                           Perilaku kekerasan
                         </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="jiwa_3">
                           Isolasi sosial
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="jiwa_4">
                           Gangguan konsep diri
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="jiwa_5">
                           Resiko bunuh diri
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="jiwa_6">
                           Intoleransi aktifitas
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="jiwa_7">
                           Waham
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="jiwa_8">
                           Defisit perawatan diri
                         </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="jiwa_9">
                           Kerusakan komunitas verbal
                         </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="jiwa_10">
                           Koping individu tidak efektif
                         </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="jiwa_11">
                           Aktual/Resiko Cemas/Takut
                         </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" value="">
+                          <input type="checkbox" name="jiwa_12">
                           Lainnya
                         </label>
                       </div>
@@ -1365,21 +1366,21 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Sebutkan </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="jiwa_lainnya">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Obat Parental </label>
                     <div class="col-sm-5">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="obat_parental">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-2 control-label">EKG </label>
                     <div class="col-sm-5">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="ekg">
                     </div>
                   </div>
 
@@ -1390,7 +1391,8 @@
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal" method="post" action="evaluasi_tindakan_keperawatan">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Evaluasi Tindakan Keperawatan
@@ -1399,15 +1401,18 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Implementasi </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <textarea name="implementasi" rows="8" cols="114" style="resize: none;"></textarea>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Evaluasi </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <textarea name="evaluasi" rows="8" cols="114" style="resize: none;"></textarea>
                     </div>
                   </div>
+                  
+                  <button type="submit">Simpan</button>
+
                 </div>
               </section>
             </form>

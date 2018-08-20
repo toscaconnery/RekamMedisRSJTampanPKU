@@ -12,6 +12,7 @@ use App\Models\HumptyDumpty;
 use App\Models\Morse;
 use App\Models\Edmunson;
 use App\Models\DiagnosaKeperawatan;
+use App\Models\EvaluasiTindakanKeperawatan;
 class RawatJalanController extends Controller
 {
     public function asesmen_awal() 
@@ -330,7 +331,9 @@ class RawatJalanController extends Controller
         if(isset($request->penyakit_malnutrisi_16)) {
             $fisik_gizi->penyakit_malnutrisi .= "16-";
         }
-        $fisik_gizi->penyakit_malnutrisi = substr($fisik_gizi->penyakit_malnutrisi, 0, -1);
+        if(!empty($fisik_gizi->penyakit_malnutrisi)) {
+            $fisik_gizi->penyakit_malnutrisi = substr($fisik_gizi->penyakit_malnutrisi, 0, -1);
+        }
 
         if($request->pemberitahuan == "1") {
             $fisik_gizi->pemberitahuan = True;
@@ -441,10 +444,122 @@ class RawatJalanController extends Controller
         return redirect('index');
     }
 
-    public function store_diagnosa_keperawatan_umum(Request $request)
+    public function store_diagnosa_keperawatan(Request $request)
     {
         $diagnosa = new DiagnosaKeperawatan;
+        $diagnosa->id_regis = 1;
+        $umum = "";
+        if(isset($request->umum_1)) {
+            $umum .= "1-";
+        }
+        if(isset($request->umum_2)) {
+            $umum .= "2-";
+        }
+        if(isset($request->umum_3)) {
+            $umum .= "3-";
+        }
+        if(isset($request->umum_4)) {
+            $umum .= "4-";
+        }
+        if(isset($request->umum_5)) {
+            $umum .= "5-";
+        }
+        if(isset($request->umum_6)) {
+            $umum .= "6-";
+        }
+        if(isset($request->umum_7)) {
+            $umum .= "7-";
+        }
+        if(isset($request->umum_8)) {
+            $umum .= "8-";
+        }
+        if(isset($request->umum_9)) {
+            $umum .= "9-";
+        }
+        if(isset($request->umum_10)) {
+            $umum .= "10-";
+        }
+        if(isset($request->umum_11)) {
+            $umum .= "11-";
+        }
+        if(isset($request->umum_12)) {
+            $umum .= "12-";
+        }
+        if(isset($request->umum_13)) {
+            $umum .= "13-";
+        }
+        if(isset($request->umum_14)) {
+            $umum .= "14-";
+        }
+        if(!empty($umum) >= 0) {
+            $umum = substr($umum, 0, -1);
+        }
+        $diagnosa->umum = $umum;
 
+        if(!empty($request->umum_lainnya)) {
+            $diagnosa->umum_lainnya = $request->umum_lainnya;
+        }
+
+        $jiwa = "";
+        if(isset($request->jiwa_1)) {
+            $jiwa .= "1-";
+        }
+        if(isset($request->jiwa_2)) {
+            $jiwa .= "2-";
+        }
+        if(isset($request->jiwa_3)) {
+            $jiwa .= "3-";
+        }
+        if(isset($request->jiwa_4)) {
+            $jiwa .= "4-";
+        }
+        if(isset($request->jiwa_5)) {
+            $jiwa .= "5-";
+        }
+        if(isset($request->jiwa_6)) {
+            $jiwa .= "6-";
+        }
+        if(isset($request->jiwa_7)) {
+            $jiwa .= "7-";
+        }
+        if(isset($request->jiwa_8)) {
+            $jiwa .= "8-";
+        }
+        if(isset($request->jiwa_9)) {
+            $jiwa .= "9-";
+        }
+        if(isset($request->jiwa_10)) {
+            $jiwa .= "10-";
+        }
+        if(isset($request->jiwa_11)) {
+            $jiwa .= "11-";
+        }
+        if(isset($request->jiwa_12)) {
+            $jiwa .= "12-";
+        }
+        if(!empty($jiwa)) {
+            $jiwa = substr($jiwa, 0, -1);
+        }
+        $diagnosa->jiwa = $jiwa;
+
+        if(!empty($request->jiwa_lainnya)) {
+            $diagnosa->jiwa_lainnya = $request->jiwa_lainnya;
+        }
+
+        $diagnosa->obat_parental = $request->obat_parental;
+        $diagnosa->ekg = $request->ekg;
+        $diagnosa->save();
+
+        return redirect('index');
+    }
+
+    public function store_evaluasi_tindakan_keperawatan(Request $request)
+    {
+        $data = new EvaluasiTindakanKeperawatan;
+        $data->id_regis = 1;
+        $data->implementasi = $request->implementasi;
+        $data->evaluasi = $request->evaluasi;
+        $data->save();
         return redirect('index');
     }
 }
