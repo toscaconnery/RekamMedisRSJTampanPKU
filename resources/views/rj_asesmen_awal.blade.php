@@ -1691,49 +1691,56 @@
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="obat_saat_ini">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Obat yang Diminum Saat Ini
                 </header>
-                <div class="panel-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width: 3%">No.</th>
+                      <th style="width: 38%">Nama Obat</th>
+                      <th style="width: 11%">Dibawa</th>
+                      <th style="width: 7%">Jumlah</th>
+                      <th style="width: 11%">Tidak Dibawa</th>
+                      <th style="width: 27%">Keterangan</th>
+                      <th style="width: 3%">Opsi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td><input type="text" class="form-control" name="nama_obat"></td>
+                      <td><input type="text" class="form-control" name="dibawa"></td>
+                      <td><input type="text" class="form-control" name="jumlah"></td>
+                      <td><input type="text" class="form-control" name="tidak_dibawa"></td>
+                      <td><input type="text" class="form-control" name="keterangan"></td>
+                      <td>
+                        <div class="btn-group">
+                          <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#</td>
+                      <td colspan="6">
+                        <div class="btn-group">
+                          <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i> Tambah</a>
+                          <button class="btn btn-success" type="submit"><i class="icon_check_alt2"></i> Simpan</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
 
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama Obat</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Dibawa</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Jumlah</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Tidak Dibawa</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Keterangan</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </div>
               </section>
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="pemeriksaan_fisik">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Pemeriksaan Fisik
@@ -1742,51 +1749,48 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Kepala</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="kepala">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Leher</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="leher">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Dada</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="dada">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Jantung</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="jantung">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Paru-paru</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="paru">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Perut</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="perut">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Anggota Gerak</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="anggota_gerak">
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Status Lokalis</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
+
+                  <button type="submit">Simpan</button>
+
                 </div>
               </section>
             </form>

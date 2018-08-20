@@ -14,6 +14,9 @@ use App\Models\Edmunson;
 use App\Models\DiagnosaKeperawatan;
 use App\Models\EvaluasiTindakanKeperawatan;
 use App\Models\DataMedis;
+use App\Models\ObatSaatIni;
+use App\Models\PemeriksaanFisik;
+
 class RawatJalanController extends Controller
 {
     public function asesmen_awal() 
@@ -693,6 +696,35 @@ class RawatJalanController extends Controller
 
         $data->save();
 
+        return redirect('index');
+    }
+
+    public function store_obat_saat_ini(Request $request)
+    {
+        $obat = new ObatSaatIni;
+        $obat->id_regis = 1;
+        $obat->nama_obat = $request->nama_obat;
+        $obat->dibawa = $request->dibawa;
+        $obat->jumlah = $request->jumlah;
+        $obat->tidak_dibawa = $request->tidak_dibawa;
+        $obat->keterangan = $request->keterangan;
+        $obat->save();
+
+        return redirect('index');
+    }
+
+    public function store_pemeriksaan_fisik(Request $request)
+    {
+        $pemeriksaan = new PemeriksaanFisik;
+        $pemeriksaan->id_regis = 1;
+        $pemeriksaan->kepala = $request->kepala;
+        $pemeriksaan->leher = $request->leher;
+        $pemeriksaan->dada = $request->dada;
+        $pemeriksaan->jantung = $request->jantung;
+        $pemeriksaan->paru = $request->paru;
+        $pemeriksaan->perut = $request->perut;
+        $pemeriksaan->anggota_gerak = $request->anggota_gerak;
+        $pemeriksaan->save();
         return redirect('index');
     }
 }

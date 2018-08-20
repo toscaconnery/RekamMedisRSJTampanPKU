@@ -36,6 +36,8 @@ Route::post('/edmunson', 'RawatJalanController@store_edmunson');
 Route::post('/diagnosa_keperawatan', 'RawatJalanController@store_diagnosa_keperawatan');
 Route::post('/evaluasi_tindakan_keperawatan', 'RawatJalanController@store_evaluasi_tindakan_keperawatan');
 Route::post('/data_medis', 'RawatJalanController@store_data_medis');
+Route::post('/obat_saat_ini', 'RawatJalanController@store_obat_saat_ini');
+Route::post('pemeriksaan_fisik', 'RawatJalanController@store_pemeriksaan_fisik');
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');
 
