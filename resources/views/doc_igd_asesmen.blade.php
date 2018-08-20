@@ -12,73 +12,68 @@ header('Content-Type: application/pdf');
 <body style="">
 
 
-  <h2 align="center">ASESMEN AWAL PASIEN RAWAT JALAN</h2><br>
+  <h2 align="center">ASESMEN AWAL PASIEN RAWAT DARURAT</h2><br>
   
-  <h4 style="font-size:130%">ASESMEN KEPERAWATAN</h4><hr> 
-  <h4>ALASAN KUNJUNGAN</h4>
+
+  <h4>DATA UMUM</h4>
+  <br>
   <div style="font-size: 85%;">  
-    <p>Melakukan perawatan</p>
-  </div>
-  
-  <h4>RIWAYAT PSIKOSOSIAL</h4>
-  <div style="font-size: 85%;">  
-    <p>Hubungan dengan anggota keluarga : Tidak Baik</p>
-    <p>Status Psikologis:</p>
+    <table>
+      <tbody>
+        <tr>
+          <td class="konten_s_question">
+            Tanggal Kedatangan
+          </td>    
+          <td class="konten_s_answer">  
+            : 08/08/2018
+          </td>                
+        </tr>
+        <tr>
+          <td class="konten_s_question">
+            Jam Kedatangan 
+          </td>    
+          <td class="konten_s_answer">  
+            : 08:00
+          </td>                
+        </tr>
+        <tr>
+          <td class="konten_s_question">
+            Cara Datang
+          </td>    
+          <td class="konten_s_answer">  
+            : Kendaraan Pribadi
+          </td>                
+        </tr>
+        <tr>
+          <td class="konten_s_question">
+            Rujukan dari
+          </td>    
+          <td class="konten_s_answer">  
+            : Puskesmas/Dokter Keluarga
+          </td>                
+        </tr>
+        <tr>
+          <td class="konten_s_question">
+            Dikirim ke IGD
+          </td>    
+          <td class="konten_s_answer">  
+            : Dengan disertai VISUM ET REPERTUM PSIKIATRIKUM
+          </td>                
+        </tr>
+        <tr>
+      </tbody>
+    </table>
+    <p>Macam Kasus</p>
     <ul>
-      <li>Cemas</li>
-      <li>Marah</li>
+      <li>Jiwa</li>
+      <li>Trauma</li>
     </ul>
   </div>
 
-  <h4>STATUS MENTAL</h4>
-  <div style="font-size:85%">
-    <div class="row">
-      <div class="column">
-        <p><b>Konsep Diri</b></p>
-        <ul>
-          <li>Gangguan citra diri</li>
-          <li>Gangguan Identitas</li>
-        </ul>
-        <p><b>Persepsi</b></p>
-        <ul>
-          <li>Ilusi</li>
-          <li>Halusinasi Dengar</li>
-        </ul>
-        <p><b>Aktifitas Motorik</b></p>
-        <ul>
-          <li>Lesu</li>
-          <li>Gelisah</li>
-        </ul>
-      </div>
-      <div class="column">
-        <p><b>Penampilan</b></p>
-        <ul>
-          <li>Rapi</li>
-          <li>Cara berpakaian seperti biasa</li>
-        </ul>
-        <p><b>Isi Pikir</b></p>
-        <ul>
-          <li>Phobia</li>
-          <li>Depersonalisasi</li>
-          <li>Waham Agama</li>
-        </ul>
-        <p><b>Alam Perasaan</b></p>
-        <ul>
-          <li>Sedih</li>
-          <li>Putus Asa</li>
-        </ul>
-      </div>
-    </div>  
-  </div>
-  
-  <h4>STATUS FUNGSIONAL</h4>
-  <div style="font-size: 85%;">  
-    <p>Ketergantungan total, dilaporkan ke <b>dokter</b> pukul: 12:15:00 </p>
-  </div>
 
-  <h4>PEMERIKSAAN FISIK DAN SCREENING GIZI</h4>
   <div style="font-size:85%">
     <div class="row">
+    <p><b>Keadaan Pra Hospital</b></p>
       <div class="column">
         <p>TD : 99 mmHG</p>
         <p>TB : 99 Cm</p>
@@ -90,7 +85,44 @@ header('Content-Type: application/pdf');
         <p>Golongan Darah : B </p>
         <p>Suhu : 99 C</p>
       </div>
-    </div> 
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <p><b>GCS</b></p>
+        <ul>
+          <li>E = 1</li>
+          <li>V = 1</li>
+          <li>M = 1</li>
+        </ul>
+      </div>
+      <div class="column">
+        <p><b>Tindakan Pra Hospital</b></p>
+          <ul>
+            <li>O2</li>
+            <li>Infus</li>
+            <li>NGT</li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="row">
+      <p><b>TRIASE</b></p>
+      <ul>
+        <li>Jiwa</li>
+        <li>Trauma</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4>ALASAN KUNJUNGAN</h4>
+  <br>
+  <div style="font-size: 85%;">  
+    <p>Alasan berkunjung adalah</p>
+  </div>
+
+  <h4>SCREENING GIZI</h4>
+  <div style="font-size:85%">
     <p><b>Berdasarkan Malnutrition Universal Screening Tool (MUST)</b></p>
 
     <p>1. Apakah Pasien mengalami penurunan BB yang tidak diinginkan dalam 6 bulan terakhir ?</p>
@@ -258,6 +290,59 @@ header('Content-Type: application/pdf');
       <li>Tempatkan meja pasien dengan baik agar tidak menghalangi</li>
       <li>Tempatkan pasien sesuai dengan tinggi badannya</li>
     </ol>
+
+    <div class="row">
+      <div class="column">
+        <p>Tekanan Intrakranial : Ada keluhan, Sakit kepala</p>
+        <p>Pupil : Miosis</p>
+
+        <p>Neurosensorik :</p>
+        <ul>
+          <li>Spasme otot</li>
+          <li>Perubahan motorik</li>
+        </ul>    
+
+        <p>Muskuloskeletal :</p>
+        <ul>
+          <li>Penurunan tingkat kesadaran</li>
+          <li>Fraktur</li>
+          <li>Dislokasi</li>
+        </ul> 
+      </div>
+      <div class="column">
+        <p>Integumen :</p>
+        <ul>
+          <li>Luka Bakar</li>
+          <li>Luka Lecet</li>
+        </ul> 
+
+        <p>Turgor kulit : Baik</p>
+
+        <p>Edema : Ada</p>
+        <ul>
+          <li>Ekstremitas</li>
+          <li>Abdomen</li>
+        </ul> 
+
+        <p>Mukosa Mulut : Lembab</p>
+      </div>
+    </div>
+
+    <p>Pendarahan : Ada, jumlah 20 cc, warna merah gelap</p>
+
+    <p>Intoksidasi : </p>
+    <ul>
+      <li>Makanan : -</li>
+      <li>Zat Kimia : -</li>
+      <li>Gas : -</li>
+    </ul> 
+
+    <p>Eliminasi : </p>
+    <ul>
+      <li>BAB : - , Frekuensi : - , Konsistensi : - , Warna : -</li>
+      <li>BAK : - , Frekuensi : - , Warna : - , Lain-lain: - </li>
+    </ul> 
+
   </div>
 
   <h4>DIAGNOSA KEPERAWATAN</h4>
@@ -282,12 +367,15 @@ header('Content-Type: application/pdf');
       </div>
     </div>
     <p><b>Kolaborasi</b></p>
+    <p>Oksigenasi</p>
+    <p>Nebulizer</p>
     <p>Obat Parental :</p>
     <ul>
       <li>Obat 1</li>
       <li>Obat 2</li>
     </ul>
-    <p>EKG : Tidak ada</p>
+    <p>NGT</p>
+    <p>EKG</p>
   </div>
 
   <h4>EVALUASI TINDAKAN KEPERAWATAN</h4>
@@ -987,6 +1075,7 @@ header('Content-Type: application/pdf');
     </table>
 
     <p><b>Total Score : </b>18 </p>
+
     <p>Hasil Penilaian < 20 indikasi masuk maintenens rehabilitasi</p>
 
     <table>
@@ -1009,7 +1098,7 @@ header('Content-Type: application/pdf');
         </tr>
       </tbody>
     </table>
-
+    
     <div class="row">
       <div class="column">
         <p></p>
