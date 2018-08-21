@@ -1796,7 +1796,8 @@
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="status_psikiatri">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Status Psikiatri
@@ -1807,25 +1808,25 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Penampilan</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="penampilan">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Kesadaran</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="kesadaran">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Orientasi</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="orientasi">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Sikap & Tingkah laku </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="sikap">
                     </div>
                   </div>
                   <div class="col-lg-2"></div><h4>Gangguan Berpikir</h4>
@@ -1833,25 +1834,25 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Keterangan</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="keterangan">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Proses Pikir </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="proses_pikir">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Bentuk Pikir </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="bentuk_pikir">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Isi Pikir </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="isi_pikir">
                     </div>
                   </div>
                   <div class="col-lg-2"></div><h4>Alam Perasaan</h4>
@@ -1859,13 +1860,13 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Mood </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="mood">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Afek </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="afek">
                     </div>
                   </div>
                   <div class="col-lg-2"></div><h4>Persepsi</h4>
@@ -1873,13 +1874,13 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Halusinasi </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="halusinasi">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Ilusi </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="ilusi">
                     </div>
                   </div>
                   <div class="col-lg-2"></div><h4>Fungsi Intelektual</h4>
@@ -1887,51 +1888,55 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Daya Konsentrasi  </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="konsentrasi">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Daya Ingat  </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="ingat">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Pikiran Abstrak  </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="abstrak">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Pengendalian Impuls  </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="impuls">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Daya Nilai  </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="nilai">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Tilikan/Insight  </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="tilikan">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Taraf dapat dipercaya  </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="dipercaya">
                     </div>
                   </div>
+
+                  <button type="submit">Simpan</button>
+
                 </div>
               </section>
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="status_neurologi">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Status Neurologi
@@ -1943,46 +1948,99 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Meningeal Sight   </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="meningeal">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Hasil Pemeriksaan Nervus Cranialis</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="nervus">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Pemeriksaan Sistem Motorik</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="motorik">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Koordinasi Gait Keseimbangan (fungsi cerebellum)</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="cerebellum">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Vegetatif </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="vegetatif">
                     </div>
                   </div>
+
+                  <button type="submit">Simpan</button>
+
                 </div>
               </section>
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="pemeriksaan_penunjang">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Pemeriksaan Penunjang
                 </header>
                 <div class="panel-body">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jenis Pemeriksaan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" name="jenis">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam Pemeriksaan</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" name="jam_pemeriksaan">
+                    </div>
+                    <label class="col-sm-1 control-label">Jam Hasil</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" name="jam_hasil">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keterangan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" name="keterangan">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Laboratorium</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" name="laboratorium">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Radiologi</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" name="radiologi">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">EKG</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" name="ekg">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Lainnya</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" name="lainnya">
+                    </div>
+                  </div>
 
-                  <div class="col-lg-2"></div><h4>Laboratorium</h4>
+                  <button type="submit">Simpan</button>
+
+                  {{-- ///////// --}}
+                  {{-- <div class="col-lg-2"></div><h4>Laboratorium</h4>
                   <div class="form-group"></div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Pemeriksaan</label>
@@ -2136,13 +2194,14 @@
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
-                  </div>
+                  </div> --}}
                 </div>
               </section>
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="instrumen_penilaian">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Instrumen Penilaian
@@ -2153,43 +2212,43 @@
                     <div class="col-lg-3">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="p4" value="1">
                           Tidak ada - definisi tidak dipenuhi
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p4" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="p4" value="2">
                           Minimal – patologis diragukan
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="p4" value="3">
                           Ringan – sedikit agitatif, waspada berlebihan, atau sedikit mudah terangsang selama wawancara, tanpa episode yang jelas dari gaduh gelisah atau labilitas alam perasaan yang mecolok. Pembicaraan mungkin sedikit mendesah
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="p4" value="4">
                           Sedang – agitasi atau mudah terangsang yang jelas, ledakan-ledakan episodik
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="p4" value="5">
                           Agak berat – hiperaktivitas yang bermakna, sering terjadi ledakan-leadakan atau aktivitas mototrik, sulit untuk tetap duduk
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="p4" value="6">
                           Berat – gaduh gelisah yang mencolok mempengaruhi fungsi sehari-hari seperti makan  dan tidur
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p4" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="p4" value="7">
                           Sangat berat – gaduh gelisah yang mencolok, mempengaruhi kegiatan makan dan tidur, serta jelas tidak memungkinkan interaksi interpersonal. Percepatan dan pembicaraan dan aktivitas motorik dapat menimbulkan inkoherensi dan kelelahan
                         </label>
                       </div>
@@ -2198,43 +2257,43 @@
                     <div class="col-lg-3">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g8" value="1">
                           Tidak ada - definisi tidak dipenuhi
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g8" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="g8" value="2">
                           Minimal – patologis diragukan
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g8" value="3">
                           Ringan – patuh tapi disertai sikap marah tidak sabar atau sarkasme, mungkin ada penolakan yang tidak mengganggu terhadap penyelidikan yang sensitif selama wawancara
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g8" value="4">
                           Sedang – kadang-kadang terdapat penolakan langsung untuk patuh, memproyeksikan hostilitas, defensif atau bersifat negatif tetapi biasanya masih dapat diatasi
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g8" value="5">
                           Agak berat – seringkali tidak patuh, jelas defensif atau iritabilitas terhadap pewawancara dan mungkin tidak bersedia menghadapi banyak pertanyaan
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g8" value="6">
                           Berat – sangat tidak kooperatif, negativistik dan suka membangkang. Menolak untuk patuh, tidak mau memulai atau mengikuti wawancara sepenuhnya
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g8" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g8" value="7">
                           Sangat berat – resistensi aktif, menolak untuk ikut dalam aktivitas sosial apapun, mengurus kebersihan diri, bercakap-cakap dengan keluarga atau staf dan bahkan untuk berpartisipasi dalam wawancara singkat
                         </label>
                       </div>
@@ -2247,43 +2306,43 @@
                     <div class="col-lg-3">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="p7" value="1">
                           Tidak ada - definisi tidak dipenuhi
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p7" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="p7" value="2">
                           Minimal – patologis diragukan
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="p7" value="3">
                           Ringan – melampiaskan kemarahan secara tidak langsung atau ditahan
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="p7" value="4">
                           Sedang – sikap bermusuhan yang nyata
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="p7" value="5">
                           Agak berat – pasien sangat mudah marah dan kadang-kadang memaki dengan kata-kata kasar atau mengancam
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="p7" value="6">
                           Berat – tidak kooperatif dan mencaci maki dengan kasar atau mengancam, dapat beringas dan merusak tetapi tidak menyerang orang lain secara fisik
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="p7" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="p7" value="7">
                           Sangat berat – kemarahan yang hebat berakibat sangat tidak kooperatif, menghalangi interaksi, atau secara episodik melakukan penyerangan fisik terhadap orang lain
                         </label>
                       </div>
@@ -2292,43 +2351,43 @@
                     <div class="col-lg-3">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g14" value="1">
                           Tidak ada - definisi tidak dipenuhi
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g14" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="g14" value="2">
                           Minimal – patologis diragukan
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g14" value="3">
                           Ringan – cenderung mudah marah dan frustasi bila menghadapi stres atau pemuasannya ditolak tetapi jarang bertindak impulsif
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g14" value="4">
                           Sedang – dengan provokasi yang minimal, pasien menjadi marah dan mencaci maki. Mungkin sekali-kali mengancam, merusak atau terdapat satu atau dua episode yang melibatkan konfrontasi fisik atau perselisihan ringan
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g14" value="5">
                           Agak berat – memperlihatkan episode impulsif yang berulang, termasuk mencaci maki, merusak harta benda atau ancaman fisik. Mungkin ada satu atau dua episode yang melibatkan serangn serius
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g14" value="6">
                           Berat – agresif secara impulsif, mengancam, menuntut dan merusak, tanpa pertimbangan terhadap konsekuensinya. Menunjukkan perilaku menyerang
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g14" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g14" value="7">
                           Sangat berat – memperlihatkan serangan kebrutalan dan berbahaya
                         </label>
                       </div>
@@ -2340,43 +2399,43 @@
                     <div class="col-lg-3">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g4" value="1">
                           Tidak ada - definisi tidak dipenuhi
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g4" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="g4" value="2">
                           Minimal – patologis diragukan
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g4" value="3">
                           Ringan – postur dan gerakan-gerakan menunjukkan kekhawatiran ringan, ketidaktenangan yang sekali-kali, perubahan posisi, atau tremor tangan yang halus dan cepat
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g4" value="4">
                           Sedang – nyata-nyata gelisah seperti perilaku tidak tenang, tremor tangan yang nyata, keringat berlebihan, atau manerisme karena gugup
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g4" value="5">
                           Agak berat – ketegangan yang berat, manifestasi seperti gemetar karena gugup, keringat sangat berlebihan dan ketidaktenangan, perilaku selama wawancara tidak terpengaruh secara bermakna
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g4" value="6">
                           Berat – Ketegangan berat, taraf interaksi terganggu. Misalnya terus-menerus bergerak, tidak dapat tetap duduk, hiperventilasi
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="g4" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="g4" value="7">
                           Sangat berat – ketegangan sangat mencolok, tanda panik atau percepatan gerakan motorik kaar, ketidak mampuan tetap duduk > 1 menit yang menyebabkan percakapan tidak mungkin diteruskan
                         </label>
                       </div>
@@ -2387,21 +2446,30 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Bangsal   </label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="bangsal">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Tanggal Pemeriksaan</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="tanggal_pemeriksaan">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">gaff   </label>
+                    <label class="col-sm-2 control-label">Panss Ec</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="panss_ec">
                     </div>
                   </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Gaff</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" name="gaff">
+                    </div>
+                  </div>
+
+                  <button type="submit">Simpan</button>
+
                 </div>
               </section>
             </form>

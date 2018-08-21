@@ -37,7 +37,11 @@ Route::post('/diagnosa_keperawatan', 'RawatJalanController@store_diagnosa_kepera
 Route::post('/evaluasi_tindakan_keperawatan', 'RawatJalanController@store_evaluasi_tindakan_keperawatan');
 Route::post('/data_medis', 'RawatJalanController@store_data_medis');
 Route::post('/obat_saat_ini', 'RawatJalanController@store_obat_saat_ini');
-Route::post('pemeriksaan_fisik', 'RawatJalanController@store_pemeriksaan_fisik');
+Route::post('/pemeriksaan_fisik', 'RawatJalanController@store_pemeriksaan_fisik');
+Route::post('/status_psikiatri', 'RawatJalanController@store_status_psikiatri');
+Route::post('/status_neurologi', 'RawatJalanController@store_status_neurologi');
+Route::post('/pemeriksaan_penunjang', 'RawatJalanController@store_pemeriksaan_penunjang');
+Route::post('/instrumen_penilaian', 'RawatJalanController@store_instrumen_penilaian');
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');
 

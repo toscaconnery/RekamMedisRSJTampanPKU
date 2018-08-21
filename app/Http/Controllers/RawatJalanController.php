@@ -16,6 +16,10 @@ use App\Models\EvaluasiTindakanKeperawatan;
 use App\Models\DataMedis;
 use App\Models\ObatSaatIni;
 use App\Models\PemeriksaanFisik;
+use App\Models\StatusPsikiatri;
+use App\Models\StatusNeurologi;
+use App\Models\PemeriksaanPenunjang;
+use App\Models\InstrumenPenilaian;
 
 class RawatJalanController extends Controller
 {
@@ -725,6 +729,84 @@ class RawatJalanController extends Controller
         $pemeriksaan->perut = $request->perut;
         $pemeriksaan->anggota_gerak = $request->anggota_gerak;
         $pemeriksaan->save();
+        return redirect('index');
+    }
+
+    public function store_status_psikiatri(Request $request)
+    {
+        $status = new StatusPsikiatri;
+        $status->id_regis = 1;
+        $status->penampilan = $request->penampilan;
+        $status->kesadaran = $request->kesadaran;
+        $status->orientasi = $request->orientasi;
+        $status->sikap = $request->sikap;
+        $status->keterangan = $request->keterangan;
+        $status->keterangan = $request->keterangan;
+        $status->proses_pikir = $request->proses_pikir;
+        $status->bentuk_pikir = $request->bentuk_pikir;
+        $status->isi_pikir = $request->isi_pikir;
+        $status->mood = $request->mood;
+        $status->afek = $request->afek;
+        $status->halusinasi = $request->halusinasi;
+        $status->ilusi = $request->ilusi;
+        $status->konsentrasi = $request->konsentrasi;
+        $status->ingat = $request->ingat;
+        $status->abstrak = $request->abstrak;
+        $status->impuls = $request->impuls;
+        $status->nilai = $request->nilai;
+        $status->tilikan = $request->tilikan;
+        $status->dipercaya = $request->dipercaya;
+        $status->save();
+
+        return redirect('index');
+    }
+
+    public function store_status_neurologi(Request $request)
+    {
+        $status = new StatusNeurologi;
+        $status->id_regis = 1;
+        $status->meningeal = $request->meningeal;
+        $status->nervus = $request->nervus;
+        $status->motorik = $request->motorik;
+        $status->cerebellum = $request->cerebellum;
+        $status->vegetatif = $request->vegetatif;
+        $status->save();
+
+        return redirect('index');
+    }
+
+    public function store_pemeriksaan_penunjang(Request $request)
+    {
+        $pemeriksaan = new PemeriksaanPenunjang;
+        $pemeriksaan->id_regis = 1;
+        $pemeriksaan->jenis = $request->jenis;
+        $pemeriksaan->jam_pemeriksaan = $request->jam_pemeriksaan;
+        $pemeriksaan->jam_hasil = $request->jam_hasil;
+        $pemeriksaan->keterangan = $request->keterangan;
+        $pemeriksaan->laboratorium = $request->laboratorium;
+        $pemeriksaan->radiologi = $request->radiologi;
+        $pemeriksaan->ekg = $request->ekg;
+        $pemeriksaan->lainnya = $request->lainnya;
+        $pemeriksaan->save();
+
+        return redirect('index');
+    }
+
+    public function store_instrumen_penilaian(Request $request)
+    {
+        $instrumen = new InstrumenPenilaian;
+        $instrumen->id_regis = 1;
+        $instrumen->gaduh_gelisah = $request->p4;
+        $instrumen->ketidakoperatifan = $request->g8;
+        $instrumen->permusuhan = $request->p7;
+        $instrumen->pengendalian_impuls = $request->g14;
+        $instrumen->ketegangan = $request->g4;
+        $instrumen->bangsal = $request->bangsal;
+        $instrumen->tanggal_pemeriksaan = $request->tanggal_pemeriksaan;
+        $instrumen->panss_ec = $request->panss_ec;
+        $instrumen->gaff = $request->gaff;
+        $instrumen->save();
+
         return redirect('index');
     }
 }
