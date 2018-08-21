@@ -954,6 +954,18 @@ li {
     clear: both;
 }
 
+.colsize {
+    float: left;
+    padding-right: 5%;
+}
+
+.rowsize:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
 td.kolom {
     padding-left:5px; 
     border: 1px solid black; 
@@ -963,6 +975,19 @@ td.kolom_big {
     padding-left:5px; 
     border: 1px solid black;
     height: 200%; 
+}
+
+th.default{
+    vertical-align: middle; 
+    border: 1px solid black;
+    text-align: center;
+}
+
+td.default{
+    vertical-align: middle; 
+    border: 1px solid black;
+    text-align: left;
+    padding-left: 3px;
 }
 
 th.default3{
@@ -977,6 +1002,14 @@ td.default3{
     width: 33,3%;
     border: 1px solid black;
     text-align: center;
+}
+
+p.list{
+    padding-bottom:-15px;    
+}
+
+hr.limit {
+    width: 60% ; 
 }
 
 

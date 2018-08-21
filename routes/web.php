@@ -502,3 +502,5 @@ Route::get('/doc_ri_pulang', function () {
     return view('/doc_ri_pulang');
 });
 
+
+
