@@ -20,6 +20,8 @@ use App\Models\StatusPsikiatri;
 use App\Models\StatusNeurologi;
 use App\Models\PemeriksaanPenunjang;
 use App\Models\InstrumenPenilaian;
+use App\Models\DiagnosisTindakanTerapi;
+use App\Models\TindakLanjut;
 
 class RawatJalanController extends Controller
 {
@@ -360,6 +362,7 @@ class RawatJalanController extends Controller
     {
         $nyeri = new Nyeri;
         $nyeri->id_regis = 1;
+        $nyeri->jenis_form = $request->jenis_form;
         $nyeri->tingkat = $request->tingkat;
         $nyeri->skala = $request->skala;
         $nyeri->lokasi = $request->lokasi;
@@ -809,4 +812,92 @@ class RawatJalanController extends Controller
 
         return redirect('index');
     }
+
+    public function store_diagnosis_tindakan_terapi(Request $request)
+    {
+        $diagnosis = new DiagnosisTindakanTerapi;
+        $diagnosis->id_regis = 1;
+        $diagnosis->axis1 = $request->axis1;
+        $diagnosis->axis2 = $request->axis2;
+        $diagnosis->axis3 = $request->axis3;
+        $diagnosis->axis4 = $request->axis4;
+        $diagnosis->axis5 = $request->axis5;
+        $diagnosis->utama = $request->utama;
+        $diagnosis->sekunder = $request->sekunder;
+        $diagnosis->jam = $request->jam;
+        $diagnosis->tindakan_terapi = $request->tindakan_terapi;
+        $diagnosis->daftar_masalah = $request->daftar_masalah;
+        $diagnosis->save();
+
+        return redirect('index');
+    }
+
+    public function store_tindak_lanjut(Request $request)
+    {
+        $data = new TindakLanjut;
+        $data->tindak_lanjut = $request->tindak_lanjut;
+        $data->id_regis = 1;
+        if($request->perlu_dikontrol == 'true') {
+            $data->perlu_dikontrol = True;
+        }
+        else {
+            $data->perlu_dikontrol = False;
+        }
+        $data->tanggal_kontrol = $request->tanggal_kontrol;
+        $data->ruangan = $request->ruangan;
+        $data->indikasi_rawat_inap = $request->indikasi_rawat_inap;
+        if($request->alasan_menolak == "Lainnya"){
+            $data->alasan_menolak = $request->alasan_lainnya;
+        }
+        else {
+            $data->alasan_menolak = $request->alasan_menolak;
+        }
+        $data->dirujuk_ke = $request->dirujuk_ke;
+        $data->alasan_dirujuk = $request->alasan_dirujuk;
+        $kesadaran = "";
+        if(isset($request->kesadaran_1)) {
+            $kesadaran .= "1-";
+        }
+        if(isset($request->kesadaran_2)) {
+            $kesadaran .= "2-";
+        }
+        if(isset($request->kesadaran_3)) {
+            $kesadaran .= "3-";
+        }
+        if(isset($request->kesadaran_4)) {
+            $kesadaran .= "4-";
+        }
+        if(isset($request->kesadaran_5)) {
+            $kesadaran .= "5-";
+        }
+        if(isset($request->kesadaran_6)) {
+            $kesadaran .= "6-";
+        }
+        if(isset($request->kesadaran_7)) {
+            $kesadaran .= "7-";
+        }
+        $kesadaran = substr($kesadaran, 0, -1);
+        $data->kesadaran = $kesadaran;
+        $data->kesadaran_lainnya = $request->kesadaran_lainnya;
+        $data->tensi = $request->tensi;
+        $data->nadi = $request->nadi;
+        $data->pernafasan = $request->pernafasan;
+        $data->suhu = $request->suhu;
+        $data->save();
+
+        return redirect('index');
+    }
+
+    /////////////////////////////////////////RJ ASESMEN GIGI////////////////////////////////////////
+    /////////////////////////////////////////RJ ASESMEN GIGI////////////////////////////////////////
+    /////////////////////////////////////////RJ ASESMEN GIGI////////////////////////////////////////
+    /////////////////////////////////////////RJ ASESMEN GIGI////////////////////////////////////////
+
+    public function asesmen_gigi() 
+    {
+        return view('rj_asesmen_gigi');
+    }
+
+
+
 }

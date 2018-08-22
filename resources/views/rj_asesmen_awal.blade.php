@@ -861,6 +861,8 @@
                     </div>
                   </div>
 
+                  <input type="hidden" name="jenis_form" value="awal">
+
                   <button type="submit">Simpan</button>
 
                 </div>
@@ -979,6 +981,8 @@
                       </select>
                     </div>
                   </div>
+
+                  <input type="hidden" name="jenis_form" value="awal">
 
                   <button type="submit">Simpan</button>
 
@@ -2475,7 +2479,8 @@
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="diagnosis_tindakan_terapi">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Diagnosis dan Tindakan Terapi
@@ -2486,71 +2491,75 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Axis 1</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="axis1">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Axis 2</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="axis2">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Axies 3</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="axis3">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Axis 4</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="axis4">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Axis 5</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="axis5">
                     </div>
                   </div>
-                  <div class="col-lg-2"></div><h4>Diagnosis Non Psikiatri</h4>
+                  <h4>Diagnosis Non Psikiatri</h4>
                   <div class="form-group"></div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Diagnosis Utama</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="utama">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Diagnosis Sekunder</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="sekunder">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Jam</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="jam">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Tindakan Terapi</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="tindakan_terapi">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Daftar Masalah</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="daftar_masalah">
                     </div>
                   </div>
+
+                  <button type="submit">Simpan</button>
+
                 </div>
               </section>
             </form>
 
 
-            <form class="form-horizontal " method="get">
+            <form class="form-horizontal " method="post" action="tindak_lanjut">
+              {{ csrf_field() }}
               <section class="panel">
                 <header class="panel-heading">
                   Tindak Lanjut
@@ -2562,25 +2571,25 @@
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="tindak_lanjut" value="1">
                           Pulang
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="tindak_lanjut" value="2">
                           Dirawat
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="tindak_lanjut" value="3">
                           Menolak dirawat
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="tindak_lanjut" value="4">
                           Dirujuk
                         </label>
                       </div>
@@ -2591,13 +2600,13 @@
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="perlu_dikontrol" value="false">
                           Tidak perlu kontrol
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Tidak Baik" checked>
+                          <input type="radio" name="perlu_dikontrol" value="true">
                           Perlu Kontrol
                         </label>
                       </div>
@@ -2606,19 +2615,19 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Perlu kontrol pada tanggal</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="tanggal_kontrol">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Dirawat di ruang</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="ruangan">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Indikasi Rawat Inap</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="indikasi_rawat_inap">
                     </div>
                   </div>
 
@@ -2627,25 +2636,25 @@
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah biaya" checked>
+                          <input type="radio" name="alasan_menolak" value="Masalah biaya">
                           Masalah biaya
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah Lokasi Rumah" checked>
+                          <input type="radio" name="alasan_menolak" value="Masalah lokasi rumah">
                           Masalah lokasi rumah
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Kondisi pasien" checked>
+                          <input type="radio" name="alasan_menolak" value="Kondisi pasien">
                           Kondisi pasien
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Baik" checked>
+                          <input type="radio" name="alasan_menolak" value="Lainnya">
                           Lainnya
                         </label>
                       </div>
@@ -2654,13 +2663,13 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Sebutkan</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="alasan_lainnya">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Dirujuk ke</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="dirujuk_ke">
                     </div>
                   </div>
                   <div class="form-group">
@@ -2668,19 +2677,19 @@
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah biaya" checked>
+                          <input type="radio" name="alasan_dirujuk" value="tempat penuh">
                           Tempat Penuh
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Masalah Lokasi Rumah" checked>
+                          <input type="radio" name="alasan_dirujuk" value="Perlu fasilitas lebih">
                           Perlu Fasilitas Lebih
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="Kondisi pasien" checked>
+                          <input type="radio" name="alasan_dirujuk" value="Permintaan pasien/keluarga">
                           Permintaan Pasien/Keluarga
                         </label>
                       </div>
@@ -2692,32 +2701,32 @@
                     <label class="control-label col-lg-2" for="inputSuccess">Kesadaran</label>
                     <div class="col-lg-10">
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox1" value="Compos Mentis"> Compos Mentis
+                        <input type="checkbox" name="kesadaran_1"> Compos Mentis
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox2" value="Apatis"> Apatis
+                        <input type="checkbox" name="kesadaran_2"> Apatis
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="Delirium"> Delirium
+                        <input type="checkbox" name="kesadaran_3"> Delirium
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="Sopor"> Sopor
+                        <input type="checkbox" name="kesadaran_4"> Sopor
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="Koma"> Koma
+                        <input type="checkbox" name="kesadaran_5"> Koma
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="GCS"> GCS
+                        <input type="checkbox" name="kesadaran_6"> GCS
                       </label>
                       <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="Lain-lain"> Lain-lain
+                        <input type="checkbox" name="kesadaran_7"> Lain-lain
                       </label>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Sebutkan</label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="kesadaran_lainnya">
                     </div>
                   </div>
                   <div class="col-lg-2"></div><h5>Tanda-tanda vital</h5>
@@ -2725,24 +2734,27 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Tensi</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="tensi">
                     </div>
 
                     <label class="col-sm-2 control-label">Nadi</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="nadi">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Pernafasan</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="pernafasan">
                     </div>
                     <label class="col-sm-2 control-label">Suhu</label>
                     <div class="col-sm-1">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="suhu">
                     </div>
                   </div>
+
+                  <button type="submit">Simpan</button>
+
                 </div>
               </section>
             </form>
@@ -2892,7 +2904,6 @@
         $(document).ready( function() {
           $('input[type=checkbox][name="sk_3_checkbox[]"]').change(function() {
             var atLeastOneIsChecked = $('input[name="sk_3_checkbox[]"]:checked').length > 0;
-            // alert("HAHAH");
             if(atLeastOneIsChecked == true) {
               $('#sk_3_2').prop('checked', true);
               $('#sk_3_hidden').hide();

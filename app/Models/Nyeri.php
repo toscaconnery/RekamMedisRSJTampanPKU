@@ -15,6 +15,6 @@ class Nyeri extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'id_regis', 'skala', 'lokasi', 'durasi', 'frekuensi', 'hilang', 'pemberitahuan', 'waktu_pemberitahuan',
+        'id_regis', 'jenis_form', 'skala', 'lokasi', 'durasi', 'frekuensi', 'hilang', 'pemberitahuan', 'waktu_pemberitahuan',
     ];
 }
