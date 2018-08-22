@@ -279,6 +279,27 @@ Route::get('/doc_rj_tumbuhkembang', function () {
     return view('/doc_rj_tumbuhkembang');
 });
 
+//dokumen konseling HIV
+Route::get('/pdf_rj_konselinghiv', 'Pdf_rj_Controller@pdf_rj_konselinghiv');
+
+Route::get('/doc_rj_konselinghiv', function () {
+    return view('/doc_rj_konselinghiv');
+});
+
+//dokumen ikhtisar HIV
+Route::get('/pdf_rj_ikhtisarhiv', 'Pdf_rj_Controller@pdf_rj_ikhtisarhiv');
+
+Route::get('/doc_rj_ikhtisarhiv', function () {
+    return view('/doc_rj_ikhtisarhiv');
+});
+
+//dokumen izin vct klien tes hiv
+Route::get('/pdf_rj_izinhiv', 'Pdf_rj_Controller@pdf_rj_izinhiv');
+
+Route::get('/doc_rj_izinhiv', function () {
+    return view('/doc_rj_izinhiv');
+});
+
 //dokumen resume rawat jalan
 Route::get('/pdf_rj_resume', 'Pdf_rj_Controller@pdf_rj_resume');
 
@@ -510,4 +531,6 @@ Route::get('/pdf_ri_pulang', 'Pdf_ri_Controller@pdf_ri_pulang');
 Route::get('/doc_ri_pulang', function () {
     return view('/doc_ri_pulang');
 });
+
+
 

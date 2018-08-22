@@ -542,7 +542,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Apakah obat-obatan tersebut diminum berdasarkan anjuran dokter</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Apakah obat-obatan tersebut diminum berdasarkan anjuran dokter?</label>
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
@@ -602,7 +602,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Apakah ibu pernah mengalami keguguran ? </label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Apakah ibu pernah mengalami keguguran? </label>
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
@@ -620,7 +620,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Apakah ibu pernah mengalami keguguran ? </label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Apakah ibu pernah mengalami keguguran? </label>
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
@@ -681,7 +681,7 @@
 
                 <form class="form-horizontal " method="get">
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">•  Proses kelahiran </label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Proses kelahiran </label>
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
@@ -705,7 +705,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Apakah dibantu dengan alat ?</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Apakah dibantu dengan alat?</label>
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
@@ -729,7 +729,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Apakah mengalalmi keguguran ?</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Apakah mengalami keguguran?</label>
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
@@ -880,12 +880,6 @@
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Penyakit</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Apakah ibu suka minum obat-obatan selama mengandung?</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
@@ -1053,7 +1047,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Apakah anak mempunyai tempat belajar sendiri ?</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Apakah anak dibantu dalam belajar ?</label>
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
@@ -1125,7 +1119,7 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Apakah anak mengikuti kegiatan tambahan dalam bentuk les privat?</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">Apakah anak mengikuti kegiatan tambahan dalam bentuk les privat ?</label>
                     <div class="col-lg-10">
                       <div class="radio">
                         <label>
@@ -1232,6 +1226,12 @@
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Riwayat Masa Bayi/Masa  Kanak Awal(Early Childhood) (0 – 3 tahun)</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Riwayat Masa Kanak Pertengahan (Middle Childhood) (3 – 11 tahun)</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
