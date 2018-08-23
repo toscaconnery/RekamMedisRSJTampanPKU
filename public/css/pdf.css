@@ -979,6 +979,15 @@ th.default{
     text-align: center;
 }
 
+th.small{
+    vertical-align: middle; 
+    border: 1px solid black;
+    text-align: center;
+    font-size: 9px;
+    width:1%;
+    margin: 10px;
+}
+
 th.defaultnb{
     vertical-align: middle; 
     text-align: center;
