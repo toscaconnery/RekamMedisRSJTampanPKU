@@ -16,6 +16,7 @@ class CreateNyeriTable extends Migration
         Schema::create('nyeri', function (Blueprint $table) {
             $table->increments('id_nyeri');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->string('jenis_form');
             $table->smallInteger('tingkat');
             $table->smallInteger('skala');
             $table->string('lokasi');

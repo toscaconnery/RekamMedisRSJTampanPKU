@@ -26,6 +26,7 @@ Route::post('/identifikasi_pasien_baru_2', 'PasienController@identifikasi_pasien
 Route::post('/identifikasi_pasien_baru_final', 'PasienController@identifikasi_pasien_baru_final');
 
 // RAWAT JALAN
+// ASESMEN AWAL
 Route::get('/rj_asesmen_awal', 'RawatJalanController@asesmen_awal');
 Route::post('/rj_asesmen_awal_asesmen_keperawatan', 'RawatJalanController@store_rj_asesmen_awal_asesmen_keperawatan');
 Route::post('/fisik_gizi', 'RawatJalanController@store_fisik_gizi');
@@ -42,6 +43,11 @@ Route::post('/status_psikiatri', 'RawatJalanController@store_status_psikiatri');
 Route::post('/status_neurologi', 'RawatJalanController@store_status_neurologi');
 Route::post('/pemeriksaan_penunjang', 'RawatJalanController@store_pemeriksaan_penunjang');
 Route::post('/instrumen_penilaian', 'RawatJalanController@store_instrumen_penilaian');
+Route::post('/diagnosis_tindakan_terapi', 'RawatJalanController@store_diagnosis_tindakan_terapi');
+Route::post('/tindak_lanjut', 'RawatJalanController@store_tindak_lanjut');
+
+// ASESMEN GIGI
+Route::get('/rj_asesmen_gigi', 'RawatJalanController@asesmen_gigi');
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');
 
@@ -78,9 +84,6 @@ Route::get('/rj_rencana_pemulangan', function () {
     return view('rj_rencana_pemulangan');
 });
 
-Route::get('/rj_asesmen_gigi', function () {
-    return view('rj_asesmen_gigi');
-});
 
 Route::get('/rj_identifikasi_stresor', function () {
     return view('rj_identifikasi_stresor');

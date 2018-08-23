@@ -16,6 +16,7 @@ class CreateHumptyDumptyTable extends Migration
         Schema::create('humpty_dumpty', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->string('jenis_form');
             $table->string('usia');
             $table->string('diagnosis');
             $table->string('gangguan_kognitif');

@@ -14,6 +14,7 @@ class HumptyDumpty extends Model
 
     protected $fillable = [
         'id_regis',
+        'jenis_form',
         'usia',
         'diagnosis',
         'gangguan_kognitif',
