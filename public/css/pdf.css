@@ -1082,6 +1082,40 @@ td.default2s{
     clear: both;
 }
 
+td.konten_question{
+    width: 25%;
+    vertical-align: top;
+    padding-top: 0px;
+    font-size: 110%;
+    line-height: 0px;
+    font-family: "arial", Times, serif;
+    text-align: left;
+}
+
+td.konten_answer{
+    width: 75%;
+    padding-top: 0px;
+    font-size: 110%;
+    vertical-align: top;
+    line-height: 0px;
+    font-family: "arial", Times, serif;
+    text-align: left;
+}
+
+
+
+p.answer {
+    padding-top: 2px;
+    font-size: 100%;
+}
+
+p.question {
+    padding-top: -10px;
+    padding-bottom: -15px;
+}
+
+
+
 
 
 

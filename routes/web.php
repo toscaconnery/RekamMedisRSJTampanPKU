@@ -266,10 +266,10 @@ Route::get('/doc_rj_infoedu', function () {
 });
 
 //dokumen informasi lapor rehabilitasi
-Route::get('/pdf_rj_lapor', 'Pdf_rj_Controller@pdf_rj_lapor');
+Route::get('/pdf_rj_lapor_rehabilitasi', 'Pdf_rj_Controller@pdf_rj_lapor_rehabilitasi');
 
-Route::get('/doc_rj_lapor', function () {
-    return view('/doc_rj_lapor');
+Route::get('/doc_rj_lapor_rehabilitasi', function () {
+    return view('/doc_rj_lapor_rehabilitasi');
 });
 
 //dokumen informasi tumbuh kembang
