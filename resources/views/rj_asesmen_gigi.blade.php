@@ -118,6 +118,18 @@
 
                 <form class="form-horizontal " method="get">
                   <div class="form-group">
+                    <label class="col-sm-2 control-label">Pekerjaan</label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" disabled="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Alamat</label>
+                    <div class="col-sm-3">
+                      <input type="text" class="form-control" disabled="">
+                    </div>
+                  </div>
+                  <div class="form-group">
                     <label class="col-sm-2 control-label">Telp/HP</label>
                     <div class="col-sm-3">
                       <input type="text" class="form-control">
@@ -127,134 +139,126 @@
               </div>
             </section>
 
-            <section class="panel">
-              <header class="panel-heading">
-                Penilaian Tingkat Nyeri
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="post" action="penilaian_tingkat_nyeri">
-                  {{ csrf_field() }}
-                  <section class="panel">
-                    <header class="panel-heading">
-                      Penilaian Tingkat Nyeri
-                    </header>
-                    <div class="panel-body">
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="inputSuccess">Tingkat nyeri</label>
-                        <div class="col-lg-3">
-                          <select class="form-control m-bot15" name="tingkat">
-                            <option value="1">Tidak ada nyeri</option>
-                            <option value="2">Nyeri Kronis</option>
-                            <option value="3">Nyeri Akut</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-sm-2 control-label">Skala Nyeri </label>
-                        <div class="col-sm-2">
-                          <select name="skala" class="form-control">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                          </select>
-                        </div>
-
-                        <label class="col-sm-2 control-label">Lokasi Nyeri </label>
-                        <div class="col-sm-2">
-                          <input type="text" class="form-control" name="lokasi">
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-2 control-label">Durasi Nyeri</label>
-                        <div class="col-sm-2">
-                          <input type="text" class="form-control" name="durasi">
-                        </div>
-
-                        <label class="col-sm-2 control-label">Frekuensi Nyeri</label>
-                        <div class="col-sm-2">
-                          <input type="text" class="form-control" name="frekuensi">
-                        </div>
-                      </div>
-
-                      <div class="form-group" id="form_nyeri_hilang">
-                        <label class="control-label col-lg-2" for="inputSuccess">Nyeri hilang, bila </label>
-                        <div class="col-lg-4">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="hilang1">
-                              Minum Obat
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="hilang2">
-                              Mendengar Musik
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="hilang3">
-                              Istirahat
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="hilang4">
-                              Berubah posisi/tidur
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="hilang5">
-                              Lain-lain
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="inputSuccess">Diberitahukan ke dokter?</label>
-                        <div class="col-lg-2">
-                          <div class="radio">
-                            <label>
-                              <input type="radio" name="pemberitahuan" value="1">
-                              Ya 
-                            </label>
-                          </div>
-                          <div class="radio">
-                            <label>
-                              <input type="radio" name="pemberitahuan" value="0">
-                              Tidak 
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-2 control-label">Diberitahukan ke dokter pukul</label>
-                        <div class="col-sm-1">
-                          <input type="text" class="form-control" name="waktu_pemberitahuan">
-                        </div>
-                      </div>
-
-                      <input type="hidden" name="jenis_form" value="gigi">
-
-                      <button type="submit">Simpan</button>
-
+            <form class="form-horizontal " method="post" action="penilaian_tingkat_nyeri">
+              {{ csrf_field() }}
+              <section class="panel">
+                <header class="panel-heading">
+                  Penilaian Tingkat Nyeri
+                </header>
+                <div class="panel-body">
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Tingkat nyeri</label>
+                    <div class="col-lg-3">
+                      <select class="form-control m-bot15" name="tingkat">
+                        <option value="1">Tidak ada nyeri</option>
+                        <option value="2">Nyeri Kronis</option>
+                        <option value="3">Nyeri Akut</option>
+                      </select>
                     </div>
-                  </section>
-                </form>
-              </div>
-            </section>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Skala Nyeri </label>
+                    <div class="col-sm-2">
+                      <select name="skala" class="form-control">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
+                    </div>
+
+                    <label class="col-sm-2 control-label">Lokasi Nyeri </label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" name="lokasi">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Durasi Nyeri</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" name="durasi">
+                    </div>
+
+                    <label class="col-sm-2 control-label">Frekuensi Nyeri</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" name="frekuensi">
+                    </div>
+                  </div>
+
+                  <div class="form-group" id="form_nyeri_hilang">
+                    <label class="control-label col-lg-2" for="inputSuccess">Nyeri hilang, bila </label>
+                    <div class="col-lg-4">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="hilang1">
+                          Minum Obat
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="hilang2">
+                          Mendengar Musik
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="hilang3">
+                          Istirahat
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="hilang4">
+                          Berubah posisi/tidur
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="hilang5">
+                          Lain-lain
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">Diberitahukan ke dokter?</label>
+                    <div class="col-lg-2">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="pemberitahuan" value="1">
+                          Ya 
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="pemberitahuan" value="0">
+                          Tidak 
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Diberitahukan ke dokter pukul</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control" name="waktu_pemberitahuan">
+                    </div>
+                  </div>
+
+                  <input type="hidden" name="jenis_form" value="gigi">
+
+                  <button type="submit">Simpan</button>
+
+                </div>
+              </section>
+            </form>
 
             <section class="panel">
               <header class="panel-heading">
@@ -293,194 +297,23 @@
               </div>
             </section>
 
-            <section class="panel">
-              <header class="panel-heading">
-                HUMPTY DUMPTY (Anak-anak)
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="post" action="humpty_dumpty">
-                  {{ csrf_field() }}
-                  <section class="panel">
-                    <header class="panel-heading">
-                      HUMPTY DUMPTY (Anak-anak)
-                    </header>
-                    <div class="panel-body">
-                      <div class="col-lg-2"></div><h4>HUMPTY DUMPTY (Anak-anak) </h4>
-                      <div class="form-group"></div>
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="inputSuccess">USIA</label>
-                        <div class="col-lg-2">
-                          <select class="form-control m-bot15" name="usia">
-                            <option value="1">Dibawah 3 tahun </option>
-                            <option value="2">3 – 7 tahun </option>
-                            <option value="3">7 – 13 tahun </option>
-                            <option value="4">> 13 tahun </option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS</label>
-                        <div class="col-lg-7">
-                          <select class="form-control m-bot15" name="diagnosis">
-                            <option value="1">Kelainan Neurologi </option>
-                            <option value="2">Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
-                            <option value="3">Kelainan psikis / prilaku</option>
-                            <option value="4">Diagnosis lain</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="inputSuccess">GANGGUAN KOGNITIF</label>
-                        <div class="col-lg-7">
-                          <select class="form-control m-bot15" name="gangguan_kognitif">
-                            <option value="1">Tidak sadar terhadap keterbatasan (gangguan kesadaran, retardasi mental</option>
-                            <option value="2">Lupa keterbatasan (anak yang hiperaktif)</option>
-                            <option value="3">Mengetahui kemampuan diri</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="inputSuccess">FAKTOR LINGKUNGAN</label>
-                        <div class="col-lg-7">
-                          <select class="form-control m-bot15" name="faktor_lingkungan">
-                            <option value="1">Riwayat jatuh dari tempat tidur saat bayi</option>
-                            <option value="2">Pasien menggunakan alat bantu atau box meubel</option>
-                            <option value="3">Pasien berada di tempat tidur</option>
-                            <option value="4">Di luar ruang rawat</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="inputSuccess">RESPON TERHADAP OPERASI/OBAT PENENANG/EFEK ANASTESI</label>
-                        <div class="col-lg-7">
-                          <select class="form-control m-bot15" name="waktu_respon_obat">
-                            <option value="1">Dalam 24 Jam</option>
-                            <option value="2">Dalam 48 Jam</option>
-                            <option value="3">> 48 Jam</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="control-label col-lg-2" for="inputSuccess">PENGGUNAAN OBAT</label>
-                        <div class="col-lg-7">
-                          <select class="form-control m-bot15" name="penggunaan_obat">
-                            <option value="1">Bermacam-macam obat yang digunakan : obat sedatif (kecuali pasien ICU yang menggunakan sedasi dan paralisis), Hiptonik Barbitural, Fonotiazin, Antidepresan, Laksansia / Diuretikan, Narkotik</option>
-                            <option value="2">Salah satu Pengobatan di atas</option>
-                            <option value="3">Pengobatan lain</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <input type="hidden" name="jenis_form" value="awal">
-
-                      <button type="submit">Simpan</button>
-
-                    </div>
-                  </section>
-                </form>
-              </div>
-            </section>
-
-            <section class="panel">
-              <header class="panel-heading">
-                MORSE (Dewasa)
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-
-                  <div class="col-lg-2"></div><h4>MORSE (Dewasa) </h4>
+            <form class="form-horizontal " method="post" action="humpty_dumpty">
+              {{ csrf_field() }}
+              <section class="panel">
+                <header class="panel-heading">
+                  HUMPTY DUMPTY (Anak-anak)
+                </header>
+                <div class="panel-body">
+                  <div class="col-lg-2"></div><h4>HUMPTY DUMPTY (Anak-anak) </h4>
                   <div class="form-group"></div>
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">RIWAYAT JATUH</label>
-                    <div class="col-lg-1">
-                      <select class="form-control m-bot15">
-                        <option>Ya</option>
-                        <option>Tidak</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS SEKUNDER</label>
-                    <div class="col-lg-1">
-                      <select class="form-control m-bot15">
-                        <option>Ya</option>
-                        <option>Tidak</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">ALAT BANTU</label>
-                    <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Perabot</option>
-                        <option>Tongkat/Alat Penopang</option>
-                        <option>Tidak ada/Kursi Roda/Perawat/Tirah Baring</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">TERPASANG INFUS</label>
-                    <div class="col-lg-1">
-                      <select class="form-control m-bot15">
-                        <option>Ya</option>
-                        <option>Tidak</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">GAYA BERJALAN</label>
-                    <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Terganggu</option>
-                        <option>Lemah</option>
-                        <option>Normal/Tirah Baring/Imobilisasi</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">STATUS MENTAL</label>
-                    <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Sering lupa akan keterbatasan yang dimiliki</option>
-                        <option>Orientasi baik terhadap kemampuan diri sendiri</option>
-                      </select>
-                    </div>
-                  </div>
-
-                </form>
-              </div>
-            </section>
-
-            <section class="panel">
-              <header class="panel-heading">
-                EDMUNSON (Jiwa)
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-
-                  <div class="col-lg-2"></div><h4>EDMUNSON (Jiwa) </h4>
-                  <div class="form-group"></div>
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">STATUS MENTAL</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">USIA</label>
                     <div class="col-lg-2">
-                      <select class="form-control m-bot15">
-                        <option>Kesadaran baik/orientasi baik setiap saat </option>
-                        <option>Agitasi/Ansietas</option>
-                        <option>Kadang-kadang bingung</option>
-                        <option>Bingung/Disorientasi</option>
+                      <select class="form-control m-bot15" name="usia">
+                        <option value="1">Dibawah 3 tahun </option>
+                        <option value="2">3 – 7 tahun </option>
+                        <option value="3">7 – 13 tahun </option>
+                        <option value="4">> 13 tahun </option>
                       </select>
                     </div>
                   </div>
@@ -488,11 +321,176 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Kelainan Neurologi </option>
-                        <option>Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
-                        <option>Kelainan psikis / prilaku</option>
-                        <option>Diagnosis lain</option>
+                      <select class="form-control m-bot15" name="diagnosis">
+                        <option value="1">Kelainan Neurologi </option>
+                        <option value="2">Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
+                        <option value="3">Kelainan psikis / prilaku</option>
+                        <option value="4">Diagnosis lain</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">GANGGUAN KOGNITIF</label>
+                    <div class="col-lg-7">
+                      <select class="form-control m-bot15" name="gangguan_kognitif">
+                        <option value="1">Tidak sadar terhadap keterbatasan (gangguan kesadaran, retardasi mental</option>
+                        <option value="2">Lupa keterbatasan (anak yang hiperaktif)</option>
+                        <option value="3">Mengetahui kemampuan diri</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">FAKTOR LINGKUNGAN</label>
+                    <div class="col-lg-7">
+                      <select class="form-control m-bot15" name="faktor_lingkungan">
+                        <option value="1">Riwayat jatuh dari tempat tidur saat bayi</option>
+                        <option value="2">Pasien menggunakan alat bantu atau box meubel</option>
+                        <option value="3">Pasien berada di tempat tidur</option>
+                        <option value="4">Di luar ruang rawat</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">RESPON TERHADAP OPERASI/OBAT PENENANG/EFEK ANASTESI</label>
+                    <div class="col-lg-7">
+                      <select class="form-control m-bot15" name="waktu_respon_obat">
+                        <option value="1">Dalam 24 Jam</option>
+                        <option value="2">Dalam 48 Jam</option>
+                        <option value="3">> 48 Jam</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">PENGGUNAAN OBAT</label>
+                    <div class="col-lg-7">
+                      <select class="form-control m-bot15" name="penggunaan_obat">
+                        <option value="1">Bermacam-macam obat yang digunakan : obat sedatif (kecuali pasien ICU yang menggunakan sedasi dan paralisis), Hiptonik Barbitural, Fonotiazin, Antidepresan, Laksansia / Diuretikan, Narkotik</option>
+                        <option value="2">Salah satu Pengobatan di atas</option>
+                        <option value="3">Pengobatan lain</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <input type="hidden" name="jenis_form" value="gigi">
+
+                  <button type="submit">Simpan</button>
+
+                </div>
+              </section>
+            </form>
+
+            <form class="form-horizontal " method="post" action="morse">
+              {{ csrf_field() }}
+              <section class="panel">
+                <header class="panel-heading">
+                  MORSE (Dewasa)
+                </header>
+                <div class="panel-body">
+                  <div class="col-lg-2"></div><h4>MORSE (Dewasa) </h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">RIWAYAT JATUH</label>
+                    <div class="col-lg-1">
+                      <select class="form-control m-bot15" name="riwayat_jatuh">
+                        <option value="true">Ya</option>
+                        <option value="false">Tidak</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS SEKUNDER</label>
+                    <div class="col-lg-1">
+                      <select class="form-control m-bot15" name="diagnosis_sekunder">
+                        <option value="true">Ya</option>
+                        <option value="false">Tidak</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">ALAT BANTU</label>
+                    <div class="col-lg-7">
+                      <select class="form-control m-bot15" name="alat_bantu">
+                        <option value="1">Perabot</option>
+                        <option value="2">Tongkat/Alat Penopang</option>
+                        <option value="3">Tidak ada/Kursi Roda/Perawat/Tirah Baring</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">TERPASANG INFUS</label>
+                    <div class="col-lg-1">
+                      <select class="form-control m-bot15" name="terpasang_infus">
+                        <option value="true">Ya</option>
+                        <option value="false">Tidak</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">GAYA BERJALAN</label>
+                    <div class="col-lg-7">
+                      <select class="form-control m-bot15" name="gaya_berjalan">
+                        <option value="1">Terganggu</option>
+                        <option value="2">Lemah</option>
+                        <option value="3">Normal/Tirah Baring/Imobilisasi</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">STATUS MENTAL</label>
+                    <div class="col-lg-7">
+                      <select class="form-control m-bot15" name="status_mental">
+                        <option value="1">Sering lupa akan keterbatasan yang dimiliki</option>
+                        <option value="2">Orientasi baik terhadap kemampuan diri sendiri</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <input type="hidden" name="jenis_form" value="gigi">
+                  
+                  <button type="submit">Simpan</button>
+
+                </div>
+              </section>
+            </form>
+
+                        <form class="form-horizontal " method="post" action="edmunson">
+              {{ csrf_field() }}
+              <section class="panel">
+                <header class="panel-heading">
+                  EDMUNSON (Jiwa)
+                </header>
+                <div class="panel-body">
+                  <div class="col-lg-2"></div><h4>EDMUNSON (Jiwa) </h4>
+                  <div class="form-group"></div>
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">STATUS MENTAL</label>
+                    <div class="col-lg-2">
+                      <select class="form-control m-bot15" name="status_mental">
+                        <option value="1">Kesadaran baik/orientasi baik setiap saat </option>
+                        <option value="2">Agitasi/Ansietas</option>
+                        <option value="3">Kadang-kadang bingung</option>
+                        <option value="4">Bingung/Disorientasi</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS</label>
+                    <div class="col-lg-7">
+                      <select class="form-control m-bot15" name="diagnosis">
+                        <option value="1">Kelainan Neurologi </option>
+                        <option value="2">Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
+                        <option value="3">Kelainan psikis / prilaku</option>
+                        <option value="4">Diagnosis lain</option>
                       </select>
                     </div>
                   </div>
@@ -500,12 +498,12 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">ELIMINASI</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Mandiri dan mampi mengontrol BAB/BAK</option>
-                        <option>Dower Catheter/Colostomy</option>
-                        <option>Eliminasi dengan bantuan</option>
-                        <option>Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)</option>
-                        <option>Inkontinesia tetapi mampu untuk mobilisasi</option>
+                      <select class="form-control m-bot15" name="eliminasi">
+                        <option value="1">Mandiri dan mampi mengontrol BAB/BAK</option>
+                        <option value="2">Dower Catheter/Colostomy</option>
+                        <option value="3">Eliminasi dengan bantuan</option>
+                        <option value="4">Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)</option>
+                        <option value="5">Inkontinesia tetapi mampu untuk mobilisasi</option>
                       </select>
                     </div>
                   </div>
@@ -513,11 +511,11 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">PENGOBATAN</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Tanpa obat-obatan</option>
-                        <option>Obat-obatan jantung</option>
-                        <option>Obat-obat psikotropika (termasuk Benzodiazepine dan Antidepresan)</option>
-                        <option>Mendapat tambahan obat-obatan dan/atau obat-obat PRN (psikiatri, antinyeri) yang diberikan dalam 24 jam terakhir</option>
+                      <select class="form-control m-bot15" name="pengobatan">
+                        <option value="1">Tanpa obat-obatan</option>
+                        <option value="2">Obat-obatan jantung</option>
+                        <option value="3">Obat-obat psikotropika (termasuk Benzodiazepine dan Antidepresan)</option>
+                        <option value="4">Mendapat tambahan obat-obatan dan/atau obat-obat PRN (psikiatri, antinyeri) yang diberikan dalam 24 jam terakhir</option>
                       </select>
                     </div>
                   </div>
@@ -525,11 +523,11 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSA</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Bipolar/ Gangguan Schizoaffective</option>
-                        <option>Penggunaan Obat-obatan terlarang/ketergantungan alkohol</option>
-                        <option>Gangguan Depresi Mayor</option>
-                        <option>Dimensia/ Delirium</option>
+                      <select class="form-control m-bot15" name="diagnosa">
+                        <option value="1">Bipolar/ Gangguan Schizoaffective</option>
+                        <option value="2">Penggunaan Obat-obatan terlarang/ketergantungan alkohol</option>
+                        <option value="3">Gangguan Depresi Mayor</option>
+                        <option value="4">Dimensia/ Delirium</option>
                       </select>
                     </div>
                   </div>
@@ -537,12 +535,12 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">AMBULASI /KESEIMBANGAN </label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Mandiri/Keseimbangan Baik/Immobilisasi</option>
-                        <option>Dengan Alat Bantu (Kursi roda, walker,dll)</option>
-                        <option>Vertigo/kelemahan</option>
-                        <option>Goyah/membutuhkan mantuan dan menyadari kemampuan</option>
-                        <option>Goyah tapi lupa keterbatasan</option>
+                      <select class="form-control m-bot15" name="ambulasi">
+                        <option value="1">Mandiri/Keseimbangan Baik/Immobilisasi</option>
+                        <option value="2">Dengan Alat Bantu (Kursi roda, walker,dll)</option>
+                        <option value="3">Vertigo/kelemahan</option>
+                        <option value="4">Goyah/membutuhkan mantuan dan menyadari kemampuan</option>
+                        <option value="5">Goyah tapi lupa keterbatasan</option>
                       </select>
                     </div>
                   </div>
@@ -550,10 +548,10 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">NUTRISI</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Mengkonsumsi sedikit makanan atau minuman  dalam 24 jam terakhir</option>
-                        <option>Tidak ada kelainan dengan nafsu makan</option>
-                        <option>Gangguan pola tidur yang dilaporkan oleh pasien, keluarga atau petugas</option>
+                      <select class="form-control m-bot15" name="nutrisi">
+                        <option value="1">Mengkonsumsi sedikit makanan atau minuman  dalam 24 jam terakhir</option>
+                        <option value="2">Tidak ada kelainan dengan nafsu makan</option>
+                        <option value="3">Gangguan pola tidur yang dilaporkan oleh pasien, keluarga atau petugas</option>
                       </select>
                     </div>
                   </div>
@@ -561,18 +559,20 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">RIWAYAT JATUH</label>
                     <div class="col-lg-7">
-                      <select class="form-control m-bot15">
-                        <option>Tidak ada riwayat jatuh</option>
-                        <option>Ada riwayat jatuh dalam 3 bulan terakhir</option>
+                      <select class="form-control m-bot15" name="riwayat_jatuh">
+                        <option value="1">Tidak ada riwayat jatuh</option>
+                        <option value="2">Ada riwayat jatuh dalam 3 bulan terakhir</option>
                       </select>
                     </div>
                   </div>
 
+                  <input type="hidden" name="jenis_form" value="gigi">
 
+                  <button type="submit">Simpan</button>
 
-                </form>
-              </div>
-            </section>
+                </div>
+              </section>
+            </form>
 
             <section class="panel">
               <header class="panel-heading">

@@ -14,6 +14,7 @@ class Morse extends Model
 
     protected $fillable = [
         'id_regis',
+        'jenis_form',
         'riwayat_jatuh',
         'diagnosis_sekunder',
         'alat_bantu',

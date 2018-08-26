@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
-use App\RJAAAsesmenKeperawatan;
+use App\Models\RJAsesmenKeperawatan;
 use App\Models\Nyeri;
 use App\Models\FisikGizi;
 use App\Models\HumptyDumpty;
@@ -25,9 +25,14 @@ use App\Models\TindakLanjut;
 
 class RawatJalanController extends Controller
 {
-    public function asesmen_awal() 
+    public function asesmen_awal()      //soon will be obsolete
     {
     	return view('rj_asesmen_awal');
+    }
+ 
+    public function get_rj_asesmen_awal_asesmen_keperawatan_perawat()
+    {
+        return view('page.rj.asesmen_awal_asesmen_keperawatan_perawat');
     }
 
     public function store_rj_asesmen_awal_asesmen_keperawatan(Request $request)
@@ -400,6 +405,7 @@ class RawatJalanController extends Controller
     {
         $humpty = new HumptyDumpty;
         $humpty->id_regis = 1;
+        $humpty->jenis_form = $request->jenis_form;
         $humpty->usia = $request->usia;
         $humpty->diagnosis = $request->diagnosis;
         $humpty->gangguan_kognitif = $request->gangguan_kognitif;
@@ -414,6 +420,7 @@ class RawatJalanController extends Controller
     {
         $morse = new Morse;
         $morse->id_regis = 1;
+        $morse->jenis_form = $request->jenis_form;
         if($request->riwayat_jatuh == 'true') {
             $morse->riwayat_jatuh = True;
         }
@@ -443,6 +450,7 @@ class RawatJalanController extends Controller
     {
         $edmunson = new Edmunson;
         $edmunson->id_regis = 1;
+        $edmunson->jenis_form = $request->jenis_form;
         $edmunson->status_mental = $request->status_mental;
         $edmunson->diagnosis = $request->diagnosis;
         $edmunson->eliminasi = $request->eliminasi;

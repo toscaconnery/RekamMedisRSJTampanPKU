@@ -16,6 +16,7 @@ class CreateEdmunsonTable extends Migration
         Schema::create('edmunson', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->string('jenis_form');
             $table->tinyInteger('status_mental');
             $table->tinyInteger('diagnosis');
             $table->tinyInteger('eliminasi');

@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class FisikGizi extends Model
+class RJFisikGizi extends Model
 {
-    protected $table = 'fisik_gizi';
+    protected $table = 'rj_fisik_gizi';
 
     public $incrementing = true;
 
