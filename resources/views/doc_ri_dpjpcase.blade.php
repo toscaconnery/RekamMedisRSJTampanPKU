@@ -132,7 +132,7 @@ header('Content-Type: application/pdf');
     <table class="tabel">
       <thead>
           <tr>   
-              <th class="default" data-field="name">Case Manager</th>
+              <th class="default" data-field="name" width="90%">Case Manager</th>
               <th class="default" data-field="name">Ttd</th>
           </tr>    
       </thead>

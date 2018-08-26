@@ -19,18 +19,18 @@ header('Content-Type: application/pdf');
       <tr>
         <th class="default" style="width:20px;height:30px;" rowspan="2">No</th>
         <th class="default" style="width:20%;height:30px;" rowspan="2"></th>
-        <th class="default" style="height:30px;" rowspan="2">Penilaian</th>
+        <th class="default" style="height:30px;width:10%" rowspan="2">Penilaian</th>
         <th class="default" style="height:30px;" colspan="8">Tanggal</th> 
       </tr>
       <tr>
-        <th class="default" style="height:30px;">Tgl</th>
-        <th class="default" style="height:30px;">Tgl</th>
-        <th class="default" style="height:30px;">Tgl</th>
-        <th class="default" style="height:30px;">Tgl</th>
-        <th class="default" style="height:30px;">Tgl</th>
-        <th class="default" style="height:30px;">Tgl</th>
-        <th class="default" style="height:30px;">Tgl</th>
-        <th class="default" style="height:30px;">Tgl</th>
+        <th class="default" style="height:30px;width:9%">Tgl</th>
+        <th class="default" style="height:30px;width:9%">Tgl</th>
+        <th class="default" style="height:30px;width:9%">Tgl</th>
+        <th class="default" style="height:30px;width:9%">Tgl</th>
+        <th class="default" style="height:30px;width:9%">Tgl</th>
+        <th class="default" style="height:30px;width:9%">Tgl</th>
+        <th class="default" style="height:30px;width:9%">Tgl</th>
+        <th class="default" style="height:30px;width:9%">Tgl</th>
       </tr>
       
     </thead>
@@ -47,7 +47,7 @@ header('Content-Type: application/pdf');
           -
         </td>
         <td class="default" style="text-align:center;height:30px;">
-          -
+          25/09/1995
         </td>
         <td class="default" style="text-align:center;height:30px;">
           -

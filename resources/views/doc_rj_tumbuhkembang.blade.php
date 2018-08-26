@@ -283,10 +283,10 @@ header('Content-Type: application/pdf');
       <table class="tabel">
           <thead>
               <tr>   
-                  <th class="default" data-field="name">Umur</th>
-                  <th class="default" data-field="name">Jenis Kelamin</th>
-                  <th class="default" data-field="name">Pendidikan</th>
-                  <th class="default" data-field="name">Pekerjaan</th>
+                  <th class="default" data-field="name" width="15%">Umur</th>
+                  <th class="default" data-field="name" width="25%">Jenis Kelamin</th>
+                  <th class="default" data-field="name" width="25%">Pendidikan</th>
+                  <th class="default" data-field="name" width="35%">Pekerjaan</th>
               </tr>    
           </thead>
 
@@ -342,23 +342,23 @@ header('Content-Type: application/pdf');
       <table class="tabel">
           <thead>
               <tr>   
-                  <th class="default" data-field="name">Umur</th>
-                  <th class="default" data-field="name">Jenis Kelamin</th>
-                  <th class="default" data-field="name">Pendidikan</th>
-                  <th class="default" data-field="name">Pekerjaan</th>
+                  <th class="default" data-field="name" width="15%">Umur</th>
+                  <th class="default" data-field="name" width="25%">Jenis Kelamin</th>
+                  <th class="default" data-field="name" width="25%">Pendidikan</th>
+                  <th class="default" data-field="name" width="35%">Pekerjaan</th>
               </tr>    
           </thead>
 
           <tbody>
             <tr>
               <td class="kolom">
-                -
+                7 tahun
               </td>
               <td class="kolom">
-                -
+                Perempuan
               </td> 
               <td class="kolom">
-                -
+                SD
               </td> 
               <td class="kolom">
                 -
@@ -407,10 +407,10 @@ header('Content-Type: application/pdf');
       <table class="tabel">
           <thead>
               <tr>   
-                  <th class="default" data-field="name">Umur</th>
-                  <th class="default" data-field="name">Jenis Kelamin</th>
-                  <th class="default" data-field="name">Pendidikan</th>
-                  <th class="default" data-field="name">Pekerjaan</th>
+                  <th class="default" data-field="name" width="15%">Umur</th>
+                  <th class="default" data-field="name" width="25%">Jenis Kelamin</th>
+                  <th class="default" data-field="name" width="25%">Pendidikan</th>
+                  <th class="default" data-field="name" width="35%">Pekerjaan</th>
               </tr>    
           </thead>
 
@@ -557,10 +557,10 @@ header('Content-Type: application/pdf');
       <table class="tabel">
           <thead>
               <tr>   
-                  <th class="default" data-field="name">Penyakit</th>
-                  <th class="default" data-field="name">Tahun</th>
-                  <th class="default" data-field="name">Lamanya</th>
-                  <th class="default" data-field="name">Keterangan</th>
+                  <th class="default" data-field="name" width="25%">Penyakit</th>
+                  <th class="default" data-field="name" width="25%">Tahun</th>
+                  <th class="default" data-field="name" width="25%">Lamanya</th>
+                  <th class="default" data-field="name" width="25%">Keterangan</th>
               </tr>    
           </thead>
 
@@ -632,9 +632,9 @@ header('Content-Type: application/pdf');
       <table class="tabel">
           <thead>
               <tr>   
-                  <th class="default" data-field="name">Penyakit</th>
-                  <th class="default" data-field="name">Tahun</th>
-                  <th class="default" data-field="name">Keterangan</th>
+                  <th class="default" data-field="name" width="25%">Penyakit</th>
+                  <th class="default" data-field="name" width="25%">Tahun</th>
+                  <th class="default" data-field="name" width="50%">Keterangan</th>
               </tr>    
           </thead>
 

@@ -17,7 +17,7 @@ class Pdf_rj_Controller extends Controller
 
         $mpdf = new \Mpdf\Mpdf([
         'mode' => 'utf-8', 
-        'format' => 'A4-L', 
+        'format' => 'A4-P', 
         'orientation' => 'P'
         ]);
 
@@ -88,7 +88,7 @@ class Pdf_rj_Controller extends Controller
 
         $mpdf = new \Mpdf\Mpdf([
         'mode' => 'utf-8', 
-        'format' => 'A4-L', 
+        'format' => 'A4-P', 
         'orientation' => 'P'
         ]);
 
@@ -159,7 +159,7 @@ class Pdf_rj_Controller extends Controller
 
         $mpdf = new \Mpdf\Mpdf([
         'mode' => 'utf-8', 
-        'format' => 'A4-L', 
+        'format' => 'A4-P', 
         'orientation' => 'P'
         ]);
 
@@ -230,7 +230,7 @@ class Pdf_rj_Controller extends Controller
 
         $mpdf = new \Mpdf\Mpdf([
         'mode' => 'utf-8', 
-        'format' => 'A4-L', 
+        'format' => 'A4-P', 
         'orientation' => 'P'
         ]);
 
@@ -301,7 +301,7 @@ class Pdf_rj_Controller extends Controller
 
         $mpdf = new \Mpdf\Mpdf([
         'mode' => 'utf-8', 
-        'format' => 'A4-L', 
+        'format' => 'A4-P', 
         'orientation' => 'P'
         ]);
 
@@ -372,7 +372,7 @@ class Pdf_rj_Controller extends Controller
 
         $mpdf = new \Mpdf\Mpdf([
         'mode' => 'utf-8', 
-        'format' => 'A4-L', 
+        'format' => 'A4-P', 
         'orientation' => 'P'
         ]);
 
@@ -444,7 +444,7 @@ class Pdf_rj_Controller extends Controller
         $mpdf = new \Mpdf\Mpdf([
         'mode' => 'utf-8', 
         'format' => 'A4-L', 
-        'orientation' => 'P'
+        'orientation' => 'L'
         ]);
 
         $view = View::make('doc_rj_ikhtisarhiv');
@@ -457,25 +457,25 @@ class Pdf_rj_Controller extends Controller
                 <tbody>
                         <tr>
 
-                            <td class= "doc_headerleft">
-                                <img class="relative" src="img/riau.png" height="9%" width="7%">
+                            <td class= "doc_lheaderleft">
+                                <img class="relative" src="img/riau.png" height="6%" width="4%">
                             </td>
 
-                            <td class="doc_headermid">
+                            <td class="doc_lheadermid">
                                 <p style="font-size:120%;" ><b>Pemerintah Provinsi Riau</b></p>
                                 <br><p style="font-size:160%;" ><b>RUMAH SAKIT JIWA TAMPAN</b></p>
                                 <br><p style="font-size:90%;" >Jl. H. R. Soebrantas Km. 12,5 Pekanbaru Telp. (0761) 63240</p>
                                 <p style="font-size:90%;" >Fax. (0761) 63239 E-mail : rstampan@yahoo.com</p>
                             </td>
                             
-                            <td class="doc_headerright">
+                            <td class="doc_lheaderright">
                             <p>No. RM           </p><br>
                             <p>Nama Pasien      </p><br>
                             <p>Tanggal Lahir    </p><br>
                             <p>Jenis Kelamin    </p><br>
                             </td>    
 
-                            <td class="doc_headerright_ans">
+                            <td class="doc_lheaderright_ans">
                             <p>:  123456</p><br>
                             <p>:  Joko Pangestu</p><br>
                             <p>:  13/08/1992</p><br>
@@ -498,7 +498,7 @@ class Pdf_rj_Controller extends Controller
 
         $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
 
-        $mpdf->AddPage('L','','','','',10,10,35,20,10,10);
+        $mpdf->AddPage('L','','','','',5,5,35,10,10,3);
         //right,left
         $mpdf->WriteHTML($stylesheet, 1);
         $mpdf->WriteHTML($contents,2,true,false);

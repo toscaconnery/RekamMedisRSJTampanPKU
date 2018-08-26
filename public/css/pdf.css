@@ -481,6 +481,7 @@ td.konten_s_answer{
 
 td.konten_l_question{
     width: 52%;
+    padding-top: 5px;
     vertical-align: top;
     line-height: 10px;
     font-family: "arial", Times, serif;
@@ -489,6 +490,7 @@ td.konten_l_question{
 
 td.konten_l_answer{
     width: 52%;
+    padding-top: 5px;
     vertical-align: top;
     line-height: 10px;
     font-family: "arial", Times, serif;
@@ -1112,6 +1114,39 @@ p.answer {
 p.question {
     padding-top: -10px;
     padding-bottom: -15px;
+}
+
+td.doc_lheaderleft {
+    width: 4%;
+    vertical-align: top;
+    line-height: 10px;
+    font-family: "arial", Times, serif;
+    text-align: left;
+}
+
+td.doc_lheadermid {
+    width: 52%;
+    vertical-align: top;
+    line-height: 10px;
+    font-family: "arial", Times, serif;
+    text-align: left;
+}
+
+td.doc_lheaderright {
+    width: 15%;
+    vertical-align: top;
+    line-height: 8px;
+    font-family: "arial", Times, serif;
+    text-align: left;
+}
+
+td.doc_lheaderright_ans {
+    width: 22%;
+
+    vertical-align: top;
+    line-height: 8px;
+    font-family: "Arial", Times, serif;
+    text-align: left;
 }
 
 
