@@ -13,6 +13,8 @@ class Edmunson extends Model
     public $timestamps = true;
 
     protected $fillable = [
+        'id_regis',
+        'jenis_form',
         'status_mental',
         'diagnosis',
         'eliminasi',

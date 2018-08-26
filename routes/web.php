@@ -25,10 +25,9 @@ Route::get('/identifikasi_pasien_baru_1', 'PasienController@identifikasi_pasien_
 Route::post('/identifikasi_pasien_baru_2', 'PasienController@identifikasi_pasien_baru_2');
 Route::post('/identifikasi_pasien_baru_final', 'PasienController@identifikasi_pasien_baru_final');
 
-// RAWAT JALAN
+// RAWAT JALAN========
 // ASESMEN AWAL
-Route::get('/rj_asesmen_awal', 'RawatJalanController@asesmen_awal');
-Route::post('/rj_asesmen_awal_asesmen_keperawatan', 'RawatJalanController@store_rj_asesmen_awal_asesmen_keperawatan');
+Route::get('/rj_asesmen_awal', 'RawatJalanController@asesmen_awal');    //will obsolete soon
 Route::post('/fisik_gizi', 'RawatJalanController@store_fisik_gizi');
 Route::post('/penilaian_tingkat_nyeri', 'RawatJalanController@store_penilaian_tingkat_nyeri');
 Route::post('/humpty_dumpty', 'RawatJalanController@store_humpty_dumpty');
@@ -48,6 +47,14 @@ Route::post('/tindak_lanjut', 'RawatJalanController@store_tindak_lanjut');
 
 // ASESMEN GIGI
 Route::get('/rj_asesmen_gigi', 'RawatJalanController@asesmen_gigi');
+
+//FIX
+Route::get('/rj_asesmen_awal_asesmen_keperawatan_perawat', 'RJAsesmenAwalController@get_rj_asesmen_awal_asesmen_keperawatan_perawat');
+Route::post('/rj_asesmen_awal_asesmen_keperawatan_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_asesmen_keperawatan_perawat');
+
+
+
+
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');
 

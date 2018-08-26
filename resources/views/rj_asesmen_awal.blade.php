@@ -1061,6 +1061,8 @@
                       </select>
                     </div>
                   </div>
+
+                  <input type="hidden" name="jenis_form" value="awal">
                   
                   <button type="submit">Simpan</button>
 
@@ -1172,6 +1174,8 @@
                       </select>
                     </div>
                   </div>
+
+                  <input type="hidden" name="jenis_form" value="awal">
 
                   <button type="submit">Simpan</button>
 
@@ -1420,7 +1424,7 @@
                 </div>
               </section>
             </form>
-
+            {{-- ////////////////// --}}
 
             <form class="form-horizontal " method="post" action="data_medis">
               {{ csrf_field() }}
