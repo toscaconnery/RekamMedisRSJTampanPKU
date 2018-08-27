@@ -433,6 +433,13 @@ Route::get('/doc_ri_tindak', function () {
     return view('/doc_ri_tindak');
 });
 
+//dokumen laboratorium
+Route::get('/pdf_ri_lab', 'Pdf_ri_Controller@pdf_ri_lab');
+
+Route::get('/doc_ri_lab', function () {
+    return view('/doc_ri_lab');
+});
+
 //dokumen evaluasi tindak keperawatan
 Route::get('/pdf_ri_evaluasi', 'Pdf_ri_Controller@pdf_ri_evaluasi');
 

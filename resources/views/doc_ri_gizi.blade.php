@@ -761,6 +761,72 @@ header('Content-Type: application/pdf');
       </tbody>
     </table>
 
+    <pagebreak>
+
+    <table>
+    <tbody>
+      <tr>
+        <td width="20%">Validasi Oleh</td>
+        <td width="20%">: -</td>
+        <td width="20%"></td>
+        <td width="20%">Dokter Pengirim</td>
+        <td width="20%">: -</td>
+      </tr>
+      <tr>
+        <td>Bahan Diterima</td>
+        <td>: -</td>
+        <td></td>
+        <td>Ruangan</td>
+        <td>: -</td>
+      </tr>
+      <tr>
+        <td>Hasil Dicetak</td>
+        <td>: -</td>
+        <td></td>
+        <td>Tanggal Permintaan</td>
+        <td>: -</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="big-box" width="10%">TANGGAL</th>
+        <th class="big-box" width="10%">BB (KG)</th>
+        <th class="big-box" width="60%">KONSULTASI GIZI/PENGAMATAN</th>
+        <th class="big-box" width="20%">PARAF & NAMA</th>  
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="s-box">21/06/2008</td>
+        <td class="s-box">-</td>
+        <td class="s-box">-</td>
+        <td class="s-box">-</td>
+      </tr>
+      <tr>
+        <td class="s-box">21/06/2008</td>
+        <td class="s-box">-</td>
+        <td class="s-box">-</td>
+        <td class="s-box">-</td>
+      </tr>
+      <tr>
+        <td class="s-box">21/06/2008</td>
+        <td class="s-box">-</td>
+        <td class="s-box">-</td>
+        <td class="s-box">-</td>
+      </tr>
+      <tr>
+        <td class="s-box">21/06/2008</td>
+        <td class="s-box">-</td>
+        <td class="s-box">-</td>
+        <td class="s-box">-</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 
 <html>

@@ -295,7 +295,7 @@ header('Content-Type: application/pdf');
   <tbody>
     <tr>
       <td class="default" colspan="4">Status Pasien di Medical Record</td>
-      <td class="default" colspan="3">Apoteker: -</td>
+      <td class="default" colspan="3">Dokter: -</td>
       <td class="default" rowspan="2">Tgl: -</td>
     </tr>
     <tr>
