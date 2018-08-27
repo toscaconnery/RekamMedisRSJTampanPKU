@@ -17,8 +17,10 @@ use App\Models\RJObatSaatIni;
 use App\Models\RJPemeriksaanFisik;
 use App\Models\RJStatusPsikiatri;
 use App\Models\RJStatusNeurologi;
-use App\Models\RJPemriksaanPenunjang;
+use App\Models\RJPemeriksaanPenunjang;
 use App\Models\RJInstrumenPenilaian;
+use App\Models\RJDiagnosisTindakanTerapi;
+use App\Models\RJTindakLanjut;
 
 class RJAsesmenAwalController extends Controller
 {
@@ -30,6 +32,11 @@ class RJAsesmenAwalController extends Controller
     public function get_rj_asesmen_awal_dokter()
     {
     	return view('page.rj.asesmen_awal_dokter');
+    }
+
+    public function get_rj_asesmen_awal_gigi_perawat()
+    {
+        //
     }
 
     public function post_rj_asesmen_awal_perawat(Request $request)
@@ -600,7 +607,7 @@ class RJAsesmenAwalController extends Controller
         // DATA MEDIS //////////
         // DATA MEDIS //////////
 
-    	$data = new RJNyeriDataMedis;
+    	$data = new RJDataMedis;
         $data->id_regis = 1;
         $data->pewawancara = $request->pewawancara;
         $data->keluhan_utama = $request->keluhan_utama;
@@ -795,17 +802,17 @@ class RJAsesmenAwalController extends Controller
         // PEMERIKSAAN PENUNJANG ///////////
         // PEMERIKSAAN PENUNJANG ///////////
 
-        $pemeriksaan = new RJPemeriksaanPenunjang;
-        $pemeriksaan->id_regis = 1;
-        $pemeriksaan->jenis = $request->jenis;
-        $pemeriksaan->jam_pemeriksaan = $request->jam_pemeriksaan;
-        $pemeriksaan->jam_hasil = $request->jam_hasil;
-        $pemeriksaan->keterangan = $request->keterangan;
-        $pemeriksaan->laboratorium = $request->laboratorium;
-        $pemeriksaan->radiologi = $request->radiologi;
-        $pemeriksaan->ekg = $request->ekg;
-        $pemeriksaan->lainnya = $request->lainnya;
-        $pemeriksaan->save();
+        // $pemeriksaan = new RJPemeriksaanPenunjang;
+        // $pemeriksaan->id_regis = 1;
+        // $pemeriksaan->jenis = $request->jenis;
+        // $pemeriksaan->jam_pemeriksaan = $request->jam_pemeriksaan;
+        // $pemeriksaan->jam_hasil = $request->jam_hasil;
+        // $pemeriksaan->keterangan = $request->keterangan;
+        // $pemeriksaan->laboratorium = $request->laboratorium;
+        // $pemeriksaan->radiologi = $request->radiologi;
+        // $pemeriksaan->ekg = $request->ekg;
+        // $pemeriksaan->lainnya = $request->lainnya;
+        // $pemeriksaan->save();
 
         
         // INSTRUMEN PENILAIAN ///////////////////
@@ -902,5 +909,12 @@ class RJAsesmenAwalController extends Controller
         $data->save();
 
         return redirect('index');
+    }
+
+
+
+    public function post_rj_asesmen_awal_gigi_perawat(Request $request)
+    {
+        //
     }
 }

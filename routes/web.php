@@ -53,6 +53,8 @@ Route::get('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@get_rj_asesmen_a
 Route::post('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_perawat');
 Route::get('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@get_rj_asesmen_awal_dokter');
 Route::post('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@post_rj_asesmen_awal_dokter');
+Route::get('/rj_asesmen_awal_gigi_perawat', 'RJAsesmenAwalController@get_rj_asesmen_awal_gigi_perawat');
+Route::post('/rj_asesmen_awal_gigi_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_gigi_perawat');
 
 
 
