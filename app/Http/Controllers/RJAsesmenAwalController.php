@@ -21,6 +21,7 @@ use App\Models\RJPemeriksaanPenunjang;
 use App\Models\RJInstrumenPenilaian;
 use App\Models\RJDiagnosisTindakanTerapi;
 use App\Models\RJTindakLanjut;
+use App\Models\RJDataMedik;
 
 class RJAsesmenAwalController extends Controller
 {
@@ -37,6 +38,11 @@ class RJAsesmenAwalController extends Controller
     public function get_rj_asesmen_awal_gigi_perawat()
     {
         return view('page.rj.asesmen_awal_gigi_perawat');
+    }
+
+    public function get_rj_asesmen_awal_gigi_dokter()
+    {
+        return view('page.rj.asesmen_awal_gigi_dokter');
     }
 
     public function post_rj_asesmen_awal_perawat(Request $request)
@@ -1005,5 +1011,50 @@ class RJAsesmenAwalController extends Controller
             $edmunson->save();
         }
         return redirect('index');
+    }
+
+    public function post_rj_asesmen_awal_gigi_dokter(Request $request)
+    {
+        $data = new RJDataMedik;
+        $data->id_regis = 1;
+        $data->golongan_darah = $request->golongan_darah;
+        $data->tekanan_darah_top = $request->tekanan_darah_top;
+        $data->tekanan_darah_bottom = $request->tekanan_darah_bottom;
+         if($request->tekanan_jantung == 'true') {
+            $data->ket_tekanan_jantung = $request->ket_tekanan_jantung;
+         }
+        if($request->diabetes == 'true') {
+            $data->ket_diabetes = $request->ket_diabetes;
+        }
+        if($request->hepatitis == 'true') {
+            $data->ket_hepatitis = $request->ket_hepatitis;
+        }
+        if($request->penyakit_lainnya == 'true') {
+            $data->ket_penyakit_lainnya = $request->ket_penyakit_lainnya;
+        }
+        if($request->alergi_obat == 'true') {
+            $data->ket_alergi_obat = $request->ket_alergi_obat;
+        }
+        if($request->alergi_makanan == 'true') {
+            $data->ket_alergi_makanan = $request->ket_alergi_makanan;
+        }
+        $data->oklusi = $request->oklusi;
+        $data->torus_palatinus = $request->torus_palatinus;
+        $data->torus_mandibularis = $request->torus_mandibularis;
+        $data->palatum = $request->palatum;
+        if($request->supernumerary_teeth == 'true') {
+            $data->ket_supernumerary_teeth = $request->ket_supernumerary_teeth;
+        }
+        if($request->diastema == 'true') {
+            $data->ket_diastema = $request->ket_diastema;
+        }
+        if($request->anomali == 'true') {
+            $data->ket_anomali = $request->ket_anomali;
+        }
+        $data->lain = $request->lain;
+        $data->keterangan = $request->keterangan;
+        $data->save();
+        return redirect('index');
+
     }
 }
