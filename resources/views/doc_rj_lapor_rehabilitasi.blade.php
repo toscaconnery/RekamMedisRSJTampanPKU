@@ -485,12 +485,12 @@ header('Content-Type: application/pdf');
     <table>
       <thead>
         <tr>
-          <th class="default">Sistem Pencernaan</th>
-          <th class="default">Sistem jantung <br>dan pembuluh darah</th>
-          <th class="default">Sistem pernapasan</th>
-          <th class="default">Sistem saraf pusat</th>
-          <th class="default">THT dan kulit</th>
-          <th class="default">Keterangan</th>6
+          <th class="default" width="15%">Sistem Pencernaan</th>
+          <th class="default" width="15%">Sistem jantung <br>dan pembuluh darah</th>
+          <th class="default" width="15%">Sistem pernapasan</th>
+          <th class="default" width="15%">Sistem saraf pusat</th>
+          <th class="default" width="15%">THT dan kulit</th>
+          <th class="default" width="25%">Keterangan</th>6
         </tr>  
       </thead>
       <tbody>

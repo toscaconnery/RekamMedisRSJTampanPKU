@@ -13,7 +13,8 @@ header('Content-Type: application/pdf');
 
 
   <h2 align="center" style="font-size:110%;">LEMBAR TRANSFER PASIEN INTERNAL RUMAH SAKIT</h2>
-  <hr>
+
+  <br>
   <div style="font-size: 15%;"> 
 
     <div class="row" >

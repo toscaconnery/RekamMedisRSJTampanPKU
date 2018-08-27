@@ -24,18 +24,18 @@ header('Content-Type: application/pdf');
         <table style="font-size: 60%;">
           <tbody>
             <tr>
-              <td class="konten_question" style="width:30%;">
+              <td class="konten_l_question" style="width:30%;">
                 RS Tujuan
               </td>    
-              <td class="konten_answer" style="width:40%;">  
+              <td class="konten_l_answer" style="width:40%;">  
                 : -
               </td>                
             </tr>
             <tr>
-              <td class="konten_question">
+              <td class="konten_l_question">
                 Petugas RS tujuan yang dihubungi 
               </td>    
-              <td class="konten_answer">  
+              <td class="konten_l_answer">  
                 : -
               </td>                
             </tr>
@@ -46,18 +46,18 @@ header('Content-Type: application/pdf');
         <table style="font-size: 60%;">
           <tbody>
             <tr>
-              <td class="konten_question">
+              <td class="konten_l_question">
                 Tanggal
               </td>    
-              <td class="konten_answer">  
+              <td class="konten_l_answer">  
                 : -
               </td>                
             </tr>
             <tr>
-              <td class="konten_question">
+              <td class="konten_l_question">
                 Jam
               </td>    
-              <td class="konten_answer">  
+              <td class="konten_l_answer">  
                 : -
               </td>                
             </tr>
@@ -89,18 +89,18 @@ header('Content-Type: application/pdf');
         <table style="font-size: 60%;">
           <tbody>
             <tr>
-              <td class="konten_question">
+              <td class="konten_l_question">
                 Tanggal transfer
               </td>    
-              <td class="konten_answer">  
+              <td class="konten_l_answer">  
                 : -
               </td>                
             </tr>
             <tr>
-              <td class="konten_question">
+              <td class="konten_l_question">
                 Jam transfer
               </td>    
-              <td class="konten_answer">  
+              <td class="konten_l_answer">  
                 : -
               </td>                
             </tr>
@@ -132,10 +132,10 @@ header('Content-Type: application/pdf');
         <table style="font-size: 60%;">
           <tbody>
             <tr>
-              <td class="konten_question">
+              <td class="konten_l_question">
                 Kategori pasien transfer
               </td>    
-              <td class="konten_answer">  
+              <td class="konten_l_answer">  
                 : -
               </td>                
             </tr>
@@ -195,15 +195,15 @@ header('Content-Type: application/pdf');
   	<table style="font-size: 60%;">
     <thead>
       <tr>
-        <th class="default">JAM</th>
-        <th class="default">KEADAAN UMUM</th>
-        <th class="default">TD mmHg</th>
-        <th class="default">HR x/mnt</th>
-        <th class="default">RR x/mnt</th>
-        <th class="default">SUHU (<sup>o</sup>C)</th>
-        <th class="default">SpO2</th>
-        <th class="default">LAINNYA</th>
-        <th class="default">KET</th>
+        <th class="default" width="5%">JAM</th>
+        <th class="default" width="20%">KEADAAN UMUM</th>
+        <th class="default" width="15%">TD mmHg</th>
+        <th class="default" width="10%">HR x/mnt</th>
+        <th class="default" width="10%">RR x/mnt</th>
+        <th class="default" width="10%">SUHU (<sup>o</sup>C)</th>
+        <th class="default" width="10%">SpO2</th>
+        <th class="default" width="10%">LAINNYA</th>
+        <th class="default" width="15%">KET</th>
       </tr>  
     </thead>
 
@@ -300,15 +300,15 @@ header('Content-Type: application/pdf');
 	                  <td class="konten_question" style="padding-left:5px;font-size: 80%;width:1px;" >
 	                    Tanggal
 	                  </td>    
-	                  <td class="konten_answer" style="font-size: 60%;">  
-	                    : -
+	                  <td class="konten_answer" style="font-size: 80%;">  
+	                    : 21/05/2018
 	                  </td>                
 	                </tr>
 	                <tr>
 	                  <td class="konten_question" style="padding-left:5px;font-size: 80%;width:1px;">
 	                    Jam
 	                  </td>    
-	                  <td class="konten_answer" style="font-size: 60%;">  
+	                  <td class="konten_answer" style="font-size: 80%;">  
 	                    : -
 	                  </td>                
 	                </tr>
@@ -316,7 +316,7 @@ header('Content-Type: application/pdf');
 	                  <td class="konten_question" style="padding-left:5px;font-size: 80%;width:1px;">
 	                    RS
 	                  </td>    
-	                  <td class="konten_answer" style="font-size: 60%;">  
+	                  <td class="konten_answer" style="font-size: 80%;">  
 	                    : -
 	                  </td>                
 	                </tr>
