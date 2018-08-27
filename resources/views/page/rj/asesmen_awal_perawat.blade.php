@@ -816,9 +816,6 @@
                       <input type="text" class="form-control" name="waktu_pemberitahuan">
                     </div>
                   </div>
-
-                  <input type="hidden" name="jenis_form" value="awal">
-
                 </div>
               </section>
 
@@ -930,9 +927,6 @@
                       </select>
                     </div>
                   </div>
-
-                  <input type="hidden" name="jenis_form" value="awal">
-
                 </div>
               </section>
 
@@ -1005,9 +999,6 @@
                       </select>
                     </div>
                   </div>
-
-                  <input type="hidden" name="jenis_form" value="awal">
-                  
                 </div>
               </section>
 
@@ -1113,9 +1104,6 @@
                       </select>
                     </div>
                   </div>
-
-                  <input type="hidden" name="jenis_form" value="awal">
-
                 </div>
               </section>
 
@@ -1347,12 +1335,13 @@
                       <textarea name="evaluasi" rows="8" cols="114" style="resize: none;"></textarea>
                     </div>
                   </div>
+                  <div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
                   
                 </div>
               </section>
-              <button type="submit" class="btn btn-primary">Simpan</button>
             </form>
-
           </div>
         </div>
       </section>

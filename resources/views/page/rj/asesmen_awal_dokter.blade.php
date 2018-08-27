@@ -1189,9 +1189,9 @@
                       <input type="text" class="form-control" name="suhu">
                     </div>
                   </div>
-                <div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
+                  <div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
                 </div>
               </section>
             </form>
@@ -1275,5 +1275,5 @@
       <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
       <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
       <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
-  </body>
-  <html>
+    </body>
+    <html>
