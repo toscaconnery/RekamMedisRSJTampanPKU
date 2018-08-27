@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStatusPsikiatriTable extends Migration
+class CreateRJStatusPsikiatriTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateStatusPsikiatriTable extends Migration
      */
     public function up()
     {
-        Schema::create('status_psikiatri', function (Blueprint $table) {
+        Schema::create('rj_status_psikiatri', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->string('penampilan');
@@ -46,6 +46,6 @@ class CreateStatusPsikiatriTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('status_psikiatri');
+        Schema::dropIfExists('rj_status_psikiatri');
     }
 }

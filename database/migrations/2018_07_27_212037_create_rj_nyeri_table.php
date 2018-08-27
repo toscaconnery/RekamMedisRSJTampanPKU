@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNyeriTable extends Migration
+class CreateRJNyeriTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateNyeriTable extends Migration
      */
     public function up()
     {
-        Schema::create('nyeri', function (Blueprint $table) {
-            $table->increments('id_nyeri');
+        Schema::create('rj_nyeri', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->string('jenis_form');
             $table->smallInteger('tingkat');
@@ -36,6 +36,6 @@ class CreateNyeriTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nyeri');
+        Schema::dropIfExists('rj_nyeri');
     }
 }

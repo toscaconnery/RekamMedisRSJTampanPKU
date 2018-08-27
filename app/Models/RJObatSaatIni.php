@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ObatSaatIni extends Model
+class RJObatSaatIni extends Model
 {
-    protected $table = 'obat_saat_ini';
+    protected $table = 'rj_obat_saat_ini';
 
     public $incrementing = true;
 

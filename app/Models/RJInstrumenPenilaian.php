@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class InstrumenPenilaian extends Model
+class RJInstrumenPenilaian extends Model
 {
-    protected $table = 'instrumen_penilaian';
+    protected $table = 'rj_instrumen_penilaian';
 
     public $incrementing = true;
 

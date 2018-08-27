@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePemeriksaanPenunjangTable extends Migration
+class CreateRJPemeriksaanPenunjangTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePemeriksaanPenunjangTable extends Migration
      */
     public function up()
     {
-        Schema::create('pemeriksaan_penunjang', function (Blueprint $table) {
+        Schema::create('rj_pemeriksaan_penunjang', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->string('jenis');
@@ -35,6 +35,6 @@ class CreatePemeriksaanPenunjangTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pemeriksaan_penunjang');
+        Schema::dropIfExists('rj_pemeriksaan_penunjang');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEvaluasiTindakanKeperawatanTable extends Migration
+class CreateRJEvaluasiTindakanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEvaluasiTindakanKeperawatanTable extends Migration
      */
     public function up()
     {
-        Schema::create('evaluasi_tindakan_keperawatan', function (Blueprint $table) {
+        Schema::create('rj_evaluasi_tindakan', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('implementasi');
             $table->text('implementasi');
@@ -29,6 +29,6 @@ class CreateEvaluasiTindakanKeperawatanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('evaluasi_tindakan_keperawatan');
+        Schema::dropIfExists('rj_evaluasi_tindakan');
     }
 }

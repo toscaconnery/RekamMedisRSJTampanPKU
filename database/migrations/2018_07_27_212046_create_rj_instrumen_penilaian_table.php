@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInstrumenPenilaianTable extends Migration
+class CreateRJInstrumenPenilaianTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateInstrumenPenilaianTable extends Migration
      */
     public function up()
     {
-        Schema::create('instrumen_penilaian', function (Blueprint $table) {
+        Schema::create('rj_instrumen_penilaian', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('gaduh_gelisah');
@@ -36,6 +36,6 @@ class CreateInstrumenPenilaianTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('instrumen_penilaian');
+        Schema::dropIfExists('rj_instrumen_penilaian');
     }
 }
