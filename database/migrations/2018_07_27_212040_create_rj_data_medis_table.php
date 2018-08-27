@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDataMedisTable extends Migration
+class CreateRJDataMedisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDataMedisTable extends Migration
      */
     public function up()
     {
-        Schema::create('data_medis', function (Blueprint $table) {
+        Schema::create('rj_data_medis', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->string('pewawancara');
@@ -48,6 +48,6 @@ class CreateDataMedisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('data_medis');
+        Schema::dropIfExists('rj_data_medis');
     }
 }

@@ -90,8 +90,8 @@
                     <td>[Nama Pengisi]</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_asesmen_keperawatan_perawat"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="{{url('')}}/view_rj_asesmen_awal_asesmen_keperawatan_perawat"><i class="icon_check_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_perawat"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-success" href="{{url('')}}/view_rj_asesmen_awal_perawat"><i class="icon_check_alt2"></i></a>
                       </div>
                     </td>
                   </tr>
@@ -101,8 +101,8 @@
                     <td>[Nama Pengisi]</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_asesmen_keperawatan_dokter"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="{{url('')}}/view_rj_asesmen_awal_asesmen_keperawatan_dokter"><i class="icon_check_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_dokter"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-success" href="{{url('')}}/view_rj_asesmen_awal_dokter"><i class="icon_check_alt2"></i></a>
                       </div>
                     </td>
                   </tr>                  
@@ -115,7 +115,7 @@
         <div class="row">
           <div class="col-lg-12">
 
-            <form class="form-horizontal" method="post" action="rj_asesmen_awal_asesmen_keperawatan_perawat">
+            <form class="form-horizontal" method="post" action="rj_asesmen_awal_perawat">
               {{ csrf_field() }}
               {{-- asesmen keperawatan --}}
               <section class="panel">
@@ -540,13 +540,13 @@
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" id="sk_3_1" name="sk_3_show_only" checked disabled="">
+                          <input type="radio" id="sk_3_1" name="sk_3" value="0" checked readonly="">
                           Tidak 
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" id="sk_3_2" name="sk_3_show_only" disabled="">
+                          <input type="radio" id="sk_3_2" name="sk_3" value="1" readonly="">
                           Ya 
                         </label>
                       </div>
@@ -816,9 +816,6 @@
                       <input type="text" class="form-control" name="waktu_pemberitahuan">
                     </div>
                   </div>
-
-                  <input type="hidden" name="jenis_form" value="awal">
-
                 </div>
               </section>
 
@@ -930,9 +927,6 @@
                       </select>
                     </div>
                   </div>
-
-                  <input type="hidden" name="jenis_form" value="awal">
-
                 </div>
               </section>
 
@@ -1005,9 +999,6 @@
                       </select>
                     </div>
                   </div>
-
-                  <input type="hidden" name="jenis_form" value="awal">
-                  
                 </div>
               </section>
 
@@ -1113,9 +1104,6 @@
                       </select>
                     </div>
                   </div>
-
-                  <input type="hidden" name="jenis_form" value="awal">
-
                 </div>
               </section>
 
@@ -1128,7 +1116,7 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Diagnosa Keperawatan Umum</label>
                     <div class="col-lg-4">
-                      <div>
+                      <div class="checkbox">
                         <label>
                           <input type="checkbox" name="umum_1">
                           Aktual/ Resiko bersihan jalan nafas tidak efektif
@@ -1347,12 +1335,13 @@
                       <textarea name="evaluasi" rows="8" cols="114" style="resize: none;"></textarea>
                     </div>
                   </div>
+                  <div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
                   
                 </div>
               </section>
-              <button type="submit" class="btn btn-primary">Simpan</button>
             </form>
-
           </div>
         </div>
       </section>
@@ -1486,13 +1475,13 @@
             var atLeastOneIsChecked = $('input[name="sk_3_checkbox[]"]:checked').length > 0;
             if(atLeastOneIsChecked == true) {
               $('#sk_3_2').prop('checked', true);
-              $('#sk_3_hidden').hide();
-              $('#sk_3_2').after('<input type="hidden" id="sk_3_hidden" name="sk_3" value="1"></input>');
+              // $('#sk_3_hidden').hide();
+              // $('#sk_3_2').after('<input type="hidden" id="sk_3_hidden" name="sk_3" value="1"></input>');
             }
             else if(atLeastOneIsChecked == false) {
               $('#sk_3_1').prop('checked', true);
-              $('#sk_3_hidden').hide();
-              $('#sk_3_2').after('<input type="hidden" id="sk_3_hidden" name="sk_3" value="0"></input>');
+              // $('#sk_3_hidden').hide();
+              // $('#sk_3_2').after('<input type="hidden" id="sk_3_hidden" name="sk_3" value="0"></input>');
             }
           });
         });

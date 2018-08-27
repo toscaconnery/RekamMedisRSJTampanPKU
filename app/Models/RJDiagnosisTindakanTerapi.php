@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class DiagnosisTindakanTerapi extends Model
+class RJDiagnosisTindakanTerapi extends Model
 {
-    protected $table = 'diagnosis_tindakan_terapi';
+    protected $table = 'rj_diagnosis_tindakan_terapi';
 
     public $incrementing = true;
 

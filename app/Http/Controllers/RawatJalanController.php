@@ -588,11 +588,9 @@ class RawatJalanController extends Controller
         $data->id_regis = 1;
         $data->pewawancara = $request->pewawancara;
         $data->keluhan_utama = $request->keluhan_utama;
-        
         if(!empty($request->riwayat_penyakit_sekarang)) {
             $data->riwayat_penyakit_sekarang = $request->riwayat_penyakit_sekarang;
         }
-        
         if(!empty($request->riwayat_penyakit_dahulu)) {
             $data->riwayat_penyakit_dahulu = $request->riwayat_penyakit_dahulu;
         }

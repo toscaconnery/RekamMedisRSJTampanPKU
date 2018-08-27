@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePemeriksaanFisikTable extends Migration
+class CreateRJStatusNeurologiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,14 @@ class CreatePemeriksaanFisikTable extends Migration
      */
     public function up()
     {
-        Schema::create('pemeriksaan_fisik', function (Blueprint $table) {
+        Schema::create('rj_status_neurologi', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
-            $table->string('kepala');
-            $table->string('leher');
-            $table->string('dada');
-            $table->string('jantung');
-            $table->string('paru');
-            $table->string('perut');
-            $table->string('anggota_gerak');
+            $table->string('meningeal');
+            $table->string('nervus');
+            $table->string('motorik');
+            $table->string('cerebellum');
+            $table->string('vegetatif');
             $table->timestamps();
         });
     }
@@ -34,6 +32,6 @@ class CreatePemeriksaanFisikTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pemeriksaan_fisik');
+        Schema::dropIfExists('rj_status_neurologi');
     }
 }

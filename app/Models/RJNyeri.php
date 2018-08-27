@@ -4,11 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Nyeri extends Model
+class RJNyeri extends Model
 {
-    protected $table = 'nyeri';
-
-    protected $primaryKey = 'id_nyeri';
+    protected $table = 'rj_nyeri';
 
     public $incrementing = true;
 

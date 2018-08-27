@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDiagnosisTindakanTerapiTable extends Migration
+class CreateRJDiagnosisTindakanTerapiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDiagnosisTindakanTerapiTable extends Migration
      */
     public function up()
     {
-        Schema::create('diagnosis_tindakan_terapi', function (Blueprint $table) {
+        Schema::create('rj_diagnosis_tindakan_terapi', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->string('axis1');
@@ -37,6 +37,6 @@ class CreateDiagnosisTindakanTerapiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('diagnosis_tindakan_terapi');
+        Schema::dropIfExists('rj_diagnosis_tindakan_terapi');
     }
 }

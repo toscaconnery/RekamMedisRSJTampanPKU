@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTindakLanjutTable extends Migration
+class CreateRJTindakLanjutTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTindakLanjutTable extends Migration
      */
     public function up()
     {
-        Schema::create('tindak_lanjut', function (Blueprint $table) {
+        Schema::create('rj_tindak_lanjut', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
             $table->integer('tindak_lanjut');
@@ -41,6 +41,6 @@ class CreateTindakLanjutTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tindak_lanjut');
+        Schema::dropIfExists('rj_tindak_lanjut');
     }
 }

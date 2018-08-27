@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDiagnosaKeperawatanTable extends Migration
+class CreateRJPemeriksaanFisikTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,16 @@ class CreateDiagnosaKeperawatanTable extends Migration
      */
     public function up()
     {
-        Schema::create('diagnosa_keperawatan', function (Blueprint $table) {
+        Schema::create('rj_pemeriksaan_fisik', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_regis')->reference('id')->on('identifikasi');
-            $table->string('umum');
-            $table->string('umum_lainnya')->nullable();
-            $table->string('jiwa');
-            $table->string('jiwa_lainnya')->nullable();
-            $table->string('obat_parental');
-            $table->string('ekg');
+            $table->string('kepala');
+            $table->string('leher');
+            $table->string('dada');
+            $table->string('jantung');
+            $table->string('paru');
+            $table->string('perut');
+            $table->string('anggota_gerak');
             $table->timestamps();
         });
     }
@@ -33,6 +34,6 @@ class CreateDiagnosaKeperawatanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('diagnosa_keperawatan');
+        Schema::dropIfExists('rj_pemeriksaan_fisik');
     }
 }

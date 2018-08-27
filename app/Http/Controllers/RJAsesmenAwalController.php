@@ -4,17 +4,44 @@ namespace App\Http\Controllers;
 
 use Auth;
 use Illuminate\Http\Request;
-use App\Models\RJAsesmenKeperawatan;
+use App\Models\HumptyDumpty;
+use App\Models\Morse;
+use App\Models\Edmunson;
+use App\Models\RJNyeri;
 use App\Models\RJFisikGizi;
+use App\Models\RJAsesmenKeperawatan;
+use App\Models\RJDiagnosaKeperawatan;
+use App\Models\RJEvaluasiTindakan;
+use App\Models\RJDataMedis;
+use App\Models\RJObatSaatIni;
+use App\Models\RJPemeriksaanFisik;
+use App\Models\RJStatusPsikiatri;
+use App\Models\RJStatusNeurologi;
+use App\Models\RJPemeriksaanPenunjang;
+use App\Models\RJInstrumenPenilaian;
+use App\Models\RJDiagnosisTindakanTerapi;
+use App\Models\RJTindakLanjut;
+
 class RJAsesmenAwalController extends Controller
 {
-    public function get_rj_asesmen_awal_asesmen_keperawatan_perawat()
+    public function get_rj_asesmen_awal_perawat()
     {
-        return view('page.rj.asesmen_awal_asesmen_keperawatan_perawat');
+        return view('page.rj.asesmen_awal_perawat');
     }
 
-    public function post_rj_asesmen_awal_asesmen_keperawatan_perawat(Request $request)
+    public function get_rj_asesmen_awal_dokter()
     {
+    	return view('page.rj.asesmen_awal_dokter');
+    }
+
+    public function get_rj_asesmen_awal_gigi_perawat()
+    {
+        return view('page.rj.asesmen_awal_gigi_perawat');
+    }
+
+    public function post_rj_asesmen_awal_perawat(Request $request)
+    {
+
     	$asesmen_keperawatan = new RJAsesmenKeperawatan;
     	$asesmen_keperawatan->id_regis = 1;
     	$asesmen_keperawatan->id_user = 1;
@@ -221,8 +248,8 @@ class RJAsesmenAwalController extends Controller
     	$asesmen_keperawatan->waktu_laporan = $request->waktu_laporan;
     	$asesmen_keperawatan->save();
 
-    	return redirect('index');
 
+    	//return redirect('index');
     	// FISIK GIZI////////
     	// FISIK GIZI////////
     	// FISIK GIZI////////
@@ -339,9 +366,644 @@ class RJAsesmenAwalController extends Controller
             $fisik_gizi->waktu_pemberitahuan = $request->waktu_pemberitahuan;
         }
         $fisik_gizi->save();
+
+        //return redirect('index');
+        // PENILAIAN TINGKAT NYERI	//////////////
+        // PENILAIAN TINGKAT NYERI	//////////////
+        // PENILAIAN TINGKAT NYERI	//////////////
+        // PENILAIAN TINGKAT NYERI	//////////////
+
+        $nyeri = new RJNyeri;
+        $nyeri->id_regis = 1;
+        $nyeri->jenis_form = 'awal';
+        $nyeri->tingkat = $request->tingkat;
+        $nyeri->skala = $request->skala;
+        $nyeri->lokasi = $request->lokasi;
+        $nyeri->lokasi = $request->lokasi;
+        $nyeri->durasi = $request->durasi;
+        $nyeri->frekuensi = $request->frekuensi;
+        $hilang = "";
+        if(isset($request->hilang1)) {
+            $hilang .= "Minum obat, ";
+        }
+        if(isset($request->hilang2)) {
+            $hilang .= "Mendengar musik, ";
+        }
+        if(isset($request->hilang3)) {
+            $hilang .= "Istirahat, ";
+        }
+        if(isset($request->hilang4)) {
+            $hilang .= "Berubah posisi/tidur, ";
+        }
+        if(isset($request->hilang5)) {
+            $hilang .= $request->nyeri_hilang_input_text;
+            $hilang .", ";
+        }
+        $hilang = substr($hilang, 0, -1);
+        $nyeri->hilang = $hilang;
+        $nyeri->pemberitahuan = $request->pemberitahuan;
+        if($request->pemberitahuan == '1') {
+            $nyeri->waktu_pemberitahuan = $request->waktu_pemberitahuan;
+        }
+        $nyeri->save();
+
+
+        // HUMPTY DUMPTY /////////////
+        // HUMPTY DUMPTY /////////////
+        // HUMPTY DUMPTY /////////////
+        // HUMPTY DUMPTY /////////////
+
+        $humpty = new HumptyDumpty;
+        $humpty->id_regis = 1;
+        $humpty->jenis_form = 'awal';
+        $humpty->usia = $request->usia;
+        $humpty->diagnosis = $request->diagnosis;
+        $humpty->gangguan_kognitif = $request->gangguan_kognitif;
+        $humpty->faktor_lingkungan = $request->faktor_lingkungan;
+        $humpty->waktu_respon_obat = $request->waktu_respon_obat;
+        $humpty->penggunaan_obat = $request->penggunaan_obat;
+        $humpty->save();
+
+        
+        // MORSE ////////////////////
+		// MORSE ////////////////////
+		// MORSE ////////////////////
+		// MORSE ////////////////////
+
+        $morse = new Morse;
+        $morse->id_regis = 1;
+        $morse->jenis_form = 'awal';
+        if($request->riwayat_jatuh == 'true') {
+            $morse->riwayat_jatuh = True;
+        }
+        else {
+            $morse->riwayat_jatuh = False;
+        }
+        if($request->diagnosis_sekunder == 'true') {
+            $morse->diagnosis_sekunder = True;
+        }
+        else {
+            $morse->diagnosis_sekunder = False;
+        }
+        $morse->alat_bantu = $request->alat_bantu;
+        if($request->terpasang_infus == 'true') {
+            $morse->terpasang_infus = True;
+        }
+        else {
+            $morse->terpasang_infus = False;
+        }
+        $morse->gaya_berjalan = $request->gaya_berjalan;
+        $morse->status_mental = $request->status_mental;
+        $morse->save();
+
+
+        // EDMUNSON ///////////////
+        // EDMUNSON ///////////////
+        // EDMUNSON ///////////////
+        // EDMUNSON ///////////////
+
+        $edmunson = new Edmunson;
+        $edmunson->id_regis = 1;
+        $edmunson->jenis_form = 'awal';
+        $edmunson->status_mental = $request->status_mental;
+        $edmunson->diagnosis = $request->diagnosis;
+        $edmunson->eliminasi = $request->eliminasi;
+        $edmunson->pengobatan = $request->pengobatan;
+        $edmunson->diagnosa = $request->diagnosa;
+        $edmunson->ambulasi = $request->ambulasi;
+        $edmunson->nutrisi = $request->nutrisi;
+        $edmunson->riwayat_jatuh = $request->riwayat_jatuh;
+        $edmunson->save();
+
+
+        // DIAGNOSA KEPERAWATAN ////////////
+        // DIAGNOSA KEPERAWATAN ////////////
+        // DIAGNOSA KEPERAWATAN ////////////
+        // DIAGNOSA KEPERAWATAN ////////////
+
+        $diagnosa = new RJDiagnosaKeperawatan;
+        $diagnosa->id_regis = 1;
+        $umum = "";
+        if(isset($request->umum_1)) {
+            $umum .= "1-";
+        }
+        if(isset($request->umum_2)) {
+            $umum .= "2-";
+        }
+        if(isset($request->umum_3)) {
+            $umum .= "3-";
+        }
+        if(isset($request->umum_4)) {
+            $umum .= "4-";
+        }
+        if(isset($request->umum_5)) {
+            $umum .= "5-";
+        }
+        if(isset($request->umum_6)) {
+            $umum .= "6-";
+        }
+        if(isset($request->umum_7)) {
+            $umum .= "7-";
+        }
+        if(isset($request->umum_8)) {
+            $umum .= "8-";
+        }
+        if(isset($request->umum_9)) {
+            $umum .= "9-";
+        }
+        if(isset($request->umum_10)) {
+            $umum .= "10-";
+        }
+        if(isset($request->umum_11)) {
+            $umum .= "11-";
+        }
+        if(isset($request->umum_12)) {
+            $umum .= "12-";
+        }
+        if(isset($request->umum_13)) {
+            $umum .= "13-";
+        }
+        if(isset($request->umum_14)) {
+            $umum .= "14-";
+        }
+        if(!empty($umum) >= 0) {
+            $umum = substr($umum, 0, -1);
+        }
+        $diagnosa->umum = $umum;
+
+        if(!empty($request->umum_lainnya)) {
+            $diagnosa->umum_lainnya = $request->umum_lainnya;
+        }
+
+        $jiwa = "";
+        if(isset($request->jiwa_1)) {
+            $jiwa .= "1-";
+        }
+        if(isset($request->jiwa_2)) {
+            $jiwa .= "2-";
+        }
+        if(isset($request->jiwa_3)) {
+            $jiwa .= "3-";
+        }
+        if(isset($request->jiwa_4)) {
+            $jiwa .= "4-";
+        }
+        if(isset($request->jiwa_5)) {
+            $jiwa .= "5-";
+        }
+        if(isset($request->jiwa_6)) {
+            $jiwa .= "6-";
+        }
+        if(isset($request->jiwa_7)) {
+            $jiwa .= "7-";
+        }
+        if(isset($request->jiwa_8)) {
+            $jiwa .= "8-";
+        }
+        if(isset($request->jiwa_9)) {
+            $jiwa .= "9-";
+        }
+        if(isset($request->jiwa_10)) {
+            $jiwa .= "10-";
+        }
+        if(isset($request->jiwa_11)) {
+            $jiwa .= "11-";
+        }
+        if(isset($request->jiwa_12)) {
+            $jiwa .= "12-";
+        }
+        if(!empty($jiwa)) {
+            $jiwa = substr($jiwa, 0, -1);
+        }
+        $diagnosa->jiwa = $jiwa;
+
+        if(!empty($request->jiwa_lainnya)) {
+            $diagnosa->jiwa_lainnya = $request->jiwa_lainnya;
+        }
+
+        $diagnosa->obat_parental = $request->obat_parental;
+        $diagnosa->ekg = $request->ekg;
+        $diagnosa->save();
+
+        // EVALUASI TINDAKAN /////////
+        // EVALUASI TINDAKAN /////////
+        // EVALUASI TINDAKAN /////////
+        // EVALUASI TINDAKAN /////////
+
+        $data = new RJEvaluasiTindakan;
+        $data->id_regis = 1;
+        $data->implementasi = $request->implementasi;
+        $data->evaluasi = $request->evaluasi;
+        $data->save();
+
         return redirect('index');
+    }
 
 
+    public function post_rj_asesmen_awal_dokter(Request $request)
+    {
+        // DATA MEDIS //////////
+        // DATA MEDIS //////////
+        // DATA MEDIS //////////
+        // DATA MEDIS //////////
 
+    	$data = new RJDataMedis;
+        $data->id_regis = 1;
+        $data->pewawancara = $request->pewawancara;
+        $data->keluhan_utama = $request->keluhan_utama;
+        if(!empty($request->riwayat_penyakit_sekarang)) {
+            $data->riwayat_penyakit_sekarang = $request->riwayat_penyakit_sekarang;
+        }
+        if(!empty($request->riwayat_penyakit_dahulu)) {
+            $data->riwayat_penyakit_dahulu = $request->riwayat_penyakit_dahulu;
+        }
+        if($request->riwayat_napza == 'true') {
+            $data->riwayat_napza = True;
+        }
+        else {
+            $data->riwayat_napza = False;
+        }
+        if(!empty($request->lama_pemakaian)) {
+            $data->lama_pemakaian = $request->lama_pemakaian;
+        }
+        if(!empty($request->cara_pemakaian)) {
+            $data->cara_pemakaian = $request->cara_pemakaian;
+        }
+        if(!empty($request->latar_belakang_pemakaian)) {
+            $data->latar_belakang_pemakaian = $request->latar_belakang_pemakaian;
+        }
+        $data->riwayat_pendidikan = $request->riwayat_pendidikan;
+        $data->riwayat_pekerjaan = $request->riwayat_pekerjaan;
+        $data->riwayat_perkawinan = $request->riwayat_perkawinan;
+        $riwayat = "";
+        if(isset($request->penyakit_1)) {
+            $riwayat .= "1-";
+        }
+        if(isset($request->penyakit_2)) {
+            $riwayat .= "2-";
+        }
+        if(isset($request->penyakit_3)) {
+            $riwayat .= "3-";
+        }
+        if(isset($request->penyakit_4)) {
+            $riwayat .= "4-";
+        }
+        if(isset($request->penyakit_5)) {
+            $riwayat .= "5-";
+        }
+        if(isset($request->penyakit_6)) {
+            $riwayat .= "6-";
+        }
+        if(isset($request->penyakit_7)) {
+            $riwayat .= "7-";
+        }
+        if(isset($request->penyakit_8)) {
+            $riwayat .= "8-";
+        }
+        if(isset($request->penyakit_9)) {
+            $riwayat .= "9-";
+        }
+        if(isset($request->penyakit_10)) {
+            $riwayat .= "10-";
+        }
+        if(isset($request->penyakit_11)) {
+            $riwayat .= "11-";
+        }
+        if(isset($request->penyakit_12)) {
+            $riwayat .= "12-";
+        }
+        if(isset($request->penyakit_13)) {
+            $riwayat .= "13-";
+        }
+        if(isset($request->penyakit_14)) {
+            $riwayat .= "14-";
+        }
+        if(!empty($riwayat)) {
+            $riwayat = substr($riwayat, 0, -1);
+            $data->riwayat_penyakit_lainnya = $riwayat;
+        }
+        if($request->riwayat_operasi == 'true') {
+            $data->riwayat_operasi = True;
+        }
+        else {
+            $data->riwayat_operasi = False;
+        }
+        if(!empty($request->jenis_operasi)) {
+            $data->jenis_operasi = $request->jenis_operasi;
+        }
+        if(!empty($request->waktu_operasi)) {
+            $data->waktu_operasi = $request->waktu_operasi;
+        }
+        if($request->riwayat_tranfusi == 'true') {
+            $data->riwayat_tranfusi = True;
+        }
+        else {
+            $data->riwayat_tranfusi = False;
+        }
+        if($request->reaksi_tranfusi == 'true') {
+            $data->reaksi_tranfusi = True;
+        }
+        else {
+            $data->reaksi_tranfusi = False;
+        }
+        if(!empty($request->reaksi_timbul)) {
+            $data->reaksi_timbul = $request->reaksi_timbul;
+        }
+        if(!empty($request->riwayat_penyakit_dalam_keluarga)) {
+            $data->riwayat_penyakit_dalam_keluarga = $request->riwayat_penyakit_dalam_keluarga;
+        }
+        if(!empty($request->riwayat_pengobatan)) {
+            $data->riwayat_pengobatan = $request->riwayat_pengobatan;
+        }
+        if(!empty($request->riwayat_alergi)) {
+            $data->riwayat_alergi = $request->riwayat_alergi;
+        }
+        $data->save();
+
+
+        // OBAT YANG DIMINUM SAAT INI //////////
+        // OBAT YANG DIMINUM SAAT INI //////////
+        // OBAT YANG DIMINUM SAAT INI //////////
+        // OBAT YANG DIMINUM SAAT INI //////////
+
+        $obat = new RJObatSaatIni;
+        $obat->id_regis = 1;
+        $obat->nama_obat = $request->nama_obat;
+        $obat->dibawa = $request->dibawa;
+        $obat->jumlah = $request->jumlah;
+        $obat->tidak_dibawa = $request->tidak_dibawa;
+        $obat->keterangan = $request->keterangan;
+        $obat->save();
+
+
+        // PEMERIKSAAN FISIK ///////////
+        // PEMERIKSAAN FISIK ///////////
+        // PEMERIKSAAN FISIK ///////////
+        // PEMERIKSAAN FISIK ///////////
+
+        $pemeriksaan = new RJPemeriksaanFisik;
+        $pemeriksaan->id_regis = 1;
+        $pemeriksaan->kepala = $request->kepala;
+        $pemeriksaan->leher = $request->leher;
+        $pemeriksaan->dada = $request->dada;
+        $pemeriksaan->jantung = $request->jantung;
+        $pemeriksaan->paru = $request->paru;
+        $pemeriksaan->perut = $request->perut;
+        $pemeriksaan->anggota_gerak = $request->anggota_gerak;
+        $pemeriksaan->save();
+
+
+        // STATUS PSIKIATRI ///////////
+        // STATUS PSIKIATRI ///////////
+        // STATUS PSIKIATRI ///////////
+        // STATUS PSIKIATRI ///////////
+
+        $status = new RJStatusPsikiatri;
+        $status->id_regis = 1;
+        $status->penampilan = $request->penampilan;
+        $status->kesadaran = $request->kesadaran;
+        $status->orientasi = $request->orientasi;
+        $status->sikap = $request->sikap;
+        $status->keterangan = $request->keterangan;
+        $status->keterangan = $request->keterangan;
+        $status->proses_pikir = $request->proses_pikir;
+        $status->bentuk_pikir = $request->bentuk_pikir;
+        $status->isi_pikir = $request->isi_pikir;
+        $status->mood = $request->mood;
+        $status->afek = $request->afek;
+        $status->halusinasi = $request->halusinasi;
+        $status->ilusi = $request->ilusi;
+        $status->konsentrasi = $request->konsentrasi;
+        $status->ingat = $request->ingat;
+        $status->abstrak = $request->abstrak;
+        $status->impuls = $request->impuls;
+        $status->nilai = $request->nilai;
+        $status->tilikan = $request->tilikan;
+        $status->dipercaya = $request->dipercaya;
+        $status->save();
+
+
+        // STATUS NEUROLOGI ////////////
+        // STATUS NEUROLOGI ////////////
+        // STATUS NEUROLOGI ////////////
+        // STATUS NEUROLOGI ////////////
+
+        $status = new RJStatusNeurologi;
+        $status->id_regis = 1;
+        $status->meningeal = $request->meningeal;
+        $status->nervus = $request->nervus;
+        $status->motorik = $request->motorik;
+        $status->cerebellum = $request->cerebellum;
+        $status->vegetatif = $request->vegetatif;
+        $status->save();
+
+        // PEMERIKSAAN PENUNJANG ///////////
+        // PEMERIKSAAN PENUNJANG ///////////
+        // PEMERIKSAAN PENUNJANG ///////////
+        // PEMERIKSAAN PENUNJANG ///////////
+
+        // $pemeriksaan = new RJPemeriksaanPenunjang;
+        // $pemeriksaan->id_regis = 1;
+        // $pemeriksaan->jenis = $request->jenis;
+        // $pemeriksaan->jam_pemeriksaan = $request->jam_pemeriksaan;
+        // $pemeriksaan->jam_hasil = $request->jam_hasil;
+        // $pemeriksaan->keterangan = $request->keterangan;
+        // $pemeriksaan->laboratorium = $request->laboratorium;
+        // $pemeriksaan->radiologi = $request->radiologi;
+        // $pemeriksaan->ekg = $request->ekg;
+        // $pemeriksaan->lainnya = $request->lainnya;
+        // $pemeriksaan->save();
+
+        
+        // INSTRUMEN PENILAIAN ///////////////////
+        // INSTRUMEN PENILAIAN ///////////////////
+        // INSTRUMEN PENILAIAN ///////////////////
+        // INSTRUMEN PENILAIAN ///////////////////
+        $instrumen = new RJInstrumenPenilaian;
+        $instrumen->id_regis = 1;
+        $instrumen->gaduh_gelisah = $request->p4;
+        $instrumen->ketidakoperatifan = $request->g8;
+        $instrumen->permusuhan = $request->p7;
+        $instrumen->pengendalian_impuls = $request->g14;
+        $instrumen->ketegangan = $request->g4;
+        $instrumen->bangsal = $request->bangsal;
+        $instrumen->tanggal_pemeriksaan = $request->tanggal_pemeriksaan;
+        $instrumen->panss_ec = $request->panss_ec;
+        $instrumen->gaff = $request->gaff;
+        $instrumen->save();
+
+
+        // DIAGNOSIS TINDAKAN TERAPI /////////////
+        // DIAGNOSIS TINDAKAN TERAPI /////////////
+        // DIAGNOSIS TINDAKAN TERAPI /////////////
+        // DIAGNOSIS TINDAKAN TERAPI /////////////
+        $diagnosis = new RJDiagnosisTindakanTerapi;
+        $diagnosis->id_regis = 1;
+        $diagnosis->axis1 = $request->axis1;
+        $diagnosis->axis2 = $request->axis2;
+        $diagnosis->axis3 = $request->axis3;
+        $diagnosis->axis4 = $request->axis4;
+        $diagnosis->axis5 = $request->axis5;
+        $diagnosis->utama = $request->utama;
+        $diagnosis->sekunder = $request->sekunder;
+        $diagnosis->jam = $request->jam;
+        $diagnosis->tindakan_terapi = $request->tindakan_terapi;
+        $diagnosis->daftar_masalah = $request->daftar_masalah;
+        $diagnosis->save();
+        
+
+
+        // TINDAK LANJUT ///////////////////
+        // TINDAK LANJUT ///////////////////
+        // TINDAK LANJUT ///////////////////
+        // TINDAK LANJUT ///////////////////
+        $data = new RJTindakLanjut;
+        $data->tindak_lanjut = $request->tindak_lanjut;
+        $data->id_regis = 1;
+        if($request->perlu_dikontrol == 'true') {
+            $data->perlu_dikontrol = True;
+        }
+        else {
+            $data->perlu_dikontrol = False;
+        }
+        $data->tanggal_kontrol = $request->tanggal_kontrol;
+        $data->ruangan = $request->ruangan;
+        $data->indikasi_rawat_inap = $request->indikasi_rawat_inap;
+        if($request->alasan_menolak == "Lainnya"){
+            $data->alasan_menolak = $request->alasan_lainnya;
+        }
+        else {
+            $data->alasan_menolak = $request->alasan_menolak;
+        }
+        $data->dirujuk_ke = $request->dirujuk_ke;
+        $data->alasan_dirujuk = $request->alasan_dirujuk;
+        $kesadaran = "";
+        if(isset($request->kesadaran_1)) {
+            $kesadaran .= "1-";
+        }
+        if(isset($request->kesadaran_2)) {
+            $kesadaran .= "2-";
+        }
+        if(isset($request->kesadaran_3)) {
+            $kesadaran .= "3-";
+        }
+        if(isset($request->kesadaran_4)) {
+            $kesadaran .= "4-";
+        }
+        if(isset($request->kesadaran_5)) {
+            $kesadaran .= "5-";
+        }
+        if(isset($request->kesadaran_6)) {
+            $kesadaran .= "6-";
+        }
+        if(isset($request->kesadaran_7)) {
+            $kesadaran .= "7-";
+        }
+        $kesadaran = substr($kesadaran, 0, -1);
+        $data->kesadaran = $kesadaran;
+        $data->kesadaran_lainnya = $request->kesadaran_lainnya;
+        $data->tensi = $request->tensi;
+        $data->nadi = $request->nadi;
+        $data->pernafasan = $request->pernafasan;
+        $data->suhu = $request->suhu;
+        $data->save();
+
+        return redirect('index');
+    }
+
+
+    ////////////////////ASESMEN AWAL PASIEN GIGI RAWAT JALAN //////////////////////////////////////
+    public function post_rj_asesmen_awal_gigi_perawat(Request $request)
+    {
+        //PENILAIAN TINGKAT NYERI
+        $nyeri = new RJNyeri;
+        $nyeri->id_regis = 1;
+        $nyeri->jenis_form = 'gigi';
+        $nyeri->tingkat = $request->tingkat;
+        $nyeri->skala = $request->skala;
+        $nyeri->lokasi = $request->lokasi;
+        $nyeri->lokasi = $request->lokasi;
+        $nyeri->durasi = $request->durasi;
+        $nyeri->frekuensi = $request->frekuensi;
+        $hilang = "";
+        if(isset($request->hilang1)) {
+            $hilang .= "Minum obat, ";
+        }
+        if(isset($request->hilang2)) {
+            $hilang .= "Mendengar musik, ";
+        }
+        if(isset($request->hilang3)) {
+            $hilang .= "Istirahat, ";
+        }
+        if(isset($request->hilang4)) {
+            $hilang .= "Berubah posisi/tidur, ";
+        }
+        if(isset($request->hilang5)) {
+            $hilang .= $request->nyeri_hilang_input_text;
+            $hilang .", ";
+        }
+        $hilang = substr($hilang, 0, -1);
+        $nyeri->hilang = $hilang;
+        $nyeri->pemberitahuan = $request->pemberitahuan;
+        if($request->pemberitahuan == '1') {
+            $nyeri->waktu_pemberitahuan = $request->waktu_pemberitahuan;
+        }
+        $nyeri->save();
+
+        //PENILAIAN RISIKO JATUH
+        if($request->penilaian_risiko_jatuh == 'humpty_dumpty') {
+            $humpty = new HumptyDumpty;
+            $humpty->id_regis = 1;
+            $humpty->jenis_form = 'gigi';
+            $humpty->usia = $request->usia;
+            $humpty->diagnosis = $request->diagnosis;
+            $humpty->gangguan_kognitif = $request->gangguan_kognitif;
+            $humpty->faktor_lingkungan = $request->faktor_lingkungan;
+            $humpty->waktu_respon_obat = $request->waktu_respon_obat;
+            $humpty->penggunaan_obat = $request->penggunaan_obat;
+            $humpty->save();
+        }
+        elseif($request->penilaian_risiko_jatuh == 'morse') {
+            $morse = new Morse;
+            $morse->id_regis = 1;
+            $morse->jenis_form = 'gigi';
+            if($request->riwayat_jatuh == 'true') {
+                $morse->riwayat_jatuh = True;
+            }
+            else {
+                $morse->riwayat_jatuh = False;
+            }
+            if($request->diagnosis_sekunder == 'true') {
+                $morse->diagnosis_sekunder = True;
+            }
+            else {
+                $morse->diagnosis_sekunder = False;
+            }
+            $morse->alat_bantu = $request->alat_bantu;
+            if($request->terpasang_infus == 'true') {
+                $morse->terpasang_infus = True;
+            }
+            else {
+                $morse->terpasang_infus = False;
+            }
+            $morse->gaya_berjalan = $request->gaya_berjalan;
+            $morse->status_mental = $request->status_mental;
+            $morse->save();
+        }
+        elseif($request->penilaian_risiko_jatuh == 'edmunson') {
+            $edmunson = new Edmunson;
+            $edmunson->id_regis = 1;
+            $edmunson->jenis_form = 'gigi';
+            $edmunson->status_mental = $request->status_mental;
+            $edmunson->diagnosis = $request->diagnosis;
+            $edmunson->eliminasi = $request->eliminasi;
+            $edmunson->pengobatan = $request->pengobatan;
+            $edmunson->diagnosa = $request->diagnosa;
+            $edmunson->ambulasi = $request->ambulasi;
+            $edmunson->nutrisi = $request->nutrisi;
+            $edmunson->riwayat_jatuh = $request->riwayat_jatuh;
+            $edmunson->save();
+        }
+        return redirect('index');
     }
 }
