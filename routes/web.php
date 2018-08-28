@@ -49,6 +49,10 @@ Route::post('/tindak_lanjut', 'RawatJalanController@store_tindak_lanjut');
 Route::get('/rj_asesmen_gigi', 'RawatJalanController@asesmen_gigi');
 
 //FIX
+//DO  NOT  TOUCH!!!////
+//DO  NOT  TOUCH!!!////
+//DO  NOT  TOUCH!!!////
+//DO  NOT  TOUCH!!!////
 Route::get('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@get_rj_asesmen_awal_perawat');
 Route::post('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_perawat');
 Route::get('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@get_rj_asesmen_awal_dokter');
@@ -62,7 +66,12 @@ Route::post('/rj_asesmen_awal_gigi_dokter', 'RJAsesmenAwalGigiController@post_rj
 Route::get('/rj_informasi_edukasi', 'RJInformasiEdukasiController@get_rj_informasi_edukasi');
 Route::post('/rj_informasi_edukasi', 'RJInformasiEdukasiController@post_rj_informasi_edukasi');
 
-
+Route::get('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@get_rj_lapor_rehabilitasi');
+Route::post('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@post_rj_lapor_rehabilitasi');
+//DO  NOT  TOUCH!!!////
+//DO  NOT  TOUCH!!!////
+//DO  NOT  TOUCH!!!////
+//DO  NOT  TOUCH!!!////
 
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');
@@ -78,6 +87,9 @@ Route::get('/penundaan_pelayanan', function () {
 
 // Route::get('/rj_informasi_edukasi', function () {
 //     return view('rj_informasi_edukasi');
+// });
+// Route::get('/rj_lapor_rehabilitasi', function () {
+//     return view('rj_lapor_rehabilitasi');
 // });
 
 Route::get('/rj_perkembangan_pasien', function () {
@@ -105,9 +117,6 @@ Route::get('/rj_identifikasi_stresor', function () {
     return view('rj_identifikasi_stresor');
 });
 
-Route::get('/rj_lapor_rehabilitasi', function () {
-    return view('rj_lapor_rehabilitasi');
-});
 
 
 Route::get('/rj_tumbuh_kembang', function () {
