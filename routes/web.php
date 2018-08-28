@@ -53,11 +53,14 @@ Route::get('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@get_rj_asesmen_a
 Route::post('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_perawat');
 Route::get('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@get_rj_asesmen_awal_dokter');
 Route::post('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@post_rj_asesmen_awal_dokter');
-Route::get('/rj_asesmen_awal_gigi_perawat', 'RJAsesmenAwalController@get_rj_asesmen_awal_gigi_perawat');
-Route::post('/rj_asesmen_awal_gigi_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_gigi_perawat');
-Route::get('/rj_asesmen_awal_gigi_dokter', 'RJAsesmenAwalController@get_rj_asesmen_awal_gigi_dokter');
-Route::post('/rj_asesmen_awal_gigi_dokter', 'RJAsesmenAwalController@post_rj_asesmen_awal_gigi_dokter');
 
+Route::get('/rj_asesmen_awal_gigi_perawat', 'RJAsesmenAwalGigiController@get_rj_asesmen_awal_gigi_perawat');
+Route::post('/rj_asesmen_awal_gigi_perawat', 'RJAsesmenAwalGigiController@post_rj_asesmen_awal_gigi_perawat');
+Route::get('/rj_asesmen_awal_gigi_dokter', 'RJAsesmenAwalGigiController@get_rj_asesmen_awal_gigi_dokter');
+Route::post('/rj_asesmen_awal_gigi_dokter', 'RJAsesmenAwalGigiController@post_rj_asesmen_awal_gigi_dokter');
+
+Route::get('/rj_informasi_edukasi', 'RJInformasiEdukasiController@get_rj_informasi_edukasi');
+Route::post('/rj_informasi_edukasi', 'RJInformasiEdukasiController@post_rj_informasi_edukasi');
 
 
 
@@ -73,9 +76,9 @@ Route::get('/penundaan_pelayanan', function () {
 });
 
 
-Route::get('/rj_informasi_edukasi', function () {
-    return view('rj_informasi_edukasi');
-});
+// Route::get('/rj_informasi_edukasi', function () {
+//     return view('rj_informasi_edukasi');
+// });
 
 Route::get('/rj_perkembangan_pasien', function () {
     return view('rj_perkembangan_pasien');
