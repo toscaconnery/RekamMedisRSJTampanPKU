@@ -131,87 +131,75 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><input type="date" class="form-control" name="tanggal_1"></td>
-                      <td><input type="text" class="form-control" name="poliklinik_1"></td>
+                      <td><input type="date" class="form-control" name="tanggal_1" required></td>
+                      <td><input type="text" class="form-control" name="poliklinik_1" required></td>
                       <td>
-                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box;" rows="5" class="form-control" name="informasi_1">Penyakit yang diderita pasien</textarea>
+                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box;" rows="5" class="form-control" name="informasi_1" readonly>Penyakit yang diderita pasien</textarea>
                       </td>
-                      <td><input type="text" class="form-control" name="nama_edukator_1"></td>
+                      <td><input type="text" class="form-control" name="nama_edukator_1" required></td>
                       <td><input type="checkbox" class="form-control" name="ttd_edukator_1"></td>
-                      <td><input type="text" class="form-control" name="nama_sasaran_1"></td>
+                      <td><input type="text" class="form-control" name="nama_sasaran_1" required></td>
                       <td><input type="checkbox" class="form-control" name="ttd_sasaran_1"></td>
                       <td>
-                        <input type="radio" name="evaluasi_1" value="1"><span style="font-size: 3mm">Sudah mengerti</span><br>
+                        <input type="radio" name="evaluasi_1" value="1" required><span style="font-size: 3mm">Sudah mengerti</span><br>
                         <input type="radio" name="evaluasi_1" value="2"><span style="font-size: 3mm">Re-edukasi</span><br>
                         <input type="radio" name="evaluasi_1" value="3"><span style="font-size: 3mm">Re-demonstrasi</span>
                       </td>
                       <td>
-                        <div class="btn-group">
-                          <a class="btn btn-default" href="#"><i class="icon_close_alt2"></i></a>
-                        </div>  
                       </td>
                     </tr>
                     <tr>
-                      <td><input type="date" class="form-control" name="tanggal_2"></td>
-                      <td><input type="text" class="form-control" name="poliklinik_2"></td>
+                      <td><input type="date" class="form-control" name="tanggal_2" required></td>
+                      <td><input type="text" class="form-control" name="poliklinik_2" required></td>
                       <td>
-                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box;" rows="5" class="form-control" name="informasi_2">Rencana tindakan terapi</textarea>
+                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box;" rows="5" class="form-control" name="informasi_2" readonly>Rencana tindakan terapi</textarea>
                       </td>
-                      <td><input type="text" class="form-control" name="nama_edukator_2"></td>
+                      <td><input type="text" class="form-control" name="nama_edukator_2" required></td>
                       <td><input type="checkbox" class="form-control" name="ttd_edukator_2"></td>
-                      <td><input type="text" class="form-control" name="nama_sasaran_2"></td>
+                      <td><input type="text" class="form-control" name="nama_sasaran_2" required></td>
                       <td><input type="checkbox" class="form-control" name="ttd_sasaran_2"></td>
                       <td>
-                        <input type="radio" name="evaluasi_2" value="1"><span style="font-size: 3mm">Sudah mengerti</span><br>
+                        <input type="radio" name="evaluasi_2" value="1" required><span style="font-size: 3mm">Sudah mengerti</span><br>
                         <input type="radio" name="evaluasi_2" value="2"><span style="font-size: 3mm">Re-edukasi</span><br>
                         <input type="radio" name="evaluasi_2" value="3"><span style="font-size: 3mm">Re-demonstrasi</span>
                       </td>
                       <td>
-                        <div class="btn-group">
-                          <a class="btn btn-default" href="#"><i class="icon_close_alt2"></i></a>
-                        </div>  
                       </td>
                     </tr>
                     <tr>
-                      <td><input type="date" class="form-control" name="tanggal_3"></td>
-                      <td><input type="text" class="form-control" name="poliklinik_3"></td>
+                      <td><input type="date" class="form-control" name="tanggal_3" required></td>
+                      <td><input type="text" class="form-control" name="poliklinik_3" required></td>
                       <td>
-                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box;" rows="5" class="form-control" name="informasi_3">Pengobatan dan prosedur yang diberikan atau diperlukan</textarea>
+                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box;" rows="5" class="form-control" name="informasi_3" readonly>Pengobatan dan prosedur yang diberikan atau diperlukan</textarea>
                       </td>
-                      <td><input type="text" class="form-control" name="nama_edukator_3"></td>
+                      <td><input type="text" class="form-control" name="nama_edukator_3" required></td>
                       <td><input type="checkbox" class="form-control" name="ttd_edukator_3"></td>
-                      <td><input type="text" class="form-control" name="nama_sasaran_3"></td>
+                      <td><input type="text" class="form-control" name="nama_sasaran_3" required></td>
                       <td><input type="checkbox" class="form-control" name="ttd_sasaran_3"></td>
                       <td>
-                        <input type="radio" name="evaluasi_3" value="1"><span style="font-size: 3mm">Sudah mengerti</span><br>
+                        <input type="radio" name="evaluasi_3" value="1" required><span style="font-size: 3mm">Sudah mengerti</span><br>
                         <input type="radio" name="evaluasi_3" value="2"><span style="font-size: 3mm">Re-edukasi</span><br>
                         <input type="radio" name="evaluasi_3" value="3"><span style="font-size: 3mm">Re-demonstrasi</span>
                       </td>
                       <td>
-                        <div class="btn-group">
-                          <a class="btn btn-default" href="#"><i class="icon_close_alt2"></i></a>
-                        </div>  
                       </td>
                     </tr>
                     <tr>
-                      <td><input type="date" class="form-control" name="tanggal_4"></td>
-                      <td><input type="text" class="form-control" name="poliklinik_4"></td>
+                      <td><input type="date" class="form-control" name="tanggal_4" required></td>
+                      <td><input type="text" class="form-control" name="poliklinik_4" required></td>
                       <td>
-                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box;" rows="5" class="form-control" name="informasi_4">Hasil pelayanan, termasuk terjadinya kejadian yang diharapkan dan tidak diharapkan</textarea>
+                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box;" rows="5" class="form-control" name="informasi_4" readonly>Hasil pelayanan, termasuk terjadinya kejadian yang diharapkan dan tidak diharapkan</textarea>
                       </td>
-                      <td><input type="text" class="form-control" name="nama_edukator_4"></td>
+                      <td><input type="text" class="form-control" name="nama_edukator_4" required></td>
                       <td><input type="checkbox" class="form-control" name="ttd_edukator_4"></td>
-                      <td><input type="text" class="form-control" name="nama_sasaran_4"></td>
+                      <td><input type="text" class="form-control" name="nama_sasaran_4" required></td>
                       <td><input type="checkbox" class="form-control" name="ttd_sasaran_4"></td>
                       <td>
-                        <input type="radio" name="evaluasi_4" value="1"><span style="font-size: 3mm">Sudah mengerti</span><br>
+                        <input type="radio" name="evaluasi_4" value="1" required><span style="font-size: 3mm">Sudah mengerti</span><br>
                         <input type="radio" name="evaluasi_4" value="2"><span style="font-size: 3mm">Re-edukasi</span><br>
                         <input type="radio" name="evaluasi_4" value="3"><span style="font-size: 3mm">Re-demonstrasi</span>
                       </td>
                       <td>
-                        <div class="btn-group">
-                          <a class="btn btn-default" href="#"><i class="icon_close_alt2"></i></a>
-                        </div>  
                       </td>
                     </tr>
                     <tr id="last_row">
@@ -314,8 +302,19 @@
       $('#tambah_form').click(function() {
         var a = document.getElementById('jumlah_form').value;
         a = parseInt(a) + 1;
-        $('#last_row').before('<tr><td><input type="date" class="form-control" name="tanggal_'+a+'"></td><td><input type="text" class="form-control" name="poliklinik_'+a+'"></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box;" rows="5" class="form-control" name="informasi_'+a+'"></textarea></td><td><input type="text" class="form-control" name="nama_edukator_'+a+'"></td><td><input type="checkbox" class="form-control" name="ttd_edukator_'+a+'"></td><td><input type="text" class="form-control" name="nama_sasaran_'+a+'"></td><td><input type="checkbox" class="form-control" name="ttd_sasaran_'+a+'"></td><td><input type="radio" name="evaluasi_'+a+'" value="1"><span style="font-size: 3mm">Sudah mengerti</span><br><input type="radio" name="evaluasi_'+a+'" value="2"><span style="font-size: 3mm">Re-edukasi</span><br><input type="radio" name="evaluasi_'+a+'" value="3"><span style="font-size: 3mm">Re-demonstrasi</span></td><td><div class="btn-group"><a class="btn btn-default"><i class="icon_close_alt2"></i></a></div></td></tr>');
+        $('#last_row').before('<tr id="form_'+a+'"><td><input type="date" class="form-control" name="tanggal_'+a+'" required></td><td><input type="text" class="form-control" name="poliklinik_'+a+'" required></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box;" rows="5" class="form-control" name="informasi_'+a+'" required></textarea></td><td><input type="text" class="form-control" name="nama_edukator_'+a+'" required></td><td><input type="checkbox" class="form-control" name="ttd_edukator_'+a+'"></td><td><input type="text" class="form-control" name="nama_sasaran_'+a+'" required></td><td><input type="checkbox" class="form-control" name="ttd_sasaran_'+a+'"></td><td><input type="radio" name="evaluasi_'+a+'" value="1" required><span style="font-size: 3mm">Sudah mengerti</span><br><input type="radio" name="evaluasi_'+a+'" value="2"><span style="font-size: 3mm">Re-edukasi</span><br><input type="radio" name="evaluasi_'+a+'" value="3"><span style="font-size: 3mm">Re-demonstrasi</span></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
         document.getElementById('jumlah_form').value = a;
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(document).on('click', '.tombol_hapus', function() {
+        // alert('terklik a');
+        var x = $(this).attr('id');
+        var nomor = x.substring(13)
+        $('#form_'+nomor).remove();
       });
     });
   </script>
