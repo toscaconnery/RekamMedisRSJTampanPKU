@@ -133,7 +133,6 @@ class RJInformasiEdukasiController extends Controller
 
     public function post_rj_informasi_edukasi_list_informasi(Request $request)
     {
-    	// dd($request);
     	$jumlah_form = $request->jumlah_form;
     	for($i = 1; $i <= $jumlah_form; $i++) {
     		$str_tanggal = 'tanggal_'.$i;
