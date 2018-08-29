@@ -16,8 +16,8 @@
           <span class="menu-arrow arrow_carrot-right"></span>
         </a>
         <ul class="sub">
-          <li><a class="" href="{{url('')}}/rj_asesmen_awal">Asesmen Awal</a></li>
-          <li><a class="" href="{{url('')}}/rj_asesmen_gigi">Asesmen Awal Gigi</a></li>
+          <li><a class="" href="{{url('')}}/rj_asesmen_awal_perawat">Asesmen Awal</a></li>
+          <li><a class="" href="{{url('')}}/rj_asesmen_awal_gigi_perawat">Asesmen Awal Gigi</a></li>
           <li><a class="" href="{{url('')}}/rj_informasi_edukasi">Informasi dan Edukasi</a></li>
           <li><a class="" href="{{url('')}}/rj_lapor_rehabilitasi">Lapor dan Rehabilitasi</a></li>
           <li><a class="" href="{{url('')}}/rj_perkembangan_pasien">Perkembangan Pasien</a></li>

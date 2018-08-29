@@ -14,13 +14,5 @@ class RJLaporRehabilitasi extends Model
 
     protected $fillable = [
         'no_rm',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        '',
-        
     ];
 }

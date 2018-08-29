@@ -473,6 +473,7 @@
                 </div>
                 <div>
                   <button type="submit" class="btn btn-primary">Submit</button>
+                  <a href="{{url('')}}/rj_informasi_edukasi_list_informasi"><button type="button" class="btn btn-primary">List Edukasi</button></a>
                 </div>
               </div>
             </section>
@@ -499,8 +500,6 @@
   <script src="{{url('')}}/js/bootstrap-switch.js"></script>
   <!--custom tagsinput-->
   <script src="{{url('')}}/js/jquery.tagsinput.js"></script>
-
-  <!-- colorpicker -->
 
   <!-- bootstrap-wysiwyg -->
   <script src="{{url('')}}/js/jquery.hotkeys.js"></script>
@@ -578,6 +577,7 @@
       });
   </script>
 
+  {{-- hambatan --}}
   <script type="text/javascript">
       $(document).ready( function() {
         $('input[type=checkbox][name="hambatan_12"]').change(function() {
@@ -591,6 +591,7 @@
       });
   </script>
 
+  {{-- kebutuhan --}}
   <script type="text/javascript">
       $(document).ready( function() {
         $('input[type=checkbox][name="kebutuhan_10"]').change(function() {

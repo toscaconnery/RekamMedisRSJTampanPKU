@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RJInformasiEdukasi;
+use App\Models\RJEdukasiDiperoleh;
 
 class RJInformasiEdukasiController extends Controller
 {
@@ -123,6 +124,50 @@ class RJInformasiEdukasiController extends Controller
     	$data->hubungan= $request->hubungan;
     	$data->save();
     	return redirect('index');
+    }
 
+    public function get_rj_informasi_edukasi_list_informasi()
+    {
+    	return view('page.rj.informasi_edukasi_list_informasi');
+    }
+
+    public function post_rj_informasi_edukasi_list_informasi(Request $request)
+    {
+    	// dd($request);
+    	$jumlah_form = $request->jumlah_form;
+    	for($i = 1; $i <= $jumlah_form; $i++) {
+    		$str_tanggal = 'tanggal_'.$i;
+    		$str_poliklinik = 'poliklinik_'.$i;
+    		$str_informasi = 'informasi_'.$i;
+    		$str_nama_edukator = 'nama_edukator_'.$i;
+    		$str_ttd_edukator = 'ttd_edukator_'.$i;
+    		$str_nama_sasaran = 'nama_sasaran_'.$i;
+    		$str_ttd_sasaran = 'ttd_sasaran_'.$i;
+    		$str_evaluasi = 'evaluasi_'.$i;
+    		if(!is_null($request->$str_tanggal)) {
+    			$data = new RJEdukasiDiperoleh;
+    			$data->id_regis = 1;
+    			$data->tanggal = $request->$str_tanggal;
+    			$data->poliklinik = $request->$str_poliklinik;
+    			$data->informasi = $request->$str_informasi;
+    			$data->nama_edukator = $request->$str_nama_edukator;
+    			if(isset($request->$str_ttd_edukator)) {
+    				$data->ttd_edukator = True;
+    			}
+    			else {
+    				$data->ttd_edukator = False;
+    			}
+    			$data->nama_sasaran = $request->$str_nama_sasaran;
+    			if(isset($request->$str_ttd_sasaran)) {
+    				$data->ttd_sasaran = True;
+    			}
+    			else {
+    				$data->ttd_sasaran = False;
+    			}
+    			$data->evaluasi = $request->$str_evaluasi;
+    			$data->save();
+    		}
+    	}
+		return redirect('index');    	
     }
 }
