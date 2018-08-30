@@ -76,6 +76,13 @@ Route::post('/rj_perkembangan_pasien', 'RJPerkembanganPasienController@post_rj_p
 
 Route::get('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@get_rj_identifikasi_stresor');
 Route::post('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@post_rj_identifikasi_stresor');
+
+Route::get('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikolog');
+Route::post('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_psikolog');
+Route::get('/rj_tumbuh_kembang', function () {
+    return view('rj_tumbuh_kembang');
+});
+
 //DO  NOT  TOUCH!!!////
 //DO  NOT  TOUCH!!!////
 //DO  NOT  TOUCH!!!////
@@ -105,6 +112,9 @@ Route::get('/penundaan_pelayanan', function () {
 // Route::get('/rj_identifikasi_stresor', function () {
 //     return view('rj_identifikasi_stresor');
 // });
+// Route::get('/rj_tumbuh_kembang', function () {
+//     return view('rj_tumbuh_kembang');
+// });
 
 
 Route::get('/ri_catatan_perkembangan', function () {
@@ -127,9 +137,6 @@ Route::get('/rj_rencana_pemulangan', function () {
 
 
 
-Route::get('/rj_tumbuh_kembang', function () {
-    return view('rj_tumbuh_kembang');
-});
 
 Route::get('/igd_catatan_kemajuan', function () {
     return view('igd_catatan_kemajuan');
