@@ -73,6 +73,9 @@ Route::post('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@post_rj_lap
 
 Route::get('/rj_perkembangan_pasien', 'RJPerkembanganPasienController@get_rj_perkembangan_pasien');
 Route::post('/rj_perkembangan_pasien', 'RJPerkembanganPasienController@post_rj_perkembangan_pasien');
+
+Route::get('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@get_rj_identifikasi_stresor');
+Route::post('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@post_rj_identifikasi_stresor');
 //DO  NOT  TOUCH!!!////
 //DO  NOT  TOUCH!!!////
 //DO  NOT  TOUCH!!!////
@@ -99,6 +102,9 @@ Route::get('/penundaan_pelayanan', function () {
 // Route::get('/rj_perkembangan_pasien', function () {
 //     return view('rj_perkembangan_pasien');
 // });
+// Route::get('/rj_identifikasi_stresor', function () {
+//     return view('rj_identifikasi_stresor');
+// });
 
 
 Route::get('/ri_catatan_perkembangan', function () {
@@ -118,9 +124,6 @@ Route::get('/rj_rencana_pemulangan', function () {
 });
 
 
-Route::get('/rj_identifikasi_stresor', function () {
-    return view('rj_identifikasi_stresor');
-});
 
 
 

@@ -20,8 +20,8 @@
           <li><a class="" href="{{url('')}}/rj_asesmen_awal_gigi_perawat">Asesmen Awal Gigi</a></li>
           <li><a class="" href="{{url('')}}/rj_informasi_edukasi">Informasi dan Edukasi</a></li>
           <li><a class="" href="{{url('')}}/rj_lapor_rehabilitasi">Lapor dan Rehabilitasi</a></li>
-          <li><a class="" href="{{url('')}}/rj_perkembangan_pasien">Perkembangan Pasien</a></li>
           <li><a class="" href="{{url('')}}/rj_identifikasi_stresor">Identifikasi Stresor</a></li>
+          <li><a class="" href="{{url('')}}/rj_perkembangan_pasien">Perkembangan Pasien</a></li>
           <li><a class="" href="{{url('')}}/rj_tumbuh_kembang">Tumbuh Kembang</a></li>
           <li><a class="" href="{{url('')}}/rj_resume_rawat">Resume Rawat Jalan</a></li>
         </ul>

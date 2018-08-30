@@ -276,24 +276,24 @@
     <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
 
     {{-- wicked time picker --}}
-      {{-- <script type="text/javascript" src="{{url('')}}/wickedpicker/jquery-3.3.1.js"></script>
-      <script type="text/javascript" src="{{url('')}}/wickedpicker/src/wickedpicker.js"></script>
-      <script type="text/javascript">
-        $('.timepicker').wickedpicker();
-      </script> --}}
+    {{-- <script type="text/javascript" src="{{url('')}}/wickedpicker/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="{{url('')}}/wickedpicker/src/wickedpicker.js"></script>
+    <script type="text/javascript">
+      $('.timepicker').wickedpicker();
+    </script> --}}
 
-      {{-- menambah row inputan --}}
-      <script type="text/javascript">
-        $(document).ready(function() {
-          $('#tambah_form').click(function() {
-            var a = document.getElementById('jumlah_form').value;
-            // alert('a');
-            a = parseInt(a) + 1;
-            $('#last_row').before('<tr id="form_'+a+'"><td><input type="date" class="form-control" name="tanggal_'+a+'" required><input type="text" class="form-control" name="jam_'+a+'" required placeholder="Jam"></td><td><input type="text" class="form-control" name="profesi_'+a+'" readonly value="Profesi A"></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="ttd_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-            document.getElementById('jumlah_form').value = a;
-          });
+    {{-- menambah row inputan --}}
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#tambah_form').click(function() {
+          var a = document.getElementById('jumlah_form').value;
+          // alert('a');
+          a = parseInt(a) + 1;
+          $('#last_row').before('<tr id="form_'+a+'"><td><input type="date" class="form-control" name="tanggal_'+a+'" required><input type="text" class="form-control" name="jam_'+a+'" required placeholder="Jam"></td><td><input type="text" class="form-control" name="profesi_'+a+'" readonly value="Profesi A"></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="ttd_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+          document.getElementById('jumlah_form').value = a;
         });
-      </script>
+      });
+    </script>
 
       {{-- menghapus row --}}
       <script type="text/javascript">
