@@ -418,10 +418,10 @@ Route::get('/doc_ri_nyeri', function () {
 });
 
 //dokumen catatan perkembangan
-Route::get('/pdf_ri_perkembangan', 'Pdf_ri_Controller@pdf_ri_perkembangan');
+Route::get('/pdf_ri_catatan_perkembangan', 'Pdf_ri_Controller@pdf_ri_catatan_perkembangan');
 
-Route::get('/doc_ri_perkembangan', function () {
-    return view('/doc_ri_perkembangan');
+Route::get('/doc_ri_catatan_perkembangan', function () {
+    return view('/doc_ri_catatan_perkembangan');
 });
 
 //dokumen rencana tindak keperawatan
