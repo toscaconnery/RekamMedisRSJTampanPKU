@@ -49,15 +49,44 @@ Route::post('/tindak_lanjut', 'RawatJalanController@store_tindak_lanjut');
 Route::get('/rj_asesmen_gigi', 'RawatJalanController@asesmen_gigi');
 
 //FIX
+//DO  NOT  TOUCH!!!////
+//DO  NOT  TOUCH!!!////
+//DO  NOT  TOUCH!!!////
+//DO  NOT  TOUCH!!!////
 Route::get('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@get_rj_asesmen_awal_perawat');
 Route::post('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_perawat');
 Route::get('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@get_rj_asesmen_awal_dokter');
 Route::post('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@post_rj_asesmen_awal_dokter');
-Route::get('/rj_asesmen_awal_gigi_perawat', 'RJAsesmenAwalController@get_rj_asesmen_awal_gigi_perawat');
-Route::post('/rj_asesmen_awal_gigi_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_gigi_perawat');
 
+Route::get('/rj_asesmen_awal_gigi_perawat', 'RJAsesmenAwalGigiController@get_rj_asesmen_awal_gigi_perawat');
+Route::post('/rj_asesmen_awal_gigi_perawat', 'RJAsesmenAwalGigiController@post_rj_asesmen_awal_gigi_perawat');
+Route::get('/rj_asesmen_awal_gigi_dokter', 'RJAsesmenAwalGigiController@get_rj_asesmen_awal_gigi_dokter');
+Route::post('/rj_asesmen_awal_gigi_dokter', 'RJAsesmenAwalGigiController@post_rj_asesmen_awal_gigi_dokter');
 
+Route::get('/rj_informasi_edukasi', 'RJInformasiEdukasiController@get_rj_informasi_edukasi');
+Route::post('/rj_informasi_edukasi', 'RJInformasiEdukasiController@post_rj_informasi_edukasi');
+Route::get('/rj_informasi_edukasi_list_informasi', 'RJInformasiEdukasiController@get_rj_informasi_edukasi_list_informasi');
+Route::post('/rj_informasi_edukasi_list_informasi', 'RJInformasiEdukasiController@post_rj_informasi_edukasi_list_informasi');
 
+Route::get('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@get_rj_lapor_rehabilitasi');    //
+Route::post('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@post_rj_lapor_rehabilitasi');  //
+
+Route::get('/rj_perkembangan_pasien', 'RJPerkembanganPasienController@get_rj_perkembangan_pasien');
+Route::post('/rj_perkembangan_pasien', 'RJPerkembanganPasienController@post_rj_perkembangan_pasien');
+
+Route::get('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@get_rj_identifikasi_stresor');
+Route::post('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@post_rj_identifikasi_stresor');
+
+Route::get('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikolog');
+Route::post('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_psikolog');
+Route::get('/rj_tumbuh_kembang', function () {
+    return view('rj_tumbuh_kembang');
+});
+
+//DO  NOT  TOUCH!!!////
+//DO  NOT  TOUCH!!!////
+//DO  NOT  TOUCH!!!////
+//DO  NOT  TOUCH!!!////
 
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');
@@ -71,13 +100,22 @@ Route::get('/penundaan_pelayanan', function () {
 });
 
 
-Route::get('/rj_informasi_edukasi', function () {
-    return view('rj_informasi_edukasi');
-});
+// Route::get('/rj_informasi_edukasi', function () {
+//     return view('rj_informasi_edukasi');
+// });
+// Route::get('/rj_lapor_rehabilitasi', function () {
+//     return view('rj_lapor_rehabilitasi');
+// });
+// Route::get('/rj_perkembangan_pasien', function () {
+//     return view('rj_perkembangan_pasien');
+// });
+// Route::get('/rj_identifikasi_stresor', function () {
+//     return view('rj_identifikasi_stresor');
+// });
+// Route::get('/rj_tumbuh_kembang', function () {
+//     return view('rj_tumbuh_kembang');
+// });
 
-Route::get('/rj_perkembangan_pasien', function () {
-    return view('rj_perkembangan_pasien');
-});
 
 Route::get('/ri_catatan_perkembangan', function () {
     return view('ri_catatan_perkembangan');
@@ -96,18 +134,9 @@ Route::get('/rj_rencana_pemulangan', function () {
 });
 
 
-Route::get('/rj_identifikasi_stresor', function () {
-    return view('rj_identifikasi_stresor');
-});
-
-Route::get('/rj_lapor_rehabilitasi', function () {
-    return view('rj_lapor_rehabilitasi');
-});
 
 
-Route::get('/rj_tumbuh_kembang', function () {
-    return view('rj_tumbuh_kembang');
-});
+
 
 Route::get('/igd_catatan_kemajuan', function () {
     return view('igd_catatan_kemajuan');

@@ -34,11 +34,6 @@ class RJAsesmenAwalController extends Controller
     	return view('page.rj.asesmen_awal_dokter');
     }
 
-    public function get_rj_asesmen_awal_gigi_perawat()
-    {
-        return view('page.rj.asesmen_awal_gigi_perawat');
-    }
-
     public function post_rj_asesmen_awal_perawat(Request $request)
     {
 
@@ -908,102 +903,6 @@ class RJAsesmenAwalController extends Controller
         $data->suhu = $request->suhu;
         $data->save();
 
-        return redirect('index');
-    }
-
-
-    ////////////////////ASESMEN AWAL PASIEN GIGI RAWAT JALAN //////////////////////////////////////
-    public function post_rj_asesmen_awal_gigi_perawat(Request $request)
-    {
-        //PENILAIAN TINGKAT NYERI
-        $nyeri = new RJNyeri;
-        $nyeri->id_regis = 1;
-        $nyeri->jenis_form = 'gigi';
-        $nyeri->tingkat = $request->tingkat;
-        $nyeri->skala = $request->skala;
-        $nyeri->lokasi = $request->lokasi;
-        $nyeri->lokasi = $request->lokasi;
-        $nyeri->durasi = $request->durasi;
-        $nyeri->frekuensi = $request->frekuensi;
-        $hilang = "";
-        if(isset($request->hilang1)) {
-            $hilang .= "Minum obat, ";
-        }
-        if(isset($request->hilang2)) {
-            $hilang .= "Mendengar musik, ";
-        }
-        if(isset($request->hilang3)) {
-            $hilang .= "Istirahat, ";
-        }
-        if(isset($request->hilang4)) {
-            $hilang .= "Berubah posisi/tidur, ";
-        }
-        if(isset($request->hilang5)) {
-            $hilang .= $request->nyeri_hilang_input_text;
-            $hilang .", ";
-        }
-        $hilang = substr($hilang, 0, -1);
-        $nyeri->hilang = $hilang;
-        $nyeri->pemberitahuan = $request->pemberitahuan;
-        if($request->pemberitahuan == '1') {
-            $nyeri->waktu_pemberitahuan = $request->waktu_pemberitahuan;
-        }
-        $nyeri->save();
-
-        //PENILAIAN RISIKO JATUH
-        if($request->penilaian_risiko_jatuh == 'humpty_dumpty') {
-            $humpty = new HumptyDumpty;
-            $humpty->id_regis = 1;
-            $humpty->jenis_form = 'gigi';
-            $humpty->usia = $request->usia;
-            $humpty->diagnosis = $request->diagnosis;
-            $humpty->gangguan_kognitif = $request->gangguan_kognitif;
-            $humpty->faktor_lingkungan = $request->faktor_lingkungan;
-            $humpty->waktu_respon_obat = $request->waktu_respon_obat;
-            $humpty->penggunaan_obat = $request->penggunaan_obat;
-            $humpty->save();
-        }
-        elseif($request->penilaian_risiko_jatuh == 'morse') {
-            $morse = new Morse;
-            $morse->id_regis = 1;
-            $morse->jenis_form = 'gigi';
-            if($request->riwayat_jatuh == 'true') {
-                $morse->riwayat_jatuh = True;
-            }
-            else {
-                $morse->riwayat_jatuh = False;
-            }
-            if($request->diagnosis_sekunder == 'true') {
-                $morse->diagnosis_sekunder = True;
-            }
-            else {
-                $morse->diagnosis_sekunder = False;
-            }
-            $morse->alat_bantu = $request->alat_bantu;
-            if($request->terpasang_infus == 'true') {
-                $morse->terpasang_infus = True;
-            }
-            else {
-                $morse->terpasang_infus = False;
-            }
-            $morse->gaya_berjalan = $request->gaya_berjalan;
-            $morse->status_mental = $request->status_mental;
-            $morse->save();
-        }
-        elseif($request->penilaian_risiko_jatuh == 'edmunson') {
-            $edmunson = new Edmunson;
-            $edmunson->id_regis = 1;
-            $edmunson->jenis_form = 'gigi';
-            $edmunson->status_mental = $request->status_mental;
-            $edmunson->diagnosis = $request->diagnosis;
-            $edmunson->eliminasi = $request->eliminasi;
-            $edmunson->pengobatan = $request->pengobatan;
-            $edmunson->diagnosa = $request->diagnosa;
-            $edmunson->ambulasi = $request->ambulasi;
-            $edmunson->nutrisi = $request->nutrisi;
-            $edmunson->riwayat_jatuh = $request->riwayat_jatuh;
-            $edmunson->save();
-        }
         return redirect('index');
     }
 }

@@ -251,25 +251,25 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="nama_pj[]">
+                    <input type="text" class="form-control" name="nama_pj[]" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="alamat_pj[]">
+                    <input type="text" class="form-control" name="alamat_pj[]" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Hubungan</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="hubungan_pj[]">
+                    <input type="text" class="form-control" name="hubungan_pj[]" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Telp</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="no_telp_pj[]">
+                    <input type="text" class="form-control" name="no_telp_pj[]" required>
                   </div>
                 </div>
               </div>
