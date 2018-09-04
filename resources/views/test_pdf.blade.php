@@ -96,7 +96,7 @@
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="{{url('')}}/pdf_ri_informasi"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="{{url('')}}/pdf_ri_monitoring"><i class="icon_check_alt2"></i></a>
+                        <a class="btn btn-success" href="{{url('')}}/pdf_ri_persetujuan_umum"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="{{url('')}}/pdf_ri_evaluasi"><i class="icon_close_alt2"></i></a>
                       </div>
                     </td>

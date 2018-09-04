@@ -411,6 +411,13 @@ Route::get('/doc_ri_dpjpcase', function () {
     return view('/doc_ri_dpjpcase');
 });
 
+//dokumen ri persetujuan umum
+Route::get('/pdf_ri_persetujuan_umum', 'Pdf_ri_Controller@pdf_ri_persetujuan_umum');
+
+Route::get('/doc_ri_persetujuan_umum', function () {
+    return view('/doc_ri_persetujuan_umum');
+});
+
 //dokumen ri asesmen
 Route::get('/pdf_ri_asesmen', 'Pdf_ri_Controller@pdf_ri_asesmen');
 
