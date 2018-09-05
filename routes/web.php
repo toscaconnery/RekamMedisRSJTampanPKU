@@ -460,6 +460,27 @@ Route::get('/doc_ri_catatan_perkembangan', function () {
     return view('/doc_ri_catatan_perkembangan');
 });
 
+//dokumen rencana
+Route::get('/pdf_ri_rencana', 'Pdf_ri_Controller@pdf_ri_rencana');
+
+Route::get('/doc_ri_rencana1', function () {
+    return view('/doc_ri_rencana1');
+});
+
+//dokumen rencana klien
+Route::get('/pdf_ri_rencanaklien', 'Pdf_ri_Controller@pdf_ri_rencanaklien');
+
+Route::get('/doc_ri_rencanaklien1', function () {
+    return view('/doc_ri_rencanaklien1');
+});
+
+//dokumen rawat NAPZA
+Route::get('/pdf_ri_rawat_napza', 'Pdf_ri_Controller@pdf_ri_rawat_napza');
+
+Route::get('/doc_ri_rawat_napza', function () {
+    return view('/doc_ri_rawat_napza');
+});
+
 //dokumen rencana tindak keperawatan
 Route::get('/pdf_ri_tindak', 'Pdf_ri_Controller@pdf_ri_tindak');
 

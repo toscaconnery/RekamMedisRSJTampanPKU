@@ -52,7 +52,7 @@ header('Content-Type: application/pdf');
       <td class="box">
         a. Memahami informasi yang ada dalam diri saya, termasuk diagnosis, hasil laboratorium dan hasil tes diagnostik yang akan digunakan untuk perawatan medis, rumah sakit akan menjamin kerahasiaannya,
         <br>b. Memberi wewenang Rumah Sakit untuk memberikan informasi tentang diagnosis, hasil pelayanan dan pengobatan bila diperlukan untuk memproses klaim asuransi (BPJS, asuransi komersial) dan atau lembaga pemerintah,
-        <br>c. Memberikan wewenang Rumah Sakit untuk memberikan informasi tentang diagnosis, hasil pelayanan dan pengobatan saya kepada anggota keluarga/ teman yang sudah saya tunjuk sesuai permenkes<br> No.269/Menkes/Per/II/208 tentang Rekam Medis.
+        <br>c. Memberikan wewenang Rumah Sakit untuk memberikan informasi tentang diagnosis, hasil pelayanan dan pengobatan saya kepada anggota keluarga/ teman yang sudah saya tunjuk sesuai permenkes No.269/Menkes/Per/II/208 tentang Rekam Medis.
       </td>
     </tr>
     <tr>
