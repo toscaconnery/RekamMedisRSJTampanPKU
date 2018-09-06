@@ -411,6 +411,13 @@ Route::get('/doc_ri_dpjpcase', function () {
     return view('/doc_ri_dpjpcase');
 });
 
+//dokumen ri persetujuan umum
+Route::get('/pdf_ri_persetujuan_umum', 'Pdf_ri_Controller@pdf_ri_persetujuan_umum');
+
+Route::get('/doc_ri_persetujuan_umum', function () {
+    return view('/doc_ri_persetujuan_umum');
+});
+
 //dokumen ri asesmen
 Route::get('/pdf_ri_asesmen', 'Pdf_ri_Controller@pdf_ri_asesmen');
 
@@ -451,6 +458,27 @@ Route::get('/pdf_ri_catatan_perkembangan', 'Pdf_ri_Controller@pdf_ri_catatan_per
 
 Route::get('/doc_ri_catatan_perkembangan', function () {
     return view('/doc_ri_catatan_perkembangan');
+});
+
+//dokumen rencana
+Route::get('/pdf_ri_rencana', 'Pdf_ri_Controller@pdf_ri_rencana');
+
+Route::get('/doc_ri_rencana1', function () {
+    return view('/doc_ri_rencana1');
+});
+
+//dokumen rencana klien
+Route::get('/pdf_ri_rencanaklien', 'Pdf_ri_Controller@pdf_ri_rencanaklien');
+
+Route::get('/doc_ri_rencanaklien1', function () {
+    return view('/doc_ri_rencanaklien1');
+});
+
+//dokumen rawat NAPZA
+Route::get('/pdf_ri_rawat_napza', 'Pdf_ri_Controller@pdf_ri_rawat_napza');
+
+Route::get('/doc_ri_rawat_napza', function () {
+    return view('/doc_ri_rawat_napza');
 });
 
 //dokumen rencana tindak keperawatan
