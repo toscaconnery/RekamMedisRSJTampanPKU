@@ -20,9 +20,12 @@ class RJTumbuhKembangDataAnak extends Model
         'jenis_kelamin',
         'agama',
         'sekolah',
-        'alamat_sekolah',
         'kelas',
+        'alamat_sekolah',
         'suku_bangsa',
         'bahasa',
         'alamat_lengkap',
+        'no_telp',
+        'tinggal_dengan',
+    ];
 }

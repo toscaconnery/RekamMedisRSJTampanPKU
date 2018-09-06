@@ -219,9 +219,9 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> --}}
 
-          <section class="panel">
+          {{-- <section class="panel">
             <header class="panel-heading">
               Data Ayah
             </header>
@@ -314,9 +314,9 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> --}}
 
-          <section class="panel">
+          {{-- <section class="panel">
             <header class="panel-heading">
               Data Ibu
             </header>
@@ -409,7 +409,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> --}}
 
           <section class="panel">
             <header class="panel-heading">
@@ -539,7 +539,7 @@
                 </tbody>
               </table>
             </div>
-          </section> --}}
+          </section>
 
           {{-- riwayat kehamilan --}}
           {{-- <section class="panel">
@@ -550,25 +550,25 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Bagaimana keadaan kandungan ibu pada awal kehamilan?</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="keadaan_awal_kandungan">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Selama mengandung ibu pernah menderita penyakit?</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="penyakit_selama_mengandung">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Perasaan-perasaan ibu selama mengandung (khusus)?</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="perasaan_selama_mengandung">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Apakah ibu suka minum obat-obatan selama mengandung?</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="suka_obat_obatan">
+                  <input type="text" class="form-control">
                 </div>
               </div>
 
@@ -577,13 +577,13 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="berdasarkan_anjuran" value="true">
+                      <input type="radio" name="b1" id="optionsRadios1" value="">
                       Ya
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="berdasarkan_anjuran" value="false">
+                      <input type="radio" name="b1" id="optionsRadios1" value="">
                       Tidak
                     </label>
                   </div>
@@ -595,13 +595,13 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="pernah_jatuh_kecelakaan" value="true">
+                      <input type="radio" name="b2" id="optionsRadios1" value="">
                       Ya
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="pernah_jatuh_kecelakaan" value="false">
+                      <input type="radio" name="b2" id="optionsRadios1" value="">
                       Tidak
                     </label>
                   </div>
@@ -610,7 +610,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Pada usia kandungan berapa bulan</label>
                 <div class="col-sm-8">
-                  <input type="number" class="form-control required" name="usia_jatuh_kecelakaan">
+                  <input type="text" class="form-control">
                 </div>
               </div>
 
@@ -619,13 +619,13 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="suka_merokok" value="true">
+                      <input type="radio" name="b3" id="optionsRadios1" value="">
                       Ya
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="suka_merokok" value="false">
+                      <input type="radio" name="b3" id="optionsRadios1" value="">
                       Tidak
                     </label>
                   </div>
@@ -637,13 +637,31 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="pernah_keguguran" value="true">
+                      <input type="radio" name="b4" id="optionsRadios1" value="">
                       Ya
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="pernah_keguguran" value="false">
+                      <input type="radio" name="b4" id="optionsRadios1" value="">
+                      Tidak
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-lg-2" for="inputSuccess">Apakah ibu pernah mengalami keguguran? </label>
+                <div class="col-lg-10">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="b3" id="optionsRadios1" value="">
+                      Ya
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="b3" id="optionsRadios1" value="">
                       Tidak
                     </label>
                   </div>
@@ -653,14 +671,14 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Berapa kali</label>
                 <div class="col-sm-8">
-                  <input type="number" class="form-control required" name="jumlah_keguguran">
+                  <input type="text" class="form-control">
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="col-sm-2 control-label">Usia ibu saat mengandung kasus (Tahun)</label>
-                <div class="col-sm-8">
-                  <input type="number" class="form-control required" name="usia_ketika_kasus"> 
+                <div class="col-sm-2">
+                  <input type="text" class="form-control"> 
                 </div>
               </div>
 
@@ -669,13 +687,13 @@
                 <div class="col-lg-8">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="bekerja_ketika_kasus" value="true">
+                      <input type="radio" name="b5" id="optionsRadios1" value="">
                       Bekerja
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="bekerja_ketika_kasus" value="false">
+                      <input type="radio" name="b5" id="optionsRadios1" value="">
                       Tidak Bekerja
                     </label>
                   </div>
@@ -697,19 +715,19 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="proses_kelahiran" value="Biasa">
+                      <input type="radio" name="c1" id="optionsRadios1" value="">
                       Biasa
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="proses_kelahiran" value="Lama">
+                      <input type="radio" name="c2" id="optionsRadios1" value="">
                       Lama
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="proses_kelahiran" value="Sukar">
+                      <input type="radio" name="c2" id="optionsRadios1" value="">
                       Sukar
                     </label>
                   </div>
@@ -721,13 +739,13 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="dibantu_alat" value="true">
+                      <input type="radio" name="c3" id="optionsRadios1" value="">
                       Ya
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="dibantu_alat" value="false">
+                      <input type="radio" name="c3" id="optionsRadios1" value="">
                       Tidak
                     </label>
                   </div>
@@ -736,7 +754,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Alat berupa</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="alat_bantu">
+                  <input type="text" class="form-control">
                 </div>
               </div>
 
@@ -745,13 +763,13 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="mengalami_keguguran" value="true">
+                      <input type="radio" name="c4" id="optionsRadios1" value="">
                       Ya
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="mengalami_keguguran" value="false">
+                      <input type="radio" name="c4" id="optionsRadios1" value="">
                       Tidak
                     </label>
                   </div>
@@ -760,7 +778,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Kalau ya berupa apa</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="keterangan_keguguran">
+                  <input type="text" class="form-control">
                 </div>
               </div>
 
@@ -769,19 +787,19 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="kondisi_lahir" value="Prematur">
+                      <input type="radio" name="c5" id="optionsRadios1" value="">
                       Prematur
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="kondisi_lahir" value="Cukup bulan">
+                      <input type="radio" name="c5" id="optionsRadios1" value="">
                       Cukup bulan
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="kondisi_lahir" value="Lewat bulan">
+                      <input type="radio" name="c5" id="optionsRadios1" value="">
                       Lewat bulan
                     </label>
                   </div>
@@ -793,19 +811,19 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="dibantu_oleh" value="Dokter">
+                      <input type="radio" name="c6" id="optionsRadios1" value="">
                       Dokter
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="dibantu_oleh" value="Bidan">
+                      <input type="radio" name="c6" id="optionsRadios1" value="">
                       Bidan
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="dibantu_oleh" value="Lainnya">
+                      <input type="radio" name="c6" id="optionsRadios1" value="">
                       Lainnya
                     </label>
                   </div>
@@ -815,20 +833,20 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Sebutkan</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="dibantu_oleh_lainnya">
+                  <input type="text" class="form-control">
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="col-sm-2 control-label">Berat Bayi</label>
                 <div class="col-sm-2">
-                  <input type="text" class="form-control required" name="berat_bayi">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Panjang bayi</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="panjang_bayi">
+                  <input type="text" class="form-control">
                 </div>
               </div>
             </div>
@@ -844,110 +862,104 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Berapa lama anak diberi asi ?</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="lama_asi">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Bagaimana pola makan anak ?</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="pola_makan">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Bagaimana pola tidur anak ?</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="pola_tidur">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Bagaimana toilt training anak ?</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="training">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Bagaimana kemampuan motorik anak ?</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="motorik">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Anak berjalan pada usia ?</label>
                 <div class="col-sm-8">
-                  <input type="number" class="form-control required" name="usia_berjalan">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Anak berbicara pada usia ?</label>
                 <div class="col-sm-8">
-                  <input type="number" class="form-control required" name="usia_berbicara">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Apakah anak mempunyai hambatan dalam berbicara ?</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="hambatan_berbicara">
+                  <input type="text" class="form-control">
                 </div>
               </div>
-              <label class="col-sm-2 control-label">Penyakit yang pernah diderita anak:</label>
-              <input type="hidden" name="jumlah_form_penyakit_anak" id="jumlah_form_penyakit_anak" value="1">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th style="width: 24%; text-align: center;">Penyakit</th>
-                    <th style="width: 24%; text-align: center;">Tahun</th>
-                    <th style="width: 24%; text-align: center;">Lamanya</th>
-                    <th style="width: 24%; text-align: center;">Keterangan</th>
-                    <th style="width: 4%; text-align: center;">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="text" class="form-control" name="penyakit_1"></td>
-                    <td><input type="number" class="form-control" name="tahun_1"></td>
-                    <td><input type="text" class="form-control" name="lamanya_1"></td>
-                    <td><input type="text" class="form-control" name="keterangan_1"></td>
-                    <td>
-                    </td>
-                  </tr>
-                  <tr id="last_row_penyakit_anak">
-                    <td colspan="9">
-                      <div class="btn-group">
-                        <button class="btn btn-primary" type="button" id="tambah_form_penyakit_anak"><i class="icon_plus_alt2"></i> Tambah</button>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Penyakit</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Tahun</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Lamanya</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Keterangan</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Obat-obatan yang masih diminum </label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="obat_masih_diminum">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Dalam sehari-hari anak lebih banyak berada dalam perawatan/pengasuhan</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="diasuh">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Selama berapa lama</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="lama_pengasuhan">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Masalah khusus dalam masa perawatan/pengasuhan</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="masalah_khusus">
+                  <input type="text" class="form-control">
                 </div>
               </div>
             </div>
           </section> --}}
 
           {{-- riwayat akademis --}}
-          <section class="panel">
+          {{-- <section class="panel">
             <header class="panel-heading">
               Riwayat Akademis
             </header>
@@ -974,37 +986,37 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Sikap</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="sikap">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Keterampilan motorik awal </label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="keterampilan_motorik_awal">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Hasil belajar anak </label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="hasil_belajar_anak">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Pelajaran yang disenangi</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="pelajaran_disenangi">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Anak mengalami kesukaran dalam mata pelajaran</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="pelajaran_sulit">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Keluhan anak dalam mata pelajaran yang dianggapnya sulit</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="keluhan_di_pelajaran_sulit">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
@@ -1012,13 +1024,13 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="tempat_belajar_sendiri" value="true">
+                      <input type="radio" name="d1" id="optionsRadios1" value="">
                       Ya
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="tempat_belajar_sendiri" value="false">
+                      <input type="radio" name="d1" id="optionsRadios1" value="">
                       Tidak
                     </label>
                   </div>
@@ -1031,31 +1043,31 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="waktu_biasa_belajar" value="Siang hari">
+                      <input type="radio" name="d2" id="optionsRadios1" value="">
                       Siang hari 
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="waktu_biasa_belajar" value="Sepulang sekolah">
+                      <input type="radio" name="d2" id="optionsRadios1" value="">
                       Sepulang sekolah 
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="waktu_biasa_belajar" value="Sore hari">
+                      <input type="radio" name="d2" id="optionsRadios1" value="">
                       Sore hari 
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="waktu_biasa_belajar" value="Malam hari">
+                      <input type="radio" name="d2" id="optionsRadios1" value="">
                       Malam hari  
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="waktu_biasa_belajar" value="Tidak tentu">
+                      <input type="radio" name="d2" id="optionsRadios1" value="">
                       Tidak tentu 
                     </label>
                   </div>
@@ -1067,25 +1079,25 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="dibantu_belajar" value="Selalu">
+                      <input type="radio" name="d3" id="optionsRadios1" value="">
                       Selalu
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="dibantu_belajar" value="Sering">
+                      <input type="radio" name="d3" id="optionsRadios1" value="">
                       Sering
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="dibantu_belajar" value="Kadang-kadang">
+                      <input type="radio" name="d3" id="optionsRadios1" value="">
                       Kadang-kadang
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="dibantu_belajar" value="Tidak pernah">
+                      <input type="radio" name="d3" id="optionsRadios1" value="">
                       Tidak pernah
                     </label>
                   </div>
@@ -1097,26 +1109,20 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="dibantu_belajar_oleh" value="Orang tua">
-                      Orang tua
+                      <input type="radio" name="d4" id="optionsRadios1" value="">
+                      Orang Tua
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="dibantu_belajar_oleh" value="Kakak">
+                      <input type="radio" name="d4" id="optionsRadios1" value="">
                       Kakak
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="dibantu_belajar_oleh" value="Adik">
+                      <input type="radio" name="d4" id="optionsRadios1" value="">
                       Adik
-                    </label>
-                  </div>
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="dibantu_belajar_oleh" value="Lainnya">
-                      Lainnya
                     </label>
                   </div>
                 </div>
@@ -1124,13 +1130,20 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Sebutkan</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="dibantu_belajar_oleh_lainnya">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Keluhan anak dalam mata pelajaran yang dianggapnya sulit</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label">Sikap anak dalam mengikuti kegiatan tersebut di atas</label>
+                <label class="col-sm-2 control-label">Sikap anak dalam mengikuti kegiatan kelas tersebut di atas</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control required" name="sikap_di_kegiatan">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
@@ -1138,13 +1151,13 @@
                 <div class="col-lg-10">
                   <div class="radio">
                     <label>
-                      <input type="radio" name="les" value="true">
+                      <input type="radio" name="d5" id="optionsRadios1" value="">
                       Ya
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="les" value="false">
+                      <input type="radio" name="d5" id="optionsRadios1" value="">
                       Tidak
                     </label>
                   </div>
@@ -1154,17 +1167,17 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Jika mengikuti dalam pelajaran apa saja ?</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="pelajaran_les">
+                  <input type="text" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Siapa yang memberi pelajaran tambahan tersebut ?</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="pengajar">
+                  <input type="text" class="form-control">
                 </div>
               </div>
             </div>
-          </section>
+          </section> --}}
 
           {{-- riwayat sosialisasi --}}
           {{-- <section class="panel">
@@ -1323,18 +1336,6 @@
     });
   </script>
 
-  {{-- menambah row inputan penyakit anak--}}
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#tambah_form_penyakit_anak').click(function() {
-        var a = document.getElementById('jumlah_form_penyakit_anak').value;
-        a = parseInt(a) + 1;
-        $('#last_row_penyakit_anak').before('<tr id="form_penyakit_anak_'+a+'"><td><input type="text" class="form-control" name="penyakit_'+a+'"></td><td><input type="number" class="form-control" name="tahun_'+a+'"></td><td><input type="text" class="form-control" name="lamanya_'+a+'"></td><td><input type="text" class="form-control" name="keterangan_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_penyakit_anak" type="button" id="tombol_hapus_penyakit_anak_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-        document.getElementById('jumlah_form_penyakit_anak').value = a;
-      });
-    });
-  </script>
-
   {{-- menghapus row saudara kandung--}}
   <script type="text/javascript">
     $(document).ready(function() {
@@ -1362,19 +1363,8 @@
     $(document).ready(function() {
       $(document).on('click', '.tombol_hapus_serumah', function() {
         var x = $(this).attr('id');
-        var nomor = x.substring(21)
+        var nomor = x.substring(18)
         $('#form_serumah_'+nomor).remove();
-      });
-    });
-  </script>
-
-  {{-- menghapus row penyakit anak--}}
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(document).on('click', '.tombol_hapus_penyakit_anak', function() {
-        var x = $(this).attr('id');
-        var nomor = x.substring(27)
-        $('#form_penyakit_anak_'+nomor).remove();
       });
     });
   </script>

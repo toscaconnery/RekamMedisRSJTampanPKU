@@ -83,10 +83,10 @@ Route::get('/rj_tumbuh_kembang', function () {
     return view('rj_tumbuh_kembang');
 });
 
-//DO  NOT  TOUCH!!!////
-//DO  NOT  TOUCH!!!////
-//DO  NOT  TOUCH!!!////
-//DO  NOT  TOUCH!!!////
+//END  OF  DO  NOT  TOUCH!!!////
+//END  OF  DO  NOT  TOUCH!!!////
+//END  OF  DO  NOT  TOUCH!!!////
+//END  OF  DO  NOT  TOUCH!!!////
 
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');

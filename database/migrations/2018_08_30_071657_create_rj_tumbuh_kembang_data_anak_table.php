@@ -22,11 +22,13 @@ class CreateRjTumbuhKembangDataAnakTable extends Migration
             $table->string('jenis_kelamin');
             $table->string('agama');
             $table->string('sekolah');
-            $table->string('alamat_sekolah');
             $table->string('kelas');
+            $table->string('alamat_sekolah');
             $table->string('suku_bangsa');
             $table->string('bahasa');
             $table->string('alamat_lengkap');
+            $table->string('no_telp');
+            $table->string('tinggal_dengan');
             $table->timestamps();
         });
     }
