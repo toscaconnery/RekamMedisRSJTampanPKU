@@ -446,6 +446,41 @@ Route::get('/doc_ri_edmunson', function () {
     return view('/doc_ri_edmunson');
 });
 
+//dokumen permintaan privasi
+Route::get('/pdf_ri_permintaan_privasi', 'Pdf_ri_Controller@pdf_ri_permintaan_privasi');
+
+Route::get('/doc_ri_permintaan_privasi', function () {
+    return view('/doc_ri_permintaan_privasi');
+});
+
+//dokumen permintaan rohani
+Route::get('/pdf_ri_permintaan_rohani', 'Pdf_ri_Controller@pdf_ri_permintaan_rohani');
+
+Route::get('/doc_ri_permintaan_rohani', function () {
+    return view('/doc_ri_permintaan_rohani');
+});
+
+//dokumen permintaan second
+Route::get('/pdf_ri_permintaan_second', 'Pdf_ri_Controller@pdf_ri_permintaan_second');
+
+Route::get('/doc_ri_permintaan_second', function () {
+    return view('/doc_ri_permintaan_second');
+});
+
+//dokumen permintaan jangan resusitasi
+Route::get('/pdf_ri_permintaan_notresucitate', 'Pdf_ri_Controller@pdf_ri_permintaan_notresucitate');
+
+Route::get('/doc_ri_permintaan_notresucitate', function () {
+    return view('/doc_ri_permintaan_notresucitate');
+});
+
+//dokumen permintaan resusitasi
+Route::get('/pdf_ri_permintaan_resucitate', 'Pdf_ri_Controller@pdf_ri_permintaan_resucitate');
+
+Route::get('/doc_ri_permintaan_resucitate', function () {
+    return view('/doc_ri_permintaan_resucitate');
+});
+
 //dokumen penilaian nyeri
 Route::get('/pdf_ri_nyeri', 'Pdf_ri_Controller@pdf_ri_nyeri');
 

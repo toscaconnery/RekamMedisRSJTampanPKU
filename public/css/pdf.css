@@ -1204,6 +1204,45 @@ th.big-box {
     border: 1px solid black;
 }
 
+td.ttd2 {
+    width: 50%;
+    vertical-align: center;
+    padding-top: 10px;
+    font-size: 110%;
+    line-height: 20px;
+    font-family: "arial", Times, serif;
+    text-align: center;
+}
+
+td.ttd3 {
+    width: 33.33%;
+    vertical-align: center;
+    padding-top: 10px;
+    font-size: 110%;
+    line-height: 20px;
+    font-family: "arial", Times, serif;
+    text-align: center;
+}
+
+td.number {
+    width: 3%;
+    vertical-align: center;
+    padding-top: 10px;
+    font-size: 110%;
+    line-height: 20px;
+    font-family: "arial", Times, serif;
+    text-align: left;
+}
+
+td.contain {
+    vertical-align: center;
+    padding-top: 10px;
+    font-size: 110%;
+    line-height: 20px;
+    font-family: "arial", Times, serif;
+    text-align: left;
+}
+
 
 
 
