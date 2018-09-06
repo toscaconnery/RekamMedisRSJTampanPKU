@@ -11,11 +11,25 @@ use App\Models\PenanggungJawab;
 
 class PasienController extends Controller
 {
-    public function pendaftaran_pasien() {
+    public function put_selected_patient_id(Request $request, $id)
+    {
+        $request->session()->put('id_pasien', $id);
+    }
+
+    public function check_selected_patient_id(Request $request)
+    {
+        dd($request);
+        $data = $request->session()->get('id_pasien');
+        dd($data);
+    }
+
+    public function pendaftaran_pasien()
+    {
     	return view('pendaftaran_pasien');
     }
 
-    public function store_pendaftaran_pasien(Request $request) {
+    public function store_pendaftaran_pasien(Request $request) 
+    {
     	$nama_pasien = $request->nama_pasien;
     	$tanggal_lahir = $request->tanggal_lahir;
     	$jenis_kelamin = $request->jenis_kelamin;

@@ -81,7 +81,7 @@
                       <td>{{$p->alamat}}</td>
                       <td>
                         <div class="btn-group">
-                          <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
+                          <a class="btn btn-primary" href="{{url('')}}/put_selected_patient_id/{{$p->no_rm}}"><i class="icon_plus_alt2"></i></a>
                         </div>
                       </td>
                     </tr>

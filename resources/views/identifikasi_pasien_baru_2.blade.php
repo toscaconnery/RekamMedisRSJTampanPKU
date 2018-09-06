@@ -90,7 +90,7 @@
                   <tr>
                     <td>Identifikasi Pasien</td>
                     <td>{{date('d/m/Y', strtotime($tanggal_pengisian))}}</td>
-                    <td>{{Auth::user()->nama}}</td>
+                    <td>[Nama Pengisi]</td>
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
