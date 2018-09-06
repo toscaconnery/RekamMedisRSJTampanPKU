@@ -27,6 +27,8 @@ Route::post('/identifikasi_pasien_baru_final', 'PasienController@identifikasi_pa
 
 // RAWAT JALAN========
 // ASESMEN AWAL
+Route::get('/put_selected_patient_id/{id}', 'PasienController@put_selected_patient_id');
+Route::get('check_selected_patient_id', 'PasienController@check_selected_patient_id');
 Route::get('/rj_asesmen_awal', 'RawatJalanController@asesmen_awal');    //will obsolete soon
 Route::post('/fisik_gizi', 'RawatJalanController@store_fisik_gizi');
 Route::post('/penilaian_tingkat_nyeri', 'RawatJalanController@store_penilaian_tingkat_nyeri');
@@ -83,10 +85,10 @@ Route::get('/rj_tumbuh_kembang', function () {
     return view('rj_tumbuh_kembang');
 });
 
-//DO  NOT  TOUCH!!!////
-//DO  NOT  TOUCH!!!////
-//DO  NOT  TOUCH!!!////
-//DO  NOT  TOUCH!!!////
+//END  OF  DO  NOT  TOUCH!!!////
+//END  OF  DO  NOT  TOUCH!!!////
+//END  OF  DO  NOT  TOUCH!!!////
+//END  OF  DO  NOT  TOUCH!!!////
 
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');

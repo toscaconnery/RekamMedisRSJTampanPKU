@@ -108,13 +108,14 @@
             {{ csrf_field() }}
             <input type="hidden" name="jumlah_form" id="jumlah_form" value="4">
             <section class="panel">
-                <header class="panel-heading">
-                  Obat yang Diminum Saat Ini
-                </header>
+              <header class="panel-heading">
+                Obat yang Diminum Saat Ini
+              </header>
+              <div class="panel-body">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th rowspan="2" style="width: 9%; text-align: center;%">Tgl</th>
+                      <th rowspan="2" style="width: 9%; text-align: center;">Tgl</th>
                       <th rowspan="2" style="width: 12%; text-align: center;">Poliklinik</th>
                       <th rowspan="2" style="width: 20%; text-align: center;">Informasi/edukasi tentang</th>
                       <th colspan="2" style="text-align: center;">Edukator</th>
@@ -212,7 +213,8 @@
                     </tr>
                   </tbody>
                 </table>
-              </section>
+              </div>
+            </section>
           </form>
         </div>
       </div>
