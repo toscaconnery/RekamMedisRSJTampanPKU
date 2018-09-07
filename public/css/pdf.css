@@ -1173,6 +1173,18 @@ td.box-c {
     border: 1px solid black;
 }
 
+td.box-ttd {
+    padding: 5px;
+    border: 1px solid black;
+    vertical-align: top;
+    text-align: center;
+}
+
+td.box-text {
+    padding: 5px;
+    border: 1px solid black;
+}
+
 td.s-box {
     padding: 1%;
     border: 1px solid black;
@@ -1196,6 +1208,12 @@ th.minimalist {
 th.box {
     border: 1px solid black;
     padding-left: 5px;
+}
+
+th.box-c {
+    border: 1px solid black;
+    padding-left: 5px;
+    text-align: center;
 }
 
 th.big-box {
@@ -1241,6 +1259,16 @@ td.contain {
     line-height: 20px;
     font-family: "arial", Times, serif;
     text-align: left;
+}
+
+th.contain {
+    vertical-align: center;
+    padding-top: 10px;
+    font-size: 110%;
+    line-height: 20px;
+    font-family: "arial", Times, serif;
+    text-align: left;
+    border: 0px;
 }
 
 
