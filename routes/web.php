@@ -483,6 +483,20 @@ Route::get('/doc_ri_permintaan_resucitate', function () {
     return view('/doc_ri_permintaan_resucitate');
 });
 
+//dokumen persetujuan tindakan kedokteran
+Route::get('/pdf_ri_persetujuan_tindakan', 'Pdf_ri_Controller@pdf_ri_persetujuan_tindakan');
+
+Route::get('/doc_ri_persetujuan_tindakan', function () {
+    return view('/doc_ri_persetujuan_tindakan');
+});
+
+//dokumen penolakan tindakan kedoketeran
+Route::get('/pdf_ri_penolakan_tindakan', 'Pdf_ri_Controller@pdf_ri_penolakan_tindakan');
+
+Route::get('/doc_ri_penolakan_tindakan', function () {
+    return view('/doc_ri_penolakan_tindakan');
+});
+
 //dokumen penilaian nyeri
 Route::get('/pdf_ri_nyeri', 'Pdf_ri_Controller@pdf_ri_nyeri');
 
