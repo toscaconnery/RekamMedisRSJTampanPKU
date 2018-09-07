@@ -18,7 +18,7 @@ class CreateRjTumbuhKembangRiwayatSekolahTable extends Migration
             $table->string('id_regis')->reference('id')->on('identifikasi');
             $table->string('jenis_sekolah');
             $table->string('umur');
-            $table->string('keterangan_tinggal');
+            $table->string('keterangan_tinggal')->nullable();
             $table->timestamps();
         });
     }
