@@ -1175,37 +1175,37 @@
           </section>
 
           {{-- riwayat sosialisasi --}}
-          {{-- <section class="panel">
+          <section class="panel">
             <header class="panel-heading">
               Riwayat Sosialisasi
             </header>
             <div class="panel-body">
               <div class="form-group">
-                <label class="col-sm-2 control-label">Riwayat Sosialisasi di Sekolah</label>
+                <label class="col-sm-2 control-label">Riwayat sosialisasi di Sekolah</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea rows="5" name="sosialisasi_di_sekolah" class="col-sm-8 form-control" style="resize: vertical;"></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label">Di dalam keluarga</label>
+                <label class="col-sm-2 control-label">Riwayat sosialisasi di dalam keluarga</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea rows="5" name="sosialisasi_di_keluarga" class="col-sm-8 form-control" style="resize: vertical;"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Tanggal</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" value="{{date('Y-m-d')}}" disabled="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Psikolog</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" value="[Nama Psikolog]" disabled="">
                 </div>
               </div>
             </div>
-          </section> --}}
+          </section>
 
           <div>
             <button type="submit" class="btn btn-primary">Submit</button>

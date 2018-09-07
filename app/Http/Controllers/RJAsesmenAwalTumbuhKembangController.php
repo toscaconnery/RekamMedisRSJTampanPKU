@@ -13,12 +13,18 @@ use App\Models\RJTumbuhKembangRiwayatPersalinanPascaNatal;
 use App\Models\RJTumbuhKembangPenyakitAnak;
 use App\Models\RJTumbuhKembangRiwayatAkademis;
 use App\Models\RJTumbuhKembangRiwayatSekolah;
+use App\Models\RJTumbuhKembangRiwayatSosialisasi;
 
 class RJAsesmenAwalTumbuhKembangController extends Controller
 {
     public function get_rj_asesmen_awal_tumbuh_kembang_psikolog()
     {
     	return view('page.rj.tumbuh_kembang_psikolog');
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_dokter()
+    {
+        return view('page.rj.tumbuh_kembang_dokter');
     }
 
     public function post_rj_asesmen_awal_tumbuh_kembang_psikolog(Request $request)
@@ -298,6 +304,19 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
             }
         }
 
+        // riwayat sosialisasi
+        $sosialisasi = new RJTumbuhKembangRiwayatSosialisasi;
+        $sosialisasi->id_regis = 1;
+        $sosialisasi->sekolah = $request->sosialisasi_di_sekolah;
+        $sosialisasi->keluarga = $request->sosialisasi_di_keluarga;
+        $sosialisasi->save();
+
     	return back();
     }
+
+    public function post_rj_asesmen_awal_tumbuh_kembang_dokter()
+    {
+        return view('page.rj.tumbuh_kembang_psikolog');
+    }
+
 }
