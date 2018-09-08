@@ -14,6 +14,11 @@ class PasienController extends Controller
     public function put_selected_patient_id(Request $request, $id)
     {
         $request->session()->put('id_pasien', $id);
+        $pasien = Pasien::where('no_rm', $id)->first();
+        $request->session()->put('nama_pasien', $pasien['nama_pasien']);
+        $request->session()->put('jenis_kelamin', $pasien['jenis_kelamin']);
+        $request->session()->put('tanggal_lahir', $pasien['tanggal_lahir']);
+        return back();
     }
 
     public function check_selected_patient_id(Request $request)

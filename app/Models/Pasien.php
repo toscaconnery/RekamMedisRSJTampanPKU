@@ -15,6 +15,9 @@ class Pasien extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'no_rm', 'nama_pasien', 'tanggal_lahir', 'jenis_kelamin',
+        'no_rm', 
+        'nama_pasien', 
+        'tanggal_lahir', 
+        'jenis_kelamin',
     ];
 }
