@@ -54,20 +54,7 @@
         <h3 class="page-header"><i class="fa fa-file-text-o"></i> ASESMEN AWAL PASIEN TUMBUH KEMBANG DAN EDUKASI TERPADU</h3>
       </div>
     </div>
-    <div class="panel-body bio-graph-info">
-      <h1>No. RM : {{Session::has('id_pasien') ? Session::get('id_pasien') : ''}}</h1>
-      <div class="row">
-        <div class="bio-row">
-          <p><span>Nama Pasien </span>: {{Session::has('nama_pasien') ? Session::get('nama_pasien') : ''}} </p>
-        </div>
-        <div class="bio-row">
-          <p><span>Tanggal Lahir</span>: {{Session::has('tanggal_lahir') ? Session::get('tanggal_lahir') : ''}}</p>
-        </div>
-        <div class="bio-row">
-          <p><span>Jenis Kelamin </span>: {{Session::has('jenis_kelamin') ? Session::get('jenis_kelamin') : ''}}</p>
-        </div>
-      </div>
-    </div>
+    @include('layouts.bio')
 
     <div class="row">
       <div class="col-lg-12">
@@ -189,50 +176,50 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Deskripsi Umum (General Description)</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea class="form-control required" name="deskripsi_umum" rows="6" style="resize: none;"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Interaksi Orang tua – anak (Parent-child Interaction)</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea class="form-control required" name="interaksi_ortu_anak" rows="6" style="resize: none;"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Orientasi dan Persepsi (Orientation and Perception) </label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea class="form-control required" name="orientasi_persepsi" rows="6" style="resize: none;"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Mood, Afek, Ekspresi Afektif dan Empati (Mood, Affect, Affective, Expression, and Empathy)</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea class="form-control required" name="mood" rows="6" style="resize: none;"></textarea>
                 </div>
               </div>
               Proses Pikir (Thought Process)
               <div class="form-group">
                 <label class="col-sm-2 control-label">Bentuk dan Arus Pikir (Steam and Form of Thought) </label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea class="form-control required" name="bentuk_arus_pikir" rows="6" style="resize: none;"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Isi Pikir (Content of Thought)</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea class="form-control required" name="isi_pikir" rows="6" style="resize: none;"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Fantasi (Fantasy) </label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea class="form-control required" name="fantasi" rows="6" style="resize: none;"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Kemampuan Menilai Realitas dan Tilikan ( Reality Testing Ability and Insight)</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea class="form-control required" name="kemampuan" rows="6" style="resize: none;"></textarea>
                 </div>
               </div>
             </div>

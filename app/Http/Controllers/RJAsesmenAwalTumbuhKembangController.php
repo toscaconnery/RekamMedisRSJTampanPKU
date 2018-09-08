@@ -15,6 +15,7 @@ use App\Models\RJTumbuhKembangRiwayatAkademis;
 use App\Models\RJTumbuhKembangRiwayatSekolah;
 use App\Models\RJTumbuhKembangRiwayatSosialisasi;
 use App\Models\RJTumbuhKembangRiwayatPsikiatrik;
+use App\Models\RJTumbuhKembangPemeriksaanStatusMental;
 
 class RJAsesmenAwalTumbuhKembangController extends Controller
 {
@@ -331,6 +332,20 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
         $riwayat->riwayat_sosial_sekarang = $request->riwayat_sosial_sekarang;
         $riwayat->persepsi_sendiri = $request->persepsi_sendiri;
         $riwayat->save();
+
+        //pemeriksaan status mental
+        $status = new RJTumbuhKembangPemeriksaanStatusMental;
+        $status->id_regis = 1;
+        $status->deskripsi_umum = $request->deskripsi_umum;
+        $status->interaksi_ortu_anak = $request->interaksi_ortu_anak;
+        $status->orientasi_persepsi = $request->orientasi_persepsi;
+        $status->mood = $request->mood;
+        $status->bentuk_arus_pikir = $request->bentuk_arus_pikir;
+        $status->isi_pikir = $request->isi_pikir;
+        $status->fantasi = $request->fantasi;
+        $status->kemampuan = $request->kemampuan;
+        $status->save();
+
         return back();
     }
 
