@@ -14,6 +14,7 @@ use App\Models\RJTumbuhKembangPenyakitAnak;
 use App\Models\RJTumbuhKembangRiwayatAkademis;
 use App\Models\RJTumbuhKembangRiwayatSekolah;
 use App\Models\RJTumbuhKembangRiwayatSosialisasi;
+use App\Models\RJTumbuhKembangRiwayatPsikiatrik;
 
 class RJAsesmenAwalTumbuhKembangController extends Controller
 {
@@ -314,9 +315,23 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     	return back();
     }
 
-    public function post_rj_asesmen_awal_tumbuh_kembang_dokter()
+    public function post_rj_asesmen_awal_tumbuh_kembang_dokter(Request $request)
     {
-        return view('page.rj.tumbuh_kembang_psikolog');
+        $riwayat = new RJTumbuhKembangRiwayatPsikiatrik;
+        $riwayat->id_regis = 1;
+        $riwayat->keluhan_utama = $request->keluhan_utama;
+        $riwayat->riwayat_gangguan_sekarang = $request->riwayat_gangguan_sekarang;
+        $riwayat->riwayat_gangguan_sebelumnya = $request->riwayat_gangguan_sebelumnya;
+        $riwayat->riwayat_pribadi = $request->riwayat_pribadi;
+        $riwayat->riwayat_pranatal_perinatal = $request->riwayat_pranatal_perinatal;
+        $riwayat->early_childhood = $request->early_childhood;
+        $riwayat->middle_childhood = $request->middle_childhood;
+        $riwayat->late_childhood = $request->late_childhood;
+        $riwayat->riwayat_keluarga = $request->riwayat_keluarga;
+        $riwayat->riwayat_sosial_sekarang = $request->riwayat_sosial_sekarang;
+        $riwayat->persepsi_sendiri = $request->persepsi_sendiri;
+        $riwayat->save();
+        return back();
     }
 
 }

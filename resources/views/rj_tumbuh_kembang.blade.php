@@ -1486,7 +1486,6 @@
                 PROGNOSIS (Prognosis)
               </header>
               <div class="panel-body">
-
                 <form class="form-horizontal " method="get">
                    <div class="form-group">
                     <label class="col-sm-2 control-label">Prognosis</label>

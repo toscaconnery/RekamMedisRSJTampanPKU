@@ -81,15 +81,17 @@ Route::post('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@post_rj
 
 Route::get('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikolog');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_psikolog');
+Route::get('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter');
+Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_dokter');
+
+//END  OF  DO  NOT  TOUCH!!!////
+//END  OF  DO  NOT  TOUCH!!!////
+//END  OF  DO  NOT  TOUCH!!!////
+//END  OF  DO  NOT  TOUCH!!!////
+
 Route::get('/rj_tumbuh_kembang', function () {
     return view('rj_tumbuh_kembang');
 });
-
-//END  OF  DO  NOT  TOUCH!!!////
-//END  OF  DO  NOT  TOUCH!!!////
-//END  OF  DO  NOT  TOUCH!!!////
-//END  OF  DO  NOT  TOUCH!!!////
-
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');
 
