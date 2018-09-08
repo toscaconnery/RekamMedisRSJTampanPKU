@@ -16,6 +16,7 @@ use App\Models\RJTumbuhKembangRiwayatSekolah;
 use App\Models\RJTumbuhKembangRiwayatSosialisasi;
 use App\Models\RJTumbuhKembangRiwayatPsikiatrik;
 use App\Models\RJTumbuhKembangPemeriksaanStatusMental;
+use App\Models\RJTumbuhKembangLainnya;
 
 class RJAsesmenAwalTumbuhKembangController extends Controller
 {
@@ -345,6 +346,26 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
         $status->fantasi = $request->fantasi;
         $status->kemampuan = $request->kemampuan;
         $status->save();
+
+        //lainnya
+        $data = new RJTumbuhKembangLainnya;
+        $data->id_regis = 1;
+        $data->diagnostik_lanjutan = $request->diagnostik_lanjutan;
+        $data->hasil_pemeriksaan = $request->hasil_pemeriksaan;
+        $data->formulasi_diagnostik = $request->formulasi_diagnostik;
+        $data->aksis1 = $request->aksis1;
+        $data->aksis2 = $request->aksis2;
+        $data->aksis3 = $request->aksis3;
+        $data->aksis4 = $request->aksis4;
+        $data->aksis5 = $request->aksis5;
+        $data->masalah_organobiologik = $request->masalah_organobiologik;
+        $data->masalah_psikologik = $request->masalah_psikologik;
+        $data->masalah_sosial = $request->masalah_sosial;
+        $data->prognosis = $request->prognosis;
+        $data->treatment_pasien = $request->treatment_pasien;
+        $data->treatment_keluarga = $request->treatment_keluarga;
+        // dd($request);
+        $data->save();
 
         return back();
     }

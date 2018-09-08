@@ -233,7 +233,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Further Diagnostic Investigation</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea class="form-control required" name="diagnostik_lanjutan" rows="6" style="resize: none;"></textarea>
                 </div>
               </div>
             </div>
@@ -247,7 +247,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Summary of Positive Findings</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea class="form-control required" name="hasil_pemeriksaan" rows="6" style="resize: none;"></textarea>
                 </div>
               </div>
             </div>
@@ -261,7 +261,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Diagnostik Formulation</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea class="form-control required" name="formulasi_diagnostik" rows="6" style="resize: none;"></textarea>
                 </div>
               </div>
             </div>
@@ -275,31 +275,31 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Aksis I</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control required" name="aksis1">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Aksis II</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control required" name="aksis2">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Aksis III</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control required" name="aksis3">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Aksis IV</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control required" name="aksis4">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Aksis V</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control required" name="aksis5">
                 </div>
               </div>
             </div>
@@ -313,19 +313,19 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Organobiologik </label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control required" name="masalah_organobiologik">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Psikologik</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control required" name="masalah_psikologik">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Sosial</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control required" name="masalah_sosial">
                 </div>
               </div>
             </div>
@@ -339,7 +339,7 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Prognosis</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control required" name="prognosis">
                 </div>
               </div>
             </div>
@@ -347,19 +347,19 @@
 
           <section class="panel">
             <header class="panel-heading">
-              PENATALASANAAN (Treatment Plan)
+              PENATALAKSANAAN (Treatment Plan)
             </header>
             <div class="panel-body">
               <div class="form-group">
                 <label class="col-sm-2 control-label">Untuk Pasien</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control required" name="treatment_pasien">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Untuk Keluarga</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control required" name="treatment_keluarga">
                 </div>
               </div>
             </div>
