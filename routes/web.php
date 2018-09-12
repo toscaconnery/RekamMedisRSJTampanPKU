@@ -50,6 +50,9 @@ Route::post('/tindak_lanjut', 'RawatJalanController@store_tindak_lanjut');
 // ASESMEN GIGI
 Route::get('/rj_asesmen_gigi', 'RawatJalanController@asesmen_gigi');
 
+
+
+
 //FIX
 //DO  NOT  TOUCH!!!////
 //DO  NOT  TOUCH!!!////
@@ -84,14 +87,13 @@ Route::post('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKemb
 Route::get('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_dokter');
 
+Route::get('/rj_resume', 'RJResumeController@get_resume');
+Route::post('/rj_resume', 'RJResumeController@post_resume');
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 
-Route::get('/rj_tumbuh_kembang', function () {
-    return view('rj_tumbuh_kembang');
-});
 
 Route::get('/pdf', 'Pdf_controller@test_pdf');
 
@@ -119,7 +121,9 @@ Route::get('/penundaan_pelayanan', function () {
 // Route::get('/rj_tumbuh_kembang', function () {
 //     return view('rj_tumbuh_kembang');
 // });
-
+Route::get('/rj_resume_rawat', function () {
+    return view('rj_resume_rawat');
+});
 
 Route::get('/ri_catatan_perkembangan', function () {
     return view('ri_catatan_perkembangan');
@@ -129,9 +133,6 @@ Route::get('/igd_triase_pasien', function () {
     return view('igd_triase_pasien');
 });
 
-Route::get('/rj_resume_rawat', function () {
-    return view('rj_resume_rawat');
-});
 
 Route::get('/rj_rencana_pemulangan', function () {
     return view('rj_rencana_pemulangan');

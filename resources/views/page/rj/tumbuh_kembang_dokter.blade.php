@@ -452,74 +452,7 @@
 <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery.validate.min.js"></script>
 <script src="{{url('')}}/js/form-validation.js"></script>
 
-{{-- menambah row inputan saudara kandung--}}
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('#tambah_form').click(function() {
-      var a = document.getElementById('jumlah_form_saudara').value;
-      a = parseInt(a) + 1;
-      $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" class="form-control required" name="umur_'+a+'"></td><td><select name="jenis_kelamin_'+a+'" class="form-control required"><option value=""></option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></td><td><input type="text" class="form-control required" name="pendidikan_'+a+'"></td><td><input type="text" class="form-control required" name="pekerjaan_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-      document.getElementById('jumlah_form_saudara').value = a;
-    });
-  });
-</script>
 
-{{-- menambah row inputan saudara tiri--}}
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('#tambah_form_tiri').click(function() {
-      var a = document.getElementById('jumlah_form_saudara_tiri').value;
-      a = parseInt(a) + 1;
-      $('#last_row_tiri').before('<tr id="form_tiri_'+a+'"><td><input type="text" class="form-control required" name="umur_tiri_'+a+'"></td><td><select name="jenis_kelamin_tiri_'+a+'" class="form-control required"><option value=""></option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></td><td><input type="text" class="form-control required" name="pendidikan_tiri_'+a+'"></td><td><input type="text" class="form-control required" name="pekerjaan_tiri_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_tiri" type="button" id="tombol_hapus_tiri_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-      document.getElementById('jumlah_form_saudara_tiri').value = a;
-    });
-  });
-</script>
-
-{{-- menambah row inputan serumah--}}
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('#tambah_form_serumah').click(function() {
-      var a = document.getElementById('jumlah_form_serumah').value;
-      a = parseInt(a) + 1;
-      $('#last_row_serumah').before('<tr id="form_serumah_'+a+'"><td><input type="text" class="form-control required" name="umur_serumah_'+a+'"></td><td><select name="jenis_kelamin_serumah_'+a+'" class="form-control required"><option value=""></option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></td><td><input type="text" class="form-control required" name="pendidikan_serumah_'+a+'"></td><td><input type="text" class="form-control required" name="pekerjaan_serumah_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_serumah" type="button" id="tombol_hapus_serumah_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-      document.getElementById('jumlah_form_saudara_serumah').value = a;
-    });
-  });
-</script>
-
-{{-- menghapus row saudara kandung--}}
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(document).on('click', '.tombol_hapus', function() {
-      var x = $(this).attr('id');
-      var nomor = x.substring(13)
-      $('#form_'+nomor).remove();
-    });
-  });
-</script>
-
-{{-- menghapus row saudara tiri--}}
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(document).on('click', '.tombol_hapus_tiri', function() {
-      var x = $(this).attr('id');
-      var nomor = x.substring(18)
-      $('#form_tiri_'+nomor).remove();
-    });
-  });
-</script>
-
-{{-- menghapus row saudara serumah--}}
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(document).on('click', '.tombol_hapus_serumah', function() {
-      var x = $(this).attr('id');
-      var nomor = x.substring(18)
-      $('#form_serumah_'+nomor).remove();
-    });
-  });
-</script>
 
 </body>
 <html>
