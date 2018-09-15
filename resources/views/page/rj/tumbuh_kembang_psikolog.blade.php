@@ -106,7 +106,7 @@
       <div class="col-lg-12">
         <form class="form-validate form-horizontal" method="post" id="register_form" action="rj_asesmen_awal_tumbuh_kembang_psikolog">
           {{ csrf_field() }}
-          {{-- <section class="panel">
+          <section class="panel">
             <header class="panel-heading">
               Data Anak
             </header>
@@ -539,10 +539,10 @@
                 </tbody>
               </table>
             </div>
-          </section> --}}
+          </section>
 
           {{-- riwayat kehamilan --}}
-          {{-- <section class="panel">
+          <section class="panel">
             <header class="panel-heading">
               Riwayat Kehamilan
             </header>
@@ -683,10 +683,10 @@
               </div>
 
             </div>
-          </section> --}}
+          </section>
 
           {{-- riwayat persalinan natal --}}
-          {{-- <section class="panel">
+          <section class="panel">
             <header class="panel-heading">
               Riwayat Persalinan Natal
             </header>
@@ -832,10 +832,10 @@
                 </div>
               </div>
             </div>
-          </section> --}}
+          </section>
 
           {{-- riwayat persalinan pasca natal --}}
-          {{-- <section class="panel">
+          <section class="panel">
             <header class="panel-heading">
               Riwayat Persalinan Pasca Natal
             </header>
@@ -944,7 +944,7 @@
                 </div>
               </div>
             </div>
-          </section> --}}
+          </section>
 
           {{-- riwayat akademis --}}
           <section class="panel">
@@ -952,25 +952,33 @@
               Riwayat Akademis
             </header>
             <div class="panel-body">
-
-              <div class="form-group">
-                <label class="col-sm-2 control-label">Jenis sekolah</label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label">Umur</label>
-                <div class="col-sm-1">
-                  <input type="text" class="form-control">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label">Tinggal kelas dan sebabnya</label>
-                <div class="col-sm-8">
-                  <input type="text" class="form-control">
-                </div>
-              </div>
+              <input type="hidden" name="jumlah_form_riwayat_sekolah" id="jumlah_form_riwayat_sekolah" value="1">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th style="width: 32%; text-align: center;">Jenis sekolah</th>
+                    <th style="width: 12%; text-align: center;">Umur</th>
+                    <th style="width: 52%; text-align: center;">Tinggal kelas dan sebabnya</th>
+                    <th style="width: 4%; text-align: center;">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" class="form-control required" name="jenis_riwayat_sekolah_1"></td>
+                    <td><input type="number" class="form-control required" name="umur_riwayat_sekolah_1"></td>
+                    <td><input type="text" class="form-control required" name="keterangan_riwayat_sekolah_1"></td>
+                    <td>
+                    </td>
+                  </tr>
+                  <tr id="last_row_riwayat_sekolah">
+                    <td colspan="9">
+                      <div class="btn-group">
+                        <button class="btn btn-primary" type="button" id="tambah_form_riwayat_sekolah"><i class="icon_plus_alt2"></i> Tambah</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Sikap</label>
                 <div class="col-sm-8">
@@ -1167,37 +1175,37 @@
           </section>
 
           {{-- riwayat sosialisasi --}}
-          {{-- <section class="panel">
+          <section class="panel">
             <header class="panel-heading">
               Riwayat Sosialisasi
             </header>
             <div class="panel-body">
               <div class="form-group">
-                <label class="col-sm-2 control-label">Riwayat Sosialisasi di Sekolah</label>
+                <label class="col-sm-2 control-label">Riwayat sosialisasi di Sekolah</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea rows="5" name="sosialisasi_di_sekolah" class="col-sm-8 form-control" style="resize: vertical;"></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label">Di dalam keluarga</label>
+                <label class="col-sm-2 control-label">Riwayat sosialisasi di dalam keluarga</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <textarea rows="5" name="sosialisasi_di_keluarga" class="col-sm-8 form-control" style="resize: vertical;"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Tanggal</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" value="{{date('Y-m-d')}}" disabled="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Psikolog</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" value="[Nama Psikolog]" disabled="">
                 </div>
               </div>
             </div>
-          </section> --}}
+          </section>
 
           <div>
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -1335,6 +1343,18 @@
     });
   </script>
 
+  {{-- menambah row riwayat_sekolah--}}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#tambah_form_riwayat_sekolah').click(function() {
+        var a = document.getElementById('jumlah_form_riwayat_sekolah').value;
+        a = parseInt(a) + 1;
+        $('#last_row_riwayat_sekolah').before('<tr id="form_riwayat_sekolah_'+a+'"><td><input type="text" class="form-control required" name="jenis_riwayat_sekolah_'+a+'"></td><td><input type="number" class="form-control required" name="umur_riwayat_sekolah_'+a+'"></td><td><input type="text" class="form-control required" name="keterangan_riwayat_sekolah_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_riwayat_sekolah" type="button" id="tombol_hapus_riwayat_sekolah_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>')
+        document.getElementById('jumlah_form_riwayat_sekolah').value = a;
+      });
+    });
+  </script>
+
   {{-- menghapus row saudara kandung--}}
   <script type="text/javascript">
     $(document).ready(function() {
@@ -1375,6 +1395,17 @@
         var x = $(this).attr('id');
         var nomor = x.substring(27)
         $('#form_penyakit_anak_'+nomor).remove();
+      });
+    });
+  </script>
+
+  {{-- menghapus row riwayat sekolah--}}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(document).on('click', '.tombol_hapus_riwayat_sekolah', function() {
+        var x = $(this).attr('id');
+        var nomor = x.substring(29)
+        $('#form_riwayat_sekolah_'+nomor).remove();
       });
     });
   </script>

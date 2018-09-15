@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRjTumbuhKembangRiwayatSekolahTable extends Migration
+class CreateRjTumbuhKembangRiwayatSosialisasiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateRjTumbuhKembangRiwayatSekolahTable extends Migration
      */
     public function up()
     {
-        Schema::create('rj_tumbuh_kembang_riwayat_sekolah', function (Blueprint $table) {
+        Schema::create('rj_tumbuh_kembang_riwayat_sosialisasi', function (Blueprint $table) {
             $table->increments('id');
             $table->string('id_regis')->reference('id')->on('identifikasi');
-            $table->string('jenis_sekolah');
-            $table->string('umur');
-            $table->string('keterangan_tinggal')->nullable();
+            $table->string('sekolah');
+            $table->string('keluarga');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateRjTumbuhKembangRiwayatSekolahTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rj_tumbuh_kembang_riwayat_sekolah');
+        Schema::dropIfExists('rj_tumbuh_kembang_riwayat_sosialisasi');
     }
 }
