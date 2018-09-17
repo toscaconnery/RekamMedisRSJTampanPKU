@@ -95,9 +95,9 @@
                     <td>[Nama Pengisi]</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/pdf_ri_rencanaklien"><i class="icon_plus_alt2"></i></a>
-                        <a class="btn btn-success" href="{{url('')}}/pdf_rj_lapor_rehabilitasi"><i class="icon_check_alt2"></i></a>
-                        <a class="btn btn-danger" href="{{url('')}}/pdf_ri_penolakan_tindakan"><i class="icon_close_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/pdf_ri_permintaan_privasi"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-success" href="{{url('')}}/pdf_rj_catatan_perkembangan"><i class="icon_check_alt2"></i></a>
+                        <a class="btn btn-danger" href="{{url('')}}/pdf_ri_hakkewajiban"><i class="icon_close_alt2"></i></a>
                       </div>
                     </td>
                   </tr>

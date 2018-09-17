@@ -1261,6 +1261,25 @@ td.contain {
     text-align: left;
 }
 
+td.number0 {
+    width: 3%;
+    vertical-align: center;
+    padding: 0px;
+    font-size: 110%;
+    line-height: 18px;
+    font-family: "arial", Times, serif;
+    text-align: left;
+}
+
+td.contain0 {
+    vertical-align: center;
+    padding: 0px;
+    font-size: 110%;
+    line-height: 18px;
+    font-family: "arial", Times, serif;
+    text-align: left;
+}
+
 th.contain {
     vertical-align: center;
     padding-top: 10px;
