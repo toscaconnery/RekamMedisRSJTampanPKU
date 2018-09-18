@@ -14,7 +14,6 @@ class RJResumeController extends Controller
 
     public function post_rj_resume(Request $request)
     {
-    	// dd('ha');
     	$jumlah_form_resume = $request->jumlah_form_resume;
     	for($i = 1; $i <= $jumlah_form_resume; $i++) {
     		$str_tanggal = 'tanggal_'.$i;
