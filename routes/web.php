@@ -58,6 +58,10 @@ Route::get('/rj_asesmen_gigi', 'RawatJalanController@asesmen_gigi');
 //DO  NOT  TOUCH!!!////
 //DO  NOT  TOUCH!!!////
 //DO  NOT  TOUCH!!!////
+
+Route::get('/penundaan_pelayanan', 'PenundaanPelayananController@get_penundaan_pelayanan');
+Route::post('/penundaan_pelayanan', 'PenundaanPelayananController@post_penundaan_pelayanan');
+
 Route::get('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@get_rj_asesmen_awal_perawat');
 Route::post('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_perawat');
 Route::get('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@get_rj_asesmen_awal_dokter');
@@ -104,9 +108,9 @@ Route::get('/ri_surat_persetujuan', function () {
     return view('ri_surat_persetujuan');
 });
 
-Route::get('/penundaan_pelayanan', function () {
-    return view('penundaan_pelayanan');
-});
+// Route::get('/penundaan_pelayanan', function () {
+//     return view('penundaan_pelayanan');
+// });
 
 
 // Route::get('/rj_informasi_edukasi', function () {

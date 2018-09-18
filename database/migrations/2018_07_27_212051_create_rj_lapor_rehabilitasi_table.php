@@ -34,18 +34,28 @@ class CreateRjLaporRehabilitasiTable extends Migration
             $table->tinyInteger('a_alkohol')->nullable();
             $table->tinyInteger('b_alkohol')->nullable();
             $table->tinyInteger('a_heroin')->nullable();
-            $table_>tinyInteger('b_heroin')->nullable();
-            $table->tinyInteger('a_heroin')->nullable();
-            $table_>tinyInteger('b_heroin')->nullable();
-            $table->tinyInteger('a_heroin')->nullable();
-            $table_>tinyInteger('b_heroin')->nullable();
-            $table->tinyInteger('a_heroin')->nullable();
-            $table_>tinyInteger('b_heroin')->nullable();
-            $table->tinyInteger('a_heroin')->nullable();
-            $table_>tinyInteger('b_heroin')->nullable();
-            $table->tinyInteger('a_heroin')->nullable();
-            $table_>tinyInteger('b_heroin')->nullable();
-            
+            $table->tinyInteger('b_heroin')->nullable();
+            $table->tinyInteger('a_metadon')->nullable();
+            $table->tinyInteger('b_metadon')->nullable();
+            $table->tinyInteger('a_analgesik')->nullable();
+            $table->tinyInteger('b_analgesik')->nullable();
+            $table->tinyInteger('a_barbiturat')->nullable();
+            $table->tinyInteger('b_barbiturat')->nullable();
+            $table->tinyInteger('a_sedatif')->nullable();
+            $table->tinyInteger('b_sedatif')->nullable();
+            $table->tinyInteger('a_kokain')->nullable();
+            $table->tinyInteger('b_kokain')->nullable();
+            $table->tinyInteger('a_amfetamin')->nullable();
+            $table->tinyInteger('b_amfitamin')->nullable();
+            $table->tinyInteger('a_kanabis')->nullable();
+            $table->tinyInteger('b_kanabis')->nullable();
+            $table->tinyInteger('a_halusinogen')->nullable();
+            $table->tinyInteger('b_halusinogen')->nullable();
+            $table->tinyInteger('a_inhalan')->nullable();
+            $table->tinyInteger('b_inhalan')->nullable();
+
+
+
             $table->timestamps();
         });
     }
