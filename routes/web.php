@@ -306,6 +306,13 @@ Route::get('/doc_rj_gigi', function () {
     return view('/doc_rj_gigi');
 });
 
+//dokumen catatan perkembangan
+Route::get('/pdf_rj_catatan_perkembangan', 'Pdf_rj_Controller@pdf_rj_catatan_perkembangan');
+
+Route::get('/doc_rj_catatan_perkembangan', function () {
+    return view('/doc_rj_catatan_perkembangan');
+});
+
 //dokumen informasi edukasi
 Route::get('/pdf_rj_infoedu', 'Pdf_rj_Controller@pdf_rj_infoedu');
 
@@ -460,6 +467,14 @@ Route::get('/pdf_ri_permintaan_privasi', 'Pdf_ri_Controller@pdf_ri_permintaan_pr
 Route::get('/doc_ri_permintaan_privasi', function () {
     return view('/doc_ri_permintaan_privasi');
 });
+
+//dokumen permintaan ha dan kewajiban
+Route::get('/pdf_ri_hakkewajiban', 'Pdf_ri_Controller@pdf_ri_hakkewajiban');
+
+Route::get('/doc_ri_permintaan_hakkewajiban', function () {
+    return view('/doc_ri_hakkewajiban');
+});
+
 
 //dokumen permintaan rohani
 Route::get('/pdf_ri_permintaan_rohani', 'Pdf_ri_Controller@pdf_ri_permintaan_rohani');
