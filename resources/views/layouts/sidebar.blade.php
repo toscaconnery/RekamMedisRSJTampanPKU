@@ -33,7 +33,7 @@
           <span class="menu-arrow arrow_carrot-right"></span>
         </a>
         <ul class="sub">
-          <li><a class="" href="{{url('')}}/igd_triase_pasien">Triase Pasien</a></li>
+          <li><a class="" href="{{url('')}}/igd_triase">Triase Pasien</a></li>
           <li><a class="" href="{{url('')}}/igd_asesmen_darurat">Asesmen Rawat Darurat</a></li>
           <li><a class="" href="{{url('')}}/igd_suicide_fisik">Suicide - Kekerasan Fisik</a></li>
           <li><a class="" href="{{url('')}}/igd_catatan_kemajuan">Catatan Kemajuan</a></li>

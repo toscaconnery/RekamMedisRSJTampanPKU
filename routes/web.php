@@ -28,7 +28,7 @@ Route::post('/identifikasi_pasien_baru_final', 'PasienController@identifikasi_pa
 // RAWAT JALAN========
 // ASESMEN AWAL
 Route::get('/put_selected_patient_id/{id}', 'PasienController@put_selected_patient_id');
-Route::get('check_selected_patient_id', 'PasienController@check_selected_patient_id');
+Route::get('/check_selected_patient_id', 'PasienController@check_selected_patient_id');
 Route::get('/rj_asesmen_awal', 'RawatJalanController@asesmen_awal');    //will obsolete soon
 Route::post('/fisik_gizi', 'RawatJalanController@store_fisik_gizi');
 Route::post('/penilaian_tingkat_nyeri', 'RawatJalanController@store_penilaian_tingkat_nyeri');
@@ -87,8 +87,11 @@ Route::post('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKemb
 Route::get('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_dokter');
 
-Route::get('/rj_resume', 'RJResumeController@get_resume');
-Route::post('/rj_resume', 'RJResumeController@post_resume');
+Route::get('/rj_resume', 'RJResumeController@get_rj_resume');
+Route::post('/rj_resume', 'RJResumeController@post_rj_resume');
+
+Route::get('/igd_triase', 'IGDTriaseController@get_igd_triase');
+Route::post('/igd_triase', 'IGDTriaseController@post_igd_triase');
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -121,17 +124,17 @@ Route::get('/penundaan_pelayanan', function () {
 // Route::get('/rj_tumbuh_kembang', function () {
 //     return view('rj_tumbuh_kembang');
 // });
-Route::get('/rj_resume_rawat', function () {
-    return view('rj_resume_rawat');
+// Route::get('/rj_resume_rawat', function () {
+//     return view('rj_resume_rawat');
+// });
+Route::get('/igd_triase_pasien', function () {
+    return view('igd_triase_pasien');
 });
 
 Route::get('/ri_catatan_perkembangan', function () {
     return view('ri_catatan_perkembangan');
 });
 
-Route::get('/igd_triase_pasien', function () {
-    return view('igd_triase_pasien');
-});
 
 
 Route::get('/rj_rencana_pemulangan', function () {

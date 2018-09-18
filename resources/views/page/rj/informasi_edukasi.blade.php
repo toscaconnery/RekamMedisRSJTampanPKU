@@ -54,20 +54,7 @@
           <h3 class="page-header"><i class="fa fa-file-text-o"></i> Kebutuhan Informasi dan Edukasi Pasien/Keluarga Rawat Jalan</h3>
         </div>
       </div>
-      <div class="panel-body bio-graph-info">
-        <h1>[No. RM]</h1>
-        <div class="row">
-          <div class="bio-row">
-            <p><span>Nama Pasien </span>: [Nama Pasien] </p>
-          </div>
-          <div class="bio-row">
-            <p><span>Tanggal Lahir</span>: 27 Agustus 1996</p>
-          </div>
-          <div class="bio-row">
-            <p><span>Jenis Kelamin </span>: L</p>
-          </div>
-        </div>
-      </div>
+      @include('layouts.bio')
 
       <div class="row">
         <div class="col-lg-12">
@@ -559,53 +546,53 @@
   <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
   {{-- bahasa --}}
   <script type="text/javascript">
-      $(document).ready( function() {
-        $('input[type=radio][name=bahasa]').change(function() {
-          if(this.id == 'bahasa_lainnya') {
-            $('#ket_bahasa').prop('disabled', false);
-          }
-          else if(this.id == 'bahasa_daerah') {
-            $('#ket_bahasa').prop('disabled', false);
-          }
-          else if(this.id == 'bahasa_inggris') {
-            $('#ket_bahasa').prop('disabled', true);
-          }
-          else if(this.id == 'bahasa_indonesia') {
-            $('#ket_bahasa').prop('disabled', true)
-          }
-        });
+    $(document).ready( function() {
+      $('input[type=radio][name=bahasa]').change(function() {
+        if(this.id == 'bahasa_lainnya') {
+          $('#ket_bahasa').prop('disabled', false);
+        }
+        else if(this.id == 'bahasa_daerah') {
+          $('#ket_bahasa').prop('disabled', false);
+        }
+        else if(this.id == 'bahasa_inggris') {
+          $('#ket_bahasa').prop('disabled', true);
+        }
+        else if(this.id == 'bahasa_indonesia') {
+          $('#ket_bahasa').prop('disabled', true)
+        }
       });
+    });
   </script>
 
   {{-- hambatan --}}
   <script type="text/javascript">
-      $(document).ready( function() {
-        $('input[type=checkbox][name="hambatan_12"]').change(function() {
-          if(this.checked) {
-            $('#hambatan_lain').prop('disabled', false);
-          }
-          else {
-            $('#hambatan_lain').prop('disabled', true);
-          }
-        });
+    $(document).ready( function() {
+      $('input[type=checkbox][name="hambatan_12"]').change(function() {
+        if(this.checked) {
+          $('#hambatan_lain').prop('disabled', false);
+        }
+        else {
+          $('#hambatan_lain').prop('disabled', true);
+        }
       });
+    });
   </script>
 
   {{-- kebutuhan --}}
   <script type="text/javascript">
-      $(document).ready( function() {
-        $('input[type=checkbox][name="kebutuhan_10"]').change(function() {
-          if(this.checked) {
-            $('#kebutuhan_lain').prop('disabled', false);
-          }
-          else {
-            $('#kebutuhan_lain').prop('disabled', true);
-          }
-        });
+    $(document).ready( function() {
+      $('input[type=checkbox][name="kebutuhan_10"]').change(function() {
+        if(this.checked) {
+          $('#kebutuhan_lain').prop('disabled', false);
+        }
+        else {
+          $('#kebutuhan_lain').prop('disabled', true);
+        }
       });
+    });
   </script>
 
-  </body>
+</body>
 
 
-  <html>
+<html>

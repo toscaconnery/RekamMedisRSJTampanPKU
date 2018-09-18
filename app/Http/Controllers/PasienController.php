@@ -23,8 +23,8 @@ class PasienController extends Controller
 
     public function check_selected_patient_id(Request $request)
     {
-        dd($request);
-        $data = $request->session()->get('id_pasien');
+        // dd($request);
+        $data = $request->session();
         dd($data);
     }
 

@@ -11,7 +11,7 @@
 
   <title>Asesmen Wajib Lapor dan Rehabilitasi Medis</title>
 
-   <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap-theme.css" rel="stylesheet">
@@ -42,37 +42,19 @@
 </head>
 
 <body>
- <section id="container" class="">
+  <section id="container" class="">
     @include('layouts.header')
     @include('layouts.sidebar')
- </section>
+  </section>
   <!-- container section start -->
- <section id="main-content">
-      <section class="wrapper">
-        <div class="row">
-          <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-file-text-o"></i> ASESMEN WAJIB LAPOR DAN REHABILITASI MEDIS</h3>
-            <!--<ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-              <li><i class="icon_document_alt"></i>Forms</li>
-              <li><i class="fa fa-file-text-o"></i>Form elements</li>
-            </ol>-->
+  <section id="main-content">
+    <section class="wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="page-header"><i class="fa fa-file-text-o"></i> ASESMEN WAJIB LAPOR DAN REHABILITASI MEDIS</h3>
           </div>
         </div>
-        <div class="panel-body bio-graph-info">
-                        <h1>[No. RM]</h1>
-                        <div class="row">
-                          <div class="bio-row">
-                            <p><span>Nama Pasien </span>: [Nama Pasien] </p>
-                          </div>
-                          <div class="bio-row">
-                            <p><span>Tanggal Lahir</span>: 27 Agustus 1996</p>
-                          </div>
-                          <div class="bio-row">
-                            <p><span>Jenis Kelamin </span>: L</p>
-                          </div>
-                        </div>
-                      </div>
+        @include('layouts.bio')
         
         <div class="row">
           <div class="col-lg-12">
@@ -379,28 +361,28 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Finansial
-                                              </label>
+                          <input type="checkbox" value="">
+                          Finansial
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Tempat Tinggal
-                                              </label>
+                          <input type="checkbox" value="">
+                          Tempat Tinggal
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Makan
-                                              </label>
+                          <input type="checkbox" value="">
+                          Makan
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Pengobatan/Perawatan
-                                              </label>
+                          <input type="checkbox" value="">
+                          Pengobatan/Perawatan
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -789,9 +771,9 @@
                       <input type="text" class="form-control">
                     </div>
                     <label class="col-sm-2 control-label">Pembobolan dan pencurian</label>
-                      <div class="col-sm-1">
-                        <input type="text" class="form-control">
-                      </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
                     <label class="col-sm-2 control-label">Perampokan</label>
                     <div class="col-sm-1">
                       <input type="text" class="form-control">
@@ -869,40 +851,40 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Saudara kandung/tiri
-                                              </label>
+                          <input type="checkbox" value="">
+                          Saudara kandung/tiri
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Ayah/Ibu
-                                              </label>
+                          <input type="checkbox" value="">
+                          Ayah/Ibu
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Pasangan
-                                              </label>
+                          <input type="checkbox" value="">
+                          Pasangan
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Om/tante
-                                              </label>
+                          <input type="checkbox" value="">
+                          Om/tante
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  teman
-                                              </label>
+                          <input type="checkbox" value="">
+                          teman
+                        </label>
                       </div>
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Lain-lain
-                                              </label>
+                          <input type="checkbox" value="">
+                          Lain-lain
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1096,16 +1078,16 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
+                          <input type="checkbox" value="">
+                          30 Hari terakhir
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
+                          <input type="checkbox" value="">
+                          Sepanjang hidup
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1115,16 +1097,16 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
+                          <input type="checkbox" value="">
+                          30 Hari terakhir
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
+                          <input type="checkbox" value="">
+                          Sepanjang hidup
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1134,16 +1116,16 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
+                          <input type="checkbox" value="">
+                          30 Hari terakhir
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
+                          <input type="checkbox" value="">
+                          Sepanjang hidup
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1153,16 +1135,16 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
+                          <input type="checkbox" value="">
+                          30 Hari terakhir
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
+                          <input type="checkbox" value="">
+                          Sepanjang hidup
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1172,16 +1154,16 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
+                          <input type="checkbox" value="">
+                          30 Hari terakhir
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
+                          <input type="checkbox" value="">
+                          Sepanjang hidup
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1191,16 +1173,16 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
+                          <input type="checkbox" value="">
+                          30 Hari terakhir
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
+                          <input type="checkbox" value="">
+                          Sepanjang hidup
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1210,16 +1192,16 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
+                          <input type="checkbox" value="">
+                          30 Hari terakhir
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
+                          <input type="checkbox" value="">
+                          Sepanjang hidup
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1229,16 +1211,16 @@
                     <div class="col-lg-4">
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
+                          <input type="checkbox" value="">
+                          30 Hari terakhir
+                        </label>
                       </div>
 
                       <div class="checkbox">
                         <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
+                          <input type="checkbox" value="">
+                          Sepanjang hidup
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1323,332 +1305,332 @@
                   </div>
 
                   <form class="form-horizontal " method="get">
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Hasil Urinalis</label>
-                    <div class="col-lg-10">
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox1" value="1" name=""> Benzodiazepin
-                      </label>
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox2" value="2" name=""> Kanabis
-                      </label>
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="3" name=""> Opiat
-                      </label>
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="4" name=""> Amfetamin 
-                      </label>
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="5" name=""> Kokain 
-                      </label>
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="6" name=""> Barbiturat
-                      </label>
-                      <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="7" name=""> Alkohol
-                      </label>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2" for="inputSuccess">Hasil Urinalis</label>
+                      <div class="col-lg-10">
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox1" value="1" name=""> Benzodiazepin
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox2" value="2" name=""> Kanabis
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox3" value="3" name=""> Opiat
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox3" value="4" name=""> Amfetamin 
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox3" value="5" name=""> Kokain 
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox3" value="6" name=""> Barbiturat
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox3" value="7" name=""> Alkohol
+                        </label>
+                      </div>
                     </div>
-                  </div>
 
-                </form>
+                  </form>
+                </div>
+              </section>
+
+              <section class="panel">
+                <header class="panel-heading">
+                </header>
+                <div class="panel-body">
+
+                  <form class="form-horizontal " method="get">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Tanggal Kedatangan</label>
+                      <div class="col-sm-2">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Nomor Rekam Medik?</label>
+                      <div class="col-sm-2">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Nama?</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+
+              <section class="panel">
+                <header class="panel-heading">
+                  Kesimpulan
+                </header>
+                <div class="panel-body">
+
+                  <form class="form-horizontal " method="get">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Medis</label>
+                      <div class="col-sm-2">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Pekerjaan/Dukungan</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Pekerjaan/Dukungan</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Napza</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Legal</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Keluarga/sosial</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Psikiatris</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+
+              <section class="panel">
+                <header class="panel-heading">
+                  Diagnosa Kerja
+                </header>
+                <div class="panel-body">
+
+                  <form class="form-horizontal " method="get">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Klien memenuhi kriteria diagnosis NAPZA</label>
+                      <div class="col-sm-2">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Diagnosis Lainnya</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+
+              <section class="panel">
+                <header class="panel-heading">
+                  Rencana Terapi dan Rehabilitasi
+                </header>
+                <div class="panel-body">
+
+                  <form class="form-horizontal " method="get">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Resume masalah</label>
+                      <div class="col-sm-2">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-lg-2" for="inputSuccess">Rencana tindak Lanjut</label>
+                      <div class="col-lg-10">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="s1" id="optionsRadios1" value="" checked>
+                            Asesmen Lanjutan/Mendalam
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="s1" id="optionsRadios1" value="" checked>
+                            Evaluasi Psikologis
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="s1" id="optionsRadios1" value="" checked>
+                            Program Detoksifikasi
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="s1" id="optionsRadios1" value="" checked>
+                            Wawancara Motivasional
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="s1" id="optionsRadios1" value="" checked>
+                            Intervensi Singkat
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="s1" id="optionsRadios1" value="" checked>
+                            Terapi Rumatan
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="s1" id="optionsRadios1" value="" checked>
+                            Rehabilitasi rawat inap
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="s1" id="optionsRadios1" value="" checked>
+                            Konseling
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="s1" id="optionsRadios1" value="" checked>
+                            Lain-lain
+                          </label>
+                        </div>
+                      </div>
+
+
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Sebutkan</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+
+              <section class="panel">
+                <header class="panel-heading">
+                </header>
+                <div class="panel-body">
+
+                  <form class="form-horizontal " method="get">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Nama Dokter?</label>
+                      <div class="col-sm-2">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </section>
+
+              <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
               </div>
-            </section>
-
-            <section class="panel">
-              <header class="panel-heading">
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Tanggal Kedatangan</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nomor Rekam Medik?</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama?</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
-
-            <section class="panel">
-              <header class="panel-heading">
-                Kesimpulan
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Medis</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Pekerjaan/Dukungan</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Pekerjaan/Dukungan</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Napza</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Legal</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Keluarga/sosial</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Psikiatris</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
-
-            <section class="panel">
-              <header class="panel-heading">
-                Diagnosa Kerja
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Klien memenuhi kriteria diagnosis NAPZA</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Diagnosis Lainnya</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
-
-            <section class="panel">
-              <header class="panel-heading">
-                Rencana Terapi dan Rehabilitasi
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Resume masalah</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Rencana tindak Lanjut</label>
-                    <div class="col-lg-10">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="s1" id="optionsRadios1" value="" checked>
-                          Asesmen Lanjutan/Mendalam
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="s1" id="optionsRadios1" value="" checked>
-                          Evaluasi Psikologis
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="s1" id="optionsRadios1" value="" checked>
-                          Program Detoksifikasi
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="s1" id="optionsRadios1" value="" checked>
-                          Wawancara Motivasional
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="s1" id="optionsRadios1" value="" checked>
-                          Intervensi Singkat
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="s1" id="optionsRadios1" value="" checked>
-                          Terapi Rumatan
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="s1" id="optionsRadios1" value="" checked>
-                          Rehabilitasi rawat inap
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="s1" id="optionsRadios1" value="" checked>
-                          Konseling
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="s1" id="optionsRadios1" value="" checked>
-                          Lain-lain
-                        </label>
-                      </div>
-                    </div>
-                    
-                    
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Sebutkan</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
-
-            <section class="panel">
-              <header class="panel-heading">
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama Dokter?</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
-
-            <div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
 
             </div>
           </div>
         </section>
-           
-  <!-- javascripts -->
-  <script src="{{url('')}}/js/jquery.js"></script>
-  <script src="{{url('')}}/js/bootstrap.min.js"></script>
-  <!-- nice scroll -->
-  <script src="{{url('')}}/js/jquery.scrollTo.min.js"></script>
-  <script src="{{url('')}}/js/jquery.nicescroll.js" type="text/javascript"></script>
 
-  <!-- jquery ui -->
-  <script src="{{url('')}}/js/jquery-ui-1.9.2.custom.min.js"></script>
+        <!-- javascripts -->
+        <script src="{{url('')}}/js/jquery.js"></script>
+        <script src="{{url('')}}/js/bootstrap.min.js"></script>
+        <!-- nice scroll -->
+        <script src="{{url('')}}/js/jquery.scrollTo.min.js"></script>
+        <script src="{{url('')}}/js/jquery.nicescroll.js" type="text/javascript"></script>
 
-  <!--custom checkbox & radio-->
-  <script type="{{url('')}}/text/javascript" src="{{url('')}}/admin_bootstrap/js/ga.js"></script>
-  <!--custom switch-->
-  <script src="{{url('')}}/js/bootstrap-switch.js"></script>
-  <!--custom tagsinput-->
-  <script src="{{url('')}}/js/jquery.tagsinput.js"></script>
+        <!-- jquery ui -->
+        <script src="{{url('')}}/js/jquery-ui-1.9.2.custom.min.js"></script>
 
-  <!-- colorpicker -->
+        <!--custom checkbox & radio-->
+        <script type="{{url('')}}/text/javascript" src="{{url('')}}/admin_bootstrap/js/ga.js"></script>
+        <!--custom switch-->
+        <script src="{{url('')}}/js/bootstrap-switch.js"></script>
+        <!--custom tagsinput-->
+        <script src="{{url('')}}/js/jquery.tagsinput.js"></script>
 
-  <!-- bootstrap-wysiwyg -->
-  <script src="{{url('')}}/js/jquery.hotkeys.js"></script>
-  <script src="{{url('')}}/js/bootstrap-wysiwyg.js"></script>
-  <script src="{{url('')}}/js/bootstrap-wysiwyg-custom.js"></script>
-  <script src="{{url('')}}/js/moment.js"></script>
-  <script src="{{url('')}}/js/bootstrap-colorpicker.js"></script>
-  <script src="{{url('')}}/js/daterangepicker.js"></script>
-  <script src="{{url('')}}/js/bootstrap-datepicker.js"></script>
-  <!-- ck editor -->
-  <script type="text/javascript" src="{{url('')}}/assets/ckeditor/ckeditor.js"></script>
-  <!-- custom form component script for this page-->
-  <script src="{{url('')}}/js/form-component.js"></script>
-  <!-- custome script for all page -->
-  <script src="{{url('')}}/js/scripts.js"></script>
+        <!-- colorpicker -->
 
-  <!-- javascripts -->
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.10.4.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery-1.8.3.min.js"></script>
-  <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
-  <!-- bootstrap -->
-  <script src="{{url('')}}/admin_bootstrap/js/bootstrap.min.js"></script>
-  <!-- nice scroll -->
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.scrollTo.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.nicescroll.js" type="text/javascript"></script>
-  <!-- charts scripts -->
-  <script src="{{url('')}}/admin_bootstrap/assets/jquery-knob/js/jquery.knob.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.sparkline.js" type="text/javascript"></script>
-  <script src="{{url('')}}/admin_bootstrap/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/owl.carousel.js"></script>
-  <!-- jQuery full calendar -->
-  <script src="{{url('')}}/admin_bootstrap/js/fullcalendar.min.js"></script>
-    <!-- Full Google Calendar - Calendar -->
-    <script src="{{url('')}}/admin_bootstrap/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
-    <!--script for this page only-->
-    <script src="{{url('')}}/admin_bootstrap/js/calendar-custom.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.rateit.min.js"></script>
-    <!-- custom select -->
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.customSelect.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/assets/chart-master/Chart.js"></script>
+        <!-- bootstrap-wysiwyg -->
+        <script src="{{url('')}}/js/jquery.hotkeys.js"></script>
+        <script src="{{url('')}}/js/bootstrap-wysiwyg.js"></script>
+        <script src="{{url('')}}/js/bootstrap-wysiwyg-custom.js"></script>
+        <script src="{{url('')}}/js/moment.js"></script>
+        <script src="{{url('')}}/js/bootstrap-colorpicker.js"></script>
+        <script src="{{url('')}}/js/daterangepicker.js"></script>
+        <script src="{{url('')}}/js/bootstrap-datepicker.js"></script>
+        <!-- ck editor -->
+        <script type="text/javascript" src="{{url('')}}/assets/ckeditor/ckeditor.js"></script>
+        <!-- custom form component script for this page-->
+        <script src="{{url('')}}/js/form-component.js"></script>
+        <!-- custome script for all page -->
+        <script src="{{url('')}}/js/scripts.js"></script>
 
-    <!--custome script for all page-->
-    <script src="{{url('')}}/admin_bootstrap/js/scripts.js"></script>
-    <!-- custom script for this page-->
-    <script src="{{url('')}}/admin_bootstrap/js/sparkline-chart.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/easy-pie-chart.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/xcharts.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.autosize.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.placeholder.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/gdp-data.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/morris.min.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
-    <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
-    <script>
+        <!-- javascripts -->
+        <script src="{{url('')}}/admin_bootstrap/js/jquery.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.10.4.min.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
+        <!-- bootstrap -->
+        <script src="{{url('')}}/admin_bootstrap/js/bootstrap.min.js"></script>
+        <!-- nice scroll -->
+        <script src="{{url('')}}/admin_bootstrap/js/jquery.scrollTo.min.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/jquery.nicescroll.js" type="text/javascript"></script>
+        <!-- charts scripts -->
+        <script src="{{url('')}}/admin_bootstrap/assets/jquery-knob/js/jquery.knob.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/jquery.sparkline.js" type="text/javascript"></script>
+        <script src="{{url('')}}/admin_bootstrap/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/owl.carousel.js"></script>
+        <!-- jQuery full calendar -->
+        <script src="{{url('')}}/admin_bootstrap/js/fullcalendar.min.js"></script>
+        <!-- Full Google Calendar - Calendar -->
+        <script src="{{url('')}}/admin_bootstrap/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
+        <!--script for this page only-->
+        <script src="{{url('')}}/admin_bootstrap/js/calendar-custom.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/jquery.rateit.min.js"></script>
+        <!-- custom select -->
+        <script src="{{url('')}}/admin_bootstrap/js/jquery.customSelect.min.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/assets/chart-master/Chart.js"></script>
+
+        <!--custome script for all page-->
+        <script src="{{url('')}}/admin_bootstrap/js/scripts.js"></script>
+        <!-- custom script for this page-->
+        <script src="{{url('')}}/admin_bootstrap/js/sparkline-chart.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/easy-pie-chart.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/xcharts.min.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/jquery.autosize.min.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/jquery.placeholder.min.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/gdp-data.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/morris.min.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
+        <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
+        <script>
       //knob
       $(function() {
         $(".knob").knob({
@@ -1693,7 +1675,7 @@
         });
       });
     </script>
-</body>
+  </body>
 
 
-<html>
+  <html>

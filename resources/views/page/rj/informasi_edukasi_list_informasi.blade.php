@@ -54,20 +54,7 @@
           <h3 class="page-header"><i class="fa fa-file-text-o"></i> Kebutuhan Informasi dan Edukasi Pasien/Keluarga Rawat Jalan</h3>
         </div>
       </div>
-      <div class="panel-body bio-graph-info">
-        <h1>[No. RM]</h1>
-        <div class="row">
-          <div class="bio-row">
-            <p><span>Nama Pasien </span>: [Nama Pasien] </p>
-          </div>
-          <div class="bio-row">
-            <p><span>Tanggal Lahir</span>: 27 Agustus 1996</p>
-          </div>
-          <div class="bio-row">
-            <p><span>Jenis Kelamin </span>: L</p>
-          </div>
-        </div>
-      </div>
+      @include('layouts.bio')
 
       <div class="row">
         <div class="col-lg-12">
@@ -321,5 +308,5 @@
     });
   </script>
   
-  </body>
-  <html>
+</body>
+<html>
