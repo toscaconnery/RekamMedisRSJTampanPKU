@@ -96,6 +96,9 @@ Route::post('/rj_resume', 'RJResumeController@post_rj_resume');
 
 Route::get('/igd_triase', 'IGDTriaseController@get_igd_triase');
 Route::post('/igd_triase', 'IGDTriaseController@post_igd_triase');
+
+Route::get('/igd_suicide_fisik', 'IGDSuicideFisikController@get_igd_suicide_fisik');
+Route::post('/igd_suicide_fisik', 'IGDSuicideFisikController@post_igd_suicide_fisik');
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -131,6 +134,9 @@ Route::get('/ri_surat_persetujuan', function () {
 // Route::get('/rj_resume_rawat', function () {
 //     return view('rj_resume_rawat');
 // });
+// Route::get('/igd_suicide_fisik', function () {
+//     return view('igd_suicide_fisik');
+// });
 Route::get('/igd_triase_pasien', function () {
     return view('igd_triase_pasien');
 });
@@ -158,9 +164,6 @@ Route::get('/igd_perkembangan_pasien', function () {
     return view('igd_perkembangan_pasien');
 });
 
-Route::get('/igd_suicide_fisik', function () {
-    return view('igd_suicide_fisik');
-});
 
 Route::get('/ri_panss_ec', function () {
     return view('ri_panss_ec');
