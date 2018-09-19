@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="{{url('')}}/admin_bootstrap/img/favicon.png">
 
-  <title>Catatan Perkembangan Pasien Terintegrasi Rawat Jalan</title>
+  <title>Penundaan Pelayanan</title>
 
   <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
     <section class="wrapper">
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="page-header"><i class="fa fa-file-text-o"></i> Catatan Perkembangan Pasien Terintegrasi Rawat Jalan</h3>
+          <h3 class="page-header"><i class="fa fa-file-text-o"></i> PENUNDAAN PELAYANAN</h3>
         </div>
       </div>
       @include('layouts.bio')
@@ -60,7 +60,7 @@
         <div class="col-lg-12">
           <section class="panel">
             <header class="panel-heading">
-              Dokumen Catatan Perkembangan Pasien Terintegrasi Rawat Jalan
+              Dokumen Penundaan Pelayanan
             </header>
 
             <table class="table table-striped table-advance table-hover">
@@ -72,7 +72,7 @@
                   <th><i class="icon_cogs"></i> Action</th>
                 </tr>
                 <tr>
-                  <td>Catatan Perkembangan Pasien Terintegrasi</td>
+                  <td>Penundaan Pelayanan</td>
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>
@@ -91,96 +91,128 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal" method="post" action="rj_perkembangan_pasien">
+          <form class="form-horizontal " method="post" action="penundaan_pelayanan">
             {{ csrf_field() }}
-            <input type="hidden" name="jumlah_form" id="jumlah_form" value="4">
             <section class="panel">
               <header class="panel-heading">
-                Hasil Pemeriksaan, Analisis, Rencana Penatalaksanaan Pasien 
+                Data Penundaan
               </header>
-              <div class="form-group">
-                <div class="col-sm-2"></div>
-                <label class="col-sm-8 control-label">(Dituliskan dengan Format SOAP/ADIME, disertai dengan Target yang Terukur, Evaluasi Hasil Tatalaksana dituliskan dalam Asesmen.</label>
-                <div class="col-sm-2"></div>
+              <div class="panel-body">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Nama</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="nama">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Umur</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" name="umur">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Hubungan dengan Pasien</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="hubungan">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Poli/Ruangan</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="poli_ruangan">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Nama Dokter Pengirim</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="dokter_pengirim">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Pelayanan yang akan dilakukan</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="pelayanan_akan_dilakukan">
+                  </div>
+                </div>
               </div>
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th style="width: 10%; text-align: center;">TGL & JAM</th>
-                    <th style="width: 15%; text-align: center;">PROFESI/BAGIAN</th>
-                    <th style="width: 67%; text-align: center;">HASIL PEMERIKSAAN, ANALISIS, RENCANA PENTATALAKSANAAN PASIEN</th>
-                    <th style="width: 5%; text-align: center;">VERIFIKASI</th>
-                    <th style="width: 3%; text-align: center;">ACTION</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <input type="date" class="form-control" name="tanggal_1" required>
-                      <input type="text" class="form-control" name="jam_1" required placeholder="Jam">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" name="profesi_1" readonly value="Profesi A">
-                    </td>
-                    <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_1">S : </textarea>
-                    </td>
-                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input type="date" class="form-control" name="tanggal_2" required>
-                      <input type="text" class="form-control" name="jam_2" required placeholder="Jam">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" name="profesi_2" readonly value="Profesi A">
-                    </td>
-                    <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_2">O : </textarea>
-                    </td>
-                    <td><input type="checkbox" class="form-control" name="ttd_2"></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input type="date" class="form-control" name="tanggal_3" required>
-                      <input type="text" class="form-control" name="jam_3" required placeholder="Jam">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" name="profesi_3" readonly value="Profesi A">
-                    </td>
-                    <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_3">A : </textarea>
-                    </td>
-                    <td><input type="checkbox" class="form-control" name="ttd_3"></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input type="date" class="form-control" name="tanggal_4" required>
-                      <input type="text" class="form-control" name="jam_4" required placeholder="Jam">
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" name="profesi_4" readonly value="Profesi A">
-                    </td>
-                    <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_4">P : </textarea>
-                    </td>
-                    <td><input type="checkbox" class="form-control" name="ttd_4"></td>
-                    <td></td>
-                  </tr>
-                  <tr id="last_row">
-                    <td colspan="4">
-                      <div class="btn-group">
-                        <button class="btn btn-primary" type="button" id="tambah_form"><i class="icon_plus_alt2"></i> Tambah</button>
-                        <button class="btn btn-success" type="submit"><i class="icon_check_alt2"></i> Simpan</button>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
             </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Dengan ini menyatakan bahwa saya telah menerima informasi terhadap penundaan pelayanan dan pengobatan dikarenakan:
+              </header>
+              <div class="panel-body">
+                <div class="form-group">
+                  <label class="control-label col-lg-2" for="inputSuccess">Penundaan pelayanan</label>
+                  <div class="col-lg-10">
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="dokter_berhalangan"> Dokter berhalangan datang
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="kerusakan_alat"> Kerusakan alat
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="pemberian_obat_farmasi"> Pemberian obat di farmasi
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="hasil_pemeriksaan_radiologi"> Hasil pemeriksaan radiologi
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="hasil_pemeriksaan_laboratorium"> Hasil pemeriksaan laboratorium
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" name="lainnya"> Lain-lain .....
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-lg-2">Sebutkan</label>
+                  <div class="col-lg-10">
+                    <input type="text" class="form-control" name="sebab_lainnya">
+                  </div>
+                </div>
+                <div class="col-lg-2"></div><h5>Maka dengan ini saya Setuju untuk dilakukan Penundaan Pelayanan dengan alternatif yang diberikan</h5>
+                <div class="form-group">
+                  <label class="control-label col-lg-2" for="inputSuccess">Setuju menunda</label>
+                  <div class="col-lg-10">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="alternatif" value="Dijadwalkan ulang">
+                        Dijadwalkan ulang
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="alternatif" value="Jadwal yang akan datang">
+                        Jadwal yang akan datang
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="alternatif" value="Dirujuk ke Pelayanan / RS lain">
+                        Dirujuk ke Pelayanan / RS lain
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2">Jadwal Penundaan</label>
+                  <div class="col-sm-3">
+                    <input id="dp1" type="date" value="28-10-2013" size="16" class="form-control" name="jadwal_penundaan">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Rumah Sakit Rujukan</label>
+                  <div class="col-sm-3">
+                    <input type="text" class="form-control" name="rs_tujuan">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </form>
         </div>
       </div>
@@ -261,37 +293,5 @@
     <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
     <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
     <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
-
-    {{-- wicked time picker --}}
-    {{-- <script type="text/javascript" src="{{url('')}}/wickedpicker/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="{{url('')}}/wickedpicker/src/wickedpicker.js"></script>
-    <script type="text/javascript">
-      $('.timepicker').wickedpicker();
-    </script> --}}
-
-    {{-- menambah row inputan --}}
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#tambah_form').click(function() {
-          var a = document.getElementById('jumlah_form').value;
-          // alert('a');
-          a = parseInt(a) + 1;
-          $('#last_row').before('<tr id="form_'+a+'"><td><input type="date" class="form-control" name="tanggal_'+a+'" required><input type="text" class="form-control" name="jam_'+a+'" required placeholder="Jam"></td><td><input type="text" class="form-control" name="profesi_'+a+'" readonly value="Profesi A"></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="ttd_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-          document.getElementById('jumlah_form').value = a;
-        });
-      });
-    </script>
-
-      {{-- menghapus row --}}
-      <script type="text/javascript">
-        $(document).ready(function() {
-          $(document).on('click', '.tombol_hapus', function() {
-            var x = $(this).attr('id');
-            var nomor = x.substring(13)
-            $('#form_'+nomor).remove();
-          });
-        });
-      </script>
-
-    </body>
-    <html>
+  </body>
+  <html>

@@ -7,14 +7,13 @@ use App\Models\RJResume;
 
 class RJResumeController extends Controller
 {
-    public function get_resume()
+    public function get_rj_resume()
     {
     	return view('page.rj.resume');
     }
 
-    public function post_resume(Request $request)
+    public function post_rj_resume(Request $request)
     {
-    	// dd('ha');
     	$jumlah_form_resume = $request->jumlah_form_resume;
     	for($i = 1; $i <= $jumlah_form_resume; $i++) {
     		$str_tanggal = 'tanggal_'.$i;

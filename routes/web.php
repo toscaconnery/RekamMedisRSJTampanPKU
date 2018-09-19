@@ -28,7 +28,7 @@ Route::post('/identifikasi_pasien_baru_final', 'PasienController@identifikasi_pa
 // RAWAT JALAN========
 // ASESMEN AWAL
 Route::get('/put_selected_patient_id/{id}', 'PasienController@put_selected_patient_id');
-Route::get('check_selected_patient_id', 'PasienController@check_selected_patient_id');
+Route::get('/check_selected_patient_id', 'PasienController@check_selected_patient_id');
 Route::get('/rj_asesmen_awal', 'RawatJalanController@asesmen_awal');    //will obsolete soon
 Route::post('/fisik_gizi', 'RawatJalanController@store_fisik_gizi');
 Route::post('/penilaian_tingkat_nyeri', 'RawatJalanController@store_penilaian_tingkat_nyeri');
@@ -58,6 +58,10 @@ Route::get('/rj_asesmen_gigi', 'RawatJalanController@asesmen_gigi');
 //DO  NOT  TOUCH!!!////
 //DO  NOT  TOUCH!!!////
 //DO  NOT  TOUCH!!!////
+
+Route::get('/penundaan_pelayanan', 'PenundaanPelayananController@get_penundaan_pelayanan');
+Route::post('/penundaan_pelayanan', 'PenundaanPelayananController@post_penundaan_pelayanan');
+
 Route::get('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@get_rj_asesmen_awal_perawat');
 Route::post('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_perawat');
 Route::get('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@get_rj_asesmen_awal_dokter');
@@ -87,8 +91,18 @@ Route::post('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKemb
 Route::get('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_dokter');
 
-Route::get('/rj_resume', 'RJResumeController@get_resume');
-Route::post('/rj_resume', 'RJResumeController@post_resume');
+Route::get('/rj_resume', 'RJResumeController@get_rj_resume');
+Route::post('/rj_resume', 'RJResumeController@post_rj_resume');
+
+Route::get('/igd_triase', 'IGDTriaseController@get_igd_triase');
+Route::post('/igd_triase', 'IGDTriaseController@post_igd_triase');
+
+Route::get('/igd_suicide_fisik', 'IGDSuicideFisikController@get_igd_suicide_fisik');
+Route::post('/igd_suicide_fisik', 'IGDSuicideFisikController@post_igd_suicide_fisik');
+
+Route::get('/igd_catatan_kemajuan', 'IGDCatatanKemajuanController@get_igd_catatan_kemajuan');
+Route::post('/igd_catatan_kemajuan', 'IGDCatatanKemajuanController@post_igd_catatan_kemajuan');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -101,9 +115,9 @@ Route::get('/ri_surat_persetujuan', function () {
     return view('ri_surat_persetujuan');
 });
 
-Route::get('/penundaan_pelayanan', function () {
-    return view('penundaan_pelayanan');
-});
+// Route::get('/penundaan_pelayanan', function () {
+//     return view('penundaan_pelayanan');
+// });
 
 
 // Route::get('/rj_informasi_edukasi', function () {
@@ -121,17 +135,23 @@ Route::get('/penundaan_pelayanan', function () {
 // Route::get('/rj_tumbuh_kembang', function () {
 //     return view('rj_tumbuh_kembang');
 // });
-Route::get('/rj_resume_rawat', function () {
-    return view('rj_resume_rawat');
-});
+// Route::get('/rj_resume_rawat', function () {
+//     return view('rj_resume_rawat');
+// });
+// Route::get('/igd_suicide_fisik', function () {
+//     return view('igd_suicide_fisik');
+// });
+// Route::get('/igd_triase_pasien', function () {
+//     return view('igd_triase_pasien');
+// });
+// Route::get('/igd_catatan_kemajuan', function () {
+//     return view('igd_catatan_kemajuan');
+// });
 
 Route::get('/ri_catatan_perkembangan', function () {
     return view('ri_catatan_perkembangan');
 });
 
-Route::get('/igd_triase_pasien', function () {
-    return view('igd_triase_pasien');
-});
 
 
 Route::get('/rj_rencana_pemulangan', function () {
@@ -143,17 +163,11 @@ Route::get('/rj_rencana_pemulangan', function () {
 
 
 
-Route::get('/igd_catatan_kemajuan', function () {
-    return view('igd_catatan_kemajuan');
-});
 
 Route::get('/igd_perkembangan_pasien', function () {
     return view('igd_perkembangan_pasien');
 });
 
-Route::get('/igd_suicide_fisik', function () {
-    return view('igd_suicide_fisik');
-});
 
 Route::get('/ri_panss_ec', function () {
     return view('ri_panss_ec');
