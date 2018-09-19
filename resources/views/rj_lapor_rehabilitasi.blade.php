@@ -420,249 +420,290 @@
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Alkohol</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b1" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b1" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
                     </div>
-                    <label class="col-sm-2 control-label">Cara Pakai</label>
-                    <div class="col-sm-6">
+                    <label class="col-sm-1 control-label">Lamanya</label>
+                    <div class="col-sm-1">
                       <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Cara Pakai</label>
+                    <div class="col-sm-3">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>1. Oral</option>
+                          <option>2. Nasal/Sublingual/Suppositoria</option>
+                          <option>3. Merokok</option>
+                          <option>4. Injeksi Non-IV</option>
+                          <option>5. IV</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Heroin</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b2" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b2" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
                     </div>
-                    <label class="col-sm-2 control-label">Cara Pakai</label>
-                    <div class="col-sm-6">
+                    <label class="col-sm-1 control-label">Lamanya</label>
+                    <div class="col-sm-1">
                       <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Cara Pakai</label>
+                    <div class="col-sm-3">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>1. Oral</option>
+                          <option>2. Nasal/Sublingual/Suppositoria</option>
+                          <option>3. Merokok</option>
+                          <option>4. Injeksi Non-IV</option>
+                          <option>5. IV</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Metadon/Buprenorfin</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b3" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b3" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
                     </div>
-                    <label class="col-sm-2 control-label">Cara Pakai</label>
-                    <div class="col-sm-6">
+                    <label class="col-sm-1 control-label">Lamanya</label>
+                    <div class="col-sm-1">
                       <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Cara Pakai</label>
+                    <div class="col-sm-3">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>1. Oral</option>
+                          <option>2. Nasal/Sublingual/Suppositoria</option>
+                          <option>3. Merokok</option>
+                          <option>4. Injeksi Non-IV</option>
+                          <option>5. IV</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Oplat lain/Analgesik</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b4" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b4" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
                     </div>
-                    <label class="col-sm-2 control-label">Cara Pakai</label>
-                    <div class="col-sm-6">
+                    <label class="col-sm-1 control-label">Lamanya</label>
+                    <div class="col-sm-1">
                       <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Cara Pakai</label>
+                    <div class="col-sm-3">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>1. Oral</option>
+                          <option>2. Nasal/Sublingual/Suppositoria</option>
+                          <option>3. Merokok</option>
+                          <option>4. Injeksi Non-IV</option>
+                          <option>5. IV</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Barbiturat</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b5" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b5" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
                     </div>
-                    <label class="col-sm-2 control-label">Cara Pakai</label>
-                    <div class="col-sm-6">
+                    <label class="col-sm-1 control-label">Lamanya</label>
+                    <div class="col-sm-1">
                       <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Cara Pakai</label>
+                    <div class="col-sm-3">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>1. Oral</option>
+                          <option>2. Nasal/Sublingual/Suppositoria</option>
+                          <option>3. Merokok</option>
+                          <option>4. Injeksi Non-IV</option>
+                          <option>5. IV</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Sedatif/Hiptonik</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b6" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b6" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
                     </div>
-                    <label class="col-sm-2 control-label">Cara Pakai</label>
-                    <div class="col-sm-6">
+                    <label class="col-sm-1 control-label">Lamanya</label>
+                    <div class="col-sm-1">
                       <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Cara Pakai</label>
+                    <div class="col-sm-3">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>1. Oral</option>
+                          <option>2. Nasal/Sublingual/Suppositoria</option>
+                          <option>3. Merokok</option>
+                          <option>4. Injeksi Non-IV</option>
+                          <option>5. IV</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Kokain</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b7" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b7" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
                     </div>
-                    <label class="col-sm-2 control-label">Cara Pakai</label>
-                    <div class="col-sm-6">
+                    <label class="col-sm-1 control-label">Lamanya</label>
+                    <div class="col-sm-1">
                       <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Cara Pakai</label>
+                    <div class="col-sm-3">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>1. Oral</option>
+                          <option>2. Nasal/Sublingual/Suppositoria</option>
+                          <option>3. Merokok</option>
+                          <option>4. Injeksi Non-IV</option>
+                          <option>5. IV</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Amfetamin</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b8" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b8" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
                     </div>
-                    <label class="col-sm-2 control-label">Cara Pakai</label>
-                    <div class="col-sm-6">
+                    <label class="col-sm-1 control-label">Lamanya</label>
+                    <div class="col-sm-1">
                       <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Cara Pakai</label>
+                    <div class="col-sm-3">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>1. Oral</option>
+                          <option>2. Nasal/Sublingual/Suppositoria</option>
+                          <option>3. Merokok</option>
+                          <option>4. Injeksi Non-IV</option>
+                          <option>5. IV</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Kanabis</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b9" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b9" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
                     </div>
-                    <label class="col-sm-2 control-label">Cara Pakai</label>
-                    <div class="col-sm-6">
+                    <label class="col-sm-1 control-label">Lamanya</label>
+                    <div class="col-sm-1">
                       <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Cara Pakai</label>
+                    <div class="col-sm-3">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>1. Oral</option>
+                          <option>2. Nasal/Sublingual/Suppositoria</option>
+                          <option>3. Merokok</option>
+                          <option>4. Injeksi Non-IV</option>
+                          <option>5. IV</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Halusinogen</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b10" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b10" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
                     </div>
-                    <label class="col-sm-2 control-label">Cara Pakai</label>
-                    <div class="col-sm-6">
+                    <label class="col-sm-1 control-label">Lamanya</label>
+                    <div class="col-sm-1">
                       <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Cara Pakai</label>
+                    <div class="col-sm-3">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>1. Oral</option>
+                          <option>2. Nasal/Sublingual/Suppositoria</option>
+                          <option>3. Merokok</option>
+                          <option>4. Injeksi Non-IV</option>
+                          <option>5. IV</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Inhalan</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b11" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b11" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
                     </div>
-                    <label class="col-sm-2 control-label">Cara Pakai</label>
-                    <div class="col-sm-6">
+                    <label class="col-sm-1 control-label">Lamanya</label>
+                    <div class="col-sm-1">
                       <input type="text" class="form-control">
+                    </div>
+                    <label class="col-sm-1 control-label">Cara Pakai</label>
+                    <div class="col-sm-3">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>1. Oral</option>
+                          <option>2. Nasal/Sublingual/Suppositoria</option>
+                          <option>3. Merokok</option>
+                          <option>4. Injeksi Non-IV</option>
+                          <option>5. IV</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Lebih dari 1 zat/hari termasuk alkohol</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b12" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="b12" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <label class="col-sm-1 control-label">Lamanya</label>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
                   
@@ -775,10 +816,10 @@
                       <input type="text" class="form-control">
                     </div>
                     <label class="col-sm-2 control-label">Masalah narkoba</label>
-                    <div class="col-sm-2">
+                    <div class="col-sm-1">
                       <input type="text" class="form-control">
                     </div>
-                    <label class="col-sm-1 control-label">Pemalsuan</label>
+                    <label class="col-sm-2 control-label">Pemalsuan</label>
                     <div class="col-sm-1">
                       <input type="text" class="form-control">
                     </div>
@@ -851,13 +892,13 @@
                     <div class="col-lg-2">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="d1" id="optionsRadios1" value="" checked>
+                          <input type="radio" name="d12" id="optionsRadios1" value="" checked>
                           Ya
                         </label>
                       </div>
                       <div class="radio">
                         <label>
-                          <input type="radio" name="d2" id="optionsRadios1" value="" checked>
+                          <input type="radio" name="d12" id="optionsRadios1" value="" checked>
                           Tidak
                         </label>
                       </div>
@@ -914,169 +955,135 @@
                     </div>
                   </div>
 
+                  <div class="form-group"><label class="col-sm-4 control-label">Apakah anda memiliki konflik serius dalam berhubungan dengan:</label></div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Ibu</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e1" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e1" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
                     </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
+                    </div>
+                    
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Ayah</label>
                     <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e2" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e2" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Adik/Kakak</label>
-                    <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e3" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e3" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Pasangan</label>
-                    <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e4" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e4" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Anak-anak</label>
-                    <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e5" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e5" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Keluarga yang berarti</label>
-                    <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e6" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e6" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                     <label class="col-sm-2 control-label">Bila ya, siapakah?</label>
-                    <div class="col-sm-6">
+                    <div class="col-sm-3">
                       <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Teman akrab</label>
-                    <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e7" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e7" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Tetangga</label>
-                    <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e8" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e8" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Teman sekerja</label>
-                    <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e9" id="optionsRadios1" value="" checked>
-                          30 Hari Terakhir
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="e9" id="optionsRadios1" value="" checked>
-                          Sepanjang hidup
-                        </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
@@ -1093,153 +1100,113 @@
                 <form class="form-horizontal " method="get">
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Mengalami depresi serius (kesedihan, putus asa, kehilangan minat, susah konsentrasi)</label>
-                    <div class="col-lg-4">
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
-                      </div>
-
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Mengalami rasa cemas serius/keterangan, gelisah, merasa khawatir berlebihan</label>
-                    <div class="col-lg-4">
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
-                      </div>
-
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Mengalami halusinasi (melihat/mendengar sesuatu yang tidak ada obyeknya)</label>
-                    <div class="col-lg-4">
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
-                      </div>
-
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Mengalami kesulitan mengingat atau fokus pada sesuatu</label>
-                    <div class="col-lg-4">
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
-                      </div>
-
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Mengalami kesukaran mengontrol perilaku kasar, termasuk kemarahan atau kekerasan</label>
-                    <div class="col-lg-4">
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
-                      </div>
-
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Mengalami pikiran serius untuk bunuh diri</label>
-                    <div class="col-lg-4">
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
-                      </div>
-
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Berusaha untuk bunuh diri</label>
-                    <div class="col-lg-4">
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
-                      </div>
-
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Menerima pengobatan dari psikiater</label>
-                    <div class="col-lg-4">
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  30 Hari terakhir
-                                              </label>
-                      </div>
-
-                      <div class="checkbox">
-                        <label>
-                                                  <input type="checkbox" value="">
-                                                  Sepanjang hidup
-                                              </label>
-                      </div>
+                     <div class="col-lg-2">
+                      <select class="form-control input-sm m-bot15">
+                          <option>-</option>
+                          <option>30 Hari Terakhir</option>
+                          <option>Sepanjang Hidup</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <input type="text" class="form-control">
                     </div>
                   </div>
 

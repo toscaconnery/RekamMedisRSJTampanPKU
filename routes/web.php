@@ -123,9 +123,9 @@ Route::get('/ri_surat_persetujuan', function () {
 // Route::get('/rj_informasi_edukasi', function () {
 //     return view('rj_informasi_edukasi');
 // });
-// Route::get('/rj_lapor_rehabilitasi', function () {
-//     return view('rj_lapor_rehabilitasi');
-// });
+Route::get('/rj_lapor_rehabilitasi2', function () {
+    return view('rj_lapor_rehabilitasi');
+});
 // Route::get('/rj_perkembangan_pasien', function () {
 //     return view('rj_perkembangan_pasien');
 // });
