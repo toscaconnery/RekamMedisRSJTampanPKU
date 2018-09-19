@@ -99,6 +99,10 @@ Route::post('/igd_triase', 'IGDTriaseController@post_igd_triase');
 
 Route::get('/igd_suicide_fisik', 'IGDSuicideFisikController@get_igd_suicide_fisik');
 Route::post('/igd_suicide_fisik', 'IGDSuicideFisikController@post_igd_suicide_fisik');
+
+Route::get('/igd_catatan_kemajuan', 'IGDCatatanKemajuanController@get_igd_catatan_kemajuan');
+Route::post('/igd_catatan_kemajuan', 'IGDCatatanKemajuanController@post_igd_catatan_kemajuan');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -137,9 +141,12 @@ Route::get('/ri_surat_persetujuan', function () {
 // Route::get('/igd_suicide_fisik', function () {
 //     return view('igd_suicide_fisik');
 // });
-Route::get('/igd_triase_pasien', function () {
-    return view('igd_triase_pasien');
-});
+// Route::get('/igd_triase_pasien', function () {
+//     return view('igd_triase_pasien');
+// });
+// Route::get('/igd_catatan_kemajuan', function () {
+//     return view('igd_catatan_kemajuan');
+// });
 
 Route::get('/ri_catatan_perkembangan', function () {
     return view('ri_catatan_perkembangan');
@@ -156,9 +163,6 @@ Route::get('/rj_rencana_pemulangan', function () {
 
 
 
-Route::get('/igd_catatan_kemajuan', function () {
-    return view('igd_catatan_kemajuan');
-});
 
 Route::get('/igd_perkembangan_pasien', function () {
     return view('igd_perkembangan_pasien');
