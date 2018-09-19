@@ -53,7 +53,9 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal " method="get">
+          <form class="form-horizontal " method="post" action="igd_catatan_kemajuan">
+            {{ csrf_field() }}
+            <input type="hidden" id="jumlah_form" name="jumlah_form" value="1">
             <section class="panel">
               <header class="panel-heading">
                 Catatan Kemajuan 
@@ -70,15 +72,22 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr id="form_1">
                       <td>
-                        <input id="dp1" type="text" value="28-10-2013" size="16" class="form-control">
-                        <input type="text" class="form-control" name="jam_1" required>
+                        <input id="dp1" type="text" value="{{date("m-d-Y")}}" size="16" class="form-control" name="tanggal_1">
+                        <input type="time" class="form-control" name="jam_1" required>
                       </td>
-                      <td><input type="text" class="form-control" name="catatan_kemajuan_1"></td>
-                      <td><input type="text" class="form-control" name="tindakan_terapi_1"></td>
-                      <td><input type="text" class="form-control" name="nama_1"></td>
-                      <td></td>
+                      <td>
+                        <textarea class="form-control" rows="3" name="catatan_kemajuan_1"></textarea>
+                      </td>
+                      <td>
+                        <textarea class="form-control" rows="3" name="tindakan_terapi_1"></textarea>
+                      </td>
+                      <td><input type="text" class="form-control" name="nama_user_1"></td>
+                      <td>
+                        <div class="btn-group">
+                          <button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_1"><i class="icon_close_alt2"></i></button>
+                        </div>
                     </tr>
                     <tr id="last_row">
                       <td colspan="9">
@@ -90,19 +99,6 @@
                     </tr>
                   </tbody>
                 </table>
-
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">Catatan Kemajuan</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">Tindakan dan Terapi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
               </div>
             </section>
             <div>
@@ -115,6 +111,29 @@
   </section>
 
   @include('layouts.tailscript')
+
+  {{-- menambah row inputan --}}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#tambah_form').click(function() {
+        var a = document.getElementById('jumlah_form').value;
+        a = parseInt(a) + 1;
+        $('#last_row').before('<tr id="form_'+a+'"><td><input id="dp1" type="text" value="{{date("m-d-Y")}}" size="16" class="form-control" name="tanggal_'+a+'"><input type="time" class="form-control" name="jam_'+a+'" required></td><td><textarea class="form-control" rows="3" name="catatan_kemajuan_'+a+'"></textarea></td><td><textarea class="form-control" rows="3" name="tindakan_terapi_'+a+'"></textarea></td><td><input type="text" class="form-control" name="nama_user_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></tr>');
+        document.getElementById('jumlah_form').value = a;
+      });
+    });
+  </script>
+
+  {{-- menghapus row --}}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(document).on('click', '.tombol_hapus', function() {
+        var x = $(this).attr('id');
+        var nomor = x.substring(13)
+        $('#form_'+nomor).remove();
+      });
+    });
+  </script>
 
 </body>
 <html>

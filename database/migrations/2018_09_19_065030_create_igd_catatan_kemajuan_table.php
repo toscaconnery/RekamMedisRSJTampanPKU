@@ -14,7 +14,12 @@ class CreateIgdCatatanKemajuanTable extends Migration
     public function up()
     {
         Schema::create('igd_catatan_kemajuan', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->string('tanggal');
+            $table->string('jam');
+            $table->string('catatan_kemajuan', 50);
+            $table->string('tindakan_terapi', 30);
+            $table->string('nama_user');
             $table->timestamps();
         });
     }
