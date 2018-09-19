@@ -12,130 +12,124 @@ header('Content-Type: application/pdf');
 <body style="">
 
 
-  <h2 align="center" style="font-size:110%;">SURAT PENGANTAR DIRAWAT (SPD)</h2>
+  <h2 align="center" style="font-size:110%;">IZIN VCT KLIEN UNTUK TES HIV</h2>
   
   <table>
     <tbody>
       <tr>
-        <td class="konten_s_question" colspan="2">Yang bertanda tangan di bawah ini :</td>
+        <td class="contain" colspan="2">Sebelum menandatangani izin ini, harap mengetahui bahwa:</td>
       </tr>
       <tr>
-        <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="number"></td>
+        <td class="contain">Anda mempunyai hakk untuk berpartisipasi dalam pemeriksaan dengan dasar kerahasiaan</td>
       </tr>
       <tr>
-        <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="number"></td>
+        <td class="contain">Anda mempunyai hak untuk menarik izin dan tes kapanpun sebelum pemeriksaan tersebut dilangsungkan</td>
       </tr>
       <tr>
-        <td class="konten_s_question">Jenis Kelamin</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="contain" colspan="2"><br></td>
       </tr>
       <tr>
-        <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="contain" colspan="2">Saya telah menerima informasi dan konseling menyangkut hal-hal berikut ini:</td>
       </tr>
       <tr>
-        <td class="konten_s_question">No.Telp</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="number">a. </td>
+        <td class="contain">Keberadaan dan kegunaan dari tes HIV</td>
       </tr>
       <tr>
-        <td class="konten_s_question">Agama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="number">b. </td>
+        <td class="contain">Tujuan dan kegunaan dari tes HIV</td>
       </tr>
       <tr>
-        <td class="konten_s_question" colspan="2">
-          <br>
-          <br>
-        </td>
+        <td class="number">c </td>
+        <td class="contain">Apa yang dapat dan tidak dapat diberikan dari tes HIV</td>
       </tr>
       <tr>
-        <td class="konten_s_question">Hubungan dengan pasien</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="number">d </td>
+        <td class="contain">Keuntungan serta resiko dari tes HIV dan dari mengetahui hasil tes saya</td>
       </tr>
       <tr>
-        <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="number">e </td>
+        <td class="contain">Pemahaman dari positif, negatif, false positif dan hasil tes intermediate serta dampak dari masa pendek</td>
       </tr>
       <tr>
-        <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="number">f </td>
+        <td class="contain">Pengukuran untuk pencegahan dari pemaparan dan penularan akan HIV</td>
       </tr>
+
       <tr>
-        <td class="konten_s_question">Jenis Kelamin</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="contain" colspan="2"><br></td>
       </tr>
+
       <tr>
-        <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="contain" colspan="2">Saya dengan sukarela menyetujui untuk menjalani tes pemmeriksaan HIV dengan ketentuan hasil tersebut akan tetap rahasia dan terbuka hanya kepada saya seorang.</td>
       </tr>
+
       <tr>
-        <td class="konten_s_question">No.Telp</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="contain" colspan="2">Saya menyetujui untuk menerima pelayanan konseling setelah menjalani tes pemeriksaan untuk mendiskusikan hasil tes HIV saya dan cara-cara untuk mengurangi resiko untuk terkena HIV atau menyebarluaskan HIV kepada orang lain untuk waktu kedepan.</td>
       </tr>
+
       <tr>
-        <td class="konten_s_question">Agama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="contain" colspan="2">Saya mengerti bahwa pelayanan kesehatan saya pada klinik ini tidak akan mempengaruhi keputusan saya secara negatif.</td>
+      </tr>
+
+      <tr>
+        <td class="contain" colspan="2">Saya tidak menyangka mempunyai dan memberikan kesempatan untuk bertanya dan pertanyaan saya ini telah diberikan jawaban yang memuaskan saya.</td>
+      </tr>
+
+      <tr>
+        <td class="contain" colspan="2">saya dengan ini mengizinkan tes/pemeriksaan HIV untuk dilaksanakan</td>
       </tr>
     </tbody>
   </table>
 
+  
+  <br>
+
   <table>
     <tr>
-      <td class="konten_s_question" colspan="2">
+      <td class="ttd3">
+        
         <br>
-        Dengan ini meminta diberikan privasi berupa :
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr style="text-align:center;" width="85%">
+        <div>Tanda Tangan atau Cap Jempol Klien</div>
       </td>
-    </tr>
-    <tr>
-      <td class="number">1.</td>
-      <td class="contain">
-        Saya mengijinkan/tidak mengijinkan (coret salah satu) Rumah Sakit memberi akses bagi:<br>
-        Keluarga dan handal taulan serta orang-orang yang akan menengok/ menemui saya. (sebutkan nama/profesi bila ada permintaan khusus) :<br>
-        Nama Nama Nama
+      <td class="ttd3">
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr style="text-align:center;" width="60%">
+        <div>Tanda Tangan Konselor</div>
       </td>
-    </tr>
-    <tr>
-      <td class="number">2.</td>
-      <td class="contain">
-        Saya mengijinkan/tidak mengijinkan privasi khusus (coret salah satu). Sebutkan bila ada permintaan privasi khusus : <br>
-        Privasi privasi privasi
+      <td class="ttd3">
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr style="text-align:center;" width="60%">
+        <div>Tanggal</div>
       </td>
-    </tr>
-    <tr>
-      <td class="number">3.</td>
-      <td class="contain">
-        Lain-lain:<br>
-        lain lain lain lain
-      </td>
-    </tr>
+    </tr>  
   </table>
 
   <br>
   <br>
+  <br>
 
   <table>
-    <tr>
-      <td class="ttd2">
-        <br>
-        Saksi
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        (......................)
-      </td>
-      <td class="ttd2">
-        Pekanbaru, 25 September 2018<br>Pemohon
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        (......................)
-      </td>
-    </tr>  
+    <tbody>
+      <tr>
+        <td class="contain">Untuk anak di bawah umur, saya ... "Teman" terdekat memberikan izin untuk melaksanakan tes/pemeriksaan HIV</td>
+      </tr>
+    </tbody>
   </table>
 
 </body>

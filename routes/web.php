@@ -123,9 +123,9 @@ Route::get('/ri_surat_persetujuan', function () {
 // Route::get('/rj_informasi_edukasi', function () {
 //     return view('rj_informasi_edukasi');
 // });
-// Route::get('/rj_lapor_rehabilitasi', function () {
-//     return view('rj_lapor_rehabilitasi');
-// });
+Route::get('/rj_lapor_rehabilitasi2', function () {
+    return view('rj_lapor_rehabilitasi');
+});
 // Route::get('/rj_perkembangan_pasien', function () {
 //     return view('rj_perkembangan_pasien');
 // });
@@ -329,6 +329,20 @@ Route::get('/pdf_rj_infoedu', 'Pdf_rj_Controller@pdf_rj_infoedu');
 
 Route::get('/doc_rj_infoedu', function () {
     return view('/doc_rj_infoedu');
+});
+
+//dokumen stressor
+Route::get('/pdf_rj_stressor', 'Pdf_rj_Controller@pdf_rj_stressor');
+
+Route::get('/doc_rj_stressor', function () {
+    return view('/doc_rj_stressor');
+});
+
+//dokumen izinvct
+Route::get('/pdf_rj_izinvct', 'Pdf_rj_Controller@pdf_rj_izinvct');
+
+Route::get('/doc_rj_izinvct', function () {
+    return view('/doc_rj_izinvct');
 });
 
 //dokumen informasi lapor rehabilitasi
