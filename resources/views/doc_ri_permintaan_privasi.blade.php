@@ -12,7 +12,7 @@ header('Content-Type: application/pdf');
 <body style="">
 
 
-  <h2 align="center" style="font-size:110%;">SURAT PENGANTAR DIRAWAT (SPD)</h2>
+  <h2 align="center" style="font-size:110%;">PERMINTAAN KEBUTUHAN PRIVASI</h2>
   
   <table>
     <tbody>
