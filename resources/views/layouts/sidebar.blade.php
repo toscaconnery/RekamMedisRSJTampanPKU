@@ -37,7 +37,7 @@
           <li><a class="" href="{{url('')}}/igd_asesmen_darurat">Asesmen Rawat Darurat</a></li>
           <li><a class="" href="{{url('')}}/igd_suicide_fisik">Suicide - Kekerasan Fisik</a></li>
           <li><a class="" href="{{url('')}}/igd_catatan_kemajuan">Catatan Kemajuan</a></li>
-          <li><a class="" href="{{url('')}}/igd_perkembangan_pasien">Perkembangan Pasien</a></li>
+          <li><a class="" href="{{url('')}}/igd_catatan_perkembangan">Catatan Perkembangan</a></li>
         </ul>
       </li>
       <li class="sub-menu">
