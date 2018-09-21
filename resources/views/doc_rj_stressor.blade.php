@@ -17,125 +17,137 @@ header('Content-Type: application/pdf');
   <table>
     <tbody>
       <tr>
-        <td class="konten_s_question" colspan="2">Yang bertanda tangan di bawah ini :</td>
-      </tr>
-      <tr>
-        <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
-      </tr>
-      <tr>
-        <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
-      </tr>
-      <tr>
-        <td class="konten_s_question">Jenis Kelamin</td>
-        <td class="konten_s_answer">: -</td>
-      </tr>
-      <tr>
-        <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
-      </tr>
-      <tr>
-        <td class="konten_s_question">No.Telp</td>
-        <td class="konten_s_answer">: -</td>
-      </tr>
-      <tr>
-        <td class="konten_s_question">Agama</td>
-        <td class="konten_s_answer">: -</td>
-      </tr>
-      <tr>
-        <td class="konten_s_question" colspan="2">
-          <br>
-          <br>
+        <td rowspan="3" class="contain" width="15%"> 
+          <b>IDENTITAS</b>
+        </td>
+        <td class="contain" width="20%"> 
+          Status Perkawinan
+        </td>
+        <td class="contain"> 
+          : -
         </td>
       </tr>
       <tr>
-        <td class="konten_s_question">Hubungan dengan pasien</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="contain" width="20%"> 
+          Pendidikan
+        </td>
+        <td class="contain"> 
+          : -
+        </td>
       </tr>
       <tr>
-        <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="contain" width="20%"> 
+          Pekerjaan / Organisasi
+        </td>
+        <td class="contain"> 
+          : -
+        </td>
       </tr>
       <tr>
-        <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
+        <td colspan="3" class="contain">Salah satu cara mengelola stres adalah melakukan relaksasi progresif. Sebelum melakukannya, hendaknya mengidentifikasi sumber stres (stresor) Anda.</td>  
       </tr>
       <tr>
-        <td class="konten_s_question">Jenis Kelamin</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="contain"><b>TUJUAN</b></td>
+        <td colspan="2" class="contain"> : Menentukan stresor yang mana yang berpengaruh terhadap diri Anda.</td>  
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <table>
+    <tbody>
+      <tr>
+        <td colspan="3"><b>YANG HARUS DILAKUKAN</b></td>
       </tr>
       <tr>
-        <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
-      </tr>
-      <tr>
-        <td class="konten_s_question">No.Telp</td>
-        <td class="konten_s_answer">: -</td>
-      </tr>
-      <tr>
-        <td class="konten_s_question">Agama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="number">1. </td>
+        <td colspan="2" class="contain">Buatlah satu daftar dari semua stresor yang dirasakan mempunyai pengaruh. Pertimbangkan semua kategori di bawah ini. Susunlah menurut prioritas untuk setiap kategori.</td>
       </tr>
     </tbody>
   </table>
 
   <table>
-    <tr>
-      <td class="konten_s_question" colspan="2">
-        <br>
-        Dengan ini meminta diberikan privasi berupa :
-      </td>
-    </tr>
-    <tr>
-      <td class="number">1.</td>
-      <td class="contain">
-        Saya mengijinkan/tidak mengijinkan (coret salah satu) Rumah Sakit memberi akses bagi:<br>
-        Keluarga dan handal taulan serta orang-orang yang akan menengok/ menemui saya. (sebutkan nama/profesi bila ada permintaan khusus) :<br>
-        Nama Nama Nama
-      </td>
-    </tr>
-    <tr>
-      <td class="number">2.</td>
-      <td class="contain">
-        Saya mengijinkan/tidak mengijinkan privasi khusus (coret salah satu). Sebutkan bila ada permintaan privasi khusus : <br>
-        Privasi privasi privasi
-      </td>
-    </tr>
-    <tr>
-      <td class="number">3.</td>
-      <td class="contain">
-        Lain-lain:<br>
-        lain lain lain lain
-      </td>
-    </tr>
+    <thead>
+      <tr>
+        <th class="box-c">Lingkungan Fisik</th>
+        <th class="box-c">Sosial, ekonomi, & politik</th>
+        <th class="box-c">Keluarga</th>
+        <th class="box-c">Pekerjaan & karir</th>
+        <th class="box-c">Hubungan antar<br>pribadi & lingkungan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+      </tr>
+       <tr>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+      </tr>
+       <tr>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+      </tr>
+       <tr>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+      </tr>
+       <tr>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+        <td class="box">-</td>
+      </tr>
+    </tbody>
   </table>
+  
+  <table>
+    <tbody>
+      
+      <tr>
+        <td class="number">2. </td>
+        <td colspan="2" class="contain">Tuliskanlah semua simptom-simptom (gejala yang muncul)!</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="contain">[Isian]</td>
+      </tr>
+      
+      <tr>
+        <td class="number">3. </td>
+        <td colspan="2" class="contain">Bagaimana saudara menghadapi dan mengatasinya?</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="contain">[Isian]</td>
+      </tr>
 
+      
+    </tbody>
+  </table>
+  <br>
   <br>
   <br>
 
   <table>
-    <tr>
-      <td class="ttd2">
-        <br>
-        Saksi
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        (......................)
-      </td>
-      <td class="ttd2">
-        Pekanbaru, 25 September 2018<br>Pemohon
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        (......................)
-      </td>
-    </tr>  
+    <tbody>
+      <tr>
+        <td class="box" width="30%">Sekali Anda mengidentifikasi stresor maka Anda telah mengambil<br>langkah pertama untuk melakukan suatu hal yang konstruktif</td>
+      </tr>
+    </tbody>
   </table>
 
 </body>
