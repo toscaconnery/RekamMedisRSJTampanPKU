@@ -19,6 +19,7 @@ class CreateCatatanKemajuanTable extends Migration
             $table->dateTime('waktu');
             $table->string('catatan_kemajuan', 50);
             $table->string('tindakan_terapi', 30);
+            $table->integer('id_user');
             $table->timestamps();
         });
     }

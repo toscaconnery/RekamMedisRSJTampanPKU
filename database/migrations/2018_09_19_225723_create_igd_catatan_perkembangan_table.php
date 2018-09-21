@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIgdCatatanKemajuanTable extends Migration
+class CreateIgdCatatanPerkembanganTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateIgdCatatanKemajuanTable extends Migration
      */
     public function up()
     {
-        Schema::create('igd_catatan_kemajuan', function (Blueprint $table) {
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+        Schema::create('igd_catatan_perkembangan', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('id_regis')->reference('id')->on('identifikasi');
             $table->string('tanggal');
             $table->string('jam');
-            $table->string('catatan_kemajuan', 50);
-            $table->string('tindakan_terapi', 30);
-            $table->string('nama_user');
+            $table->string('profesi_bagian');
+            $table->string('hasil');
+            $table->boolean('verifikasi')->default(False);
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateIgdCatatanKemajuanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('igd_catatan_kemajuan');
+        Schema::dropIfExists('igd_catatan_perkembangan');
     }
 }
