@@ -672,6 +672,41 @@ Route::get('/doc_ri_konsultasi', function () {
     return view('/doc_ri_konsultasi');
 });
 
+//dokumen Lembar Pulang Paksa
+Route::get('/pdf_ri_pulang_paksa', 'Pdf_ri_Controller@pdf_ri_pulang_paksa');
+
+Route::get('/doc_ri_pulang_paksa', function () {
+    return view('/doc_ri_pulang_paksa');
+});
+
+//dokumen Lembar residen
+Route::get('/pdf_ri_residen', 'Pdf_ri_Controller@pdf_ri_residen');
+
+Route::get('/doc_ri_residen', function () {
+    return view('/doc_ri_residen');
+});
+
+//dokumen Lembar surat kuasa
+Route::get('/pdf_ri_surat_kuasa', 'Pdf_ri_Controller@pdf_ri_surat_kuasa');
+
+Route::get('/doc_ri_surat_kuasa', function () {
+    return view('/doc_ri_surat_kuasa');
+});
+
+//dokumen Lembar Pernyataan
+Route::get('/pdf_ri_pernyataan', 'Pdf_ri_Controller@pdf_ri_pernyataan');
+
+Route::get('/doc_ri_pernyataan', function () {
+    return view('/doc_ri_pernyataan');
+});
+
+//dokumen Lembar serah terima
+Route::get('/pdf_ri_serah_terima', 'Pdf_ri_Controller@pdf_ri_serah_terima');
+
+Route::get('/doc_ri_serah_terima', function () {
+    return view('/doc_ri_serah_terima');
+});
+
 //dokumen transfer internal
 Route::get('/pdf_ri_internal', 'Pdf_ri_Controller@pdf_ri_internal');
 
