@@ -1166,6 +1166,13 @@ td.box {
     border: 1px solid black;
 }
 
+td.box-top {
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid black;
+    vertical-align: top;
+}
+
 td.box-c {
     padding-left: 5px;
     padding-right: 5px;
