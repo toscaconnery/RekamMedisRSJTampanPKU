@@ -77,7 +77,7 @@ header('Content-Type: application/pdf');
         </ul>
       </td>
       <td class="box-top">
-      2. Bantu klien mengungkapkan persaan marahnya :<br>
+      2. Bantu klien mengungkapkan perasaan marahnya :<br>
       <ul>
         <li>Motivasi klien untuk menceritakan penyebab rasa kesal atau jengkelnya</li>
         <li>Dengarkan tanpa menyela atau memberi penilaian setiap ungkapan perasaan klien</li>
