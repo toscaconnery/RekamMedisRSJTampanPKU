@@ -13,6 +13,44 @@ header('Content-Type: application/pdf');
 
 <h2 align="center" style="font-size:100%">RENCANA TINDAKAN KEPERAWATAN<br>KLIEN DENGAN DEFISIT PERAWATAN DIRI</h2>
 
+<table style="font-size: 70%;">
+    <tbody>
+      <tr>
+        <td class="contain" width="20%" style="padding:-0.2%">
+          Jam Pengkajian 
+        </td>    
+        <td class="contain" style="padding:-0.2%">  
+          : 00:00
+        </td>                
+      </tr>      
+      <tr>
+        <td class="contain" style="padding:-0.2%">
+          Jam Pengkajian 
+        </td>    
+        <td class="contain" style="padding:-0.2%">  
+          : 00:00
+        </td>                
+      </tr>
+      <tr>
+        <td class="contain" style="padding:-0.2%">
+          Ruangan
+        </td>    
+        <td class="contain" style="padding:-0.2%">  
+          : -
+        </td>                
+      </tr>
+      <tr>
+        <td class="contain" style="padding:-0.2%">
+          Diagnosa Medis
+        </td>    
+        <td class="contain" style="padding:-0.2%">  
+          : -
+        </td>                
+      </tr>
+    </tbody>
+  </table>
+
+
 <table>
   <thead>
     <tr>

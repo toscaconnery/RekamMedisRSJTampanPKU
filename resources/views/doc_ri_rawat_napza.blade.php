@@ -13,6 +13,35 @@ header('Content-Type: application/pdf');
 
 <h2 align="center" style="font-size:100%">RENCANA TINDAKAN KEPERAWATAN NAPZA</h2><br>
 
+  <table style="font-size: 70%;">
+    <tbody>
+      <tr>
+        <td class="contain" width="20%" style="padding:0px">
+          Jam Pengkajian 
+        </td>    
+        <td class="contain" style="padding:0px">  
+          : 00:00
+        </td>                
+      </tr>      
+      <tr>
+        <td class="contain" style="padding:0px">
+          Jam Pengkajian 
+        </td>    
+        <td class="contain" style="padding:0px">  
+          : 00:00
+        </td>                
+      </tr>
+      <tr>
+        <td class="contain" style="padding:0px">
+          Tingkat Ketergantungan
+        </td>    
+        <td class="contain" style="padding:0px">  
+          : -
+        </td>                
+      </tr>
+    </tbody>
+  </table>
+<br>
 <table>
   <tbody>
     <tr>
@@ -65,7 +94,7 @@ header('Content-Type: application/pdf');
           </tbody>
         </table>
         <br>
-        <b>Tindakan Kolaborasi : </b> <br>Minum Obat secara teratur Pemberian Analgesik
+        <b>Tindakan Kolaborasi : </b> <br>Minum Obat secara teratur Pemberian Analgesik<br>
       </td>
       
       <td class="box" style="vertical-align:top">
@@ -106,7 +135,7 @@ header('Content-Type: application/pdf');
         </table>
         
         <br>
-        <b>Tindakan Kolaborasi : </b> <br>Minum Obat secara teratur Pemberian Analgesik
+        <b>Tindakan Kolaborasi : </b> <br>Minum Obat secara teratur Pemberian Analgesik<br>
       </td>
 
        <td class="box" style="vertical-align:top">
@@ -146,10 +175,10 @@ header('Content-Type: application/pdf');
           </tbody>
         </table>
         <br>
-        <b>Tindakan Kolaborasi : </b> <br>Konseling / Psikoterapi
+        <b>Tindakan Kolaborasi : </b> <br>Konseling / Psikoterapi<br>
       </td>
 
-       <td class="box" style="vertical-align:top">
+       <td class="box" style="vertical-align:top;padding-bottom:4%">
         <b>Tujuan : </b> Mampu mengurangi keinginan menggunakan Napza
         <br><br>
         Tindakan Mandiri:<br>
@@ -190,7 +219,7 @@ header('Content-Type: application/pdf');
           </tbody>
         </table>
         <br>
-        <b>Tindakan Kolaborasi : </b> <br>Konseling Keluarga
+        <b>Tindakan Kolaborasi : </b> <br>Konseling Keluarga<br>
       </td>
 
     </tr>
