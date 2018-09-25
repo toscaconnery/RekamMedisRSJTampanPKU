@@ -105,6 +105,10 @@ Route::post('/igd_catatan_kemajuan', 'IGDCatatanKemajuanController@post_igd_cata
 
 Route::get('/igd_catatan_perkembangan', 'IGDCatatanPerkembanganController@get_igd_catatan_perkembangan');
 Route::post('/igd_catatan_perkembangan', 'IGDCatatanPerkembanganController@post_igd_catatan_perkembangan');
+
+Route::get('/igd_asesmen_awal_rawat_darurat_perawat', 'IGDAsesmenAwalRawatDaruratController@get_igd_asesmen_awal_rawat_darurat_perawat');
+Route::post('/igd_asesmen_awal_rawat_darurat_perawat', 'IGDAsesmenAwalRawatDaruratController@post_igd_asesmen_awal_rawat_darurat_perawat');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -152,6 +156,12 @@ Route::get('/rj_lapor_rehabilitasi2', function () {
 // Route::get('/igd_perkembangan_pasien', function () {
 //     return view('igd_perkembangan_pasien');
 // });
+Route::get('/igd_asesmen_darurat', function () {
+    return view('igd_asesmen_darurat');
+});
+
+
+
 
 Route::get('/ri_catatan_perkembangan', function () {
     return view('ri_catatan_perkembangan');
@@ -162,9 +172,6 @@ Route::get('/ri_catatan_perkembangan', function () {
 Route::get('/rj_rencana_pemulangan', function () {
     return view('rj_rencana_pemulangan');
 });
-
-
-
 
 
 
@@ -232,9 +239,6 @@ Route::get('/ri_pemberian_informasi', function () {
     return view('ri_pemberian_informasi');
 });
 
-Route::get('/igd_asesmen_darurat', function () {
-    return view('igd_asesmen_darurat');
-});
 
 Route::get('/ri_lembar_konsultasi', function () {
     return view('ri_lembar_konsultasi');

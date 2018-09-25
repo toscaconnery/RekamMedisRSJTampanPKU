@@ -31,3 +31,7 @@
 <script src="{{url('')}}/admin_bootstrap/js/form-component.js"></script>
 <!-- custome script for all page -->
 <script src="{{url('')}}/admin_bootstrap/js/scripts.js"></script>
+
+{{-- form validation --}}
+<script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery.validate.min.js"></script>
+<script src="{{url('')}}/js/form-validation.js"></script>
