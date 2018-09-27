@@ -689,7 +689,7 @@
                       </td>
                       <td>
                         <textarea class="form-control" rows="5" style="resize: none;" name="hasil_lain"></textarea>
-                        <input type="time" class="form-control" name="">
+                        <input type="time" class="form-control" name="jam_hasil_lain">
                       </td>
                       <td>
                         <textarea class="form-control" rows="6" style="resize: none;" name="keterangan_lain"></textarea>
@@ -1209,25 +1209,25 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Kesadaran</label>
                   <div class="col-lg-10">
                     <label class="checkbox-inline" style="margin-right: 1em;">
-                      <input type="checkbox" name="kesadaran_1"> Compos Mentis
+                      <input type="checkbox" name="kesadaran_saat_keluar_1"> Compos Mentis
                     </label>
                     <label class="checkbox-inline" style="margin-right: 1em;">
-                      <input type="checkbox" name="kesadaran_2"> Apatis
+                      <input type="checkbox" name="kesadaran_saat_keluar_2"> Apatis
                     </label>
                     <label class="checkbox-inline" style="margin-right: 1em;">
-                      <input type="checkbox" name="kesadaran_3"> Delirium
+                      <input type="checkbox" name="kesadaran_saat_keluar_3"> Delirium
                     </label>
                     <label class="checkbox-inline" style="margin-right: 1em;">
-                      <input type="checkbox" name="kesadaran_4"> Sopor
+                      <input type="checkbox" name="kesadaran_saat_keluar_4"> Sopor
                     </label>
                     <label class="checkbox-inline" style="margin-right: 1em;">
-                      <input type="checkbox" name="kesadaran_5"> Koma
+                      <input type="checkbox" name="kesadaran_saat_keluar_5"> Koma
                     </label>
                   </div>
                   <div class="col-lg-2"></div>
                   <div class="col-lg-1" style="padding-right: 0mm; width: 5em;">
                     <label class="checkbox-inline">
-                      <input type="checkbox" name="kesadaran_6"> GCS
+                      <input type="checkbox" name="kesadaran_saat_keluar_6"> GCS
                     </label>                    
                   </div>
                   <div class="col-lg-2" style="padding-left: 0mm;">
@@ -1235,7 +1235,7 @@
                   </div>
                   <div class="col-lg-2" style="padding-right: 0mm; width: 7em;">
                     <label class="checkbox-inline">
-                      <input type="checkbox" name="kesadaran_7"> Lain-lain
+                      <input type="checkbox" name="kesadaran_saat_keluar_7"> Lain-lain
                     </label>
                   </div>
                   <div class="col-lg-4" style="padding-left: 0mm;">

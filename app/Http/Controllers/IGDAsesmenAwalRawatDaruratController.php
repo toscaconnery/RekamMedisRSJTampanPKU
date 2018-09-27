@@ -497,6 +497,203 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
 
     public function post_igd_asesmen_awal_rawat_darurat_dokter(Request $request)
     {
-        //
+        $data = new IGDAsesmenAwalRawatDaruratDokter;
+        $data->id_regis = 1;
+        $data->pewawancara = $request->pewawancara;
+        $data->keluhan_utama = $request->keluhan_utama;
+        $data->riwayat_penyakit_sekarang = $request->riwayat_penyakit_sekarang;
+        $data->riwayat_penyakit_dahulu = $request->riwayat_penyakit_dahulu;
+        if($request->riwayat_napza == 'true') {
+            $data->riwayat_napza = True;
+        }
+        $data->lama_pemakaian = $request->lama_pemakaian;
+        $data->jenis_zat = $request->jenis_zat;
+        $data->cara_pemakaian = $request->cara_pemakaian;
+        $data->latar_belakang_pemakaian = $request->latar_belakang_pemakaian;
+        $data->kepribadian_sebelum_sakit = $request->kepribadian_sebelum_sakit;
+        $data->riwayat_pendidikan = $request->riwayat_pendidikan;
+        $data->riwayat_pekerjaan = $request->riwayat_pekerjaan;
+        $data->riwayat_perkawinan = $request->riwayat_perkawinan;
+        $riwayat_penyakit_lain = '';
+        if(isset($request->riwayat_penyakit_lain_1)) {
+            $riwayat_penyakit_lain .= '1-';
+        }
+        if(isset($request->riwayat_penyakit_lain_2)) {
+            $riwayat_penyakit_lain .= '2-';
+        }
+        if(isset($request->riwayat_penyakit_lain_3)) {
+            $riwayat_penyakit_lain .= '3-';
+        }
+        if(isset($request->riwayat_penyakit_lain_4)) {
+            $riwayat_penyakit_lain .= '4-';
+        }
+        if(isset($request->riwayat_penyakit_lain_5)) {
+            $riwayat_penyakit_lain .= '5-';
+        }
+        if(isset($request->riwayat_penyakit_lain_6)) {
+            $riwayat_penyakit_lain .= '6-';
+        }
+        if(isset($request->riwayat_penyakit_lain_7)) {
+            $riwayat_penyakit_lain .= '7-';
+        }
+        if(isset($request->riwayat_penyakit_lain_8)) {
+            $riwayat_penyakit_lain .= '8-';
+        }
+        if(isset($request->riwayat_penyakit_lain_9)) {
+            $riwayat_penyakit_lain .= '9-';
+        }
+        if(isset($request->riwayat_penyakit_lain_10)) {
+            $riwayat_penyakit_lain .= '10-';
+        }
+        if(isset($request->riwayat_penyakit_lain_11)) {
+            $riwayat_penyakit_lain .= '11-';
+        }
+        if(isset($request->riwayat_penyakit_lain_12)) {
+            $riwayat_penyakit_lain .= '12-';
+        }
+        if(isset($request->riwayat_penyakit_lain_13)) {
+            $riwayat_penyakit_lain .= '13-';
+        }
+        if(isset($request->riwayat_penyakit_lain_14)) {
+            $riwayat_penyakit_lain .= '14-';
+        }
+        if(strlen($riwayat_penyakit_lain) > 0) {
+            $riwayat_penyakit_lain = substr($riwayat_penyakit_lain, 0, -1);
+        }
+        $data->riwayat_penyakit_lain = $riwayat_penyakit_lain;
+        $data->text_riwayat_penyakit_lain = $request->text_riwayat_penyakit_lain;
+        if($request->riwayat_operasi == 'true') {
+            $data->riwayat_operasi = True;
+        }
+        $data->jenis_operasi = $request->jenis_operasi;
+        $data->waktu_operasi = $request->waktu_operasi;
+        if($request->riwayat_tranfusi == 'true') {
+            $data->riwayat_tranfusi = True;
+        }
+        if($request->reaksi_tranfusi == 'true') {
+            $data->reaksi_tranfusi = True;
+        }
+        $data->reaksi_tranfusi_timbul = $request->reaksi_tranfusi_timbul;
+        $data->riwayat_penyakit_keluarga = $request->riwayat_penyakit_keluarga;
+        $data->riwayat_pengobatan = $request->riwayat_pengobatan;
+        $data->riwayat_alergi = $request->riwayat_alergi;
+        $data->kepala = $request->kepala;
+        $data->leher = $request->leher;
+        $data->dada = $request->dada;
+        $data->jantung = $request->jantung;
+        $data->paru = $request->paru;
+        $data->perut = $request->perut;
+        $data->anggota_gerak = $request->anggota_gerak;
+        $data->status_lokalis = $request->status_lokalis;
+        $data->penampilan = $request->penampilan;
+        $data->kesadaran = $request->kesadaran;
+        $data->orientasi = $request->orientasi;
+        $data->sikap_tingkah_laku = $request->sikap_tingkah_laku;
+        $data->proses_pikir = $request->proses_pikir;
+        $data->bentuk_pikir = $request->bentuk_pikir;
+        $data->isi_pikir = $request->isi_pikir;
+        $data->mood = $request->mood;
+        $data->afek = $request->afek;
+        $data->halusinasi = $request->halusinasi;
+        $data->ilusi = $request->ilusi;
+        $data->daya_konsentrasi = $request->daya_konsentrasi;
+        $data->daya_ingat = $request->daya_ingat;
+        $data->pikiran_abstrak = $request->pikiran_abstrak;
+        $data->pengendalian_impuls = $request->pengendalian_impuls;
+        $data->daya_nilai = $request->daya_nilai;
+        $data->tilikan = $request->tilikan;
+        $data->taraf_dipercaya = $request->taraf_dipercaya;
+        $data->meningeal_sight = $request->meningeal_sight;
+        $data->nervus_cranialis = $request->nervus_cranialis;
+        $data->sistem_motorik = $request->sistem_motorik;
+        $data->cerebellum = $request->cerebellum;
+        $data->vegetatif = $request->vegetatif;
+        $data->pemeriksaan_laboratorium = $request->pemeriksaan_laboratorium;
+        $data->hasil_laboratorium = $request->hasil_laboratorium;
+        $data->keterangan_laboratorium = $request->keterangan_laboratorium;
+        $data->jam_pemeriksaan_laboratorium = $request->jam_pemeriksaan_laboratorium;
+        $data->jam_hasil_laboratorium = $request->jam_hasil_laboratorium;
+        $data->pemeriksaan_radiologi = $request->pemeriksaan_radiologi;
+        $data->hasil_radiologi = $request->hasil_radiologi;
+        $data->keterangan_radiologi = $request->keterangan_radiologi;
+        $data->jam_pemeriksaan_radiologi = $request->jam_pemeriksaan_radiologi;
+        $data->jam_hasil_radiologi = $request->jam_hasil_radiologi;
+        $data->pemeriksaan_ekg = $request->pemeriksaan_ekg;
+        $data->hasil_ekg = $request->hasil_ekg;
+        $data->keterangan_ekg = $request->keterangan_ekg;
+        $data->jam_pemeriksaan_ekg = $request->jam_pemeriksaan_ekg;
+        $data->jam_hasil_ekg = $request->jam_hasil_ekg;
+        $data->pemeriksaan_lain = $request->pemeriksaan_lain;
+        $data->hasil_lain = $request->hasil_lain;
+        $data->keterangan_lain = $request->keterangan_lain;
+        $data->jam_pemeriksaan_lain = $request->jam_pemeriksaan_lain;
+        $data->jam_hasil_lain = $request->jam_hasil_lain;
+        $data->panssec = $request->panssec;
+        $data->gaff = $request->gaff;
+        $data->p4 = $request->p4;
+        $data->g8 = $request->g8;
+        $data->p7 = $request->p7;
+        $data->g14 = $request->g14;
+        $data->g4 = $request->g4;
+        $data->bangsal = $request->bangsal;
+        $data->tanggal_pemeriksaan = $request->tanggal_pemeriksaan;
+        $data->axis_1 = $request->axis_1;
+        $data->axis_2 = $request->axis_2;
+        $data->axis_3 = $request->axis_3;
+        $data->axis_4 = $request->axis_4;
+        $data->axis_5 = $request->axis_5;
+        $data->diagnosis_utama = $request->diagnosis_utama;
+        $data->diagnosis_sekunder = $request->diagnosis_sekunder;
+        $data->daftar_masalah = $request->daftar_masalah;
+        $data->tindak_lanjut = $request->tindak_lanjut;
+        if($request->kontrol == 'true') {
+            $data->kontrol = True;
+        }
+        $data->tanggal_kontrol = $request->tanggal_kontrol;
+        $data->dirawat_di_ruang = $request->dirawat_di_ruang;
+        $data->indikasi_rawat_inap = $request->indikasi_rawat_inap;
+        $data->alasan_menolak = $request->alasan_menolak;
+        $data->alasan_menolak_lainnya = $request->alasan_menolak_lainnya;
+        $data->dirujuk_ke = $request->dirujuk_ke;
+        $data->alasan_rujuk = $request->alasan_rujuk;
+        if(isset($request->doa)) {
+            $data->doa = True;
+        }
+        $data->jam_keluar = $request->jam_keluar;
+        $kesadaran_saat_keluar = '';
+        if(isset($request->kesadaran_saat_keluar_1)) {
+            $kesadaran_saat_keluar .= '1-';
+        }
+        if(isset($request->kesadaran_saat_keluar_2)) {
+            $kesadaran_saat_keluar .= '2-';
+        }
+        if(isset($request->kesadaran_saat_keluar_3)) {
+            $kesadaran_saat_keluar .= '3-';
+        }
+        if(isset($request->kesadaran_saat_keluar_4)) {
+            $kesadaran_saat_keluar .= '4-';
+        }
+        if(isset($request->kesadaran_saat_keluar_5)) {
+            $kesadaran_saat_keluar .= '5-';
+        }
+        if(isset($request->kesadaran_saat_keluar_6)) {
+            $kesadaran_saat_keluar .= '6-';
+        }
+        if(isset($request->kesadaran_saat_keluar_7)) {
+            $kesadaran_saat_keluar .= '7-';
+        }
+        if(strlen($kesadaran_saat_keluar) > 0) {
+            $kesadaran_saat_keluar = substr($kesadaran_saat_keluar, 0, -1);
+        }
+        $data->kesadaran_saat_keluar = $kesadaran_saat_keluar;
+        $data->gcs = $request->gcs;
+        $data->kesadaran_lainnya = $request->kesadaran_lainnya;
+        $data->tensi = $request->tensi;
+        $data->nadi = $request->nadi;
+        $data->pernafasan = $request->pernafasan;
+        $data->suhu = $request->suhu;
+        $data->save();
+
+        return back();
     }
 }
