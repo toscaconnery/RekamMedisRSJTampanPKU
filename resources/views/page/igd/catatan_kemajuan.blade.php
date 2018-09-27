@@ -130,7 +130,7 @@
     $(document).ready(function() {
       $(document).on('click', '.tombol_hapus', function() {
         var x = $(this).attr('id');
-        var nomor = x.substring(13)
+        var nomor = x.substring(13);
         $('#form_'+nomor).remove();
       });
     });

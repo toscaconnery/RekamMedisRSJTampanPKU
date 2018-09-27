@@ -487,7 +487,16 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $data->evaluasi = $request->evaluasi;
         $data->save();
         
+        return back();
+    }
 
-    	dd($request);
+    public function get_igd_asesmen_awal_rawat_darurat_dokter()
+    {
+        return view('page.igd.asesmen_awal_rawat_darurat_dokter', $this->data);
+    }
+
+    public function post_igd_asesmen_awal_rawat_darurat_dokter(Request $request)
+    {
+        //
     }
 }

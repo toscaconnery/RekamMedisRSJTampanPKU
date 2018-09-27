@@ -68,7 +68,6 @@
 
       <div class="row">
         <div class="col-lg-12">
-
           <form class="form-horizontal form-validate" method="post" id="register_form" action="igd_asesmen_awal_rawat_darurat_perawat">
             {{ csrf_field() }}
             <section class="panel">
