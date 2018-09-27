@@ -24,14 +24,19 @@ use App\Models\RJTindakLanjut;
 
 class RJAsesmenAwalController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['title'] = 'Asesmen Awal Pasien Rawat Jalan';
+    }
+
     public function get_rj_asesmen_awal_perawat()
     {
-        return view('page.rj.asesmen_awal_perawat');
+        return view('page.rj.asesmen_awal_perawat', $this->data);
     }
 
     public function get_rj_asesmen_awal_dokter()
     {
-    	return view('page.rj.asesmen_awal_dokter');
+    	return view('page.rj.asesmen_awal_dokter', $this->data);
     }
 
     public function post_rj_asesmen_awal_perawat(Request $request)

@@ -7,9 +7,14 @@ use App\Models\RJPerkembanganPasien;
 
 class RJPerkembanganPasienController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['title'] = 'Catatan Perkembangan Pasien Rawat Jalan';
+    }
+
     public function get_rj_perkembangan_pasien()
     {
-    	return view('page.rj.perkembangan_pasien');
+    	return view('page.rj.perkembangan_pasien', $this->data);
     }
 
     public function post_rj_perkembangan_pasien(Request $request)

@@ -20,14 +20,19 @@ use App\Models\RJTumbuhKembangLainnya;
 
 class RJAsesmenAwalTumbuhKembangController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['title'] = 'Asesmen Awal Pasien Tumbuh Kembang dan Edukasi Terpadu';
+    }
+
     public function get_rj_asesmen_awal_tumbuh_kembang_psikolog()
     {
-    	return view('page.rj.tumbuh_kembang_psikolog');
+    	return view('page.rj.tumbuh_kembang_psikolog', $this->data);
     }
 
     public function get_rj_asesmen_awal_tumbuh_kembang_dokter()
     {
-        return view('page.rj.tumbuh_kembang_dokter');
+        return view('page.rj.tumbuh_kembang_dokter', $this->data);
     }
 
     public function post_rj_asesmen_awal_tumbuh_kembang_psikolog(Request $request)

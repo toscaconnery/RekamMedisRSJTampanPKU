@@ -7,9 +7,14 @@ use App\Models\RJResume;
 
 class RJResumeController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['title'] = 'Resume Rawat Jalan';
+    }
+
     public function get_rj_resume()
     {
-    	return view('page.rj.resume');
+    	return view('page.rj.resume', $this->data);
     }
 
     public function post_rj_resume(Request $request)

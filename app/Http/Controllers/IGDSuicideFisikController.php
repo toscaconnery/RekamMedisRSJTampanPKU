@@ -7,9 +7,14 @@ use App\Models\IGDSuicideFisik;
 
 class IGDSuicideFisikController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['title'] = 'Asesmen Suicide dan Kekerasan Fisik IGD';
+    }
+
     public function get_igd_suicide_fisik()
     {
-    	return view('page.igd.suicide_fisik');
+    	return view('page.igd.suicide_fisik', $this->data);
     }
 
     public function post_igd_suicide_fisik(Request $request)

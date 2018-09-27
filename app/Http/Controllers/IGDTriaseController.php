@@ -7,6 +7,11 @@ use App\Models\IGDTriase;
 
 class IGDTriaseController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['title'] = 'Triase Pasien';
+    }
+    
     public function get_igd_triase()
     {
     	return view('page.igd.triase');

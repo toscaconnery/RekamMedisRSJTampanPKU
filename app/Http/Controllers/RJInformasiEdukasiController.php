@@ -8,9 +8,14 @@ use App\Models\RJEdukasiDiperoleh;
 
 class RJInformasiEdukasiController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['title'] = 'Kebutuhan Informasi Dan Edukasi Pasien/Keluarga Rawat Jalan';
+    }
+
     public function get_rj_informasi_edukasi()
     {
-    	return view('page.rj.informasi_edukasi');
+    	return view('page.rj.informasi_edukasi', $this->data);
     }
 
     public function post_rj_informasi_edukasi(Request $request)
@@ -128,7 +133,7 @@ class RJInformasiEdukasiController extends Controller
 
     public function get_rj_informasi_edukasi_list_informasi()
     {
-    	return view('page.rj.informasi_edukasi_list_informasi');
+    	return view('page.rj.informasi_edukasi_list_informasi', $this->data);
     }
 
     public function post_rj_informasi_edukasi_list_informasi(Request $request)

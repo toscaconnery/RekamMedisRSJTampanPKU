@@ -11,14 +11,19 @@ use App\Models\RJDataMedik;
 
 class RJAsesmenAwalGigiController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['title'] = 'Asesmen Awal Pasien Gigi Rawat Jalan';
+    }
+
     public function get_rj_asesmen_awal_gigi_perawat()
     {
-        return view('page.rj.asesmen_awal_gigi_perawat');
+        return view('page.rj.asesmen_awal_gigi_perawat', $this->data);
     }
 
     public function get_rj_asesmen_awal_gigi_dokter()
     {
-        return view('page.rj.asesmen_awal_gigi_dokter');
+        return view('page.rj.asesmen_awal_gigi_dokter', $this->data);
     }
 
     public function post_rj_asesmen_awal_gigi_perawat(Request $request)
