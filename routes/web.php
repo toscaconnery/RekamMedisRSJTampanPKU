@@ -115,6 +115,9 @@ Route::post('/igd_asesmen_awal_rawat_darurat_dokter', 'IGDAsesmenAwalRawatDarura
 Route::get('/ri_resume', 'RIResumeController@get_ri_resume');
 Route::post('/ri_resume', 'RIResumeController@post_ri_resume');
 
+Route::get('/ri_dpjp_case', 'RIDPJPCaseController@get_ri_dpjp_case');
+Route::post('/ri_dpjp_case', 'RIDPJPCaseController@post_ri_dpjp_case');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -205,9 +208,9 @@ Route::get('/ri_monitoring_observasi', function () {
     return view('ri_monitoring_observasi');
 });
 
-Route::get('/ri_dpjp_case', function () {
-    return view('ri_dpjp_case');
-});
+// Route::get('/ri_dpjp_case', function () {
+//     return view('ri_dpjp_case');
+// });
 
 Route::get('/ri_suicide_fisik', function () {
     return view('ri_suicide_fisik');
