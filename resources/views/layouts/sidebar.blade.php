@@ -48,7 +48,7 @@
         </a>
         <ul class="sub">
           <li><a class="" href="{{url('')}}/ri_surat_persetujuan">Surat dan Persetujuan</a></li>
-          <li><a class="" href="{{url('')}}/ri_resume">Resume Medis</a></li>
+          <li><a class="" href="{{url('')}}/ri_resume_medis">Resume Medis</a></li>
           <li><a class="" href="{{url('')}}/ri_dpjp_case">DPJP dan Case Manager</a></li>
           <li><a class="" href="{{url('')}}/ri_persetujuan_umum">Persetujuan Umum</a></li>
           <li><a class="" href="{{url('')}}/ri_hak_kewajiban">Hak Kewajiban Pasien</a></li>

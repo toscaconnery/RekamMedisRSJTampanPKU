@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRiResumeTable extends Migration
+class CreateRiResumeMedisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRiResumeTable extends Migration
      */
     public function up()
     {
-        Schema::create('ri_resume', function (Blueprint $table) {
+        Schema::create('ri_resume_medis', function (Blueprint $table) {
             $table->increments('id');
             $table->string('id_regis')->reference('id')->on('identifikasi');
             $table->string('tanggal_masuk',10)->nullable();
@@ -74,6 +74,6 @@ class CreateRiResumeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ri_resume');
+        Schema::dropIfExists('ri_resume_medis');
     }
 }

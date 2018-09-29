@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RIResume extends Model
+class RIResumeMedis extends Model
 {
-    protected $table = 'ri_resume';
+    protected $table = 'ri_resume_medis';
 
     public $incrementing = true;
 

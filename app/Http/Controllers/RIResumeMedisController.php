@@ -3,23 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\RIResume;
+use App\Models\RIResumeMedis;
 
-class RIResumeController extends Controller
+class RIResumeMedisController extends Controller
 {
     public function __construct()
     {
         $this->data['title'] = 'Resume Rawat Inap';
     }
 
-    public function get_ri_resume()
+    public function get_ri_resume_medis()
     {
-    	return view('page.ri.resume', $this->data);
+    	return view('page.ri.resume_medis', $this->data);
     }
 
-    public function post_ri_resume(Request $request)
+    public function post_ri_resume_medis(Request $request)
     {
-        $data = new RIResume;
+        $data = new RIResumeMedis;
         $data->id_regis = 1;
         $data->tanggal_masuk = $request->tanggal_masuk;
         $data->tanggal_keluar = $request->tanggal_keluar;

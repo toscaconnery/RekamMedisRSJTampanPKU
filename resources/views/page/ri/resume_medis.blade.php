@@ -55,7 +55,7 @@
 
     <div class="row">
       <div class="col-lg-12">
-        <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_resume">
+        <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_resume_medis">
         {{ csrf_field() }}
         <section class="panel">
           <header class="panel-heading">
