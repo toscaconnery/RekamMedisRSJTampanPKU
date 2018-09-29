@@ -112,6 +112,9 @@ Route::post('/igd_asesmen_awal_rawat_darurat_perawat', 'IGDAsesmenAwalRawatDarur
 Route::get('/igd_asesmen_awal_rawat_darurat_dokter', 'IGDAsesmenAwalRawatDaruratController@get_igd_asesmen_awal_rawat_darurat_dokter');
 Route::post('/igd_asesmen_awal_rawat_darurat_dokter', 'IGDAsesmenAwalRawatDaruratController@post_igd_asesmen_awal_rawat_darurat_dokter');
 
+Route::get('/ri_resume', 'RIResumeController@get_ri_resume');
+Route::post('/ri_resume', 'RIResumeController@post_ri_resume');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -251,9 +254,9 @@ Route::get('/ri_penilaian_panss', function () {
     return view('ri_penilaian_panss');
 });
 
-Route::get('/ri_resume_medis', function () {
-    return view('ri_resume_medis');
-});
+// Route::get('/ri_resume_medis', function () {
+//     return view('ri_resume_medis');
+// });
 
 Route::get('/ri_rencana_pemulangan', function () {
     return view('ri_rencana_pemulangan');

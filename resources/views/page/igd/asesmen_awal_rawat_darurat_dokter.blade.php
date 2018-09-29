@@ -379,7 +379,7 @@
                       </td>
                     </tr>
                   </tbody>
-                </table>             
+                </table>           
               </div>
             </section>
             <section class="panel">
