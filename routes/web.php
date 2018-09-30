@@ -112,6 +112,16 @@ Route::post('/igd_asesmen_awal_rawat_darurat_perawat', 'IGDAsesmenAwalRawatDarur
 Route::get('/igd_asesmen_awal_rawat_darurat_dokter', 'IGDAsesmenAwalRawatDaruratController@get_igd_asesmen_awal_rawat_darurat_dokter');
 Route::post('/igd_asesmen_awal_rawat_darurat_dokter', 'IGDAsesmenAwalRawatDaruratController@post_igd_asesmen_awal_rawat_darurat_dokter');
 
+Route::get('/ri_resume_medis', 'RIResumeMedisController@get_ri_resume_medis');
+Route::post('/ri_resume_medis', 'RIResumeMedisController@post_ri_resume_medis');
+
+Route::get('/ri_dpjp_case', 'RIDPJPCaseController@get_ri_dpjp_case');
+Route::post('/ri_dpjp_case', 'RIDPJPCaseController@post_ri_dpjp_case');
+
+Route::get('/ri_suicide_fisik', 'RISuicideFisikController@get_ri_suicide_fisik');
+Route::post('/ri_suicide_fisik', 'RISuicideFisikController@post_ri_suicide_fisik');
+
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -226,13 +236,13 @@ Route::get('/ri_monitoring_observasi', function () {
     return view('ri_monitoring_observasi');
 });
 
-Route::get('/ri_dpjp_case', function () {
-    return view('ri_dpjp_case');
-});
+// Route::get('/ri_dpjp_case', function () {
+//     return view('ri_dpjp_case');
+// });
 
-Route::get('/ri_suicide_fisik', function () {
-    return view('ri_suicide_fisik');
-});
+// Route::get('/ri_suicide_fisik', function () {
+//     return view('ri_suicide_fisik');
+// });
 
 Route::get('/ri_rawat_napza', function () {
     return view('ri_rawat_napza');
@@ -275,9 +285,9 @@ Route::get('/ri_penilaian_panss', function () {
     return view('ri_penilaian_panss');
 });
 
-Route::get('/ri_resume_medis', function () {
-    return view('ri_resume_medis');
-});
+// Route::get('/ri_resume_medis', function () {
+//     return view('ri_resume_medis');
+// });
 
 Route::get('/ri_rencana_pemulangan', function () {
     return view('ri_rencana_pemulangan');
