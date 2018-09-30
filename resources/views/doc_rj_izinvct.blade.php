@@ -21,7 +21,7 @@ header('Content-Type: application/pdf');
       </tr>
       <tr>
         <td class="number"></td>
-        <td class="contain">Anda mempunyai hakk untuk berpartisipasi dalam pemeriksaan dengan dasar kerahasiaan</td>
+        <td class="contain">Anda mempunyai hak untuk berpartisipasi dalam pemeriksaan dengan dasar kerahasiaan</td>
       </tr>
       <tr>
         <td class="number"></td>
@@ -79,7 +79,7 @@ header('Content-Type: application/pdf');
       </tr>
 
       <tr>
-        <td class="contain" colspan="2">saya dengan ini mengizinkan tes/pemeriksaan HIV untuk dilaksanakan</td>
+        <td class="contain" colspan="2">Saya dengan ini mengizinkan tes/pemeriksaan HIV untuk dilaksanakan</td>
       </tr>
     </tbody>
   </table>
