@@ -193,6 +193,30 @@ Route::get('/rj_rencana_pemulangan', function () {
 
 
 
+//new addition page
+
+Route::get('/ri_laboratorium', function () {
+    return view('ri_laboratorium');
+});
+
+Route::get('/rj_teskonseling_hiv', function () {
+    return view('rj_teskonseling_hiv');
+});
+
+Route::get('/rj_izin_hiv', function () {
+    return view('rj_izin_hiv');
+});
+
+Route::get('/rj_ikhtisar_hiv', function () {
+    return view('rj_ikhtisar_hiv');
+});
+
+Route::get('/ri_asuhan_gizi', function () {
+    return view('ri_asuhan_gizi');
+});
+
+
+
 
 
 

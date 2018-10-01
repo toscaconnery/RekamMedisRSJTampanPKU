@@ -21,6 +21,9 @@
           <li><a class="" href="{{url('')}}/rj_informasi_edukasi">Informasi dan Edukasi</a></li>
           <li><a class="" href="{{url('')}}/rj_lapor_rehabilitasi">Lapor dan Rehabilitasi</a></li>
           <li><a class="" href="{{url('')}}/rj_identifikasi_stresor">Identifikasi Stresor</a></li>
+          <li><a class="" href="{{url('')}}/rj_teskonseling_hiv">Tes & Konseling HIV</a></li>
+          <li><a class="" href="{{url('')}}/rj_izin_hiv">Izin VCT HIV</a></li>
+          <li><a class="" href="{{url('')}}/rj_ikhtisar_hiv">Ikhtisar HIV & ART</a></li>
           <li><a class="" href="{{url('')}}/rj_perkembangan_pasien">Perkembangan Pasien</a></li>
           <li><a class="" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikolog">Tumbuh Kembang</a></li>
           <li><a class="" href="{{url('')}}/rj_resume">Resume Rawat Jalan</a></li>
@@ -58,13 +61,16 @@
           <li><a class="" href="{{url('')}}/ri_penilaian_edmunson">Penilaian Edmunson</a></li>
           <li><a class="" href="{{url('')}}/ri_risiko_nyeri">Penilaian Risiko Nyeri</a></li>
           <li><a class="" href="{{url('')}}/ri_catatan_perkembangan">Catatan Perkembangan</a></li>
-          <li><a class="" href="{{url('')}}/ri_rencana_keperawatan">Rencana Keperawatan</a></li>
+          <li><a class="" href="{{url('')}}/ri_rencana_keperawatan">Keperawatan Intensif</a></li>
+          <li><a class="" href="{{url('')}}/ri_keperawatan_klien">Keperawatan Klien</a></li>
           <li><a class="" href="{{url('')}}/ri_keperawatan_napza">Keperawatan NAPZA</a></li>
           <li><a class="" href="{{url('')}}/ri_evaluasi_keperawatan">Evaluasi Keperawatan</a></li>
           <li><a class="" href="{{url('')}}/ri_monitoring_observasi">Monitoring Observasi</a></li>
+          <li><a class="" href="{{url('')}}/ri_laboratorium">Laboratorium</a></li>
           <li><a class="" href="{{url('')}}/ri_penggunaan_obat">Penggunaan Obat</a></li>
           <li><a class="" href="{{url('')}}/ri_riwayat_obat">Riwayat Obat</a></li>
           <li><a class="" href="{{url('')}}/ri_efek_samping">Efek Samping Obat</a></li>
+          <li><a class="" href="{{url('')}}/ri_asuhan_gizi">Asuhan Gizi</a></li>
           <li><a class="" href="{{url('')}}/ri_edukasi">Edukasi Pasien Keluarga</a></li>
           <li><a class="" href="{{url('')}}/ri_rencana_pemulangan">Rencana Pemulangan</a></li>
           <li><a class="" href="{{url('')}}/ri_panss_ec">PANSS EC</a></li>
