@@ -130,6 +130,10 @@ Route::post('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@post_ri_pen
 Route::get('/ri_risiko_nyeri', 'RIRisikoNyeriController@get_ri_risiko_nyeri');
 Route::post('/ri_risiko_nyeri', 'RIRisikoNyeriController@post_ri_risiko_nyeri');
 
+Route::get('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan');
+Route::post('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@post_ri_catatan_perkembangan');
+
+
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -178,6 +182,9 @@ Route::get('/rj_lapor_rehabilitasi2', function () {
 // Route::get('/igd_perkembangan_pasien', function () {
 //     return view('igd_perkembangan_pasien');
 // });
+// Route::get('/ri_catatan_perkembangan', function () {
+//     return view('ri_catatan_perkembangan');
+// });
 Route::get('/igd_asesmen_darurat', function () {
     return view('igd_asesmen_darurat');
 });
@@ -185,9 +192,6 @@ Route::get('/igd_asesmen_darurat', function () {
 
 
 
-Route::get('/ri_catatan_perkembangan', function () {
-    return view('ri_catatan_perkembangan');
-});
 
 
 
