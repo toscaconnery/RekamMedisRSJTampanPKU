@@ -33,7 +33,7 @@ class RIPenilaianEdmunsonController extends Controller
     	$data->nutrisi = $request->nutrisi;
     	$data->gangguan_pola_tidur = $request->gangguan_pola_tidur;
     	$data->riwayat_jatuh = $request->riwayat_jatuh;
-    	$data->total = $request->status_mental + $request->eliminasi;
+    	$data->total = $request->status_mental + $request->eliminasi + $request->pengobatan + $request->diagnosa + $request->ambulasi + $request->nutrisi + $request->gangguan_pola_tidur + $request->riwayat_jatuh;
     	$data->save();
 
     	return back();

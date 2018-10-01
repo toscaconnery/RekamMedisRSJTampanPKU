@@ -127,6 +127,8 @@ Route::post('/ri_rawat_napza', 'RIRawatNapzaController@post_ri_rawat_napza');
 Route::get('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson');
 Route::post('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@post_ri_penilaian_edmunson');
 
+Route::get('/ri_risiko_nyeri', 'RIRisikoNyeriController@get_ri_risiko_nyeri');
+Route::post('/ri_risiko_nyeri', 'RIRisikoNyeriController@post_ri_risiko_nyeri');
 
 
 //END  OF  DO  NOT  TOUCH!!!////
@@ -231,9 +233,9 @@ Route::get('/ri_panss_ec', function () {
 //     return view('ri_penilaian_edmunson');
 // });
 
-Route::get('/ri_risiko_nyeri', function () {
-    return view('ri_risiko_nyeri');
-});
+// Route::get('/ri_risiko_nyeri', function () {
+//     return view('ri_risiko_nyeri');
+// });
 
 Route::get('/ri_evaluasi_keperawatan', function () {
     return view('ri_evaluasi_keperawatan');
