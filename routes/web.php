@@ -124,6 +124,15 @@ Route::post('/ri_suicide_fisik', 'RISuicideFisikController@post_ri_suicide_fisik
 Route::get('/ri_rawat_napza', 'RIRawatNapzaController@get_ri_rawat_napza');
 Route::post('/ri_rawat_napza', 'RIRawatNapzaController@post_ri_rawat_napza');
 
+Route::get('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson');
+Route::post('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@post_ri_penilaian_edmunson');
+
+Route::get('/ri_risiko_nyeri', 'RIRisikoNyeriController@get_ri_risiko_nyeri');
+Route::post('/ri_risiko_nyeri', 'RIRisikoNyeriController@post_ri_risiko_nyeri');
+
+Route::get('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan');
+Route::post('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@post_ri_catatan_perkembangan');
+
 
 
 //END  OF  DO  NOT  TOUCH!!!////
@@ -173,6 +182,9 @@ Route::get('/rj_lapor_rehabilitasi2', function () {
 // Route::get('/igd_perkembangan_pasien', function () {
 //     return view('igd_perkembangan_pasien');
 // });
+// Route::get('/ri_catatan_perkembangan', function () {
+//     return view('ri_catatan_perkembangan');
+// });
 Route::get('/igd_asesmen_darurat', function () {
     return view('igd_asesmen_darurat');
 });
@@ -180,9 +192,6 @@ Route::get('/igd_asesmen_darurat', function () {
 
 
 
-Route::get('/ri_catatan_perkembangan', function () {
-    return view('ri_catatan_perkembangan');
-});
 
 
 
@@ -224,13 +233,13 @@ Route::get('/ri_panss_ec', function () {
     return view('ri_panss_ec');
 });
 
-Route::get('/ri_penilaian_edmunson', function () {
-    return view('ri_penilaian_edmunson');
-});
+// Route::get('/ri_penilaian_edmunson', function () {
+//     return view('ri_penilaian_edmunson');
+// });
 
-Route::get('/ri_risiko_nyeri', function () {
-    return view('ri_risiko_nyeri');
-});
+// Route::get('/ri_risiko_nyeri', function () {
+//     return view('ri_risiko_nyeri');
+// });
 
 Route::get('/ri_evaluasi_keperawatan', function () {
     return view('ri_evaluasi_keperawatan');

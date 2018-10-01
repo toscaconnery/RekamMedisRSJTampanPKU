@@ -1765,17 +1765,17 @@
 </section>
 
 @include('layouts.tailscript')
-  {{-- menambah row inputan masalah --}}
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#tambah_form_masalah').click(function() {
-        var a = document.getElementById('jumlah_form_masalah').value;
-        a = parseInt(a) + 1;
-        $('#last_row_masalah').before('<tr id="form_masalah_'+a+'"><td><input type="text" class="form-control" name="text_masalah_keperawatan_'+a+'"></td></tr>');
-        document.getElementById('jumlah_form_masalah').value = a;
-      });
+{{-- menambah row inputan masalah --}}
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#tambah_form_masalah').click(function() {
+      var a = document.getElementById('jumlah_form_masalah').value;
+      a = parseInt(a) + 1;
+      $('#last_row_masalah').before('<tr id="form_masalah_'+a+'"><td><input type="text" class="form-control" name="text_masalah_keperawatan_'+a+'"></td></tr>');
+      document.getElementById('jumlah_form_masalah').value = a;
     });
-  </script>
+  });
+</script>
 
 </body>
 <html>
