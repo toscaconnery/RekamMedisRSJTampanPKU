@@ -124,6 +124,9 @@ Route::post('/ri_suicide_fisik', 'RISuicideFisikController@post_ri_suicide_fisik
 Route::get('/ri_rawat_napza', 'RIRawatNapzaController@get_ri_rawat_napza');
 Route::post('/ri_rawat_napza', 'RIRawatNapzaController@post_ri_rawat_napza');
 
+Route::get('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson');
+Route::post('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@post_ri_penilaian_edmunson');
+
 
 
 //END  OF  DO  NOT  TOUCH!!!////
@@ -224,9 +227,9 @@ Route::get('/ri_panss_ec', function () {
     return view('ri_panss_ec');
 });
 
-Route::get('/ri_penilaian_edmunson', function () {
-    return view('ri_penilaian_edmunson');
-});
+// Route::get('/ri_penilaian_edmunson', function () {
+//     return view('ri_penilaian_edmunson');
+// });
 
 Route::get('/ri_risiko_nyeri', function () {
     return view('ri_risiko_nyeri');
