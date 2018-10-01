@@ -121,6 +121,10 @@ Route::post('/ri_dpjp_case', 'RIDPJPCaseController@post_ri_dpjp_case');
 Route::get('/ri_suicide_fisik', 'RISuicideFisikController@get_ri_suicide_fisik');
 Route::post('/ri_suicide_fisik', 'RISuicideFisikController@post_ri_suicide_fisik');
 
+Route::get('/ri_rawat_napza', 'RIRawatNapzaController@get_ri_rawat_napza');
+Route::post('/ri_rawat_napza', 'RIRawatNapzaController@post_ri_rawat_napza');
+
+
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -220,9 +224,9 @@ Route::get('/ri_monitoring_observasi', function () {
 //     return view('ri_suicide_fisik');
 // });
 
-Route::get('/ri_rawat_napza', function () {
-    return view('ri_rawat_napza');
-});
+// Route::get('/ri_rawat_napza', function () {
+//     return view('ri_rawat_napza');
+// });
 
 Route::get('/ri_rencana_keperawatan', function () {
     return view('ri_rencana_keperawatan');
