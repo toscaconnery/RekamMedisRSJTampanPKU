@@ -11,7 +11,6 @@ use App\Models\RIKeperawatanIntensifPK;
 use App\Models\RIKeperawatanIntensifRBD;
 use App\Models\RIKeperawatanIntensifWaham;
 
-
 class RIKeperawatanIntensifController extends Controller
 {
     public function __construct()
@@ -363,7 +362,6 @@ class RIKeperawatanIntensifController extends Controller
     	$data->ruangan = $request->ruangan;
     	$data->diagnosa_medis = $request->diagnosa_medis;
     	$data->save();
-    	dd($request);
     	return back();
     }
 }

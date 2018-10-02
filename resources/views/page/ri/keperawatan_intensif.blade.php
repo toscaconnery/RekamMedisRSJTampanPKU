@@ -86,7 +86,7 @@
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">Tindakan Keperawatan Intensif</label>
                   <div class="col-lg-3">
-                    <select class="form-control m-bot15" name="jenis">
+                    <select class="form-control m-bot15" name="jenis" id="jenis">
                       <option selected disabled hidden></option>
                       <option value="rbd">Bunuh Diri</option>
                       <option value="dpd">Defisit Perawatan Diri</option>
@@ -103,7 +103,7 @@
           </div>
         </div>
 
-        <div class="row" id="form_rbd">
+        <div class="row hidden_form" id="form_rbd">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
@@ -230,7 +230,7 @@
           </div>
         </div>
 
-        <div class="row" id="form_dpd">
+        <div class="row hidden_form" id="form_dpd">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
@@ -297,7 +297,7 @@
           </div>
         </div>
 
-        <div class="row" id="form_halusinasi">
+        <div class="row hidden_form" id="form_halusinasi">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
@@ -382,7 +382,7 @@
           </div>
         </div>
 
-        <div class="row" id="form_pk">
+        <div class="row hidden_form" id="form_pk">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
@@ -467,7 +467,7 @@
           </div>
         </div>
         
-        <div class="row" id="form_panik">
+        <div class="row hidden_form" id="form_panik">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
@@ -558,7 +558,7 @@
           </div>
         </div>
         
-        <div class="row" id="form_waham">
+        <div class="row hidden_form" id="form_waham">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
@@ -643,7 +643,7 @@
           </div>
         </div>
 
-        <div class="row" id="form_md">
+        <div class="row hidden_form" id="form_md">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
@@ -736,6 +736,30 @@
   </section>
 
   @include('layouts.tailscript')
+
+  <script type="text/javascript">
+    $(function() {
+      $('.hidden_form').hide(); 
+      $('#jenis').change(function(){
+        $('.hidden_form').hide();
+        if($('#jenis').val() == 'rbd') {
+          $('#form_rbd').show(); 
+        } else if ($('#jenis').val() == 'dpd') {
+          $('#form_dpd').show(); 
+        } else if ($('#jenis').val() == 'halusinasi') {
+          $('#form_halusinasi').show();
+        } else if ($('#jenis').val() == 'pk') {
+          $('#form_pk').show();
+        } else if ($('#jenis').val() == 'panik') {
+          $('#form_panik').show();
+        } else if ($('#jenis').val() == 'waham') {
+          $('#form_waham').show();
+        } else if ($('#jenis').val() == 'md') {
+          $('#form_md').show();
+        }
+      });
+    });
+  </script>
 
 </body>
 <html>
