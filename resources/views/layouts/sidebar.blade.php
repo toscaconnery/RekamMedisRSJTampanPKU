@@ -61,7 +61,7 @@
           <li><a class="" href="{{url('')}}/ri_penilaian_edmunson">Penilaian Edmunson</a></li>
           <li><a class="" href="{{url('')}}/ri_risiko_nyeri">Penilaian Risiko Nyeri</a></li>
           <li><a class="" href="{{url('')}}/ri_catatan_perkembangan">Catatan Perkembangan</a></li>
-          <li><a class="" href="{{url('')}}/ri_rencana_keperawatan">Keperawatan Intensif</a></li>
+          <li><a class="" href="{{url('')}}/ri_keperawatan_intensif">Keperawatan Intensif</a></li>
           <li><a class="" href="{{url('')}}/ri_keperawatan_klien">Keperawatan Klien</a></li>
           <li><a class="" href="{{url('')}}/ri_keperawatan_napza">Keperawatan NAPZA</a></li>
           <li><a class="" href="{{url('')}}/ri_evaluasi_keperawatan">Evaluasi Keperawatan</a></li>

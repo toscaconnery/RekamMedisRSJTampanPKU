@@ -133,6 +133,8 @@ Route::post('/ri_risiko_nyeri', 'RIRisikoNyeriController@post_ri_risiko_nyeri');
 Route::get('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan');
 Route::post('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@post_ri_catatan_perkembangan');
 
+Route::get('/ri_keperawatan_intensif', 'RIKeperawatanIntensifController@get_ri_keperawatan_intensif');
+Route::post('/ri_keperawatan_intensif', 'RIKeperawatanIntensifController@post_ri_keperawatan_intensif');
 
 
 //END  OF  DO  NOT  TOUCH!!!////
@@ -261,9 +263,9 @@ Route::get('/ri_monitoring_observasi', function () {
 //     return view('ri_rawat_napza');
 // });
 
-Route::get('/ri_rencana_keperawatan', function () {
-    return view('ri_rencana_keperawatan');
-});
+// Route::get('/ri_rencana_keperawatan', function () {
+//     return view('ri_rencana_keperawatan');
+// });
 
 Route::get('/ri_penggunaan_obat', function () {
     return view('ri_penggunaan_obat');

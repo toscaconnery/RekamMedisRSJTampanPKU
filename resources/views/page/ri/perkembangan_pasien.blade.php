@@ -15,7 +15,7 @@
     <section class="wrapper">
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="page-header"><i class="fa fa-file-text-o"></i> Catatan Perkembangan Pasien Terintegrasi Rawat Jalan</h3>
+          <h3 class="page-header"><i class="fa fa-file-text-o"></i> Catatan Perkembangan Pasien Terintegrasi Rawat Inap</h3>
         </div>
       </div>
       @include('layouts.bio')
@@ -24,7 +24,7 @@
         <div class="col-lg-12">
           <section class="panel">
             <header class="panel-heading">
-              Dokumen Catatan Perkembangan Pasien Terintegrasi Rawat Jalan
+              Dokumen Catatan Perkembangan Pasien Terintegrasi Rawat Inap
             </header>
 
             <table class="table table-striped table-advance table-hover">
