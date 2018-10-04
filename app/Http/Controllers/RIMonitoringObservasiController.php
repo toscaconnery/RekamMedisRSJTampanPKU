@@ -39,7 +39,6 @@ class RIMonitoringObservasiController extends Controller
     			$data->save();
     		}
     	}
-    	dd($request);
     	return back();
     }
 }

@@ -142,6 +142,9 @@ Route::post('/ri_evaluasi_keperawatan', 'RIEvaluasiKeperawatanController@post_ri
 Route::get('/ri_monitoring_observasi', 'RIMonitoringObservasiController@get_ri_monitoring_observasi');
 Route::post('/ri_monitoring_observasi', 'RIMonitoringObservasiController@post_ri_monitoring_observasi');
 
+Route::get('/ri_edukasi', 'RIEdukasiController@get_ri_edukasi');
+Route::post('/ri_edukasi', 'RIEdukasiController@post_ri_edukasi');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -317,9 +320,9 @@ Route::get('/ri_asesmen', function () {
     return view('ri_asesmen');
 });
 
-Route::get('/ri_edukasi', function () {
-    return view('ri_edukasi');
-});
+// Route::get('/ri_edukasi', function () {
+//     return view('ri_edukasi');
+// });
 
 Route::get('/ri_hak_kewajiban', function () {
     return view('ri_hak_kewajiban');
