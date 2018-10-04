@@ -14,7 +14,7 @@ class RIPerkembanganPasienController extends Controller
 
     public function get_ri_catatan_perkembangan()
     {
-    	return view('page.ri.perkembangan_pasien', $this->data);
+    	return view('page.ri.catatan_perkembangan', $this->data);
     }
 
     public function post_ri_catatan_perkembangan(Request $request)

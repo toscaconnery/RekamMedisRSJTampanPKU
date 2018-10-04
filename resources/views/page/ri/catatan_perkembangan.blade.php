@@ -165,16 +165,16 @@
       });
     </script>
 
-      {{-- menghapus row --}}
-      <script type="text/javascript">
-        $(document).ready(function() {
-          $(document).on('click', '.tombol_hapus', function() {
-            var x = $(this).attr('id');
-            var nomor = x.substring(13)
-            $('#form_'+nomor).remove();
-          });
+    {{-- menghapus row --}}
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(document).on('click', '.tombol_hapus', function() {
+          var x = $(this).attr('id');
+          var nomor = x.substring(13)
+          $('#form_'+nomor).remove();
         });
-      </script>
+      });
+    </script>
 
     </body>
     <html>

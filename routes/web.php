@@ -139,6 +139,8 @@ Route::post('/ri_keperawatan_intensif', 'RIKeperawatanIntensifController@post_ri
 Route::get('/ri_evaluasi_keperawatan', 'RIEvaluasiKeperawatanController@get_ri_evaluasi_keperawatan');
 Route::post('/ri_evaluasi_keperawatan', 'RIEvaluasiKeperawatanController@post_ri_evaluasi_keperawatan');
 
+Route::get('/ri_monitoring_observasi', 'RIMonitoringObservasiController@get_ri_monitoring_observasi');
+Route::post('/ri_monitoring_observasi', 'RIMonitoringObservasiController@post_ri_monitoring_observasi');
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -250,9 +252,9 @@ Route::get('/ri_panss_ec', function () {
 //     return view('ri_evaluasi_keperawatan');
 // });
 
-Route::get('/ri_monitoring_observasi', function () {
-    return view('ri_monitoring_observasi');
-});
+// Route::get('/ri_monitoring_observasi', function () {
+//     return view('ri_monitoring_observasi');
+// });
 
 // Route::get('/ri_dpjp_case', function () {
 //     return view('ri_dpjp_case');
