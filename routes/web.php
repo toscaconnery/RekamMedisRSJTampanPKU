@@ -144,6 +144,7 @@ Route::post('/ri_monitoring_observasi', 'RIMonitoringObservasiController@post_ri
 
 Route::get('/ri_edukasi', 'RIEdukasiController@get_ri_edukasi');
 Route::post('/ri_edukasi', 'RIEdukasiController@post_ri_edukasi');
+Route::get('/ri_edukasi_read', 'RIEdukasiController@get_ri_edukasi_read');
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
