@@ -99,7 +99,7 @@ header('Content-Type: application/pdf');
             </tr>
             <tr>
               <td style="vertical-align:top">b. </td>
-              <td colspan="2" style="vertical-align:top">Apabila asuransi kesehatan swasta atau program pemerintah menanggung pembiayaan saya, saya memberi wewenang kepada rumah sakit untuk memberi tagihan dari semua pelayanan dan tindakan medis yang diberikan. Tanggungan Asuransi saya mungkin menyatakan bahawa sebagian pembayaran tetap menjadi tanggung jawab  pribadi saya atau tidak ditanggung oleh asuransi maka rumah sakit berwenang memberi tagihan untuk biaya yang tidak ditanggung oleh asuransi  dan saya bertanggung jawab untuk membayarnya.</td>
+              <td colspan="2" style="vertical-align:top">Apabila asuransi kesehatan swasta atau program pemerintah menanggung pembiayaan saya, saya memberi wewenang kepada rumah sakit untuk memberi tagihan dari semua pelayanan dan tindakan medis yang diberikan. Tanggungan Asuransi saya mungkin menyatakan bahwa sebagian pembayaran tetap menjadi tanggung jawab  pribadi saya atau tidak ditanggung oleh asuransi maka rumah sakit berwenang memberi tagihan untuk biaya yang tidak ditanggung oleh asuransi  dan saya bertanggung jawab untuk membayarnya.</td>
             </tr>
             <tr>
               <td style="vertical-align:top">c. </td>
