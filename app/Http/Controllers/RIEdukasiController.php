@@ -113,7 +113,66 @@ class RIEdukasiController extends Controller
 		}
 
 		$data->save();
-    	dd($request);
     	return back();
+    }
+
+    public function get_ri_edukasi_read() {
+    	$pasien = RIEdukasi::where('id', 1)->first();
+    	// dd($pasien);
+        $this->data['medis_materi'] = $pasien->medis_materi;
+        $this->data['medis_metode'] = $pasien->medis_metode;
+        $this->data['medis_nama_edukator'] = $pasien->medis_nama_edukator;
+        $this->data['medis_paraf_pasien'] = $pasien->medis_paraf_pasien;
+        $this->data['medis_paraf_edukator'] = $pasien->medis_paraf_edukator;
+
+        $this->data['mj_materi'] = $pasien->mj_materi;
+        $this->data['mj_metode'] = $pasien->mj_metode;
+        $this->data['mj_nama_edukator'] = $pasien->mj_nama_edukator;
+        $this->data['mj_paraf_pasien'] = $pasien->mj_paraf_pasien;
+        $this->data['mj_paraf_edukator'] = $pasien->mj_paraf_edukator;
+
+        $this->data['psikologis_materi'] = $pasien->psikologis_materi;
+        $this->data['psikologis_metode'] = $pasien->psikologis_metode;
+        $this->data['psikologis_nama_edukator'] = $pasien->psikologis_nama_edukator;
+        $this->data['psikologis_paraf_pasien'] = $pasien->psikologis_paraf_pasien;
+        $this->data['psikologis_paraf_edukator'] = $pasien->psikologis_paraf_edukator;
+
+        $this->data['keperawatan_materi'] = $pasien->keperawatan_materi;
+        $this->data['keperawatan_metode'] = $pasien->keperawatan_metode;
+        $this->data['keperawatan_nama_edukator'] = $pasien->keperawatan_nama_edukator;
+        $this->data['keperawatan_paraf_pasien'] = $pasien->keperawatan_paraf_pasien;
+        $this->data['keperawatan_paraf_edukator'] = $pasien->keperawatan_paraf_edukator;
+
+        $this->data['farmasi_materi'] = $pasien->farmasi_materi;
+        $this->data['farmasi_metode'] = $pasien->farmasi_metode;
+        $this->data['farmasi_nama_edukator'] = $pasien->farmasi_nama_edukator;
+        $this->data['farmasi_paraf_pasien'] = $pasien->farmasi_paraf_pasien;
+        $this->data['farmasi_paraf_edukator'] = $pasien->farmasi_paraf_edukator;
+
+        $this->data['nutrisi_materi'] = $pasien->nutrisi_materi;
+        $this->data['nutrisi_metode'] = $pasien->nutrisi_metode;
+        $this->data['nutrisi_nama_edukator'] = $pasien->nutrisi_nama_edukator;
+        $this->data['nutrisi_paraf_pasien'] = $pasien->nutrisi_paraf_pasien;
+        $this->data['nutrisi_paraf_edukator'] = $pasien->nutrisi_paraf_edukator;
+
+        $this->data['kerohanian_materi'] = $pasien->kerohanian_materi;
+        $this->data['kerohanian_metode'] = $pasien->kerohanian_metode;
+        $this->data['kerohanian_nama_edukator'] = $pasien->kerohanian_nama_edukator;
+        $this->data['kerohanian_paraf_pasien'] = $pasien->kerohanian_paraf_pasien;
+        $this->data['kerohanian_paraf_edukator'] = $pasien->kerohanian_paraf_edukator;
+
+        $this->data['rehabilitasi_materi'] = $pasien->rehabilitasi_materi;
+        $this->data['rehabilitasi_metode'] = $pasien->rehabilitasi_metode;
+        $this->data['rehabilitasi_nama_edukator'] = $pasien->rehabilitasi_nama_edukator;
+        $this->data['rehabilitasi_paraf_pasien'] = $pasien->rehabilitasi_paraf_pasien;
+        $this->data['rehabilitasi_paraf_edukator'] = $pasien->rehabilitasi_paraf_edukator;
+
+        $this->data['dt_materi'] = $pasien->dt_materi;
+        $this->data['dt_metode'] = $pasien->dt_metode;
+        $this->data['dt_evaluasi'] = $pasien->dt_evaluasi;
+        $this->data['dt_nama_edukator'] = $pasien->dt_nama_edukator;
+        $this->data['dt_paraf_pasien'] = $pasien->dt_paraf_pasien;
+        $this->data['dt_paraf_edukator'] = $pasien->dt_paraf_edukator;
+        return view('page.ri.edukasi_read', $this->data);
     }
 }

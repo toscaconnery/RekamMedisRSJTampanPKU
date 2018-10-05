@@ -64,7 +64,7 @@ class RIEdukasi extends Model
 
         'dt_materi',
         'dt_metode',
-        'td_evaluasi',
+        'dt_evaluasi',
         'dt_nama_edukator',
         'dt_paraf_pasien',
         'dt_paraf_edukator',
