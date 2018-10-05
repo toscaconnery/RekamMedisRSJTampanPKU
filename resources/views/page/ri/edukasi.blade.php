@@ -66,7 +66,7 @@
 
           <section class="panel">
             <header class="panel-heading">
-              Medis
+              
             </header>
             <div class="panel-body">
               <table class="table table-bordered">
@@ -100,7 +100,7 @@
                     <td><input type="checkbox" class="form-control" name="ttd_1"></td>
                   </tr>
                   <tr>
-                    <td style="text-align: center;">1</td>
+                    <td style="text-align: center;">2</td>
                     <td><span>Manajemen Nyeri</span>
                       <ul>
                         <li>Non Farmakologi</li>
@@ -113,282 +113,121 @@
                     </td>
                     <td><textarea></textarea></td>
                     <td><textarea></textarea></td>
+                    <td>Mampu menjelaskan point : a,b<br>Mampu mendemonstrasikan point : 1,2</td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">3</td>
+                    <td><span>Psikologis</span>
+                      <ul>
+                        <li>Penerimaan penyakitnya</li>
+                        <li>Pengembangan emosi positif</li>
+                        <li>Penyelesaian masalah yang spesifik (coping+)</li>
+                        <li>Konseling berita buruk</li>
+                      </ul>
+                    </td>
+                    <td><textarea></textarea></td>
+                    <td><textarea></textarea></td>
                     <td>Mampu menjelaskan point : a,b,c,d,e</td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">4</td>
+                    <td><span>Keperawatan</span>
+                      <ul>
+                        <li>Pendidikan Kesehatan tentang</li>
+                          <ul class="indent">
+                            <li>Cuci Tangan</li>
+                            <li>Resiko Jatuh</li>
+                            <li>Orientasi Pasien Baru</li>
+                          </ul>
+                        <li>Penanganan dan Perawatan di RS</li>
+                        <li>Penanganan dan Perawatan di rumah</li>
+                        <li>Alat-alat yang perlu disiapkan di rumah</li>
+                        <li>Keamanan lingkungan di rumah</li>
+                        <li>Sumber-sumber pelayanan kesehatan di komunitas</li>
+                      </ul>
+                    </td>
+                    <td><textarea></textarea></td>
+                    <td><textarea></textarea></td>
+                    <td>Mampu menjelaskan point :<br>a. 1), 2), 3)<br>b.<br>c.<br>d.<br>e.<br>f.<br>Mampu mendemonstrasikan<br>1) Cucitangan<br>2) Penggunaan alat medis</td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">5</td>
+                    <td><span>Farmasi</span>
+                      <ul>
+                        <li>Nama obat & kegunaannya</li>
+                        <li>Aturan pemakaian</li>
+                        <li>Jumlah obat yang diberikan</li>
+                        <li>Cara penyimpanan obat</li>
+                        <li>Efek samping obat</li>
+                        <li>Interaksi antar obat & interaksi obat dengan makanan</li>
+                      </ul>
+                    </td>
+                    <td><textarea></textarea></td>
+                    <td><textarea></textarea></td>
+                    <td>Mampu menjelaskan point : a,b,c,d,e,f</td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">6</td>
+                    <td><span>Nutrisi</span>
+                      <ul>
+                        <li>Status Gizi</li>
+                        <li>Pelayanan makanan di RS</li>
+                        <li>Diet selama perawatan</li>
+                        <li>Diet di rumah</li>
+                      </ul>
+                    </td>
+                    <td><textarea></textarea></td>
+                    <td><textarea></textarea></td>
+                    <td>Mampu menjelaskan point : a,b,c,d</td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">7</td>
+                    <td><span>Kerohanian</span><br>
+                      Bimbingan & Konseling Rohani
+                    </td>
+                    <td><textarea></textarea></td>
+                    <td><textarea></textarea></td>
+                    <td>Mampu menjelaskan & mendemonstrasikan Bimbingan & Konseling rohani</td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">8</td>
+                    <td><span>Rehabilitasi</span>
+                      <ul>
+                        <li>Fisioterapi</li>
+                        <li>Okupasi Therapy</li>
+                        <li>Terapi Wicara</li>
+                      </ul>
+                    </td>
+                    <td><textarea></textarea></td>
+                    <td><textarea></textarea></td>
+                    <td>Mampu menjelaskan & mendemonstrasikan point : a,b,c</td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                  </tr>
+                  <tr style="height: 10em;">
+                    <td style="text-align: center;">9</td>
+                    <td><span>Delay Treatment</span>
+                    </td>
+                    <td><textarea></textarea></td>
+                    <td><textarea></textarea></td>
+                    <td><textarea></textarea></td>
                     <td><input type="checkbox" class="form-control" name="ttd_1"></td>
                     <td><input type="checkbox" class="form-control" name="ttd_1"></td>
                   </tr>
                 </tbody>
               </table>
-              <form class="form-horizontal " method="get">
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Materi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Metode dan Durasi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama Edukator</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </section>
-
-          <section class="panel">
-            <header class="panel-heading">
-              Manajemen Nyeri
-            </header>
-            <div class="panel-body">
-
-              <form class="form-horizontal " method="get">
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Materi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Metode dan Durasi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama Edukator</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </section>
-
-          <section class="panel">
-            <header class="panel-heading">
-              Psikologis
-            </header>
-            <div class="panel-body">
-
-              <form class="form-horizontal " method="get">
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Materi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Metode dan Durasi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama Edukator</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </section>
-
-          <section class="panel">
-            <header class="panel-heading">
-              Keperawatan
-            </header>
-            <div class="panel-body">
-
-              <form class="form-horizontal " method="get">
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Materi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Metode dan Durasi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama Edukator</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </section>
-
-          <section class="panel">
-            <header class="panel-heading">
-              Farmasi
-            </header>
-            <div class="panel-body">
-
-              <form class="form-horizontal " method="get">
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Materi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Metode dan Durasi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama Edukator</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </section>
-
-          <section class="panel">
-            <header class="panel-heading">
-              Nutrisi
-            </header>
-            <div class="panel-body">
-
-              <form class="form-horizontal " method="get">
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Materi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Metode dan Durasi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama Edukator</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </section>
-
-          <section class="panel">
-            <header class="panel-heading">
-              Kerohanian
-            </header>
-            <div class="panel-body">
-
-              <form class="form-horizontal " method="get">
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Materi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Metode dan Durasi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama Edukator</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </section>
-
-          <section class="panel">
-            <header class="panel-heading">
-              Rehabilitasi
-            </header>
-            <div class="panel-body">
-
-              <form class="form-horizontal " method="get">
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Materi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Metode dan Durasi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama Edukator</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </section>
-
-          <section class="panel">
-            <header class="panel-heading">
-              Delay Treatment
-            </header>
-            <div class="panel-body">
-
-              <form class="form-horizontal " method="get">
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group"><label class="col-sm-2 control-label">Penjelasan</label></div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Materi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Metode dan Durasi</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama Edukator</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </form>
             </div>
           </section>
 
