@@ -235,6 +235,22 @@ Route::get('/ri_asuhan_gizi', function () {
     return view('ri_asuhan_gizi');
 });
 
+Route::get('/ri_surat_spd', function () {
+    return view('ri_surat_spd');
+});
+
+Route::get('/ri_permintaan_privasi', function () {
+    return view('ri_permintaan_privasi');
+});
+
+Route::get('/ri_permintaan_rohani', function () {
+    return view('ri_permintaan_rohani');
+});
+
+Route::get('/ri_permintaan_second', function () {
+    return view('ri_permintaan_second');
+});
+
 
 
 

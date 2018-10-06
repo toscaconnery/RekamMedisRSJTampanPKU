@@ -156,7 +156,6 @@
               <div class="panel-body">
 
                 <form class="form-horizontal " method="get">
-                  <div class="form-group"></div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Nama</label>
                     <div class="col-sm-8">
@@ -261,7 +260,6 @@
               <div class="panel-body">
 
                 <form class="form-horizontal " method="get">
-                  <div class="form-group"></div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Terapi</label>
                     <div class="col-sm-8">

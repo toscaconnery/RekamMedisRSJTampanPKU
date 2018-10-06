@@ -109,15 +109,260 @@
 
         <div class="row">
           <div class="col-lg-12">
-
+            
             <section class="panel">
               <header class="panel-heading">
-                Pemberian Informasi
+                Pasien
               </header>
               <div class="panel-body">
 
                 <form class="form-horizontal " method="get">
                   
+                  <div class="form-group">
+                    <div class="col-sm-8">
+                      Yang bertanda tangan dibawah ini
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Nama</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Umur</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jenis Kelamin</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" disabled="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Alamat</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Agama</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">No.Telp</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">Pemohon
+              </header>
+              <div class="panel-body">
+                <form class="form-horizontal " method="get">
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Hubungan dengan Pasien</label>
+                    <div class="col-lg-2">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="hub" value="0">
+                          Saya 
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="hub" value="1">
+                          Suami
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="hub" value="2">
+                          Istri
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="hub" value="3">
+                          Anak
+                        </label>
+                      </div>
+                       <div class="radio">
+                        <label>
+                          <input type="radio" name="hub" value="4">
+                          Ayah
+                        </label>
+                      </div>
+                       <div class="radio">
+                        <label>
+                          <input type="radio" name="hub" value="5">
+                          Ibu
+                        </label>
+                      </div>
+                       <div class="radio">
+                        <label>
+                          <input type="radio" name="hub" value="6">
+                          Lain
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                   <div class="form-group">
+                    <label class="col-sm-2 control-label">Sebutkan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Nama</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Umur</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jenis Kelamin</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Alamat</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Agama</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">No.Telp</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Pelayanan Kerohanian
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+                  
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Dengan ini meminta diberikan pelayanan kerohanian</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Terhadap</label>
+                    <div class="col-lg-2">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="hd" value="0">
+                          Saya 
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="hd" value="1">
+                          Suami
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="hd" value="2">
+                          Istri
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="hd" value="3">
+                          Anak
+                        </label>
+                      </div>
+                       <div class="radio">
+                        <label>
+                          <input type="radio" name="hd" value="4">
+                          Ayah
+                        </label>
+                      </div>
+                       <div class="radio">
+                        <label>
+                          <input type="radio" name="hd" value="5">
+                          Ibu
+                        </label>
+                      </div>
+                       <div class="radio">
+                        <label>
+                          <input type="radio" name="hd" value="6">
+                          Lain
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Sebutkan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Tanda Tangan
+              </header>
+              <div class="panel-body">
+                <form class="form-horizontal " method="get">
+                 <div class="form-group">
+                    <label class="col-sm-2 control-label">Tanggal</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Nama Saksi</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Nama Pemohon</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
                 </form>
               </div>
             </section>
@@ -254,6 +499,3 @@
 
 
 <html>
-
-
-
