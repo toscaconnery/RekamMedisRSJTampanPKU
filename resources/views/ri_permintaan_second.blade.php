@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="{{url('')}}/admin_bootstrap/img/favicon.png">
 
-  <title>Permintaan Kebutuhan Privasi</title>
+  <title>Permintaan Pendapat Lain (Second Opinion)</title>
 
    <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-file-text-o"></i> PERMINTAAN KEBUTUHAN PRIVASI</h3>
+            <h3 class="page-header"><i class="fa fa-file-text-o"></i> PERMINTAAN PENDAPAT LAIN (SECOND OPINION)</h3>
             <!--<ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_document_alt"></i>Forms</li>
@@ -78,7 +78,7 @@
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Dokumen Permintaan Kebutuhan Privasi
+                Dokumen Permintaan Pendapat Lain (Second Opinion)
               </header>
 
               <table class="table table-striped table-advance table-hover">
@@ -90,7 +90,7 @@
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
                   <tr>
-                    <td>Permintaan Kebutuhan Privasi</td>
+                    <td>Permintaan Pendapat Lain</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>
@@ -112,7 +112,7 @@
             
             <section class="panel">
               <header class="panel-heading">
-                Pasien
+                Pemohon
               </header>
               <div class="panel-body">
 
@@ -120,7 +120,7 @@
                   
                   <div class="form-group">
                     <div class="col-sm-8">
-                      Yang bertanda tangan dibawah ini
+                      Yang bertanda tangan dibawah ini, saya
                     </div>
                   </div>
 
@@ -154,76 +154,41 @@
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">No.Telp</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
                 </form>
               </div>
             </section>
 
             <section class="panel">
-              <header class="panel-heading">Pemohon
+              <header class="panel-heading">
+                
               </header>
               <div class="panel-body">
-                <form class="form-horizontal " method="get">
 
+                <form class="form-horizontal " method="get">
+                  
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Hubungan dengan Pasien</label>
-                    <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="0">
-                          Saya 
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="1">
-                          Suami
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="2">
-                          Istri
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="3">
-                          Anak
-                        </label>
-                      </div>
-                       <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="4">
-                          Ayah
-                        </label>
-                      </div>
-                       <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="5">
-                          Ibu
-                        </label>
-                      </div>
-                       <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="6">
-                          Lain
-                        </label>
-                      </div>
+                    <label class="col-sm-2 control-label"></label>
+                    <div class="col-sm-8">
+                     Dengan ini menyatakan permintaan untuk mendapatkan second opinion atas :
                     </div>
                   </div>
-
-                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Sebutkan</label>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"></label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
+
+                
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">Pasien (Bila pasien tidak kompeten atau tidak mau menerima informasi)
+              </header>
+              <div class="panel-body">
+                <form class="form-horizontal " method="get">
 
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Nama</label>
@@ -267,56 +232,23 @@
 
             <section class="panel">
               <header class="panel-heading">
-                Kebutuhan Privasi
+                
               </header>
               <div class="panel-body">
 
                 <form class="form-horizontal " method="get">
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"></label>
+                    <div class="col-sm-8">
+                     Saya memahami perlunya dan manfaat second opinion tersebut sebagaimana telah dijelaskan kepada saya. Sya telah mendapat kesempatan untuk bertanya dan telah mendapat jawaban yang memuaskan. Saya juga menyadari bahwa oleh karena ilmu kedokteran bukanlah ilmu pasti dan selalu berkembang, maka perbedaan pendapat ahli adalah biasa terjadi dalam dunia kedokteran.
+                    </div>
+                  </div>
                   
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Dengan ini meminta kebutuhan privasi berupa</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">1. </label>
-                    <div class="col-sm-8">
-                      Saya mengijinkan/tidak mengijinkan (coret salah satu) Rumah Sakit memberi akses bagi:
-                      Keluarga dan handal taulan serta orang-orang yang akan menengok/ menemui saya. (sebutkan nama/profesi bila ada permintaan khusus)
-                    </div>
-                  </div>
-                  <div class="form-group">
                     <label class="col-sm-2 control-label"></label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">2. </label>
-                    <div class="col-sm-8">
-                      Saya mengijinkan/tidak mengijinkan privasi khusus (coret salah satu). <br>Sebutkan bila ada permintaan privasi khusus
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"></label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">3. </label>
-                    <div class="col-sm-8">
-                      Lain-lain:<br>(Sebutkan)
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"></label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                      Saya menyadari beban biaya second opinion menjadi tanggung jawab saya.
                     </div>
                   </div>
                 
@@ -343,7 +275,7 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama Pemohon</label>
+                    <label class="col-sm-2 control-label">Nama Pasien/Wali</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>

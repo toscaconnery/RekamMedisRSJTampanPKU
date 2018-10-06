@@ -51,7 +51,7 @@ header('Content-Type: application/pdf');
     <tr>
       <td class="number">5.</td>
       <td class="contain">
-        Tindakan selanjutnya kami akan menghubungi dan menyerahkan kasus tersebut kepada pihak yang berwajib (kepolosian) setempat.
+        Tindakan selanjutnya kami akan menghubungi dan menyerahkan kasus tersebut kepada pihak yang berwajib (kepolisian) setempat.
       </td>
     </tr>
     <tr>

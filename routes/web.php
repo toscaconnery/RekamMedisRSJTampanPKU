@@ -251,6 +251,37 @@ Route::get('/ri_permintaan_second', function () {
     return view('ri_permintaan_second');
 });
 
+Route::get('/ri_permintaan_notresucitate', function () {
+    return view('ri_permintaan_notresucitate');
+});
+
+Route::get('/ri_permintaan_resucitate', function () {
+    return view('ri_permintaan_resucitate');
+});
+
+Route::get('/ri_pulang_paksa', function () {
+    return view('ri_pulang_paksa');
+});
+
+Route::get('/ri_residen', function () {
+    return view('ri_residen');
+});
+
+Route::get('/ri_surat_kuasa', function () {
+    return view('ri_surat_kuasa');
+});
+
+Route::get('/ri_pernyataan', function () {
+    return view('ri_pernyataan');
+});
+
+Route::get('/ri_penolakan_tindakan', function () {
+    return view('ri_penolakan_tindakan');
+});
+
+Route::get('/ri_persetujuan_tindakan', function () {
+    return view('ri_persetujuan_tindakan');
+});
 
 
 

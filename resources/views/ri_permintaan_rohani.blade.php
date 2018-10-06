@@ -112,7 +112,7 @@
             
             <section class="panel">
               <header class="panel-heading">
-                Pasien
+                Pemohon
               </header>
               <div class="panel-body">
 
@@ -165,7 +165,7 @@
             </section>
 
             <section class="panel">
-              <header class="panel-heading">Pemohon
+              <header class="panel-heading">Pasien
               </header>
               <div class="panel-body">
                 <form class="form-horizontal " method="get">
