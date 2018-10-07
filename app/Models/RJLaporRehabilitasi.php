@@ -13,6 +13,6 @@ class RJLaporRehabilitasi extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'no_rm',
+        'id_regis',
     ];
 }
