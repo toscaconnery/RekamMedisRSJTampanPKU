@@ -20,6 +20,7 @@ Route::get('/home', 'IndexController@get_index');
 
 // Route::get('/pendaftaran_pasien', 'PasienController@pendaftaran_pasien');
 // Route::post('/pendaftaran_pasien', 'PasienController@store_pendaftaran_pasien');
+Route::get('/javascript_test', 'TestingController@javascript_test');
 
 Route::get('/identifikasi_pasien_baru_1', 'PasienController@identifikasi_pasien_baru_1');
 Route::post('/identifikasi_pasien_baru_2', 'PasienController@identifikasi_pasien_baru_2');
@@ -77,8 +78,8 @@ Route::post('/rj_informasi_edukasi', 'RJInformasiEdukasiController@post_rj_infor
 Route::get('/rj_informasi_edukasi_list_informasi', 'RJInformasiEdukasiController@get_rj_informasi_edukasi_list_informasi');
 Route::post('/rj_informasi_edukasi_list_informasi', 'RJInformasiEdukasiController@post_rj_informasi_edukasi_list_informasi');
 
-Route::get('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@get_rj_lapor_rehabilitasi');    //
-Route::post('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@post_rj_lapor_rehabilitasi');  //
+Route::get('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@get_rj_lapor_rehabilitasi');
+Route::post('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@post_rj_lapor_rehabilitasi');
 
 Route::get('/rj_perkembangan_pasien', 'RJPerkembanganPasienController@get_rj_perkembangan_pasien');
 Route::post('/rj_perkembangan_pasien', 'RJPerkembanganPasienController@post_rj_perkembangan_pasien');
@@ -166,9 +167,9 @@ Route::get('/ri_surat_persetujuan', function () {
 // Route::get('/rj_informasi_edukasi', function () {
 //     return view('rj_informasi_edukasi');
 // });
-Route::get('/rj_lapor_rehabilitasi2', function () {
-    return view('rj_lapor_rehabilitasi');
-});
+// Route::get('/rj_lapor_rehabilitasi2', function () {
+//     return view('rj_lapor_rehabilitasi');
+// });
 // Route::get('/rj_perkembangan_pasien', function () {
 //     return view('rj_perkembangan_pasien');
 // });

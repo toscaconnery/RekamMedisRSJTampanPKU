@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class TestingController extends Controller
 {
-    //
+    public function javascript_test() {
+    	return view('javascript_test');
+    }
 }
