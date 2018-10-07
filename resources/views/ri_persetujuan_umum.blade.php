@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="{{url('')}}/admin_bootstrap/img/favicon.png">
 
-  <title>Hak dan Kewajiban</title>
+  <title>Persetujuan Umum</title>
 
    <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-file-text-o"></i> PEMBERIAN INFORMASI</h3>
+            <h3 class="page-header"><i class="fa fa-file-text-o"></i> PERSETUJUAN UMUM</h3>
             <!--<ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_document_alt"></i>Forms</li>
@@ -78,7 +78,7 @@
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Dokumen Pemberian Informasi
+                Dokumen Persetujuan Umum
               </header>
 
               <table class="table table-striped table-advance table-hover">
@@ -90,7 +90,7 @@
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
                   <tr>
-                    <td>Pemberian Informasi</td>
+                    <td>Persetujuan Umum</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>

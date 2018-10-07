@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="{{url('')}}/admin_bootstrap/img/favicon.png">
 
-  <title>Hak dan Kewajiban</title>
+  <title>Surat Pernyataan</title>
 
    <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-file-text-o"></i> HAK DAN KEWAJIBAN</h3>
+            <h3 class="page-header"><i class="fa fa-file-text-o"></i> SURAT PERNYATAAN</h3>
             <!--<ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_document_alt"></i>Forms</li>
@@ -78,7 +78,7 @@
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Dokumen Hak dan Kewajiban
+                Dokumen Surat Pernyataan
               </header>
 
               <table class="table table-striped table-advance table-hover">
@@ -90,7 +90,7 @@
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
                   <tr>
-                    <td>Hak dan Kewajiban</td>
+                    <td>Surat Pernyataan</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>
@@ -112,154 +112,36 @@
 
             <section class="panel">
               <header class="panel-heading">
-                Pemberian Informasi
+                Pemohon
               </header>
               <div class="panel-body">
 
                 <form class="form-horizontal " method="get">
-                  <table>
-                    <tbody>
-                      <tr>
-                        <td class="konten_s_question" colspan="2">
-                          <b>A. Hak Pasien</b>
-                          <br>
-                        </td>
-                      </tr>
+                  
+                  <div class="form-group">
+                    <div class="col-sm-8">
+                      Yang bertanda tangan dibawah ini, saya
+                    </div>
+                  </div>
 
-                      <tr>
-                        <td class="contain0" colspan="2">
-                          <br>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="contain0" colspan="2">Hak pasien adalah hak-hak pribadi yang dimiliki manusia sebagai pasien:</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">1. </td>
-                        <td class="contain0">Pasien berhak memperoleh informasi mengenai tata tertib dan peraturan yang berlaku di Rumah Sakit,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">2. </td>
-                        <td class="contain0">Pasien berhak memperoleh informasi tentang hak dan kewajiban pasien,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">3. </td>
-                        <td class="contain0">Pasien berhak memperoleh layanan yang manusiawi, adil, jujur, dan tanpa diskriminasi,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">4. </td>
-                        <td class="contain0">Pasien berhak memperoleh layanan kesehatan yang bermutu sesuai dengan standar profesi dan standar prosedur operasional,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">5. </td>
-                        <td class="contain0">Pasien berhak memperoleh layanan yang efektif dan efisien sehingga pasien terhindar dari kerugian fisik dan materi,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">6. </td>
-                        <td class="contain0">Pasien berhak mengajukan pengaduan atas kualitas pelayanan yang didapatkan</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">7.</td>
-                        <td class="contain0">Pasien berhak memilih dokter dan kelas perawatan sesuai dengan keinginannya dan peraturan yang berlaku di Rumah Sakit</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">8. </td>
-                        <td class="contain0">Pasien berhak meminta konsultasi tentang penyakit yang dideritanya kepada dokter lain yang mempunyai Surat Ijin Praktek (SIP) baik di dalam maupun di luar Rumah Sakit,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">9. </td>
-                        <td class="contain0">Pasien berhak mendapat privasi dan kerahasiaan penyakit yang diderita termasuk data-data medisnya</td>
-                      </tr>
-                      <tr>
-                        <td class="number0" style="vertical-align:top">10. </td>
-                        <td class="contain0">Pasien berhak mendapatkan informasi yang meliputi diagnosis dan tata cara tindakan medis, tujuan tindakan medis, alternatif tindakan medis, resiko dan komplikasi yang mungkin terjadi dan prognosis terhadap tindakan yang dilakukan serta perkiraan biaya pengobatan,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">11. </td>
-                        <td class="contain0">Pasien berhak memberikan persetujuan atau menolak atas tindakan yang dilakukan oleh tenaga kesehatan terhadap penyakit yang dideritanya,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">12. </td>
-                        <td class="contain0">Pasien berhak didampingi keluarganya dalam keadaan kritis, </td>
-                      </tr>
-                      <tr>
-                        <td class="number0">13. </td>
-                        <td class="contain0">Pasien berhak menjalankan ibadah sesuai agama/kepercayaan yang dianutnya selama hal tidak mengganggu pasien lainnya,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">14. </td>
-                        <td class="contain0">Pasien berhak memperoleh keamanan dan keselamatan dirinya selama dalam perawatan di Rumah Sakit,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">15. </td>
-                        <td class="contain0">Pasien berhak mengajukan usul, saran, perbaikan atas perilaku Rumah Sakit terhadap dirinya,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">16. </td>
-                        <td class="contain0">Pasien berhak menolak pelayanan bimbingan rohani yang tidak sesuai dengan agama dan kepercayaan yang dianutnya,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">17. </td>
-                        <td class="contain0">Pasien berhak menggugat dan atau menuntut Rumah Sakit apabila Rumah Sakit diduga memberikan pelayanan yang tidak sesuai dengan standar baik secara perdata maupun pidana,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">18.</td>
-                        <td class="contain0">Pasien berhak mengeluhkan pelayanan Rumah Sakit yang tidak sesuai dengan standar pelayanan melalui media cetak dan elektronik sesuai dengan ketentuan peraturan perundang-undangan.</td>
-                      </tr>
-
-                      <tr>
-                        <td class="contain0" colspan="2">
-                          <br>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="konten_s_question" colspan="2">
-                          <b>B. Kewajiban Pasien</b><br>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="contain0" colspan="2">
-                          <br>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="number0">1. </td>
-                        <td class="contain0">Pasien dan keluarganya berkewajiban untuk mentaati segala aturan dan tata tertib Rumah Sakit,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">2. </td>
-                        <td class="contain0">Pasien berkewajiban untuk mematuhi segala instruksi dokter dan perawat dalam pengobatannya</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">3. </td>
-                        <td class="contain0">Pasien berkewajiban untuk memberikan informasi dengan jujur dan selengkapnya tentang penyakit yang diderita kepada dokter yang merawat,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">4. </td>
-                        <td class="contain0">Pasien dan atau penanggungnya berkewajiban untuk melunasi semua biaya atas jasa pelayanan Rumah Sakit/Dokter,</td>
-                      </tr>
-                      <tr>
-                        <td class="number0">5. </td>
-                        <td class="contain0">Pasien dan atau penanggung jawabnya berkewajiban memenuhi hal-hal yang telah disepakati/perjanjian yang telah dibuatnya.</td>
-                      </tr>
-
-                      <tr>
-                        <td class="contain0" colspan="2">
-                          <br>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="contain0" colspan="2">
-                          Saya telah membaca dan memahami hak dan kewajiba pasien seperti tertera di atas. Saya akan mematuhi segalanya dengan penuh tanggung jawab.
-                        </td>
-                      </tr>
-
-                  </table>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Nama</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Umur</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Alamat</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
                 </form>
               </div>
             </section>
@@ -270,19 +152,53 @@
               <div class="panel-body">
 
                 <form class="form-horizontal " method="get">
-                  <div class="form-group"></div>
-                  
+
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Hormat Saya</label>
+                    <div class="col-sm-12">
+                      Dengan ini meyatakan bahwa <b> saya tidak bersedia </b>mengikuti program rehabilitasi NAPZA di Rumah Sakit Jiwa Tampan Provinsi Riau
+                    </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama Penanda Tangan</label>
+                    <div class="col-sm-12">
+                      Demikianlah surat pernyataan ini saya buat secara ssadar dan tanpa ada paksaan dari pihak manapun.
+                    </div>
+                  </div>
+                
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+                Tanda Tangan
+              </header>
+              <div class="panel-body">
+                <form class="form-horizontal " method="get">
+                 <div class="form-group">
+                    <label class="col-sm-2 control-label">Tanggal</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                  
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Konselor</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Kepala Ruangan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Residen</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
                 </form>
               </div>
             </section>

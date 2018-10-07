@@ -11,7 +11,7 @@ header('Content-Type: application/pdf');
 
 <body style="">
 
-  <h2 align="center" style="font-size:110%;">INSTRUKSI JANGAN DILAKUKAN RESUSITASI<br>(DO NOT RESUCITATE)</h2>
+  <h2 align="center" style="font-size:110%;">INTRUKSI JANGAN DILAKUKAN RESUSITASI<br>(DO NOT RESUCITATE)</h2>
   
   <table>
     <body>
@@ -63,7 +63,7 @@ header('Content-Type: application/pdf');
     <tr>
       <td class="number">1.</td>
       <td class="contain">
-        Usaha komprehensif untuk mencegah henti jantung atau henti nafas tanpa melakukan intubasi. <b>Do NOT RESUCITATE TIDAK DILAKUKAN RESUSITASI JANTUNG PARU (RJP)</b>
+        Usaha komprehensif untuk mencegah henti jantung atau henti nafas tanpa melakukan intubasi. <b>DO NOT RESUCITATE TIDAK DILAKUKAN RESUSITASI JANTUNG PARU (RJP)</b>
       </td>
     </tr>
     <tr>

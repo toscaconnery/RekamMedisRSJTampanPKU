@@ -214,7 +214,7 @@
                     <td>Telah Diisi</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/ri_surat_spd"><i class="icon_plus_alt2"></i></a>
                         <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>
@@ -226,7 +226,7 @@
                     <td>Telah Diisi</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/ri_permintaan_privasi"><i class="icon_plus_alt2"></i></a>
                         <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>
@@ -238,7 +238,7 @@
                     <td>-</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/ri_permintaan_rohani"><i class="icon_plus_alt2"></i></a>
                         <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>
@@ -250,7 +250,7 @@
                     <td>Telah Diisi</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/ri_permintaan_second"><i class="icon_plus_alt2"></i></a>
                         <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>
@@ -262,7 +262,7 @@
                     <td>-</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/ri_permintaan_notresucitate"><i class="icon_plus_alt2"></i></a>
                         <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>
@@ -274,7 +274,7 @@
                     <td>-</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/ri_permintaan_resucitate"><i class="icon_plus_alt2"></i></a>
                         <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>
@@ -286,7 +286,7 @@
                     <td>Telah Diisi</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/ri_permintaan_rohani"><i class="icon_plus_alt2"></i></a>
                         <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>
@@ -298,7 +298,7 @@
                     <td>-</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/ri_permintaan_rohani"><i class="icon_plus_alt2"></i></a>
                         <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>
@@ -310,7 +310,7 @@
                     <td>-</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/ri_pulang_paksa"><i class="icon_plus_alt2"></i></a>
                         <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>
@@ -322,7 +322,7 @@
                     <td>-</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/ri_residen"><i class="icon_plus_alt2"></i></a>
                         <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>
@@ -334,7 +334,7 @@
                     <td>-</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/ri_surat_kuasa"><i class="icon_plus_alt2"></i></a>
                         <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>
@@ -346,7 +346,7 @@
                     <td>-</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/ri_pernyataan"><i class="icon_plus_alt2"></i></a>
                         <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                         <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>

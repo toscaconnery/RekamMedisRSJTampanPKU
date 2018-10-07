@@ -85,7 +85,7 @@ header('Content-Type: application/pdf');
     <body>
       <tr>
         <td class="contain" colspan="2">
-          dengan ini menyatakan telah mengambil kembali dengan paksa pasien tersebut di atas pada tanggal ..., meskipun Dokter telah menyatakan bahwa pasien tersebut belum diizinkan pulang.<br>
+          Dengan ini menyatakan telah mengambil kembali dengan paksa pasien tersebut di atas pada tanggal ..., meskipun Dokter telah menyatakan bahwa pasien tersebut belum diizinkan pulang.<br>
           Dengan ini menyatakan bahwa kami menanggung segala akibat dari pulang paksa tersebut di atas. Demikian surat pernyataan ini kami buat dengan penuh kesadaran dan rasa tanggung jawab. 
         </td>
       </tr>
