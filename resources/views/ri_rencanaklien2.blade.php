@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="{{url('')}}/admin_bootstrap/img/favicon.png">
 
-  <title>Permintaan Pelayanan Rohani</title>
+  <title>Rencana Tindakan Keperawatan Klien Dengan Gangguan Konsep Diri : Harga Diri Rendah</title>
 
    <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +38,14 @@
   <link href="{{url('')}}/admin_bootstrap/css/style-responsive.css" rel="stylesheet" />
   <link href="{{url('')}}/admin_bootstrap/css/xcharts.min.css" rel=" stylesheet">
   <link href="{{url('')}}/admin_bootstrap/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
-
+   <style type="text/css">
+    ul {padding-left: 1em;}
+    ul li {list-style-type: lower-alpha;}
+    ul.indent li {list-style-type: decimal;}
+    td {position: relative;}
+    td textarea {width: 100%; position: absolute; box-sizing: border-box; top: 0; left: 0; right: 0; bottom: 0; resize: none;}
+    td span {font-weight: bold;}
+  </style>
 </head>
 
 <body>
@@ -51,7 +58,7 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-file-text-o"></i> PERMINTAAN PELAYANAN ROHANI</h3>
+            <h3 class="page-header"><i class="fa fa-file-text-o"></i> RENCANA TINDAKAN KEPERAWATAN KLIEN DENGAN GANGGUAN KONSEP DIRI : HARGA DIRI RENDAH</h3>
             <!--<ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_document_alt"></i>Forms</li>
@@ -78,7 +85,7 @@
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Dokumen Permintaan Pelayanan Rohani
+                Dokumen Rencana Tindakan Keperawatan Klien Dengan Gangguan Konsep Diri : Harga Diri Rendah
               </header>
 
               <table class="table table-striped table-advance table-hover">
@@ -90,7 +97,7 @@
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
                   <tr>
-                    <td>Permintaan Pelayanan Rohani</td>
+                    <td>Rencana Tindakan Keperawatan Klien Dengan Gangguan Konsep Diri : Harga Diri Rendah</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>
@@ -107,287 +114,143 @@
           </div>
         </div>
 
-        <div class="row">
+         <div class="row">
           <div class="col-lg-12">
-            
-            <section class="panel">
-              <header class="panel-heading">
-                Pemohon
-              </header>
-              <div class="panel-body">
-
-                <form class="form-horizontal " method="get">
-                  
-                  <div class="form-group">
-                    <div class="col-sm-8">
-                      Yang bertanda tangan dibawah ini
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Umur</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Jenis Kelamin</label>
-                     <div class="col-sm-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="jk" id="optionsRadios" value="" checked>
-                          Laki-laki
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="jk" id="optionsRadios" value="" checked>
-                          Perempuan
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Alamat</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Agama</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">No.Telp</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
-
-            <section class="panel">
-              <header class="panel-heading">Pasien
-              </header>
-              <div class="panel-body">
-                <form class="form-horizontal " method="get">
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Hubungan dengan Pasien</label>
-                    <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="0">
-                          Saya 
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="1">
-                          Suami
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="2">
-                          Istri
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="3">
-                          Anak
-                        </label>
-                      </div>
-                       <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="4">
-                          Ayah
-                        </label>
-                      </div>
-                       <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="5">
-                          Ibu
-                        </label>
-                      </div>
-                       <div class="radio">
-                        <label>
-                          <input type="radio" name="hub" value="6">
-                          Lain
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Sebutkan</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Umur</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Jenis Kelamin</label>
-                     <div class="col-sm-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="jk" id="optionsRadios" value="" checked>
-                          Laki-laki
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="jk" id="optionsRadios" value="" checked>
-                          Perempuan
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Alamat</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Agama</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">No.Telp</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </section>
 
             <section class="panel">
               <header class="panel-heading">
-                Pelayanan Kerohanian
+                Rencana Tindakan
               </header>
               <div class="panel-body">
 
                 <form class="form-horizontal " method="get">
-                  
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Dengan ini meminta diberikan pelayanan kerohanian</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Terhadap</label>
-                    <div class="col-lg-2">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="hd" value="0">
-                          Saya 
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="hd" value="1">
-                          Suami
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="hd" value="2">
-                          Istri
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="hd" value="3">
-                          Anak
-                        </label>
-                      </div>
-                       <div class="radio">
-                        <label>
-                          <input type="radio" name="hd" value="4">
-                          Ayah
-                        </label>
-                      </div>
-                       <div class="radio">
-                        <label>
-                          <input type="radio" name="hd" value="5">
-                          Ibu
-                        </label>
-                      </div>
-                       <div class="radio">
-                        <label>
-                          <input type="radio" name="hd" value="6">
-                          Lain
-                        </label>
-                      </div>
-                    </div>
-                  </div>
 
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Sebutkan</label>
+                    <label class="col-sm-2 control-label">Tanggal Pengkajian</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
-                
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Jam Pengkajian</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Ruangan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Diagnosa Medis</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
                 </form>
               </div>
             </section>
 
+        
+          <form class="form-horizontal" method="post" action="">
+            {{ csrf_field() }}
+            <input type="hidden" name="jumlah_form" id="jumlah_form" value="4">
             <section class="panel">
               <header class="panel-heading">
-                Tanda Tangan
               </header>
               <div class="panel-body">
-                <form class="form-horizontal " method="get">
-                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Tanggal</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama Saksi</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nama Pemohon</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </form>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th rowspan="2" style="width: 4%; text-align: center;vertical-align:middle;">Tgl</th>
+                      <th rowspan="2" style="width: 7%; text-align: center;vertical-align:middle;">No Dx</th>
+                      <th rowspan="2" style="width: 7%; text-align: center;vertical-align:middle;">Dx Keperawatan</th>
+                      <th colspan="3" style="width: 80%; text-align: center;vertical-align:middle;">Perencanaan</th>
+                    </tr>
+                     <tr>
+                      <th style="width: 20%; text-align: center;vertical-align:middle;">Tujuan</th>
+                      <th style="width: 20%; text-align: center;vertical-align:middle;">Kriteria Evaluasi</th>
+                      <th style="width: 20%; text-align: center;vertical-align:middle;">Intervensi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    <tr>
+                      <td style="text-align:center;"><input type="date" class="form-control" name="tanggal_1" required></td>
+                      <td><input type="text" class="form-control" name="" required></td>
+                      <td>
+                        <input type="text" class="form-control" name="" required><br>
+                        b.d. harga diri rendah.
+                      </td>
+                      <td>
+                        TUM: ... <br>
+                        <input type="text" class="form-control" name="" required>
+                        TUK:<br>
+                        1. Klien dapat membina hubungan saling percaya dengan perawat.
+                      </td>
+                      <td>
+                      1. Setelah ... kali interaksi, klien menunjukkan ekspresi wajah bersahabat, menunjukkan rasa senang, ada kontak mata, mau berjabat tangan, mau menyebutkan nama, mau menjawab salam, klien mau duduk berdampingan dengan perawat, mau mengutarakan masalah yang dihadapi.
+                        <input type="text" class="form-control" name="" required > 
+                      </td>
+                      <td>
+                        1. Bina hubungan saling percaya dengan menggunakan prinsip komunikasi terapeutik:<br>
+                        <ul>
+                          <li>Sapa klien dengan ramah baik verbal maupun non verbal.</li>
+                          <li>Perkenalkan diri dengan sopan.</li>
+                          <li>Tanyakan nama lengkap dan nama panggilan yang disukai klien.</li>
+                          <li>Jelaskan tujuan pertemuan.</li>
+                          <li>Jujur dan menepati janji</li>
+                          <li>Tujukkan sikap empati dan menerima klien apa adanya.</li>
+                          <li>Beri perhatian dan perhatikan kebutuhan dasar klien.</li>
+                        </ul>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;"></td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        2. Klien dapat mengidentifikasi aspek positif dan kemampuan yang dimiliki.
+                      </td>
+                      <td>
+                        2. Setelah ... kali interaksi klien menyebutkan:<br>
+                        <input type="text" class="form-control" name="" required>
+                        <ul>
+                          <li>Aspek positif dan kemampuan yang dimiliki klien.</li>
+                          <li>Aspek positif keluarga.</li>
+                          <li>aspek positif lingkungan klien.</li>
+                        </ul>
+                      </td>
+                      <td>
+                        2.1. Diskusikan dengan klien tentang:<br>
+                        <ul>
+                          <li>Aspek positif yang dimiliki klien, keluarga, lingkungan.</li>
+                          <li>Kemampuan yang dimiliki klien.</li>
+                        </ul>
+                        2.2. Bersama klien buat daftar tentang:<br>
+                        <ul>
+                          <li>Aspek positif klien, keluarga, lingkungan.</li>
+                          <li>Kemampuan yang dimiliki klien.</li>
+                        </ul>
+                        2.3. Beri pujian yang realistis, hindarkan memberi penilaian negatif.
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
               </div>
             </section>
+
+          </form>
+        </div>
+      </div>
+
+      
+
+
 
             <div>
               <button type="submit" class="btn btn-primary">Submit</button>

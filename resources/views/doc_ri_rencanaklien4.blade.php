@@ -252,9 +252,9 @@ header('Content-Type: application/pdf');
       <td class="box-top">
         7.1. Setelah ... X interaksi klien menyebutkan:<br>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Manfaat minum obat</li>
+          <li>Kerugian tidak minum obat</li>
+          <li>Nama, warna, dosis, efek terapi dan efek samping obat</li>
         </ul>
         7.2. Setelah ... X interaksi klien mendemonstrasikan penggunaan obat dengan benar<br>
         7.3. Setelah ... X interaksi klien menyebutkan akibat berhenti minum obat tanpa konsultasi dokter

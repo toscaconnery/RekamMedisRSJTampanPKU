@@ -126,11 +126,11 @@ header('Content-Type: application/pdf');
           </ul>
       </td>
       <td class="box-top">
-      2.1. Identifikasi benda-benda yang dapa membahayakan pasien (pisau, silet, gelas, tali pinggang, alat kasur, dll)<br>
-      2.2. Amankan benda-benda yang dapat membahayakan pasien<br>
-      2.3. Lakukan kontrak <i>treatment</i><br>
-      2.4. Mengajarkan cara mengendalikan dorongan bunuh diri<br>
-      2.5. Melatih cara mengendalikan dorongan bunuh diri
+        2.1. Identifikasi benda-benda yang dapa membahayakan pasien (pisau, silet, gelas, tali pinggang, alat kasur, dll)<br>
+        2.2. Amankan benda-benda yang dapat membahayakan pasien<br>
+        2.3. Lakukan kontrak <i>treatment</i><br>
+        2.4. Mengajarkan cara mengendalikan dorongan bunuh diri<br>
+        2.5. Melatih cara mengendalikan dorongan bunuh diri
       </td>
     </tr>
     <tr>
