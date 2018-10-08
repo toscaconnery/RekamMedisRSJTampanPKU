@@ -21,6 +21,7 @@ Route::get('/home', 'IndexController@get_index');
 // Route::get('/pendaftaran_pasien', 'PasienController@pendaftaran_pasien');
 // Route::post('/pendaftaran_pasien', 'PasienController@store_pendaftaran_pasien');
 Route::get('/javascript_test', 'TestingController@javascript_test');
+Route::get('/sweetalert2_test', 'TestingController@sweetalert2_test');
 
 Route::get('/identifikasi_pasien_baru_1', 'PasienController@identifikasi_pasien_baru_1');
 Route::post('/identifikasi_pasien_baru_2', 'PasienController@identifikasi_pasien_baru_2');
