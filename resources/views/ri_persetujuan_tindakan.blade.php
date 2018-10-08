@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="{{url('')}}/admin_bootstrap/img/favicon.png">
 
-  <title>Surat Pernyataan</title>
+  <title>Persetujuan Tindakan Kedokteran</title>
 
    <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-file-text-o"></i> SURAT PERNYATAAN</h3>
+            <h3 class="page-header"><i class="fa fa-file-text-o"></i> PERSETUJUAN TINDAKAN KEDOKTERAN</h3>
             <!--<ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_document_alt"></i>Forms</li>
@@ -78,7 +78,7 @@
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Dokumen Surat Pernyataan
+                Dokumen Persetujuan Tindakan Kedokteran
               </header>
 
               <table class="table table-striped table-advance table-hover">
@@ -90,7 +90,7 @@
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
                   <tr>
-                    <td>Surat Pernyataan</td>
+                    <td>Persetujuan Tindakan Kedokteran</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>
@@ -107,17 +107,193 @@
           </div>
         </div>
 
-        <div class="row">
+         <div class="row">
           <div class="col-lg-12">
 
             <section class="panel">
               <header class="panel-heading">
-                Pemohon
+                Pemberian Informasi
               </header>
               <div class="panel-body">
 
                 <form class="form-horizontal " method="get">
-                  
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Dokter Pelaksana Tindakan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Pemberian Informasi</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Penerima Informasi /<br><i>Pemberi Penolakan</i></label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+        <div class="row">
+        <div class="col-lg-12">
+          <form class="form-horizontal" method="post" action="">
+            {{ csrf_field() }}
+            <input type="hidden" name="jumlah_form" id="jumlah_form" value="4">
+            <section class="panel">
+              <header class="panel-heading">
+              </header>
+              <div class="panel-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width: 5%; text-align: center;vertical-align:middle;">NO</th>
+                      <th style="width: 15%; text-align: center;vertical-align:middle;">JENIS INFORMASI</th>
+                      <th style="width: 70%; text-align: center;vertical-align:middle;">ISI INFORMASI</th>
+                      <th style="text-align: center;vertical-align:middle;">TANDA (V)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    <tr>
+                      <td style="text-align:center;">1</td>
+                      <td>Diagnosis (WD/DD)</td>
+                      <td>
+                        <input type="text" class="form-control" name="nama_edukator_1" required>
+                      </td>
+                      <td><input type="checkbox" class="form-control" name=""></td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;">2</td>
+                      <td>Dasar Diagnosis</td>
+                      <td>
+                        <input type="text" class="form-control" name="nama_edukator_1" required>
+                      </td>
+                      <td><input type="checkbox" class="form-control" name=""></td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;">3</td>
+                      <td>Tindakan Kedokteran</td>
+                      <td>
+                        <input type="text" class="form-control" name="nama_edukator_1" required>
+                      </td>
+                      <td><input type="checkbox" class="form-control" name=""></td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;">4</td>
+                      <td>Indikasi Tindakan</td>
+                      <td>
+                        <input type="text" class="form-control" name="nama_edukator_1" required>
+                      </td>
+                      <td><input type="checkbox" class="form-control" name=""></td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;">5</td>
+                      <td>Tata Cara</td>
+                      <td>
+                        <input type="text" class="form-control" name="nama_edukator_1" required>
+                      </td>
+                      <td><input type="checkbox" class="form-control" name=""></td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;">6</td>
+                      <td>Tujuan</td>
+                      <td>
+                        <input type="text" class="form-control" name="nama_edukator_1" required>
+                      </td>
+                      <td><input type="checkbox" class="form-control" name=""></td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;">7</td>
+                      <td>Risiko</td>
+                      <td>
+                        <input type="text" class="form-control" name="nama_edukator_1" required>
+                      </td>
+                      <td><input type="checkbox" class="form-control" name=""></td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;">8</td>
+                      <td>Komplikasi</td>
+                      <td>
+                        <input type="text" class="form-control" name="nama_edukator_1" required>
+                      </td>
+                      <td><input type="checkbox" class="form-control" name=""></td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;">9</td>
+                      <td>Prognosis</td>
+                      <td>
+                        <input type="text" class="form-control" name="nama_edukator_1" required>
+                      </td>
+                      <td><input type="checkbox" class="form-control" name=""></td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;">10</td>
+                      <td>Alternatif dan Risiko</td>
+                      <td>
+                        <input type="text" class="form-control" name="nama_edukator_1" required>
+                      </td>
+                      <td><input type="checkbox" class="form-control" name=""></td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;"></td>
+                      <td>Diagnosis (WD/DD)</td>
+                      <td>
+                        <input type="text" class="form-control" name="nama_edukator_1" required>
+                      </td>
+                      <td><input type="checkbox" class="form-control" name=""></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </form>
+        </div>
+      </div>
+
+       
+
+            <section class="panel">
+              <header class="panel-heading">
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      *Bila pasien tidak kompeten atau tidak mau menerima informasi, maka penerima informasi adalah wali atau keluarga terdekat
+                    </div>
+                  </div>
+                
+                </form>
+              </div>
+            </section>
+
+
+
+            <section class="panel">
+              <header class="panel-heading">PERSETUJUAN TINDAKAN KEDOKTERAN
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+
                   <div class="form-group">
                     <div class="col-sm-8">
                       Yang bertanda tangan dibawah ini, saya
@@ -137,11 +313,80 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Alamat</label>
+                    <label class="col-sm-2 control-label">Jenis Kelamin</label>
+                    <div class="col-sm-2">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="jk" id="optionsRadios" value="" checked>
+                          Laki-laki
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="jk" id="optionsRadios" value="" checked>
+                          Perempuan
+                        </label>
+                      </div>
+                    </div>
+                  </div>                
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">PENOLAKAN TERHADAP
+              </header>
+              <div class="panel-body">
+
+                <form class="form-horizontal " method="get">
+
+                  <div class="form-group">
+                    <div class="col-sm-8">
+                      Dengan ini menyatakan persetujuan untuk dilakukannya tidakan
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Tindakan</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Terhadap (Nama)</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Umur</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>     
+                   <div class="form-group">
+                    <label class="col-sm-2 control-label">Jenis Kelamin</label>
+                    <div class="col-sm-2">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="jk" id="optionsRadios" value="" checked>
+                          Laki-laki
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="jk" id="optionsRadios" value="" checked>
+                          Perempuan
+                        </label>
+                      </div>
+                    </div>
+                  </div>    
+                   <div class="form-group">
+                    <label class="col-sm-2 control-label">Alamat</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>               
                 </form>
               </div>
             </section>
@@ -155,13 +400,13 @@
 
                   <div class="form-group">
                     <div class="col-sm-12">
-                      Dengan ini meyatakan bahwa <b> saya tidak bersedia </b>mengikuti program rehabilitasi NAPZA di Rumah Sakit Jiwa Tampan Provinsi Riau
+                      Saya memahami perlunya dan manfaat tindakan tersebut sebagaimana telah dijelaskan seperti di atas kepada saya, termasuk resiko dan komplikasi yang mungkin timbul.
                     </div>
                   </div>
 
                   <div class="form-group">
                     <div class="col-sm-12">
-                      Demikianlah surat pernyataan ini saya buat secara ssadar dan tanpa ada paksaan dari pihak manapun.
+                      Saya juga menyadari bahwa oleh karena ilmu kedokteran bukanla ilmu pasti, maka keberhasilan tindakan kedokteran bukanlah keniscayaan, melainkan sangat bergantung kepada izin Tuhan Yang Maha Esa.
                     </div>
                   </div>
                 
@@ -182,19 +427,19 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Konselor</label>
+                    <label class="col-sm-2 control-label">Waktu</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Kepala Ruangan</label>
+                    <label class="col-sm-2 control-label">Yang Menyatakan</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Residen</label>
+                    <label class="col-sm-2 control-label">Saksi</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control">
                     </div>

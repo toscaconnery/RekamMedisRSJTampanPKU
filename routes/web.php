@@ -284,6 +284,38 @@ Route::get('/ri_persetujuan_tindakan', function () {
     return view('ri_persetujuan_tindakan');
 });
 
+Route::get('/ri_rencanaklien1', function () {
+    return view('ri_rencanaklien1');
+});
+
+Route::get('/ri_rencanaklien2', function () {
+    return view('ri_rencanaklien2');
+});
+
+Route::get('/ri_rencanaklien3', function () {
+    return view('ri_rencanaklien3');
+});
+
+Route::get('/ri_rencanaklien4', function () {
+    return view('ri_rencanaklien4');
+});
+
+Route::get('/ri_rencanaklien4', function () {
+    return view('ri_rencanaklien4');
+});
+
+Route::get('/ri_rencanaklien5', function () {
+    return view('ri_rencanaklien5');
+});
+
+Route::get('/ri_rencanaklien6', function () {
+    return view('ri_rencanaklien6');
+});
+
+Route::get('/ri_rencanaklien7', function () {
+    return view('ri_rencanaklien7');
+});
+
 
 
 

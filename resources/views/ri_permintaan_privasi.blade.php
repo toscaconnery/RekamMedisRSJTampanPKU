@@ -138,8 +138,19 @@
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Jenis Kelamin</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" disabled="">
+                     <div class="col-sm-2">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="jk" id="optionsRadios" value="" checked>
+                          Laki-laki
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="jk" id="optionsRadios" value="" checked>
+                          Perempuan
+                        </label>
+                      </div>
                     </div>
                   </div>
                   <div class="form-group">
@@ -239,8 +250,19 @@
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Jenis Kelamin</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
+                     <div class="col-sm-2">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="jk" id="optionsRadios" value="" checked>
+                          Laki-laki
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="jk" id="optionsRadios" value="" checked>
+                          Perempuan
+                        </label>
+                      </div>
                     </div>
                   </div>
                   <div class="form-group">

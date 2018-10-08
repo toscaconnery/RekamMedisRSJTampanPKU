@@ -171,7 +171,7 @@ header('Content-Type: application/pdf');
       <td class="box-top">-</td>
       <td class="box-top">-</td>
       <td class="box-top">-</td>
-      <td class="box-top">5. Klien dapa mengidentifikasi akibat perilaku kekerasan</td>
+      <td class="box-top">5. Klien dapat mengidentifikasi akibat perilaku kekerasan</td>
       <td class="box-top">
         5. Setelah ... X pertemuan klien menjelaskan akibat tindak kekerasan yang dilakukannya<br>
         <ul>
