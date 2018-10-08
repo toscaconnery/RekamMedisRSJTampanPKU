@@ -63,7 +63,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Kedatangan</label>
                   <div class="col-sm-2">
-                    <input type="text" id="dp1" class="form-control" name="tanggal_kedatangan">
+                    <input type="text" id="dp1" class="form-control" name="tanggal_kedatangan" required="">
                   </div>
                 </div>
                 <div class="form-group">
@@ -559,7 +559,7 @@
                   </div>
                   <label class="col-sm-1 control-label">Cara Pakai</label>
                   <div class="col-sm-3">
-                    <select class="form-control input-sm m-bot15" name="p_kokain">
+                    <select class="form-control input-sm m-bot15" name="c_kokain">
                       <option value="0">-</option>
                       <option value="1">1. Oral</option>
                       <option value="2">2. Nasal/Sublingual/Suppositoria</option>
@@ -1102,9 +1102,9 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Mengalami depresi serius (kesedihan, putus asa, kehilangan minat, susah konsentrasi)</label>
                   <div class="col-lg-2">
                     <select class="form-control input-sm m-bot15" name="psikiatris_1">
-                      <option value="">-</option>
-                      <option value="">30 Hari Terakhir</option>
-                      <option value="">Sepanjang Hidup</option>
+                      <option value="1">-</option>
+                      <option value="2">30 Hari Terakhir</option>
+                      <option value="3">Sepanjang Hidup</option>
                     </select>
                   </div>
                   <div class="col-sm-1">
@@ -1115,9 +1115,9 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Mengalami rasa cemas serius/keterangan, gelisah, merasa khawatir berlebihan</label>
                   <div class="col-lg-2">
                     <select class="form-control input-sm m-bot15" name="psikiatris_2">
-                      <option value="">-</option>
-                      <option value="">30 Hari Terakhir</option>
-                      <option value="">Sepanjang Hidup</option>
+                      <option value="1">-</option>
+                      <option value="2">30 Hari Terakhir</option>
+                      <option value="3">Sepanjang Hidup</option>
                     </select>
                   </div>
                   <div class="col-sm-1">
@@ -1128,9 +1128,9 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Mengalami halusinasi (melihat/mendengar sesuatu yang tidak ada obyeknya)</label>
                   <div class="col-lg-2">
                     <select class="form-control input-sm m-bot15" name="psikiatris_3">
-                      <option value="">-</option>
-                      <option value="">30 Hari Terakhir</option>
-                      <option value="">Sepanjang Hidup</option>
+                      <option value="1">-</option>
+                      <option value="2">30 Hari Terakhir</option>
+                      <option value="3">Sepanjang Hidup</option>
                     </select>
                   </div>
                   <div class="col-sm-1">
@@ -1141,9 +1141,9 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Mengalami kesulitan mengingat atau fokus pada sesuatu</label>
                   <div class="col-lg-2">
                     <select class="form-control input-sm m-bot15" name="psikiatris_4">
-                      <option value="">-</option>
-                      <option value="">30 Hari Terakhir</option>
-                      <option value="">Sepanjang Hidup</option>
+                      <option value="1">-</option>
+                      <option value="2">30 Hari Terakhir</option>
+                      <option value="3">Sepanjang Hidup</option>
                     </select>
                   </div>
                   <div class="col-sm-1">
@@ -1154,9 +1154,9 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Mengalami kesukaran mengontrol perilaku kasar, termasuk kemarahan atau kekerasan</label>
                   <div class="col-lg-2">
                     <select class="form-control input-sm m-bot15" name="psikiatris_5">
-                      <option value="">-</option>
-                      <option value="">30 Hari Terakhir</option>
-                      <option value="">Sepanjang Hidup</option>
+                      <option value="1">-</option>
+                      <option value="2">30 Hari Terakhir</option>
+                      <option value="3">Sepanjang Hidup</option>
                     </select>
                   </div>
                   <div class="col-sm-1">
@@ -1167,9 +1167,9 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Mengalami pikiran serius untuk bunuh diri</label>
                   <div class="col-lg-2">
                     <select class="form-control input-sm m-bot15" name="psikiatris_6">
-                      <option value="">-</option>
-                      <option value="">30 Hari Terakhir</option>
-                      <option value="">Sepanjang Hidup</option>
+                      <option value="1">-</option>
+                      <option value="2">30 Hari Terakhir</option>
+                      <option value="3">Sepanjang Hidup</option>
                     </select>
                   </div>
                   <div class="col-sm-1">
@@ -1180,9 +1180,9 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Berusaha untuk bunuh diri</label>
                   <div class="col-lg-2">
                     <select class="form-control input-sm m-bot15" name="psikiatris_7">
-                      <option value="">-</option>
-                      <option value="">30 Hari Terakhir</option>
-                      <option value="">Sepanjang Hidup</option>
+                      <option value="1">-</option>
+                      <option value="2">30 Hari Terakhir</option>
+                      <option value="3">Sepanjang Hidup</option>
                     </select>
                   </div>
                   <div class="col-sm-1">
@@ -1193,9 +1193,9 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Menerima pengobatan dari psikiater</label>
                   <div class="col-lg-2">
                     <select class="form-control input-sm m-bot15" name="psikiatris_8">
-                      <option value="">-</option>
-                      <option value="">30 Hari Terakhir</option>
-                      <option value="">Sepanjang Hidup</option>
+                      <option value="1">-</option>
+                      <option value="2">30 Hari Terakhir</option>
+                      <option value="3">Sepanjang Hidup</option>
                     </select>
                   </div>
                   <div class="col-sm-1">
@@ -1345,43 +1345,37 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Medis</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="">
+                    <input type="number" class="form-control" name="medis">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pekerjaan/Dukungan</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Pekerjaan/Dukungan</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="">
+                  <div class="col-sm-2">
+                    <input type="number" class="form-control" name="pekerjaan_dukungan">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Napza</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="">
+                  <div class="col-sm-2">
+                    <input type="number" class="form-control" name="napza">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Legal</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="">
+                  <div class="col-sm-2">
+                    <input type="number" class="form-control" name="legal">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Keluarga/sosial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="">
+                  <div class="col-sm-2">
+                    <input type="number" class="form-control" name="keluarga_sosial">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Psikiatris</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="">
+                  <div class="col-sm-2">
+                    <input type="number" class="form-control" name="psikiatris">
                   </div>
                 </div>
               </div>
@@ -1395,13 +1389,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Klien memenuhi kriteria diagnosis NAPZA</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="">
+                    <input type="text" class="form-control" name="kriteria_napza">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Diagnosis Lainnya</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="">
+                    <input type="text" class="form-control" name="diagnosis_lainnya">
                   </div>
                 </div>
               </div>
@@ -1414,73 +1408,68 @@
               <div class="panel-body">
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Resume masalah</label>
-                  <div class="col-sm-2">
-                    <input type="text" class="form-control" name="">
+                  <div class="col-sm-8">
+                    <textarea class="form-control" rows="3" name="resume_masalah"></textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">Rencana tindak Lanjut</label>
-                  <div class="col-lg-10">
+                  <div class="col-lg-8">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="s1" value="">
+                        <input type="radio" name="rencana_tindak_lanjut" value="1">
                         Asesmen Lanjutan/Mendalam
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="s1" value="">
+                        <input type="radio" name="rencana_tindak_lanjut" value="2">
                         Evaluasi Psikologis
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="s1" value="">
+                        <input type="radio" name="rencana_tindak_lanjut" value="3">
                         Program Detoksifikasi
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="s1" value="">
+                        <input type="radio" name="rencana_tindak_lanjut" value="4">
                         Wawancara Motivasional
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="s1" value="">
+                        <input type="radio" name="rencana_tindak_lanjut" value="5">
                         Intervensi Singkat
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="s1" value="">
+                        <input type="radio" name="rencana_tindak_lanjut" value="6">
                         Terapi Rumatan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="s1" value="">
+                        <input type="radio" name="rencana_tindak_lanjut" value="7">
                         Rehabilitasi rawat inap
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="s1" value="">
+                        <input type="radio" name="rencana_tindak_lanjut" value="8">
                         Konseling
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="s1" value="">
+                        <input type="radio" name="rencana_tindak_lanjut" value="9">
                         Lain-lain
                       </label>
+                      <input type="text" class="form-control" placeholder="sebutkan..." name="rencana_tindak_lanjut_lainnya">
                     </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Sebutkan</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="">
                   </div>
                 </div>
               </div>
@@ -1492,8 +1481,8 @@
               <div class="panel-body">
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Dokter?</label>
-                  <div class="col-sm-2">
-                    <input type="text" class="form-control" name="">
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="nama_dokter">
                   </div>
                 </div>
               </div>
