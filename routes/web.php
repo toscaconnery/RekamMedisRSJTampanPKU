@@ -80,6 +80,7 @@ Route::post('/rj_informasi_edukasi_list_informasi', 'RJInformasiEdukasiControlle
 
 Route::get('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@get_rj_lapor_rehabilitasi');
 Route::post('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@post_rj_lapor_rehabilitasi');
+Route::get('/rj_lapor_rehabilitasi_read', 'RJLaporRehabilitasiController@get_rj_lapor_rehabilitasi_read');
 
 Route::get('/rj_perkembangan_pasien', 'RJPerkembanganPasienController@get_rj_perkembangan_pasien');
 Route::post('/rj_perkembangan_pasien', 'RJPerkembanganPasienController@post_rj_perkembangan_pasien');

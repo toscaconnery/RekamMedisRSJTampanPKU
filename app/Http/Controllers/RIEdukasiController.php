@@ -118,7 +118,7 @@ class RIEdukasiController extends Controller
 
     public function get_ri_edukasi_read() {
     	$pasien = RIEdukasi::where('id', 1)->first();
-    	// dd($pasien);
+    	
         $this->data['medis_materi'] = $pasien->medis_materi;
         $this->data['medis_metode'] = $pasien->medis_metode;
         $this->data['medis_nama_edukator'] = $pasien->medis_nama_edukator;

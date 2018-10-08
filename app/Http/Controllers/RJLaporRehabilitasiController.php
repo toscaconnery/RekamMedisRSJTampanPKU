@@ -309,4 +309,178 @@ class RJLaporRehabilitasiController extends Controller
 
         return back();
     }
+
+    public function get_rj_lapor_rehabilitasi_read()
+    {
+        $pasien = RJLaporRehabilitasi::where('id', 1)->first();
+
+        $this->data['id_regis'] = $pasien->id_regis;
+        $this->data['tanggal_kedatangan'] = $pasien->tanggal_kedatangan;
+        $this->data['alamat'] = $pasien->alamat;
+        $this->data['telp'] = $pasien->telp;
+        $this->data['status_perkawinan'] = $pasien->status_perkawinan;
+        $this->data['pendidikan_terakhir'] = $pasien->pendidikan_terakhir;
+        
+        $this->data['penyakit_menyertai'] = $pasien->penyakit_menyertai;
+        $this->data['riwayat_penyakit_kronis'] = $pasien->riwayat_penyakit_kronis;
+        $this->data['jenis_penyakit_kronis'] = $pasien->jenis_penyakit_kronis;
+        $this->data['sedang_terapi'] = $pasien->sedang_terapi;
+        $this->data['jenis_terapi_dijalani'] = $pasien->jenis_terapi_dijalani;
+        $this->data['hiv'] = $pasien->hiv;
+        $this->data['hepatitis_b'] = $pasien->hepatitis_b;
+        $this->data['hepatitis_c'] = $pasien->hepatitis_c;
+
+        $this->data['status_pekerjaan'] = $pasien->status_pekerjaan;
+        $this->data['pola_pekerjaan'] = $pasien->pola_pekerjaan;
+        $this->data['kode_pekerjaan'] = $pasien->kode_pekerjaan;
+        $this->data['keterampilan_teknis'] = $pasien->keterampilan_teknis;
+        $this->data['pemberi_dukungan'] = $pasien->pemberi_dukungan;
+        $this->data['nama_pemberi_dukungan'] = $pasien->nama_pemberi_dukungan;
+        $this->data['dukungan_finansial'] = $pasien->dukungan_finansial;
+        $this->data['dukungan_tempat_tinggal'] = $pasien->dukungan_tempat_tinggal;
+        $this->data['dukungan_makan'] = $pasien->dukungan_makan;
+        $this->data['dukungan_pengobatan'] = $pasien->dukungan_pengobatan;
+
+        $this->data['p_alkohol'] = $pasien->p_alkohol;
+        $this->data['l_alkohol'] = $pasien->l_alkohol;
+        $this->data['c_alkohol'] = $pasien->c_alkohol;
+
+        $this->data['p_heroin'] = $pasien->p_heroin;
+        $this->data['l_heroin'] = $pasien->l_heroin;
+        $this->data['c_heroin'] = $pasien->c_heroin;
+
+        $this->data['p_metadon'] = $pasien->p_metadon;
+        $this->data['l_metadon'] = $pasien->l_metadon;
+        $this->data['c_metadon'] = $pasien->c_metadon;
+
+        $this->data['p_analgesik'] = $pasien->p_analgesik;
+        $this->data['l_analgesik'] = $pasien->l_analgesik;
+        $this->data['c_analgesik'] = $pasien->c_analgesik;
+        
+        $this->data['p_barbiturat'] = $pasien->p_barbiturat;
+        $this->data['l_barbiturat'] = $pasien->l_barbiturat;
+        $this->data['c_barbiturat'] = $pasien->c_barbiturat;
+
+        $this->data['p_sedatif'] = $pasien->p_sedatif;
+        $this->data['l_sedatif'] = $pasien->l_sedatif;
+        $this->data['c_sedatif'] = $pasien->c_sedatif;
+
+        $this->data['p_kokain'] = $pasien->p_kokain;
+        $this->data['l_kokain'] = $pasien->l_kokain;
+        $this->data['c_kokain'] = $pasien->c_kokain;
+
+        $this->data['p_amfetamin'] = $pasien->p_amfetamin;
+        $this->data['l_amfetamin'] = $pasien->l_amfetamin;
+        $this->data['c_amfetamin'] = $pasien->c_amfetamin;
+
+        $this->data['p_kanabis'] = $pasien->p_kanabis;
+        $this->data['l_kanabis'] = $pasien->l_kanabis;
+        $this->data['c_kanabis'] = $pasien->c_kanabis;
+
+        $this->data['p_halusinogen'] = $pasien->p_halusinogen;
+        $this->data['l_halusinogen'] = $pasien->l_halusinogen;
+        $this->data['c_halusinogen'] = $pasien->c_halusinogen;
+
+        $this->data['p_inhalan'] = $pasien->p_inhalan;
+        $this->data['l_inhalan'] = $pasien->l_inhalan;
+        $this->data['c_inhalan'] = $pasien->c_inhalan;
+
+        $this->data['p_lebih_dari_satu'] = $pasien->p_lebih_dari_satu;
+        $this->data['l_lebih_dari_satu'] = $pasien->l_lebih_dari_satu;
+
+        $this->data['zat_utama_disalahgunakan'] = $pasien->zat_utama_disalahgunakan;
+        $this->data['terapi_rehabilitasi'] = $pasien->terapi_rehabilitasi;
+        $this->data['jenis_terapi_rehabilitasi'] = $pasien->jenis_terapi_rehabilitasi;
+        $this->data['overdosis'] = $pasien->overdosis;
+        $this->data['keterangan_overdosis'] = $pasien->keterangan_overdosis;
+        $this->data['waktu_overdosis'] = $pasien->waktu_overdosis;
+        $this->data['cara_penanggulangan_overdosis'] = $pasien->cara_penanggulangan_overdosis;
+
+        $this->data['ilegal_1'] = $pasien->ilegal_1;
+        $this->data['ilegal_2'] = $pasien->ilegal_2;
+        $this->data['ilegal_3'] = $pasien->ilegal_3;
+        $this->data['ilegal_4'] = $pasien->ilegal_4;
+        $this->data['ilegal_5'] = $pasien->ilegal_5;
+        $this->data['ilegal_6'] = $pasien->ilegal_6;
+        $this->data['ilegal_7'] = $pasien->ilegal_7;
+        $this->data['ilegal_8'] = $pasien->ilegal_8;
+        $this->data['ilegal_9'] = $pasien->ilegal_9;
+        $this->data['ilegal_10'] = $pasien->ilegal_10;
+        $this->data['ilegal_11'] = $pasien->ilegal_11;
+        $this->data['ilegal_12'] = $pasien->ilegal_12;
+        $this->data['ilegal_13'] = $pasien->ilegal_13;
+        $this->data['ilegal_14'] = $pasien->ilegal_14;
+        $this->data['vonis_ilegal'] = $pasien->vonis_ilegal;
+        $this->data['tiga_tahun_belakangan'] = $pasien->tiga_tahun_belakangan;
+        $this->data['hidup_dengan_pengguna'] = $pasien->hidup_dengan_pengguna;
+        $this->data['saudara_pengguna'] = $pasien->saudara_pengguna;
+        $this->data['ortu_pengguna'] = $pasien->ortu_pengguna;
+        $this->data['pasangan_pengguna'] = $pasien->pasangan_pengguna;
+        $this->data['om_tante_pengguna'] = $pasien->om_tante_pengguna;
+        $this->data['teman_pengguna'] = $pasien->teman_pengguna;
+        $this->data['lainnya_pengguna'] = $pasien->lainnya_pengguna;
+        $this->data['keterangan_lainnya_pengguna'] = $pasien->keterangan_lainnya_pengguna;
+        
+        $this->data['konflik_ibu'] = $pasien->konflik_ibu;
+        $this->data['keterangan_konflik_ibu'] = $pasien->keterangan_konflik_ibu;
+        $this->data['konflik_ayah'] = $pasien->konflik_ayah;
+        $this->data['keterangan_konflik_ayah'] = $pasien->keterangan_konflik_ayah;
+        $this->data['konflik_adik_kakak'] = $pasien->konflik_adik_kakak;
+        $this->data['keterangan_konflik_adik_kakak'] = $pasien->keterangan_konflik_adik_kakak;
+        $this->data['konflik_pasangan'] = $pasien->konflik_pasangan;
+        $this->data['keterangan_konflik_pasangan'] = $pasien->keterangan_konflik_pasangan;
+        $this->data['konflik_anak'] = $pasien->konflik_anak;
+        $this->data['keterangan_konflik_anak'] = $pasien->keterangan_konflik_anak;
+        $this->data['konflik_keluarga'] = $pasien->konflik_keluarga;
+        $this->data['keterangan_konflik_keluarga'] = $pasien->keterangan_konflik_keluarga;
+        $this->data['subjek_konflik_keluarga'] = $pasien->subjek_konflik_keluarga;
+        $this->data['konflik_teman'] = $pasien->konflik_teman;
+        $this->data['keterangan_konflik_teman'] = $pasien->keterangan_konflik_teman;
+        $this->data['konflik_tetangga'] = $pasien->konflik_tetangga;
+        $this->data['keterangan_konflik_tetangga'] = $pasien->keterangan_konflik_tetangga;
+        $this->data['konflik_kantor'] = $pasien->konflik_kantor;
+        $this->data['keterangan_konflik_kantor'] = $pasien->keterangan_konflik_kantor;
+
+        $this->data['psikiatris_1'] = $pasien->psikiatris_1;
+        $this->data['keterangan_psikiatris_1'] = $pasien->keterangan_psikiatris_1;
+        $this->data['psikiatris_2'] = $pasien->psikiatris_2;
+        $this->data['keterangan_psikiatris_2'] = $pasien->keterangan_psikiatris_2;
+        $this->data['psikiatris_3'] = $pasien->psikiatris_3;
+        $this->data['keterangan_psikiatris_3'] = $pasien->keterangan_psikiatris_3;
+        $this->data['psikiatris_4'] = $pasien->psikiatris_4;
+        $this->data['keterangan_psikiatris_4'] = $pasien->keterangan_psikiatris_4;
+        $this->data['psikiatris_5'] = $pasien->psikiatris_5;
+        $this->data['keterangan_psikiatris_5'] = $pasien->keterangan_psikiatris_5;
+        $this->data['psikiatris_6'] = $pasien->psikiatris_6;
+        $this->data['keterangan_psikiatris_6'] = $pasien->keterangan_psikiatris_6;
+        $this->data['psikiatris_7'] = $pasien->psikiatris_7;
+        $this->data['keterangan_psikiatris_7'] = $pasien->keterangan_psikiatris_7;
+        $this->data['psikiatris_8'] = $pasien->psikiatris_8;
+        $this->data['keterangan_psikiatris_8'] = $pasien->keterangan_psikiatris_8;
+
+        $this->data['tekanan_darah'] = $pasien->tekanan_darah;
+        $this->data['nadi'] = $pasien->nadi;
+        $this->data['pernapasan'] = $pasien->pernapasan;
+        $this->data['suhu'] = $pasien->suhu;
+        $this->data['sistem_pencernaan'] = $pasien->sistem_pencernaan;
+        $this->data['sistem_jantung_pembuluh'] = $pasien->sistem_jantung_pembuluh;
+        $this->data['sistem_saraf_pusat'] = $pasien->sistem_saraf_pusat;
+        $this->data['tht_kulit'] = $pasien->tht_kulit;
+        $this->data['keterangan'] = $pasien->keterangan;
+        $this->data['hasil_urinalis'] = $pasien->hasil_urinalis;
+
+        $this->data['medis'] = $pasien->medis;
+        $this->data['pekerjaan_dukungan'] = $pasien->pekerjaan_dukungan;
+        $this->data['napza'] = $pasien->napza;
+        $this->data['legal'] = $pasien->legal;
+        $this->data['keluarga_sosial'] = $pasien->keluarga_sosial;
+        $this->data['psikiatris'] = $pasien->psikiatris;
+        $this->data['kriteria_napza'] = $pasien->kriteria_napza;
+        $this->data['diagnosis_lainnya'] = $pasien->diagnosis_lainnya;
+        $this->data['resume_masalah'] = $pasien->resume_masalah;
+        $this->data['rencana_tindak_lanjut'] = $pasien->rencana_tindak_lanjut;
+        $this->data['rencana_tindak_lanjut_lainnya'] = $pasien->rencana_tindak_lanjut_lainnya;
+        $this->data['nama_dokter'] = $pasien->nama_dokter;
+        return view('page.rj.lapor_rehabilitasi_read', $this->data);
+    }
 }
