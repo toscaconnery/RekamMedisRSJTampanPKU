@@ -37,6 +37,9 @@ class RJLaporRehabilitasiController extends Controller
                 $penyakit_menyertai .= $request->$str_jenis_penyakit."-&!^-".$request->$str_tahun_dirawat."-&!^-".$request->$str_lama_dirawat."$&!^@";
             }
         }
+        if(strlen($penyakit_menyertai) > 0) {
+            $penyakit_menyertai = substr($penyakit_menyertai, 0, -5);
+        }
         $data->penyakit_menyertai = $penyakit_menyertai;
         $data->riwayat_penyakit_kronis = $request->riwayat_penyakit_kronis;
         $data->jenis_penyakit_kronis = $request->jenis_penyakit_kronis;
@@ -224,6 +227,9 @@ class RJLaporRehabilitasiController extends Controller
                 $sistem_pencernaan .= $request->$str_sistem_pencernaan."$&!^@";
             }
         }
+        if(strlen($sistem_pencernaan) > 0) {
+            $sistem_pencernaan = substr($sistem_pencernaan, 0, -5);
+        }
         $data->sistem_pencernaan = $sistem_pencernaan;
 
         $jumlah_form_sistem_jantung_pembuluh = $request->jumlah_form_sistem_jantung_pembuluh;
@@ -233,6 +239,9 @@ class RJLaporRehabilitasiController extends Controller
             if(!is_null($request->$str_sistem_jantung_pembuluh)) {
                 $sistem_jantung_pembuluh .= $request->$str_sistem_jantung_pembuluh."$&!^@";
             }
+        }
+        if(strlen($sistem_jantung_pembuluh) > 0) {
+            $sistem_jantung_pembuluh = substr($sistem_jantung_pembuluh, 0, -5);
         }
         $data->sistem_jantung_pembuluh = $sistem_jantung_pembuluh;
 
@@ -244,6 +253,9 @@ class RJLaporRehabilitasiController extends Controller
                 $sistem_saraf_pusat .= $request->$str_sistem_saraf_pusat."$&!^@";
             }
         }
+        if(strlen($sistem_saraf_pusat) > 0) {
+            $sistem_saraf_pusat = substr($sistem_saraf_pusat, 0, -5);
+        }
         $data->sistem_saraf_pusat = $sistem_saraf_pusat;
 
         $jumlah_form_tht_kulit = $request->jumlah_form_tht_kulit;
@@ -254,6 +266,9 @@ class RJLaporRehabilitasiController extends Controller
                 $tht_kulit .= $request->$str_tht_kulit."$&!^@";
             }
         }
+        if(strlen($tht_kulit) > 0) {
+            $tht_kulit = substr($tht_kulit, 0, -5);
+        }
         $data->tht_kulit = $tht_kulit;
 
         $jumlah_form_keterangan = $request->jumlah_form_keterangan;
@@ -263,6 +278,9 @@ class RJLaporRehabilitasiController extends Controller
             if(!is_null($request->$str_keterangan)) {
                 $keterangan .= $request->$str_keterangan."$&!^@";
             }
+        }
+        if(strlen($keterangan) > 0) {
+            $keterangan = substr($keterangan, 0, -5);
         }
         $data->keterangan = $keterangan;
 
@@ -321,7 +339,22 @@ class RJLaporRehabilitasiController extends Controller
         $this->data['status_perkawinan'] = $pasien->status_perkawinan;
         $this->data['pendidikan_terakhir'] = $pasien->pendidikan_terakhir;
         
-        $this->data['penyakit_menyertai'] = $pasien->penyakit_menyertai;
+        $all_penyakit_menyertai = $pasien->penyakit_menyertai;
+        $this->data['ada_penyakit_menyertai'] = False;
+        $penyakit_menyertai = '';
+        if(strlen($pasien->penyakit_menyertai) > 0) {
+            $this->data['ada_penyakit_menyertai'] = True;
+            $all_penyakit_menyertai = explode("$&!^@", $all_penyakit_menyertai);
+            $penyakit_menyertai = array();
+            foreach($all_penyakit_menyertai as $key => $value) {
+                $penyakit_menyertai[$key] = array();
+                $exploded = explode("-&!^-", $value);
+                foreach ($exploded as $key2 => $value2) {
+                    $penyakit_menyertai[$key][$key2] = $value2;
+                }
+            }
+        }
+        $this->data['penyakit_menyertai'] = $penyakit_menyertai;
         $this->data['riwayat_penyakit_kronis'] = $pasien->riwayat_penyakit_kronis;
         $this->data['jenis_penyakit_kronis'] = $pasien->jenis_penyakit_kronis;
         $this->data['sedang_terapi'] = $pasien->sedang_terapi;
@@ -462,12 +495,60 @@ class RJLaporRehabilitasiController extends Controller
         $this->data['nadi'] = $pasien->nadi;
         $this->data['pernapasan'] = $pasien->pernapasan;
         $this->data['suhu'] = $pasien->suhu;
-        $this->data['sistem_pencernaan'] = $pasien->sistem_pencernaan;
-        $this->data['sistem_jantung_pembuluh'] = $pasien->sistem_jantung_pembuluh;
-        $this->data['sistem_saraf_pusat'] = $pasien->sistem_saraf_pusat;
-        $this->data['tht_kulit'] = $pasien->tht_kulit;
-        $this->data['keterangan'] = $pasien->keterangan;
-        $this->data['hasil_urinalis'] = $pasien->hasil_urinalis;
+        
+        $all_sistem_pencernaan = $pasien->sistem_pencernaan;
+        $sistem_pencernaan = '';
+        $this->data['ada_sistem_pencernaan'] = False;
+        if(strlen($all_sistem_pencernaan) > 0) {
+            $this->data['ada_sistem_pencernaan'] = True;
+            $sistem_pencernaan = explode("$&!^@" , $all_sistem_pencernaan);
+        }
+        $this->data['sistem_pencernaan'] = $sistem_pencernaan;
+
+        $all_sistem_jantung_pembuluh = $pasien->sistem_jantung_pembuluh;
+        $sistem_jantung_pembuluh = '';
+        $this->data['ada_sistem_jantung_pembuluh'] = False;
+        if(strlen($all_sistem_jantung_pembuluh) > 0) {
+            $this->data['ada_sistem_jantung_pembuluh'] = True;
+            $sistem_jantung_pembuluh = explode("$&!^@", $all_sistem_jantung_pembuluh);
+        }
+        $this->data['sistem_jantung_pembuluh'] = $sistem_jantung_pembuluh;
+
+        $all_sistem_saraf_pusat = $pasien->sistem_saraf_pusat;
+        $sistem_saraf_pusat = '';
+        $this->data['ada_sistem_saraf_pusat'] = False;
+        if(strlen($all_sistem_saraf_pusat) > 0) {
+            $this->data['ada_sistem_saraf_pusat'] = True;
+            $sistem_saraf_pusat = explode("$&!^@", $all_sistem_saraf_pusat);
+        }
+        $this->data['sistem_saraf_pusat'] = $sistem_saraf_pusat;
+
+        $all_tht_kulit = $pasien->tht_kulit;
+        $tht_kulit = '';
+        $this->data['ada_tht_kulit'] = False;
+        if(strlen($all_tht_kulit) > 0) {
+            $this->data['ada_tht_kulit'] = True;
+            $tht_kulit = explode("$&!^@", $all_tht_kulit);
+        }
+        $this->data['tht_kulit'] = $tht_kulit;
+        
+        $all_keterangan = $pasien->keterangan;
+        $keterangan = '';
+        $this->data['ada_keterangan'] = False;
+        if(strlen($all_keterangan) > 0) {
+            $this->data['ada_keterangan'] = True;
+            $keterangan = explode("$&!^@", $all_keterangan);
+        }
+        $this->data['keterangan'] = $keterangan;
+
+        $hasil_urinalis = array();
+        if(strlen($pasien->hasil_urinalis) > 0) {
+            $hasil_urinalis = explode("-", $pasien->hasil_urinalis);
+        }
+        $this->data['hasil_urinalis'] = array();
+        foreach($hasil_urinalis as $key => $value) {
+            $this->data['hasil_urinalis'][$value] = True;
+        }
 
         $this->data['medis'] = $pasien->medis;
         $this->data['pekerjaan_dukungan'] = $pasien->pekerjaan_dukungan;

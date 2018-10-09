@@ -189,7 +189,7 @@
                   </div>
                   <label class="col-sm-2 control-label">Jenis penyakit</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" name="">
+                    <input type="text" class="form-control" name="jenis_penyakit_kronis">
                   </div>
                 </div>
                 <div class="form-group">
