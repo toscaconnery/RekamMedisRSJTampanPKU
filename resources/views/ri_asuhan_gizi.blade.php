@@ -1072,9 +1072,52 @@
                     <input type="text" class="form-control">
                   </div>
                 </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Nama</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
               </form>
             </div>
           </section>
+
+          <section class="panel">
+              <header class="panel-heading">
+              </header>
+              <div class="panel-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width: 15%; text-align: center;vertical-align:middle;">Tanggal</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">BB (KG)</th>
+                      <th style="width: 50%; text-align: center;vertical-align:middle;">Konsultasi Gizi/Pengamatan</th>
+                      <th style="width: 20%; text-align: center;vertical-align:middle;">Nama</th>
+                      <th style="width: 5%; text-align: center;vertical-align:middle;">Check</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    <tr>
+                      <td style="text-align:center;"><input type="date" class="form-control" name="tanggal_1" required></td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                        </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="checkbox" class="form-control" name="ttd_edukator_1">
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
           <div>
             <button type="submit" class="btn btn-primary">Submit</button>
