@@ -157,194 +157,315 @@
             </section>
 
             <section class="panel">
-              <header class="panel-heading">
-              HEMATOLOGI
+              <header class="panel-heading">HEMATOLOGI
               </header>
               <div class="panel-body">
-                <form class="form-horizontal " method="get">
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Pemeriksaan</label>
-                    <div class="col-lg-2">
-                      <select class="form-control input-sm m-bot15">
-                          <option>-</option>
-                          <option>-</option>
-                          <option>-</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Hasil</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Status</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nilai Normal</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </form>
+                <table class="table table-bordered">
+
+                  <thead>
+                    <tr>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Pemeriksaan</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Hasil</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Status</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Nilai Normal</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    
+                    <tr>
+                      <td style="text-align:center;">
+                        <select class="form-control input-sm m-bot15">
+                          <option value="0">-</option>
+                          <option value="Heamoglobin">Heamoglobin</option>
+                          <option value="Leukosit">Leukosit</option>
+                          <option value="Hitung Jenis">Hitung Jenis</option>
+                          <option value="Basofil">Basofil</option>
+                          <option value="Eosinopil">Eosinopil</option>
+                          <option value="N.Batang">N.Batang</option>
+                          <option value="N.Segmen">N.Segmen</option>
+                          <option value="Limposit">Limposit</option>
+                          <option value="Monosit">Monosit</option>
+                          <option value="LED">LED</option>
+                          <option value="Erytrosit">Erytrosit</option>
+                          <option value="Hematokrit">Hematokrit</option>
+                          <option value="Trombosit">Trombosit</option>
+                          <option value="BT">BT</option>
+                          <option value="CT">CT</option>
+                          <option value="Gol Darah">Gol Darah</option>
+                          <option value="Malaria">Malaria</option>
+                          <option value="MCV">MCV</option>
+                          <option value="MCH">MCH</option>
+                          <option value="MCHC">MCHC</option>
+                          <option value="MDT">MDT</option>
+                        </select>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+
+            <section class="panel">
+              <header class="panel-heading">URINE
+              </header>
+              <div class="panel-body">
+                <table class="table table-bordered">
+
+                  <thead>
+                    <tr>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Pemeriksaan</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Hasil</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Status</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Nilai Normal</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    
+                    <tr>
+                      <td style="text-align:center;">
+                        <select class="form-control input-sm m-bot15">
+                          <option value="0">-</option>
+                          <option value="Warna">Warna</option>
+                          <option value="Kekeruhan">Kekeruhan</option>
+                          <option value="Ph">Ph</option>
+                          <option value="Berat Jenis">Berat Jenis</option>
+                          <option value="Reduksi">Reduksi</option>
+                          <option value="Protein">Protein</option>
+                          <option value="Bilirubin">Bilirubin</option>
+                          <option value="Urobilinogen">Urobilinogen</option>
+                          <option value="Keton">Keton</option>
+                          <option value="Sedimen">Sedimen</option>
+                          <option value="Kristal">Kristal</option>
+                          <option value="Entrosit">Entrosit</option>
+                          <option value="Leukosit">Leukosit</option>
+                          <option value="Epitel">Epitel</option>
+                          <option value="Plano Test">Plano Test</option>
+                        </select>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+          <section class="panel">
+              <header class="panel-heading">FAECES RUTIN
+              </header>
+              <div class="panel-body">
+                <table class="table table-bordered">
+
+                  <thead>
+                    <tr>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Pemeriksaan</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Hasil</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Status</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Nilai Normal</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    
+                    <tr>
+                      <td style="text-align:center;">
+                        <select class="form-control input-sm m-bot15">
+                          <option value="0">-</option>
+                          <option value="Warna">Warna</option>
+                          <option value="Konsistensi">Konsistensi</option>
+                          <option value="Lendir">Lendir</option>
+                          <option value="Darah/Blood">Darah/Blood</option>
+                          <option value="Amoeba">Amoeba</option>
+                          <option value="Lain-lain">Lain-lain</option>
+                        </select>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+          <section class="panel">
+              <header class="panel-heading">KIMIA DARAH
+              </header>
+              <div class="panel-body">
+                <table class="table table-bordered">
+
+                  <thead>
+                    <tr>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Pemeriksaan</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Hasil</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Status</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Nilai Normal</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    
+                    <tr>
+                      <td style="text-align:center;">
+                        <select class="form-control input-sm m-bot15">
+                          <option value="0">-</option>
+                          <option value="Gula darah sewaktu">Gula darah sewaktu</option>
+                          <option value="Gula darah puasa">Gula darah puasa</option>
+                          <option value="Gula darah 2 jam PP">Gula darah 2 jam PP</option>
+                          <option value="ALP">ALP</option>
+                          <option value="Total Protein">Total Protein</option>
+                          <option value="Albumin">Albumin</option>
+                          <option value="Globulin">Globulin</option>
+                          <option value="Bilirubin Total">Bilirubin Total</option>
+                          <option value="Bilirubin Direk">Bilirubin Direk</option>
+                          <option value="Bilirubin Indirek">Bilirubin Indirek</option>
+                          <option value="Total Cholesterol">Total Cholesterol</option>
+                          <option value="HDL Cholesterol">HDL Cholesterol</option>
+                          <option value="LDL Cholesterol">LDL Cholesterol</option>
+                          <option value="Trygliserida">Trygliserida</option>
+                          <option value="SGOT">SGOT</option>
+                          <option value="SGPT">SGPT</option>
+                          <option value="GGT">GGT</option>
+                          <option value="Ureum">Ureum</option>
+                          <option value="Creatinim">Creatinim</option>
+                          <option value="Asam Urat">Asam Urat</option>
+                        </select>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </section>
 
             <section class="panel">
-              <header class="panel-heading">
-              URINE
+              <header class="panel-heading">SEROLOGI
               </header>
               <div class="panel-body">
-                <form class="form-horizontal " method="get">
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Pemeriksaan</label>
-                    <div class="col-lg-2">
-                      <select class="form-control input-sm m-bot15">
-                          <option>-</option>
-                          <option>-</option>
-                          <option>-</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Hasil</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Status</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Nilai Normal</label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                </form>
+                <table class="table table-bordered">
+
+                  <thead>
+                    <tr>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Pemeriksaan</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Hasil</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Status</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Nilai Normal</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    
+                    <tr>
+                      <td style="text-align:center;">
+                        <select class="form-control input-sm m-bot15">
+                          <option value="0">-</option>
+                          <option value="S. Typhosa O">S. Typhosa O</option>
+                          <option value="S. Typhosa H">S. Typhosa H</option>
+                          <option value="S. Paratyphosa AO">S. Paratyphosa AO</option>
+                          <option value="S. Paratyphosa AH">S. Paratyphosa AH</option>
+                          <option value="S. Paratyphosa BO">S. Paratyphosa BO</option>
+                          <option value="S. Paratyphosa BH">S. Paratyphosa BH</option>
+                          <option value="S. Paratyphosa CO">S. Paratyphosa CO</option>
+                          <option value="S. Paratyphosa CH">S. Paratyphosa CH</option>
+                          <option value="Anti HIV">Anti HIV</option>
+                          <option value="Hbs Ag">Hbs Ag</option>
+                          <option value="Anti Hbs Ag">Anti Hbs Ag</option>
+                          <option value="CRP">CRP</option>
+                          <option value="RF">RF</option>
+                          <option value="ASTO">ASTO</option>
+                          <option value="Dengue lgG/lg M">Dengue lgG/lg M</option>
+                        </select>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </section>
 
-          <section class="panel">
-            <header class="panel-heading">
-            FAECES RUTIN
-            </header>
-            <div class="panel-body">
-              <form class="form-horizontal " method="get">
-                <div class="form-group">
-                  <label class="control-label col-lg-2" for="inputSuccess">Pemeriksaan</label>
-                  <div class="col-lg-2">
-                    <select class="form-control input-sm m-bot15">
-                        <option>-</option>
-                        <option>-</option>
-                        <option>-</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Hasil</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Status</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nilai Normal</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </section>
+            <section class="panel">
+              <header class="panel-heading">NARKOBA
+              </header>
+              <div class="panel-body">
+                <table class="table table-bordered">
 
-          <section class="panel">
-            <header class="panel-heading">
-            KIMIA DARAH
-            </header>
-            <div class="panel-body">
-              <form class="form-horizontal " method="get">
-                <div class="form-group">
-                  <label class="control-label col-lg-2" for="inputSuccess">Pemeriksaan</label>
-                  <div class="col-lg-2">
-                    <select class="form-control input-sm m-bot15">
-                        <option>-</option>
-                        <option>-</option>
-                        <option>-</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Hasil</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Status</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nilai Normal</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </section>
+                  <thead>
+                    <tr>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Pemeriksaan</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Hasil</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Status</th>
+                      <th style="width: 25%; text-align: center;vertical-align:middle;">Nilai Normal</th>
+                    </tr>
+                  </thead>
 
-          <section class="panel">
-            <header class="panel-heading">
-            SEROLOGI
-            </header>
-            <div class="panel-body">
-              <form class="form-horizontal " method="get">
-                <div class="form-group">
-                  <label class="control-label col-lg-2" for="inputSuccess">Pemeriksaan</label>
-                  <div class="col-lg-2">
-                    <select class="form-control input-sm m-bot15">
-                        <option>-</option>
-                        <option>-</option>
-                        <option>-</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Hasil</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Status</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nilai Normal</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </section>
+                  <tbody>
+                    
+                    <tr>
+                      <td style="text-align:center;">
+                        <select class="form-control input-sm m-bot15">
+                          <option value="0">-</option>
+                          <option value="Canabis">Canabis</option>
+                          <option value="Opiat">Opiat</option>
+                          <option value="Benzodiazepin">Benzodiazepin</option>
+                          <option value="M Ampetamin">M Ampetamin</option>
+                          <option value="Alkohol">Alkohol</option>
+                        </select>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td>
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
 
             <div>
