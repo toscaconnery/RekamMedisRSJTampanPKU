@@ -247,6 +247,125 @@ class RJTesKonselingHIVController extends Controller
         $data->jpe = $request->jpe;
         $data->save();
 
-    	dd($request);
+    	return back();
+    }
+
+    public function get_tes_konseling_hiv_read()
+    {
+    	$pasien = RJTesKonselingHIV::where('id', 1)->first();
+    	$this->data['id_regis'] = 1;
+    	$this->data['id_regis'] = $pasien->id_regis;
+        $this->data['nama'] = $pasien->nama;
+        $this->data['alamat'] = $pasien->alamat;
+        $this->data['propinsi'] = $pasien->propinsi;
+        $this->data['kota_kabupaten'] = $pasien->kota_kabupaten;
+        $this->data['nama_ibu_kandung'] = $pasien->nama_ibu_kandung;
+        $this->data['jenis_kelamin'] = $pasien->jenis_kelamin;
+        $this->data['spk'] = $pasien->spk;
+        $this->data['tgl_lahir'] = $pasien->tgl_lahir;
+        $this->data['skh'] = $pasien->skh;
+        $this->data['umur_anak_terakhir'] = $pasien->umur_anak_terakhir;
+        $this->data['jumlah_anak_kandung'] = $pasien->jumlah_anak_kandung;
+        $this->data['pen'] = $pasien->pen;
+        $this->data['pek'] = $pasien->pek;
+        $this->data['jenis_pekerjaan'] = $pasien->jenis_pekerjaan;
+        $this->data['kr'] = $pasien->kr;
+        $this->data['ktr'] = $pasien->ktr;
+        $this->data['lama_ps_penasun'] = $pasien->lama_ps_penasun;
+        $this->data['sk'] = $pasien->sk;
+        $this->data['sk'] = $pasien->sk;
+        $this->data['sr'] = $pasien->sr;
+        $this->data['pt'] = $pasien->pt;
+        $this->data['pp'] = $pasien->pp;
+        $this->data['ha'] = $pasien->ha;
+        $this->data['tanggal_lahir_pasangan'] = $pasien->tanggal_lahir_pasangan;
+        $this->data['sp'] = $pasien->sp;
+        $this->data['tgl_tes_terakhir_pasangan'] = $pasien->tgl_tes_terakhir_pasangan;
+        $this->data['wbp'] = $pasien->wbp;
+        $this->data['tgl_konseling_pra_hiv'] = $pasien->tgl_konseling_pra_hiv;
+        $this->data['skl'] = $pasien->skl;
+        $all_alasan_tes = $pasien->alasan_tes;
+        $exploded_alasan_tes = explode("-", $all_alasan_tes);
+        $this->data['alasan_tes'] = array();
+        foreach($exploded_alasan_tes as $key => $value) {
+        	$this->data['alasan_tes'][$value] = True;
+        }
+        $this->data['dmn'] = $pasien->dmn;
+        $this->data['dmn_lainnya'] = $pasien->dmn_lainnya;
+        $this->data['kaj'] = $pasien->kaj;
+        $this->data['waktu_kaj'] = $pasien->waktu_kaj;
+        $this->data['an'] = $pasien->an;
+        $this->data['waktu_an'] = $pasien->waktu_an;
+        $this->data['per'] = $pasien->per;
+        $this->data['waktu_per'] = $pasien->waktu_per;
+        $this->data['trf'] = $pasien->trf;
+        $this->data['waktu_trf'] = $pasien->waktu_trf;
+        $this->data['trm'] = $pasien->trm;
+        $this->data['waktu_trm'] = $pasien->waktu_trm;
+        $this->data['ktr_lainnya'] = $pasien->ktr_lainnya;
+        $this->data['waktu_ktr_lainnya'] = $pasien->waktu_ktr_lainnya;
+        $this->data['jd'] = $pasien->jd;
+        $this->data['waktu_jd'] = $pasien->waktu_jd;
+        $this->data['ksd'] = $pasien->ksd;
+        $this->data['tes_hiv'] = $pasien->tes_hiv;
+        $this->data['tt_hiv'] = $pasien->tt_hiv;
+        $this->data['wt_hiv'] = $pasien->wt_hiv;
+        $this->data['ht_hiv'] = $pasien->ht_hiv;
+        $this->data['tgl_pemberian_informasi'] = $pasien->tgl_pemberian_informasi;
+        $this->data['tes_hiv2'] = $pasien->tes_hiv2;
+        $this->data['tt_hiv2'] = $pasien->tt_hiv2;
+        $this->data['wt_hiv2'] = $pasien->wt_hiv2;
+        $this->data['ht_hiv2'] = $pasien->ht_hiv2;
+        $all_ptp = $pasien->ptp;
+        $exploded_ptp = explode("-", $all_ptp);
+        $this->data['ptp'] = array();
+        foreach($exploded_ptp as $key => $value) {
+        	$this->data['ptp'][$value] = True;
+        }
+        $this->data['ims_lainnya'] = $pasien->ims_lainnya;
+        $this->data['ptp_lainnya'] = $pasien->ptp_lainnya;
+        $this->data['kesediaan_tes_tipk'] = $pasien->kesediaan_tes_tipk;
+        $this->data['tgl_tes_hiv'] = $pasien->tgl_tes_hiv;
+        $this->data['jt'] = $pasien->jt;
+        $this->data['r1'] = $pasien->r1;
+        $this->data['r1_reagen'] = $pasien->r1_reagen;
+        $this->data['r2'] = $pasien->r2;
+        $this->data['r2_reagen'] = $pasien->r2_reagen;
+        $this->data['r3'] = $pasien->r3;
+        $this->data['r3_reagen'] = $pasien->r3_reagen;
+        $this->data['kes'] = $pasien->kes;
+        $this->data['nrn_pdp'] = $pasien->nrn_pdp;
+        $this->data['tgl_masuk_pdp'] = $pasien->tgl_masuk_pdp;
+        $all_tl_tipk = $pasien->tl_tipk;
+        $exploded_tl_tipk = explode("-", $all_tl_tipk);
+        $this->data['tl_tipk'] = array();
+        foreach($exploded_tl_tipk as $key => $value) {
+        	$this->data['tl_tipk'][$value] = True;
+        }
+        $this->data['shp'] = $pasien->shp;
+        $this->data['tgl_konseling_pasca_tes'] = $pasien->tgl_konseling_pasca_tes;
+        $this->data['tha'] = $pasien->tha;
+        $this->data['ktb'] = $pasien->ktb;
+        $this->data['jkyd'] = $pasien->jkyd;
+        $all_tl_kts = $pasien->tl_kts;
+        $exploded_tl_kts = explode("-", $all_tl_kts);
+        $this->data['tl_kts'] = array();
+        foreach ($exploded_tl_kts as $key => $value) {
+        	$this->data['tl_kts'][$value] = True;
+        }
+        $all_rpp = $pasien->rpp;
+        $exploded_rpp = explode("-", $all_rpp);
+        $this->data['rpp'] = array();
+        foreach($exploded_rpp as $key => $value) {
+        	$this->data['rpp'][$value] = True;
+        }
+        $this->data['rpp_lsm'] = $pasien->rpp_lsm;
+        $this->data['ksl'] = $pasien->ksl;
+        $this->data['ksl_lainnya'] = $pasien->ksl_lainnya;
+        $this->data['nama_konselor'] = $pasien->nama_konselor;
+        $this->data['sl'] = $pasien->sl;
+        $this->data['jpe'] = $pasien->jpe;
+
+    	return view('page.rj.tes_konseling_hiv_read', $this->data);
     }
 }

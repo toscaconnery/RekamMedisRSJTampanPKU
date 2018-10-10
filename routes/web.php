@@ -91,6 +91,7 @@ Route::post('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@post_rj
 
 Route::get('/rj_tes_konseling_hiv', 'RJTesKonselingHIVController@get_tes_konseling_hiv');
 Route::post('/rj_tes_konseling_hiv', 'RJTesKonselingHIVController@post_tes_konseling_hiv');
+Route::get('/rj_tes_konseling_hiv_read', 'RJTesKonselingHIVController@get_tes_konseling_hiv_read');
 
 Route::get('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikolog');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_psikolog');
@@ -225,9 +226,9 @@ Route::get('/ri_laboratorium', function () {
     return view('ri_laboratorium');
 });
 
-Route::get('/rj_teskonseling_hiv', function () {
-    return view('rj_teskonseling_hiv');
-});
+// Route::get('/rj_teskonseling_hiv', function () {
+//     return view('rj_teskonseling_hiv');
+// });
 
 Route::get('/rj_izin_hiv', function () {
     return view('rj_izin_hiv');
