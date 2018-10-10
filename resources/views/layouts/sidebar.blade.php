@@ -21,8 +21,8 @@
           <li><a class="" href="{{url('')}}/rj_informasi_edukasi">Informasi dan Edukasi</a></li>
           <li><a class="" href="{{url('')}}/rj_lapor_rehabilitasi">Lapor dan Rehabilitasi</a></li>
           <li><a class="" href="{{url('')}}/rj_identifikasi_stresor">Identifikasi Stresor</a></li>
-          <li><a class="" href="{{url('')}}/rj_teskonseling_hiv">Tes & Konseling HIV</a></li>
-          <li><a class="" href="{{url('')}}/rj_izin_hiv">Izin VCT HIV</a></li>
+          <li><a class="" href="{{url('')}}/rj_tes_konseling_hiv">Tes & Konseling HIV</a></li>
+          <li><a class="" href="{{url('')}}/rj_izin_vct_hiv">Izin VCT HIV</a></li>
           <li><a class="" href="{{url('')}}/rj_ikhtisar_hiv">Ikhtisar HIV & ART</a></li>
           <li><a class="" href="{{url('')}}/rj_perkembangan_pasien">Perkembangan Pasien</a></li>
           <li><a class="" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikolog">Tumbuh Kembang</a></li>
