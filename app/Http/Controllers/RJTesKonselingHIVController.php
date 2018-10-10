@@ -253,7 +253,6 @@ class RJTesKonselingHIVController extends Controller
     public function get_tes_konseling_hiv_read()
     {
     	$pasien = RJTesKonselingHIV::where('id', 1)->first();
-    	$this->data['id_regis'] = 1;
     	$this->data['id_regis'] = $pasien->id_regis;
         $this->data['nama'] = $pasien->nama;
         $this->data['alamat'] = $pasien->alamat;
