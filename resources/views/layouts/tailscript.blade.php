@@ -13,10 +13,7 @@
 <!--custom switch-->
 <script src="{{url('')}}/admin_bootstrap/js/bootstrap-switch.js"></script>
 <!--custom tagsinput-->
-<script src="{{url('')}}/admin_bootstrap/js/jquery.tagsinput.js"></script>
-
-<!-- colorpicker -->
-
+<script src="{{url('')}}/admin_bootstrap/js/jquery.tagsinput.js"></script
 <!-- bootstrap-wysiwyg -->
 <script src="{{url('')}}/admin_bootstrap/js/jquery.hotkeys.js"></script>
 <script src="{{url('')}}/admin_bootstrap/js/bootstrap-wysiwyg.js"></script>
