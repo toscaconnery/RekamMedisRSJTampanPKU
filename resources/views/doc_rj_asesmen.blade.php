@@ -144,25 +144,33 @@ header('Content-Type: application/pdf');
   </div>
 
   <h4>PENILAIAN TINGKAT NYERI</h4>
-  <div style="font-size: 85%;">  
-    <p>Nyeri Kronis</p>
-      <div class="row">
-        <div class="column">
+  <table>
+    <tr>
+      <td class="box">
+        <div style="font-size:100%">  
+          <p>Nyeri Kronis</p><br>
+   
           <p>Skala Nyeri : 4</p>
           <p>Durasi : 1 menit</p>
-        </div>
-        <div class="column">
+          
+          <br>        
+          
           <p>Lokasi : Tangan</p>
           <p>Frekuensi : 3</p>
+              
+          <br>  
+          <p><b>Nyeri hilang, bila :</b></p>
+          <ul>
+            <li>Minum Obat</li>
+            <li>Istirahat</li>
+          </ul>
+          <br>
+          <p>Diberitahukan ke <b>dokter</b> : Ya, pukul 13.00.00</p>
         </div>
-      </div>
-      <p><b>Nyeri hilang, bila :</b></p>
-      <ul>
-        <li>Minum Obat</li>
-        <li>Istirahat</li>
-      </ul>
-      <p>Diberitahukan ke <b>dokter</b> : Ya, pukul 13.00.00</p>
-  </div>
+      </td>
+      <td><center><img src="img/nyeri.jpg" alt="Smiley face" height="170" width="300"><br> </center></td>
+    </tr>
+  </table>
 
   <h4>PENILAIAN RISIKO JATUH</h4>
   <div style="font-size: 85%;">  
@@ -558,10 +566,13 @@ header('Content-Type: application/pdf');
     </table>
   </div>
 
-  <h4>STATUS LOKALIS</h4>
-  <div style="font-size: 85%;">  
-    <p>Sakit pada ... dan nyeri pada ...</p>
-  </div>
+  <h4>STATUS LOKALIS</h4><br>
+  <table style="font-size:85%;">
+    <tr>
+      <td class="box" style="padding:2%"><center><img src="img/body.jpg" alt="Smiley face" height="200" width="200"></center></td>
+      <td class="box" style="margin-left:5%;vertical-align:top;padding:5%;" width="75%">Sakit pada ... dan nyeri pada ...</td>
+    </tr>
+  </table>
 
   <h4>STATUS PSIKIATRIS</h4>
   <div style="font-size: 85%;">
@@ -1097,7 +1108,7 @@ header('Content-Type: application/pdf');
   <div style="font-size: 85%;">  
     <p>Pulang</p>
     <p>Perlu Kontrol, tanggal 22/08/2018</p>
-  </div>
+  
   <p><b>KONDISI PASIEN SAAT KELUAR</b></p>
   <p>Kesadaran :</p>
   <ul>
@@ -1105,7 +1116,7 @@ header('Content-Type: application/pdf');
     <li>Apatis</li>
   </ul>
   
-  <p>Tanda-tanda vital : </p>
+  <p>Tanda-tanda vital : </p></div>
   <table>
       <tbody>
         <tr>

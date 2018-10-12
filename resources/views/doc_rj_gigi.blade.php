@@ -15,6 +15,7 @@ header('Content-Type: application/pdf');
   <h2 align="center">ASESMEN AWAL PASIEN GIGI RAWAT JALAN</h2><br>
   
   <h4>EVALUASI TINDAKAN KEPERAWATAN</h4>
+  <br>
   <div style="font-size: 85%;">  
     <table>
       <tbody>
@@ -236,6 +237,7 @@ header('Content-Type: application/pdf');
     </table>
   </div>
   <br>
+  <img src="img/gigi.jpg" alt="Smiley face" height="400" width="750">
   <hr>
   <br>
     <div style="font-size: 85%;">  
@@ -313,26 +315,43 @@ header('Content-Type: application/pdf');
               : Keterangannya adalah ... ...
             </td>                
           </tr>
-          <tr>
-            <td class="konten_s_question">
-              Tanggal
-            </td>    
-            <td class="konten_s_answer">  
-              : 20/08/18
-            </td>                
-          </tr>
-          <tr>
-            <td class="konten_s_question">
-              Nama Dokter
-            </td>    
-            <td class="konten_s_answer">  
-              : dr. ___ ____
-            </td>                
-          </tr>
+          
         </tbody>
       </table>
     </div>
   <br>
+    <hr>
+  <table>
+    <tr>
+      <td class="box" width="25%">
+        11:
+      </td>
+      <td class="box" width="25%">
+        21/61:
+      </td>
+      <td class="box" width="25%">
+        31/71:
+      </td>
+      <td class="box" width="25%">
+        41/81:
+      </td>
+    </tr>
+    <tr>
+      <td class="box" width="25%">
+        12:
+      </td>
+      <td class="box" width="25%">
+        22/62:
+      </td>
+      <td class="box" width="25%">
+        32/72:
+      </td>
+      <td class="box" width="25%">
+        42/82:
+      </td>
+    </tr>
+  </table>
+
   <hr>
   <br>
     <div style="font-size: 85%;">  
@@ -342,15 +361,18 @@ header('Content-Type: application/pdf');
             <td class="konten_s_question">
               Tanggal
             </td>    
-            <td class="konten_s_answer">  
+            <td class="plain">  
               : 20/08/18
+            </td>
+            <td rowspan="2" style="vertical-align:top">
+              Tanda Tangan
             </td>                
           </tr>
           <tr>
             <td class="konten_s_question">
               Nama Dokter
             </td>    
-            <td class="konten_s_answer">  
+            <td class="plain">  
               : dr. ___ ____
             </td>                
           </tr>
@@ -358,22 +380,7 @@ header('Content-Type: application/pdf');
       </table>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="row">
-      <div class="column">
-        <p></p>
-      </div>
-      <div class="column">
-        <p style="text-align: center;">Tanda Tangan</p>
-      </div>
-    </div>
+    
   </div>
 
 </body>
