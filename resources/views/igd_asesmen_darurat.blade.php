@@ -798,6 +798,17 @@
                   Penilaian Tingkat Nyeri
                 </header>
                 <div class="panel-body">
+                  
+                  <div class="form-group">  
+                    <div class="col-lg-6">
+                      <img src="img/nyeri.jpg" alt="Smiley face" height="300" width="550">
+                    </div>
+                    <div class="col-lg-6">
+                      <center><b>Status Lokalis</b></center>
+                      <center><img src="img/body.jpg" alt="Smiley face" height="300" width="450"></center>
+                    </div>
+                  </div>
+
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Tingkat nyeri</label>
                     <div class="col-lg-3">

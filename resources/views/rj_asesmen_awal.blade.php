@@ -747,6 +747,12 @@
                   Penilaian Tingkat Nyeri
                 </header>
                 <div class="panel-body">
+                  <div class="form-group">  
+                    <div class="col-lg-12">
+                      <img src="img/nyeri.jpg" alt="Smiley face" height="300" width="550">
+                    </div>
+                  </div>
+
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Tingkat nyeri</label>
                     <div class="col-lg-3">
@@ -1782,6 +1788,34 @@
                     <label class="col-sm-2 control-label">Anggota Gerak</label>
                     <div class="col-sm-8">
                       <input type="text" class="form-control" name="anggota_gerak">
+                    </div>
+                  </div>
+
+                  <button type="submit">Simpan</button>
+
+                </div>
+              </section>
+            </form>
+
+            <form class="form-horizontal " method="post" action="Status Lokalis">
+              {{ csrf_field() }}
+              <section class="panel">
+                <header class="panel-heading">
+                  Pemeriksaan Fisik
+                </header>
+                <div class="panel-body">
+
+                  <div class="form-group">  
+                    <div class="col-lg-12">
+                      <b><center>Status Lokalis</center></b>
+                      <center><img src="img/body.jpg" alt="Smiley face" height="300" width="450"></center>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Keterangan</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" name="kepala">
                     </div>
                   </div>
 

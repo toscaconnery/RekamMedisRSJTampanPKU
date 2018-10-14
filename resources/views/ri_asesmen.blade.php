@@ -2278,6 +2278,12 @@
               <div class="panel-body">
                 <form class="form-horizontal " method="get">
                   
+                  <div class="form-group">  
+                    <div class="col-lg-12">
+                      <img src="img/nyeri.jpg" alt="Smiley face" height="300" width="550">
+                    </div>
+                  </div>
+
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Nyeri</label>
                     <div class="col-lg-2">
