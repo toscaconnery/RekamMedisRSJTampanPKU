@@ -97,6 +97,9 @@ Route::get('/rj_izin_vct_hiv', 'RJIzinVCTHIVController@get_rj_izin_vct_hiv');
 Route::post('/rj_izin_vct_hiv', 'RJIzinVCTHIVController@post_rj_izin_vct_hiv');
 Route::get('/rj_izin_vct_hiv_read', 'RJIzinVCTHIVController@get_rj_izin_vct_hiv_read');
 
+Route::get('/rj_hiv_anti_retroval', 'RJHIVAntiRetrovalController@get_rj_hiv_anti_retroval');
+Route::post('/rj_hiv_anti_retroval', 'RJHIVAntiRetrovalController@post_rj_hiv_anti_retroval');
+
 
 Route::get('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikolog');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_psikolog');
@@ -239,9 +242,9 @@ Route::get('/ri_laboratorium', function () {
 //     return view('rj_izin_hiv');
 // });
 
-Route::get('/rj_ikhtisar_hiv', function () {
-    return view('rj_ikhtisar_hiv');
-});
+// Route::get('/rj_ikhtisar_hiv', function () {
+//     return view('rj_ikhtisar_hiv');
+// });
 
 Route::get('/ri_asuhan_gizi', function () {
     return view('ri_asuhan_gizi');
