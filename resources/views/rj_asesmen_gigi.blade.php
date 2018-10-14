@@ -145,7 +145,14 @@
                 <header class="panel-heading">
                   Penilaian Tingkat Nyeri
                 </header>
+
                 <div class="panel-body">
+                  <div class="form-group">
+                    
+                    <div class="col-lg-12">
+                      <img src="img/nyeri.jpg" alt="Smiley face" height="300" width="550">
+                    </div>
+                  </div>
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Tingkat nyeri</label>
                     <div class="col-lg-3">
@@ -570,19 +577,19 @@
 
                 <form class="form-horizontal " method="get">
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Golongan Darah</label>
+                    <label class="col-sm-2 control-label">1. Golongan Darah</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Tekanan Darah</label>
+                    <label class="col-sm-2 control-label">2. Tekanan Darah</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Tekanan Jantung</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">3. Tekanan Jantung</label>
                     <div class="col-lg-1">
                       <div class="radio">
                         <label>
@@ -605,9 +612,34 @@
                       </div>
                     </div>
                   </div>
+                  
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">4. Diabetes</label>
+                    <div class="col-lg-1">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="diabetes" id="optionsRadios1" value="Baik" checked>
+                          Ada
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="diabetes" id="optionsRadios1" value="Tidak Baik" checked>
+                          Tidak ada
+                        </label>
+                      </div>
+
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-1 control-label">Sebutkan</label>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
 
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Hepatitis</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">5. Hepatitis</label>
                     <div class="col-lg-1">
                       <div class="radio">
                         <label>
@@ -632,7 +664,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Penyakit Lainnya</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">6. Penyakit Lainnya</label>
                     <div class="col-lg-1">
                       <div class="radio">
                         <label>
@@ -657,7 +689,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Alergi Obat</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">7. Alergi Obat</label>
                     <div class="col-lg-1">
                       <div class="radio">
                         <label>
@@ -682,7 +714,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">Alergi Makanan</label>
+                    <label class="control-label col-lg-2" for="inputSuccess">8. Alergi Makanan</label>
                     <div class="col-lg-1">
                       <div class="radio">
                         <label>
@@ -705,6 +737,74 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <center><img src="img/gigi.jpg" alt="Smiley face" height="400" width="950"></center>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-lg-12">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th style="width: 10%; text-align: center;vertical-align:middle;">Gigi</th>
+                            <th style="width: 90%; text-align: center;vertical-align:middle;">Keterangan</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                          <tr>
+                            <td style="text-align:center;">
+                              <select class="form-control m-bot15" name="status_mental">
+
+                              <option value="0">-</option>
+                              <option value="11">11/51</option>
+                              <option value="12">12/52</option>
+                              <option value="13">13/53</option>
+                              <option value="14">14/54</option>
+                              <option value="15">15/55</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+
+                              <option value="21">21/61</option>
+                              <option value="22">22/62</option>
+                              <option value="23">23/63</option>
+                              <option value="24">24/64</option>
+                              <option value="25">25/65</option>
+                              <option value="26">26</option>
+                              <option value="27">27</option>
+                              <option value="28">28</option>
+
+                              <option value="31">31/71</option>
+                              <option value="32">32/72</option>
+                              <option value="33">33/73</option>
+                              <option value="34">34/74</option>
+                              <option value="35">35/75</option>
+                              <option value="36">36</option>
+                              <option value="37">37</option>
+                              <option value="38">38</option>
+
+                              <option value="41">41/81</option>
+                              <option value="42">42/82</option>
+                              <option value="43">43/83</option>
+                              <option value="44">44/84</option>
+                              <option value="45">45/85</option>
+                              <option value="46">46</option>
+                              <option value="47">47</option>
+                              <option value="48">48</option>
+                              </select>
+                            </td>
+                            <td><input type="text" class="form-control" name="" required></td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">Alergi Makanan</label>

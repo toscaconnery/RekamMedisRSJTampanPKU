@@ -604,7 +604,12 @@ header('Content-Type: application/pdf');
   </div>
 
   <h4>PENILAIAN TINGKAT NYERI</h4>
+  <br>
+
+  <img src="img/nyeri.jpg" alt="Smiley face" height="170" width="240">
+
   <div style="font-size: 85%;">  
+
     <p>Nyeri : Ya</p>
       <div class="row">
         <div class="column">
