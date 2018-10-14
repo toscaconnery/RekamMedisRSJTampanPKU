@@ -23,7 +23,7 @@
           <li><a class="" href="{{url('')}}/rj_identifikasi_stresor">Identifikasi Stresor</a></li>
           <li><a class="" href="{{url('')}}/rj_tes_konseling_hiv">Tes & Konseling HIV</a></li>
           <li><a class="" href="{{url('')}}/rj_izin_vct_hiv">Izin VCT HIV</a></li>
-          <li><a class="" href="{{url('')}}/rj_ikhtisar_hiv">Ikhtisar HIV & ART</a></li>
+          <li><a class="" href="{{url('')}}/rj_hiv_anti_retroval">Ikhtisar HIV & ART</a></li>
           <li><a class="" href="{{url('')}}/rj_perkembangan_pasien">Perkembangan Pasien</a></li>
           <li><a class="" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikolog">Tumbuh Kembang</a></li>
           <li><a class="" href="{{url('')}}/rj_resume">Resume Rawat Jalan</a></li>
