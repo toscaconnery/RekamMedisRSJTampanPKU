@@ -71,17 +71,6 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS</label>
-                  <div class="col-lg-7">
-                    <select class="form-control m-bot15" name="diagnosis">
-                      <option value="">Kelainan Neurologi </option>
-                      <option value="">Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
-                      <option value="">Kelainan psikis / prilaku</option>
-                      <option value="">Diagnosis lain</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">ELIMINASI</label>
                   <div class="col-lg-7">
                     <select class="form-control m-bot15" name="eliminasi">
