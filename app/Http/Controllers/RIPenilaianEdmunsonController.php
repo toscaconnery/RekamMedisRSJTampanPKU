@@ -38,4 +38,26 @@ class RIPenilaianEdmunsonController extends Controller
 
     	return back();
     }
+
+    public function get_ri_penilaian_edmunson_read()
+    {   /////////////////////////////////
+        //note: usia belum diperhitungkan, usia juga masuk dalam perhitungan nilai total
+        /////////////////////////////////
+        $pasien = RIPenilaianEdmunson::where('id', 1)->first();
+
+        $this->data['id_regis'] = $pasien->id_regis;
+        $this->data['usia'] = $pasien->usia;
+        $this->data['status_mental'] = $pasien->status_mental;
+        $this->data['eliminasi'] = $pasien->eliminasi;
+        $this->data['pengobatan'] = $pasien->pengobatan;
+        $this->data['diagnosa'] = $pasien->diagnosa;
+        $this->data['ambulasi'] = $pasien->ambulasi;
+        $this->data['nutrisi'] = $pasien->nutrisi;
+        $this->data['gangguan_pola_tidur'] = $pasien->gangguan_pola_tidur;
+        $this->data['riwayat_jatuh'] = $pasien->riwayat_jatuh;
+        $this->data['total'] = $pasien->total;
+
+        return view('page.ri.penilaian_edmunson_read', $this->data);
+        
+    }
 }

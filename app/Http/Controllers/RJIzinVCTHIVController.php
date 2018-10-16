@@ -34,6 +34,7 @@ class RJIzinVCTHIVController extends Controller
     public function get_rj_izin_vct_hiv_read()
     {
     	$pasien = RJIzinVCTHIV::where('id', 1)->first();
+        
     	$this->data['id_regis'] = $pasien->id_regis;
 		$this->data['nama_klien'] = $pasien->nama_klien;
 		$this->data['konselor'] = $pasien->konselor;
