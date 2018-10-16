@@ -61,6 +61,8 @@ Route::get('/rj_asesmen_gigi', 'RawatJalanController@asesmen_gigi');
 //DO  NOT  TOUCH!!!////
 //DO  NOT  TOUCH!!!////
 
+Route::get('/daftar_dokumen', 'DocumentController@index');
+
 Route::get('/penundaan_pelayanan', 'PenundaanPelayananController@get_penundaan_pelayanan');
 Route::post('/penundaan_pelayanan', 'PenundaanPelayananController@post_penundaan_pelayanan');
 
