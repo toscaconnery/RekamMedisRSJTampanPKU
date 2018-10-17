@@ -8,16 +8,28 @@ use App\Models\Pasien;
 use App\Models\Identifikasi;
 use App\Models\RincianPasien;
 use App\Models\PenanggungJawab;
+use PDO;
 
 class PasienController extends Controller
 {
     public function put_selected_patient_id(Request $request, $id)
     {
-        $request->session()->put('id_pasien', $id);
-        $pasien = Pasien::where('no_rm', $id)->first();
-        $request->session()->put('nama_pasien', $pasien['nama_pasien']);
-        $request->session()->put('jenis_kelamin', $pasien['jenis_kelamin']);
-        $request->session()->put('tanggal_lahir', $pasien['tanggal_lahir']);
+        $berhasil_tersambung = False;
+        include __DIR__."\..\..\ManualConnection\ManualMySQLConnection.php";
+
+        if($berhasil_tersambung) {
+            $statement = $pdo->prepare('select * from pasien_server_2 where id = '.$id);
+            $statement->execute();
+            $pasien = $statement->fetchAll(PDO::FETCH_OBJ)[0];
+        }
+
+        // dd($pasien);
+
+        // $request->session()->put('id_pasien', $id);
+        // $pasien = Pasien::where('no_rm', $id)->first();
+        $request->session()->put('nama', $pasien->nama);
+        $request->session()->put('jenis_kelamin', $pasien->jenis_kelamin);
+        $request->session()->put('tanggal_lahir', $pasien->tanggal_lahir);
         return back();
     }
 

@@ -50,11 +50,6 @@
         <div class="row">
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-file-text-o"></i> DAFTAR PASIEN</h3> 
-            <!--<ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-              <li><i class="icon_document_alt"></i>Forms</li>
-              <li><i class="fa fa-file-text-o"></i>Form elements</li>
-            </ol>-->
           </div>
         </div>
 
@@ -74,6 +69,18 @@
                     <th><i class="icon_pin_alt"></i> Alamat</th>
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
+                  @foreach($pasien_server_2 as $p)
+                    <tr>
+                      <td>{{$p->nama}}</td>
+                      <td>{{$p->tanggal_lahir}}</td>
+                      <td>{{$p->alamat}}</td>
+                      <td>
+                        <div class="btn-group">
+                          <a class="btn btn-primary" href="{{url('')}}/put_selected_patient_id/{{$p->id}}"><i class="icon_plus_alt2"></i></a>
+                        </div>
+                      </td>
+                    </tr>
+                  @endforeach
                   @foreach($pasien as $p)
                     <tr>
                       <td>{{$p->nama_pasien}}</td>
