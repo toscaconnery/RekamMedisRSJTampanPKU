@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\IGDAsesmenAwalRawatDaruratPerawat;
 use App\Models\IGDAsesmenAwalRawatDaruratDokter;
+use Session;
 
 class IGDAsesmenAwalRawatDaruratController extends Controller
 {
@@ -21,7 +22,13 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
     public function post_igd_asesmen_awal_rawat_darurat_perawat(Request $request)
     {
         $data = new IGDAsesmenAwalRawatDaruratPerawat;
-        $data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+        $data->id_regis = $id_pasien;
         $data->tanggal_kedatangan = $request->tanggal_kedatangan;
         $data->jam_kedatangan = $request->jam_kedatangan;
         $data->cara_datang = $request->cara_datang;
@@ -498,7 +505,13 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
     public function post_igd_asesmen_awal_rawat_darurat_dokter(Request $request)
     {
         $data = new IGDAsesmenAwalRawatDaruratDokter;
-        $data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+        $data->id_regis = $id_pasien;
         $data->pewawancara = $request->pewawancara;
         $data->keluhan_utama = $request->keluhan_utama;
         $data->riwayat_penyakit_sekarang = $request->riwayat_penyakit_sekarang;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\IGDSuicideFisik;
+use Session;
 
 class IGDSuicideFisikController extends Controller
 {
@@ -20,7 +21,13 @@ class IGDSuicideFisikController extends Controller
     public function post_igd_suicide_fisik(Request $request)
     {
     	$data = new IGDSuicideFisik;
-    	$data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+    	$data->id_regis = $id_pasien;
     	$data->a1 = $request->a1;
     	$data->a2 = $request->a2;
     	$data->a3 = $request->a3;
