@@ -151,6 +151,7 @@ Route::post('/ri_suicide_fisik', 'RISuicideFisikController@post_ri_suicide_fisik
 Route::get('/ri_suicide_fisik_read', 'RISuicideFisikController@post_ri_suicide_fisik_read'); // new add
 
 Route::get('/ri_rawat_napza', 'RIRawatNapzaController@get_ri_rawat_napza');
+Route::post('/ri_rawat_napza', 'RIRawatNapzaController@post_ri_rawat_napza');
 Route::get('/ri_rawat_napza_read', 'RIRawatNapzaController@post_ri_rawat_napza_read'); // new add
 
 Route::get('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson');

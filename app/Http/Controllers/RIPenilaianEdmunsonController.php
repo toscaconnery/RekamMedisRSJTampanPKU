@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIPenilaianEdmunson;
+use Session;
 
 class RIPenilaianEdmunsonController extends Controller
 {
@@ -23,7 +24,13 @@ class RIPenilaianEdmunsonController extends Controller
     	//note: usia belum diperhitungkan, usia juga masuk dalam perhitungan nilai total
     	/////////////////////////////////
     	$data = new RIPenilaianEdmunson;
-    	$data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+    	$data->id_regis = $id_pasien;
     	$data->usia = 1;
     	$data->status_mental = $request->status_mental;
     	$data->eliminasi = $request->eliminasi;

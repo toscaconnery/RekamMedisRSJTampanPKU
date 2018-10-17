@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RISuicideFisik;
+use Session;
 
 class RISuicideFisikController extends Controller
 {
@@ -20,7 +21,13 @@ class RISuicideFisikController extends Controller
     public function post_ri_suicide_fisik(Request $request)
     {
     	$data = new RISuicideFisik;
-        $data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+        $data->id_regis = $id_pasien;
         $data->s1 = $request->s1;
         $data->s2 = $request->s2;
         $data->s3 = $request->s3;

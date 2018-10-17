@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIDPJPCase;
+use Session;
 
 class RIDPJPCaseController extends Controller
 {
@@ -20,7 +21,13 @@ class RIDPJPCaseController extends Controller
     public function post_ri_dpjp_case(Request $request)
     {
     	$data = new RIDPJPCase;
-    	$data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+    	$data->id_regis = $id_pasien;
     	$data->diagnosa = $request->diagnosa;
     	$data->ruang = $request->ruang;
     	$data->nama_dpjp = $request->nama_dpjp;

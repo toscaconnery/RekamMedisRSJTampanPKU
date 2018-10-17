@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIEvaluasiKeperawatan;
+use Session;
 class RIEvaluasiKeperawatanController extends Controller
 {
     public function __construct()
@@ -24,10 +25,16 @@ class RIEvaluasiKeperawatanController extends Controller
     		$str_jam = 'jam_'.$i;
     		$str_implementasi = 'implementasi_'.$i;
     		$str_evaluasi = 'evaluasi_'.$i;
-    		$str_nama_user = 'nama_user_'.$i;    		
+    		$str_nama_user = 'nama_user_'.$i;
     		if(!is_null($request->$str_tanggal)) {
     			$data = new RIEvaluasiKeperawatan;
-    			$data->id_regis = 1;
+                if(Session::has('id_pasien')) {
+                    $id_pasien = Session::get('id_pasien');
+                }
+                else {
+                    $id_pasien = 1;
+                }
+    			$data->id_regis = $id_pasien;
     			$data->tanggal = $request->$str_tanggal;
     			$data->jam = $request->$str_jam;
     			$data->evaluasi = $request->$str_evaluasi;

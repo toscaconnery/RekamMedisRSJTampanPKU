@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIResumeMedis;
+use Session;
 
 class RIResumeMedisController extends Controller
 {
@@ -20,7 +21,13 @@ class RIResumeMedisController extends Controller
     public function post_ri_resume_medis(Request $request)
     {
         $data = new RIResumeMedis;
-        $data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+        $data->id_regis = $id_pasien;
         $data->tanggal_masuk = $request->tanggal_masuk;
         $data->tanggal_keluar = $request->tanggal_keluar;
         $data->ruang_rawat_terakhir = $request->ruang_rawat_terakhir;

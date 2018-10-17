@@ -10,6 +10,8 @@ use App\Models\RIKeperawatanIntensifPanik;
 use App\Models\RIKeperawatanIntensifPK;
 use App\Models\RIKeperawatanIntensifRBD;
 use App\Models\RIKeperawatanIntensifWaham;
+use App\Models\RIKeperawatanIntensifJenis;
+use Session;
 
 class RIKeperawatanIntensifController extends Controller
 {
@@ -25,6 +27,17 @@ class RIKeperawatanIntensifController extends Controller
 
     public function post_ri_keperawatan_intensif(Request $request)
     {
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+
+        $jenis = new RIKeperawatanIntensifJenis;
+        $jenis->id_regis = $id_pasien;
+        $jenis->jenis = $request->jenis;
+
     	if($request->jenis == 'rbd') {
     		$data = new RIKeperawatanIntensifRBD;
     		$tindakan_1 = '';
@@ -356,12 +369,17 @@ class RIKeperawatanIntensifController extends Controller
     		$data->tindakan_2 = $tindakan_2;
     		$data->tindakan_3 = $tindakan_3;
     	}
-    	$data->id_regis = 1;
+    	
+        $data->id_regis = $id_pasien;
     	$data->tanggal = $request->tanggal;
     	$data->jam = $request->jam;
     	$data->ruangan = $request->ruangan;
     	$data->diagnosa_medis = $request->diagnosa_medis;
     	$data->save();
+
+        $jenis->id_data = $data->id;
+        $jenis->save();
+
     	return back();
     }
 }
