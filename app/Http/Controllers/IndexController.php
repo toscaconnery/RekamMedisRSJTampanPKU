@@ -4,17 +4,30 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\SqlServer\SqlServerPdo;
+use PDO;
 
 class IndexController extends Controller
 {
+
+
     public function get_index()
     {
-    	$this->data['pasien'] = DB::table('pasien')
-    							->join('rincian_pasien', 'rincian_pasien.no_rm', '=', 'pasien.no_rm')
-    							->get();
-    	// $this->data['pasien2'] = DB::connection('mysql2')->table('pasien_s2')->get();
-    	// $this->data['pasien3'] = DB::table('pasien')->get();
-    	// dd($this->data['pasien3']);
+     //    try {
+     //        $pdo = new PDO('mysql:host=127.0.0.1;dbname=med2', 'root', '');
+     //    }
+     //    catch(PDOException $e)
+     //    {
+     //        die('Could not connect to database');
+     //    }
+     //    $statement = $pdo->prepare('select * from pasien_s2');
+     //    $statement->execute();
+     //    dd($statement->fetchAll(PDO::FETCH_OBJ));
+
+    	// $this->data['pasien'] = DB::table('pasien')
+    	// 						->join('rincian_pasien', 'rincian_pasien.no_rm', '=', 'pasien.no_rm')
+    	// 						->get();
+
     	return view('index', $this->data);
 
     }
