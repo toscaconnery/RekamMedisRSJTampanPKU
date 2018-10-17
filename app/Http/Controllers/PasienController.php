@@ -25,8 +25,8 @@ class PasienController extends Controller
 
         // dd($pasien);
 
-        // $request->session()->put('id_pasien', $id);
         // $pasien = Pasien::where('no_rm', $id)->first();
+        $request->session()->put('id_pasien', $pasien->id);
         $request->session()->put('nama', $pasien->nama);
         $request->session()->put('jenis_kelamin', $pasien->jenis_kelamin);
         $request->session()->put('tanggal_lahir', $pasien->tanggal_lahir);

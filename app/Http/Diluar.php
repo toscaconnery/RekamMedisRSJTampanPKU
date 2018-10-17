@@ -1,3 +1,0 @@
-<?php
-
-	dd("Diluar terakses");
