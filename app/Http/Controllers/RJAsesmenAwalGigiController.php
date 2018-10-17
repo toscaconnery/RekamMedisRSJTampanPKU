@@ -8,6 +8,7 @@ use App\Models\HumptyDumpty;
 use App\Models\Morse;
 use App\Models\Edmunson;
 use App\Models\RJDataMedik;
+use Session;
 
 class RJAsesmenAwalGigiController extends Controller
 {
@@ -30,7 +31,13 @@ class RJAsesmenAwalGigiController extends Controller
     {
         //PENILAIAN TINGKAT NYERI
         $nyeri = new RJNyeri;
-        $nyeri->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+        $nyeri->id_regis = $id_pasien;
         $nyeri->jenis_form = 'gigi';
         $nyeri->tingkat = $request->tingkat;
         $nyeri->skala = $request->skala;
@@ -66,7 +73,7 @@ class RJAsesmenAwalGigiController extends Controller
         //PENILAIAN RISIKO JATUH
         if($request->penilaian_risiko_jatuh == 'humpty_dumpty') {
             $humpty = new HumptyDumpty;
-            $humpty->id_regis = 1;
+            $humpty->id_regis = $id_pasien;
             $humpty->jenis_form = 'gigi';
             $humpty->usia = $request->usia;
             $humpty->diagnosis = $request->diagnosis;
@@ -78,7 +85,7 @@ class RJAsesmenAwalGigiController extends Controller
         }
         elseif($request->penilaian_risiko_jatuh == 'morse') {
             $morse = new Morse;
-            $morse->id_regis = 1;
+            $morse->id_regis = $id_pasien;
             $morse->jenis_form = 'gigi';
             if($request->riwayat_jatuh == 'true') {
                 $morse->riwayat_jatuh = True;
@@ -105,7 +112,7 @@ class RJAsesmenAwalGigiController extends Controller
         }
         elseif($request->penilaian_risiko_jatuh == 'edmunson') {
             $edmunson = new Edmunson;
-            $edmunson->id_regis = 1;
+            $edmunson->id_regis = $id_pasien;
             $edmunson->jenis_form = 'gigi';
             $edmunson->status_mental = $request->status_mental;
             $edmunson->diagnosis = $request->diagnosis;
@@ -123,7 +130,7 @@ class RJAsesmenAwalGigiController extends Controller
     public function post_rj_asesmen_awal_gigi_dokter(Request $request)
     {
         $data = new RJDataMedik;
-        $data->id_regis = 1;
+        $data->id_regis = $id_pasien;
         $data->golongan_darah = $request->golongan_darah;
         $data->tekanan_darah_top = $request->tekanan_darah_top;
         $data->tekanan_darah_bottom = $request->tekanan_darah_bottom;

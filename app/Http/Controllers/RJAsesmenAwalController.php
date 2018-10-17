@@ -21,6 +21,7 @@ use App\Models\RJPemeriksaanPenunjang;
 use App\Models\RJInstrumenPenilaian;
 use App\Models\RJDiagnosisTindakanTerapi;
 use App\Models\RJTindakLanjut;
+use Session;
 
 class RJAsesmenAwalController extends Controller
 {
@@ -43,7 +44,13 @@ class RJAsesmenAwalController extends Controller
     {
 
     	$asesmen_keperawatan = new RJAsesmenKeperawatan;
-    	$asesmen_keperawatan->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+    	$asesmen_keperawatan->id_regis = $id_pasien;
     	$asesmen_keperawatan->id_user = 1;
     	$asesmen_keperawatan->alasan_kunjungan = $request->alasan_kunjungan;
     	$asesmen_keperawatan->hubungan_keluarga = $request->hubungan_keluarga;
@@ -255,7 +262,7 @@ class RJAsesmenAwalController extends Controller
     	// FISIK GIZI////////
     	// FISIK GIZI////////
     	$fisik_gizi = new RJFisikGizi;
-        $fisik_gizi->id_regis = 1;
+        $fisik_gizi->id_regis = $id_pasien;
         $fisik_gizi->td = $request->td;
         $fisik_gizi->tb = $request->tb;
         $fisik_gizi->nadi = $request->nadi;
@@ -374,7 +381,7 @@ class RJAsesmenAwalController extends Controller
         // PENILAIAN TINGKAT NYERI	//////////////
 
         $nyeri = new RJNyeri;
-        $nyeri->id_regis = 1;
+        $nyeri->id_regis = $id_pasien;
         $nyeri->jenis_form = 'awal';
         $nyeri->tingkat = $request->tingkat;
         $nyeri->skala = $request->skala;
@@ -414,7 +421,7 @@ class RJAsesmenAwalController extends Controller
         // HUMPTY DUMPTY /////////////
 
         $humpty = new HumptyDumpty;
-        $humpty->id_regis = 1;
+        $humpty->id_regis = $id_pasien;
         $humpty->jenis_form = 'awal';
         $humpty->usia = $request->usia;
         $humpty->diagnosis = $request->diagnosis;
@@ -431,7 +438,7 @@ class RJAsesmenAwalController extends Controller
 		// MORSE ////////////////////
 
         $morse = new Morse;
-        $morse->id_regis = 1;
+        $morse->id_regis = $id_pasien;
         $morse->jenis_form = 'awal';
         if($request->riwayat_jatuh == 'true') {
             $morse->riwayat_jatuh = True;
@@ -463,7 +470,7 @@ class RJAsesmenAwalController extends Controller
         // EDMUNSON ///////////////
 
         $edmunson = new Edmunson;
-        $edmunson->id_regis = 1;
+        $edmunson->id_regis = $id_pasien;
         $edmunson->jenis_form = 'awal';
         $edmunson->status_mental = $request->status_mental;
         $edmunson->diagnosis = $request->diagnosis;
@@ -482,7 +489,7 @@ class RJAsesmenAwalController extends Controller
         // DIAGNOSA KEPERAWATAN ////////////
 
         $diagnosa = new RJDiagnosaKeperawatan;
-        $diagnosa->id_regis = 1;
+        $diagnosa->id_regis = $id_pasien;
         $umum = "";
         if(isset($request->umum_1)) {
             $umum .= "1-";
@@ -591,7 +598,7 @@ class RJAsesmenAwalController extends Controller
         // EVALUASI TINDAKAN /////////
 
         $data = new RJEvaluasiTindakan;
-        $data->id_regis = 1;
+        $data->id_regis = $id_pasien;
         $data->implementasi = $request->implementasi;
         $data->evaluasi = $request->evaluasi;
         $data->save();
@@ -608,7 +615,7 @@ class RJAsesmenAwalController extends Controller
         // DATA MEDIS //////////
 
     	$data = new RJDataMedis;
-        $data->id_regis = 1;
+        $data->id_regis = $id_pasien;
         $data->pewawancara = $request->pewawancara;
         $data->keluhan_utama = $request->keluhan_utama;
         if(!empty($request->riwayat_penyakit_sekarang)) {
@@ -727,7 +734,7 @@ class RJAsesmenAwalController extends Controller
         // OBAT YANG DIMINUM SAAT INI //////////
 
         $obat = new RJObatSaatIni;
-        $obat->id_regis = 1;
+        $obat->id_regis = $id_pasien;
         $obat->nama_obat = $request->nama_obat;
         $obat->dibawa = $request->dibawa;
         $obat->jumlah = $request->jumlah;
@@ -742,7 +749,7 @@ class RJAsesmenAwalController extends Controller
         // PEMERIKSAAN FISIK ///////////
 
         $pemeriksaan = new RJPemeriksaanFisik;
-        $pemeriksaan->id_regis = 1;
+        $pemeriksaan->id_regis = $id_pasien;
         $pemeriksaan->kepala = $request->kepala;
         $pemeriksaan->leher = $request->leher;
         $pemeriksaan->dada = $request->dada;
@@ -759,7 +766,7 @@ class RJAsesmenAwalController extends Controller
         // STATUS PSIKIATRI ///////////
 
         $status = new RJStatusPsikiatri;
-        $status->id_regis = 1;
+        $status->id_regis = $id_pasien;
         $status->penampilan = $request->penampilan;
         $status->kesadaran = $request->kesadaran;
         $status->orientasi = $request->orientasi;
@@ -789,7 +796,7 @@ class RJAsesmenAwalController extends Controller
         // STATUS NEUROLOGI ////////////
 
         $status = new RJStatusNeurologi;
-        $status->id_regis = 1;
+        $status->id_regis = $id_pasien;
         $status->meningeal = $request->meningeal;
         $status->nervus = $request->nervus;
         $status->motorik = $request->motorik;
@@ -820,7 +827,7 @@ class RJAsesmenAwalController extends Controller
         // INSTRUMEN PENILAIAN ///////////////////
         // INSTRUMEN PENILAIAN ///////////////////
         $instrumen = new RJInstrumenPenilaian;
-        $instrumen->id_regis = 1;
+        $instrumen->id_regis = $id_pasien;
         $instrumen->gaduh_gelisah = $request->p4;
         $instrumen->ketidakoperatifan = $request->g8;
         $instrumen->permusuhan = $request->p7;
@@ -838,7 +845,7 @@ class RJAsesmenAwalController extends Controller
         // DIAGNOSIS TINDAKAN TERAPI /////////////
         // DIAGNOSIS TINDAKAN TERAPI /////////////
         $diagnosis = new RJDiagnosisTindakanTerapi;
-        $diagnosis->id_regis = 1;
+        $diagnosis->id_regis = $id_pasien;
         $diagnosis->axis1 = $request->axis1;
         $diagnosis->axis2 = $request->axis2;
         $diagnosis->axis3 = $request->axis3;
@@ -859,7 +866,7 @@ class RJAsesmenAwalController extends Controller
         // TINDAK LANJUT ///////////////////
         $data = new RJTindakLanjut;
         $data->tindak_lanjut = $request->tindak_lanjut;
-        $data->id_regis = 1;
+        $data->id_regis = $id_pasien;
         if($request->perlu_dikontrol == 'true') {
             $data->perlu_dikontrol = True;
         }

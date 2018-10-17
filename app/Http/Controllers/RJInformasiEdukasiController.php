@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\RJInformasiEdukasi;
 use App\Models\RJEdukasiDiperoleh;
+use Session;
 
 class RJInformasiEdukasiController extends Controller
 {
@@ -21,7 +22,13 @@ class RJInformasiEdukasiController extends Controller
     public function post_rj_informasi_edukasi(Request $request)
     {
     	$data = new RJInformasiEdukasi;
-    	$data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+    	$data->id_regis = $id_pasien;
     	$data->bahasa = $request->bahasa;
     	if($request->bahasa == 'Daerah' or $request->bahasa == 'Lainnya') {
     		$data->ket_bahasa = $request->ket_bahasa;
@@ -139,6 +146,12 @@ class RJInformasiEdukasiController extends Controller
     public function post_rj_informasi_edukasi_list_informasi(Request $request)
     {
     	$jumlah_form = $request->jumlah_form;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
     	for($i = 1; $i <= $jumlah_form; $i++) {
     		$str_tanggal = 'tanggal_'.$i;
     		$str_poliklinik = 'poliklinik_'.$i;
@@ -150,7 +163,7 @@ class RJInformasiEdukasiController extends Controller
     		$str_evaluasi = 'evaluasi_'.$i;
     		if(!is_null($request->$str_tanggal)) {
     			$data = new RJEdukasiDiperoleh;
-    			$data->id_regis = 1;
+    			$data->id_regis = $id_pasien;
     			$data->tanggal = $request->$str_tanggal;
     			$data->poliklinik = $request->$str_poliklinik;
     			$data->informasi = $request->$str_informasi;

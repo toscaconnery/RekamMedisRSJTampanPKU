@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RJIzinVCTHIV;
+use Session;
 
 class RJIzinVCTHIVController extends Controller
 {
@@ -20,7 +21,13 @@ class RJIzinVCTHIVController extends Controller
     public function post_rj_izin_vct_hiv(Request $request)
     {
     	$data = new RJIzinVCTHIV;
-    	$data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+    	$data->id_regis = $id_pasien;
         $data->nama_klien = $request->nama_klien;
         $data->konselor = $request->konselor;
         $data->tanggal = $request->tanggal;

@@ -17,6 +17,7 @@ use App\Models\RJTumbuhKembangRiwayatSosialisasi;
 use App\Models\RJTumbuhKembangRiwayatPsikiatrik;
 use App\Models\RJTumbuhKembangPemeriksaanStatusMental;
 use App\Models\RJTumbuhKembangLainnya;
+use Session;
 
 class RJAsesmenAwalTumbuhKembangController extends Controller
 {
@@ -39,7 +40,13 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     {
     	//anak
     	$anak = new RJTumbuhKembangDataAnak;
-    	$anak->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+    	$anak->id_regis = $id_pasien;
     	$anak->nama = $request->nama_anak;
     	$anak->tempat_lahir = $request->tempat_lahir_anak;
     	$anak->tanggal_lahir = $request->tanggal_lahir_anak;
@@ -62,7 +69,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
 
     	//ayah
     	$ayah = new RJTumbuhKembangDataOrangTua;
-    	$ayah->id_regis = 1;
+    	$ayah->id_regis = $id_pasien;
     	$ayah->sebagai = 'ayah';
     	$ayah->nama = $request->nama_ayah;
     	$ayah->tempat_lahir = $request->tempat_lahir_ayah;
@@ -83,7 +90,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
 
     	//ibu
     	$ibu = new RJTumbuhKembangDataOrangTua;
-    	$ibu->id_regis = 1;
+    	$ibu->id_regis = $id_pasien;
     	$ibu->sebagai = 'ibu';
     	$ibu->nama = $request->nama_ibu;
     	$ibu->tempat_lahir = $request->tempat_lahir_ibu;
@@ -111,7 +118,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     		$str_pekerjaan = 'pekerjaan_'.$i;
     		if(!is_null($request->$str_umur)) {
     			$data = new RJTumbuhKembangDataSaudara;
-    			$data->id_regis = 1;
+    			$data->id_regis = $id_pasien;
     			$data->status = 'kandung';
     			$data->umur = $request->$str_umur;
     			$data->jenis_kelamin = $request->$str_jenis_kelamin;
@@ -130,7 +137,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     		$str_pekerjaan = 'pekerjaan_tiri_'.$i;
     		if(!is_null($request->$str_umur)) {
     			$data = new RJTumbuhKembangDataSaudara;
-    			$data->id_regis = 1;
+    			$data->id_regis = $id_pasien;
     			$data->status = 'tiri';
     			$data->umur = $request->$str_umur;
     			$data->jenis_kelamin = $request->$str_jenis_kelamin;
@@ -149,7 +156,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     		$str_pekerjaan = 'pekerjaan_serumah_'.$i;
     		if(!is_null($request->$str_umur)) {
     			$data = new RJTumbuhKembangDataSerumah;
-    			$data->id_regis = 1;
+    			$data->id_regis = $id_pasien;
     			$data->umur = $request->$str_umur;
     			$data->jenis_kelamin = $request->$str_jenis_kelamin;
     			$data->pendidikan = $request->$str_pendidikan;
@@ -160,7 +167,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
 
     	// //riwayat kehamilan
     	$riwayat = new RJTumbuhKembangRiwayatKehamilan;
-    	$riwayat->id_regis = 1;
+    	$riwayat->id_regis = $id_pasien;
     	$riwayat->keadaan_awal_kandungan = $request->keadaan_awal_kandungan;
     	$riwayat->penyakit_selama_mengandung = $request->penyakit_selama_mengandung;
     	$riwayat->perasaan_selama_mengandung = $request->perasaan_selama_mengandung;
@@ -199,7 +206,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
 
     	//riwayat persalinan natal
     	$riwayat = new RJTumbuhKembangRiwayatPersalinanNatal;
-    	$riwayat->id_regis = 1;
+    	$riwayat->id_regis = $id_pasien;
     	$riwayat->proses_kelahiran = $request->proses_kelahiran;
     	if($request->dibantu_alat == 'true') {
     		$riwayat->dibantu_alat = True;
@@ -229,7 +236,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
 
     	//riwayat persalinan pasca natal
     	$riwayat = new RJTumbuhKembangRiwayatPersalinanPascaNatal;
-    	$riwayat->id_regis = 1;
+    	$riwayat->id_regis = $id_pasien;
     	$riwayat->lama_asi = $request->lama_asi;
     	$riwayat->pola_makan = $request->pola_makan;
     	$riwayat->pola_tidur = $request->pola_tidur;
@@ -253,7 +260,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     		$str_keterangan = 'keterangan_'.$i;
     		if(!is_null($request->$str_penyakit)) {
     			$data = new RJTumbuhKembangPenyakitAnak;
-    			$data->id_regis = 1;
+    			$data->id_regis = $id_pasien;
     			$data->penyakit = $request->$str_penyakit;
     			$data->tahun = $request->$str_tahun;
     			$data->lamanya = $request->$str_lamanya;
@@ -264,7 +271,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
 
     	//riwayat akademis
     	$riwayat = new RJTumbuhKembangRiwayatAkademis;
-    	$riwayat->id_regis = 1;
+    	$riwayat->id_regis = $id_pasien;
     	$riwayat->sikap = 1;
     	$riwayat->keterampilan_motorik_awal = $request->keterampilan_motorik_awal;
     	$riwayat->hasil_belajar_anak = $request->hasil_belajar_anak;
@@ -304,7 +311,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
             $str_keterangan_riwayat_sekolah = 'keterangan_riwayat_sekolah_'.$i;
             if(!is_null($request->$str_jenis_riwayat_sekolah)) {
                 $data = new RJTumbuhKembangRiwayatSekolah;
-                $data->id_regis = 1;
+                $data->id_regis = $id_pasien;
                 $data->jenis_sekolah = $request->$str_jenis_riwayat_sekolah;
                 $data->umur = $request->$str_umur_riwayat_sekolah;
                 $data->keterangan_tinggal = $request->$str_keterangan_riwayat_sekolah;
@@ -314,7 +321,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
 
         // riwayat sosialisasi
         $sosialisasi = new RJTumbuhKembangRiwayatSosialisasi;
-        $sosialisasi->id_regis = 1;
+        $sosialisasi->id_regis = $id_pasien;
         $sosialisasi->sekolah = $request->sosialisasi_di_sekolah;
         $sosialisasi->keluarga = $request->sosialisasi_di_keluarga;
         $sosialisasi->save();
@@ -325,7 +332,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     public function post_rj_asesmen_awal_tumbuh_kembang_dokter(Request $request)
     {
         $riwayat = new RJTumbuhKembangRiwayatPsikiatrik;
-        $riwayat->id_regis = 1;
+        $riwayat->id_regis = $id_pasien;
         $riwayat->keluhan_utama = $request->keluhan_utama;
         $riwayat->riwayat_gangguan_sekarang = $request->riwayat_gangguan_sekarang;
         $riwayat->riwayat_gangguan_sebelumnya = $request->riwayat_gangguan_sebelumnya;
@@ -341,7 +348,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
 
         //pemeriksaan status mental
         $status = new RJTumbuhKembangPemeriksaanStatusMental;
-        $status->id_regis = 1;
+        $status->id_regis = $id_pasien;
         $status->deskripsi_umum = $request->deskripsi_umum;
         $status->interaksi_ortu_anak = $request->interaksi_ortu_anak;
         $status->orientasi_persepsi = $request->orientasi_persepsi;
@@ -354,7 +361,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
 
         //lainnya
         $data = new RJTumbuhKembangLainnya;
-        $data->id_regis = 1;
+        $data->id_regis = $id_pasien;
         $data->diagnostik_lanjutan = $request->diagnostik_lanjutan;
         $data->hasil_pemeriksaan = $request->hasil_pemeriksaan;
         $data->formulasi_diagnostik = $request->formulasi_diagnostik;

@@ -1,5 +1,7 @@
 <div class="panel-body bio-graph-info">
-  <h1><input type="text" name="no_rm" placeholder="No. RM" disabled value="{{Session::has('id_pasien') ? Session::get('id_pasien') : ''}}"></h1>
+  <h1>
+    <input type="text" name="no_rm" placeholder="No. RM" disabled value="  {{Session::has('id_pasien') ? Session::get('id_pasien') : ''}}">
+  </h1>
   <div class="row">
     <div class="bio-row">
       <p><span>Nama Pasien </span>: {{Session::has('nama') ? Session::get('nama') : ''}} </p>
