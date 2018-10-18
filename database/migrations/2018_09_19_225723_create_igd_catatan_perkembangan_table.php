@@ -15,7 +15,7 @@ class CreateIgdCatatanPerkembanganTable extends Migration
     {
         Schema::create('igd_catatan_perkembangan', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('tanggal');
             $table->string('jam');
             $table->string('profesi_bagian');

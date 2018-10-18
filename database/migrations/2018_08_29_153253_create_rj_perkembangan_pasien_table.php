@@ -15,7 +15,7 @@ class CreateRjPerkembanganPasienTable extends Migration
     {
         Schema::create('rj_perkembangan_pasien', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('waktu');
             $table->string('profesi');
             $table->integer('user')->reference('id')->on('users');

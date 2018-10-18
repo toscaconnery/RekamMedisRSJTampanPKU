@@ -15,7 +15,7 @@ class CreatePenundaanPelayananTable extends Migration
     {
         Schema::create('penundaan_pelayanan', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('nama');
             $table->tinyInteger('umur');
             $table->string('hubungan');

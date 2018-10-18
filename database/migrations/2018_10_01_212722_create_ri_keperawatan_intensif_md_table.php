@@ -15,7 +15,7 @@ class CreateRiKeperawatanIntensifMdTable extends Migration
     {
         Schema::create('ri_keperawatan_intensif_md', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('tanggal',10)->nullable();
             $table->string('jam',5)->nullable();
             $table->string('ruangan')->nullable();

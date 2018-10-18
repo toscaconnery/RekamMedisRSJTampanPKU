@@ -15,7 +15,7 @@ class CreateRjTumbuhKembangPemeriksaanStatusMentalTable extends Migration
     {
         Schema::create('rj_tumbuh_kembang_pemeriksaan_status_mental', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id_regis')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('deskripsi_umum');
             $table->string('interaksi_ortu_anak');
             $table->string('orientasi_persepsi');

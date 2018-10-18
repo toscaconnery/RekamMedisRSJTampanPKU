@@ -91,6 +91,13 @@
         </a>
       </li>
 
+      <li>
+        <a class="" href="{{url('')}}/daftar_dokumen">
+          <i class="icon_document_alt"></i>
+          <span><font size="2">List Dokumen</font></span>
+        </a>
+      </li>
+
     </ul>
     <!-- sidebar menu end-->
   </div>

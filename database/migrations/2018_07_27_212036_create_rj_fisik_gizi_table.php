@@ -15,7 +15,7 @@ class CreateRJFisikGiziTable extends Migration
     {
         Schema::create('rj_fisik_gizi', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('td', 10);
             $table->string('tb', 10);
             $table->string('nadi', 10);

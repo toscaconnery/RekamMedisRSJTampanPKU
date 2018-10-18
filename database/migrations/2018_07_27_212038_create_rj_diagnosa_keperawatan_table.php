@@ -15,7 +15,7 @@ class CreateRJDiagnosaKeperawatanTable extends Migration
     {
         Schema::create('rj_diagnosa_keperawatan', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('umum');
             $table->string('umum_lainnya')->nullable();
             $table->string('jiwa');

@@ -15,7 +15,7 @@ class CreateRjIdentifikasiStresorTable extends Migration
     {
         Schema::create('rj_identifikasi_stresor', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('lingkungan_fisik')->nullable();
             $table->string('sosial_ekonomi_politik')->nullable();
             $table->string('keluarga')->nullable();

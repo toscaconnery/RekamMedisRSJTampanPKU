@@ -15,7 +15,7 @@ class CreateRiRisikoNyeriTable extends Migration
     {
         Schema::create('ri_risiko_nyeri', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('waktu',1);
             $table->tinyInteger('skala');
             $table->string('tanggal',10);

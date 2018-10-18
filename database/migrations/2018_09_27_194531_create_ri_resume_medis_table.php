@@ -15,7 +15,7 @@ class CreateRiResumeMedisTable extends Migration
     {
         Schema::create('ri_resume_medis', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('tanggal_masuk',10)->nullable();
             $table->string('tanggal_keluar',10)->nullable();
             $table->string('ruang_rawat_terakhir')->nullable();

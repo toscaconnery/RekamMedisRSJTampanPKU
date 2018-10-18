@@ -15,7 +15,7 @@ class CreateRjTumbuhKembangRiwayatPsikiatrikTable extends Migration
     {
         Schema::create('rj_tumbuh_kembang_riwayat_psikiatrik', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('keluhan_utama');
             $table->string('riwayat_gangguan_sekarang');
             $table->string('riwayat_gangguan_sebelumnya');

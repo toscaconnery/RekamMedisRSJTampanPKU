@@ -15,7 +15,7 @@ class CreateRiMonitoringObservasiTable extends Migration
     {
         Schema::create('ri_monitoring_observasi', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('tanggal',10);
             $table->string('jam',5);
             $table->string('hasil_monitoring')->nullable();

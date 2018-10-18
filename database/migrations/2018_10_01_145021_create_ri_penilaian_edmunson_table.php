@@ -15,7 +15,7 @@ class CreateRiPenilaianEdmunsonTable extends Migration
     {
         Schema::create('ri_penilaian_edmunson', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->tinyInteger('usia');
             $table->tinyInteger('status_mental');
             $table->tinyInteger('eliminasi');

@@ -15,7 +15,7 @@ class CreateIgdAsesmenAwalRawatDaruratDokterTable extends Migration
     {
         Schema::create('igd_asesmen_awal_rawat_darurat_dokter', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('pewawancara',100)->nullable();
             $table->string('keluhan_utama')->nullable();
             $table->string('riwayat_penyakit_sekarang')->nullable();

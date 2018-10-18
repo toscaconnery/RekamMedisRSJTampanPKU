@@ -15,7 +15,7 @@ class CreateRjTumbuhKembangRiwayatPersalinanPascaNatalTable extends Migration
     {
         Schema::create('rj_tumbuh_kembang_riwayat_persalinan_pasca_natal', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('lama_asi');
             $table->string('pola_makan');
             $table->string('pola_tidur');

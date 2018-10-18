@@ -8,6 +8,7 @@ use App\Models\Pasien;
 use App\Models\Identifikasi;
 use App\Models\RincianPasien;
 use App\Models\PenanggungJawab;
+use App\Models\ListDocument;
 use PDO;
 
 class PasienController extends Controller
@@ -21,9 +22,19 @@ class PasienController extends Controller
             $statement = $pdo->prepare('select * from pasien_server_2 where id = '.$id);
             $statement->execute();
             $pasien = $statement->fetchAll(PDO::FETCH_OBJ)[0];
-        }
 
-        // dd($pasien);
+            //cek data pasien di identifikasi
+            $jumlah_identifikasi = Identifikasi::where('id_pasien', $pasien->id)->count();
+            if($jumlah_identifikasi == 0) {
+                $identifikasi_baru = new Identifikasi;
+                $identifikasi_baru->id_pasien = $pasien->id;
+                $identifikasi_baru->save();
+
+                $list_document = new ListDocument;
+                $list_document->id_regis = $identifikasi_baru->id_pasien;
+                $list_document->save();
+            }
+        }
 
         // $pasien = Pasien::where('no_rm', $id)->first();
         $request->session()->put('id_pasien', $pasien->id);

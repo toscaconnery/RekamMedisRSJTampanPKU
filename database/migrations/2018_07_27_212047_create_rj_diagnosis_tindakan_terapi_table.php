@@ -15,7 +15,7 @@ class CreateRJDiagnosisTindakanTerapiTable extends Migration
     {
         Schema::create('rj_diagnosis_tindakan_terapi', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('axis1');
             $table->string('axis2');
             $table->string('axis3');

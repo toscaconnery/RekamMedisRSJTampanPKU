@@ -15,7 +15,7 @@ class CreateRjLaporRehabilitasiTable extends Migration
     {
         Schema::create('rj_lapor_rehabilitasi', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('tanggal_kedatangan',10);
             $table->string('alamat');
             $table->string('telp',20);

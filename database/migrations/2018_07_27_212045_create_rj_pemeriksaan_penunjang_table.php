@@ -15,7 +15,7 @@ class CreateRJPemeriksaanPenunjangTable extends Migration
     {
         Schema::create('rj_pemeriksaan_penunjang', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('jenis');
             $table->string('jam_pemeriksaan');
             $table->string('jam_hasil')->nullable();

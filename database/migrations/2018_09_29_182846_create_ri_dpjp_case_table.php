@@ -15,7 +15,7 @@ class CreateRiDpjpCaseTable extends Migration
     {
         Schema::create('ri_dpjp_case', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('diagnosa')->nullable();
             $table->string('ruang')->nullable();
             $table->string('nama_dpjp')->nullable();

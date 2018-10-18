@@ -15,7 +15,7 @@ class CreateRJStatusNeurologiTable extends Migration
     {
         Schema::create('rj_status_neurologi', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('meningeal');
             $table->string('nervus');
             $table->string('motorik');

@@ -15,7 +15,7 @@ class CreateRJObatSaatIniTable extends Migration
     {
         Schema::create('rj_obat_saat_ini', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('nama_obat');
             $table->string('dibawa');
             $table->string('jumlah');

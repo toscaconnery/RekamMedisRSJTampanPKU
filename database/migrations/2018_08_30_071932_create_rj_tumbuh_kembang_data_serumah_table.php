@@ -15,7 +15,7 @@ class CreateRjTumbuhKembangDataSerumahTable extends Migration
     {
         Schema::create('rj_tumbuh_kembang_data_serumah', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('umur');
             $table->string('jenis_kelamin');
             $table->string('pendidikan');
