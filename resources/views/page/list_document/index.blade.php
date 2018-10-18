@@ -8,7 +8,8 @@
 <html lang="zxx">
 
 <head>
-    <title>Startled Corporate Category Bootstrap responsive Web Template | About :: w3layouts</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+    <title>Daftar Dokumen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="keywords" content="Startled a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -88,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <li class="breadcrumb-item">
             <a href="index.html">Home</a>
         </li>
-        <li class="breadcrumb-item active">About</li>
+        <li class="breadcrumb-item active">Daftar Dokumen</li>
     </ol>
 
     <section class="banner-bottom-wthree bg-light py-lg-5 py-md-5 py-3" id="feature">
@@ -276,52 +277,78 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <h3 class="tittle text-center"> IGD</h3>
                 <div class="row mt-lg-5 mt-md-4 mt-4">
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/index">
-                            <div class="card" style="background-color: #eaeff2">
-                                <div class="card-body">
-                                    <i class="fas fa-file-alt mb-3"></i>
-                                    <h5 class="card-title text-uppercase">Lapor Rehabilitasi</h5>
-                                    {{-- <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p> --}}
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/index">
-                            <div class="card" style="background-color: #eaeff2">
-                                <div class="card-body">
-                                    <i class="fas fa-file-alt mb-3"></i>
-                                    <h5 class="card-title text-uppercase">Lapor Rehabilitasi</h5>
-                                    {{-- <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p> --}}
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/index">
-                            <div class="card" style="background-color: #eaeff2">
-                                <div class="card-body">
-                                    <i class="fas fa-file-alt mb-3"></i>
-                                    <h5 class="card-title text-uppercase">Lapor Rehabilitasi</h5>
-                                    {{-- <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p> --}}
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/index" id="content">
-                            <div class="card" style="background-color: #eaeff2">
+                        <a href="{{url('')}}/igd_triase" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
-                                    <h5 class="card-title text-uppercase" style="color: black">Lapor Rehabilitasi</h5>
+                                    <h5 class="card-title text-uppercase" style="color: black">Triase Pasien</h5>
                                     <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
                                 </div>
                             </div>
                         </a>
                     </div>
+
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/igd_asesmen_awal_rawat_darurat_perawat" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Rawat Darurat Perawat</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/igd_asesmen_awal_rawat_darurat_dokter" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Rawat Darurat Dokter</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/igd_suicide_fisik" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Asesmen Suicide dan Kekerasan Fisik</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/igd_catatan_kemajuan" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Catatan Kemajuan</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/igd_catatan_perkembangan" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Catatan Perkembangan</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    
                 </div>
             </div>
         </div>
@@ -330,56 +357,356 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <section class="banner-bottom-wthree bg-light py-lg-5 py-md-5 py-3" id="feature">
         <div class="container">
             <div class="inner-sec-w3ls py-lg-5 py-3">
-                {{-- <h4 class="sub-tittle text-uppercase text-center"></h4> --}}
                 <h3 class="tittle text-center"> Rawat Inap</h3>
                 <div class="row mt-lg-5 mt-md-4 mt-4">
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/index">
-                            <div class="card" style="background-color: #eaeff2">
-                                <div class="card-body">
-                                    <i class="fas fa-file-alt mb-3"></i>
-                                    <h5 class="card-title text-uppercase">Lapor Rehabilitasi</h5>
-                                    {{-- <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p> --}}
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/index">
-                            <div class="card" style="background-color: #eaeff2">
-                                <div class="card-body">
-                                    <i class="fas fa-file-alt mb-3"></i>
-                                    <h5 class="card-title text-uppercase">Lapor Rehabilitasi</h5>
-                                    {{-- <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p> --}}
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/index">
-                            <div class="card" style="background-color: #eaeff2">
-                                <div class="card-body">
-                                    <i class="fas fa-file-alt mb-3"></i>
-                                    <h5 class="card-title text-uppercase">Lapor Rehabilitasi</h5>
-                                    {{-- <p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p> --}}
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/index" id="content">
-                            <div class="card" style="background-color: #eaeff2">
+                        <a href="{{url('')}}/ri_surat_persetujuan" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
-                                    <h5 class="card-title text-uppercase" style="color: black">Lapor Rehabilitasi</h5>
+                                    <h5 class="card-title text-uppercase" style="color: black">Surat dan Persetujuan</h5>
                                     <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
                                 </div>
                             </div>
                         </a>
                     </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_resume_medis" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Resume Medis</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_dpjp_case" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">DPJP dan Case Manager</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_persetujuan_umum" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Persetujuan Umum</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_hak_kewajiban" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Hak dan Kewajiban</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_asesmen" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Pasien Rawat Inap</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_suicide_fisik" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Asesmen Suicide dan Kekerasan Fisik</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_rawat_napza" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Keperawatan Napza</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_penilaian_edmunson" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Penilaian Resiko Jatuh Edmunson</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_risiko_nyeri" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Penilaian Resiko Nyeri</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_catatan_perkembangan" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Catatan Perkembangan Pasien Terintegrasi</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_keperawatan_intensif" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Rencana Tindakan Keperawatan Intensif</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_evaluasi_keperawatan" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Evaluasi Tindakan Keperawatan</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_monitoring_observasi" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Monitoring Dan Observasi Pasien Khusus</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_laboratorium" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Pemeriksaan Laboratorium</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_penggunaan_obat" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Catatan Penggunaan Obat (CPO)</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_riwayat_obat" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Riwayat Penggunaan Obat (Rekonsiliasi Obat)</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_efek_samping" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Pelaporan Efek Samping Obat Komite Farmasi dan Terapi</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_asuhan_gizi" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Asuhan Gizi</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_edukasi" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Edukasi Pasien dan Keluarga</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_rencana_pemulangan" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Rencana Pemulangan Pasien (Discharge Planning)</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_panss_ec" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">PANSS EC</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_penilaian_panss" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Lembar Penilaian Panss EC</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_lembar_konsultasi" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Lembar Konsultasi</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_transfer_internal" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Transfer Pasien Internal Rumah Sakit</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_transfer_eksternal" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Transfer Pasien Eksternal Rumah Sakit</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_pemberian_informasi" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Pemberian Informasi</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_pemeriksaan_psikologis" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Pemeriksaan Psikologis</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
+                        <a href="{{url('')}}/ri_serah_terima" id="content">
+                            <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
+                                <div class="card-body">
+                                    <i class="far fa-file-alt mb-3"></i>
+                                    <h5 class="card-title text-uppercase" style="color: black">Formulir Serah Terima Pasien Pulang</h5>
+                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
                 </div>
             </div>
         </div>
