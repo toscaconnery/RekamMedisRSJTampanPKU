@@ -11,7 +11,8 @@
 
   <title>RSJ Tampan Provinsi Riau</title>
 
-   <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="{{url('')}}/sweetalert2/dist/sweetalert2.min.css">
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap-theme.css" rel="stylesheet">
@@ -243,51 +244,13 @@
     <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
     <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
     <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
-    <script>
-      //knob
-      $(function() {
-        $(".knob").knob({
-          'draw': function() {
-            $(this.i).val(this.cv + '%')
-          }
-        })
-      });
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{url('')}}/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="{{url('')}}/sweetalert2/dist/sweetalert2.min.js"></script>
 
-      //carousel
-      $(document).ready(function() {
-        $("#owl-slider").owlCarousel({
-          navigation: true,
-          slideSpeed: 300,
-          paginationSpeed: 400,
-          singleItem: true
-
-        });
-      });
-
-      //custom select box
-
-      $(function() {
-        $('select.styled').customSelect();
-      });
-
-      /* ---------- Map ---------- */
-      $(function() {
-        $('#map').vectorMap({
-          map: 'world_mill_en',
-          series: {
-            regions: [{
-              values: gdpData,
-              scale: ['#000', '#000'],
-              normalizeFunction: 'polynomial'
-            }]
-          },
-          backgroundColor: '#eef3f7',
-          onLabelShow: function(e, el, code) {
-            el.html(el.html() + ' (GDP - ' + gdpData[code] + ')');
-          }
-        });
-      });
-    </script>
+    @if(Session::has('pesan_kesalahan'))
+      @include('sweetalert.error')
+    @endif
 </body>
 
 

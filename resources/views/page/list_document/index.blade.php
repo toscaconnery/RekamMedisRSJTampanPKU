@@ -104,7 +104,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Perawat</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_asesmen_awal_perawat)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -116,7 +118,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Dokter</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_asesmen_awal_dokter)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -128,7 +132,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Gigi Perawat</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_asesmen_awal_gigi_perawat)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -140,7 +146,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Gigi Dokter</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_asesmen_awal_gigi_dokter)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -152,7 +160,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Informasi dan Edukasi</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_informasi_edukasi)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -164,7 +174,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Lapor dan Rehabilitasi</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_lapor_rehabilitasi)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -176,7 +188,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Identifikasi Stresor</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_identifikasi_stresor)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -188,7 +202,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Tes & Konseling HIV</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_tes_konseling_hiv)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -200,7 +216,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Izin VCT HIV</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_izin_vct_hiv)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -212,7 +230,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Ikhtisar HIV & TERAPI ART</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_hiv_anti_retroval)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -224,7 +244,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Perkembangan Pasien</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_perkembangan_pasien)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -236,7 +258,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Tumbuh Kembang - Psikolog</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_asesmen_awal_tumbuh_kembang_psikolog)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -248,7 +272,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Tumbuh Kembang - Dokter</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_asesmen_awal_tumbuh_kembang_dokter)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -260,7 +286,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Resume Rawat Jalan</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->rj_resume)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -282,7 +310,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Triase Pasien</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->igd_triase)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -294,7 +324,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Rawat Darurat Perawat</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->igd_asesmen_awal_rawat_darurat_perawat)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -306,7 +338,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Rawat Darurat Dokter</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->igd_asesmen_awal_rawat_darurat_dokter)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -318,7 +352,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asesmen Suicide dan Kekerasan Fisik</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->igd_suicide_fisik)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -330,7 +366,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Catatan Kemajuan</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->igd_catatan_kemajuan)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -342,13 +380,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Catatan Perkembangan</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->igd_catatan_perkembangan)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
                     </div>
-
-                    
                 </div>
             </div>
         </div>
@@ -365,7 +403,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Surat dan Persetujuan</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_surat_persetujuan)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -377,7 +417,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Resume Medis</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_resume_medis)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -389,7 +431,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">DPJP dan Case Manager</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_dpjp_case)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -401,7 +445,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Persetujuan Umum</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_persetujuan_umum)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -413,7 +459,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Hak dan Kewajiban</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_hak_kewajiban)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -425,7 +473,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Pasien Rawat Inap</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_asesmen)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -437,7 +487,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asesmen Suicide dan Kekerasan Fisik</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_suicide_fisik)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -449,7 +501,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asesmen Awal Keperawatan Napza</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_rawat_napza)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -461,7 +515,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Penilaian Resiko Jatuh Edmunson</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_penilaian_edmunson)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -473,7 +529,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Penilaian Resiko Nyeri</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_risiko_nyeri)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -485,7 +543,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Catatan Perkembangan Pasien Terintegrasi</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_catatan_perkembangan)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -497,7 +557,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Rencana Tindakan Keperawatan Intensif</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_keperawatan_intensif)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -509,7 +571,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Evaluasi Tindakan Keperawatan</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_evaluasi_keperawatan)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -521,7 +585,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Monitoring Dan Observasi Pasien Khusus</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_monitoring_observasi)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -533,7 +599,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Pemeriksaan Laboratorium</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_laboratorium)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -545,7 +613,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Catatan Penggunaan Obat (CPO)</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_penggunaan_obat)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -557,7 +627,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Riwayat Penggunaan Obat (Rekonsiliasi Obat)</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_riwayat_obat)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -569,7 +641,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Pelaporan Efek Samping Obat Komite Farmasi dan Terapi</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_efek_samping)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -581,7 +655,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Asuhan Gizi</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_asuhan_gizi)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -593,7 +669,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Edukasi Pasien dan Keluarga</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_edukasi)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -605,7 +683,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Rencana Pemulangan Pasien (Discharge Planning)</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_rencana_pemulangan)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -617,7 +697,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">PANSS EC</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_panss_ec)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -629,7 +711,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Lembar Penilaian Panss EC</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_penilaian_panss)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -641,7 +725,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Lembar Konsultasi</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_lembar_konsultasi)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -653,7 +739,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Transfer Pasien Internal Rumah Sakit</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_transfer_internal)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -665,7 +753,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Transfer Pasien Eksternal Rumah Sakit</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_transfer_eksternal)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -677,7 +767,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Pemberian Informasi</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_pemberian_informasi)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -689,7 +781,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Pemeriksaan Psikologis</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_pemeriksaan_psikologis)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
@@ -701,7 +795,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
                                     <h5 class="card-title text-uppercase" style="color: black">Formulir Serah Terima Pasien Pulang</h5>
-                                    <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @if($dokumen->ri_serah_terima)
+                                        <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
+                                    @endif
                                 </div>
                             </div>
                         </a>
