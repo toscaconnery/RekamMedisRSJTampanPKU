@@ -31,7 +31,9 @@ class IndexController extends Controller
         //     dd("error");
         // }
         $berhasil_tersambung = False;
-        include __DIR__."\..\..\ManualConnection\ManualMySQLConnection.php";
+        // include __DIR__."\..\..\ManualConnection\ManualMySQLConnection.php";
+        include __DIR__."\..\..\ManualConnection\ManualSQLServer2000Connection.php";
+
 
         if($berhasil_tersambung) {
             $statement = $pdo->prepare('select * from pasien_server_2');
