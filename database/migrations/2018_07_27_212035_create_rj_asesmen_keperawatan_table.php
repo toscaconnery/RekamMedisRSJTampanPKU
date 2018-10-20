@@ -15,7 +15,7 @@ class CreateRJAsesmenKeperawatanTable extends Migration
     {
         Schema::create('rj_asesmen_keperawatan', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->integer('id_user')->reference('id_user')->on('users');
             $table->string('alasan_kunjungan')->nullable();
             $table->boolean('hubungan_keluarga')->nullable();

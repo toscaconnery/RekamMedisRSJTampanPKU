@@ -11,7 +11,8 @@
 
   <title>RSJ Tampan Provinsi Riau</title>
 
-   <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="{{url('')}}/sweetalert2/dist/sweetalert2.min.css">
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap-theme.css" rel="stylesheet">
@@ -50,11 +51,6 @@
         <div class="row">
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-file-text-o"></i> DAFTAR PASIEN</h3> 
-            <!--<ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-              <li><i class="icon_document_alt"></i>Forms</li>
-              <li><i class="fa fa-file-text-o"></i>Form elements</li>
-            </ol>-->
           </div>
         </div>
 
@@ -74,6 +70,18 @@
                     <th><i class="icon_pin_alt"></i> Alamat</th>
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
+                  @foreach($pasien_server_2 as $p)
+                    <tr>
+                      <td>{{$p->nama}}</td>
+                      <td>{{$p->tanggal_lahir}}</td>
+                      <td>{{$p->alamat}}</td>
+                      <td>
+                        <div class="btn-group">
+                          <a class="btn btn-primary" href="{{url('')}}/put_selected_patient_id/{{$p->id}}"><i class="icon_plus_alt2"></i></a>
+                        </div>
+                      </td>
+                    </tr>
+                  @endforeach
                   @foreach($pasien as $p)
                     <tr>
                       <td>{{$p->nama_pasien}}</td>
@@ -247,51 +255,13 @@
     <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
     <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
     <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
-    <script>
-      //knob
-      $(function() {
-        $(".knob").knob({
-          'draw': function() {
-            $(this.i).val(this.cv + '%')
-          }
-        })
-      });
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{url('')}}/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="{{url('')}}/sweetalert2/dist/sweetalert2.min.js"></script>
 
-      //carousel
-      $(document).ready(function() {
-        $("#owl-slider").owlCarousel({
-          navigation: true,
-          slideSpeed: 300,
-          paginationSpeed: 400,
-          singleItem: true
-
-        });
-      });
-
-      //custom select box
-
-      $(function() {
-        $('select.styled').customSelect();
-      });
-
-      /* ---------- Map ---------- */
-      $(function() {
-        $('#map').vectorMap({
-          map: 'world_mill_en',
-          series: {
-            regions: [{
-              values: gdpData,
-              scale: ['#000', '#000'],
-              normalizeFunction: 'polynomial'
-            }]
-          },
-          backgroundColor: '#eef3f7',
-          onLabelShow: function(e, el, code) {
-            el.html(el.html() + ' (GDP - ' + gdpData[code] + ')');
-          }
-        });
-      });
-    </script>
+    @if(Session::has('pesan_kesalahan'))
+      @include('sweetalert.error')
+    @endif
 </body>
 
 

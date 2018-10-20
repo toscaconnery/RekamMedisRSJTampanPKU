@@ -15,7 +15,7 @@ class CreateRJPemeriksaanFisikTable extends Migration
     {
         Schema::create('rj_pemeriksaan_fisik', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('kepala');
             $table->string('leher');
             $table->string('dada');

@@ -15,7 +15,7 @@ class CreateRjTesKonselingHivTable extends Migration
     {
         Schema::create('rj_tes_konseling_hiv', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('nama');
             $table->string('alamat');
             $table->string('propinsi');

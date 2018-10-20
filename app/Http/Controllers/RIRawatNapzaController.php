@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIRawatNapza;
+use Session;
 
 class RIRawatNapzaController extends Controller
 {
@@ -20,7 +21,13 @@ class RIRawatNapzaController extends Controller
     public function post_ri_rawat_napza(Request $request)
     {
     	$data = new RIRawatNapza;
-    	$data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+    	$data->id_regis = $id_pasien;
     	$data->tanggal_pengkajian = $request->tanggal_pengkajian;
     	$data->sumber_informasi = $request->sumber_informasi;
     	$data->tanggal_dirawat = $request->tanggal_dirawat;

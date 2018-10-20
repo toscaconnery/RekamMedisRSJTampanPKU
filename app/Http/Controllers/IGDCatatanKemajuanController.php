@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\IGDCatatanKemajuan;
+use Session;
 
 class IGDCatatanKemajuanController extends Controller
 {
@@ -20,6 +21,12 @@ class IGDCatatanKemajuanController extends Controller
     public function post_igd_catatan_kemajuan(Request $request)
     {
     	$jumlah_form = $request->jumlah_form;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
     	for($i = 1; $i <= $jumlah_form; $i++) {
     		$str_tanggal = 'tanggal_'.$i;
     		$str_jam = 'jam_'.$i;
@@ -28,7 +35,7 @@ class IGDCatatanKemajuanController extends Controller
     		$str_nama_user = 'nama_user_'.$i;    		
     		if(!is_null($request->$str_tanggal)) {
     			$data = new IGDCatatanKemajuan;
-    			$data->id_regis = 1;
+    			$data->id_regis = $id_pasien;
     			$data->tanggal = $request->$str_tanggal;
     			$data->jam = $request->$str_jam;
     			$data->catatan_kemajuan = $request->$str_catatan_kemajuan;

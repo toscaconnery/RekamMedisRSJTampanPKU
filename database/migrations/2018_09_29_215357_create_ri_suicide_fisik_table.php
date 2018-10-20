@@ -15,7 +15,7 @@ class CreateRiSuicideFisikTable extends Migration
     {
         Schema::create('ri_suicide_fisik', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('s1',1)->nullable();
             $table->string('s2',1)->nullable();
             $table->string('s3',1)->nullable();

@@ -15,7 +15,7 @@ class CreateRJNyeriTable extends Migration
     {
         Schema::create('rj_nyeri', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('jenis_form');
             $table->smallInteger('tingkat');
             $table->smallInteger('skala');

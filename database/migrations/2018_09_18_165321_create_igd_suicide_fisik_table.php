@@ -15,7 +15,7 @@ class CreateIgdSuicideFisikTable extends Migration
     {
         Schema::create('igd_suicide_fisik', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->tinyInteger('a1');
             $table->tinyInteger('a2');
             $table->tinyInteger('a3');

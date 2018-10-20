@@ -15,7 +15,7 @@ class CreateIgdTriaseTable extends Migration
     {
         Schema::create('igd_triase', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('jenis');
             $table->string('tanggal_masuk');
             $table->string('jam');

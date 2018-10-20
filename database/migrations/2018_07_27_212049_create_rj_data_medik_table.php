@@ -15,7 +15,7 @@ class CreateRJDataMedikTable extends Migration
     {
         Schema::create('rj_data_medik', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('golongan_darah');
             $table->string('tekanan_darah_top');
             $table->string('tekanan_darah_bottom');

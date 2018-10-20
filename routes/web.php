@@ -61,6 +61,8 @@ Route::get('/rj_asesmen_gigi', 'RawatJalanController@asesmen_gigi');
 //DO  NOT  TOUCH!!!////
 //DO  NOT  TOUCH!!!////
 
+Route::get('/daftar_dokumen', 'DocumentController@index');
+
 Route::get('/penundaan_pelayanan', 'PenundaanPelayananController@get_penundaan_pelayanan');
 Route::post('/penundaan_pelayanan', 'PenundaanPelayananController@post_penundaan_pelayanan');
 Route::get('/penundaan_pelayanan_read', 'PenundaanPelayananController@get_penundaan_pelayanan_read'); // new add
@@ -149,6 +151,7 @@ Route::post('/ri_suicide_fisik', 'RISuicideFisikController@post_ri_suicide_fisik
 Route::get('/ri_suicide_fisik_read', 'RISuicideFisikController@post_ri_suicide_fisik_read'); // new add
 
 Route::get('/ri_rawat_napza', 'RIRawatNapzaController@get_ri_rawat_napza');
+Route::post('/ri_rawat_napza', 'RIRawatNapzaController@post_ri_rawat_napza');
 Route::get('/ri_rawat_napza_read', 'RIRawatNapzaController@post_ri_rawat_napza_read'); // new add
 
 Route::get('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson');

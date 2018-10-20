@@ -15,7 +15,7 @@ class CreateRJInstrumenPenilaianTable extends Migration
     {
         Schema::create('rj_instrumen_penilaian', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->integer('gaduh_gelisah');
             $table->integer('ketidakoperatifan');
             $table->integer('permusuhan');

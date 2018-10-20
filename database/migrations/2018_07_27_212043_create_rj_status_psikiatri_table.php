@@ -15,7 +15,7 @@ class CreateRJStatusPsikiatriTable extends Migration
     {
         Schema::create('rj_status_psikiatri', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('penampilan');
             $table->string('kesadaran');
             $table->string('orientasi');

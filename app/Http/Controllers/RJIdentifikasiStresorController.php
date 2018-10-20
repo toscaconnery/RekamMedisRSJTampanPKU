@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RJIdentifikasiStresor;
+use Session;
 
 class RJIdentifikasiStresorController extends Controller
 {
@@ -20,7 +21,13 @@ class RJIdentifikasiStresorController extends Controller
     public function post_rj_identifikasi_stresor(Request $request)
     {
     	$data = new RJIdentifikasiStresor;
-    	$data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+    	$data->id_regis = $id_pasien;
     	$data->lingkungan_fisik = $request->lingkungan_fisik;
     	$data->sosial_ekonomi_politik = $request->sosial_ekonomi_politik;
     	$data->keluarga = $request->keluarga;

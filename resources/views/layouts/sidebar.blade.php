@@ -62,8 +62,8 @@
           <li><a class="" href="{{url('')}}/ri_risiko_nyeri">Penilaian Risiko Nyeri</a></li>
           <li><a class="" href="{{url('')}}/ri_catatan_perkembangan">Catatan Perkembangan</a></li>
           <li><a class="" href="{{url('')}}/ri_keperawatan_intensif">Keperawatan Intensif</a></li>
-          <li><a class="" href="{{url('')}}/ri_keperawatan_klien">Keperawatan Klien</a></li>
-          <li><a class="" href="{{url('')}}/ri_keperawatan_napza">Keperawatan NAPZA</a></li>
+          {{-- <li><a class="" href="{{url('')}}/ri_keperawatan_klien">Keperawatan Klien</a></li> --}}
+          {{-- <li><a class="" href="{{url('')}}/ri_keperawatan_napza">Keperawatan NAPZA</a></li> --}}
           <li><a class="" href="{{url('')}}/ri_evaluasi_keperawatan">Evaluasi Keperawatan</a></li>
           <li><a class="" href="{{url('')}}/ri_monitoring_observasi">Monitoring Observasi</a></li>
           <li><a class="" href="{{url('')}}/ri_laboratorium">Laboratorium</a></li>
@@ -88,6 +88,13 @@
         <a class="" href="{{url('')}}/penundaan_pelayanan">
           <i class="icon_document_alt"></i>
           <span><font size="2">Penundaan Pelayanan</font></span>
+        </a>
+      </li>
+
+      <li>
+        <a class="" href="{{url('')}}/daftar_dokumen">
+          <i class="icon_document_alt"></i>
+          <span><font size="2">List Dokumen</font></span>
         </a>
       </li>
 

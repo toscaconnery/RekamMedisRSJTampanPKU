@@ -15,7 +15,7 @@ class CreateRJTindakLanjutTable extends Migration
     {
         Schema::create('rj_tindak_lanjut', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->integer('tindak_lanjut');
             $table->boolean('perlu_dikontrol');
             $table->string('tanggal_kontrol')->nullable();

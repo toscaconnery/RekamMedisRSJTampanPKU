@@ -15,7 +15,7 @@ class CreateRJEvaluasiTindakanTable extends Migration
     {
         Schema::create('rj_evaluasi_tindakan', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('implementasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('implementasi');
             $table->text('implementasi');
             $table->text('evaluasi');
             $table->timestamps();

@@ -15,7 +15,7 @@ class CreateMorseTable extends Migration
     {
         Schema::create('morse', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_regis')->reference('id')->on('identifikasi');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('jenis_form');
             $table->boolean('riwayat_jatuh');
             $table->boolean('diagnosis_sekunder');

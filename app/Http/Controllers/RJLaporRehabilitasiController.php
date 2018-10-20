@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RJLaporRehabilitasi;
+use Session;
 
 class RJLaporRehabilitasiController extends Controller
 {
@@ -20,7 +21,13 @@ class RJLaporRehabilitasiController extends Controller
     public function post_rj_lapor_rehabilitasi(Request $request)
     {
         $data = new RJLaporRehabilitasi;
-        $data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+        $data->id_regis = $id_pasien;
         $data->tanggal_kedatangan = $request->tanggal_kedatangan;
         $data->alamat = $request->alamat;
         $data->telp = $request->telp;

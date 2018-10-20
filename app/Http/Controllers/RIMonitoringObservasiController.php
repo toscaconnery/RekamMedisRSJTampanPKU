@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIMonitoringObservasi;
+use Session;
 
 class RIMonitoringObservasiController extends Controller
 {
@@ -19,6 +20,12 @@ class RIMonitoringObservasiController extends Controller
 
     public function post_ri_monitoring_observasi(Request $request)
     {
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
     	$jumlah_form = $request->jumlah_form;
     	for($i = 1; $i <= $jumlah_form; $i++) {
     		$str_tanggal = 'tanggal_'.$i;
@@ -28,7 +35,7 @@ class RIMonitoringObservasiController extends Controller
     		$str_ttd = 'ttd_'.$i;
     		if(!is_null($request->$str_tanggal)) {
     			$data = new RIMonitoringObservasi;
-    			$data->id_regis = 1;
+    			$data->id_regis = $id_pasien;
     			$data->tanggal = $request->$str_tanggal;
     			$data->jam = $request->$str_jam;
     			$data->hasil_monitoring = $request->$str_hasil_monitoring;

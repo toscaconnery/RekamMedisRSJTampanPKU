@@ -15,7 +15,7 @@
     <section class="wrapper">
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="page-header"><i class="fa fa-file-text-o"></i>Catatan kemajuanvcld</h3>
+          <h3 class="page-header"><i class="fa fa-file-text-o"></i>Catatan kemajuan</h3>
         </div>
       </div>
       @include('layouts.bio')

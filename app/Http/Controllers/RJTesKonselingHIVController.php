@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RJTesKonselingHIV;
+use Session;
 
 class RJTesKonselingHIVController extends Controller
 {
@@ -20,7 +21,13 @@ class RJTesKonselingHIVController extends Controller
     public function post_tes_konseling_hiv(Request $request)
     {
     	$data = new RJTesKonselingHIV;
-    	$data->id_regis = 1;
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+    	$data->id_regis = $id_pasien;
 
         $data->nama = $request->nama;
         $data->alamat = $request->alamat;

@@ -15,7 +15,7 @@ class CreateRincianPasienTable extends Migration
     {
         Schema::create('rincian_pasien', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('no_rm')->reference('no_rm')->on('pasien');
+            $table->integer('no_rm')->reference('id_pasien')->on('pasien');
             $table->string('no_telp');
             $table->string('pernikahan', 15);
             $table->string('agama', 10);

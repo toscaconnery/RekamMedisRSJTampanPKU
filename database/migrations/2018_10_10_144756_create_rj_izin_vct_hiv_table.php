@@ -15,7 +15,7 @@ class CreateRjIzinVctHivTable extends Migration
     {
         Schema::create('rj_izin_vct_hiv', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('nama_klien');
             $table->string('konselor');
             $table->string('tanggal',10);

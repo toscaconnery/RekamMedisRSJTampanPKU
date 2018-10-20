@@ -15,7 +15,7 @@ class CreateRjTumbuhKembangRiwayatAkademisTable extends Migration
     {
         Schema::create('rj_tumbuh_kembang_riwayat_akademis', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('sikap');
             $table->string('keterampilan_motorik_awal');
             $table->string('hasil_belajar_anak');

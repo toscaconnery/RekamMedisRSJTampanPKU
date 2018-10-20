@@ -15,7 +15,7 @@ class CreateRjInformasiEdukasiTable extends Migration
     {
         Schema::create('rj_informasi_edukasi', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('bahasa');
             $table->string('ket_bahasa')->nullable();
             $table->boolean('penerjemah');

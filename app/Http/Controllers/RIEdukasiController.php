@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIEdukasi;
+use Session;
 
 class RIEdukasiController extends Controller
 {
@@ -20,7 +21,13 @@ class RIEdukasiController extends Controller
     public function post_ri_edukasi(Request $request)
     {
     	$data = new RIEdukasi;
-    	$data->id_regis = 1;
+    	if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+    	$data->id_regis = $id_pasien;
 		$data->medis_materi = $request->medis_materi;
 		$data->medis_metode = $request->medis_metode;
 		$data->medis_nama_edukator = $request->medis_nama_edukator;

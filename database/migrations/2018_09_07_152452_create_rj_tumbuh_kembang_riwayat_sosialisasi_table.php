@@ -15,7 +15,7 @@ class CreateRjTumbuhKembangRiwayatSosialisasiTable extends Migration
     {
         Schema::create('rj_tumbuh_kembang_riwayat_sosialisasi', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('id_regis')->reference('id')->on('identifikasi');
+            $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('sekolah');
             $table->string('keluarga');
             $table->timestamps();
