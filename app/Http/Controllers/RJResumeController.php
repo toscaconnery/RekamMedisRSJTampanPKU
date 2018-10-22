@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RJResume;
+use App\Models\ListDocument;
 use Session;
 
 class RJResumeController extends Controller
@@ -46,6 +47,10 @@ class RJResumeController extends Controller
     			$data->save();
     		}
     	}
-    	return back();
+
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
+        $daftar_dokumen->rj_resume = True;
+        $daftar_dokumen->save();
+    	return redirect('daftar_dokumen');
     }
 }
