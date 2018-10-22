@@ -117,7 +117,7 @@ class PasienController extends Controller
         $rincian->save();
 
         $identifikasi = new Identifikasi;
-        $identifikasi->no_rm = $request->no_rm;
+        $identifikasi->id_pasien = $request->no_rm;
         $identifikasi->save();
 
         $index = 0;
