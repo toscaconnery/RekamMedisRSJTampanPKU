@@ -30,16 +30,16 @@ class IndexController extends Controller
         // {
         //     dd("error");
         // }
-        $berhasil_tersambung = False;
+        //$berhasil_tersambung = False;
         // include __DIR__."\..\..\ManualConnection\ManualMySQLConnection.php";
-        include __DIR__."\..\..\ManualConnection\ManualSQLServer2000Connection.php";
+        //include __DIR__."\..\..\ManualConnection\ManualSQLServer2000Connection.php";
 
 
-        if($berhasil_tersambung) {
-            $statement = $pdo->prepare('select * from pasien_server_2');
-            $statement->execute();
-            $this->data['pasien_server_2'] = $statement->fetchAll(PDO::FETCH_OBJ);
-        }
+        // if($berhasil_tersambung) {
+        //     $statement = $pdo->prepare('select * from pasien_server_2');
+        //     $statement->execute();
+        //     $this->data['pasien_server_2'] = $statement->fetchAll(PDO::FETCH_OBJ);
+        // }
 
         $this->data['pasien'] = DB::table('pasien')
         						->join('rincian_pasien', 'rincian_pasien.no_rm', '=', 'pasien.no_rm')

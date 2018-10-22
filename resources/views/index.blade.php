@@ -70,7 +70,7 @@
                     <th><i class="icon_pin_alt"></i> Alamat</th>
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
-                  @foreach($pasien_server_2 as $p)
+                  {{-- @foreach($pasien_server_2 as $p)
                     <tr>
                       <td>{{$p->nama}}</td>
                       <td>{{$p->tanggal_lahir}}</td>
@@ -81,7 +81,7 @@
                         </div>
                       </td>
                     </tr>
-                  @endforeach
+                  @endforeach --}}
                   @foreach($pasien as $p)
                     <tr>
                       <td>{{$p->nama_pasien}}</td>
