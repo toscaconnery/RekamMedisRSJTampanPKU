@@ -171,4 +171,79 @@ class IGDTriaseController extends Controller
     	$data->save();
     	return back();
     }
+
+    public function get_igd_triase_read()
+    {
+        $pasien = IGDTriase::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+        $this->data['tanggal_masuk'] = $pasien->tanggal_masuk;
+        $this->data['jam'] = $pasien->jam;
+        $this->data['keluhan_utama'] = $pasien->keluhan_utama;
+
+        if($pasien->jenis = 'resusitasi') {
+            $this->data['jalan_nafas'] = $pasien->jalan_nafas;
+            $this->data['henti_nafas'] = $pasien->henti_nafas;
+            $this->data['frek_nafas'] = $pasien->frek_nafas;
+            $this->data['sianosis'] = $pasien->sianosis;
+            $this->data['henti_jantung'] = $pasien->henti_jantung;
+            $this->data['kondisi_nadi'] = $pasien->kondisi_nadi;
+            $this->data['pucat'] = $pasien->pucat;
+            $this->data['akral_dingin'] = $pasien->akral_dingin;
+            $this->data['gcs'] = $pasien->gcs;
+        }
+
+        else if($pasien->jenis = 'emergent') {
+            $this->data['jalan_nafas'] = $pasien->jalan_nafas;
+            $this->data['frek_nafas'] = $pasien->frek_nafas;
+            $this->data['mengi'] = $pasien->mengi;
+            $this->data['kondisi_nadi'] = $pasien->kondisi_nadi;
+            $this->data['frek_nadi'] = $pasien->frek_nadi;
+            $this->data['gcs'] = $pasien->gcs;
+        }
+
+        else if($pasien->jenis = 'tanda vital') {
+            $this->data['tekanan_darah'] = $pasien->tekanan_darah;
+            $this->data['frek_nadi'] = $pasien->frek_nadi;
+            $this->data['frek_nafas'] = $pasien->frek_nafas;
+            $this->data['suhu'] = $pasien->suhu;
+            $this->data['alergi_makanan'] = $pasien->alergi_makanan;
+            $this->data['alergi_obat'] = $pasien->alergi_obat;
+            $this->data['alergi_lainnya'] = $pasien->alergi_lainnya;
+            $this->data['gcs'] = $pasien->gcs;
+        }
+
+        else if($pasien->jenis = 'urgent') {
+            $this->data['jalan_nafas'] = $pasien->jalan_nafas;
+            $this->data['frek_nafas'] = $pasien->frek_nafas;
+            $this->data['mengi'] = $pasien->mengi;
+            $this->data['frek_nadi'] = $pasien->frek_nadi;
+            $this->data['sistol'] = $pasien->sistol;
+            $this->data['diastol'] = $pasien->diastol;
+            $this->data['gcs'] = $pasien->gcss;
+        }
+
+        else if($pasien->jenis = 'non urgent') {
+            $this->data['jalan_nafas'] = $pasien->jalan_nafas;
+            $this->data['frek_nafas'] = $pasien->frek_nafas;
+            $this->data['mengi'] = $pasien->mengi;
+            $this->data['frek_nadi'] = $pasien->frek_nadi;
+            $this->data['sistol'] = $pasien->sistol;
+            $this->data['diastol'] = $pasien->diastol;
+            $this->data['gcs'] = $pasien->gcss;
+        }
+
+        else if($pasien->jenis = 'false emergency') {
+            $this->data['jalan_nafas'] = $pasien->jalan_nafas;
+            $this->data['frek_nafas'] = $pasien->frek_nafas;
+            $this->data['mengi'] = $pasien->mengi;
+            $this->data['frek_nadi'] = $pasien->frek_nadi;
+            $this->data['sistol'] = $pasien->sistol;
+            $this->data['diastol'] = $pasien->diastol;
+            $this->data['gcs'] = $pasien->gcss;
+        }
+
+        
+        return view('page.igd.triase_read', $this->data);
+    }
 }

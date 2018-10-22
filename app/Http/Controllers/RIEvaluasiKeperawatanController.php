@@ -45,4 +45,27 @@ class RIEvaluasiKeperawatanController extends Controller
     	}
     	return back();
     }
+
+    public function get_ri_evaluasi_keperawatan_read()
+    {
+        // bagaimana disini?
+        $jumlah_form = $request->jumlah_form;
+        for($i = 1; $i <= $jumlah_form; $i++) {
+            $str_tanggal = 'tanggal_'.$i;
+            $str_jam = 'jam_'.$i;
+            $str_implementasi = 'implementasi_'.$i;
+            $str_evaluasi = 'evaluasi_'.$i;
+            $str_nama_user = 'nama_user_'.$i;
+            if(!is_null($request->$str_tanggal)) {
+                $pasien = RIEvaluasiKeperawatan::where('id', 1)->first();
+                $this->data['id_regis'] = $pasien->id_regis;
+                $this->data['tanggal'] = $pasien->tanggal;
+                $this->data['jam'] = $pasien->jam;
+                $this->data['evaluasi'] = $pasien->evaluasi;
+                $this->data['implementasi'] = $pasien->implementasi;
+                $this->data['nama_user'] = $pasien->nama_user;
+            }
+        }
+        return view('page.ri.evaluasi_keperawatan_read', $this->data);
+    }
 }

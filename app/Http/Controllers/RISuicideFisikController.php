@@ -68,4 +68,54 @@ class RISuicideFisikController extends Controller
         return back();
 
     }
+
+    public function get_ri_suicide_fisik_read()
+    {
+       $pasien = RISuicideFisik::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+        
+        $this->data['s1'] = $pasien->s1;
+        $this->data['s2'] = $pasien->s2;
+        $this->data['s3'] = $pasien->s3;
+        $this->data['s4'] = $pasien->s4;
+        $this->data['s5'] = $pasien->s5;
+        $this->data['s6'] = $pasien->s6;
+        $this->data['s7'] = $pasien->s7;
+        $this->data['s8'] = $pasien->s8;
+        $this->data['s9'] = $pasien->s9;
+        $this->data['s10'] = $pasien->s10;
+
+        $this->data['s11'] = $pasien->s11;
+        $this->data['s12'] = $pasien->s12;
+        $this->data['s13'] = $pasien->s13;
+        $this->data['s14'] = $pasien->s14;
+        $this->data['s15'] = $pasien->s15;
+        $this->data['s16'] = $pasien->s16;
+        $this->data['s17'] = $pasien->s17;
+        $this->data['s18'] = $pasien->s18;
+        $this->data['s19'] = $pasien->s19;
+        $this->data['s20'] = $pasien->s20;
+
+        $this->data['s21'] = $pasien->s21;
+        $this->data['s22'] = $pasien->s22;
+        $this->data['s23'] = $pasien->s23;
+        $this->data['s24'] = $pasien->s24;
+        $this->data['s25'] = $pasien->s25;
+        $this->data['s26'] = $pasien->s26;
+        $this->data['s27'] = $pasien->s27;
+        $this->data['s28'] = $pasien->s28;
+        $this->data['s29'] = $pasien->s29;
+        $this->data['s30'] = $pasien->s30;
+
+        $this->data['s31'] = $pasien->s31;
+        $this->data['s32'] = $pasien->s32;
+        
+        $this->data['p1'] = $pasien->p1;
+        $this->data['p2'] = $pasien->p2;
+        $this->data['p3'] = $pasien->p3;
+        
+        return view('page.ri.suicide_fisik_read', $this->data);
+
+    }
 }
