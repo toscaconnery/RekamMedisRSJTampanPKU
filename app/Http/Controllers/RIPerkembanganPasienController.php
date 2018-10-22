@@ -51,4 +51,35 @@ class RIPerkembanganPasienController extends Controller
     	}
     	return redirect('index');
     }
+
+    public function get_ri_catatan_perkembangan_read()
+    {
+        if(Session::has('id_pasien')) {
+            $id_pasien = Session::get('id_pasien');
+        }
+        else {
+            $id_pasien = 1;
+        }
+        $jumlah_form = $request->jumlah_form;
+        for($i = 1; $i <= $jumlah_form; $i++) {
+            $str_tanggal = 'tanggal_'.$i;
+            $str_jam = 'jam_'.$i;
+            $str_profesi = 'profesi_'.$i;
+            $str_keterangan = 'keterangan_'.$i;
+            $str_ttd = 'ttd_'.$i;
+            if(!is_null($request->$str_tanggal)) {
+                
+                $pasien = RIPerkembanganPasien::where('id', 1)->first();
+        
+                $this->data['id_regis'] = $pasien->id_regis;
+                $this->data['waktu'] = $pasien->waktu;
+                $this->data['profesi'] = $pasien->profesi;
+                $this->data['user'] = $pasien->user;
+                $this->data['keterangan'] = $pasien->keterangan;
+
+                //how ttd
+            }
+        }
+        return view('page.ri.catatan_perkembangan_read', $this->data);
+    }
 }

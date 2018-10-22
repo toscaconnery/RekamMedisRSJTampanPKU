@@ -46,4 +46,30 @@ class PenundaanPelayananController extends Controller
     	$data->save();
     	return back();
     }
+
+    public function get_penundaan_pelayanan_read()
+    {
+        $pasien = PenundaanPelayanan::where('id', 1)->first();
+
+        $this->data['id_regis'] = 1;
+
+        $this->data['nama'] = $pasien->nama;
+        $this->data['umur'] = $pasien->umur;
+        $this->data['hubungan'] = $pasien->hubungan;
+        $this->data['poli_ruangan'] = $pasien->poli_ruangan;
+        $this->data['dokter_pengirim'] = $pasien->dokter_pengirim;
+        $this->data['pelayanan_akan_dilakukan'] = $pasien->pelayanan_akan_dilakukan;
+
+        //sebab lainnya error
+
+        //something missing here
+
+        //alternatif radio
+        $this->data['alternatif'] = $pasien->alternatif;
+
+        $this->data['jadwal_penundaan'] = $pasien->jadwal_penundaan;
+        $this->data['rs_tujuan'] = $pasien->rs_tujuan;
+        
+        return view('page.penundaan_pelayanan_read', $this->data);
+    }
 }
