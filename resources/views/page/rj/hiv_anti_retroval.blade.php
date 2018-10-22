@@ -55,6 +55,7 @@
       <div class="row">
         <div class="col-lg-12">
           <form class="form-horizontal form-validate" method="post" id="register_form" action="rj_hiv_anti_retroval">
+            {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">Data Identitas Pasien</header>
               <div class="panel-body">
@@ -115,7 +116,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Konfirmasi Tes HIV</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="tgl_konfirm_tes_hiv">
+                    <input type="date" class="form-control" name="tgl_konfirm_tes_hiv">
                   </div>
                 </div>
                 <div class="form-group">
@@ -530,16 +531,16 @@
                     <tr>
                       <td>Saat mulai ART</td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_3">
+                        <input type="date" class="form-control" name="tanggal_pkl_3">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="stad_klinis_3">
+                        <input type="text" class="form-control" name="stad_klinis_pkl_3">
                       </td>
                       <td>
-                        <input type="number" class="form-control" name="bb_3">
+                        <input type="number" class="form-control" name="bb_pkl_3">
                       </td>
                       <td>
-                        <select class="form-control" name="status_fungsional_3">
+                        <select class="form-control" name="status_fungsional_pkl_3">
                           <option disabled selected hidden></option>
                           <option value="1">Kerja</option>
                           <option value="2">Ambulatori</option>
@@ -547,25 +548,25 @@
                         </select>
                       </td>
                       <td>
-                        <input type="text" name="cd4_3" class="form-control">
+                        <input type="text" name="cd4_pkl_3" class="form-control">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="lain_lain_3">
+                        <input type="text" class="form-control" name="lain_lain_pkl_3">
                       </td>
                     </tr>
                     <tr>
                       <td>Setelah 6 bulan ART</td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_4">
+                        <input type="date" class="form-control" name="tanggal_pkl_4">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="stad_klinis_4">
+                        <input type="text" class="form-control" name="stad_klinis_pkl_4">
                       </td>
                       <td>
-                        <input type="number" class="form-control" name="bb_4">
+                        <input type="number" class="form-control" name="bb_pkl_4">
                       </td>
                       <td>
-                        <select class="form-control" name="status_fungsional_4">
+                        <select class="form-control" name="status_fungsional_pkl_4">
                           <option disabled selected hidden></option>
                           <option value="1">Kerja</option>
                           <option value="2">Ambulatori</option>
@@ -573,25 +574,25 @@
                         </select>
                       </td>
                       <td>
-                        <input type="text" name="cd4_4" class="form-control">
+                        <input type="text" name="cd4_pkl_4" class="form-control">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="lain_lain_4">
+                        <input type="text" class="form-control" name="lain_lain_pkl_4">
                       </td>
                     </tr>
                     <tr>
                       <td>Setelah 12 bulan ART</td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_5">
+                        <input type="date" class="form-control" name="tanggal_pkl_5">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="stad_klinis_5">
+                        <input type="text" class="form-control" name="stad_klinis_pkl_5">
                       </td>
                       <td>
-                        <input type="number" class="form-control" name="bb_5">
+                        <input type="number" class="form-control" name="bb_pkl_5">
                       </td>
                       <td>
-                        <select class="form-control" name="status_fungsional_5">
+                        <select class="form-control" name="status_fungsional_pkl_5">
                           <option disabled selected hidden></option>
                           <option value="1">Kerja</option>
                           <option value="2">Ambulatori</option>
@@ -599,25 +600,25 @@
                         </select>
                       </td>
                       <td>
-                        <input type="text" name="cd4_5" class="form-control">
+                        <input type="text" name="cd4_pkl_5" class="form-control">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="lain_lain_5">
+                        <input type="text" class="form-control" name="lain_lain_pkl_5">
                       </td>
                     </tr>
                     <tr>
                       <td>Setelah 24 bulan ART</td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_6">
+                        <input type="date" class="form-control" name="tanggal_pkl_6">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="stad_klinis_6">
+                        <input type="text" class="form-control" name="stad_klinis_pkl_6">
                       </td>
                       <td>
-                        <input type="number" class="form-control" name="bb_6">
+                        <input type="number" class="form-control" name="bb_pkl_6">
                       </td>
                       <td>
-                        <select class="form-control" name="status_fungsional_6">
+                        <select class="form-control" name="status_fungsional_pkl_6">
                           <option disabled selected hidden></option>
                           <option value="1">Kerja</option>
                           <option value="2">Ambulatori</option>
@@ -625,10 +626,10 @@
                         </select>
                       </td>
                       <td>
-                        <input type="text" name="cd4_6" class="form-control">
+                        <input type="text" name="cd4_pkl_6" class="form-control">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="lain_lain_6">
+                        <input type="text" class="form-control" name="lain_lain_pkl_6">
                       </td>
                     </tr>
                   </tbody>
@@ -1023,21 +1024,21 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alasan Lain Substitusi</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="">
+                    <input type="text" class="form-control" name="alasan_lain_substitusi">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alasan Lain Switch</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="alasan_lain_switch">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alasan Lain Stop</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="alasan_lain_stop">
                   </div>
                 </div>
               </div>
@@ -1049,7 +1050,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Klasifikasi TB</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="klasifikasi_tb">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1087,19 +1088,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kabupaten</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="kabupaten_tptb">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Sasaran Kesehatan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="nama_tptb">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">No. Reg. TB Kabupaten/Kota</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="noreg_tptb">
                   </div>
                 </div>
 
@@ -1143,13 +1144,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tgl.Mulai Terapi TB</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="date" class="form-control" name="tgl_mulai_terapi_tb">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tgl.Selesai Terapi TB</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="date" class="form-control" name="tgl_selesai_terapi_tb">
                   </div>
                 </div>
 
@@ -1222,13 +1223,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Kunjungan <small>(follow-up)</small></label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="date" class="form-control" name="tgl_kunjungan_follow_up">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Rencana Tanggal Kunjungan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="date" class="form-control" name="rencana_tgl_kunjungan">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1268,19 +1269,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Klinik Sebelumnya</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="nama_klinik_sebelumnya">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">BB</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="bbf">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">TB untuk anak</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="tbf">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1309,7 +1310,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Stad Klinis</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="stad_klinis">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1334,37 +1335,37 @@
                   <div class="col-lg-4">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="infop_1">
                         K - Kandidiasis
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="infop_2">
                         D - Diare cryptosporidia
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="infop_3">
                         Cr - Mining itis cryptococal
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="infop_4">
                         PCP - Pneumocystis
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="infop_5">
                         CMV - Cytomeg alovirus
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="infop_6">
                         Lain-Lain
                       </label>
                     </div>
@@ -1372,31 +1373,31 @@
                   <div class="col-lg-5">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="infop_7">
                         P - Peniliciliosis
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="infop_8">
                         Z - Herpes Zoster
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="infop_9">
                         S - Herpessimpleks
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="infop_10">
                         T - Toxoplasmosis
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="infop_11">
                         H - Hepatitis
                       </label>
                     </div>
@@ -1405,13 +1406,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Uraikan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="keterangan_infop">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Obat untuk IO</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="obat_untuk_io">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1515,7 +1516,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Obat ARV dan Dosis yang diberikan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="obat_arv">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1558,49 +1559,49 @@
                   <div class="col-lg-4">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_1">
                         R = Ruam Kulit
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_2">
                         Mua = Mual 
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_3">
                         Mun = Muntah
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_4">
                         D = Diare
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_5">
                         N = Neuropati
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_6">
                         Ikt = Ikterus
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_7">
                         An = Anemi
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_8">
                         Ll = Lelah
                       </label>
                     </div>
@@ -1608,49 +1609,49 @@
                   <div class="col-lg-5">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_9">
                         SK = Sakit Kepala
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_10">
                         Dem = Demam
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_11">
                         Hip = Hipertensifitas
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_12">
                         Dep = Depresi
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_13">
                         P = Pankreatitis
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_14">
                         Lip = Lipodistofi
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_15">
                         Ngan = Mengantuk
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="esart_16">
                         Ln = Lain-lain
                       </label>
                     </div>
@@ -1659,19 +1660,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Uraikan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="keterangan_esart">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jumlah CD4</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="jumlah_cd4">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Hasil Lab</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="hasil_lab">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1700,13 +1701,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jumlahnya</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="jumlah_kondom">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Rujuk ke Spesialis atau Masuk Rumah Sakit (MRS)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="rsmrs">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1735,25 +1736,25 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Meninggal</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="date" class="form-control" name="tgl_meninggal">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Kunjungan Terakhir</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="date" class="form-control" name="tgl_kunjungan_terakhir">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Keluar</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="date" class="form-control" name="tgl_keluar">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Klinik Baru</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="nama_klinik_baru">
                   </div>
                 </div>
               </div>
