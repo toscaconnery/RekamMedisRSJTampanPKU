@@ -10,7 +10,6 @@
     @include('layouts.header')
     @include('layouts.sidebar')
   </section>
-  <!-- container section start -->
   <section id="main-content">
     <section class="wrapper">
       <div class="row">
