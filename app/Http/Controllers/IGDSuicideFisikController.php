@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\IGDSuicideFisik;
+use App\Models\ListDocument;
 use Session;
 
 class IGDSuicideFisikController extends Controller
@@ -70,6 +71,10 @@ class IGDSuicideFisikController extends Controller
     	$data->violence_protective_factor = $request->violence_protective_factor;
     	$data->other_risk = $request->other_risk;
     	$data->save();
+
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
+        $daftar_dokumen->igd_suicide_fisik = True;
+        $daftar_dokumen->save();
 
     	return back();
     }
