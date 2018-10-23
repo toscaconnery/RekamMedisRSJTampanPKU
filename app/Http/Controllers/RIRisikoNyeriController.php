@@ -35,4 +35,16 @@ class RIRisikoNyeriController extends Controller
 		
 		return back();
 	}
+
+	public function get_ri_risiko_nyeri_read()
+	{
+		$pasien = RIRisikoNyeri::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+        $this->data['tanggal'] = $pasien->tanggal;
+        $this->data['waktu'] = $pasien->waktu;
+        $this->data['skala'] = $pasien->skala;
+
+        return view('page.ri.risiko_nyeri_read', $this->data);
+	}
 }

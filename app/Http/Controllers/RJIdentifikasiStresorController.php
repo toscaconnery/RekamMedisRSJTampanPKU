@@ -42,7 +42,7 @@ class RJIdentifikasiStresorController extends Controller
     public function get_rj_identifikasi_stresor_read()
     {
         $pasien = RJIdentifikasiStresor::where('id', 1)->first();
-
+        
         $this->data['id_regis'] = $pasien->id_regis;
         $this->data['lingkungan_fisik'] = $pasien->lingkungan_fisik;
         $this->data['sosial_ekonomi_politik'] = $pasien->sosial_ekonomi_politik;
