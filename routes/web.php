@@ -110,7 +110,7 @@ Route::get('/rj_izin_vct_hiv_read', 'RJIzinVCTHIVController@get_rj_izin_vct_hiv_
 
 Route::get('/rj_hiv_anti_retroval', 'RJHIVAntiRetrovalController@get_rj_hiv_anti_retroval');
 Route::post('/rj_hiv_anti_retroval', 'RJHIVAntiRetrovalController@post_rj_hiv_anti_retroval');
-Route::get('/rj_hiv_anti_retroval_read', 'RJHIVAntiRetrovalController@post_rj_hiv_anti_retroval_read');
+Route::get('/rj_hiv_anti_retroval_read', 'RJHIVAntiRetrovalController@get_rj_hiv_anti_retroval_read');
 
 
 Route::get('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikolog');
@@ -191,6 +191,9 @@ Route::get('/ri_monitoring_observasi_read', 'RIMonitoringObservasiController@get
 Route::get('/ri_edukasi', 'RIEdukasiController@get_ri_edukasi');
 Route::post('/ri_edukasi', 'RIEdukasiController@post_ri_edukasi');
 Route::get('/ri_edukasi_read', 'RIEdukasiController@get_ri_edukasi_read');
+
+Route::get('/ri_surat_spd', 'RISuratPengantarDirawatController@get_ri_surat_spd');
+Route::post('/ri_surat_spd', 'RISuratPengantarDirawatController@post_ri_surat_spd');
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -281,9 +284,9 @@ Route::get('/ri_asuhan_gizi', function () {
     return view('ri_asuhan_gizi');
 });
 
-Route::get('/ri_surat_spd', function () {
-    return view('ri_surat_spd');
-});
+// Route::get('/ri_surat_spd', function () {
+//     return view('ri_surat_spd');
+// });
 
 Route::get('/ri_permintaan_privasi', function () {
     return view('ri_permintaan_privasi');
