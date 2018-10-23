@@ -497,6 +497,167 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         return back();
     }
 
+    public function get_igd_asesmen_awal_rawat_darurat_perawat_read()
+    {
+        $pasien = IGDAsesmenAwalRawatDaruratPerawat::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+        $this->data['tanggal_kedatangan'] = $pasien->tanggal_kedatangan;
+        $this->data['jam_kedatangan'] = $pasien->jam_kedatangan;
+        $this->data['cara_datang'] = $pasien->cara_datang;
+        $this->data['transportasi_ke_igd'] = $pasien->transportasi_ke_igd;
+        $this->data['rujukan_dari'] = $pasien->rujukan_dari;
+        $this->data['nama_rumah_sakit'] = $pasien->nama_rumah_sakit;
+        
+        if(isset($pasien->visum)){
+            $this->data['visum'] = $pasien->visum;
+        }
+
+        $this->data['macam_kasus'] = $pasien->macam_kasus;
+        $this->data['tensi'] = $pasien->tensi;
+        $this->data['nadi'] = $pasien->nadi;
+        $this->data['pernafasan'] = $pasien->pernafasan;
+        $this->data['suhu'] = $pasien->suhu;
+        $this->data['tb'] = $pasien->tb;
+        $this->data['bb'] = $pasien->bb;
+        $this->data['e'] = $pasien->e;
+        $this->data['v'] = $pasien->v;
+        $this->data['m'] = $pasien->m;
+        $this->data['tindakan_pra_hospital'] = $pasien->tindakan_pra_hospital;
+        $this->data['tindakan_pra_hospital_lain'] = $pasien->tindakan_pra_hospital_lain;
+        $this->data['daftar_obat_obatan'] = $pasien->daftar_obat_obatan;
+        $this->data['alasan_kunjungan'] = $pasien->alasan_kunjungan;
+        $this->data['must_bb'] = $pasien->must_bb;
+        
+        if(isset($pasien->must_asupan)){
+            $this->data['must_asupan'] = $pasien->must_asupan;
+        }
+
+        if(isset($pasien->must_diagnosis)){
+            $this->data['must_diagnosis'] = $pasien->must_diagnosis;
+            $this->data['diagnosis_khusus'] = $pasien->diagnosis_khusus;
+            $this->data['must_list_diagnosis'] = $pasien->must_list_diagnosis;
+            $this->data['must_list_diagnosis_lain'] = $pasien->must_list_diagnosis_lain;
+        }
+
+        $this->data['must_penurunan_bb'] = $pasien->must_penurunan_bb;
+        
+        if(isset($pasien->sk_1)){
+            $this->data['sk_1'] = $pasien->sk_1;
+        }
+
+        if(isset($pasien->sk_2)){
+            $this->data['sk_2'] = $pasien->sk_2;
+        }
+
+        if(isset($pasien->sk_3)){
+            $this->data['sk_3'] = $pasien->sk_3;
+        }
+
+        if(isset($pasien->sk_4)){
+            $this->data['sk_4'] = $pasien->sk_4;
+        }
+
+        $this->data['penyakit_malnutrisi'] = $pasien->penyakit_malnutrisi;
+        
+        $this->data['penyakit_malnutrisi_lain'] = $pasien->penyakit_malnutrisi_lain;
+
+        if(isset($pasien->pemberitahuan)){
+            $this->data['pemberitahuan'] = $pasien->pemberitahuan;
+        }
+
+        $this->data['waktu_pemberitahuan'] = $pasien->waktu_pemberitahuan;
+        
+        if(isset($pasien->keluhan_nyeri)){
+            $this->data['keluhan_nyeri'] = $pasien->keluhan_nyeri;
+        }
+
+        $this->data['skala_nyeri'] = $pasien->skala_nyeri;
+        $this->data['lokasi_nyeri'] = $pasien->lokasi_nyeri;
+        $this->data['penyebab_nyeri'] = $pasien->penyebab_nyeri;
+
+        if(isset($pasien->nyeri_berpindah)){
+            $this->data['nyeri_berpindah'] = $pasien->nyeri_berpindah;
+        }
+
+        $this->data['frekuensi_nyeri'] = $pasien->frekuensi_nyeri;
+        $this->data['lama_nyeri'] = $pasien->lama_nyeri;
+        $this->data['jenis_risiko_jatuh'] = $pasien->jenis_risiko_jatuh;
+        $this->data['humpty_1'] = $pasien->humpty_1;
+        $this->data['humpty_2'] = $pasien->humpty_2;
+        $this->data['humpty_3'] = $pasien->humpty_3;
+        $this->data['humpty_4'] = $pasien->humpty_4;
+        $this->data['humpty_5'] = $pasien->humpty_5;
+        $this->data['humpty_6'] = $pasien->humpty_6;
+
+        if(isset($pasien->morse_1)){
+            $this->data['morse_1'] = $pasien->morse_1;
+        }
+
+        if(isset($pasien->morse_2)){
+            $this->data['morse_2'] = $pasien->morse_2;
+        }
+
+        $this->data['morse_3'] = $pasien->morse_3;
+
+        if(isset($pasien->morse_4)){
+            $this->data['morse_4'] = $pasien->morse_4;
+        }
+
+        $this->data['morse_5'] = $pasien->morse_5;
+        $this->data['morse_6'] = $pasien->morse_6;
+        
+        $this->data['edmunson_1'] = $pasien->edmunson_1;
+        $this->data['edmunson_2'] = $pasien->edmunson_2;
+        $this->data['edmunson_3'] = $pasien->edmunson_3;
+        $this->data['edmunson_4'] = $pasien->edmunson_4;
+        $this->data['edmunson_5'] = $pasien->edmunson_5;
+        $this->data['edmunson_6'] = $pasien->edmunson_6;
+        $this->data['edmunson_7'] = $pasien->edmunson_7;
+        $this->data['edmunson_8'] = $pasien->edmunson_8;
+        
+        if(isset($pasien->tekanan_intrakanal)){
+            $this->data['tekanan_intrakanal'] = $pasien->tekanan_intrakanal;
+        }
+
+        $this->data['list_tekanan_intrakanal'] = $pasien->list_tekanan_intrakanal;
+
+        $this->data['pupil'] = $pasien->pupil;
+        $this->data['neurosensorik'] = $pasien->neurosensorik;
+        $this->data['muskuloskeletal'] = $pasien->muskuloskeletal;
+        $this->data['integumen'] = $pasien->integumen;
+        $this->data['turgor'] = $pasien->turgor;
+        
+        if(isset($pasien->edema)){
+            $this->data['edema'] = $pasien->edema;
+            $this->data['list_edema'] = $pasien->list_edema;
+        }
+
+        $this->data['mukosa'] = $pasien->mukosa;
+
+        if(isset($pasien->pendarahan)){
+            $this->data['pendarahan'] = $pasien->pendarahan;
+            $this->data['jumlah_pendarahan'] = $pasien->jumlah_pendarahan;
+            $this->data['warna_pendarahan'] = $pasien->warna_pendarahan;
+        }
+
+        $this->data['intoksisasi'] = $pasien->intoksisasi;
+        $this->data['eliminasi'] = $pasien->eliminasi;
+        $this->data['diagnosa_umum'] = $pasien->diagnosa_umum;
+        $this->data['diagnosa_umum_lainnya'] = $pasien->diagnosa_umum_lainnya;
+        $this->data['diagnosa_jiwa'] = $pasien->diagnosa_jiwa;
+        $this->data['diagnosa_jiwa_lainnya'] = $pasien->diagnosa_jiwa_lainnya;
+        $this->data['obat_parental'] = $pasien->obat_parental;
+        $this->data['ekg'] = $pasien->ekg;
+        $this->data['implementasi'] = $pasien->implementasi;
+        $this->data['implementasi'] = $pasien->implementasi;
+        $this->data['evaluasi'] = $pasien->evaluasi;
+        
+        return view('page.igd_asesmen_awal_rawat_darurat_perawat_read', $this->data);
+    }
+
+    ///// DOKTER
+
     public function get_igd_asesmen_awal_rawat_darurat_dokter()
     {
         return view('page.igd.asesmen_awal_rawat_darurat_dokter', $this->data);
@@ -708,5 +869,157 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $data->save();
 
         return back();
+    }
+
+    //dokter
+    public function get_igd_asesmen_awal_rawat_darurat_dokter_read()
+    {
+        $pasien = IGDAsesmenAwalRawatDaruratDokter::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+        $this->data['pewawancara'] = $pasien->pewawancara;
+        $this->data['keluhan_utama'] = $pasien->keluhan_utama;
+        $this->data['riwayat_penyakit_sekarang'] = $pasien->riwayat_penyakit_sekarang;
+        $this->data['riwayat_penyakit_dahulu'] = $pasien->riwayat_penyakit_dahulu;
+        
+        if(isset($pasien->riwayat_napza)){
+            $this->data['riwayat_napza'] = $pasien->riwayat_napza;
+        }
+        
+        $this->data['lama_pemakaian'] = $pasien->lama_pemakaian;
+        $this->data['jenis_zat'] = $pasien->jenis_zat;
+        $this->data['cara_pemakaian'] = $pasien->cara_pemakaian;
+        $this->data['latar_belakang_pemakaian'] = $pasien->latar_belakang_pemakaian;
+        $this->data['kepribadian_sebelum_sakit'] = $pasien->kepribadian_sebelum_sakit;
+        $this->data['riwayat_pendidikan'] = $pasien->riwayat_pendidikan;
+        $this->data['riwayat_pekerjaan'] = $pasien->riwayat_pekerjaan;
+        $this->data['riwayat_perkawinan'] = $pasien->riwayat_perkawinan;
+        $this->data['riwayat_penyakit_lain'] = $pasien->riwayat_penyakit_lain;
+        $this->data['text_riwayat_penyakit_lain'] = $pasien->text_riwayat_penyakit_lain;
+        
+        if(isset($pasien->riwayat_operasi)){
+            $this->data['riwayat_operasi'] = $pasien->riwayat_operasi;
+        }
+
+        $this->data['jenis_operasi'] = $pasien->jenis_operasi;
+        $this->data['waktu_operasi'] = $pasien->waktu_operasi;
+        
+        if(isset($pasien->riwayat_tranfusi)){
+            $this->data['riwayat_tranfusi'] = $pasien->riwayat_tranfusi;
+        }
+
+        if(isset($pasien->reaksi_tranfusi)){
+            $this->data['reaksi_tranfusi'] = $pasien->reaksi_tranfusi;
+        }
+
+        $this->data['reaksi_tranfusi_timbul'] = $pasien->reaksi_tranfusi_timbul;
+        $this->data['riwayat_penyakit_keluarga'] = $pasien->riwayat_penyakit_keluarga;
+        $this->data['riwayat_pengobatan'] = $pasien->riwayat_pengobatan;
+
+        $this->data['riwayat_alergi'] = $pasien->riwayat_alergi;
+        $this->data['kepala'] = $pasien->kepala;
+        $this->data['leher'] = $pasien->leher;
+        $this->data['dada'] = $pasien->dada;
+        $this->data['jantung'] = $pasien->jantung;
+        $this->data['paru'] = $pasien->paru;
+        $this->data['perut'] = $pasien->perut;
+
+        $this->data['anggota_gerak'] = $pasien->anggota_gerak;
+        $this->data['status_lokalis'] = $pasien->status_lokalis;
+        $this->data['penampilan'] = $pasien->penampilan;
+        $this->data['kesadaran'] = $pasien->kesadaran;
+        $this->data['orientasi'] = $pasien->orientasi;
+        $this->data['sikap_tingkah_laku'] = $pasien->sikap_tingkah_laku;
+        $this->data['proses_pikir'] = $pasien->proses_pikir;
+        $this->data['bentuk_pikir'] = $pasien->bentuk_pikir;
+        $this->data['isi_pikir'] = $pasien->isi_pikir;
+        $this->data['mood'] = $pasien->mood;
+        $this->data['afek'] = $pasien->afek;
+        $this->data['halusinasi'] = $pasien->halusinasi;
+        $this->data['ilusi'] = $pasien->ilusi;
+        $this->data['daya_konsentrasi'] = $pasien->daya_konsentrasi;
+        $this->data['daya_ingat'] = $pasien->daya_ingat;
+        $this->data['pikiran_abstrak'] = $pasien->pikiran_abstrak;
+        $this->data['pengendalian_impuls'] = $pasien->pengendalian_impuls;
+        $this->data['daya_nilai'] = $pasien->daya_nilai;
+        $this->data['tilikan'] = $pasien->tilikan;
+        $this->data['taraf_dipercaya'] = $pasien->taraf_dipercaya;
+        $this->data['meningeal_sight'] = $pasien->meningeal_sight;
+        $this->data['nervus_cranialis'] = $pasien->nervus_cranialis;
+        $this->data['sistem_motorik'] = $pasien->sistem_motorik;
+        $this->data['cerebellum'] = $pasien->cerebellum;
+        $this->data['vegetatif'] = $pasien->vegetatif;
+
+        $this->data['pemeriksaan_laboratorium'] = $pasien->pemeriksaan_laboratorium;
+        $this->data['hasil_laboratorium'] = $pasien->hasil_laboratorium;
+        $this->data['keterangan_laboratorium'] = $pasien->keterangan_laboratorium;
+        $this->data['jam_pemeriksaan_laboratorium'] = $pasien->jam_pemeriksaan_laboratorium;
+        $this->data['jam_hasil_laboratorium'] = $pasien->jam_hasil_laboratorium;
+
+        $this->data['pemeriksaan_radiologi'] = $pasien->pemeriksaan_radiologi;
+        $this->data['hasil_radiologi'] = $pasien->hasil_radiologi;
+        $this->data['keterangan_radiologi'] = $pasien->keterangan_radiologi;
+        $this->data['jam_pemeriksaan_radiologi'] = $pasien->jam_pemeriksaan_radiologi;
+        $this->data['jam_hasil_radiologi'] = $pasien->jam_hasil_radiologi;
+
+        $this->data['pemeriksaan_ekg'] = $pasien->pemeriksaan_ekg;
+        $this->data['hasil_ekg'] = $pasien->hasil_ekg;
+        $this->data['keterangan_ekg'] = $pasien->keterangan_ekg;
+        $this->data['jam_pemeriksaan_ekg'] = $pasien->jam_pemeriksaan_ekg;
+        $this->data['jam_hasil_ekg'] = $pasien->jam_hasil_ekg;
+
+        $this->data['pemeriksaan_lain'] = $pasien->pemeriksaan_lain;
+        $this->data['hasil_lain'] = $pasien->hasil_lain;
+        $this->data['keterangan_lain'] = $pasien->keterangan_lain;
+        $this->data['jam_pemeriksaan_lain'] = $pasien->jam_pemeriksaan_lain;
+        $this->data['jam_hasil_lain'] = $pasien->jam_hasil_lain;
+        
+        $this->data['panssec'] = $pasien->panssec;
+        $this->data['gaff'] = $pasien->gaff;
+        $this->data['p4'] = $pasien->p4;
+        $this->data['g8'] = $pasien->g8;
+        $this->data['p7'] = $pasien->p7;
+        $this->data['g14'] = $pasien->g14;
+        $this->data['g4'] = $pasien->g4;
+        $this->data['bangsal'] = $pasien->bangsal;
+        $this->data['tanggal_pemeriksaan'] = $pasien->tanggal_pemeriksaan;
+        
+        $this->data['axis_1'] = $pasien->axis_1;
+        $this->data['axis_2'] = $pasien->axis_2;
+        $this->data['axis_3'] = $pasien->axis_3;
+        $this->data['axis_4'] = $pasien->axis_4;
+        $this->data['axis_5'] = $pasien->axis_5;
+        
+        $this->data['diagnosis_utama'] = $pasien->diagnosis_utama;
+        $this->data['diagnosis_sekunder'] = $pasien->diagnosis_sekunder;
+        $this->data['daftar_masalah'] = $pasien->daftar_masalah;
+        $this->data['tindak_lanjut'] = $pasien->tindak_lanjut;
+
+        if(isset($pasien->kontrol)){
+            $this->data['kontrol'] = $pasien->kontrol;
+        }
+
+        $this->data['tanggal_kontrol'] = $pasien->tanggal_kontrol;
+        $this->data['dirawat_di_ruang'] = $pasien->dirawat_di_ruang;
+        $this->data['indikasi_rawat_inap'] = $pasien->indikasi_rawat_inap;
+        $this->data['alasan_menolak'] = $pasien->alasan_menolak;
+        $this->data['alasan_menolak_lainnya'] = $pasien->alasan_menolak_lainnya;
+        $this->data['dirujuk_ke'] = $pasien->dirujuk_ke;
+        $this->data['alasan_rujuk'] = $pasien->alasan_rujuk;
+        
+        if(isset($pasien->doa)){
+            $this->data['doa'] = $pasien->doa;
+        }
+
+        $this->data['jam_keluar'] = $pasien->jam_keluar;
+        $this->data['kesadaran_saat_keluar'] = $pasien->kesadaran_saat_keluar;
+        $this->data['gcs'] = $pasien->gcs;
+        $this->data['kesadaran_lainnya'] = $pasien->kesadaran_lainnya;
+        $this->data['tensi'] = $pasien->tensi;
+        $this->data['nadi'] = $pasien->nadi;
+        $this->data['pernafasan'] = $pasien->pernafasan;
+        $this->data['suhu'] = $pasien->suhu;
+
+        return view('page.igd_asesmen_awal_rawat_darurat_dokter_read', $this->data);
     }
 }

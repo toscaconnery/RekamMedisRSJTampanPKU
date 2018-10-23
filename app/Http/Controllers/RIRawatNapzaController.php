@@ -743,4 +743,101 @@ class RIRawatNapzaController extends Controller
 
     	return back();
     }
+
+    public function get_ri_rawat_napza_read()
+    {   
+
+        $pasien = RIRawatNapza::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+        $this->data['tanggal_pengkajian'] = $pasien->tanggal_pengkajian;
+        $this->data['sumber_informasi'] = $pasien->sumber_informasi;
+        $this->data['tanggal_dirawat'] = $pasien->tanggal_dirawat;
+        $this->data['ruangan'] = $pasien->ruangan;
+        $this->data['alasan_masuk'] = $pasien->alasan_masuk;
+
+        $this->data['alasan_masuk_lainnya'] = $pasien->alasan_masuk_lainnya;
+        $this->data['keadaan_masuk'] = $pasien->keadaan_masuk;
+        $this->data['pemakaian_terakhir'] = $pasien->pemakaian_terakhir;
+        $this->data['jenis_zat'] = $pasien->jenis_zat;
+        
+        $this->data['cara_pemakaian'] = $pasien->cara_pemakaian;
+
+        if($pasien->f1 == True)
+        {
+            $this->data['f1'] = $pasien->f1;
+        }
+        if($pasien->f1 == True)
+        {
+            $this->data['f2'] = $pasien->f2;
+        }
+        if($pasien->f1 == True)
+        {
+            $this->data['f3'] = $pasien->f3;
+        }
+
+        $this->data['keterangan_komplikasi'] = $pasien->keterangan_komplikasi;
+        $this->data['kriminal_dirumah'] = $pasien->kriminal_dirumah;
+        $this->data['kriminal_diluar'] = $pasien->kriminal_diluar;
+        $this->data['problema_sekolah'] = $pasien->problema_sekolah;
+        $this->data['problema_keluarga'] = $pasien->problema_keluarga;
+        $this->data['problema_pekerjaan'] = $pasien->problema_pekerjaan;
+        $this->data['problema_masyarakat'] = $pasien->problema_masyarakat;
+        $this->data['problema_masyarakat_lainnya'] = $pasien->problema_masyarakat_lainnya;
+        $this->data['dirawat_diagnosis_medis'] = $pasien->dirawat_diagnosis_medis;
+        $this->data['etiologi'] = $pasien->etiologi;
+        $this->data['faktor_kambuh'] = $pasien->faktor_kambuh;
+
+        $this->data['masalah_keperawatan_1'] = $pasien->masalah_keperawatan_1;
+        $this->data['jenis_penanggulangan'] = $pasien->jenis_penanggulangan;
+        $this->data['alasan_meninggalkan'] = $pasien->alasan_meninggalkan;
+        
+        $this->data['masalah_keperawatan_2'] = $pasien->masalah_keperawatan_2;
+        $this->data['keluhan_fisik'] = $pasien->keluhan_fisik;
+        $this->data['anggota_keluarga'] = $pasien->anggota_keluarga;
+        
+        if($pasien->f4 === True)
+        {
+            $this->data['f4'] = $pasien->f4;
+        }
+
+        $this->data['f6'] = $pasien->f;
+
+        if($pasien->f6 === True)
+        {
+            $this->data['f6'] = $pasien->f6;    
+        }
+
+        $this->data['keterangan_pranikah'] = $pasien->keterangan_pranikah;
+        $this->data['masalah_keperawatan_3'] = $pasien->masalah_keperawatan_3;
+        $this->data['f7'] = $pasien->f7;
+        $this->data['gambaran_diri'] = $pasien->gambaran_diri;
+        $this->data['masalah_keperawatan_4'] = $pasien->masalah_keperawatan_4;
+        $this->data['gambaran_diri_lainnya'] = $pasien->gambaran_diri_lainnya;
+        $this->data['identitas'] = $pasien->identitas;
+        $this->data['ideal_diri'] = $pasien->ideal_diri;
+        $this->data['harga_diri'] = $pasien->harga_diri;
+        $this->data['masalah_keperawatan_5'] = $pasien->masalah_keperawatan_5;
+        $this->data['nilai_keyakinan'] = $pasien->nilai_keyakinan;
+        $this->data['nilai_keyakinan_lainnya'] = $pasien->nilai_keyakinan_lainnya;
+        $this->data['kegiatan_ibadah'] = $pasien->kegiatan_ibadah;
+        $this->data['masalah_keperawatan_6'] = $pasien->masalah_keperawatan_6;
+        $this->data['adaptif'] = $pasien->adaptif;
+        $this->data['adaptif_lainnya'] = $pasien->adaptif_lainnya;
+        $this->data['maladaptif'] = $pasien->maladaptif;
+        $this->data['maladaptif_lainnya'] = $pasien->maladaptif_lainnya;
+        $this->data['masalah_keperawatan_7'] = $pasien->masalah_keperawatan_7;
+        $this->data['pengetahuan_kurang'] = $pasien->pengetahuan_kurang;
+        $this->data['pengetahuan_kurang_lainnya'] = $pasien->pengetahuan_kurang_lainnya;
+        $this->data['masalah_keperawatan_8'] = $pasien->masalah_keperawatan_8;
+        $this->data['diagnosis_medis'] = $pasien->diagnosis_medis;
+        $this->data['terapi_medis'] = $pasien->terapi_medis;
+        $this->data['checkbox_masalah_keperawatan'] = $pasien->checkbox_masalah_keperawatan;
+        $this->data['masalah_keperawatan_lainnya'] = $pasien->masalah_keperawatan_lainnya;
+
+        $this->data['jumlah_masalah'] = $pasien->jumlah_masalah;
+        $this->data['text_masalah_keperawatan'] = $pasien->text_masalah_keperawatan;
+        
+       return view('page.ri.rawat_napza_read', $this->data);
+    }
 }
