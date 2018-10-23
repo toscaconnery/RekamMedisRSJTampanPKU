@@ -207,6 +207,8 @@ Route::post('/ri_permintaan_privasi', 'RIPermintaanPrivasiController@post_ri_per
 Route::get('/ri_permintaan_rohani', 'RIPermintaanRohaniController@get_ri_permintaan_rohani');
 Route::post('/ri_permintaan_rohani', 'RIPermintaanRohaniController@post_ri_permintaan_rohani');
 
+Route::get('/ri_permintaan_second', 'RIPermintaanSecondController@get_ri_permintaan_second');
+Route::post('/ri_permintaan_second', 'RIPermintaanSecondController@post_ri_permintaan_second');
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -309,9 +311,9 @@ Route::get('/ri_asuhan_gizi', function () {
 //     return view('ri_permintaan_rohani');
 // });
 
-Route::get('/ri_permintaan_second', function () {
-    return view('ri_permintaan_second');
-});
+// Route::get('/ri_permintaan_second', function () {
+//     return view('ri_permintaan_second');
+// });
 
 Route::get('/ri_permintaan_notresucitate', function () {
     return view('ri_permintaan_notresucitate');
