@@ -198,6 +198,9 @@ Route::post('/ri_surat_spd', 'RISuratPengantarDirawatController@post_ri_surat_sp
 Route::get('/ri_persetujuan_umum', 'RIPersetujuanUmumController@get_ri_persetujuan_umum');
 Route::post('/ri_persetujuan_umum', 'RIPersetujuanUmumController@post_ri_persetujuan_umum');
 
+Route::get('/ri_hak_kewajiban', 'RIHakKewajibanController@get_ri_hak_kewajiban');
+Route::post('/ri_hak_kewajiban', 'RIHakKewajibanController@post_ri_hak_kewajiban');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -456,7 +459,7 @@ Route::get('/ri_asesmen', function () {
 //     return view('ri_edukasi');
 // });
 
-Route::get('/ri_hak_kewajiban', function () {
+Route::get('/ri_hak_kewajiban2', function () {
     return view('ri_hak_kewajiban');
 });
 
