@@ -1301,7 +1301,7 @@
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="sfu" value="1">
+                        <input type="radio" name="sfu" value="2">
                         3. Baring
                       </label>
                     </div>

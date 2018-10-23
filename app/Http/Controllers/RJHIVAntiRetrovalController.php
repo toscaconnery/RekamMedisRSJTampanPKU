@@ -292,4 +292,145 @@ class RJHIVAntiRetrovalController extends Controller
 
     	return redirect('daftar_dokumen');
     }
+
+    public function get_rj_hiv_anti_retroval_read()
+    {
+        $pasien = RJHIVAntiRetroval::where('id_regis', Session::get('id_pasien'))->first();
+        $this->data['id_regis'] = $pasien->id_regis;
+        $this->data['no_reg_nasional'] = $pasien->no_reg_nasional;
+        $this->data['nik'] = $pasien->nik;
+        $this->data['nama_ibu_kandung'] = $pasien->nama_ibu_kandung;
+        $this->data['alamat_pasien'] = $pasien->alamat_pasien;
+        $this->data['no_telp'] = $pasien->no_telp;
+        $this->data['nama_pmo'] = $pasien->nama_pmo;
+        $this->data['hubungan_dengan_pasien'] = $pasien->hubungan_dengan_pasien;
+        $this->data['alamat_pmo'] = $pasien->alamat_pmo;
+        $this->data['no_telp_pmo'] = $pasien->no_telp_pmo;
+        $this->data['tgl_konfirm_tes_hiv'] = $pasien->tgl_konfirm_tes_hiv;
+        $this->data['tempat_tes_hiv'] = $pasien->tempat_tes_hiv;
+        $this->data['entry_point'] = $pasien->entry_point;
+        $this->data['keterangan_entry_point'] = $pasien->keterangan_entry_point;
+        $this->data['riwayat_alergi_obat'] = $pasien->riwayat_alergi_obat;
+        $this->data['pendidikan'] = $pasien->pendidikan;
+        $this->data['pekerjaan'] = $pasien->pekerjaan;
+        $this->data['nama_pekerjaan'] = $pasien->nama_pekerjaan;
+        $list_fr = $pasien->fr;
+        $exploded_fr = explode("-", $list_fr);
+        $this->data['fr'] = array();
+        foreach ($exploded_fr as $key => $value) {
+            $this->data['fr'][$value] = True;
+        }
+        $this->data['keterangan_rawat_jalan'] = $pasien->keterangan_rawat_jalan;
+        $this->data['keterangan_jangkauan'] = $pasien->keterangan_jangkauan;
+        $this->data['keterangan_fr_lainnya'] = $pasien->keterangan_fr_lainnya;
+        $this->data['status_pernikahan'] = $pasien->status_pernikahan;
+        $rows_riwayat_keluarga = explode("$&!^@", $pasien->riwayat_keluarga);
+        $this->data['riwayat_keluarga'] = array();
+        foreach ($rows_riwayat_keluarga as $key => $value) {
+            $data_keluarga = explode("#&!^@", $value);
+            $this->data['riwayat_keluarga'][$key] = $data_keluarga;
+        }
+
+        $this->data['pernah_menerima_art'] = $pasien->pernah_menerima_art;
+        $this->data['jenis_art'] = $pasien->jenis_art;
+        $this->data['tempat_art_dulu'] = $pasien->tempat_art_dulu;
+        $this->data['nama_arv'] = $pasien->nama_arv;
+        $this->data['dosis_arv'] = $pasien->dosis_arv;
+        $this->data['lama_penggunaan'] = $pasien->lama_penggunaan;
+        $this->data['tanggal_pkl_1'] = $pasien->tanggal_pkl_1;
+        $this->data['stad_klinis_pkl_1'] = $pasien->stad_klinis_pkl_1;
+        $this->data['bb_pkl_1'] = $pasien->bb_pkl_1;
+        $this->data['status_fungsional_pkl_1'] = $pasien->status_fungsional_pkl_1;
+        $this->data['cd4_pkl_1'] = $pasien->cd4_pkl_1;
+        $this->data['lain_lain_pkl_1'] = $pasien->lain_lain_pkl_1;
+        $this->data['tanggal_pkl_2'] = $pasien->tanggal_pkl_2;
+        $this->data['stad_klinis_pkl_2'] = $pasien->stad_klinis_pkl_2;
+        $this->data['bb_pkl_2'] = $pasien->bb_pkl_2;
+        $this->data['status_fungsional_pkl_2'] = $pasien->status_fungsional_pkl_2;
+        $this->data['cd4_pkl_2'] = $pasien->cd4_pkl_2;
+        $this->data['lain_lain_pkl_2'] = $pasien->lain_lain_pkl_2;
+        $this->data['tanggal_pkl_3'] = $pasien->tanggal_pkl_3;
+        $this->data['stad_klinis_pkl_3'] = $pasien->stad_klinis_pkl_3;
+        $this->data['bb_pkl_3'] = $pasien->bb_pkl_3;
+        $this->data['status_fungsional_pkl_3'] = $pasien->status_fungsional_pkl_3;
+        $this->data['cd4_pkl_3'] = $pasien->cd4_pkl_3;
+        $this->data['lain_lain_pkl_3'] = $pasien->lain_lain_pkl_3;
+        $this->data['tanggal_pkl_4'] = $pasien->tanggal_pkl_4;
+        $this->data['stad_klinis_pkl_4'] = $pasien->stad_klinis_pkl_4;
+        $this->data['bb_pkl_4'] = $pasien->bb_pkl_4;
+        $this->data['status_fungsional_pkl_4'] = $pasien->status_fungsional_pkl_4;
+        $this->data['cd4_pkl_4'] = $pasien->cd4_pkl_4;
+        $this->data['lain_lain_pkl_4'] = $pasien->lain_lain_pkl_4;
+        $this->data['tanggal_pkl_5'] = $pasien->tanggal_pkl_5;
+        $this->data['stad_klinis_pkl_5'] = $pasien->stad_klinis_pkl_5;
+        $this->data['bb_pkl_5'] = $pasien->bb_pkl_5;
+        $this->data['status_fungsional_pkl_5'] = $pasien->status_fungsional_pkl_5;
+        $this->data['cd4_pkl_5'] = $pasien->cd4_pkl_5;
+        $this->data['lain_lain_pkl_5'] = $pasien->lain_lain_pkl_5;
+        $this->data['tanggal_pkl_6'] = $pasien->tanggal_pkl_6;
+        $this->data['stad_klinis_pkl_6'] = $pasien->stad_klinis_pkl_6;
+        $this->data['bb_pkl_6'] = $pasien->bb_pkl_6;
+        $this->data['status_fungsional_pkl_6'] = $pasien->status_fungsional_pkl_6;
+        $this->data['cd4_pkl_6'] = $pasien->cd4_pkl_6;
+        $this->data['lain_lain_pkl_6'] = $pasien->lain_lain_pkl_6;
+        $rows_terapi_art = explode("$&!^@", $pasien->terapi_art);
+        $this->data['terapi_art'] = array();
+        foreach ($rows_terapi_art as $key => $value) {
+            $data_terapi = explode("#&!^@", $value);
+            $this->data['terapi_art'][$key] = $data_terapi;
+        }
+        $this->data['alasan_lain_substitusi'] = $pasien->alasan_lain_substitusi;
+        $this->data['alasan_lain_switch'] = $pasien->alasan_lain_switch;
+        $this->data['alasan_lain_stop'] = $pasien->alasan_lain_stop;
+        $this->data['klasifikasi_tb'] = $pasien->klasifikasi_tb;
+        $this->data['ptb'] = $pasien->ptb;
+        $this->data['kabupaten_tptb'] = $pasien->kabupaten_tptb;
+        $this->data['nama_tptb'] = $pasien->nama_tptb;
+        $this->data['noreg_tptb'] = $pasien->noreg_tptb;
+        $this->data['ttb'] = $pasien->ttb;
+        $this->data['tgl_mulai_terapi_tb'] = $pasien->tgl_mulai_terapi_tb;
+        $this->data['tgl_selesai_terapi_tb'] = $pasien->tgl_selesai_terapi_tb;
+        $this->data['ii'] = $pasien->ii;
+        $this->data['tgl_kunjungan_follow_up'] = $pasien->tgl_kunjungan_follow_up;
+        $this->data['rencana_tgl_kunjungan'] = $pasien->rencana_tgl_kunjungan;
+        $this->data['prm'] = $pasien->prm;
+        $this->data['drt'] = $pasien->drt;
+        $this->data['nama_klinik_sebelumnya'] = $pasien->nama_klinik_sebelumnya;
+        $this->data['bbf'] = $pasien->bbf;
+        $this->data['tbf'] = $pasien->tbf;
+        $this->data['sfu'] = $pasien->sfu;
+        $this->data['stad_klinis'] = $pasien->stad_klinis;
+        $this->data['hkb'] = $pasien->hkb;
+        $rows_infop = explode("-", $pasien->infop);
+        $this->data['infop'] = array();
+        foreach ($rows_infop as $key => $value) {
+            $this->data['infop'][$value] = True;
+        }
+        $this->data['keterangan_infop'] = $pasien->keterangan_infop;
+        $this->data['obat_untuk_io'] = $pasien->obat_untuk_io;
+        $this->data['stb'] = $pasien->stb;
+        $this->data['ppk'] = $pasien->ppk;
+        $this->data['inh'] = $pasien->inh;
+        $this->data['hkr'] = $pasien->hkr;
+        $this->data['obat_arv'] = $pasien->obat_arv;
+        $this->data['adr'] = $pasien->adr;
+        $rows_esart = explode("-", $pasien->esart);
+        $this->data['esart'] = array();
+        foreach ($rows_esart as $key => $value) {
+            $this->data['esart'][$value] = True;
+        }
+        $this->data['keterangan_esart'] = $pasien->keterangan_esart;
+        $this->data['jumlah_cd4'] = $pasien->jumlah_cd4;
+        $this->data['hasil_lab'] = $pasien->hasil_lab;
+        $this->data['dkr'] = $pasien->dkr;
+        $this->data['jumlah_kondom'] = $pasien->jumlah_kondom;
+        $this->data['rsmrs'] = $pasien->rsmrs;
+        $this->data['fll'] = $pasien->fll;
+        $this->data['tgl_meninggal'] = $pasien->tgl_meninggal;
+        $this->data['tgl_kunjungan_terakhir'] = $pasien->tgl_kunjungan_terakhir;
+        $this->data['tgl_keluar'] = $pasien->tgl_keluar;
+        $this->data['nama_klinik_baru'] = $pasien->nama_klinik_baru;
+    
+        return view('page.rj.hiv_anti_retroval_read', $this->data);
+    }
 }
