@@ -201,6 +201,13 @@ Route::post('/ri_persetujuan_umum', 'RIPersetujuanUmumController@post_ri_persetu
 Route::get('/ri_hak_kewajiban', 'RIHakKewajibanController@get_ri_hak_kewajiban');
 Route::post('/ri_hak_kewajiban', 'RIHakKewajibanController@post_ri_hak_kewajiban');
 
+Route::get('/ri_permintaan_privasi', 'RIPermintaanPrivasiController@get_ri_permintaan_privasi');
+Route::post('/ri_permintaan_privasi', 'RIPermintaanPrivasiController@post_ri_permintaan_privasi');
+
+Route::get('/ri_permintaan_rohani', 'RIPermintaanRohaniController@get_ri_permintaan_rohani');
+Route::post('/ri_permintaan_rohani', 'RIPermintaanRohaniController@post_ri_permintaan_rohani');
+
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -294,13 +301,13 @@ Route::get('/ri_asuhan_gizi', function () {
 //     return view('ri_surat_spd');
 // });
 
-Route::get('/ri_permintaan_privasi', function () {
-    return view('ri_permintaan_privasi');
-});
+// Route::get('/ri_permintaan_privasi', function () {
+//     return view('ri_permintaan_privasi');
+// });
 
-Route::get('/ri_permintaan_rohani', function () {
-    return view('ri_permintaan_rohani');
-});
+// Route::get('/ri_permintaan_rohani', function () {
+//     return view('ri_permintaan_rohani');
+// });
 
 Route::get('/ri_permintaan_second', function () {
     return view('ri_permintaan_second');
@@ -459,13 +466,13 @@ Route::get('/ri_asesmen', function () {
 //     return view('ri_edukasi');
 // });
 
-Route::get('/ri_hak_kewajiban2', function () {
-    return view('ri_hak_kewajiban');
-});
+// Route::get('/ri_hak_kewajiban2', function () {
+//     return view('ri_hak_kewajiban');
+// });
 
-Route::get('/ri_persetujuan_umum2', function () {
-    return view('ri_persetujuan_umum');
-});
+// Route::get('/ri_persetujuan_umum2', function () {
+//     return view('ri_persetujuan_umum');
+// });
 
 Route::get('/ri_transfer_internal', function () {
     return view('ri_transfer_internal');
