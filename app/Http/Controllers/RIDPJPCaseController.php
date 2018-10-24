@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 namespace App\Http\Controllers;
 
@@ -61,7 +61,7 @@ class RIDPJPCaseController extends Controller
     	return back();
     }
 
-    public function post_ri_dpjp_case(Request $request)
+    public function get_ri_dpjp_case_read()
     {
         $pasien = RIDPJPCase::where('id', 1)->first();
         
