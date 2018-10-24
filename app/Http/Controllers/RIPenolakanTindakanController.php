@@ -3,24 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\RIPersetujuanTindakan;
+use App\Models\RIPenolakanTindakan;
 use Session;
 
-class RIPersetujuanTindakanController extends Controller
+class RIPenolakanTindakanController extends Controller
 {
     public function __construct()
     {
-    	$this->data['title'] = 'PERSETUJUAN TINDAKAN KEDOKTERAN';
+    	$this->data['title'] = 'PENOLAKAN TINDAKAN KEDOKTERAN';
     }
 
-    public function get_ri_persetujuan_tindakan()
+    public function get_ri_penolakan_tindakan()
     {
-    	return view('page.ri.persetujuan_tindakan', $this->data);
+    	return view('page.ri.penolakan_tindakan', $this->data);
     }
 
-    public function post_ri_persetujuan_tindakan(Request $request)
+    public function post_ri_penolakan_tindakan(Request $request)
     {
-    	$data = new RIPersetujuanTindakan;
+    	$data = new RIPenolakanTindakan;
     	$id_pasien = Session::get('id_pasien');
     	$data->id_regis = $id_pasien;
 		$data->dokter_pelaksana_tindakan = $request->dokter_pelaksana_tindakan;

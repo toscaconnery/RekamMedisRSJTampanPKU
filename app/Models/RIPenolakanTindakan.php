@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RIPersetujuanTindakan extends Model
+class RIPenolakanTindakan extends Model
 {
-    protected $table = 'ri_persetujuan_tindakan';
+    protected $table = 'ri_penolakan_tindakan';
 
     public $incrementing = true;
 
@@ -14,8 +14,8 @@ class RIPersetujuanTindakan extends Model
 
     protected $fillable = [
         'id_regis',
-		'dokter_pelaksana_tindakan',
-		'pemberi_informasi',
+        'dokter_pelaksana_tindakan',
+		'pemberian_informasi',
 		'penerima_informasi',
 		'jenis_informasi_1',
 		'check_informasi_1',

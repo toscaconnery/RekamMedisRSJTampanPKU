@@ -15,7 +15,7 @@
     <section class="wrapper">
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="page-header"><i class="fa fa-file-text-o"></i> PERSETUJUAN TINDAKAN KEDOKTERAN</h3>
+          <h3 class="page-header"><i class="fa fa-file-text-o"></i> PENOLAKAN TINDAKAN KEDOKTERAN</h3>
         </div>
       </div>
       @include('layouts.bio')
@@ -24,7 +24,7 @@
         <div class="col-lg-12">
           <section class="panel">
             <header class="panel-heading">
-              Dokumen Persetujuan Tindakan Kedokteran
+              Dokumen Penolakan Tindakan Kedokteran
             </header>
 
             <table class="table table-striped table-advance table-hover">
@@ -36,7 +36,7 @@
                   <th><i class="icon_cogs"></i> Action</th>
                 </tr>
                 <tr>
-                  <td>Persetujuan Tindakan Kedokteran</td>
+                  <td>Penolakan Tindakan Kedokteran</td>
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>
@@ -55,7 +55,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_persetujuan_tindakan">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_penolakan_tindakan">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
@@ -203,12 +203,12 @@
                   <div class="col-sm-12">
                     *Bila pasien tidak kompeten atau tidak mau menerima informasi, maka penerima informasi adalah wali atau keluarga terdekat
                   </div>
-                </div>                
+                </div>
               </div>
             </section>
 
             <section class="panel">
-              <header class="panel-heading">PERSETUJUAN TINDAKAN KEDOKTERAN
+              <header class="panel-heading">PENOLAKAN TINDAKAN KEDOKTERAN
               </header>
               <div class="panel-body">
                 <div class="form-group">
@@ -307,12 +307,12 @@
               <div class="panel-body">
                 <div class="form-group">
                   <div class="col-sm-12">
-                    Saya memahami perlunya dan manfaat tindakan tersebut sebagaimana telah dijelaskan seperti di atas kepada saya, termasuk resiko dan komplikasi yang mungkin timbul.
+                    Saya memahami perlunya dan manfaat tindakan tersebut sebagaimana telah dijelaskan seperti di atas kepada saya, termasuk resiko dan komplikasi yang mungkin timbul apabila tindakan tersebut tidak dilakukan.
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-sm-12">
-                    Saya juga menyadari bahwa oleh karena ilmu kedokteran bukanla ilmu pasti, maka keberhasilan tindakan kedokteran bukanlah keniscayaan, melainkan sangat bergantung kepada izin Tuhan Yang Maha Esa.
+                    Saya bertanggung jawab secara penuh atas segala akibat yang mungkin timbul sebagai akibat tidak dilakukannya tindakan kedokteran tersebut.
                   </div>
                 </div>
               </div>

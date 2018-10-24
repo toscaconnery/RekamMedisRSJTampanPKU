@@ -216,6 +216,9 @@ Route::post('/ri_pernyataan', 'RIPernyataanController@post_ri_pernyataan');
 Route::get('/ri_persetujuan_tindakan', 'RIPersetujuanTindakanController@get_ri_persetujuan_tindakan');
 Route::post('/ri_persetujuan_tindakan', 'RIPersetujuanTindakanController@post_ri_persetujuan_tindakan');
 
+Route::get('/ri_penolakan_tindakan', 'RIPenolakanTindakanController@get_ri_penolakan_tindakan');
+Route::post('/ri_penolakan_tindakan', 'RIPenolakanTindakanController@post_ri_penolakan_tindakan');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -345,9 +348,9 @@ Route::get('/ri_surat_kuasa', function () {
 //     return view('ri_pernyataan');
 // });
 
-Route::get('/ri_penolakan_tindakan', function () {
-    return view('ri_penolakan_tindakan');
-});
+// Route::get('/ri_penolakan_tindakan', function () {
+//     return view('ri_penolakan_tindakan');
+// });
 
 // Route::get('/ri_persetujuan_tindakan', function () {
 //     return view('ri_persetujuan_tindakan');

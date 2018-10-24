@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRiPersetujuanTindakanTable extends Migration
+class CreateRiPenolakanTindakanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRiPersetujuanTindakanTable extends Migration
      */
     public function up()
     {
-        Schema::create('ri_persetujuan_tindakan', function (Blueprint $table) {
+        Schema::create('ri_penolakan_tindakan', function (Blueprint $table) {
             $table->increments('id');
             $table->string('id_regis')->reference('id_pasien')->on('identifikasi');
             $table->string('dokter_pelaksana_tindakan')->nullable();
@@ -64,6 +64,6 @@ class CreateRiPersetujuanTindakanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ri_persetujuan_tindakan');
+        Schema::dropIfExists('ri_penolakan_tindakan');
     }
 }
