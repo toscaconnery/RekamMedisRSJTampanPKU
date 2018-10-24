@@ -34,4 +34,20 @@ class RIPernyataanController extends Controller
 
         return redirect('daftar_dokumen');
     }
+
+    public function get_ri_pernyataan_read()
+    {
+        $pasien = RIPernyataan::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+        $this->data['nama'] = $pasien->nama;
+        $this->data['umur'] = $pasien->umur;
+        $this->data['alamat'] = $pasien->alamat;
+        $this->data['tanggal'] = $pasien->pekerjaan_karir;
+        $this->data['konselor'] = $pasien->konselor;
+        $this->data['kepala_ruangan'] = $pasien->kepala_ruangan;
+        $this->data['residen'] = $pasien->residen;
+
+        return view('page.ri.pernyataan_read', $this->data);
+    }
 }

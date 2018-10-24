@@ -44,4 +44,27 @@ class RILembarKonsultasiController extends Controller
 
     	return redirect('daftar_dokumen');
     }
+
+    public function get_ri_lembar_konsultasi_read()
+    {
+        $pasien = RILembarKonsultasi::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+
+        $this->data['konsultasi1'] = $pasien->konsultasi1;
+        $this->data['konsultasi2'] = $pasien->konsultasi2;
+        $this->data['konsultasi3'] = $pasien->konsultasi3;
+        $this->data['konsultasi4'] = $pasien->konsultasi4;
+        $this->data['konsultasi5'] = $pasien->konsultasi5;
+
+        $this->data['jkonsultasi1'] = $pasien->jkonsultasi1;
+        $this->data['jkonsultasi2'] = $pasien->jkonsultasi2;
+        $this->data['jkonsultasi3'] = $pasien->jkonsultasi3;
+        $this->data['jkonsultasi4'] = $pasien->jkonsultasi4;
+        $this->data['jkonsultasi5'] = $pasien->jkonsultasi5;
+        $this->data['jkonsultasi6'] = $pasien->jkonsultasi6;
+        $this->data['jkonsultasi6'] = $pasien->jkonsultasi6;
+
+        return view('page.ri.lembar_konsultasi_read', $this->data);
+    }
 }

@@ -33,4 +33,20 @@ class RIDoNotResucitateController extends Controller
 
     	return redirect('daftar_dokumen');
     }
+
+    public function get_ri_do_not_resucitate_read()
+    {
+        $pasien = RIDoNotResucitate::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+
+        $this->data['nama'] = $pasien->nama;
+        $this->data['alamat'] = $pasien->alamat;
+        $this->data['agama'] = $pasien->agama;
+        $this->data['yang_menyatakan'] = $pasien->yang_menyatakan;
+        $this->data['saksi_keluarga'] = $pasien->saksi_keluarga;
+        $this->data['saksi_pemberi_asuhan'] = $pasien->saksi_pemberi_asuhan;
+
+        return view('page.ri.do_not_resucitate_read', $this->data);
+    }
 }

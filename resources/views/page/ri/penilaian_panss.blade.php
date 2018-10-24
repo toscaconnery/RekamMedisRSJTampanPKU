@@ -65,34 +65,34 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" name="tanggal">
+                    <input type="date" class="form-control" name="tanggal" disabled="" value="{{$tanggal}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">P4 GADUH GELISAH</label>
                   <div class="col-sm-1">
-                    <input type="number" class="form-control" name="p4">
+                    <input type="number" class="form-control" name="p4" disabled="" value="{{$p4}}">
                   </div>
                   
                   <label class="col-sm-2 control-label">P7 PEMUSUHAN</label>
                   <div class="col-sm-1">
-                    <input type="number" class="form-control" name="p7">
+                    <input type="number" class="form-control" name="p7" disabled="" value="{{$p7}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">G7 KETEGANGAN</label>
                   <div class="col-sm-1">
-                    <input type="number" class="form-control" name="g7">
+                    <input type="number" class="form-control" name="g7" disabled="" value="{{$g7}}">
                   </div>
                   <label class="col-sm-2 control-label">G8 KETIDAKOPERATIFAN</label>
                   <div class="col-sm-1">
-                    <input type="number" class="form-control" name="g8">
+                    <input type="number" class="form-control" name="g8" disabled="" value="{{$g8}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">G14 PENGENDALIAN IMPULS YANG BURUK</label>
                   <div class="col-sm-1">
-                    <input type="number" class="form-control" name="g14">
+                    <input type="number" class="form-control" name="g14" disabled="" value="{{$g14}}">
                   </div>
                 </div>
               </div>
