@@ -509,7 +509,7 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $this->data['rujukan_dari'] = $pasien->rujukan_dari;
         $this->data['nama_rumah_sakit'] = $pasien->nama_rumah_sakit;
         
-        if(isset($pasien->visum)){
+        if(!is_null($pasien->visum)){
             $this->data['visum'] = $pasien->visum;
         }
 
@@ -529,11 +529,11 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $this->data['alasan_kunjungan'] = $pasien->alasan_kunjungan;
         $this->data['must_bb'] = $pasien->must_bb;
         
-        if(isset($pasien->must_asupan)){
+        if(!is_null($pasien->must_asupan)){
             $this->data['must_asupan'] = $pasien->must_asupan;
         }
 
-        if(isset($pasien->must_diagnosis)){
+        if(!is_null($pasien->must_diagnosis)){
             $this->data['must_diagnosis'] = $pasien->must_diagnosis;
             $this->data['diagnosis_khusus'] = $pasien->diagnosis_khusus;
             $this->data['must_list_diagnosis'] = $pasien->must_list_diagnosis;
@@ -542,19 +542,19 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
 
         $this->data['must_penurunan_bb'] = $pasien->must_penurunan_bb;
         
-        if(isset($pasien->sk_1)){
+        if(!is_null($pasien->sk_1)){
             $this->data['sk_1'] = $pasien->sk_1;
         }
 
-        if(isset($pasien->sk_2)){
+        if(!is_null($pasien->sk_2)){
             $this->data['sk_2'] = $pasien->sk_2;
         }
 
-        if(isset($pasien->sk_3)){
+        if(!is_null($pasien->sk_3)){
             $this->data['sk_3'] = $pasien->sk_3;
         }
 
-        if(isset($pasien->sk_4)){
+        if(!is_null($pasien->sk_4)){
             $this->data['sk_4'] = $pasien->sk_4;
         }
 
@@ -562,13 +562,13 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         
         $this->data['penyakit_malnutrisi_lain'] = $pasien->penyakit_malnutrisi_lain;
 
-        if(isset($pasien->pemberitahuan)){
+        if(!is_null($pasien->pemberitahuan)){
             $this->data['pemberitahuan'] = $pasien->pemberitahuan;
         }
 
         $this->data['waktu_pemberitahuan'] = $pasien->waktu_pemberitahuan;
         
-        if(isset($pasien->keluhan_nyeri)){
+        if(!is_null($pasien->keluhan_nyeri)){
             $this->data['keluhan_nyeri'] = $pasien->keluhan_nyeri;
         }
 
@@ -576,7 +576,7 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $this->data['lokasi_nyeri'] = $pasien->lokasi_nyeri;
         $this->data['penyebab_nyeri'] = $pasien->penyebab_nyeri;
 
-        if(isset($pasien->nyeri_berpindah)){
+        if(!is_null($pasien->nyeri_berpindah)){
             $this->data['nyeri_berpindah'] = $pasien->nyeri_berpindah;
         }
 
@@ -590,17 +590,17 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $this->data['humpty_5'] = $pasien->humpty_5;
         $this->data['humpty_6'] = $pasien->humpty_6;
 
-        if(isset($pasien->morse_1)){
+        if(!is_null($pasien->morse_1)){
             $this->data['morse_1'] = $pasien->morse_1;
         }
 
-        if(isset($pasien->morse_2)){
+        if(!is_null($pasien->morse_2)){
             $this->data['morse_2'] = $pasien->morse_2;
         }
 
         $this->data['morse_3'] = $pasien->morse_3;
 
-        if(isset($pasien->morse_4)){
+        if(!is_null($pasien->morse_4)){
             $this->data['morse_4'] = $pasien->morse_4;
         }
 
@@ -616,7 +616,7 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $this->data['edmunson_7'] = $pasien->edmunson_7;
         $this->data['edmunson_8'] = $pasien->edmunson_8;
         
-        if(isset($pasien->tekanan_intrakanal)){
+        if(!is_null($pasien->tekanan_intrakanal)){
             $this->data['tekanan_intrakanal'] = $pasien->tekanan_intrakanal;
         }
 
@@ -628,14 +628,14 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $this->data['integumen'] = $pasien->integumen;
         $this->data['turgor'] = $pasien->turgor;
         
-        if(isset($pasien->edema)){
+        if(!is_null($pasien->edema)){
             $this->data['edema'] = $pasien->edema;
             $this->data['list_edema'] = $pasien->list_edema;
         }
 
         $this->data['mukosa'] = $pasien->mukosa;
 
-        if(isset($pasien->pendarahan)){
+        if(!is_null($pasien->pendarahan)){
             $this->data['pendarahan'] = $pasien->pendarahan;
             $this->data['jumlah_pendarahan'] = $pasien->jumlah_pendarahan;
             $this->data['warna_pendarahan'] = $pasien->warna_pendarahan;
@@ -882,7 +882,7 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $this->data['riwayat_penyakit_sekarang'] = $pasien->riwayat_penyakit_sekarang;
         $this->data['riwayat_penyakit_dahulu'] = $pasien->riwayat_penyakit_dahulu;
         
-        if(isset($pasien->riwayat_napza)){
+        if(!is_null($pasien->riwayat_napza)){
             $this->data['riwayat_napza'] = $pasien->riwayat_napza;
         }
         
@@ -897,18 +897,18 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $this->data['riwayat_penyakit_lain'] = $pasien->riwayat_penyakit_lain;
         $this->data['text_riwayat_penyakit_lain'] = $pasien->text_riwayat_penyakit_lain;
         
-        if(isset($pasien->riwayat_operasi)){
+        if(!is_null($pasien->riwayat_operasi)){
             $this->data['riwayat_operasi'] = $pasien->riwayat_operasi;
         }
 
         $this->data['jenis_operasi'] = $pasien->jenis_operasi;
         $this->data['waktu_operasi'] = $pasien->waktu_operasi;
         
-        if(isset($pasien->riwayat_tranfusi)){
+        if(!is_null($pasien->riwayat_tranfusi)){
             $this->data['riwayat_tranfusi'] = $pasien->riwayat_tranfusi;
         }
 
-        if(isset($pasien->reaksi_tranfusi)){
+        if(!is_null($pasien->reaksi_tranfusi)){
             $this->data['reaksi_tranfusi'] = $pasien->reaksi_tranfusi;
         }
 
@@ -995,7 +995,7 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $this->data['daftar_masalah'] = $pasien->daftar_masalah;
         $this->data['tindak_lanjut'] = $pasien->tindak_lanjut;
 
-        if(isset($pasien->kontrol)){
+        if(!is_null($pasien->kontrol)){
             $this->data['kontrol'] = $pasien->kontrol;
         }
 
@@ -1007,7 +1007,7 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $this->data['dirujuk_ke'] = $pasien->dirujuk_ke;
         $this->data['alasan_rujuk'] = $pasien->alasan_rujuk;
         
-        if(isset($pasien->doa)){
+        if(!is_null($pasien->doa)){
             $this->data['doa'] = $pasien->doa;
         }
 

@@ -171,4 +171,119 @@ class RJAsesmenAwalGigiController extends Controller
         return redirect('index');
 
     }
+
+    public function get_rj_asesmen_awal_gigi_perawat_read()
+    {
+        //PENILAIAN TINGKAT NYERI
+
+        $nyeri = RJNyeri::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $nyeri->id_regis;
+        $this->data['jenis_form'] = $nyeri->jenis_form;
+        $this->data['skala'] = $nyeri->skala;
+        $this->data['lokasi'] = $nyeri->lokasi;
+        $this->data['durasi'] = $nyeri->durasi;
+        $this->data['frekuensi'] = $nyeri->frekuensi;
+        $this->data['hilang'] = $nyeri->hilang;
+        $this->data['pemberitahuan'] = $nyeri->pemberitahuan;
+        
+        if($nyeri->pemberitahuan == '1') {
+            $this->data['waktu_pemberitahuan'] = $nyeri->waktu_pemberitahuan;
+        }
+        
+
+        //PENILAIAN RISIKO JATUH
+        $humpty = HumptyDumpty::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $humpty->id_regis;
+        $this->data['jenis_form'] = $humpty->jenis_form;
+        $this->data['usia'] = $humpty->usia;
+        $this->data['diagnosis'] = $humpty->diagnosis;
+        $this->data['gangguan_kognitif'] = $humpty->gangguan_kognitif;
+        $this->data['faktor_lingkungan'] = $humpty->faktor_lingkungan;
+        $this->data['waktu_respon_obat'] = $humpty->waktu_respon_obat;
+        $this->data['penggunaan_obat'] = $humpty->penggunaan_obat;
+
+        $morse = Morse::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $morse->id_regis;
+        $this->data['jenis_form'] = $morse->jenis_form;
+        $this->data['riwayat_jatuh'] = $morse->riwayat_jatuh;
+        $this->data['diagnosis_sekunder'] = $morse->diagnosis_sekunder;
+        $this->data['alat_bantu'] = $morse->alat_bantu;
+        $this->data['terpasang_infus'] = $morse->terpasang_infus;
+        $this->data['gaya_berjalan'] = $morse->gaya_berjalan;
+        $this->data['status_mental'] = $morse->status_mental;
+
+        $edmunson = Edmunson::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $edmunson->id_regis;
+        $this->data['jenis_form'] = $edmunson->jenis_form;
+        $this->data['status_mental'] = $edmunson->status_mental;
+        $this->data['diagnosis'] = $edmunson->diagnosis;
+        $this->data['eliminasi'] = $edmunson->eliminasi;
+        $this->data['pengobatan'] = $edmunson->pengobatan;
+        $this->data['diagnosa'] = $edmunson->diagnosa;
+        $this->data['ambulasi'] = $edmunson->ambulasi;
+        $this->data['nutrisi'] = $edmunson->nutrisi;
+        $this->data['riwayat_jatuh'] = $edmunson->riwayat_jatuh;
+
+        return view('page.rj.asesmen_awal_gigi_perawat_read', $this->data);
+    }
+
+    public function get_rj_asesmen_awal_gigi_dokter_read()
+    {
+        $Pasien = RJDataMedik::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+        $this->data['golongan_darah'] = $pasien->golongan_darah;
+        $this->data['tekanan_darah_top'] = $pasien->tekanan_darah_top;
+        $this->data['tekanan_darah_bottom'] = $pasien->tekanan_darah_bottom;
+        
+        if( $pasien->tekanan_jantung == True) {
+            $this->data['tekanan_jantung'] = $pasien->tekanan_jantung;
+        }
+
+        if( $pasien->diabetes == True) {
+            $this->data['diabetes'] = $pasien->diabetes;
+        }
+
+        if( $pasien->hepatitis == True) {
+            $this->data['hepatitis'] = $pasien->hepatitis;
+        }
+
+        if( $pasien->penyakit_lainnya == True) {
+            $this->data['penyakit_lainnya'] = $pasien->penyakit_lainnya;
+        }
+
+        if( $pasien->alergi_obat == True) {
+            $this->data['alergi_obat'] = $pasien->alergi_obat;
+        }
+
+        if( $pasien->alergi_makanan == True) {
+            $this->data['alergi_makanan'] = $pasien->alergi_makanan;
+        }
+
+        $this->data['oklusi'] = $pasien->oklusi;
+        $this->data['torus_palatinus'] = $pasien->torus_palatinus;
+        $this->data['torus_mandibularis'] = $pasien->torus_mandibularis;
+        $this->data['palatum'] = $pasien->palatum;
+
+        if( $pasien->supernumerary_teeth == True) {
+            $this->data['supernumerary_teeth'] = $pasien->supernumerary_teeth;
+        }
+
+        if( $pasien->diastema == True) {
+            $this->data['diastema'] = $pasien->diastema;
+        }
+
+        if( $pasien->anomali == True) {
+            $this->data['anomali'] = $pasien->anomali;
+        }
+
+        $this->data['lain'] = $pasien->lain;
+        $this->data['keterangan'] = $pasien->keterangan;
+
+        return view('page.rj_asesmen_awal_gigi_dokter_read', $this->data);
+    }
 }
