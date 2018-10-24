@@ -228,6 +228,8 @@ Route::post('/ri_instruksi_do_not_resucitate', 'RIInstruksiDoNotResucitateContro
 Route::get('/ri_penggunaan_obat', 'RIPenggunaanObatController@get_ri_penggunaan_obat');
 Route::post('/ri_penggunaan_obat', 'RIPenggunaanObatController@post_ri_penggunaan_obat');
 
+Route::get('/ri_riwayat_obat', 'RIRiwayatObatController@get_ri_riwayat_obat');
+Route::post('/ri_riwayat_obat', 'RIRiwayatObatController@post_ri_riwayat_obat');
 
 
 
@@ -444,9 +446,9 @@ Route::get('/ri_panss_ec', function () {
 //     return view('ri_penggunaan_obat');
 // });
 
-Route::get('/ri_riwayat_obat', function () {
-    return view('ri_riwayat_obat');
-});
+// Route::get('/ri_riwayat_obat', function () {
+//     return view('ri_riwayat_obat');
+// });
 
 Route::get('/ri_efek_samping', function () {
     return view('ri_efek_samping');

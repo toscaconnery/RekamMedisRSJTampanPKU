@@ -3,7 +3,6 @@
 
 <head>
   @include('layouts.headscript')
-
 </head>
 
 <body>
