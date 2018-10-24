@@ -56,7 +56,7 @@ class RISuratPengantarDirawatController extends Controller
 
     public function get_ri_surat_spd_read()
     {
-        $pasien = RISuratSPD:where('id', 1)->first();
+        $pasien = RISuratSPD::where('id', 1)->first();
         
         $this->data['id_regis'] = $pasien->id_regis;
         $this->data['pendidikan'] = $pasien->pendidikan;
