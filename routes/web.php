@@ -222,6 +222,10 @@ Route::post('/ri_penolakan_tindakan', 'RIPenolakanTindakanController@post_ri_pen
 Route::get('/ri_do_not_resucitate', 'RIDoNotResucitateController@get_ri_do_not_resucitate');
 Route::post('/ri_do_not_resucitate', 'RIDoNotResucitateController@post_ri_do_not_resucitate');
 
+Route::get('/ri_instruksi_do_not_resucitate', 'RIInstruksiDoNotResucitateController@get_ri_instruksi_do_not_resucitate');
+Route::post('/ri_instruksi_do_not_resucitate', 'RIInstruksiDoNotResucitateController@post_ri_instruksi_do_not_resucitate');
+
+
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -332,9 +336,9 @@ Route::get('/ri_asuhan_gizi', function () {
 //     return view('ri_permintaan_notresucitate');
 // });
 
-Route::get('/ri_permintaan_resucitate', function () {
-    return view('ri_permintaan_resucitate');
-});
+// Route::get('/ri_permintaan_resucitate', function () {
+//     return view('ri_permintaan_resucitate');
+// });
 
 Route::get('/ri_pulang_paksa', function () {
     return view('ri_pulang_paksa');
