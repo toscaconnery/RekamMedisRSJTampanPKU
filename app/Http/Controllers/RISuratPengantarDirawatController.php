@@ -53,4 +53,38 @@ class RISuratPengantarDirawatController extends Controller
         // dd($request);
     	return redirect('daftar_dokumen');
     }
+
+    public function get_ri_surat_spd_read()
+    {
+        $pasien = RISuratSPD:where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+        $this->data['pendidikan'] = $pasien->pendidikan;
+        $this->data['pekerjaan'] = $pasien->pekerjaan;
+        $this->data['tanggal_lahir'] = $pasien->tanggal_lahir;
+        $this->data['jk'] = $pasien->jk;
+        $this->data['alamat'] = $pasien->alamat;
+        $this->data['nama_pj'] = $pasien->nama_pj;
+        $this->data['alamat_pj'] = $pasien->alamat_pj;
+        $this->data['no_telp_pj'] = $pasien->no_telp_pj;
+        $this->data['no_telp_pj2'] = $pasien->no_telp_pj2;
+        $this->data['ruang'] = $pasien->ruang;
+        $this->data['cara_bayar'] = $pasien->cara_bayar;
+        $this->data['sebab_utama_dirawat'] = $pasien->sebab_utama_dirawat;
+        $this->data['diagnosa'] = $pasien->diagnosa;
+        $this->data['gaf'] = $pasien->gaf;
+        $this->data['panss_ec'] = $pasien->panss_ec;
+        $this->data['terapi'] = $pasien->terapi;
+        $this->data['tanggal_masuk_rs'] = $pasien->tanggal_masuk_rs;
+        $this->data['ruang_masuk_rs'] = $pasien->ruang_masuk_rs;
+        $this->data['kelas_masuk_rs'] = $pasien->kelas_masuk_rs;
+        $this->data['tanggal'] = $pasien->tanggal;
+        $this->data['dokter_igd_klinik'] = $pasien->dokter_igd_klinik;
+        
+        // $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
+     //    $daftar_dokumen->ri_surat_spd = True;
+     //    $daftar_dokumen->save();
+        // dd($request);
+        return view('page.ri.surat_spd_read', $this->data);
+    }
 }
