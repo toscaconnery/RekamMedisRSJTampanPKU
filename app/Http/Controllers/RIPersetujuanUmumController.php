@@ -34,4 +34,17 @@ class RIPersetujuanUmumController extends Controller
 
 		return redirect('daftar_dokumen');
     }
+
+    public function post_ri_persetujuan_umum_read()
+    {
+        $pasien = RIPersetujuanUmum::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+        
+        $this->data['nama_petugas'] = $pasien->nama_petugas;
+        $this->data['nama_pasien_keluarga'] = $pasien->nama_pasien_keluarga;
+
+        return view('page.rj.identifikasi_stresor_read', $this->data);
+
+    }
 }
