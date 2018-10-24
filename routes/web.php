@@ -234,6 +234,8 @@ Route::post('/ri_riwayat_obat', 'RIRiwayatObatController@post_ri_riwayat_obat');
 Route::get('/ri_panss_ec', 'RIPanssEcController@get_ri_panss_ec');
 Route::post('/ri_panss_ec', 'RIPanssEcController@post_ri_panss_ec');
 
+Route::get('/ri_penilaian_panss', 'RIPenilaianPanssController@get_ri_penilaian_panss');
+Route::post('/ri_penilaian_panss', 'RIPenilaianPanssController@post_ri_penilaian_panss');
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -473,9 +475,9 @@ Route::get('/ri_lembar_konsultasi', function () {
     return view('ri_lembar_konsultasi');
 });
 
-Route::get('/ri_penilaian_panss', function () {
-    return view('ri_penilaian_panss');
-});
+// Route::get('/ri_penilaian_panss', function () {
+//     return view('ri_penilaian_panss');
+// });
 
 // Route::get('/ri_resume_medis', function () {
 //     return view('ri_resume_medis');
