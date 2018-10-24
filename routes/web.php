@@ -225,6 +225,10 @@ Route::post('/ri_do_not_resucitate', 'RIDoNotResucitateController@post_ri_do_not
 Route::get('/ri_instruksi_do_not_resucitate', 'RIInstruksiDoNotResucitateController@get_ri_instruksi_do_not_resucitate');
 Route::post('/ri_instruksi_do_not_resucitate', 'RIInstruksiDoNotResucitateController@post_ri_instruksi_do_not_resucitate');
 
+Route::get('/ri_penggunaan_obat', 'RIPenggunaanObatController@get_ri_penggunaan_obat');
+Route::post('/ri_penggunaan_obat', 'RIPenggunaanObatController@post_ri_penggunaan_obat');
+
+
 
 
 //END  OF  DO  NOT  TOUCH!!!////
@@ -436,9 +440,9 @@ Route::get('/ri_panss_ec', function () {
 //     return view('ri_rencana_keperawatan');
 // });
 
-Route::get('/ri_penggunaan_obat', function () {
-    return view('ri_penggunaan_obat');
-});
+// Route::get('/ri_penggunaan_obat', function () {
+//     return view('ri_penggunaan_obat');
+// });
 
 Route::get('/ri_riwayat_obat', function () {
     return view('ri_riwayat_obat');
