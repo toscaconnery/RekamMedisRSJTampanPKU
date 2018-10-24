@@ -219,6 +219,10 @@ Route::post('/ri_persetujuan_tindakan', 'RIPersetujuanTindakanController@post_ri
 Route::get('/ri_penolakan_tindakan', 'RIPenolakanTindakanController@get_ri_penolakan_tindakan');
 Route::post('/ri_penolakan_tindakan', 'RIPenolakanTindakanController@post_ri_penolakan_tindakan');
 
+Route::get('/ri_do_not_resucitate', 'RIDoNotResucitateController@get_ri_do_not_resucitate');
+Route::post('/ri_do_not_resucitate', 'RIDoNotResucitateController@post_ri_do_not_resucitate');
+
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -324,9 +328,9 @@ Route::get('/ri_asuhan_gizi', function () {
 //     return view('ri_permintaan_second');
 // });
 
-Route::get('/ri_permintaan_notresucitate', function () {
-    return view('ri_permintaan_notresucitate');
-});
+// Route::get('/ri_permintaan_notresucitate', function () {
+//     return view('ri_permintaan_notresucitate');
+// });
 
 Route::get('/ri_permintaan_resucitate', function () {
     return view('ri_permintaan_resucitate');
