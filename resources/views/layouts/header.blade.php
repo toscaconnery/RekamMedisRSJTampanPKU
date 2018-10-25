@@ -9,6 +9,9 @@
       <li>
         <a href="login"><span class="username">Login</span></a>
       </li>
+      <li>
+        <a href="register"><span class="username">Register</span></a>
+      </li>
       @else
       <li class="dropdown">
         <a data-toggle="dropdown" class="dropdown-toggle" href="#">

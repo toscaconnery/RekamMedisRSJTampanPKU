@@ -257,6 +257,9 @@ Route::post('/ri_lembar_konsultasi', 'RILembarKonsultasiController@post_ri_lemba
 Route::get('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan');
 Route::post('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@post_ri_rencana_pemulangan');
 
+Route::get('/ri_efek_samping', 'RIEfekSampingController@get_ri_efek_samping');
+Route::post('/ri_efek_samping', 'RIEfekSampingController@post_ri_efek_samping');
+
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -475,9 +478,9 @@ Route::get('/ri_rencanaklien7', function () {
 //     return view('ri_riwayat_obat');
 // });
 
-Route::get('/ri_efek_samping', function () {
-    return view('ri_efek_samping');
-});
+// Route::get('/ri_efek_samping', function () {
+//     return view('ri_efek_samping');
+// });
 
 Route::get('/ri_pemeriksaan_psikologis', function () {
     return view('ri_pemeriksaan_psikologis');

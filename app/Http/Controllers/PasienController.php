@@ -41,6 +41,9 @@ class PasienController extends Controller
         $request->session()->put('nama', $pasien->nama);
         $request->session()->put('jenis_kelamin', $pasien->jenis_kelamin);
         $request->session()->put('tanggal_lahir', $pasien->tanggal_lahir);
+
+        $request->session()->put('pasien_terpilih', 'Pasien berhasil terpilih.');
+
         return redirect('daftar_dokumen');
     }
 

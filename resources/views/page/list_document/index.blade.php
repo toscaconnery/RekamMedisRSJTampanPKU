@@ -30,6 +30,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="{{url('')}}/list_document/css/fontawesome-all.css" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{url('')}}/sweetalert2/dist/sweetalert2.min.css">
     <style type="text/css">
         #content {
             position: relative;
@@ -87,7 +88,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </section>
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="index.html">Home</a>
+            <a href="{{url('')}}/">Home</a>
         </li>
         <li class="breadcrumb-item active">Daftar Dokumen</li>
     </ol>
@@ -1008,6 +1009,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- /js -->
     <script src="{{url('')}}/list_document/js/bootstrap.js"></script>
     <!-- //js -->
+    <script src="{{url('')}}/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="{{url('')}}/sweetalert2/dist/sweetalert2.min.js"></script>
+
+    @if(Session::has('pasien_terpilih'))
+      @include('sweetalert.pasienterpilih')
+    @endif
 </body>
 
 </html>
