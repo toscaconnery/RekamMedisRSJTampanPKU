@@ -28,7 +28,7 @@ class CreateRJAsesmenKeperawatanTable extends Migration
             $table->string('perasaan')->nullable();
             $table->string('status_fungsional')->nullable();
             $table->string('perlu_bantuan')->nullable();
-            $table->dateTime('waktu_laporan')->nullable();
+            $table->string('waktu_laporan')->nullable();
             $table->timestamps();
         });
     }

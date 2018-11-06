@@ -21,6 +21,7 @@ use App\Models\RJPemeriksaanPenunjang;
 use App\Models\RJInstrumenPenilaian;
 use App\Models\RJDiagnosisTindakanTerapi;
 use App\Models\RJTindakLanjut;
+use App\Models\ListDocument;
 use Session;
 
 class RJAsesmenAwalController extends Controller
@@ -346,6 +347,11 @@ class RJAsesmenAwalController extends Controller
         $data->nadi = $request->nadi;
         $data->pernafasan = $request->pernafasan;
         $data->suhu = $request->suhu;
+
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
+        $daftar_dokumen->rj_asesmen_awal_dokter = True;
+        $daftar_dokumen->save();
+
         $data->save();
 
         return redirect('index');
@@ -913,6 +919,11 @@ class RJAsesmenAwalController extends Controller
         $data->implementasi = $request->implementasi;
         $data->evaluasi = $request->evaluasi;
         $data->save();
+
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
+        $daftar_dokumen->rj_asesmen_awal_perawat = True;
+        $daftar_dokumen->save();
+
 
         return redirect('index');
     }
