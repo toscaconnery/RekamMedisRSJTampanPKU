@@ -39,4 +39,22 @@ class RIPanssEcController extends Controller
 
     	return redirect('daftar_dokumen');
     }
+
+    public function get_ri_panss_ec_read()
+    {
+        $pasien = RIPanssEc::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+
+        $this->data['tanggal'] = $pasien->tanggal;
+        $this->data['p4'] = $pasien->p4;
+        $this->data['p7'] = $pasien->p7;
+        $this->data['g7'] = $pasien->g7;
+        $this->data['g8'] = $pasien->g8;
+        $this->data['g14'] = $pasien->g14;
+        $this->data['bangsal'] = $pasien->bangsal;
+        $this->data['tanggal_pemeriksaan'] = $pasien->tanggal_pemeriksaan;
+
+        return view('page.ri.panss_ec_read', $this->data);
+    }
 }

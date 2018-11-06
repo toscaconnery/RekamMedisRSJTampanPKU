@@ -33,4 +33,15 @@ class RIHakKewajibanController extends Controller
         $daftar_dokumen->save();
         return redirect('daftar_dokumen');
     }
+
+    public function get_ri_hak_kewajiban_read()
+    {
+        $pasien = RIHakKewajiban::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+        
+        $this->data['nama_penanda_tangan'] = $pasien->nama_penanda_tangan;
+
+        return view('page.ri.hak_kewajiban_read', $this->data);
+    }
 }

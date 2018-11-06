@@ -48,4 +48,36 @@ class RIPermintaanPrivasiController extends Controller
         $data->save();
     	return redirect('daftar_dokumen');
     }
+
+    public function get_ri_permintaan_privasi_read()
+    {
+
+        $pasien = RIPermintaanPrivasi::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+
+        $this->data['nama'] = $pasien->nama;
+        $this->data['umur'] = $pasien->umur;
+        $this->data['jk'] = $pasien->jk;
+        $this->data['alamat'] = $pasien->alamat;
+        $this->data['agama'] = $pasien->agama;
+        $this->data['no_telp'] = $pasien->no_telp;
+        $this->data['hub'] = $pasien->hub;
+        $this->data['hub_lain'] = $pasien->hub_lain;
+        $this->data['nama_hub'] = $pasien->nama_hub;
+        $this->data['umur_hub'] = $pasien->umur_hub;
+        $this->data['jk_hub'] = $pasien->jk_hub;
+        $this->data['alamat_hub'] = $pasien->alamat_hub;
+        $this->data['agama_hub'] = $pasien->agama_hub;
+        $this->data['no_telp_hub'] = $pasien->no_telp_hub;
+        $this->data['permintaan_privasi'] = $pasien->permintaan_privasi;
+        $this->data['keterangan_pp_1'] = $pasien->keterangan_pp_1;
+        $this->data['keterangan_pp_2'] = $pasien->keterangan_pp_2;
+        $this->data['keterangan_pp_3'] = $pasien->keterangan_pp_3;
+        $this->data['tanggal'] = $pasien->tanggal;
+        $this->data['nama_saksi'] = $pasien->nama_saksi;
+        $this->data['nama_pemohon'] = $pasien->nama_pemohon;
+
+        return view('page.ri.permintaan_privasi_read', $this->data);
+    }
 }

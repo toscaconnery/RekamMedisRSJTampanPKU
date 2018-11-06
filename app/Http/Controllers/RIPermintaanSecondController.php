@@ -42,4 +42,30 @@ class RIPermintaanSecondController extends Controller
     	
     	return redirect('daftar_dokumen');
     }
+
+     public function post_ri_permintaan_second(Request $request)
+    {
+
+        $pasien = RIPermintaanSecond::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+
+        $this->data['nama'] = $pasien->nama;
+        $this->data['umur'] = $pasien->umur;
+        $this->data['jk'] = $pasien->jk;
+        $this->data['alamat'] = $pasien->alamat;
+        $this->data['agama'] = $pasien->agama;
+        $this->data['permintaan_opini'] = $pasien->permintaan_opini;
+        $this->data['nama_hub'] = $pasien->nama_hub;
+        $this->data['umur_hub'] = $pasien->umur_hub;
+        $this->data['jk_hub'] = $pasien->jk_hub;
+        $this->data['alamat_hub'] = $pasien->alamat_hub;
+        $this->data['agama_hub'] = $pasien->agama_hub;
+        $this->data['no_telp_hub'] = $pasien->no_telp_hub;
+        $this->data['tanggal'] = $pasien->tanggal;
+        $this->data['nama_saksi'] = $pasien->nama_saksi;
+        $this->data['nama_pasien_wali'] = $pasien->nama_pemohon;
+
+        return view('page.ri.permintaan_second_read', $this->data);
+    }
 }

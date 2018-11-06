@@ -37,4 +37,20 @@ class RIPenilaianPanssController extends Controller
 
     	return redirect('daftar_dokumen');
     }
+
+    public function get_ri_penilaian_panss_read()
+    {
+        $pasien = RIPenilaianPanss::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+
+        $this->data['tanggal'] = $pasien->tanggal;
+        $this->data['p4'] = $pasien->p4;
+        $this->data['p7'] = $pasien->p7;
+        $this->data['g7'] = $pasien->g7;
+        $this->data['g8'] = $pasien->g8;
+        $this->data['g14'] = $pasien->g14;
+
+        return view('page.ri.penilaian_panss_read', $this->data);
+    }
 }

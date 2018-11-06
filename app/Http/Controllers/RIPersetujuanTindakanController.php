@@ -86,4 +86,78 @@ class RIPersetujuanTindakanController extends Controller
 
     	return redirect('daftar_dokumen');
     }
+
+    public function get_ri_persetujuan_tindakan_read()
+    {
+    	$pasien = RIPersetujuanTindakan::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+
+        $this->data['dokter_pelaksana_tindakan'] = $pasien->dokter_pelaksana_tindakan;
+        $this->data['pemberi_informasi'] = $pasien->pemberi_informasi;
+        $this->data['penerima_informasi'] = $pasien->penerima_informasi;
+        
+        $this->data['jenis_informasi_1'] = $pasien->jenis_informasi_1;
+        $this->data['jenis_informasi_2'] = $pasien->jenis_informasi_2;
+        $this->data['jenis_informasi_3'] = $pasien->jenis_informasi_3;
+        $this->data['jenis_informasi_4'] = $pasien->jenis_informasi_4;
+        $this->data['jenis_informasi_5'] = $pasien->jenis_informasi_5;
+        $this->data['jenis_informasi_6'] = $pasien->jenis_informasi_6;
+        $this->data['jenis_informasi_7'] = $pasien->jenis_informasi_7;
+        $this->data['jenis_informasi_8'] = $pasien->jenis_informasi_8;
+        $this->data['jenis_informasi_9'] = $pasien->jenis_informasi_9;
+        $this->data['jenis_informasi_10'] = $pasien->jenis_informasi_10;
+        $this->data['jenis_informasi_11'] = $pasien->jenis_informasi_11;
+
+        if($pasien->check_informasi_1 == True){
+        	$this->data['check_informasi_1'] = $pasien->check_informasi_1;
+        }
+        if($pasien->check_informasi_2 == True){
+        	$this->data['check_informasi_2'] = $pasien->check_informasi_2;
+        }
+        if($pasien->check_informasi_3 == True){
+        	$this->data['check_informasi_3'] = $pasien->check_informasi_3;
+        }
+        if($pasien->check_informasi_4 == True){
+        	$this->data['check_informasi_4'] = $pasien->check_informasi_4;
+        }
+        if($pasien->check_informasi_5 == True){
+        	$this->data['check_informasi_5'] = $pasien->check_informasi_5;
+        }
+        if($pasien->check_informasi_6 == True){
+        	$this->data['check_informasi_6'] = $pasien->check_informasi_6;
+        }
+        if($pasien->check_informasi_7 == True){
+        	$this->data['check_informasi_7'] = $pasien->check_informasi_7;
+        }
+        if($pasien->check_informasi_8 == True){
+        	$this->data['check_informasi_8'] = $pasien->check_informasi_8;
+        }
+        if($pasien->check_informasi_9 == True){
+        	$this->data['check_informasi_9'] = $pasien->check_informasi_9;
+        }
+        if($pasien->check_informasi_10 == True){
+        	$this->data['check_informasi_10'] = $pasien->check_informasi_10;
+        }
+        if($pasien->check_informasi_11 == True){
+        	$this->data['check_informasi_11'] = $pasien->check_informasi_11;
+        }
+
+
+        $this->data['nama'] = $pasien->nama;
+        $this->data['umur'] = $pasien->umur;
+        $this->data['jk'] = $pasien->jk;
+
+        $this->data['tindakan'] = $pasien->tindakan;
+        $this->data['terhadap'] = $pasien->terhadap;
+        $this->data['umur_terhadap'] = $pasien->umur_terhadap;
+        $this->data['jk_terhadap'] = $pasien->jk_terhadap;
+        $this->data['alamat_terhadap'] = $pasien->alamat_terhadap;
+        $this->data['tanggal'] = $pasien->tanggal;
+        $this->data['waktu'] = $pasien->waktu;
+        $this->data['yang_menyatakan'] = $pasien->yang_menyatakan;
+        $this->data['saksi'] = $pasien->saksi;
+
+        return view('page.ri.persetujuan_tindakan_read', $this->data);
+    }
 }

@@ -101,31 +101,31 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kepada TS</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="konsultasi1">
+                    <input type="text" class="form-control" name="konsultasi1" disabled="" value="{{$konsultasi1}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Ikhtisar Klinik + Laboratorium singkat</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="konsultasi2">
+                    <input type="text" class="form-control" name="konsultasi2" disabled="" value="{{$konsultasi2}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Konsultasi yang diminta</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="konsultasi3">
+                    <input type="text" class="form-control" name="konsultasi3" disabled="" value="{{$konsultasi3}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" name="konsultasi4">
+                    <input type="date" class="form-control" name="konsultasi4" disabled="" value="{{$konsultasi4}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jam</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="konsultasi5">
+                    <input type="text" class="form-control" name="konsultasi5" disabled="" value="{{$konsultasi5}}">
                   </div>
                 </div>
               </div>
@@ -139,43 +139,43 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kepada TS</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="jkonsultasi1">
+                    <input type="text" class="form-control" name="jkonsultasi1" disabled="" value="{{$jkonsultasi1}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Penemuan Klinik dari penderita yang dikonsultasikan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="jkonsultasi2">
+                    <input type="text" class="form-control" name="jkonsultasi2" disabled="" value="{{$jkonsultasi2}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pemeriksaan khusus lain</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="jkonsultasi3">
+                    <input type="text" class="form-control" name="jkonsultasi3" disabled="" value="{{$jkonsultasi3}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kesimpulan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="jkonsultasi4">
+                    <input type="text" class="form-control" name="jkonsultasi4" disabled="" value="{{$jkonsultasi4}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Saran</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="jkonsultasi5">
+                    <input type="text" class="form-control" name="jkonsultasi5" disabled="" value="{{$jkonsultasi5}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" name="jkonsultasi6">
+                    <input type="date" class="form-control" name="jkonsultasi6" disabled="" value="{{$jkonsultasi6}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jam</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="jkonsultasi7">
+                    <input type="text" class="form-control" name="jkonsultasi7" disabled="" value="{{$jkonsultasi7}}">
                   </div>
                 </div>
               </div>

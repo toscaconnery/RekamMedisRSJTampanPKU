@@ -60,4 +60,39 @@ class RIPenggunaanObatController extends Controller
 
     	return redirect('daftar_dokumen');
     }
+
+    public function get_ri_penggunaan_obat()
+    {
+        $pasien = RIPenggunaanObat::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+
+        $this->data['ruang_bangsal'] = $pasien->ruang_bangsal;
+        $this->data['no_reg'] = $pasien->no_reg;
+        $this->data['tanggal_masuk'] = $pasien->tanggal_masuk;
+        $this->data['tanggal_keluar'] = $pasien->tanggal_keluar;
+        $this->data['dokter'] = $pasien->diagnosis;
+        $this->data['riwayat_alergi'] = $pasien->riwayat_alergi;
+        $this->data['konsumen'] = $pasien->konsumen;
+        $this->data['obat'] = $pasien->obat;
+        $this->data['jumlah'] = $pasien->jumlah;
+        $this->data['tanggal_penggunaan'] = $pasien->tanggal_penggunaan;
+
+        if($pasien->waktu_penggunaan_1 == True) {
+            $this->data['waktu_penggunaan_1'] = $pasien->waktu_penggunaan_1;
+        }
+        if($pasien->waktu_penggunaan_2 == True) {
+            $this->data['waktu_penggunaan_2'] = $pasien->waktu_penggunaan_2;
+        }
+        if($pasien->waktu_penggunaan_3 == True) {
+            $this->data['waktu_penggunaan_3'] = $pasien->waktu_penggunaan_3;
+        }
+        if($pasien->waktu_penggunaan_4 == True) {
+            $this->data['waktu_penggunaan_4'] = $pasien->waktu_penggunaan_4;
+        }
+
+        $this->data['keterangan'] = $pasien->keterangan;
+
+        return view('page.ri.penggunaan_obat_read', $this->data);
+    }
 }

@@ -250,12 +250,15 @@ Route::post('/ri_panss_ec_read', 'RIPanssEcController@get_ri_panss_ec_read');
 
 Route::get('/ri_penilaian_panss', 'RIPenilaianPanssController@get_ri_penilaian_panss');
 Route::post('/ri_penilaian_panss', 'RIPenilaianPanssController@post_ri_penilaian_panss');
+Route::post('/ri_penilaian_panss_read', 'RIPenilaianPanssController@get_ri_penilaian_panss_read');
 
 Route::get('/ri_lembar_konsultasi', 'RILembarKonsultasiController@get_ri_lembar_konsultasi');
 Route::post('/ri_lembar_konsultasi', 'RILembarKonsultasiController@post_ri_lembar_konsultasi');
+Route::post('/ri_lembar_konsultasi_read', 'RILembarKonsultasiController@get_ri_lembar_konsultasi_read');
 
 Route::get('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan');
 Route::post('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@post_ri_rencana_pemulangan');
+Route::post('/ri_rencana_pemulangan_read', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan_read');
 
 Route::get('/ri_efek_samping', 'RIEfekSampingController@get_ri_efek_samping');
 Route::post('/ri_efek_samping', 'RIEfekSampingController@post_ri_efek_samping');
