@@ -23,17 +23,17 @@ class PasienController extends Controller
             $statement->execute();
             $pasien = $statement->fetchAll(PDO::FETCH_OBJ)[0];
 
-            //cek data pasien di identifikasi
-            $jumlah_identifikasi = Identifikasi::where('id_pasien', $pasien->id)->count();
-            if($jumlah_identifikasi == 0) {
-                $identifikasi_baru = new Identifikasi;
-                $identifikasi_baru->id_pasien = $pasien->id;
-                $identifikasi_baru->save();
+            //cek data pasien di identifikasi untuk keperluan identifikasi dan dokumen
+            // $jumlah_identifikasi = Identifikasi::where('id_pasien', $pasien->id)->count();
+            // if($jumlah_identifikasi == 0) {
+            //     $identifikasi_baru = new Identifikasi;
+            //     $identifikasi_baru->id_pasien = $pasien->id;
+            //     $identifikasi_baru->save();
 
-                $list_document = new ListDocument;
-                $list_document->id_regis = $identifikasi_baru->id_pasien;
-                $list_document->save();
-            }
+            //     $list_document = new ListDocument;
+            //     $list_document->id_regis = $identifikasi_baru->id_pasien;
+            //     $list_document->save();
+            // }
         }
 
         // $pasien = Pasien::where('no_rm', $id)->first();
@@ -42,6 +42,7 @@ class PasienController extends Controller
         $request->session()->put('jenis_kelamin', $pasien->jenis_kelamin);
         $request->session()->put('tanggal_lahir', $pasien->tanggal_lahir);
 
+        //sweet alert
         $request->session()->put('pasien_terpilih', 'Pasien berhasil terpilih.');
 
         return redirect('daftar_dokumen');
@@ -119,9 +120,15 @@ class PasienController extends Controller
         $rincian->perubahan_rw = $request->perubahan_rw;
         $rincian->save();
 
+        //Identifikasi Pasien
         $identifikasi = new Identifikasi;
         $identifikasi->id_pasien = $request->no_rm;
         $identifikasi->save();
+
+        //Dokumen Pasien
+        $list_document = new ListDocument;
+        $list_document->id_regis = $identifikasi->id_pasien;
+        $list_document->save();
 
         $index = 0;
         foreach($request->nama_pj as $nama) {

@@ -1,76 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
-  <meta name="author" content="GeeksLabs">
-  <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-  <link rel="shortcut icon" href="img/favicon.png">
-
-  <title>Login | RSJ Tampan Provinsi Riau</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- bootstrap theme -->
-  <link href="{{url('')}}/admin_bootstrap/css/bootstrap-theme.css" rel="stylesheet">
-  <!--external css-->
-  <!-- font icon -->
-  <link href="{{url('')}}/admin_bootstrap/css/elegant-icons-style.css" rel="stylesheet" />
-  <link href="{{url('')}}/admin_bootstrap/css/font-awesome.css" rel="stylesheet" />
-  <!-- Custom styles -->
-  <link href="{{url('')}}/admin_bootstrap/css/style.css" rel="stylesheet">
-  <link href="{{url('')}}/admin_bootstrap/css/style-responsive.css" rel="stylesheet" />
-
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{{url('')}}/login_v15/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url('')}}/login_v15/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url('')}}/login_v15/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url('')}}/login_v15/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url('')}}/login_v15/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{url('')}}/login_v15/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url('')}}/login_v15/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url('')}}/login_v15/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{url('')}}/login_v15/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url('')}}/login_v15/css/util.css">
+	<link rel="stylesheet" type="text/css" href="{{url('')}}/login_v15/css/main.css">
+<!--===============================================================================================-->
 </head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url({{url('')}}/login_v15/images/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						Sign In
+					</span>
+				</div>
+				<form method="POST" class="login100-form" action="{{ route('login') }}">
+					{{csrf_field()}}
+					@if($errors->has('username'))
+						Ada yang salah. Pastikan Anda menggunakan username dan password yang tepat.
+					@endif
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+						<span class="label-input100">Username</span>
+						<input class="input100" type="text" name="username" placeholder="Enter username">
+						<span class="focus-input100"></span>
+					</div>
 
-<body class="login-img3-body">
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+						<span class="label-input100">Password</span>
+						<input class="input100" type="password" name="password" placeholder="Enter password">
+						<span class="focus-input100"></span>
+					</div>
 
-  <div class="container">
-
-    <form method="POST" class="login-form" action="{{ route('login') }}">
-      @csrf
-      <div class="login-wrap">
-        <p class="login-img"><i class="icon_lock_alt"></i></p>
-        {{-- username --}}
-        <div class="input-group">
-          <span class="input-group-addon"><i class="icon_profile"></i></span>
-          <input type="text" name="username" class="form-control" placeholder="username" autofocus>
-          @if ($errors->has('username'))
-            <span class="invalid-feedback" role="alert">
-              <strong>{{ $errors->first('username') }}</strong>
-            </span>
-          @endif
-        </div>
-        {{-- password --}}
-        <div class="input-group">
-          <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-          <input type="password" name="password" class="form-control" placeholder="Password">
-          @if ($errors->has('password'))
-            <span class="invalid-feedback" role="alert">
-              <strong>{{ $errors->first('password') }}</strong>
-            </span>
-          @endif
-        </div>
-        <!-- <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Remember me 
-                <span class="pull-right"> <a href="#"> Forgot Password?</a></span> 
-            </label>
-            -->
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-        <!-- <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button> -->
-      </div>
-    </form>
-    <div class="text-right">
-      <div class="credits">
-
-         SISTEM REKAM MEDIS RSJ TAMPAN
-        </div>
-    </div>
-  </div>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit">
+							Login
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
 
 
 </body>
-
 </html>
