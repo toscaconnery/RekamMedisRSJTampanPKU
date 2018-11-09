@@ -178,7 +178,7 @@ class IGDTriaseController extends Controller
     	return back();
     }
 
-    public function get_igd_triase_read()
+    public function get_igd_triase_data()
     {
         $id_pasien = Session::get('id_pasien');
         $pasien = IGDTriase::where('id_regis', $id_pasien)->first();
@@ -251,8 +251,18 @@ class IGDTriaseController extends Controller
             $this->data['diastol'] = $pasien->diastol;
             $this->data['gcs'] = $pasien->gcs;
         }
+        // return view('page.igd.triase_read', $this->data);
+    }
 
-        
+    public function get_igd_triase_read()
+    {
+        $this->get_igd_triase_data();
         return view('page.igd.triase_read', $this->data);
+    }
+
+    public function get_igd_triase_edit()
+    {
+        $this->get_igd_triase_read();
+        return view('page.igd.triase_edit', $this->data);
     }
 }

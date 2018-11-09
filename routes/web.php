@@ -127,6 +127,8 @@ Route::get('/rj_resume_read', 'RJResumeController@get_rj_resume_read'); // new a
 Route::get('/igd_triase', 'IGDTriaseController@get_igd_triase');
 Route::post('/igd_triase', 'IGDTriaseController@post_igd_triase');
 Route::get('/igd_triase_read', 'IGDTriaseController@get_igd_triase_read'); // new add
+Route::get('/igd_triase_edit', 'IGDTriaseController@get_igd_triase_edit');
+Route::post('/igd_triase_edit', 'IGDTriaseController@post_igd_triase_edit');
 
 Route::get('/igd_suicide_fisik', 'IGDSuicideFisikController@get_igd_suicide_fisik');
 Route::post('/igd_suicide_fisik', 'IGDSuicideFisikController@post_igd_suicide_fisik');
