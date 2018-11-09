@@ -265,4 +265,176 @@ class IGDTriaseController extends Controller
         $this->get_igd_triase_read();
         return view('page.igd.triase_edit', $this->data);
     }
+
+    public function post_igd_triase_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $pasien = IGDTriase::where('id_regis', $id_pasien)->first();
+
+        $pasien->tanggal_masuk = $request->tanggal_masuk;
+        $pasien->jam = $request->jam;
+        $pasien->keluhan_utama = $request->keluhan_utama;
+        if(isset($request->doa)) {
+            $pasien->doa = True;
+        }
+        else {
+            $pasien->doa = False;
+        }
+        $pasien->jenis = $request->jenis;
+
+        //hapus semua nilai yang ada di field selain nilai yang umum
+        $pasien->henti_jantung = False;
+        $pasien->tekanan_darah = Null;
+        $pasien->kondisi_nadi = Null;
+        $pasien->akral_dingin = False;
+        $pasien->jalan_nafas = Null;
+        $pasien->henti_nafas = False;
+        $pasien->frek_nafas = Null;
+        $pasien->frek_nadi = Null;
+        $pasien->sianosis = False;
+        $pasien->pucat = False;
+        $pasien->alergi_makanan = Null;
+        $pasien->alergi_lainnya = Null;
+        $pasien->alergi_obat = Null;
+        $pasien->diastol = Null;
+        $pasien->sistol = Null;
+        $pasien->mengi = False;
+        $pasien->suhu = Null;
+        $pasien->gcs = Null;
+
+        if($request->jenis == 'resusitasi') {
+            $pasien->jenis = 'resusitasi';
+            if(isset($request->jalan_nafas_sumbatan)) {
+                $pasien->jalan_nafas = 'jalan_nafas_sumbatan';
+            }
+            if(isset($request->henti_nafas)) {
+                $pasien->henti_nafas = True;
+            }
+            if(isset($request->frek_nafas_le_10)) {
+                $pasien->frek_nafas = 'frek_nafas_le_10';
+            }
+            if(isset($request->sianosis)) {
+                $pasien->sianosis = True;
+            }
+            if(isset($request->henti_jantung)) {
+                $pasien->henti_jantung = True;
+            }
+            if(isset($request->kondisi_nadi_tidak_teraba)) {
+                $pasien->kondisi_nadi = 'kondisi_nadi_tidak_teraba';
+            }
+            if(isset($request->pucat)) {
+                $pasien->pucat = True;
+            }
+            if(isset($request->akral_dingin)) {
+                $pasien->akral_dingin = True;
+            }
+            if(isset($request->gcs_le_9)) {
+                $pasien->gcs = 'gcs_le_9';
+            }
+        }
+        elseif($request->jenis == 'emergent') {
+            $pasien->jenis = 'emergent';
+            if(isset($request->jalan_nafas_bebas)) {
+                $pasien->jalan_nafas = 'jalan_nafas_bebas';
+            }
+            if(isset($request->frek_nafas_be_32)) {
+                $pasien->frek_nafas = 'frek_nafas_be_32';
+            }
+            if(isset($request->mengi)) {
+                $pasien->mengi = True;
+            }
+            if(isset($request->kondisi_nadi_teraba_lemah)) {
+                $pasien->kondisi_nadi = 'kondisi_nadi_teraba_lemah';
+            }
+            if(isset($request->frek_nadi_le_50_be_150)) {
+                $pasien->frek_nadi = 'frek_nadi_le_50_be_150';
+            }
+            if(isset($request->gcs_9_12)) {
+                $pasien->gcs = 'gcs_9_12';
+            }
+        }
+        elseif($request->jenis == 'tanda vital') {
+            $pasien->jenis = 'tanda vital';
+            $pasien->tekanan_darah = $request->tekanan_darah;
+            $pasien->frek_nadi = $request->frek_nadi_text;
+            $pasien->frek_nafas = $request->frek_nafas_text;
+            $pasien->suhu = $request->suhu;
+            $pasien->alergi_makanan = $request->alergi_makanan;
+            $pasien->alergi_obat = $request->alergi_obat;
+            $pasien->alergi_lainnya = $request->alergi_lainnya;
+            $pasien->gcs = $request->gcs_text;
+        }
+        elseif($request->jenis == 'urgent') {
+            $pasien->jenis = 'urgent';
+            if(isset($request->jalan_nafas_bebas)) {
+                $pasien->jalan_nafas = 'jalan_nafas_bebas';
+            }
+            if(isset($request->frek_nafas_be_24_32)) {
+                $pasien->frek_nafas = 'frek_nafas_be_24_32';
+            }
+            if(isset($request->mengi)) {
+                $pasien->mengi = True;
+            }
+            if(isset($request->frek_nadi_120_150)) {
+                $pasien->frek_nadi = 'frek_nadi_120_150';
+            }
+            if(isset($request->sistol_me_160)) {
+                $pasien->sistol = 'sistol_me_160';
+            }
+            if(isset($request->diastol_m_100)) {
+                $pasien->diastol = 'diastol_m_100';
+            }
+            if(isset($request->gcs_m_12)) {
+                $pasien->gcs = 'gcs_m_12';
+            }
+        }
+        elseif($request->jenis == 'non urgent') {
+            $pasien->jenis = 'non urgent';
+            if(isset($request->jalan_nafas_bebas)) {
+                $pasien->jalan_nafas = 'jalan_nafas_bebas';
+            }
+            if(isset($request->frek_nafas_me_20_24)) {
+                $pasien->frek_nafas = 'frek_nafas_me_20_24';
+            }
+            if(isset($request->frek_nadi_100_120)) {
+                $pasien->frek_nadi = 'frek_nadi_100_120';
+            }
+            if(isset($request->sistol_l_160)) {
+                $pasien->sistol = 'sistol_l_160';
+            }
+            if(isset($request->diastol_l_100)) {
+                $pasien->diastol = 'diastol_l_100';
+            }
+            if(isset($request->gcs_15)) {
+                $pasien->gcs = 'gcs_15';
+            }
+        }
+        elseif($request->jenis == 'false emergency') {
+            $pasien->jenis = 'false emergency';
+            if(isset($request->jalan_nafas_bebas)) {
+                $pasien->jalan_nafas = 'jalan_nafas_bebas';
+            }
+            if(isset($request->frek_nafas_16_20)) {
+                $pasien->frek_nafas = 'frek_nafas_16_20';
+            }
+            if(isset($request->mengi)) {
+                $pasien->mengi = True;
+            }
+            if(isset($request->frek_nadi_80_100)) {
+                $pasien->frek_nadi = 'frek_nadi_80_100';
+            }
+            if(isset($request->sistol_me_120)) {
+                $pasien->sistol = 'sistol_me_120';
+            }
+            if(isset($request->diastol_m_80)) {
+                $pasien->diastol = 'diastol_m_80';
+            }
+            if(isset($request->gcs_15)) {
+                $pasien->gcs = 'gcs_15';
+            }
+        }
+        $pasien->save();
+
+        return redirect('daftar_dokumen');
+    }
 }

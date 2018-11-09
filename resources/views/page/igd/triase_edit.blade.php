@@ -56,7 +56,7 @@
       <div class="row">
         <div class="col-lg-12">
 
-          <form class="form-horizontal ">
+          <form class="form-horizontal" method="post" action="igd_triase_edit">
             {{ csrf_field() }}
             <section class="panel" id="first_panel">
               <header class="panel-heading">
@@ -592,6 +592,9 @@
               </div>
             </section>
             @endif
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </form>
         </div>
       </div>
