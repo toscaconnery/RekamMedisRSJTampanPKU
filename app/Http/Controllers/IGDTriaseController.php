@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\IGDTriase;
+use App\Models\ListDocument;
 use Session;
 
 class IGDTriaseController extends Controller
@@ -169,19 +170,27 @@ class IGDTriaseController extends Controller
     		}
     	}
     	$data->save();
+
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
+        $daftar_dokumen->igd_triase = True;
+        $daftar_dokumen->save();
+
     	return back();
     }
 
     public function get_igd_triase_read()
     {
-        $pasien = IGDTriase::where('id', 1)->first();
-        
+        $id_pasien = Session::get('id_pasien');
+        $pasien = IGDTriase::where('id_regis', $id_pasien)->first();
+
         $this->data['id_regis'] = $pasien->id_regis;
         $this->data['tanggal_masuk'] = $pasien->tanggal_masuk;
         $this->data['jam'] = $pasien->jam;
         $this->data['keluhan_utama'] = $pasien->keluhan_utama;
+        $this->data['doa'] = $pasien->doa;
+        $this->data['jenis'] = $pasien->jenis;
 
-        if($pasien->jenis = 'resusitasi') {
+        if($pasien->jenis == 'resusitasi') {
             $this->data['jalan_nafas'] = $pasien->jalan_nafas;
             $this->data['henti_nafas'] = $pasien->henti_nafas;
             $this->data['frek_nafas'] = $pasien->frek_nafas;
@@ -193,7 +202,7 @@ class IGDTriaseController extends Controller
             $this->data['gcs'] = $pasien->gcs;
         }
 
-        else if($pasien->jenis = 'emergent') {
+        elseif($pasien->jenis == 'emergent') {
             $this->data['jalan_nafas'] = $pasien->jalan_nafas;
             $this->data['frek_nafas'] = $pasien->frek_nafas;
             $this->data['mengi'] = $pasien->mengi;
@@ -202,7 +211,7 @@ class IGDTriaseController extends Controller
             $this->data['gcs'] = $pasien->gcs;
         }
 
-        else if($pasien->jenis = 'tanda vital') {
+        elseif($pasien->jenis == 'tanda vital') {
             $this->data['tekanan_darah'] = $pasien->tekanan_darah;
             $this->data['frek_nadi'] = $pasien->frek_nadi;
             $this->data['frek_nafas'] = $pasien->frek_nafas;
@@ -213,34 +222,34 @@ class IGDTriaseController extends Controller
             $this->data['gcs'] = $pasien->gcs;
         }
 
-        else if($pasien->jenis = 'urgent') {
+        elseif($pasien->jenis == 'urgent') {
             $this->data['jalan_nafas'] = $pasien->jalan_nafas;
             $this->data['frek_nafas'] = $pasien->frek_nafas;
             $this->data['mengi'] = $pasien->mengi;
             $this->data['frek_nadi'] = $pasien->frek_nadi;
             $this->data['sistol'] = $pasien->sistol;
             $this->data['diastol'] = $pasien->diastol;
-            $this->data['gcs'] = $pasien->gcss;
+            $this->data['gcs'] = $pasien->gcs;
         }
 
-        else if($pasien->jenis = 'non urgent') {
+        elseif($pasien->jenis == 'non urgent') {
             $this->data['jalan_nafas'] = $pasien->jalan_nafas;
             $this->data['frek_nafas'] = $pasien->frek_nafas;
             $this->data['mengi'] = $pasien->mengi;
             $this->data['frek_nadi'] = $pasien->frek_nadi;
             $this->data['sistol'] = $pasien->sistol;
             $this->data['diastol'] = $pasien->diastol;
-            $this->data['gcs'] = $pasien->gcss;
+            $this->data['gcs'] = $pasien->gcs;
         }
 
-        else if($pasien->jenis = 'false emergency') {
+        elseif($pasien->jenis == 'false emergency') {
             $this->data['jalan_nafas'] = $pasien->jalan_nafas;
             $this->data['frek_nafas'] = $pasien->frek_nafas;
             $this->data['mengi'] = $pasien->mengi;
             $this->data['frek_nadi'] = $pasien->frek_nadi;
             $this->data['sistol'] = $pasien->sistol;
             $this->data['diastol'] = $pasien->diastol;
-            $this->data['gcs'] = $pasien->gcss;
+            $this->data['gcs'] = $pasien->gcs;
         }
 
         

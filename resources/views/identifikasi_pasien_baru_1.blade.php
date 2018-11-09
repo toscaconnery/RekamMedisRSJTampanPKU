@@ -62,91 +62,96 @@
             Data Pasien
           </header>
           <div class="panel-body">
-            <form class="form-horizontal " method="post" action="identifikasi_pasien_baru_2">
+            <div class="form-group">
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                  <input type="radio" name="options" id="pasien_baru"> Pasien Baru
+                </label>
+                <label class="btn btn-primary">
+                  <input type="radio" name="options" id="pasien_lama"> Pasien Lama
+                </label>
+              </div>
+            </div>
+            <form class="form-horizontal" method="post" action="identifikasi_pasien_baru_2" id="form_pasien_baru">
               {{ csrf_field() }}
-            {{-- <div class="form-group">
-              <label class="control-label col-lg-2" for="inputSuccess">No. RM</label>
-              <div class="col-lg-5">
-                <input type="text" class="form-control" name="norm" disabled="" value="{{$no_rm}}">
+              <div class="form-group">
+                <label class="control-label col-lg-2" for="inputSuccess">Nama Pasien</label>
+                <div class="col-lg-5">
+                  <input type="text" class="form-control" name="nama_pasien">
+                </div>
               </div>
-            </div> --}}
-            <div class="form-group">
-              <label class="control-label col-lg-2" for="inputSuccess">Nama Pasien</label>
-              <div class="col-lg-5">
-                <input type="text" class="form-control" name="nama_pasien">
+              <div class="form-group">
+                <label class="control-label col-lg-2" for="inputSuccess">Tanggal Lahir</label>
+                <div class="col-lg-5">
+                  <input type="date" class="form-control" name="tanggal_lahir">
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label class="control-label col-lg-2" for="inputSuccess">Tanggal Lahir</label>
-              <div class="col-lg-5">
-                <input type="date" class="form-control" name="tanggal_lahir">
+              <div class="form-group">
+                <label class="control-label col-lg-2" for="inputSuccess">Jenis Kelamin</label>
+                <div class="col-lg-1">
+                  <input type="radio" name="jenis_kelamin" value="L"> L
+                </div>
+                <div class="col-lg-1">
+                  <input type="radio" name="jenis_kelamin" value="P"> P
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label class="control-label col-lg-2" for="inputSuccess">Jenis Kelamin</label>
-              <div class="col-lg-1">
-                <input type="radio" name="jenis_kelamin" value="L"> L
+              <div class="form-group">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-1">
+                  <button type="submit" class="btn btn-primary">Berikutnya</button>
+                </div>
               </div>
-              <div class="col-lg-1">
-                <input type="radio" name="jenis_kelamin" value="P"> P
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="col-lg-2"></div>
-              <div class="col-lg-1">
-                <button type="submit" class="btn btn-primary">Berikutnya</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
+            </form>
+            
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
 
 
 
-  <!-- javascripts -->
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.10.4.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery-1.8.3.min.js"></script>
-  <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
-  <!-- bootstrap -->
-  <script src="{{url('')}}/admin_bootstrap/js/bootstrap.min.js"></script>
-  <!-- nice scroll -->
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.scrollTo.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.nicescroll.js" type="text/javascript"></script>
-  <!-- charts scripts -->
-  <script src="{{url('')}}/admin_bootstrap/assets/jquery-knob/js/jquery.knob.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.sparkline.js" type="text/javascript"></script>
-  <script src="{{url('')}}/admin_bootstrap/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/owl.carousel.js"></script>
-  <!-- jQuery full calendar -->
-  <script src="{{url('')}}/admin_bootstrap/js/fullcalendar.min.js"></script>
-  <!-- Full Google Calendar - Calendar -->
-  <script src="{{url('')}}/admin_bootstrap/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
-  <!--script for this page only-->
-  <script src="{{url('')}}/admin_bootstrap/js/calendar-custom.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.rateit.min.js"></script>
-  <!-- custom select -->
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.customSelect.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/assets/chart-master/Chart.js"></script>
+    <!-- javascripts -->
+    <script src="{{url('')}}/admin_bootstrap/js/jquery.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <!-- bootstrap -->
+    <script src="{{url('')}}/admin_bootstrap/js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="{{url('')}}/admin_bootstrap/js/jquery.scrollTo.min.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!-- charts scripts -->
+    <script src="{{url('')}}/admin_bootstrap/assets/jquery-knob/js/jquery.knob.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/jquery.sparkline.js" type="text/javascript"></script>
+    <script src="{{url('')}}/admin_bootstrap/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/owl.carousel.js"></script>
+    <!-- jQuery full calendar -->
+    <script src="{{url('')}}/admin_bootstrap/js/fullcalendar.min.js"></script>
+    <!-- Full Google Calendar - Calendar -->
+    <script src="{{url('')}}/admin_bootstrap/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
+    <!--script for this page only-->
+    <script src="{{url('')}}/admin_bootstrap/js/calendar-custom.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/jquery.rateit.min.js"></script>
+    <!-- custom select -->
+    <script src="{{url('')}}/admin_bootstrap/js/jquery.customSelect.min.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/assets/chart-master/Chart.js"></script>
 
-  <!--custome script for all page-->
-  <script src="{{url('')}}/admin_bootstrap/js/scripts.js"></script>
-  <!-- custom script for this page-->
-  <script src="{{url('')}}/admin_bootstrap/js/sparkline-chart.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/easy-pie-chart.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-1.2.2.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-world-mill-en.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/xcharts.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.autosize.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.placeholder.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/gdp-data.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/morris.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
-  <script>
+    <!--custome script for all page-->
+    <script src="{{url('')}}/admin_bootstrap/js/scripts.js"></script>
+    <!-- custom script for this page-->
+    <script src="{{url('')}}/admin_bootstrap/js/sparkline-chart.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/easy-pie-chart.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/xcharts.min.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/jquery.autosize.min.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/jquery.placeholder.min.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/gdp-data.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/morris.min.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
+    <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
+    <script>
       //knob
       $(function() {
         $(".knob").knob({
@@ -192,4 +197,4 @@
       });
     </script>
   </body>
-<html>
+  <html>

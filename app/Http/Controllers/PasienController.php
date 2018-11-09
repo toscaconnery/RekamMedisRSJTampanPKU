@@ -38,6 +38,7 @@ class PasienController extends Controller
 
         // $pasien = Pasien::where('no_rm', $id)->first();
         $request->session()->put('id_pasien', $pasien->id);
+        // $request->session()->put('no_rm', $pasien->no_rm);
         $request->session()->put('nama', $pasien->nama);
         $request->session()->put('jenis_kelamin', $pasien->jenis_kelamin);
         $request->session()->put('tanggal_lahir', $pasien->tanggal_lahir);
@@ -88,7 +89,6 @@ class PasienController extends Controller
 
         $saved_data = DB::table('pasien')->where('nama_pasien', $request->nama_pasien)
                         ->where('tanggal_lahir', $request->tanggal_lahir)->first();
-        //dd($saved_data);
 
         $this->data['no_rm'] = $saved_data->no_rm;
         $this->data['tanggal_pengisian'] = $saved_data->created_at;

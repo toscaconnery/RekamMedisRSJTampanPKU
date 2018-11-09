@@ -15,7 +15,7 @@
     <section class="wrapper">
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="page-header"><i class="fa fa-file-text-o"></i> PENUNDAAN PELAYANAN</h3>
+          <h3 class="page-header"><i class="fa fa-file-text-o"></i> TRIASE PASIEN</h3>
         </div>
       </div>
       @include('layouts.bio')
@@ -66,13 +66,13 @@
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal masuk IGD</label>
-                  <div class="col-sm-10">
+                  <div class="col-sm-2">
                     <input type="text" id="dp1" class="form-control required" name="tanggal_masuk">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jam</label>
-                  <div class="col-sm-10">
+                  <div class="col-sm-2">
                     <input type="time" class="form-control" name="jam">
                   </div>
                 </div>
@@ -87,7 +87,7 @@
                   <div class="col-lg-4">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" value="" name="doa">
+                        <input type="checkbox" name="doa">
                         DOA
                       </label>
                     </div>                    
@@ -98,37 +98,37 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jenis" value="resusitasi">
+                        <input type="radio" name="jenis" id="jenis" value="resusitasi">
                         RESUSITASI
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jenis" value="emergent">
+                        <input type="radio" name="jenis" id="jenis" value="emergent">
                         EMERGENT
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jenis" value="tanda vital">
+                        <input type="radio" name="jenis" id="jenis" value="tanda vital">
                         TANDA VITAL
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jenis" value="urgent">
+                        <input type="radio" name="jenis" id="jenis" value="urgent">
                         URGENT
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jenis" value="non urgent">
+                        <input type="radio" name="jenis" id="jenis" value="non urgent">
                         NON URGENT
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jenis" value="false emergency">
+                        <input type="radio" name="jenis" id="jenis" value="false emergency">
                         FALSE EMERGENCY
                       </label>
                     </div>
@@ -137,7 +137,7 @@
               </div>
             </section>
 
-            <section class="panel">
+            <section class="panel hidden_panel" id="panel_resusitasi">
               <header class="panel-heading">
                 PEMERIKSAAN
               </header>
@@ -221,7 +221,7 @@
               </div>
             </section>
 
-            <section class="panel">
+            <section class="panel hidden_panel" id="panel_emergent">
               <header class="panel-heading">
                 PEMERIKSAAN
               </header>
@@ -287,7 +287,7 @@
               </div>
             </section>
 
-            <section class="panel">
+            <section class="panel hidden_panel" id="panel_tanda_vital">
               <header class="panel-heading">
                 PEMERIKSAAN
               </header>
@@ -365,7 +365,7 @@
               </div>
             </section>
 
-            <section class="panel">
+            <section class="panel hidden_panel" id="panel_urgent">
               <header class="panel-heading">
                 PEMERIKSAAN
               </header>
@@ -442,7 +442,7 @@
               </div>
             </section>
 
-            <section class="panel">
+            <section class="panel hidden_panel" id="panel_non_urgent">
               <header class="panel-heading">
                 PEMERIKSAAN
               </header>
@@ -511,7 +511,7 @@
               </div>
             </section>
 
-            <section class="panel">
+            <section class="panel hidden_panel" id="panel_false_emergency">
               <header class="panel-heading">
                 PEMERIKSAAN
               </header>
@@ -595,6 +595,36 @@
     </section>
 
     @include('layouts.tailscript')
+
+    <script type="text/javascript">
+      $('document').ready(function() {
+        $('.hidden_panel').hide();
+      });
+    </script>
+
+    <script type="text/javascript">
+      $('input[type=radio][name=jenis]').change(function() {
+        $('.hidden_panel').hide();
+        if (this.value == 'resusitasi') {
+          $('#panel_resusitasi').show();
+        }
+        else if (this.value == 'emergent') {
+          $('#panel_emergent').show();
+        }
+        else if (this.value == 'tanda vital') {
+          $('#panel_tanda_vital').show();
+        }
+        else if (this.value == 'urgent') {
+          $('#panel_urgent').show();
+        }
+        else if (this.value == 'non urgent') {
+          $('#panel_non_urgent').show();
+        }
+        else if (this.value == 'false emergency') {
+          $('#panel_false_emergency').show();
+        }
+      });
+    </script>
 
   </body>
   <html>
