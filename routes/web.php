@@ -136,10 +136,11 @@ Route::get('/igd_suicide_fisik_read', 'IGDSuicideFisikController@get_igd_suicide
 Route::get('/igd_suicide_fisik_edit', 'IGDSuicideFisikController@get_igd_suicide_fisik_edit');
 Route::post('/igd_suicide_fisik_edit', 'IGDSuicideFisikController@post_igd_suicide_fisik_edit');
 
-
 Route::get('/igd_catatan_kemajuan', 'IGDCatatanKemajuanController@get_igd_catatan_kemajuan');
 Route::post('/igd_catatan_kemajuan', 'IGDCatatanKemajuanController@post_igd_catatan_kemajuan');
-Route::get('/igd_catatan_kemajuan_read', 'IGDCatatanKemajuanController@get_igd_catatan_kemajuan_read'); // new add
+Route::get('/igd_catatan_kemajuan_read', 'IGDCatatanKemajuanController@get_igd_catatan_kemajuan_read');
+Route::get('/igd_catatan_kemajuan_edit', 'IGDCatatanKemajuanController@get_igd_catatan_kemajuan_edit');
+Route::post('/igd_catatan_kemajuan_edit', 'IGDCatatanKemajuanController@post_igd_catatan_kemajuan_edit');
 
 Route::get('/igd_catatan_perkembangan', 'IGDCatatanPerkembanganController@get_igd_catatan_perkembangan');
 Route::post('/igd_catatan_perkembangan', 'IGDCatatanPerkembanganController@post_igd_catatan_perkembangan');

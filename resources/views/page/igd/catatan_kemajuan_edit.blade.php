@@ -53,9 +53,9 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal " method="post" action="igd_catatan_kemajuan">
+          <form class="form-horizontal " method="post" action="igd_catatan_kemajuan_edit">
             {{ csrf_field() }}
-            <input type="hidden" id="jumlah_form" name="jumlah_form" value="1">
+            <input type="hidden" id="jumlah_form_new" name="jumlah_form_new" value="0">
             <section class="panel">
               <header class="panel-heading">
                 Catatan Kemajuan 
@@ -72,24 +72,28 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr id="form_1">
-                      <td>
-                        <input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control datepicker_recurring" name="tanggal_1">
-                        <input type="time" class="form-control" name="jam_1" required>
-                      </td>
-                      <td>
-                        <textarea class="form-control" rows="3" name="catatan_kemajuan_1"></textarea>
-                      </td>
-                      <td>
-                        <textarea class="form-control" rows="3" name="tindakan_terapi_1"></textarea>
-                      </td>
-                      <td><input type="text" class="form-control" name="nama_user_1"></td>
-                      <td>
-                        <div class="btn-group">
-                          <button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_1"><i class="icon_close_alt2"></i></button>
-                        </div>
-                      </td>
-                    </tr>
+                    <input type="hidden" name="previous_id" value="{{$previous_id}}">
+                    @foreach($pasien as $p)
+                      <tr id="form_{{$p['id_data']}}">
+                        <td>
+                          <input type="text" value="{{$p['tanggal']}}" size="16" class="form-control datepicker_recurring" name="tanggal_{{$p['id_data']}}">
+                          <input type="time" value="{{$p['jam']}}" class="form-control" name="jam_{{$p['id_data']}}" required>
+                        </td>
+                        <td>
+                          <textarea class="form-control" rows="3" name="catatan_kemajuan_{{$p['id_data']}}">{{$p['catatan_kemajuan']}}</textarea>
+                        </td>
+                        <td>
+                          <textarea class="form-control" rows="3" name="tindakan_terapi_{{$p['id_data']}}">{{$p['tindakan_terapi']}}</textarea>
+                        </td>
+                        <td>
+                          <input type="text" value="{{$p['nama_user']}}" class="form-control" name="nama_user_{{$p['id_data']}}">
+                        </td>
+                        <td>
+                          <div class="btn-group">
+                          </div>
+                        </td>
+                      </tr>
+                    @endforeach
                     <tr id="last_row">
                       <td colspan="9">
                         <div class="btn-group">
@@ -114,10 +118,10 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('#tambah_form').click(function() {
-        var a = document.getElementById('jumlah_form').value;
+        var a = document.getElementById('jumlah_form_new').value;
         a = parseInt(a) + 1;
-        $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control datepicker_recurring" name="tanggal_'+a+'"><input type="time" class="form-control" name="jam_'+a+'" required></td><td><textarea class="form-control" rows="3" name="catatan_kemajuan_'+a+'"></textarea></td><td><textarea class="form-control" rows="3" name="tindakan_terapi_'+a+'"></textarea></td><td><input type="text" class="form-control" name="nama_user_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-        document.getElementById('jumlah_form').value = a;
+        $('#last_row').before('<tr id="form_new_'+a+'"><td><input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control datepicker_recurring" name="tanggal_new_'+a+'"><input type="time" class="form-control" name="jam_new_'+a+'" required></td><td><textarea class="form-control" rows="3" name="catatan_kemajuan_new_'+a+'"></textarea></td><td><textarea class="form-control" rows="3" name="tindakan_terapi_new_'+a+'"></textarea></td><td><input type="text" class="form-control" name="nama_user_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+        document.getElementById('jumlah_form_new').value = a;
       });
     });
   </script>
