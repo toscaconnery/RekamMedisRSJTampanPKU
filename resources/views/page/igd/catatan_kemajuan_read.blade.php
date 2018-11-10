@@ -74,7 +74,7 @@
                     @foreach($pasien as $p)
                       <tr id="form_{{$p['id_data']}}">
                         <td>
-                          <input type="text" disabled value="{{$p['tanggal']}}" size="16" class="form-control datepicker_recurring" name="tanggal_{{$p['id_data']}}">
+                          <input type="text" disabled value="{{$p['tanggal']}}" size="16" class="form-control sandbox-container" name="tanggal_{{$p['id_data']}}">
                           <input type="time" disabled value="{{$p['jam']}}" class="form-control" name="jam_{{$p['id_data']}}" required>
                         </td>
                         <td>

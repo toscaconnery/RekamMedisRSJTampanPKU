@@ -53,9 +53,9 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal " method="post" action="igd_catatan_perkembangan">
+          <form class="form-horizontal " method="post" action="igd_catatan_perkembangan_edit">
             {{ csrf_field() }}
-            <input type="hidden" id="jumlah_form" name="jumlah_form" value="1">
+            <input type="hidden" id="jumlah_form_new" name="jumlah_form_new" value="0">
             <section class="panel">
               <header class="panel-heading">
                 Catatan Kemajuan 
@@ -72,20 +72,21 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <input type="hidden" name="previous_id" value="{{$previous_id}}">
                     @foreach($pasien as $p)
                       <tr id="form_{{$p['id_data']}}">
                         <td>
-                          <input type="text" disabled value="{{$p['tanggal']}}" size="16" class="form-control sandbox-container" name="tanggal_{{$p['id_data']}}">
-                          <input type="time" disabled value="{{$p['jam']}}" class="form-control" name="jam_{{$p['id_data']}}" required>
+                          <input type="text" value="{{$p['tanggal']}}" size="16" class="form-control sandbox-container" name="tanggal_{{$p['id_data']}}">
+                          <input type="time" value="{{$p['jam']}}" class="form-control" name="jam_{{$p['id_data']}}" required>
                         </td>
                         <td>
-                          <textarea class="form-control" rows="3" name="profesi_bagian_{{$p['id_data']}}" style="resize: none;" readonly>{{$p['profesi_bagian']}}</textarea>
+                          <textarea class="form-control" rows="3" name="profesi_bagian_{{$p['id_data']}}" style="resize: none;">{{$p['profesi_bagian']}}</textarea>
                         </td>
                         <td>
-                          <textarea class="form-control" rows="3" name="hasil_{{$p['id_data']}}" readonly>{{$p['hasil']}}</textarea>
+                          <textarea class="form-control" rows="3" name="hasil_{{$p['id_data']}}">{{$p['hasil']}}</textarea>
                         </td>
                         <td>
-                          <input type="checkbox" disabled class="form-control" name="verifikasi_{{$p['id_data']}}" {{$p['verifikasi'] == True ? 'checked' : ''}}>
+                          <input type="checkbox" class="form-control" name="verifikasi_{{$p['id_data']}}" {{$p['verifikasi'] == True ? 'checked' : ''}}>
                         </td>
                         <td>
                           <div class="btn-group">
@@ -93,6 +94,14 @@
                         </td>
                       </tr>
                     @endforeach
+                    <tr id="last_row">
+                      <td colspan="9">
+                        <div class="btn-group">
+                          <button class="btn btn-primary" type="button" id="tambah_form"><i class="icon_plus_alt2"></i> Tambah</button>
+                          <button class="btn btn-success" type="submit"><i class="icon_check_alt2"></i> Simpan</button>
+                        </div>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -104,6 +113,30 @@
   </section>
 
   @include('layouts.tailscript')
+
+  {{-- menambah row inputan --}}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#tambah_form').click(function() {
+        var a = document.getElementById('jumlah_form_new').value;
+        a = parseInt(a) + 1;
+        $('#last_row').before('<tr id="form_new_'+a+'"><td><input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control sandbox-container" name="tanggal_new_'+a+'"><input type="time" class="form-control" name="jam_new_'+a+'" required></td><td><textarea class="form-control" rows="3" name="profesi_bagian_new_'+a+'" style="resize: none;"></textarea></td><td><textarea class="form-control" rows="3" name="hasil_new_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="verifikasi_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+        document.getElementById('jumlah_form_new').value = a;
+      });
+    });
+  </script>
+
+  {{-- menghapus row --}}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(document).on('click', '.tombol_hapus', function() {
+        var x = $(this).attr('id');
+        var nomor = x.substring(13);
+        alert(nomor);
+        $('#form_'+nomor).remove();
+      });
+    });
+  </script>
 
 </body>
 <html>

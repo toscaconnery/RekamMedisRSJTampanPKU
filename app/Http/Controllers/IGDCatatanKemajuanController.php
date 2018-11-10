@@ -73,7 +73,6 @@ class IGDCatatanKemajuanController extends Controller
             //data tidak ditemukan
             return redirect('daftar_dokumen');
         }
-        
     }
 
     public function get_igd_catatan_kemajuan_read()
@@ -94,7 +93,6 @@ class IGDCatatanKemajuanController extends Controller
         $previous_id = $request->previous_id;
         $previous_id_array = explode('-', $previous_id);
         $id_pasien = Session::get('id_pasien');
-        // dd($previous_id_array);
         foreach($previous_id_array as $key => $value) {
             $data = IGDCatatanKemajuan::where('id_regis', $id_pasien)->where('id', $value)->first();
             $str_tanggal = 'tanggal_'.$value;

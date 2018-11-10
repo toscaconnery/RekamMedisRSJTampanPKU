@@ -145,6 +145,8 @@ Route::post('/igd_catatan_kemajuan_edit', 'IGDCatatanKemajuanController@post_igd
 Route::get('/igd_catatan_perkembangan', 'IGDCatatanPerkembanganController@get_igd_catatan_perkembangan');
 Route::post('/igd_catatan_perkembangan', 'IGDCatatanPerkembanganController@post_igd_catatan_perkembangan');
 Route::get('/igd_catatan_perkembangan_read', 'IGDCatatanPerkembanganController@get_igd_catatan_perkembangan_read');
+Route::get('/igd_catatan_perkembangan_edit', 'IGDCatatanPerkembanganController@get_igd_catatan_perkembangan_edit');
+Route::post('/igd_catatan_perkembangan_edit', 'IGDCatatanPerkembanganController@post_igd_catatan_perkembangan_edit');
 
 Route::get('/igd_asesmen_awal_rawat_darurat_perawat', 'IGDAsesmenAwalRawatDaruratController@get_igd_asesmen_awal_rawat_darurat_perawat');
 Route::post('/igd_asesmen_awal_rawat_darurat_perawat', 'IGDAsesmenAwalRawatDaruratController@post_igd_asesmen_awal_rawat_darurat_perawat');

@@ -74,7 +74,7 @@
                   <tbody>
                     <tr id="form_1">
                       <td>
-                        <input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control datepicker_recurring" name="tanggal_1">
+                        <input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control sandbox-container" name="tanggal_1">
                         <input type="time" class="form-control" name="jam_1" required>
                       </td>
                       <td>
@@ -116,7 +116,7 @@
       $('#tambah_form').click(function() {
         var a = document.getElementById('jumlah_form').value;
         a = parseInt(a) + 1;
-        $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control datepicker_recurring" name="tanggal_'+a+'"><input type="time" class="form-control" name="jam_'+a+'" required></td><td><textarea class="form-control" rows="3" name="catatan_kemajuan_'+a+'"></textarea></td><td><textarea class="form-control" rows="3" name="tindakan_terapi_'+a+'"></textarea></td><td><input type="text" class="form-control" name="nama_user_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+        $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control sandbox-container" name="tanggal_'+a+'"><input type="time" class="form-control" name="jam_'+a+'" required></td><td><textarea class="form-control" rows="3" name="catatan_kemajuan_'+a+'"></textarea></td><td><textarea class="form-control" rows="3" name="tindakan_terapi_'+a+'"></textarea></td><td><input type="text" class="form-control" name="nama_user_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
         document.getElementById('jumlah_form').value = a;
       });
     });
