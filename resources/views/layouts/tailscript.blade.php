@@ -32,3 +32,10 @@
 {{-- form validation --}}
 <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery.validate.min.js"></script>
 <script src="{{url('')}}/js/form-validation.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('body').on('focus',".datepicker_recurring", function(){
+		  $(this).datepicker();
+		});
+	});
+</script>
