@@ -66,7 +66,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="a1" value="1" {{$a1 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="a1" value="1" {{$a1 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -89,7 +89,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="a2" value="1" {{$a2 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="a2" value="1" {{$a2 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -112,7 +112,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="a3" value="1" {{$a3 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="a3" value="1" {{$a3 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -135,7 +135,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="a4" value="1" {{$a4 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="a4" value="1" {{$a4 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -158,7 +158,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="a5" value="1" {{$a5 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="a5" value="1" {{$a5 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -181,7 +181,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="a6" value="1" {{$a6 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="a6" value="1" {{$a6 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -204,7 +204,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="a7" value="1" {{$a7 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="a7" value="1" {{$a7 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -240,7 +240,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="b1" value="1" {{$b1 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="b1" value="1" {{$b1 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -263,7 +263,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="b2" value="1" {{$b2 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="b2" value="1" {{$b2 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -286,7 +286,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="b3" value="1" {{$b3 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="b3" value="1" {{$b3 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -309,7 +309,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="b4" value="1" {{$b4 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="b4" value="1" {{$b4 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -332,7 +332,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="b5" value="1" {{$b5 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="b5" value="1" {{$b5 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -355,7 +355,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="b6" value="1" {{$b6 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="b6" value="1" {{$b6 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -378,7 +378,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="b7" value="1" {{$b7 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="b7" value="1" {{$b7 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -466,7 +466,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="c1" value="1" {{$c1 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="c1" value="1" {{$c1 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -489,7 +489,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="c2" value="1" {{$c2 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="c2" value="1" {{$c2 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -513,7 +513,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="c3" value="1" {{$c3 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="c3" value="1" {{$c3 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -537,7 +537,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="c4" value="1" {{$c4 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="c4" value="1" {{$c4 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -561,7 +561,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="c5" value="1" {{$c5 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="c5" value="1" {{$c5 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -585,7 +585,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="c6" value="1" {{$c6 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="c6" value="1" {{$c6 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -609,7 +609,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="c7" value="1" {{$c7 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="c7" value="1" {{$c7 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -633,7 +633,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="c8" value="1" {{$c8 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="c8" value="1" {{$c8 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -657,7 +657,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="c9" value="1" {{$c9 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="c9" value="1" {{$c9 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -691,7 +691,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="d1" value="1" {{$d1 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="d1" value="1" {{$d1 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -714,7 +714,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="d2" value="1" {{$d2 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="d2" value="1" {{$d2 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -737,7 +737,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="d3" value="1" {{$d3 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="d3" value="1" {{$d3 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -760,7 +760,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="d4" value="1" {{$d4 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="d4" value="1" {{$d4 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -784,7 +784,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="d5" value="1" {{$d5 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="d5" value="1" {{$d5 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -808,7 +808,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="d6" value="1" {{$d6 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="d6" value="1" {{$d6 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -832,7 +832,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="d7" value="1" {{$d7 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="d7" value="1" {{$d7 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -856,7 +856,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="d8" value="1" {{$d8 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="d8" value="1" {{$d8 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>
@@ -880,7 +880,7 @@
                       <div class="col-sm-6">
                         <div class="radio-inline">
                           <label style="margin-right: 1em;">
-                            <input type="radio" name="d9" value="1" {{$d9 == 1 ? 'checked' : ''}}>
+                            <input type="radio" name="d9" value="1" {{$d9 == 1 ? 'checked' : ''}} required>
                             Yes
                           </label>
                         </div>

@@ -175,7 +175,7 @@ class IGDTriaseController extends Controller
         $daftar_dokumen->igd_triase = True;
         $daftar_dokumen->save();
 
-    	return back();
+    	return redirect('daftar_dokumen');
     }
 
     public function get_igd_triase_data()
@@ -190,67 +190,30 @@ class IGDTriaseController extends Controller
         $this->data['doa'] = $pasien->doa;
         $this->data['jenis'] = $pasien->jenis;
 
-        if($pasien->jenis == 'resusitasi') {
-            $this->data['jalan_nafas'] = $pasien->jalan_nafas;
-            $this->data['henti_nafas'] = $pasien->henti_nafas;
-            $this->data['frek_nafas'] = $pasien->frek_nafas;
-            $this->data['sianosis'] = $pasien->sianosis;
-            $this->data['henti_jantung'] = $pasien->henti_jantung;
-            $this->data['kondisi_nadi'] = $pasien->kondisi_nadi;
-            $this->data['pucat'] = $pasien->pucat;
-            $this->data['akral_dingin'] = $pasien->akral_dingin;
-            $this->data['gcs'] = $pasien->gcs;
-        }
+        $this->data['tekanan_darah'] = $pasien->tekanan_darah;
+        $this->data['henti_jantung'] = $pasien->henti_jantung;
+        $this->data['akral_dingin'] = $pasien->akral_dingin;
+        $this->data['kondisi_nadi'] = $pasien->kondisi_nadi;
+        $this->data['jalan_nafas'] = $pasien->jalan_nafas;
+        $this->data['henti_nafas'] = $pasien->henti_nafas;
+        $this->data['frek_nafas'] = $pasien->frek_nafas;
+        $this->data['frek_nadi'] = $pasien->frek_nadi;
+        $this->data['sianosis'] = $pasien->sianosis;
+        $this->data['diastol'] = $pasien->diastol;
+        $this->data['sistol'] = $pasien->sistol;
+        $this->data['mengi'] = $pasien->mengi;
+        $this->data['pucat'] = $pasien->pucat;
+        $this->data['suhu'] = $pasien->suhu;
+        $this->data['gcs'] = $pasien->gcs;
 
-        elseif($pasien->jenis == 'emergent') {
-            $this->data['jalan_nafas'] = $pasien->jalan_nafas;
-            $this->data['frek_nafas'] = $pasien->frek_nafas;
-            $this->data['mengi'] = $pasien->mengi;
-            $this->data['kondisi_nadi'] = $pasien->kondisi_nadi;
-            $this->data['frek_nadi'] = $pasien->frek_nadi;
-            $this->data['gcs'] = $pasien->gcs;
-        }
 
-        elseif($pasien->jenis == 'tanda vital') {
-            $this->data['tekanan_darah'] = $pasien->tekanan_darah;
-            $this->data['frek_nadi'] = $pasien->frek_nadi;
-            $this->data['frek_nafas'] = $pasien->frek_nafas;
-            $this->data['suhu'] = $pasien->suhu;
-            $this->data['alergi_makanan'] = $pasien->alergi_makanan;
-            $this->data['alergi_obat'] = $pasien->alergi_obat;
-            $this->data['alergi_lainnya'] = $pasien->alergi_lainnya;
-            $this->data['gcs'] = $pasien->gcs;
-        }
+        $this->data['alergi_makanan'] = $pasien->alergi_makanan;
+        $this->data['alergi_obat'] = $pasien->alergi_obat;
+        $this->data['alergi_lainnya'] = $pasien->alergi_lainnya;
 
-        elseif($pasien->jenis == 'urgent') {
-            $this->data['jalan_nafas'] = $pasien->jalan_nafas;
-            $this->data['frek_nafas'] = $pasien->frek_nafas;
-            $this->data['mengi'] = $pasien->mengi;
-            $this->data['frek_nadi'] = $pasien->frek_nadi;
-            $this->data['sistol'] = $pasien->sistol;
-            $this->data['diastol'] = $pasien->diastol;
-            $this->data['gcs'] = $pasien->gcs;
-        }
 
-        elseif($pasien->jenis == 'non urgent') {
-            $this->data['jalan_nafas'] = $pasien->jalan_nafas;
-            $this->data['frek_nafas'] = $pasien->frek_nafas;
-            $this->data['mengi'] = $pasien->mengi;
-            $this->data['frek_nadi'] = $pasien->frek_nadi;
-            $this->data['sistol'] = $pasien->sistol;
-            $this->data['diastol'] = $pasien->diastol;
-            $this->data['gcs'] = $pasien->gcs;
-        }
+        
 
-        elseif($pasien->jenis == 'false emergency') {
-            $this->data['jalan_nafas'] = $pasien->jalan_nafas;
-            $this->data['frek_nafas'] = $pasien->frek_nafas;
-            $this->data['mengi'] = $pasien->mengi;
-            $this->data['frek_nadi'] = $pasien->frek_nadi;
-            $this->data['sistol'] = $pasien->sistol;
-            $this->data['diastol'] = $pasien->diastol;
-            $this->data['gcs'] = $pasien->gcs;
-        }
         // return view('page.igd.triase_read', $this->data);
     }
 

@@ -40,9 +40,6 @@ class CreateIgdAsesmenAwalRawatDaruratPerawatTable extends Migration
             $table->string('must_bb')->nullable();
             $table->boolean('must_asupan')->default(False);
             $table->boolean('must_diagnosis')->default(False);
-            $table->string('must_penurunan_bb')->nullable();
-            $table->string('must_list_diagnosis')->nullable();
-            $table->string('must_list_diagnosis_lain')->nullable();
             $table->boolean('sk_1')->default(False);
             $table->boolean('sk_2')->default(False);
             $table->boolean('sk_3')->default(False);
