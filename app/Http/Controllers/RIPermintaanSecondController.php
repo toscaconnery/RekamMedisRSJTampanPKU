@@ -43,7 +43,7 @@ class RIPermintaanSecondController extends Controller
     	return redirect('daftar_dokumen');
     }
 
-     public function post_ri_permintaan_second(Request $request)
+    public function get_ri_permintaan_second_read(Request $request)
     {
 
         $pasien = RIPermintaanSecond::where('id', 1)->first();
