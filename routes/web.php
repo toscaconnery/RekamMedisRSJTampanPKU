@@ -158,6 +158,8 @@ Route::post('/igd_asesmen_awal_rawat_darurat_perawat_edit', 'IGDAsesmenAwalRawat
 Route::get('/igd_asesmen_awal_rawat_darurat_dokter', 'IGDAsesmenAwalRawatDaruratController@get_igd_asesmen_awal_rawat_darurat_dokter');
 Route::post('/igd_asesmen_awal_rawat_darurat_dokter', 'IGDAsesmenAwalRawatDaruratController@post_igd_asesmen_awal_rawat_darurat_dokter');
 Route::get('/igd_asesmen_awal_rawat_darurat_dokter_read', 'IGDAsesmenAwalRawatDaruratController@get_igd_asesmen_awal_rawat_darurat_dokter_read');
+Route::get('/igd_asesmen_awal_rawat_darurat_dokter_edit', 'IGDAsesmenAwalRawatDaruratController@get_igd_asesmen_awal_rawat_darurat_dokter_edit');
+Route::post('/igd_asesmen_awal_rawat_darurat_dokter_edit', 'IGDAsesmenAwalRawatDaruratController@post_igd_asesmen_awal_rawat_darurat_dokter_edit');
 
 Route::get('/ri_resume_medis', 'RIResumeMedisController@get_ri_resume_medis');
 Route::post('/ri_resume_medis', 'RIResumeMedisController@post_ri_resume_medis');

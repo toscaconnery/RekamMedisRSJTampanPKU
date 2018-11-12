@@ -15,6 +15,12 @@ class CreateIgdObatSaatIniTable extends Migration
     {
         Schema::create('igd_obat_saat_ini', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('id_regis', 20)->reference('id')->on('identifikasi');
+            $table->string('nama_obat');
+            $table->string('dibawa')->nullable();
+            $table->string('jumlah')->nullable();
+            $table->string('tidak_dibawa')->nullable();
+            $table->string('keterangan')->nullable();
             $table->timestamps();
         });
     }

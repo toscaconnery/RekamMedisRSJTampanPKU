@@ -943,7 +943,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Pemeriksaan</label>
                   <div class="col-sm-8">
-                    <input id="dp1" type="text" value="{{date("m-d-Y")}}" size="16" class="form-control" name="tanggal_pemeriksaan">
+                    <input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control sandbox-container" name="tanggal_pemeriksaan">
                   </div>
                 </div>
               </div>
@@ -1094,7 +1094,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Perlu kontrol pada tanggal</label>
                   <div class="col-sm-2">
-                    <input id="dp2" type="text" value="{{date("m-d-Y")}}" size="16" class="form-control" name="tanggal_kontrol">
+                    <input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control sandbox-container" name="tanggal_kontrol">
                   </div>
                 </div>
                 <div class="form-group">
