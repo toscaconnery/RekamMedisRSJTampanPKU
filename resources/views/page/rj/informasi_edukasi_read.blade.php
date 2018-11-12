@@ -55,8 +55,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal" method="post" action="rj_informasi_edukasi_edit">
-            {{ csrf_field() }}
+          <form class="form-horizontal">
             <section class="panel">
               <header class="panel-heading">
                 Persiapan
@@ -67,7 +66,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="bahasa" {{$bahasa == 'Indonesia' ? 'checked' : ''}} value="Indonesia" id="bahasa_indonesia">
+                        <input disabled type="radio" name="bahasa" {{$bahasa == 'Indonesia' ? 'checked' : ''}} value="Indonesia" id="bahasa_indonesia">
                         Indonesia
                       </label>
                     </div>
@@ -75,7 +74,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="bahasa" {{$bahasa == 'Inggris' ? 'checked' : ''}} value="Inggris" id="bahasa_inggris">
+                        <input disabled type="radio" name="bahasa" {{$bahasa == 'Inggris' ? 'checked' : ''}} value="Inggris" id="bahasa_inggris">
                         Inggris
                       </label>
                     </div>
@@ -83,7 +82,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="bahasa" {{$bahasa == 'Daerah' ? 'checked' : '' }} value="Daerah" id="bahasa_daerah">
+                        <input disabled type="radio" name="bahasa" {{$bahasa == 'Daerah' ? 'checked' : '' }} value="Daerah" id="bahasa_daerah">
                         Daerah
                       </label>
                     </div>
@@ -91,7 +90,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="bahasa" {{$bahasa == 'Lainnya' ? 'checked' : ''}} value="Lainnya" id="bahasa_lainnya">
+                        <input disabled type="radio" name="bahasa" {{$bahasa == 'Lainnya' ? 'checked' : ''}} value="Lainnya" id="bahasa_lainnya">
                         Lainnya
                       </label>
                     </div>
@@ -100,7 +99,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sebutkan</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="ket_bahasa" id="ket_bahasa" disabled value="{{$ket_bahasa}}">
+                    <input disabled type="text" class="form-control" name="ket_bahasa" id="ket_bahasa" disabled value="{{$ket_bahasa}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -108,13 +107,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="penerjemah" value="true" {{$penerjemah == True ? 'checked' : ''}}>
+                        <input disabled type="radio" name="penerjemah" value="true" {{$penerjemah == True ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="penerjemah" value="false" {{$penerjemah == False ? 'checked' : ''}}>
+                        <input disabled type="radio" name="penerjemah" value="false" {{$penerjemah == False ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -126,31 +125,31 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pendidikan" value="SD" {{$pendidikan == 'SD' ? 'checked' : ''}}>
+                        <input disabled type="radio" name="pendidikan" value="SD" {{$pendidikan == 'SD' ? 'checked' : ''}}>
                         SD
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pendidikan" value="SLTP" {{$pendidikan == 'SLTP' ? 'checked' : ''}}>
+                        <input disabled type="radio" name="pendidikan" value="SLTP" {{$pendidikan == 'SLTP' ? 'checked' : ''}}>
                         SLTP
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pendidikan" value="SLTA" {{$pendidikan == 'SLTA' ? 'checked' : ''}}>
+                        <input disabled type="radio" name="pendidikan" value="SLTA" {{$pendidikan == 'SLTA' ? 'checked' : ''}}>
                         SLTA
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pendidikan" value="S1" {{$pendidikan == 'S1' ? 'checked' : ''}}>
+                        <input disabled type="radio" name="pendidikan" value="S1" {{$pendidikan == 'S1' ? 'checked' : ''}}>
                         S1
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pendidikan" value="Lainnya" {{$pendidikan == 'Lainnya' ? 'checked' : ''}}>
+                        <input disabled type="radio" name="pendidikan" value="Lainnya" {{$pendidikan == 'Lainnya' ? 'checked' : ''}}>
                         Lain-lain
                       </label>
                     </div>
@@ -162,13 +161,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="baca_tulis" value="Baik" {{$baca_tulis == 'Baik' ? 'checked' : ''}}>
+                        <input disabled type="radio" name="baca_tulis" value="Baik" {{$baca_tulis == 'Baik' ? 'checked' : ''}}>
                         Baik
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="baca_tulis" value="Kurang" {{$baca_tulis == 'Kurang' ? 'checked' : ''}}>
+                        <input disabled type="radio" name="baca_tulis" value="Kurang" {{$baca_tulis == 'Kurang' ? 'checked' : ''}}>
                         Kurang
                       </label>
                     </div>
@@ -180,13 +179,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="cara_belajar" value="Verbal" {{$cara_belajar == 'Verbal' ? 'checked' : ''}}>
+                        <input disabled type="radio" name="cara_belajar" value="Verbal" {{$cara_belajar == 'Verbal' ? 'checked' : ''}}>
                         Verbal
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="cara_belajar" value="Tulisan" {{$cara_belajar == 'Tulisan' ? 'checked' : ''}}>
+                        <input disabled type="radio" name="cara_belajar" value="Tulisan" {{$cara_belajar == 'Tulisan' ? 'checked' : ''}}>
                         Tulisan
                       </label>
                     </div>
@@ -195,7 +194,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Budaya/Suku/Etnis</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="budaya" value="{{$budaya}}">
+                    <input disabled type="text" class="form-control" name="budaya" value="{{$budaya}}">
                   </div>
                 </div>
               </div>
@@ -212,38 +211,38 @@
                   <div class="col-lg-4">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="hambatan_1" {{isset($hambatan[1]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="hambatan_1" {{isset($hambatan[1]) ? 'checked' : ''}}>
                         Tidak ada
                       </label>
                     </div>
 
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="hambatan_2" {{isset($hambatan[2]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="hambatan_2" {{isset($hambatan[2]) ? 'checked' : ''}}>
                         Bahasa
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="hambatan_3" {{isset($hambatan[3]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="hambatan_3" {{isset($hambatan[3]) ? 'checked' : ''}}>
                         Kognitif terbatas
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="hambatan_4" {{isset($hambatan[4]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="hambatan_4" {{isset($hambatan[4]) ? 'checked' : ''}}>
                         Penglihatan terganggu
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="hambatan_5" {{isset($hambatan[5]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="hambatan_5" {{isset($hambatan[5]) ? 'checked' : ''}}>
                         Budaya/Agama/Spiritual
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="hambatan_6" {{isset($hambatan[6]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="hambatan_6" {{isset($hambatan[6]) ? 'checked' : ''}}>
                         Emosional
                       </label>
                     </div>
@@ -254,38 +253,38 @@
 
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="hambatan_7" {{isset($hambatan[7]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="hambatan_7" {{isset($hambatan[7]) ? 'checked' : ''}}>
                         Pendengaran terganggu
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="hambatan_8" {{isset($hambatan[8]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="hambatan_8" {{isset($hambatan[8]) ? 'checked' : ''}}>
                         Fisik lemah
                       </label>
                     </div>
 
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="hambatan_9" {{isset($hambatan[9]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="hambatan_9" {{isset($hambatan[9]) ? 'checked' : ''}}>
                         Gangguan bicara
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="hambatan_10" {{isset($hambatan[10]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="hambatan_10" {{isset($hambatan[10]) ? 'checked' : ''}}>
                         Motivasi kurang
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="hambatan_11" {{isset($hambatan[11]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="hambatan_11" {{isset($hambatan[11]) ? 'checked' : ''}}>
                         Keyakinan/Mitos
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="hambatan_12" {{isset($hambatan[12]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="hambatan_12" {{isset($hambatan[12]) ? 'checked' : ''}}>
                         Lain-lain
                       </label>
                     </div>
@@ -294,7 +293,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sebutkan</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="hambatan_lain" id="hambatan_lain" disabled value="{{$hambatan_lain}}">
+                    <input disabled type="text" class="form-control" name="hambatan_lain" id="hambatan_lain" disabled value="{{$hambatan_lain}}">
                   </div>
                 </div>
               </div>
@@ -311,32 +310,32 @@
                   <div class="col-lg-4">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="kebutuhan_1" {{isset($kebutuhan[1]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="kebutuhan_1" {{isset($kebutuhan[1]) ? 'checked' : ''}}>
                         Proses Penyakit
                       </label>
                     </div>
 
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="kebutuhan_2" {{isset($kebutuhan[2]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="kebutuhan_2" {{isset($kebutuhan[2]) ? 'checked' : ''}}>
                         Obat-obatan
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="kebutuhan_3" {{isset($kebutuhan[3]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="kebutuhan_3" {{isset($kebutuhan[3]) ? 'checked' : ''}}>
                         Prosedur/Tindakan
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="kebutuhan_4" {{isset($kebutuhan[4]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="kebutuhan_4" {{isset($kebutuhan[4]) ? 'checked' : ''}}>
                         Pencegahan faktor risiko
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="kebutuhan_5" {{isset($kebutuhan[5]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="kebutuhan_5" {{isset($kebutuhan[5]) ? 'checked' : ''}}>
                         Manajemen nyeri
                       </label>
                     </div>                    
@@ -345,32 +344,32 @@
                   <div class="col-lg-6">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="kebutuhan_6" {{isset($kebutuhan[6]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="kebutuhan_6" {{isset($kebutuhan[6]) ? 'checked' : ''}}>
                         Diet/Nutrisi
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="kebutuhan_7" {{isset($kebutuhan[7]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="kebutuhan_7" {{isset($kebutuhan[7]) ? 'checked' : ''}}>
                         Lingkungan yang perlu dimodifikasi pasca perawatan
                       </label>
                     </div>
 
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="kebutuhan_8" {{isset($kebutuhan[8]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="kebutuhan_8" {{isset($kebutuhan[8]) ? 'checked' : ''}}>
                         Rehabilitasi
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="kebutuhan_9" {{isset($kebutuhan[9]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="kebutuhan_9" {{isset($kebutuhan[9]) ? 'checked' : ''}}>
                         Hasil pelayanan, termasuk terjadinya kejadian yang diharapkan dan tidak diharapkan
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="kebutuhan_10" {{isset($kebutuhan[10]) ? 'checked' : ''}}>
+                        <input disabled type="checkbox" name="kebutuhan_10" {{isset($kebutuhan[10]) ? 'checked' : ''}}>
                         Lain-lain 
                       </label>
                     </div>
@@ -379,7 +378,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sebutkan</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="kebutuhan_lain" id="kebutuhan_lain" value="{{$kebutuhan_lain}}" disabled>
+                    <input disabled type="text" class="form-control" name="kebutuhan_lain" id="kebutuhan_lain" value="{{$kebutuhan_lain}}" disabled>
                   </div>
                 </div>
               </div>
@@ -396,13 +395,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="kesediaan_menerima" value="true" {{$kesediaan_menerima == True ? 'checked' : ''}}>
+                        <input disabled type="radio" name="kesediaan_menerima" value="true" {{$kesediaan_menerima == True ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="kesediaan_menerima" value="false" {{$kesediaan_menerima == False ? 'checked' : ''}}>
+                        <input disabled type="radio" name="kesediaan_menerima" value="false" {{$kesediaan_menerima == False ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -412,18 +411,18 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Keluarga/Wali</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="nama_keluarga" value="{{$nama_keluarga}}">
+                    <input disabled type="text" class="form-control" name="nama_keluarga" value="{{$nama_keluarga}}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Hubungan dengan pasien</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="hubungan" value="{{$nama_keluarga}}">
+                    <input disabled type="text" class="form-control" name="hubungan" value="{{$nama_keluarga}}">
                   </div>
                 </div>
                 <div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  {{-- <button type="submit" class="btn btn-primary">Submit</button> --}}
                   <a href="{{url('')}}/rj_informasi_edukasi_list_informasi"><button type="button" class="btn btn-primary">List Edukasi</button></a>
                 </div>
               </div>
@@ -437,58 +436,6 @@
 
   @include('layouts.tailscript')
   
-  {{-- bahasa --}}
-  <script type="text/javascript">
-    $(document).ready( function() {
-      $('input[type=radio][name=bahasa]').change(function() {
-        if(this.id == 'bahasa_lainnya') {
-          $('#ket_bahasa').prop('disabled', false);
-        }
-        else if(this.id == 'bahasa_daerah') {
-          $('#ket_bahasa').prop('disabled', true);
-          $('#ket_bahasa').val('');
-        }
-        else if(this.id == 'bahasa_inggris') {
-          $('#ket_bahasa').prop('disabled', true);
-          $('#ket_bahasa').val('');
-        }
-        else if(this.id == 'bahasa_indonesia') {
-          $('#ket_bahasa').prop('disabled', true);
-          $('#ket_bahasa').val('');
-        }
-      });
-    });
-  </script>
-
-  {{-- hambatan --}}
-  <script type="text/javascript">
-    $(document).ready( function() {
-      $('input[type=checkbox][name="hambatan_12"]').change(function() {
-        if(this.checked) {
-          $('#hambatan_lain').prop('disabled', false);
-        }
-        else {
-          $('#hambatan_lain').prop('disabled', true);
-          $('#hambatan_lain').val('');
-        }
-      });
-    });
-  </script>
-
-  {{-- kebutuhan --}}
-  <script type="text/javascript">
-    $(document).ready( function() {
-      $('input[type=checkbox][name="kebutuhan_10"]').change(function() {
-        if(this.checked) {
-          $('#kebutuhan_lain').prop('disabled', false);
-        }
-        else {
-          $('#kebutuhan_lain').prop('disabled', true);
-          $('#kebutuhan_lain').val('');
-        }
-      });
-    });
-  </script>
 
 </body>
 

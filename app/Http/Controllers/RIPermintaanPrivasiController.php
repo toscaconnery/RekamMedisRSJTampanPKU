@@ -51,7 +51,6 @@ class RIPermintaanPrivasiController extends Controller
 
     public function get_ri_permintaan_privasi_read()
     {
-
         $pasien = RIPermintaanPrivasi::where('id', 1)->first();
         
         $this->data['id_regis'] = $pasien->id_regis;

@@ -25,7 +25,7 @@ class RJInformasiEdukasi extends Model
         'hambatan_lain',
         'kebutuhan',
         'kebutuhan_lain',
-        'kesedian_menerima',
+        'kesediaan_menerima',
         'nama_keluarga',
         'hubungan',
     ];

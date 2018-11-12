@@ -27,7 +27,7 @@ class CreateRjInformasiEdukasiTable extends Migration
             $table->string('hambatan_lain')->nullable();
             $table->string('kebutuhan')->nullable();
             $table->string('kebutuhan_lain')->nullable();
-            $table->boolean('kesedian_menerima');
+            $table->boolean('kesediaan_menerima');
             $table->string('nama_keluarga');
             $table->string('hubungan');
             $table->timestamps();
