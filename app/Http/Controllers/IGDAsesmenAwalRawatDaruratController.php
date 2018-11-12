@@ -2044,6 +2044,6 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
                 $tindakan->save();
             }
         }
-        return back();
+        return redirect('daftar_dokumen');
     }
 }

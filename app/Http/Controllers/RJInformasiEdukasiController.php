@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\RJInformasiEdukasi;
 use App\Models\RJEdukasiDiperoleh;
+use App\Models\ListDocument;
 use Session;
 
 class RJInformasiEdukasiController extends Controller
@@ -22,12 +23,7 @@ class RJInformasiEdukasiController extends Controller
     public function post_rj_informasi_edukasi(Request $request)
     {
     	$data = new RJInformasiEdukasi;
-        if(Session::has('id_pasien')) {
-            $id_pasien = Session::get('id_pasien');
-        }
-        else {
-            $id_pasien = 1;
-        }
+        $id_pasien = Session::get('id_pasien');
     	$data->id_regis = $id_pasien;
     	$data->bahasa = $request->bahasa;
     	if($request->bahasa == 'Daerah' or $request->bahasa == 'Lainnya') {
@@ -135,7 +131,44 @@ class RJInformasiEdukasiController extends Controller
     	$data->nama_keluarga = $request->nama_keluarga;
     	$data->hubungan= $request->hubungan;
     	$data->save();
-    	return redirect('index');
+
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
+        $daftar_dokumen->rj_informasi_edukasi = True;
+        $daftar_dokumen->save();
+
+    	return back();
+    }
+
+    public function get_rj_informasi_edukasi_data()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RJInformasiEdukasi::where('id_regis', $id_pasien)->first();
+        $this->data['bahasa'] = $data->bahasa;
+        $this->data['ket_bahasa'] = $data->ket_bahasa;
+        $this->data['penerjemah'] = $data->penerjemah;
+        $this->data['pendidikan'] = $data->pendidikan;
+        $this->data['baca_tulis'] = $data->baca_tulis;
+        $this->data['cara_belajar'] = $data->cara_belajar;
+        $this->data['budaya'] = $data->budaya;
+        $this->data['hambatan'] = $data->hambatan;
+        $this->data['hambatan_lain'] = $data->hambatan_lain;
+        $this->data['kebutuhan'] = $data->kebutuhan;
+        $this->data['kebutuhan_lain'] = $data->kebutuhan_lain;
+        $this->data['kesedian_menerima'] = $data->kesedian_menerima;
+        $this->data['nama_keluarga'] = $data->nama_keluarga;
+        $this->data['hubungan'] = $data->hubungan;
+    }
+
+    public function get_rj_informasi_edukasi_read()
+    {
+        $this->get_rj_informasi_edukasi_data();
+        return view('page.rj.informasi_edukasi_read');
+    }
+
+    public function get_rj_informasi_edukasi_edit()
+    {
+        $this->get_rj_informasi_edukasi_data();
+        return view('page.rj.informasi_edukasi_edit');
     }
 
     public function get_rj_informasi_edukasi_list_informasi()
@@ -146,12 +179,7 @@ class RJInformasiEdukasiController extends Controller
     public function post_rj_informasi_edukasi_list_informasi(Request $request)
     {
     	$jumlah_form = $request->jumlah_form;
-        if(Session::has('id_pasien')) {
-            $id_pasien = Session::get('id_pasien');
-        }
-        else {
-            $id_pasien = 1;
-        }
+        $id_pasien = Session::get('id_pasien');
     	for($i = 1; $i <= $jumlah_form; $i++) {
     		$str_tanggal = 'tanggal_'.$i;
     		$str_poliklinik = 'poliklinik_'.$i;

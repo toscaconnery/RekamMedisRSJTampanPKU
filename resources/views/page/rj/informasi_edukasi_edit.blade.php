@@ -67,7 +67,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="bahasa" value="Indonesia" id="bahasa_indonesia">
+                        <input type="radio" name="bahasa" {{$bahasa == 'Indonesia' ? 'checked' }} value="Indonesia" id="bahasa_indonesia">
                         Indonesia
                       </label>
                     </div>
@@ -75,7 +75,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="bahasa" value="Inggris" id="bahasa_inggris">
+                        <input type="radio" name="bahasa" {{$bahasa == 'Inggris' ? 'checked' }} value="Inggris" id="bahasa_inggris">
                         Inggris
                       </label>
                     </div>
@@ -83,7 +83,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="bahasa" value="Daerah" id="bahasa_daerah">
+                        <input type="radio" name="bahasa" {{$bahasa == 'Daerah' ? 'checked' }} value="Daerah" id="bahasa_daerah">
                         Daerah
                       </label>
                     </div>
@@ -91,7 +91,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="bahasa" value="Lainnya" id="bahasa_lainnya">
+                        <input type="radio" name="bahasa" {{$bahasa == 'Lainnya' ? 'checked' }} value="Lainnya" id="bahasa_lainnya">
                         Lainnya
                       </label>
                     </div>

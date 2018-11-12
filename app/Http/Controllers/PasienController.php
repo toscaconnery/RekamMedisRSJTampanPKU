@@ -15,13 +15,13 @@ class PasienController extends Controller
 {
     public function put_selected_patient_id(Request $request, $id)
     {
-        $berhasil_tersambung = False;
-        include __DIR__."\..\..\ManualConnection\ManualMySQLConnection.php";
+        // $berhasil_tersambung = False;
+        // include __DIR__."\..\..\ManualConnection\ManualMySQLConnection.php";
 
-        if($berhasil_tersambung) {
-            $statement = $pdo->prepare('select * from pasien_server_2 where id = '.$id);
-            $statement->execute();
-            $pasien = $statement->fetchAll(PDO::FETCH_OBJ)[0];
+        // if($berhasil_tersambung) {
+        //     $statement = $pdo->prepare('select * from pasien_server_2 where id = '.$id);
+        //     $statement->execute();
+        //     $pasien = $statement->fetchAll(PDO::FETCH_OBJ)[0];
 
             //cek data pasien di identifikasi untuk keperluan identifikasi dan dokumen
             // $jumlah_identifikasi = Identifikasi::where('id_pasien', $pasien->id)->count();
@@ -34,10 +34,11 @@ class PasienController extends Controller
             //     $list_document->id_regis = $identifikasi_baru->id_pasien;
             //     $list_document->save();
             // }
-        }
+        // }
 
-        // $pasien = Pasien::where('no_rm', $id)->first();
-        $request->session()->put('id_pasien', $pasien->id);
+        $pasien = Pasien::where('no_rm', $id)->first();
+
+        $request->session()->put('id_pasien', $pasien->no_rm);
         // $request->session()->put('no_rm', $pasien->no_rm);
         $request->session()->put('nama', $pasien->nama);
         $request->session()->put('jenis_kelamin', $pasien->jenis_kelamin);
