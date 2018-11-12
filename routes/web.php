@@ -209,71 +209,71 @@ Route::get('/ri_edukasi_read', 'RIEdukasiController@get_ri_edukasi_read');
 
 Route::get('/ri_surat_spd', 'RISuratPengantarDirawatController@get_ri_surat_spd');
 Route::post('/ri_surat_spd', 'RISuratPengantarDirawatController@post_ri_surat_spd');
-Route::post('/ri_surat_spd_read', 'RISuratPengantarDirawatController@get_ri_surat_spd_read');
+Route::get('/ri_surat_spd_read', 'RISuratPengantarDirawatController@get_ri_surat_spd_read');
 
 Route::get('/ri_persetujuan_umum', 'RIPersetujuanUmumController@get_ri_persetujuan_umum');
 Route::post('/ri_persetujuan_umum', 'RIPersetujuanUmumController@post_ri_persetujuan_umum');
-Route::post('/ri_persetujuan_umum_read', 'RIPersetujuanUmumController@get_ri_persetujuan_umum_read');
+Route::get('/ri_persetujuan_umum_read', 'RIPersetujuanUmumController@get_ri_persetujuan_umum_read');
 
 Route::get('/ri_hak_kewajiban', 'RIHakKewajibanController@get_ri_hak_kewajiban');
 Route::post('/ri_hak_kewajiban', 'RIHakKewajibanController@post_ri_hak_kewajiban');
-Route::post('/ri_hak_kewajiban_read', 'RIHakKewajibanController@get_ri_hak_kewajiban_read');
+Route::get('/ri_hak_kewajiban_read', 'RIHakKewajibanController@get_ri_hak_kewajiban_read');
 
 Route::get('/ri_permintaan_privasi', 'RIPermintaanPrivasiController@get_ri_permintaan_privasi');
 Route::post('/ri_permintaan_privasi', 'RIPermintaanPrivasiController@post_ri_permintaan_privasi');
-Route::post('/ri_permintaan_privasi_read', 'RIPermintaanPrivasiController@get_ri_permintaan_privasi_read');
+Route::get('/ri_permintaan_privasi_read', 'RIPermintaanPrivasiController@get_ri_permintaan_privasi_read');
 
 Route::get('/ri_permintaan_rohani', 'RIPermintaanRohaniController@get_ri_permintaan_rohani');
 Route::post('/ri_permintaan_rohani', 'RIPermintaanRohaniController@post_ri_permintaan_rohani');
-Route::post('/ri_permintaan_rohani_read', 'RIPermintaanRohaniController@get_ri_permintaan_rohani_read');
+Route::get('/ri_permintaan_rohani_read', 'RIPermintaanRohaniController@get_ri_permintaan_rohani_read');
 
 Route::get('/ri_permintaan_second', 'RIPermintaanSecondController@get_ri_permintaan_second');
 Route::post('/ri_permintaan_second', 'RIPermintaanSecondController@post_ri_permintaan_second');
-Route::post('/ri_permintaan_second_read', 'RIPermintaanSecondController@get_ri_permintaan_second_read');
+Route::get('/ri_permintaan_second_read', 'RIPermintaanSecondController@get_ri_permintaan_second_read');
 
 Route::get('/ri_pernyataan', 'RIPernyataanController@get_ri_pernyataan');
 Route::post('/ri_pernyataan', 'RIPernyataanController@post_ri_pernyataan');
-Route::post('/ri_pernyataan_read', 'RIPernyataanController@get_ri_pernyataan_read');
+Route::get('/ri_pernyataan_read', 'RIPernyataanController@get_ri_pernyataan_read');
 
 Route::get('/ri_persetujuan_tindakan', 'RIPersetujuanTindakanController@get_ri_persetujuan_tindakan');
 Route::post('/ri_persetujuan_tindakan', 'RIPersetujuanTindakanController@post_ri_persetujuan_tindakan');
-Route::post('/ri_persetujuan_tindakan_read', 'RIPersetujuanTindakanController@get_ri_persetujuan_tindakan_read');
+Route::get('/ri_persetujuan_tindakan_read', 'RIPersetujuanTindakanController@get_ri_persetujuan_tindakan_read');
 
 Route::get('/ri_penolakan_tindakan', 'RIPenolakanTindakanController@get_ri_penolakan_tindakan');
 Route::post('/ri_penolakan_tindakan', 'RIPenolakanTindakanController@post_ri_penolakan_tindakan');
-Route::post('/ri_penolakan_tindakan_read', 'RIPenolakanTindakanController@get_ri_penolakan_tindakan_read');
+Route::get('/ri_penolakan_tindakan_read', 'RIPenolakanTindakanController@get_ri_penolakan_tindakan_read');
 
 Route::get('/ri_do_not_resucitate', 'RIDoNotResucitateController@get_ri_do_not_resucitate');
 Route::post('/ri_do_not_resucitate', 'RIDoNotResucitateController@post_ri_do_not_resucitate');
-Route::post('/ri_do_not_resucitate_read', 'RIDoNotResucitateController@get_ri_do_not_resucitate_read');
+Route::get('/ri_do_not_resucitate_read', 'RIDoNotResucitateController@get_ri_do_not_resucitate_read');
 
 Route::get('/ri_instruksi_do_not_resucitate', 'RIInstruksiDoNotResucitateController@get_ri_instruksi_do_not_resucitate');
 Route::post('/ri_instruksi_do_not_resucitate', 'RIInstruksiDoNotResucitateController@post_ri_instruksi_do_not_resucitate');
-Route::post('/ri_instruksi_do_not_resucitate_read', 'RIInstruksiDoNotResucitateController@get_ri_instruksi_do_not_resucitate_read');
+Route::get('/ri_instruksi_do_not_resucitate_read', 'RIInstruksiDoNotResucitateController@get_ri_instruksi_do_not_resucitate_read');
 
 Route::get('/ri_penggunaan_obat', 'RIPenggunaanObatController@get_ri_penggunaan_obat');
 Route::post('/ri_penggunaan_obat', 'RIPenggunaanObatController@post_ri_penggunaan_obat');
-Route::post('/ri_penggunaan_obat_read', 'RIPenggunaanObatController@get_ri_penggunaan_obat_read');
+Route::get('/ri_penggunaan_obat_read', 'RIPenggunaanObatController@get_ri_penggunaan_obat_read');
 
 Route::get('/ri_riwayat_obat', 'RIRiwayatObatController@get_ri_riwayat_obat');
 Route::post('/ri_riwayat_obat', 'RIRiwayatObatController@post_ri_riwayat_obat');
-Route::post('/ri_riwayat_obat_read', 'RIRiwayatObatController@get_ri_riwayat_obat_read');
+Route::get('/ri_riwayat_obat_read', 'RIRiwayatObatController@get_ri_riwayat_obat_read');
 
 Route::get('/ri_panss_ec', 'RIPanssEcController@get_ri_panss_ec');
 Route::post('/ri_panss_ec', 'RIPanssEcController@post_ri_panss_ec');
-Route::post('/ri_panss_ec_read', 'RIPanssEcController@get_ri_panss_ec_read');
+Route::get('/ri_panss_ec_read', 'RIPanssEcController@get_ri_panss_ec_read');
 
 Route::get('/ri_penilaian_panss', 'RIPenilaianPanssController@get_ri_penilaian_panss');
 Route::post('/ri_penilaian_panss', 'RIPenilaianPanssController@post_ri_penilaian_panss');
-Route::post('/ri_penilaian_panss_read', 'RIPenilaianPanssController@get_ri_penilaian_panss_read');
+Route::get('/ri_penilaian_panss_read', 'RIPenilaianPanssController@get_ri_penilaian_panss_read');
 
 Route::get('/ri_lembar_konsultasi', 'RILembarKonsultasiController@get_ri_lembar_konsultasi');
 Route::post('/ri_lembar_konsultasi', 'RILembarKonsultasiController@post_ri_lembar_konsultasi');
-Route::post('/ri_lembar_konsultasi_read', 'RILembarKonsultasiController@get_ri_lembar_konsultasi_read');
+Route::get('/ri_lembar_konsultasi_read', 'RILembarKonsultasiController@get_ri_lembar_konsultasi_read');
 
 Route::get('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan');
 Route::post('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@post_ri_rencana_pemulangan');
-Route::post('/ri_rencana_pemulangan_read', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan_read');
+Route::get('/ri_rencana_pemulangan_read', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan_read');
 
 Route::get('/ri_efek_samping', 'RIEfekSampingController@get_ri_efek_samping');
 Route::post('/ri_efek_samping', 'RIEfekSampingController@post_ri_efek_samping');
