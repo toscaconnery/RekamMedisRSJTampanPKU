@@ -89,6 +89,8 @@ Route::post('/rj_informasi_edukasi_edit', 'RJInformasiEdukasiController@post_rj_
 Route::get('/rj_informasi_edukasi_list_informasi', 'RJInformasiEdukasiController@get_rj_informasi_edukasi_list_informasi');
 Route::post('/rj_informasi_edukasi_list_informasi', 'RJInformasiEdukasiController@post_rj_informasi_edukasi_list_informasi');
 Route::get('/rj_informasi_edukasi_list_informasi_read', 'RJInformasiEdukasiController@get_rj_informasi_edukasi_list_informasi_read');
+Route::get('/rj_informasi_edukasi_list_informasi_edit', 'RJInformasiEdukasiController@get_rj_informasi_edukasi_list_informasi_edit');
+Route::post('/rj_informasi_edukasi_list_informasi_edit', 'RJInformasiEdukasiController@post_rj_informasi_edukasi_list_informasi_edit');
 
 Route::get('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@get_rj_lapor_rehabilitasi');
 Route::post('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@post_rj_lapor_rehabilitasi');

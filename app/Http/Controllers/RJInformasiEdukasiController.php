@@ -230,7 +230,6 @@ class RJInformasiEdukasiController extends Controller
     {
         $id_pasien = Session::get('id_pasien');
         $data = RJInformasiEdukasi::where('id_regis', $id_pasien)->first();
-        dd($data);
         $data->id_regis = $id_pasien;
         $data->bahasa = $request->bahasa;
         if($request->bahasa == 'Daerah' or $request->bahasa == 'Lainnya') {
@@ -338,6 +337,118 @@ class RJInformasiEdukasiController extends Controller
         $data->nama_keluarga = $request->nama_keluarga;
         $data->hubungan= $request->hubungan;
         $data->save();
+        return redirect('daftar_dokumen');
+    }
+
+    public function get_rj_informasi_edukasi_list_informasi_data()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RJEdukasiDiperoleh::where('id_regis', $id_pasien)->get();
+        $this->data['previous_data'] = '';
+        $this->data['pasien'] = array();
+        foreach($data as $key => $value) {
+            $this->data['pasien'][$key] = array();
+            $this->data['pasien'][$key]['id_data'] = $value->id; 
+            $this->data['pasien'][$key]['tanggal'] = $value->tanggal;
+            $this->data['pasien'][$key]['poliklinik'] = $value->poliklinik;
+            $this->data['pasien'][$key]['informasi'] = $value->informasi;
+            $this->data['pasien'][$key]['nama_edukator'] = $value->nama_edukator;
+            $this->data['pasien'][$key]['ttd_edukator'] = $value->ttd_edukator;
+            $this->data['pasien'][$key]['nama_sasaran'] = $value->nama_sasaran;
+            $this->data['pasien'][$key]['ttd_sasaran'] = $value->ttd_sasaran;
+            $this->data['pasien'][$key]['evaluasi'] = $value->evaluasi;
+            $this->data['previous_data'] .= $value->id.'-';
+        }
+        if(strlen($this->data['previous_data']) > 0) {
+            $this->data['previous_data'] = substr($this->data['previous_data'], 0, -1);
+        }
+    }
+
+    public function get_rj_informasi_edukasi_list_informasi_read()
+    {
+        $this->get_rj_informasi_edukasi_list_informasi_data();
+        return view('page.rj.informasi_edukasi_list_informasi_read', $this->data);
+    }
+
+    public function get_rj_informasi_edukasi_list_informasi_edit()
+    {
+        $this->get_rj_informasi_edukasi_list_informasi_data();
+        return view('page.rj.informasi_edukasi_list_informasi_edit', $this->data);
+    }
+
+    public function post_rj_informasi_edukasi_list_informasi_edit(Request $request)
+    {
+        //old data
+        $previous_data = $request->get('previous_data');
+        $previous_data = explode('-', $previous_data);
+        foreach ($previous_data as $key => $value) {
+            $data = RJEdukasiDiperoleh::where('id', $value)->first();
+            $str_tanggal = 'tanggal_'.$value;
+            $str_poliklinik = 'poliklinik_'.$value;
+            $str_informasi = 'informasi_'.$value;
+            $str_nama_edukator = 'nama_edukator_'.$value;
+            $str_ttd_edukator = 'ttd_edukator_'.$value;
+            $str_nama_sasaran = 'nama_sasaran_'.$value;
+            $str_ttd_sasaran = 'ttd_sasaran_'.$value;
+            $str_evaluasi = 'evaluasi_'.$value;
+            $data->tanggal = $request->$str_tanggal;
+            $data->poliklinik = $request->$str_poliklinik;
+            $data->informasi = $request->$str_informasi;
+            $data->nama_edukator = $request->$str_nama_edukator;
+            if(isset($request->$str_ttd_edukator)) {
+                $data->ttd_edukator = True;
+            }
+            else {
+                $data->ttd_edukator = False;
+            }
+            $data->nama_sasaran = $request->$str_nama_sasaran;
+            if(isset($request->$str_ttd_sasaran)) {
+                $data->ttd_sasaran = True;
+            }
+            else {
+                $data->ttd_sasaran = False;
+            }
+            $data->evaluasi = $request->$str_evaluasi;
+            $data->save();
+        }
+        
+
+        //new data
+        $jumlah_form = $request->jumlah_form_new;
+        $id_pasien = Session::get('id_pasien');
+        for($i = 1; $i <= $jumlah_form; $i++) {
+            $str_tanggal = 'tanggal_new_'.$i;
+            $str_poliklinik = 'poliklinik_new_'.$i;
+            $str_informasi = 'informasi_new_'.$i;
+            $str_nama_edukator = 'nama_edukator_new_'.$i;
+            $str_ttd_edukator = 'ttd_edukator_new_'.$i;
+            $str_nama_sasaran = 'nama_sasaran_new_'.$i;
+            $str_ttd_sasaran = 'ttd_sasaran_new_'.$i;
+            $str_evaluasi = 'evaluasi_new_'.$i;
+            if(!is_null($request->$str_tanggal)) {
+                $data = new RJEdukasiDiperoleh;
+                $data->id_regis = $id_pasien;
+                $data->tanggal = $request->$str_tanggal;
+                $data->poliklinik = $request->$str_poliklinik;
+                $data->informasi = $request->$str_informasi;
+                $data->nama_edukator = $request->$str_nama_edukator;
+                if(isset($request->$str_ttd_edukator)) {
+                    $data->ttd_edukator = True;
+                }
+                else {
+                    $data->ttd_edukator = False;
+                }
+                $data->nama_sasaran = $request->$str_nama_sasaran;
+                if(isset($request->$str_ttd_sasaran)) {
+                    $data->ttd_sasaran = True;
+                }
+                else {
+                    $data->ttd_sasaran = False;
+                }
+                $data->evaluasi = $request->$str_evaluasi;
+                $data->save();
+            }
+        }
         return redirect('daftar_dokumen');
     }
 }
