@@ -107,6 +107,8 @@ Route::post('/rj_perkembangan_pasien_edit', 'RJPerkembanganPasienController@post
 Route::get('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@get_rj_identifikasi_stresor');
 Route::post('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@post_rj_identifikasi_stresor');
 Route::get('/rj_identifikasi_stresor_read', 'RJIdentifikasiStresorController@get_rj_identifikasi_stresor_read');
+Route::get('/rj_identifikasi_stresor_edit', 'RJIdentifikasiStresorController@get_rj_identifikasi_stresor_edit');
+Route::post('/rj_identifikasi_stresor_edit', 'RJIdentifikasiStresorController@post_rj_identifikasi_stresor_edit');
 
 Route::get('/rj_tes_konseling_hiv', 'RJTesKonselingHIVController@get_tes_konseling_hiv');
 Route::post('/rj_tes_konseling_hiv', 'RJTesKonselingHIVController@post_tes_konseling_hiv');

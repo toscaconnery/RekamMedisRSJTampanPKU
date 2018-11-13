@@ -55,7 +55,8 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal">
+          <form class="form-horizontal" method="post" action="rj_identifikasi_stresor_edit">
+            {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
                 Pengaruh
@@ -64,31 +65,31 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Lingkungan Fisik</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="3" style="resize: vertical;" name="lingkungan_fisik" readonly>{{$lingkungan_fisik}}</textarea>
+                    <textarea class="form-control" rows="3" style="resize: vertical;" name="lingkungan_fisik">{{$lingkungan_fisik}}</textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sosisal, ekonomi, dan politik</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="3" style="resize: vertical;" name="sosial_ekonomi_politik" readonly>{{$sosial_ekonomi_politik}}</textarea>
+                    <textarea class="form-control" rows="3" style="resize: vertical;" name="sosial_ekonomi_politik">{{$sosial_ekonomi_politik}}</textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Keluarga</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="3" style="resize: vertical;" name="keluarga" readonly>{{$keluarga}}</textarea>
+                    <textarea class="form-control" rows="3" style="resize: vertical;" name="keluarga">{{$keluarga}}</textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pekerjaan dan Karir</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="3" style="resize: vertical;" name="pekerjaan_karir" readonly>{{$pekerjaan_karir}}</textarea>
+                    <textarea class="form-control" rows="3" style="resize: vertical;" name="pekerjaan_karir">{{$pekerjaan_karir}}</textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Hubungan antar pribadi dan lingkungan</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="3" style="resize: vertical;" name="hubungan_pribadi_lingkungan" readonly>{{$hubungan_pribadi_lingkungan}}</textarea>
+                    <textarea class="form-control" rows="3" style="resize: vertical;" name="hubungan_pribadi_lingkungan">{{$hubungan_pribadi_lingkungan}}</textarea>
                   </div>
                 </div>
               </div>
@@ -102,7 +103,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Semua simptom-simptom (Gejala yang muncul) </label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="3" style="resize: vertical;" name="simptom" readonly>{{$simptom}}</textarea>
+                    <textarea class="form-control" rows="3" style="resize: vertical;" name="simptom">{{$simptom}}</textarea>
                   </div>
                 </div>
               </div>
@@ -116,11 +117,14 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Cara menghadapi dan mengatasinya</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="3" style="resize: vertical;" name="cara_mengatasi" readonly>{{$cara_mengatasi}}</textarea>
+                    <textarea class="form-control" rows="3" style="resize: vertical;" name="cara_mengatasi">{{$cara_mengatasi}}</textarea>
                   </div>
                 </div>
               </div>
             </section>
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </form>
 
         </div>

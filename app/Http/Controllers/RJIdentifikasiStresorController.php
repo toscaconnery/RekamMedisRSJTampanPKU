@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RJIdentifikasiStresor;
+use App\Models\ListDocument;
 use Session;
 
 class RJIdentifikasiStresorController extends Controller
@@ -21,12 +22,7 @@ class RJIdentifikasiStresorController extends Controller
     public function post_rj_identifikasi_stresor(Request $request)
     {
     	$data = new RJIdentifikasiStresor;
-        if(Session::has('id_pasien')) {
-            $id_pasien = Session::get('id_pasien');
-        }
-        else {
-            $id_pasien = 1;
-        }
+        $id_pasien = Session::get('id_pasien');
     	$data->id_regis = $id_pasien;
     	$data->lingkungan_fisik = $request->lingkungan_fisik;
     	$data->sosial_ekonomi_politik = $request->sosial_ekonomi_politik;
@@ -36,10 +32,15 @@ class RJIdentifikasiStresorController extends Controller
     	$data->simptom = $request->simptom;
     	$data->cara_mengatasi = $request->cara_mengatasi;
     	$data->save();
-    	return redirect('index');
+
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
+        $daftar_dokumen->rj_identifikasi_stresor = True;
+        $daftar_dokumen->save();
+
+    	return redirect('daftar_dokumen');
     }
 
-    public function get_rj_identifikasi_stresor_read()
+    public function get_rj_identifikasi_stresor_data()
     {
         $pasien = RJIdentifikasiStresor::where('id', 1)->first();
         
@@ -52,6 +53,34 @@ class RJIdentifikasiStresorController extends Controller
         $this->data['simptom'] = $pasien->simptom;
         $this->data['cara_mengatasi'] = $pasien->cara_mengatasi;
 
+    }
+
+    public function get_rj_identifikasi_stresor_read()
+    {
+        $this->get_rj_identifikasi_stresor_data();
         return view('page.rj.identifikasi_stresor_read', $this->data);
+
+    }
+
+    public function get_rj_identifikasi_stresor_edit()
+    {
+        $this->get_rj_identifikasi_stresor_data();
+        return view('page.rj.identifikasi_stresor_edit', $this->data);
+    }
+
+    public function post_rj_identifikasi_stresor_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RJIdentifikasiStresor::where('id_regis', $id_pasien)->first();
+        $data->id_regis = $id_pasien;
+        $data->lingkungan_fisik = $request->lingkungan_fisik;
+        $data->sosial_ekonomi_politik = $request->sosial_ekonomi_politik;
+        $data->keluarga = $request->keluarga;
+        $data->pekerjaan_karir = $request->pekerjaan_karir;
+        $data->hubungan_pribadi_lingkungan = $request->hubungan_pribadi_lingkungan;
+        $data->simptom = $request->simptom;
+        $data->cara_mengatasi = $request->cara_mengatasi;
+        $data->save();
+        return redirect('daftar_dokumen');
     }
 }
