@@ -65,7 +65,7 @@ class RIPermintaanSecondController extends Controller
         $this->data['no_telp_hub'] = $pasien->no_telp_hub;
         $this->data['tanggal'] = $pasien->tanggal;
         $this->data['nama_saksi'] = $pasien->nama_saksi;
-        $this->data['nama_pasien_wali'] = $pasien->nama_pemohon;
+        $this->data['nama_pasien_wali'] = $pasien->nama_pasien_wali;
 
         return view('page.ri.permintaan_second_read', $this->data);
     }
@@ -90,7 +90,7 @@ class RIPermintaanSecondController extends Controller
         $this->data['no_telp_hub'] = $pasien->no_telp_hub;
         $this->data['tanggal'] = $pasien->tanggal;
         $this->data['nama_saksi'] = $pasien->nama_saksi;
-        $this->data['nama_pasien_wali'] = $pasien->nama_pemohon;
+        $this->data['nama_pasien_wali'] = $pasien->nama_pasien_wali;
 
         ob_clean();
 

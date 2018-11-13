@@ -25,19 +25,19 @@ header('Content-Type: application/pdf');
       </tr>
       <tr>
         <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $umur }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Jenis Kelamin</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $jk }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $alamat }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Agama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $agama }}</td>
       </tr>
       <tr>
         <td class="konten_s_question" colspan="2">
@@ -53,23 +53,23 @@ header('Content-Type: application/pdf');
       </tr>
       <tr>
         <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $nama_hub }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $umur_hub }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Jenis Kelamin</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $jk_hub }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $alamat_hub }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Agama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $agama_hub }}</td>
       </tr>
     </tbody>
   </table>
@@ -99,16 +99,16 @@ header('Content-Type: application/pdf');
         <br>
         <br>
         <br>
-        (......................)
+        ( {{ $nama_saksi }} )
       </td>
       <td class="ttd2">
-        Pekanbaru, 25 September 2018<br>Pemohon
+        Pekanbaru, 25 September 2018<br>Pasien/Wali
         <br>
         <br>
         <br>
         <br>
         <br>
-        (......................)
+        ( {{ $nama_pasien_wali }} )
       </td>
     </tr>  
   </table>
