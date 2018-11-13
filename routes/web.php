@@ -231,6 +231,13 @@ Route::get('/ri_permintaan_second', 'RIPermintaanSecondController@get_ri_permint
 Route::post('/ri_permintaan_second', 'RIPermintaanSecondController@post_ri_permintaan_second');
 Route::get('/ri_permintaan_second_read', 'RIPermintaanSecondController@get_ri_permintaan_second_read');
 
+//dokumen permintaan second
+Route::get('/ri_permintaan_second_pdf', 'RIPermintaanSecondController@ri_permintaan_second_pdf');
+
+Route::get('/doc_ri_permintaan_second', function () {
+    return view('/doc_ri_permintaan_second');
+});
+
 Route::get('/ri_pernyataan', 'RIPernyataanController@get_ri_pernyataan');
 Route::post('/ri_pernyataan', 'RIPernyataanController@post_ri_pernyataan');
 Route::get('/ri_pernyataan_read', 'RIPernyataanController@get_ri_pernyataan_read');

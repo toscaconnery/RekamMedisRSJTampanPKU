@@ -21,7 +21,7 @@ header('Content-Type: application/pdf');
       </tr>
       <tr>
         <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $nama }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Umur</td>

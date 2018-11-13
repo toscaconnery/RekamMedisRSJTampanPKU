@@ -432,6 +432,26 @@ class Pdf_ri_Controller extends Controller
 
     public function pdf_ri_permintaan_second()
     {
+        $pasien = pdf_ri_permintaan_second::where('id', 1)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+
+        $this->data['nama'] = $pasien->nama;
+        $this->data['umur'] = $pasien->umur;
+        $this->data['jk'] = $pasien->jk;
+        $this->data['alamat'] = $pasien->alamat;
+        $this->data['agama'] = $pasien->agama;
+        $this->data['permintaan_opini'] = $pasien->permintaan_opini;
+        $this->data['nama_hub'] = $pasien->nama_hub;
+        $this->data['umur_hub'] = $pasien->umur_hub;
+        $this->data['jk_hub'] = $pasien->jk_hub;
+        $this->data['alamat_hub'] = $pasien->alamat_hub;
+        $this->data['agama_hub'] = $pasien->agama_hub;
+        $this->data['no_telp_hub'] = $pasien->no_telp_hub;
+        $this->data['tanggal'] = $pasien->tanggal;
+        $this->data['nama_saksi'] = $pasien->nama_saksi;
+        $this->data['nama_pasien_wali'] = $pasien->nama_pemohon;
+
         ob_clean();
 
         header('Content-type: application/pdf');
@@ -442,7 +462,7 @@ class Pdf_ri_Controller extends Controller
         'orientation' => 'P'
         ]);
 
-        $view = View::make('doc_ri_permintaan_second');
+        $view = View::make('doc_ri_permintaan_second',$this->data);
         $contents = $view->render();
 
 
@@ -471,7 +491,7 @@ class Pdf_ri_Controller extends Controller
 
                             <td class="doc_headerright_ans">
                             <p>:  123456</p><br>
-                            <p>:  Joko Pangestu</p><br>
+                            <p>:  '.$data['nama'].' </p><br>
                             <p>:  13/08/1992</p><br>
                             <p>:  L</p><br>
                             </td>                       
