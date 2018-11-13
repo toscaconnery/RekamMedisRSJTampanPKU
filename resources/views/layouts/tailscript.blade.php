@@ -20,7 +20,7 @@
 <script src="{{url('')}}/admin_bootstrap/js/bootstrap-wysiwyg-custom.js"></script>
 <script src="{{url('')}}/admin_bootstrap/js/moment.js"></script>
 <script src="{{url('')}}/admin_bootstrap/js/bootstrap-colorpicker.js"></script>
-{{-- <script src="{{url('')}}/admin_bootstrap/js/daterangepicker.js"></script> --}}
+<!-- <script src="{{url('')}}/admin_bootstrap/js/daterangepicker.js"></script> -->
 <script src="{{url('')}}/datepicker/js/bootstrap-datepicker.min.js"></script>
 <!-- ck editor -->
 <script type="text/javascript" src="{{url('')}}/admin_bootstrap/assets/ckeditor/ckeditor.js"></script>
@@ -29,7 +29,7 @@
 <!-- custome script for all page -->
 <script src="{{url('')}}/admin_bootstrap/js/scripts.js"></script>
 
-{{-- form validation --}}
+<!-- form validation -->
 <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery.validate.min.js"></script>
 <script src="{{url('')}}/js/form-validation.js"></script>
 

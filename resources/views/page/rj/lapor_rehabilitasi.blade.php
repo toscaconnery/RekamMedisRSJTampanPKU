@@ -63,7 +63,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Kedatangan</label>
                   <div class="col-sm-2">
-                    <input type="text" id="dp1" class="form-control" name="tanggal_kedatangan" required="">
+                    <input type="text" class="form-control sandbox-container" name="tanggal_kedatangan" required="">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1480,7 +1480,7 @@
               </header>
               <div class="panel-body">
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama Dokter?</label>
+                  <label class="col-sm-2 control-label">Nama Dokter</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control" name="nama_dokter">
                   </div>
