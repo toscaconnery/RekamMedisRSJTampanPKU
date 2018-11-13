@@ -101,6 +101,8 @@ Route::post('/rj_lapor_rehabilitasi_edit', 'RJLaporRehabilitasiController@post_r
 Route::get('/rj_perkembangan_pasien', 'RJPerkembanganPasienController@get_rj_perkembangan_pasien');
 Route::post('/rj_perkembangan_pasien', 'RJPerkembanganPasienController@post_rj_perkembangan_pasien');
 Route::get('/rj_perkembangan_pasien_read', 'RJPerkembanganPasienController@get_rj_perkembangan_pasien_read');
+Route::get('/rj_perkembangan_pasien_edit', 'RJPerkembanganPasienController@get_rj_perkembangan_pasien_edit');
+Route::post('/rj_perkembangan_pasien_edit', 'RJPerkembanganPasienController@post_rj_perkembangan_pasien_edit');
 
 Route::get('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@get_rj_identifikasi_stresor');
 Route::post('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@post_rj_identifikasi_stresor');

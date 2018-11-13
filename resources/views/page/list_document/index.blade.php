@@ -234,7 +234,7 @@
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
-                                    <h5 class="card-title text-uppercase" style="color: black">Perkembangan Pasien</h5>
+                                    <h5 class="card-title text-uppercase" style="color: black">Catatan Perkembangan Pasien Terintegrasi</h5>
                                     @if($dokumen->rj_perkembangan_pasien)
                                     <h5 class="card-title" id="checked" style="color: black; margin-bottom: 0em;"><i class="fas fa-check"></i></h5>
                                     @endif

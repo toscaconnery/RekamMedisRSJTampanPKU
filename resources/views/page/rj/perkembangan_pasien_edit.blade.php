@@ -55,9 +55,9 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal" method="post" action="rj_perkembangan_pasien">
+          <form class="form-horizontal" method="post" action="rj_perkembangan_pasien_edit">
             {{ csrf_field() }}
-            <input type="hidden" name="jumlah_form" id="jumlah_form" value="4">
+            <input type="hidden" name="jumlah_form_new" id="jumlah_form_new" value="0">
             <section class="panel">
               <header class="panel-heading">
                 Hasil Pemeriksaan, Analisis, Rencana Penatalaksanaan Pasien 
@@ -78,62 +78,24 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <input type="hidden" name="previous_id" value="{{$previous_id}}">
+                  @foreach($pasien as $p)
                   <tr>
                     <td>
-                      <input type="text" class="form-control sandbox-container" name="tanggal_1" required>
-                      <input type="time" class="form-control" name="jam_1" required>
+                      <input type="text" autocomplete="off" class="form-control sandbox-container" name="tanggal_{{$p['id_data']}}" required value="{{$p['tanggal']}}">
+                      <input type="time" class="form-control" name="jam_{{$p['id_data']}}" required value="{{$p['jam']}}">
                     </td>
                     <td>
-                      <input type="text" class="form-control" name="profesi_1" readonly value="Profesi A">
+                      <input type="text" class="form-control" name="profesi_{{$p['id_data']}}" readonly value="{{$p['profesi']}}">
                     </td>
                     <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_1">S : </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_{{$p['id_data']}}">{{$p['keterangan']}}</textarea>
                     </td>
-                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                    <td><input type="checkbox" class="form-control" name="ttd_{{$p['id_data']}}" {{$p['ttd'] == True ? 'checked' : ''}}></td>
                     <td></td>
                   </tr>
-                  <tr>
-                    <td>
-                      <input type="text" class="form-control sandbox-container" name="tanggal_2" required>
-                      <input type="time" class="form-control" name="jam_2" required>
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" name="profesi_2" readonly value="Profesi A">
-                    </td>
-                    <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_2">O : </textarea>
-                    </td>
-                    <td><input type="checkbox" class="form-control" name="ttd_2"></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input type="text" class="form-control sandbox-container" name="tanggal_3" required>
-                      <input type="time" class="form-control" name="jam_3" required>
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" name="profesi_3" readonly value="Profesi A">
-                    </td>
-                    <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_3">A : </textarea>
-                    </td>
-                    <td><input type="checkbox" class="form-control" name="ttd_3"></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input type="text" class="form-control sandbox-container" name="tanggal_4" required>
-                      <input type="time" class="form-control" name="jam_4" required>
-                    </td>
-                    <td>
-                      <input type="text" class="form-control" name="profesi_4" readonly value="Profesi A">
-                    </td>
-                    <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_4">P : </textarea>
-                    </td>
-                    <td><input type="checkbox" class="form-control" name="ttd_4"></td>
-                    <td></td>
-                  </tr>
+                  @endforeach
+
                   <tr id="last_row">
                     <td colspan="4">
                       <div class="btn-group">
@@ -156,11 +118,11 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $('#tambah_form').click(function() {
-          var a = document.getElementById('jumlah_form').value;
+          var a = document.getElementById('jumlah_form_new').value;
           // alert('a');
           a = parseInt(a) + 1;
-          $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" class="form-control sandbox-container" name="tanggal_'+a+'" required><input type="time" class="form-control" name="jam_'+a+'" required></td><td><input type="text" class="form-control" name="profesi_'+a+'" readonly value="Profesi A"></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="ttd_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-          document.getElementById('jumlah_form').value = a;
+          $('#last_row').before('<tr id="form_new_'+a+'"><td><input type="text" autocomplete="off" class="form-control sandbox-container" name="tanggal_new_'+a+'" required><input type="time" class="form-control" name="jam_new_'+a+'" required></td><td><input type="text" class="form-control" name="profesi_new_'+a+'" readonly value="Profesi A"></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_new_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="ttd_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+          document.getElementById('jumlah_form_new').value = a;
         });
       });
     </script>
