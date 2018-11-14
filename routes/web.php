@@ -125,6 +125,8 @@ Route::post('/rj_izin_vct_hiv_edit', 'RJIzinVCTHIVController@post_rj_izin_vct_hi
 Route::get('/rj_hiv_anti_retroval', 'RJHIVAntiRetrovalController@get_rj_hiv_anti_retroval');
 Route::post('/rj_hiv_anti_retroval', 'RJHIVAntiRetrovalController@post_rj_hiv_anti_retroval');
 Route::get('/rj_hiv_anti_retroval_read', 'RJHIVAntiRetrovalController@get_rj_hiv_anti_retroval_read');
+Route::get('/rj_hiv_anti_retroval_edit', 'RJHIVAntiRetrovalController@get_rj_hiv_anti_retroval_edit');
+Route::post('/rj_hiv_anti_retroval_edit', 'RJHIVAntiRetrovalController@post_rj_hiv_anti_retroval_edit');
 
 
 Route::get('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikolog');

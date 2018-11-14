@@ -116,7 +116,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Konfirmasi Tes HIV</label>
                   <div class="col-sm-8">
-                    <input type="date" class="form-control" name="tgl_konfirm_tes_hiv">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_konfirm_tes_hiv">
                   </div>
                 </div>
                 <div class="form-group">
@@ -479,7 +479,7 @@
                     <tr>
                       <td>Kunjungan Pertama</td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_pkl_1">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pkl_1">
                       </td>
                       <td>
                         <input type="text" class="form-control" name="stad_klinis_pkl_1">
@@ -489,7 +489,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="status_fungsional_pkl_1">
-                          <option disabled selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">Kerja</option>
                           <option value="2">Ambulatori</option>
                           <option value="3">Baring</option>
@@ -505,7 +505,7 @@
                     <tr>
                       <td>Memenuhi syarat medis untuk ART</td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_pkl_2">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pkl_2">
                       </td>
                       <td>
                         <input type="text" class="form-control" name="stad_klinis_pkl_2">
@@ -515,7 +515,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="status_fungsional_pkl_2">
-                          <option disabled selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">Kerja</option>
                           <option value="2">Ambulatori</option>
                           <option value="3">Baring</option>
@@ -531,7 +531,7 @@
                     <tr>
                       <td>Saat mulai ART</td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_pkl_3">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pkl_3">
                       </td>
                       <td>
                         <input type="text" class="form-control" name="stad_klinis_pkl_3">
@@ -541,7 +541,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="status_fungsional_pkl_3">
-                          <option disabled selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">Kerja</option>
                           <option value="2">Ambulatori</option>
                           <option value="3">Baring</option>
@@ -557,7 +557,7 @@
                     <tr>
                       <td>Setelah 6 bulan ART</td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_pkl_4">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pkl_4">
                       </td>
                       <td>
                         <input type="text" class="form-control" name="stad_klinis_pkl_4">
@@ -567,7 +567,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="status_fungsional_pkl_4">
-                          <option disabled selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">Kerja</option>
                           <option value="2">Ambulatori</option>
                           <option value="3">Baring</option>
@@ -583,7 +583,7 @@
                     <tr>
                       <td>Setelah 12 bulan ART</td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_pkl_5">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pkl_5">
                       </td>
                       <td>
                         <input type="text" class="form-control" name="stad_klinis_pkl_5">
@@ -593,7 +593,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="status_fungsional_pkl_5">
-                          <option disabled selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">Kerja</option>
                           <option value="2">Ambulatori</option>
                           <option value="3">Baring</option>
@@ -609,7 +609,7 @@
                     <tr>
                       <td>Setelah 24 bulan ART</td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_pkl_6">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pkl_6">
                       </td>
                       <td>
                         <input type="text" class="form-control" name="stad_klinis_pkl_6">
@@ -619,7 +619,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="status_fungsional_pkl_6">
-                          <option disabled selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">Kerja</option>
                           <option value="2">Ambulatori</option>
                           <option value="3">Baring</option>
@@ -664,11 +664,11 @@
                         <input type="hidden" name="nama_panduan_orisinil_art_1" value="TDF+3TC+EFV">
                       </td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_art_1">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_art_1">
                       </td>
                       <td>
                         <select class="form-control" name="substitusi_art_1">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Risiko hamil</option>
@@ -680,7 +680,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="switch_art_1">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Risiko hamil</option>
@@ -695,7 +695,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="stop_art_1">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Gagal_pengobatan</option>
@@ -723,11 +723,11 @@
                         <input type="hidden" name="nama_panduan_orisinil_art_2" value="TDF+FTC+EFV">
                       </td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_art_2">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container"  name="tanggal_art_2">
                       </td>
                       <td>
                         <select class="form-control" name="substitusi_art_2">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Risiko hamil</option>
@@ -739,7 +739,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="switch_art_2">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Risiko hamil</option>
@@ -754,7 +754,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="stop_art_2">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Gagal_pengobatan</option>
@@ -782,11 +782,11 @@
                         <input type="hidden" name="nama_panduan_orisinil_art_3" value="TDF+3TC+NVP">
                       </td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_art_3">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_art_3">
                       </td>
                       <td>
                         <select class="form-control" name="substitusi_art_3">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Risiko hamil</option>
@@ -798,7 +798,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="switch_art_3">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Risiko hamil</option>
@@ -813,7 +813,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="stop_art_3">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Gagal_pengobatan</option>
@@ -841,11 +841,11 @@
                         <input type="hidden" name="nama_panduan_orisinil_art_4" value="TDF+3TC+NVP">
                       </td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_art_4">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_art_4">
                       </td>
                       <td>
                         <select class="form-control" name="substitusi_art_4">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Risiko hamil</option>
@@ -857,7 +857,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="switch_art_4">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Risiko hamil</option>
@@ -872,7 +872,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="stop_art_4">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Gagal_pengobatan</option>
@@ -900,11 +900,11 @@
                         <input type="hidden" name="nama_panduan_orisinil_art_5" value="AZT+3TC+EFV">
                       </td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_art_5">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_art_5">
                       </td>
                       <td>
                         <select class="form-control" name="substitusi_art_5">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Risiko hamil</option>
@@ -916,7 +916,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="switch_art_5">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Risiko hamil</option>
@@ -931,7 +931,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="stop_art_5">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Gagal_pengobatan</option>
@@ -959,11 +959,11 @@
                         <input type="hidden" name="nama_panduan_orisinil_art_6" value="AZT+3TC+NVP">
                       </td>
                       <td>
-                        <input type="date" class="form-control" name="tanggal_art_6">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_art_6">
                       </td>
                       <td>
                         <select class="form-control" name="substitusi_art_6">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Risiko hamil</option>
@@ -975,7 +975,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="switch_art_6">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Risiko hamil</option>
@@ -990,7 +990,7 @@
                       </td>
                       <td>
                         <select class="form-control" name="stop_art_6">
-                          <option selected hidden></option>
+                          <option value="0" selected hidden></option>
                           <option value="1">1. Toksisitas/efek samping</option>
                           <option value="2">2. Hamil</option>
                           <option value="3">3. Gagal_pengobatan</option>
@@ -1144,13 +1144,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tgl.Mulai Terapi TB</label>
                   <div class="col-sm-8">
-                    <input type="date" class="form-control" name="tgl_mulai_terapi_tb">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_mulai_terapi_tb">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tgl.Selesai Terapi TB</label>
                   <div class="col-sm-8">
-                    <input type="date" class="form-control" name="tgl_selesai_terapi_tb">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_selesai_terapi_tb">
                   </div>
                 </div>
 
@@ -1223,13 +1223,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Kunjungan <small>(follow-up)</small></label>
                   <div class="col-sm-8">
-                    <input type="date" class="form-control" name="tgl_kunjungan_follow_up">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_kunjungan_follow_up">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Rencana Tanggal Kunjungan</label>
                   <div class="col-sm-8">
-                    <input type="date" class="form-control" name="rencana_tgl_kunjungan">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="rencana_tgl_kunjungan">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1736,19 +1736,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Meninggal</label>
                   <div class="col-sm-8">
-                    <input type="date" class="form-control" name="tgl_meninggal">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_meninggal">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Kunjungan Terakhir</label>
                   <div class="col-sm-8">
-                    <input type="date" class="form-control" name="tgl_kunjungan_terakhir">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_kunjungan_terakhir">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Keluar</label>
                   <div class="col-sm-8">
-                    <input type="date" class="form-control" name="tgl_keluar">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_keluar">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1788,7 +1788,7 @@
         $('#tambah_form_art').click(function() {
           var a = document.getElementById('jumlah_form_art').value;
           a = parseInt(a) + 1;
-          $('#last_row_art').before('<tr id="art_'+a+'"> <td><input type="text" class="form-control" name="nama_panduan_orisinil_art_'+a+'"></td> <td> <input type="date" class="form-control" name="tanggal_art_'+a+'"> </td> <td> <select class="form-control" name="substitusi_art_'+a+'"> <option selected hidden></option> <option value="1">1. Toksisitas/efek samping</option> <option value="2">2. Hamil</option> <option value="3">3. Risiko hamil</option> <option value="4">4. TB baru</option> <option value="5">5. Ada obat baru</option> <option value="6">6. Stock obat habis</option> <option value="7">7. Alasan lain</option> </select> </td> <td> <select class="form-control" name="switch_art_'+a+'"> <option selected hidden></option> <option value="1">1. Toksisitas/efek samping</option> <option value="2">2. Hamil</option> <option value="3">3. Risiko hamil</option> <option value="4">4. TB baru</option> <option value="5">5. Ada obat baru</option> <option value="6">6. Stock obat habis</option> <option value="7">7. Alasan lain</option> <option value="8">8. Gagal pengobatan secara klinis</option> <option value="9">9. Gagal Imunologis</option> <option value="10">10. Gagal virologis</option> </select> </td> <td> <select class="form-control" name="stop_art_'+a+'"> <option selected hidden></option> <option value="1">1. Toksisitas/efek samping</option> <option value="2">2. Hamil</option> <option value="3">3. Gagal_pengobatan</option> <option value="4">4. Adherens buruk</option> <option value="5">5. Sakit/MRS</option> <option value="6">6. Stok obat habis</option> <option value="7">7. Kekurangan biaya</option> <option value="8">8. Keputusan pasien lainnya</option> <option value="9">9. Lain-lain</option> </select> </td> <td> <input type="text" class="form-control" name="restar_art_'+a+'"> </td> <td> <input type="text" class="form-control" name="alasan_art_'+a+'"> </td> <td> <input type="text" class="form-control" name="nama_panduan_baru_art_'+a+'"> </td> </tr>');
+          $('#last_row_art').before('<tr id="art_'+a+'"> <td><input type="text" class="form-control" name="nama_panduan_orisinil_art_'+a+'"></td> <td> <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_art_'+a+'"> </td> <td> <select class="form-control" name="substitusi_art_'+a+'"> <option selected hidden></option> <option value="1">1. Toksisitas/efek samping</option> <option value="2">2. Hamil</option> <option value="3">3. Risiko hamil</option> <option value="4">4. TB baru</option> <option value="5">5. Ada obat baru</option> <option value="6">6. Stock obat habis</option> <option value="7">7. Alasan lain</option> </select> </td> <td> <select class="form-control" name="switch_art_'+a+'"> <option value="0" selected hidden></option> <option value="1">1. Toksisitas/efek samping</option> <option value="2">2. Hamil</option> <option value="3">3. Risiko hamil</option> <option value="4">4. TB baru</option> <option value="5">5. Ada obat baru</option> <option value="6">6. Stock obat habis</option> <option value="7">7. Alasan lain</option> <option value="8">8. Gagal pengobatan secara klinis</option> <option value="9">9. Gagal Imunologis</option> <option value="10">10. Gagal virologis</option> </select> </td> <td> <select class="form-control" name="stop_art_'+a+'"> <option selected hidden></option> <option value="1">1. Toksisitas/efek samping</option> <option value="2">2. Hamil</option> <option value="3">3. Gagal_pengobatan</option> <option value="4">4. Adherens buruk</option> <option value="5">5. Sakit/MRS</option> <option value="6">6. Stok obat habis</option> <option value="7">7. Kekurangan biaya</option> <option value="8">8. Keputusan pasien lainnya</option> <option value="9">9. Lain-lain</option> </select> </td> <td> <input type="text" class="form-control" name="restar_art_'+a+'"> </td> <td> <input type="text" class="form-control" name="alasan_art_'+a+'"> </td> <td> <input type="text" class="form-control" name="nama_panduan_baru_art_'+a+'"> </td> </tr>');
           document.getElementById('jumlah_form_art').value = a;
         });
       });
