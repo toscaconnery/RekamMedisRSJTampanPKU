@@ -101,8 +101,8 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Jenis Kelamin</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" readonly="" name="jenis_kelamin" value="[Otomatis Terisi]">
-                    <input type="hidden" name="jenis_kelamin" value="[Otomatis terisi]" disabled="disabled" />
+                    <input type="text" class="form-control" readonly="" name="jenis_kelamin" value="{{Session::get('jenis_kelamin')}}">
+                    <input type="hidden" name="jenis_kelamin" value="{{Session::get('jenis_kelamin')}}" disabled="disabled" />
                   </div>
                 </div>
 
@@ -468,7 +468,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tanggal Lahir Pasangan</label>
                   <div class="col-lg-8">
-                    <input type="text" id="dp1" class="form-control" name="tanggal_lahir_pasangan">
+                    <input type="text" autocomplete="off" class="form-control sandbox-container" name="tanggal_lahir_pasangan">
                   </div>
                 </div>
 
@@ -499,7 +499,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tanggal Tes Terakhir Pasangan</label>
                   <div class="col-lg-2">
-                    <input type="text" id="dp2" class="form-control" name="tgl_tes_terakhir_pasangan">
+                    <input type="text" autocomplete="off" class="form-control sandbox-container" name="tgl_tes_terakhir_pasangan">
                   </div>
                 </div>
 
@@ -538,7 +538,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tgl Konseling Tes Pra HIV</label>
                   <div class="col-lg-8">
-                    <input type="text" id="dp3" class="form-control" name="tgl_konseling_pra_hiv">
+                    <input type="text" autocomplete="off" class="form-control sandbox-container" name="tgl_konseling_pra_hiv">
                   </div>
                 </div>
                 <div class="form-group">
@@ -909,7 +909,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tanggal Pemberian Informasi</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" id="dp4" name="tgl_pemberian_informasi">
+                    <input type="text" autocomplete="off" class="form-control sandbox-container" name="tgl_pemberian_informasi">
                   </div>
                 </div>
 
@@ -1082,7 +1082,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tgl Tes HIV</label>
                   <div class="col-lg-8">
-                    <input type="text" id="dp5" class="form-control" name="tgl_tes_hiv">
+                    <input type="text" autocomplete="off" class="form-control sandbox-container" name="tgl_tes_hiv">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1203,7 +1203,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tanggal Masuk PDP</label>
                   <div class="col-lg-8">
-                    <input type="date" id="dp6" class="form-control" name="tgl_masuk_pdp">
+                    <input type="text" autocomplete="off" class="form-control sandbox-container" name="tgl_masuk_pdp">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1269,7 +1269,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tgl Konseling Pasca Tes</label>
                   <div class="col-lg-8">
-                    <input type="date" id="dp7" class="form-control" name="tgl_konseling_pasca_tes">
+                    <input type="text" autocomplete="off" class="form-control sandbox-container" name="tgl_konseling_pasca_tes">
                   </div>
                 </div>
                 <div class="form-group">

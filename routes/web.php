@@ -113,6 +113,8 @@ Route::post('/rj_identifikasi_stresor_edit', 'RJIdentifikasiStresorController@po
 Route::get('/rj_tes_konseling_hiv', 'RJTesKonselingHIVController@get_tes_konseling_hiv');
 Route::post('/rj_tes_konseling_hiv', 'RJTesKonselingHIVController@post_tes_konseling_hiv');
 Route::get('/rj_tes_konseling_hiv_read', 'RJTesKonselingHIVController@get_tes_konseling_hiv_read');
+Route::get('/rj_tes_konseling_hiv_edit', 'RJTesKonselingHIVController@get_tes_konseling_hiv_edit');
+Route::post('/rj_tes_konseling_hiv_edit', 'RJTesKonselingHIVController@post_tes_konseling_hiv_edit');
 
 Route::get('/rj_izin_vct_hiv', 'RJIzinVCTHIVController@get_rj_izin_vct_hiv');
 Route::post('/rj_izin_vct_hiv', 'RJIzinVCTHIVController@post_rj_izin_vct_hiv');
