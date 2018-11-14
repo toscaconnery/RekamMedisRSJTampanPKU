@@ -56,7 +56,6 @@
       <div class="col-lg-12">
 
         <form class="form-horizontal form-validate" method="get">
-          {{ csrf_field() }}
           <section class="panel">
             <header class="panel-heading">Penjelasan Dokumen
             </header>

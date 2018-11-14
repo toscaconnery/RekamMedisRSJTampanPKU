@@ -55,7 +55,7 @@
     <div class="row">
       <div class="col-lg-12">
 
-        <form class="form-horizontal form-validate" method="post" id="rj_izin_vct_hiv">
+        <form class="form-horizontal form-validate" method="post" action="rj_izin_vct_hiv_edit">
           {{ csrf_field() }}
           <section class="panel">
             <header class="panel-heading">Penjelasan Dokumen
@@ -156,21 +156,20 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Nama Klien</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" disabled value="{{Session::get('nama')}}">
-                  <input type="hidden" name="nama_klien" value="{{Session::get('nama')}}">
+                  <input type="text" class="form-control" disabled value="{{$nama_klien}}">
+                  {{-- <input type="hidden" name="nama_klien" value="Nama Klien"> --}}
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Konselor</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="konselor">
+                  <input type="text" class="form-control" name="konselor" value="{{$konselor}}">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Tanggal</label>
                 <div class="col-sm-3">
-                  <input type="text" class="form-control sandbox-container" value="{{Session::get('tanggal_lahir')}}" disabled>
-                  <input type="hidden" name="tanggal" value="{{Session::get('tanggal_lahir')}}">
+                  <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal" disabled value="{{$tanggal}}">
                 </div>
               </div>
             </div>
@@ -183,17 +182,17 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Nama Pemberi Izin</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" name="pemberi_izin">
+                  <input type="text" class="form-control" name="pemberi_izin" value="{{$pemberi_izin}}">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Hubungan Dengan Klien</label>
                 <div class="col-lg-2">
                   <select class="form-control input-sm m-bot15" name="hubungan">
-                    <option value="1">-</option>
-                    <option value="2">Pengasuh</option>
-                    <option value="3">Teman</option>
-                    <option value="4">Saudara Terdekat</option>
+                    <option value="1" {{$hubungan == 1 ? 'selected' : ''}}>-</option>
+                    <option value="2" {{$hubungan == 2 ? 'selected' : ''}}>Pengasuh</option>
+                    <option value="3" {{$hubungan == 3 ? 'selected' : ''}}>Teman</option>
+                    <option value="4" {{$hubungan == 4 ? 'selected' : ''}}>Saudara Terdekat</option>
                   </select>
                 </div>
               </div>

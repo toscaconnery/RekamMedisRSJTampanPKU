@@ -16,7 +16,7 @@ class CreatePasienTable extends Migration
         Schema::create('pasien', function (Blueprint $table) {
             $table->increments('no_rm');
             $table->string('nama_pasien');
-            $table->date('tanggal_lahir');
+            $table->string('tanggal_lahir',10);
             $table->string('jenis_kelamin', 1);
             $table->timestamps();
         });

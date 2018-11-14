@@ -40,7 +40,7 @@ class PasienController extends Controller
 
         $request->session()->put('id_pasien', $pasien->no_rm);
         // $request->session()->put('no_rm', $pasien->no_rm);
-        $request->session()->put('nama', $pasien->nama);
+        $request->session()->put('nama', $pasien->nama_pasien);
         $request->session()->put('jenis_kelamin', $pasien->jenis_kelamin);
         $request->session()->put('tanggal_lahir', $pasien->tanggal_lahir);
 

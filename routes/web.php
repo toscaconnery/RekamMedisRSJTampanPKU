@@ -119,6 +119,8 @@ Route::post('/rj_tes_konseling_hiv_edit', 'RJTesKonselingHIVController@post_tes_
 Route::get('/rj_izin_vct_hiv', 'RJIzinVCTHIVController@get_rj_izin_vct_hiv');
 Route::post('/rj_izin_vct_hiv', 'RJIzinVCTHIVController@post_rj_izin_vct_hiv');
 Route::get('/rj_izin_vct_hiv_read', 'RJIzinVCTHIVController@get_rj_izin_vct_hiv_read');
+Route::get('/rj_izin_vct_hiv_edit', 'RJIzinVCTHIVController@get_rj_izin_vct_hiv_edit');
+Route::post('/rj_izin_vct_hiv_edit', 'RJIzinVCTHIVController@post_rj_izin_vct_hiv_edit');
 
 Route::get('/rj_hiv_anti_retroval', 'RJHIVAntiRetrovalController@get_rj_hiv_anti_retroval');
 Route::post('/rj_hiv_anti_retroval', 'RJHIVAntiRetrovalController@post_rj_hiv_anti_retroval');

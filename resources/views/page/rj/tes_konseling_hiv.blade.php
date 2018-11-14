@@ -468,7 +468,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tanggal Lahir Pasangan</label>
                   <div class="col-lg-8">
-                    <input type="text" autocomplete="off" class="form-control sandbox-container" name="tanggal_lahir_pasangan">
+                    <input type="text" onkeydown="return false" autocomplete="off" class="form-control sandbox-container" name="tanggal_lahir_pasangan">
                   </div>
                 </div>
 
