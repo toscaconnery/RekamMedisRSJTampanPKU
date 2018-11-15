@@ -55,7 +55,8 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-validate form-horizontal" id="register_form">
+          <form class="form-validate form-horizontal" method="post" action="rj_resume_edit" id="register_form">
+            {{csrf_field()}}
             <section class="panel">
               <header class="panel-heading">
                 Resume Rawat Jalan
@@ -83,12 +84,12 @@
                     @foreach($pasien as $p)
                       <tr>
                         <td>{{$idx}}.</td>
-                        <td><input type="text" disabled autocomplete="off" onkeydown="return false" class="form-control required sandbox-container" name="tanggal_{{$p['id_data']}}" value="{{$p['tanggal']}}"></td>
-                        <td><input type="text" disabled class="form-control required" name="diagnosis_prosedur_{{$p['id_data']}}" value="{{$p['diagnosis_prosedur']}}"></td>
-                        <td><input type="text" disabled class="form-control required" name="kode_icd_{{$p['id_data']}}" value="{{$p['kode_icd']}}"></td>
-                        <td><input type="text" disabled class="form-control required" name="obat_{{$p['id_data']}}" value="{{$p['obat']}}"></td>
-                        <td><input type="text" disabled class="form-control required" name="riwayat_{{$p['id_data']}}" value="{{$p['riwayat']}}"></td>
-                        <td><input type="text" disabled class="form-control required" name="nama_petugas_{{$p['id_data']}}" value="{{$p['nama_petugas']}}"></td>
+                        <td><input type="text" autocomplete="off" onkeydown="return false" class="form-control required sandbox-container" name="tanggal_{{$p['id_data']}}" value="{{$p['tanggal']}}"></td>
+                        <td><input type="text" class="form-control required" name="diagnosis_prosedur_{{$p['id_data']}}" value="{{$p['diagnosis_prosedur']}}"></td>
+                        <td><input type="text" class="form-control required" name="kode_icd_{{$p['id_data']}}" value="{{$p['kode_icd']}}"></td>
+                        <td><input type="text" class="form-control required" name="obat_{{$p['id_data']}}" value="{{$p['obat']}}"></td>
+                        <td><input type="text" class="form-control required" name="riwayat_{{$p['id_data']}}" value="{{$p['riwayat']}}"></td>
+                        <td><input type="text" class="form-control required" name="nama_petugas_{{$p['id_data']}}" value="{{$p['nama_petugas']}}"></td>
                         <td>
                         </td>
                       </tr>
@@ -97,10 +98,20 @@
                       @endphp
                     @endforeach
                     <input type="hidden" id="idx" name="idx" value="{{$idx - 1}}">
+                    <tr id="last_row_resume">
+                      <td colspan="9">
+                        <div class="btn-group">
+                          <button class="btn btn-primary" type="button" id="tambah_form_resume_new"><i class="icon_plus_alt2"></i> Tambah</button>
+                        </div>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
             </section>
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </form>
         </div>
       </div>
@@ -108,5 +119,32 @@
   </section>
 
   @include('layouts.tailscript')
+
+  {{-- menambah row inputan resume--}}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#tambah_form_resume_new').click(function() {
+        var a = document.getElementById('jumlah_form_resume_new').value;
+        a = parseInt(a) + 1;
+        var b = document.getElementById('idx').value;
+        b = parseInt(b) + 1;
+        document.getElementById('idx').value = b;
+        $('#last_row_resume').before('<tr id="form_resume_new_'+a+'"><td>'+b+'.</td><td><input type="text" autocomplete="off" onkeydown="return false" class="form-control required sandbox-container" name="tanggal_new_'+a+'"></td><td><input type="text" class="form-control required" name="diagnosis_prosedur_new_'+a+'"></td><td><input type="text" class="form-control required" name="kode_icd_new_'+a+'"></td><td><input type="text" class="form-control required" name="obat_new_'+a+'"></td><td><input type="text" class="form-control required" name="riwayat_new_'+a+'"></td><td><input type="text" class="form-control required" name="nama_petugas_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_resume" type="button" id="tombol_hapus_resume_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+        document.getElementById('jumlah_form_resume_new').value = a;
+      });
+    });
+  </script>
+
+  {{-- menghapus row resume--}}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(document).on('click', '.tombol_hapus_resume', function() {
+        var x = $(this).attr('id');
+        var nomor = x.substring(20)
+        $('#form_resume_'+nomor).remove();
+      });
+    });
+  </script>
+
 </body>
 <html>

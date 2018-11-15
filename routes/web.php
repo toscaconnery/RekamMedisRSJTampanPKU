@@ -138,7 +138,9 @@ Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter_read', 'RJAsesmenAwalTumbuhK
 
 Route::get('/rj_resume', 'RJResumeController@get_rj_resume');
 Route::post('/rj_resume', 'RJResumeController@post_rj_resume');
-Route::get('/rj_resume_read', 'RJResumeController@get_rj_resume_read'); // new add
+Route::get('/rj_resume_read', 'RJResumeController@get_rj_resume_read');
+Route::get('/rj_resume_edit', 'RJResumeController@get_rj_resume_edit');
+Route::post('/rj_resume_edit', 'RJResumeController@post_rj_resume_edit');
 
 Route::get('/igd_triase', 'IGDTriaseController@get_igd_triase');
 Route::post('/igd_triase', 'IGDTriaseController@post_igd_triase');

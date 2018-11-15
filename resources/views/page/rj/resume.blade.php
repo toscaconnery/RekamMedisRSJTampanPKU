@@ -79,7 +79,7 @@
                   <tbody>
                     <tr>
                       <td>1.</td>
-                      <td><input type="date" class="form-control required" name="tanggal_1"></td>
+                      <td><input type="text" autocomplete="off" onkeydown="return false" class="form-control required sandbox-container" name="tanggal_1"></td>
                       <td><input type="text" class="form-control required" name="diagnosis_prosedur_1"></td>
                       <td><input type="text" class="form-control required" name="kode_icd_1"></td>
                       <td><input type="text" class="form-control required" name="obat_1"></td>
@@ -116,7 +116,7 @@
       $('#tambah_form_resume').click(function() {
         var a = document.getElementById('jumlah_form_resume').value;
         a = parseInt(a) + 1;
-        $('#last_row_resume').before('<tr id="form_resume_'+a+'"><td>'+a+'</td><td><input type="date" class="form-control required" name="tanggal_'+a+'"></td><td><input type="text" class="form-control required" name="diagnosis_prosedur_'+a+'"></td><td><input type="text" class="form-control required" name="kode_icd_'+a+'"></td><td><input type="text" class="form-control required" name="obat_'+a+'"></td><td><input type="text" class="form-control required" name="riwayat_'+a+'"></td><td><input type="text" class="form-control required" name="nama_petugas_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_resume" type="button" id="tombol_hapus_resume_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+        $('#last_row_resume').before('<tr id="form_resume_'+a+'"><td>'+a+'</td><td><input type="text" autocomplete="off" onkeydown="return false" class="form-control required sandbox-container" name="tanggal_'+a+'"></td><td><input type="text" class="form-control required" name="diagnosis_prosedur_'+a+'"></td><td><input type="text" class="form-control required" name="kode_icd_'+a+'"></td><td><input type="text" class="form-control required" name="obat_'+a+'"></td><td><input type="text" class="form-control required" name="riwayat_'+a+'"></td><td><input type="text" class="form-control required" name="nama_petugas_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_resume" type="button" id="tombol_hapus_resume_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
         document.getElementById('jumlah_form_resume').value = a;
       });
     });
