@@ -55,7 +55,7 @@
 
     <div class="row">
       <div class="col-lg-12">
-        <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_resume_medis">
+        <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_resume_medis_edit">
         {{ csrf_field() }}
         <section class="panel">
           <header class="panel-heading">
@@ -66,25 +66,25 @@
             <div class="form-group">
               <label class="col-sm-2 control-label">Tanggal Masuk RS</label>
               <div class="col-sm-2">
-                <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_masuk">
+                <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_masuk" value="{{$tanggal_masuk}}">
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Tanggal Keluar RS</label>
               <div class="col-sm-2">
-                <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_keluar">
+                <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_keluar"  value="{{$tanggal_keluar}}">
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Ruang Rawat Terakhir</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="ruang_rawat_terakhir">
+                <input type="text" class="form-control" name="ruang_rawat_terakhir"   value="{{$ruang_rawat_terakhir}}">
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">DPJP</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="dpjp">
+                <input type="text" class="form-control" name="dpjp"  value="{{$dpjp}}" >
               </div>
             </div>
 
@@ -100,31 +100,31 @@
             <div class="form-group">
               <label class="col-sm-2 control-label">Alergi</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="alergi">
+                <input type="text" class="form-control" name="alergi"  value="{{$alergi}}">
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Diagnosa Masuk</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="diagnosa_masuk">
+                <input type="text" class="form-control" name="diagnosa_masuk"  value="{{$diagnosa_masuk}}">
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Indikasi Dirawat/Alasan dirawat</label>
               <div class="col-sm-8">
-                <textarea class="form-control" rows="2" style="resize: none;" name="alasan_dirawat"></textarea>
+                <textarea class="form-control" rows="2" style="resize: none;" name="alasan_dirawat" >{{$alasan_dirawat}}</textarea>
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Hasil Pemeriksaan Penunjang</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="hasil_pemeriksaan_penunjang">
+                <input type="text" class="form-control" name="hasil_pemeriksaan_penunjang"  value="{{$hasil_pemeriksaan_penunjang}}">
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Terapi yang diberikan saat di RS</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="terapi">
+                <input type="text" class="form-control" name="terapi"  value="{{$terapi}}" >
               </div>
             </div>
 
@@ -150,85 +150,85 @@
                   <td style="padding-right: 0mm;">
                     <label class="col-sm-1 control-label" style="padding-right: 0mm; padding-left: 0mm; width: 3em;">Axis 1</label>
                     <div class="col-sm-11" style="padding-right: 0mm;">
-                      <input type="text" class="form-control" name="diagnosa_psikiatri_1">
+                      <input type="text" class="form-control" name="diagnosa_psikiatri_1"  value="{{$diagnosa_psikiatri_1}}" >
                     </div>
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="kode_psikiatri_1">
+                    <input type="text" class="form-control" name="kode_psikiatri_1"  value="{{$kode_psikiatri_1}}" >
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="diagnosa_non_psikiatri_1">
+                    <input type="text" class="form-control" name="diagnosa_non_psikiatri_1"  value="{{$diagnosa_non_psikiatri_1}}" >
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="kode_non_psikiatri_1">
+                    <input type="text" class="form-control" name="kode_non_psikiatri_1"  value="{{$kode_non_psikiatri_1}}" >
                   </td>
                 </tr>
                 <tr>
                   <td style="padding-right: 0mm;">
                     <label class="col-sm-1 control-label" style="padding-right: 0mm; padding-left: 0mm; width: 3em;">Axis 2</label>
                     <div class="col-sm-11" style="padding-right: 0mm;">
-                      <input type="text" class="form-control" name="diagnosa_psikiatri_2">
+                      <input type="text" class="form-control" name="diagnosa_psikiatri_2"  value="{{$diagnosa_psikiatri_2}}">
                     </div>
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="kode_psikiatri_2">
+                    <input type="text" class="form-control" name="kode_psikiatri_2"  value="{{$kode_psikiatri_2}}">
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="diagnosa_non_psikiatri_2">
+                    <input type="text" class="form-control" name="diagnosa_non_psikiatri_2"  value="{{$diagnosa_non_psikiatri_2}}">
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="kode_non_psikiatri_2">
+                    <input type="text" class="form-control" name="kode_non_psikiatri_2"  value="{{$kode_non_psikiatri_2}}">
                   </td>
                 </tr>
                 <tr>
                   <td style="padding-right: 0mm;">
                     <label class="col-sm-1 control-label" style="padding-right: 0mm; padding-left: 0mm; width: 3em;">Axis 3</label>
                     <div class="col-sm-11" style="padding-right: 0mm;">
-                      <input type="text" class="form-control" name="diagnosa_psikiatri_3">
+                      <input type="text" class="form-control" name="diagnosa_psikiatri_3"  value="{{$diagnosa_psikiatri_3}}">
                     </div>
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="kode_psikiatri_3">
+                    <input type="text" class="form-control" name="kode_psikiatri_3"  value="{{$kode_psikiatri_3}}">
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="diagnosa_non_psikiatri_3">
+                    <input type="text" class="form-control" name="diagnosa_non_psikiatri_3"  value="{{$diagnosa_non_psikiatri_3}}">
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="kode_non_psikiatri_3">
+                    <input type="text" class="form-control" name="kode_non_psikiatri_3"  value="{{$kode_non_psikiatri_3}}">
                   </td>
                 </tr>
                 <tr>
                   <td style="padding-right: 0mm;">
                     <label class="col-sm-1 control-label" style="padding-right: 0mm; padding-left: 0mm; width: 3em;">Axis 4</label>
                     <div class="col-sm-11" style="padding-right: 0mm;">
-                      <input type="text" class="form-control" name="diagnosa_psikiatri_4">
+                      <input type="text" class="form-control" name="diagnosa_psikiatri_4"  value="{{$diagnosa_psikiatri_4}}">
                     </div>
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="kode_psikiatri_4">
+                    <input type="text" class="form-control" name="kode_psikiatri_4"  value="{{$kode_psikiatri_4}}">
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="diagnosa_non_psikiatri_4">
+                    <input type="text" class="form-control" name="diagnosa_non_psikiatri_4"  value="{{$diagnosa_non_psikiatri_4}}">
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="kode_non_psikiatri_4">
+                    <input type="text" class="form-control" name="kode_non_psikiatri_4"  value="{{$kode_non_psikiatri_4}}">
                   </td>
                 </tr>
                 <tr>
                   <td style="padding-right: 0mm;">
                     <label class="col-sm-1 control-label" style="padding-right: 0mm; padding-left: 0mm; width: 3em;">Axis 5</label>
                     <div class="col-sm-11" style="padding-right: 0mm;">
-                      <input type="text" class="form-control" name="diagnosa_psikiatri_5">
+                      <input type="text" class="form-control" name="diagnosa_psikiatri_5"  value="{{$diagnosa_psikiatri_5}}">
                     </div>
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="kode_psikiatri_5">
+                    <input type="text" class="form-control" name="kode_psikiatri_5"  value="{{$kode_psikiatri_5}}">
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="diagnosa_non_psikiatri_5">
+                    <input type="text" class="form-control" name="diagnosa_non_psikiatri_5"  value="{{$diagnosa_non_psikiatri_5}}">
                   </td>
                   <td>
-                    <input type="text" class="form-control" name="kode_non_psikiatri_5">
+                    <input type="text" class="form-control" name="kode_non_psikiatri_5"  value="{{$kode_non_psikiatri_5}}">
                   </td>
                 </tr>
               </tbody>
@@ -241,7 +241,6 @@
             Tindakan Kedokteran
           </header>
           <div class="panel-body">
-            <input type="hidden" name="jumlah_form_tindakan" id="jumlah_form_tindakan" value="1">
             <table class="table table-bordered">
               <thead>
                 <tr>
@@ -252,22 +251,31 @@
                 </tr>
               </thead>
               <tbody>
-                <tr id="form_tindakan_1">
-                  <td>
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_1">
-                  </td>
-                  <td>
-                    <input type="text" class="form-control" name="nama_tindakan_1">
-                  </td>
-                  <td>
-                    <input type="text" class="form-control" name="kode_icd_1">
-                  </td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn btn-default tombol_hapus_tindakan" type="button" id="tombol_hapus_tindakan_1"><i class="icon_close_alt2"></i></button>
-                    </div>
-                  </td>
-                </tr>
+                @php
+                  $idx_tindakan = 0;
+                @endphp
+                @foreach($tindakan_kedokteran as $key => $value)
+                  @php
+                    $idx_tindakan += 1;
+                  @endphp
+                  <tr id="form_tindakan_{{$idx_tindakan}}">
+                    <td>
+                      <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_{{$idx_tindakan}}" value="{{$value[0]}}">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control" name="nama_tindakan_{{$idx_tindakan}}" value="{{$value[1]}}">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control" name="kode_icd_{{$idx_tindakan}}" value="{{$value[2]}}">
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn btn-default tombol_hapus_tindakan" type="button" id="tombol_hapus_tindakan_{{$idx_tindakan}}"><i class="icon_close_alt2"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                @endforeach
+                <input type="hidden" name="jumlah_form_tindakan" id="jumlah_form_tindakan" value="{{$idx_tindakan}}">
                 <tr id="last_row_tindakan">
                   <td colspan="9">
                     <div class="btn-group">
@@ -288,7 +296,7 @@
 
             <div class="form-group">
               <div class="col-lg-12">
-                <textarea class="form-control" style="resize: none;" name="penyebab_luar"></textarea>
+                <textarea class="form-control" style="resize: none;" name="penyebab_luar" >{{$penyebab_luar}}></textarea>
               </div>
             </div>
             <div class="form-group">
@@ -296,31 +304,31 @@
               <div class="col-lg-3">
                 <div class="radio">
                   <label>
-                    <input type="radio" name="keadaan_keluar" value="Sembuh">
+                    <input type="radio" name="keadaan_keluar" {{$keadaan_keluar == 'Sembuh' ? 'checked' : ''}} value="Sembuh">
                     Sembuh
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="keadaan_keluar" value="Membaik">
+                    <input type="radio" name="keadaan_keluar" {{$keadaan_keluar == 'Membaik' ? 'checked' : ''}} value="Membaik">
                     Membaik
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="keadaan_keluar" value="Perbaikan">
+                    <input type="radio" name="keadaan_keluar" {{$keadaan_keluar == 'Perbaikan' ? 'checked' : ''}} value="Perbaikan">
                     Perbaikan
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="keadaan_keluar" value="Mati < 48 jam">
+                    <input type="radio" name="keadaan_keluar" {{$keadaan_keluar == 'Mati < 48 jam' ? 'checked' : ''}} value="Mati < 48 jam">
                     Mati < 48 jam
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="keadaan_keluar" value="Mati > 48 jam">
+                    <input type="radio" name="keadaan_keluar" {{$keadaan_keluar == 'Mati > 48 jam' ? 'checked' : ''}} value="Mati > 48 jam">
                     Mati > 48 jam
                   </label>
                 </div>
@@ -329,33 +337,33 @@
               <div class="col-lg-4">
                 <div class="radio">
                   <label>
-                    <input type="radio" name="cara_pulang" value="Diijinkan pulang">
+                    <input type="radio" name="cara_pulang" {{$cara_pulang == 'Diijinkan pulang' ? 'checked' : ''}} value="Diijinkan pulang">
                     Diijinkan pulang
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="cara_pulang" value="Pulang paksa">
+                    <input type="radio" name="cara_pulang" {{$cara_pulang == 'Pulang paksa' ? 'checked' : ''}} value="Pulang paksa">
                     Pulang paksa
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="cara_pulang" value="Rujuk ke">
+                    <input type="radio" name="cara_pulang" {{$cara_pulang == 'Rujuk ke' ? 'checked' : ''}} value="Rujuk ke">
                     Rujuk ke
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="cara_pulang" value="Pindah ke RS lain">
+                    <input type="radio" name="cara_pulang" {{$cara_pulang == 'Pindah ke RS lain' ? 'checked' : ''}} value="Pindah ke RS lain">
                     Pindah ke RS lain
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="cara_pulang" value="Lainnya">
+                    <input type="radio" name="cara_pulang" {{$cara_pulang == 'Lainnya' ? 'checked' : ''}} value="Lainnya">
                     Lainnya
-                    <input type="text" class="form-control" placeholder="sebutkan" name="cara_pulang_lainnya">
+                    <input type="text" class="form-control" placeholder="sebutkan" name="cara_pulang_lainnya" value="{{$cara_pulang_lainnya}}">
                   </label>
                 </div>
               </div>
@@ -364,33 +372,33 @@
             <div class="form-group">
               <label class="col-sm-2 control-label">Kondisi</label>
               <div class="col-sm-7" style="width: 58em;">
-                <input type="text" class="form-control" name="kondisi_pulang">
+                <input type="text" class="form-control" name="kondisi_pulang"  value="{{$kondisi_pulang}}">
               </div>
               <label class="col-sm-1 control-label" style="padding-left: 0mm; padding-right: 0mm; width: 5em;">Jam Keluar</label>
               <div class="col-sm-1" style="padding-right: 0mm;">
-                <input type="time" class="form-control" style="width: 10em;" name="jam_keluar">
+                <input type="time" class="form-control" style="width: 10em;" name="jam_keluar"   value="{{$jam_keluar}}">
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">TD</label>
               <div class="col-sm-2" style="width: 12em; padding-right: 2em;">
-                <input type="text" class="form-control" name="td">
+                <input type="text" class="form-control" name="td"   value="{{$td}}">
               </div>
               <label class="col-sm-1 control-label" style="width: 4em;">HR</label>
               <div class="col-sm-2" style="width: 12em; padding-right: 2em;">
-                <input type="text" class="form-control" name="hr">
+                <input type="text" class="form-control" name="hr"  value="{{$hr}}">
               </div>
               <label class="col-sm-1 control-label" style="width: 4em;">RR</label>
               <div class="col-sm-2" style="width: 12em; padding-right: 2em;">
-                <input type="text" class="form-control" name="rr">
+                <input type="text" class="form-control" name="rr"  value="{{$rr}}">
               </div>
               <label class="col-sm-1 control-label" style="width: 4em;">T</label>
               <div class="col-sm-2" style="width: 12em; padding-right: 2em;">
-                <input type="text" class="form-control" name="t">
+                <input type="text" class="form-control" name="t"  value="{{$t}}">
               </div>
               <label class="col-sm-1 control-label" style="width: 4em;">BB</label>
               <div class="col-sm-2" style="width: 12em; padding-right: 2em;">
-                <input type="text" class="form-control" name="bb">
+                <input type="text" class="form-control" name="bb"  value="{{$bb}}">
               </div>
             </div>
           </div>
@@ -401,7 +409,6 @@
             Obat yang dibawa pulang
           </header>
           <div class="panel-body">
-            <input type="hidden" name="jumlah_form_obat" id="jumlah_form_obat" value="1">
             <table class="table table-bordered">
               <thead>
                 <tr>
@@ -414,26 +421,35 @@
                 </tr>
               </thead>
               <tbody>
-                <tr id="form_obat_1">
-                  <td></td>
-                  <td>
-                    <input type="text" class="form-control" name="nama_obat_1">
-                  </td>
-                  <td>
-                    <input type="text" class="form-control" name="jumlah_1">
-                  </td>
-                  <td>
-                    <input type="text" class="form-control" name="aturan_pakai_1">
-                  </td>
-                  <td>
-                    <input type="text" class="form-control" name="keterangan_1">
-                  </td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn btn-default tombol_hapus_obat" type="button" id="tombol_hapus_obat_1"><i class="icon_close_alt2"></i></button>
-                    </div>
-                  </td>
-                </tr>
+                @php
+                  $idx_obat = 0;
+                @endphp
+                @foreach($obat_dibawa_pulang as $key => $value)
+                  @php
+                    $idx_obat += 1;
+                  @endphp
+                  <tr id="form_obat_{{$idx_obat}}">
+                    <td></td>
+                    <td>
+                      <input type="text" class="form-control" required name="nama_obat_{{$idx_obat}}" value="{{$value[0]}}">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control" required name="jumlah_{{$idx_obat}}" value="{{$value[1]}}">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control" required name="aturan_pakai_{{$idx_obat}}" value="{{$value[2]}}">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control" required name="keterangan_{{$idx_obat}}" value="{{$value[3]}}">
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn btn-default tombol_hapus_obat" type="button" id="tombol_hapus_obat_{{$idx_obat}}"><i class="icon_close_alt2"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                @endforeach
+                <input type="hidden" name="jumlah_form_obat" id="jumlah_form_obat" value="{{$idx_obat}}">
                 <tr id="last_row_obat">
                   <td colspan="9">
                     <div class="btn-group">
@@ -455,7 +471,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label">Penyakit</label>
               <div class="col-sm-3">
-                <input type="text" class="form-control" name="penyakit">
+                <input type="text" class="form-control" name="penyakit"  value="{{$penyakit}}">
               </div>
             </div>
             <div class="form-group">
@@ -463,13 +479,13 @@
               <div class="col-lg-10">
                 <div class="radio">
                   <label>
-                    <input type="radio" name="diet" value="Diet Khusus">
+                    <input type="radio" name="diet" {{$diet == 'Diet Khusus' ? 'checked' : ''}} value="Diet Khusus">
                     Diet Khusus
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="diet" value="Makan Biasa">
+                    <input type="radio" name="diet" {{$diet == 'Makan Biasa' ? 'checked' : ''}} value="Makan Biasa">
                     Makan Biasa
                   </label>
                 </div>
@@ -478,7 +494,7 @@
             <div class="form-group">
               <label class="col-sm-2 control-label">Sebutkan</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="keterangan_diet" placeholder="Jelaskan diet yang dilakukan..">
+                <input type="text" class="form-control" name="keterangan_diet" placeholder="Jelaskan diet yang dilakukan.."   value="{{$keterangan_diet}}">
               </div>
             </div>
             <h3>Instruksi</h3>
@@ -486,13 +502,13 @@
             <div class="form-group">
               <label class="col-sm-2 control-label">Perlu Kontrol/berobat jalan di</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" name="tempat_kontrol">
+                <input type="text" class="form-control" name="tempat_kontrol"  value="{{$tempat_kontrol}}">
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Tanggal</label>
               <div class="col-sm-2">
-                <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_kontrol">
+                <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_kontrol"  value="{{$tanggal_kontrol}}">
               </div>
             </div>
             <h3>Hasil pemeriksaan penunjang yang tertunda</h3>
@@ -500,13 +516,13 @@
             <div class="form-group">
               <label class="col-sm-2 control-label"></label>
               <div class="col-sm-8">
-                <textarea class="form-control" rows="5" style="resize: none;" placeholder="Jelaskan hasil pemeriksaan penunjang yang tertunda.." name="hasil_tertunda"></textarea>
+                <textarea class="form-control" rows="5" style="resize: none;" placeholder="Jelaskan hasil pemeriksaan penunjang yang tertunda.." name="hasil_tertunda"  >{{$hasil_tertunda}}</textarea>
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Diambil Tanggal</label>
               <div class="col-sm-2">
-                <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pengambilan">
+                <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pengambilan"   value="{{$tanggal_pengambilan}}">
               </div>
             </div>
             

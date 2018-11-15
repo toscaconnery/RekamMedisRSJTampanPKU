@@ -45,6 +45,7 @@ class CreateRiResumeMedisTable extends Migration
             $table->string('kode_psikiatri_5')->nullable();
             $table->string('diagnosa_non_psikiatri_5')->nullable();
             $table->string('kode_non_psikiatri_5')->nullable();
+            $table->string('tindakan_kedokteran', 3000)->nullable();
             $table->string('penyebab_luar')->nullable();
             $table->string('keadaan_keluar')->nullable();
             $table->string('cara_pulang',17)->nullable();
@@ -56,6 +57,7 @@ class CreateRiResumeMedisTable extends Migration
             $table->string('rr')->nullable();
             $table->string('t')->nullable();
             $table->string('bb')->nullable();
+            $table->string('obat_dibawa_pulang',4000);
             $table->string('penyakit')->nullable();
             $table->string('diet')->nullable();
             $table->string('keterangan_diet')->nullable();

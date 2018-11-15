@@ -15,7 +15,7 @@ class PenundaanPelayananController extends Controller
 
     public function get_penundaan_pelayanan()
     {
-    	return view('page.penundaan_pelayanan');
+    	return view('page.penundaan_pelayanan', $this->data);
     }
 
     public function post_penundaan_pelayanan(Request $request)

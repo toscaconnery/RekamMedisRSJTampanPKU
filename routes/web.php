@@ -183,7 +183,9 @@ Route::post('/igd_asesmen_awal_rawat_darurat_dokter_edit', 'IGDAsesmenAwalRawatD
 
 Route::get('/ri_resume_medis', 'RIResumeMedisController@get_ri_resume_medis');
 Route::post('/ri_resume_medis', 'RIResumeMedisController@post_ri_resume_medis');
-Route::get('/ri_resume_medis_read', 'RIResumeMedisController@get_ri_resume_medis_read'); // new add
+Route::get('/ri_resume_medis_read', 'RIResumeMedisController@get_ri_resume_medis_read');
+Route::get('/ri_resume_medis_edit', 'RIResumeMedisController@get_ri_resume_medis_edit');
+Route::post('/ri_resume_medis_edit', 'RIResumeMedisController@post_ri_resume_medis_edit');
 
 Route::get('/ri_dpjp_case', 'RIDPJPCaseController@get_ri_dpjp_case');
 Route::post('/ri_dpjp_case', 'RIDPJPCaseController@post_ri_dpjp_case');
