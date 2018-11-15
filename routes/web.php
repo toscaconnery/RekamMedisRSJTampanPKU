@@ -65,7 +65,9 @@ Route::get('/daftar_dokumen', 'DocumentController@index');
 
 Route::get('/penundaan_pelayanan', 'PenundaanPelayananController@get_penundaan_pelayanan');
 Route::post('/penundaan_pelayanan', 'PenundaanPelayananController@post_penundaan_pelayanan');
-Route::get('/penundaan_pelayanan_read', 'PenundaanPelayananController@get_penundaan_pelayanan_read'); // new add
+Route::get('/penundaan_pelayanan_read', 'PenundaanPelayananController@get_penundaan_pelayanan_read');
+Route::get('/penundaan_pelayanan_edit', 'PenundaanPelayananController@get_penundaan_pelayanan_edit');
+Route::post('/penundaan_pelayanan_edit', 'PenundaanPelayananController@post_penundaan_pelayanan_edit');
 
 Route::get('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@get_rj_asesmen_awal_perawat');
 Route::post('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_perawat');

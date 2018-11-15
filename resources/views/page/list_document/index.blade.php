@@ -51,7 +51,7 @@
             <div class="header-top">
                 <header class="mainheader">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light RWDpagescrollfix">
-                        <h1><a class="navbar-brand" href="index.html"><i class="fab fa-magento"></i> RSJ TAMPAN</a></h1>
+                        <h1><a class="navbar-brand" href="{{url('')}}/"><i class="fab fa-magento"></i> RSJ TAMPAN</a></h1>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-toggle" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>

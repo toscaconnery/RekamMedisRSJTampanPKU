@@ -64,7 +64,7 @@ class CreateListDocumentTable extends Migration
             $table->boolean('ri_transfer_eksternal')->default(False);
             $table->boolean('ri_pemberian_informasi')->default(False);
             $table->boolean('ri_pemeriksaan_psikologis')->default(False);
-            $table->boolean('ri_serah_terima')->default(False);            
+            $table->boolean('ri_serah_terima')->default(False);
             $table->timestamps();
         });
     }

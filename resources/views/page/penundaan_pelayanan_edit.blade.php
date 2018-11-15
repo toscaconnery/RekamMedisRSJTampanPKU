@@ -55,7 +55,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal " method="post" action="penundaan_pelayanan">
+          <form class="form-horizontal " method="post" action="penundaan_pelayanan_edit">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
@@ -65,38 +65,37 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama</label>
                   <div class="col-sm-10">
-                    <input type="text" disabled class="form-control" value="{{Session::get('nama')}}">
-                    <input type="hidden" name="nama" value="{{Session::get('nama')}}">
+                    <input type="text" class="form-control" name="nama" disabled value="{{$nama}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Umur</label>
                   <div class="col-sm-10">
-                    <input type="number" class="form-control" name="umur">
+                    <input type="number" class="form-control" name="umur" value="{{$umur}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Hubungan dengan Pasien</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="hubungan">
+                    <input type="text" class="form-control" name="hubungan" value="{{$hubungan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Poli/Ruangan</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="poli_ruangan">
+                    <input type="text" class="form-control" name="poli_ruangan" value="{{$poli_ruangan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Dokter Pengirim</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="dokter_pengirim">
+                    <input type="text" class="form-control" name="dokter_pengirim" value="{{$dokter_pengirim}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pelayanan yang akan dilakukan</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="pelayanan_akan_dilakukan">
+                    <input type="text" class="form-control" name="pelayanan_akan_dilakukan" value="{{$pelayanan_akan_dilakukan}}">
                   </div>
                 </div>
               </div>
@@ -111,29 +110,29 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Penundaan pelayanan</label>
                   <div class="col-lg-10">
                     <label class="checkbox-inline">
-                      <input type="checkbox" name="dokter_berhalangan"> Dokter berhalangan datang
+                      <input type="checkbox" name="dokter_berhalangan" {{$dokter_berhalangan == True ? 'checked' : ''}}> Dokter berhalangan datang
                     </label>
                     <label class="checkbox-inline">
-                      <input type="checkbox" name="kerusakan_alat"> Kerusakan alat
+                      <input type="checkbox" name="kerusakan_alat" {{$kerusakan_alat == True ? 'checked' : ''}}> Kerusakan alat
                     </label>
                     <label class="checkbox-inline">
-                      <input type="checkbox" name="pemberian_obat_farmasi"> Pemberian obat di farmasi
+                      <input type="checkbox" name="pemberian_obat_farmasi" {{$pemberian_obat_farmasi == True ? 'checked' : ''}}> Pemberian obat di farmasi
                     </label>
                     <label class="checkbox-inline">
-                      <input type="checkbox" name="hasil_pemeriksaan_radiologi"> Hasil pemeriksaan radiologi
+                      <input type="checkbox" name="hasil_pemeriksaan_radiologi" {{$hasil_pemeriksaan_radiologi == True ? 'checked' : ''}}> Hasil pemeriksaan radiologi
                     </label>
                     <label class="checkbox-inline">
-                      <input type="checkbox" name="hasil_pemeriksaan_laboratorium"> Hasil pemeriksaan laboratorium
+                      <input type="checkbox" name="hasil_pemeriksaan_laboratorium" {{$hasil_pemeriksaan_laboratorium == True ? 'checked' : ''}}> Hasil pemeriksaan laboratorium
                     </label>
                     <label class="checkbox-inline">
-                      <input type="checkbox" name="lainnya"> Lain-lain .....
+                      <input type="checkbox" name="lainnya" {{!is_null($sebab_lainnya) ? 'checked' : ''}}> Lain-lain .....
                     </label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label col-lg-2">Sebutkan</label>
                   <div class="col-lg-10">
-                    <input type="text" class="form-control" name="sebab_lainnya">
+                    <input type="text" class="form-control" name="sebab_lainnya" value="{{$sebab_lainnya}}">
                   </div>
                 </div>
                 <div class="col-lg-2"></div><h5>Maka dengan ini saya Setuju untuk dilakukan Penundaan Pelayanan dengan alternatif yang diberikan</h5>
@@ -142,19 +141,19 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="alternatif" value="Dijadwalkan ulang">
+                        <input type="radio" name="alternatif" {{$alternatif == 'Dijadwalkan ulang' ? 'checked' : ''}} value="Dijadwalkan ulang">
                         Dijadwalkan ulang
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="alternatif" value="Jadwal yang akan datang">
+                        <input type="radio" name="alternatif" {{$alternatif == 'Jadwal yang akan datang' ? 'checked' : ''}} value="Jadwal yang akan datang">
                         Jadwal yang akan datang
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="alternatif" value="Dirujuk ke Pelayanan / RS lain">
+                        <input type="radio" name="alternatif" {{$alternatif == 'Dirujuk ke Pelayanan / RS lain' ? 'checked' : ''}} value="Dirujuk ke Pelayanan / RS lain">
                         Dirujuk ke Pelayanan / RS lain
                       </label>
                     </div>
@@ -163,13 +162,13 @@
                 <div class="form-group">
                   <label class="control-label col-sm-2">Jadwal Penundaan</label>
                   <div class="col-sm-3">
-                    <input autocomplete="off" onkeydown="return false" type="text" class="form-control sandbox-container" name="jadwal_penundaan">
+                    <input type="text"  size="16" class="form-control sandbox-container" name="jadwal_penundaan" value="{{$jadwal_penundaan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Rumah Sakit Rujukan</label>
                   <div class="col-sm-3">
-                    <input type="text" class="form-control" name="rs_tujuan">
+                    <input type="text" class="form-control" name="rs_tujuan" value="{{$rs_tujuan}}">
                   </div>
                 </div>
               </div>
