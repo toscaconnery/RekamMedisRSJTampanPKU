@@ -262,6 +262,13 @@ Route::get('/ri_pernyataan', 'RIPernyataanController@get_ri_pernyataan');
 Route::post('/ri_pernyataan', 'RIPernyataanController@post_ri_pernyataan');
 Route::get('/ri_pernyataan_read', 'RIPernyataanController@get_ri_pernyataan_read');
 
+//dokumen Lembar Pernyataan
+Route::get('/ri_pernyataan_pdf', 'RIPernyataanController@ri_pernyataan_pdf');
+
+Route::get('/doc_ri_pernyataan', function () {
+    return view('/doc_ri_pernyataan');
+});
+
 Route::get('/ri_persetujuan_tindakan', 'RIPersetujuanTindakanController@get_ri_persetujuan_tindakan');
 Route::post('/ri_persetujuan_tindakan', 'RIPersetujuanTindakanController@post_ri_persetujuan_tindakan');
 Route::get('/ri_persetujuan_tindakan_read', 'RIPersetujuanTindakanController@get_ri_persetujuan_tindakan_read');
@@ -1081,12 +1088,7 @@ Route::get('/doc_ri_surat_kuasa', function () {
     return view('/doc_ri_surat_kuasa');
 });
 
-//dokumen Lembar Pernyataan
-Route::get('/pdf_ri_pernyataan', 'Pdf_ri_Controller@pdf_ri_pernyataan');
 
-Route::get('/doc_ri_pernyataan', function () {
-    return view('/doc_ri_pernyataan');
-});
 
 //dokumen Lembar serah terima
 Route::get('/pdf_ri_serah_terima', 'Pdf_ri_Controller@pdf_ri_serah_terima');
