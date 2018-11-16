@@ -47,14 +47,13 @@ class RISuratPengantarDirawatController extends Controller
         $data->dokter_igd_klinik = $request->dokter_igd_klinik;
         $data->save();
 
-    	// $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
-     //    $daftar_dokumen->ri_surat_spd = True;
-     //    $daftar_dokumen->save();
-        // dd($request);
+    	$daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
+        $daftar_dokumen->ri_surat_spd = True;
+        $daftar_dokumen->save();
     	return redirect('daftar_dokumen');
     }
 
-    public function get_ri_surat_spd_read()
+    public function get_ri_surat_spd_data()
     {
         $pasien = RISuratSPD::where('id', 1)->first();
         
@@ -85,6 +84,22 @@ class RISuratPengantarDirawatController extends Controller
      //    $daftar_dokumen->ri_surat_spd = True;
      //    $daftar_dokumen->save();
         // dd($request);
+    }
+
+    public function get_ri_surat_spd_read()
+    {
+        $this->get_ri_surat_spd_data();
         return view('page.ri.surat_spd_read', $this->data);
+    }
+
+    public function get_ri_surat_spd_edit()
+    {
+        $this->get_ri_surat_spd_data();
+        return view('page.ri.surat_spd_edit', $this->data);
+    }
+
+    public function post_ri_surat_spd_edit(Request $request)
+    {
+        //
     }
 }

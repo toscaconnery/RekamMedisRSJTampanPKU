@@ -63,5 +63,17 @@ class ListDocument extends Model
         'ri_pemberian_informasi',
         'ri_pemeriksaan_psikologis',
         'ri_serah_terima',
+        'ri_surat_spd',
+        'ri_permintaan_privasi',
+        'ri_permintaan_rohani',
+        'ri_permintaan_second',
+        'ri_do_not_resucitate',
+        'ri_instruksi_do_not_resucitate',
+        'ri_persetujuan_tindakan',
+        'ri_penolakan_tindakan',
+        'ri_pulang_paksa',
+        'ri_residen',
+        'ri_surat_kuasa',
+        'ri_pernyataan',
     ];
 }

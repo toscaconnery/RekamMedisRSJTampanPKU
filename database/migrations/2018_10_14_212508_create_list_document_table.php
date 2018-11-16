@@ -65,6 +65,18 @@ class CreateListDocumentTable extends Migration
             $table->boolean('ri_pemberian_informasi')->default(False);
             $table->boolean('ri_pemeriksaan_psikologis')->default(False);
             $table->boolean('ri_serah_terima')->default(False);
+            $table->boolean('ri_surat_spd')->default(False);
+            $table->boolean('ri_permintaan_privasi')->default(False);
+            $table->boolean('ri_permintaan_rohani')->default(False);
+            $table->boolean('ri_permintaan_second')->default(False);
+            $table->boolean('ri_do_not_resucitate')->default(False);
+            $table->boolean('ri_instruksi_do_not_resucitate')->default(False);
+            $table->boolean('ri_persetujuan_tindakan')->default(False);
+            $table->boolean('ri_penolakan_tindakan')->default(False);
+            $table->boolean('ri_pulang_paksa')->default(False);
+            $table->boolean('ri_residen')->default(False);
+            $table->boolean('ri_surat_kuasa')->default(False);
+            $table->boolean('ri_pernyataan')->default(False);
             $table->timestamps();
         });
     }
