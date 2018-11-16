@@ -207,6 +207,13 @@ Route::get('/ri_risiko_nyeri', 'RIRisikoNyeriController@get_ri_risiko_nyeri');
 Route::post('/ri_risiko_nyeri', 'RIRisikoNyeriController@post_ri_risiko_nyeri');
 Route::get('/ri_risiko_nyeri_read', 'RIRisikoNyeriController@get_ri_risiko_nyeri_read'); // new add
 
+//dokumen penilaian nyeri
+Route::get('/ri_nyeri_pdf', 'RIRisikoNyeriController@ri_nyeri_pdf');
+
+Route::get('/doc_ri_nyeri', function () {
+    return view('/doc_ri_nyeri');
+});
+
 Route::get('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan');
 Route::post('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@post_ri_catatan_perkembangan');
 Route::get('/ri_catatan_perkembangan_read', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan_read'); // new add
@@ -304,6 +311,13 @@ Route::get('/ri_penilaian_panss_read', 'RIPenilaianPanssController@get_ri_penila
 Route::get('/ri_lembar_konsultasi', 'RILembarKonsultasiController@get_ri_lembar_konsultasi');
 Route::post('/ri_lembar_konsultasi', 'RILembarKonsultasiController@post_ri_lembar_konsultasi');
 Route::get('/ri_lembar_konsultasi_read', 'RILembarKonsultasiController@get_ri_lembar_konsultasi_read');
+
+//dokumen Lembar konsultasi
+Route::get('/ri_konsultasi_pdf', 'RILembarKonsultasiController@ri_konsultasi_pdf');
+
+Route::get('/doc_ri_konsultasi', function () {
+    return view('/doc_ri_konsultasi');
+});
 
 Route::get('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan');
 Route::post('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@post_ri_rencana_pemulangan');
@@ -857,13 +871,6 @@ Route::get('/doc_ri_penolakan_tindakan', function () {
     return view('/doc_ri_penolakan_tindakan');
 });
 
-//dokumen penilaian nyeri
-Route::get('/pdf_ri_nyeri', 'Pdf_ri_Controller@pdf_ri_nyeri');
-
-Route::get('/doc_ri_nyeri', function () {
-    return view('/doc_ri_nyeri');
-});
-
 //dokumen catatan perkembangan
 Route::get('/pdf_ri_catatan_perkembangan', 'Pdf_ri_Controller@pdf_ri_catatan_perkembangan');
 
@@ -1060,12 +1067,6 @@ Route::get('/doc_ri_nilaipanss', function () {
     return view('/doc_ri_nilaipanss');
 });
 
-//dokumen Lembar konsultasi
-Route::get('/pdf_ri_konsultasi', 'Pdf_ri_Controller@pdf_ri_konsultasi');
-
-Route::get('/doc_ri_konsultasi', function () {
-    return view('/doc_ri_konsultasi');
-});
 
 //dokumen Lembar Pulang Paksa
 Route::get('/pdf_ri_pulang_paksa', 'Pdf_ri_Controller@pdf_ri_pulang_paksa');

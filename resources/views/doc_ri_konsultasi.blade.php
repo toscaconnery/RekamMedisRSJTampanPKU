@@ -18,14 +18,14 @@ header('Content-Type: application/pdf');
       
       <tr>
         <td class="contain" width="10%" rowspan="2">Kepada TS</td>
-        <td class="contain" width="40%" rowspan="2"> -</td>
+        <td class="contain" width="40%" rowspan="2">  {{ $konsultasi1}}</td>
         <td class="contain" width="10%">Pekanbaru</td>
-        <td class="contain" width="40%">, 00/00/0000</td>
+        <td class="contain" width="40%">,  {{ $konsultasi4 }}</td>
       </tr>
       
       <tr>
         <td class="contain" width="10%">Jam</td>
-        <td class="contain" width="40%">: -</td>
+        <td class="contain" width="40%">:  {{ $konsultasi5 }}</td>
       </tr>
       
       <tr>
@@ -36,7 +36,7 @@ header('Content-Type: application/pdf');
         <td class="contain" colspan="4">Ikhtisar Klinik + Laboratorium singkat</td>
       </tr>
       <tr>
-        <td class="contain" colspan="4">-</td>
+        <td class="contain" colspan="4"> {{ $konsultasi2 }}</td>
       </tr>
 
       <tr>
@@ -47,7 +47,7 @@ header('Content-Type: application/pdf');
         <td class="contain" colspan="4">Konsultasi yang diminta:</td>
       </tr>
       <tr>
-        <td class="contain" colspan="4">-</td>
+        <td class="contain" colspan="4"> {{ $konsultasi3 }}</td>
       </tr>
     
     </tbody>
@@ -80,21 +80,21 @@ header('Content-Type: application/pdf');
 
   <pagebreak>
 
-  <h2 align="center" style="font-size:110%;">LEMBAR KONSULTASI</h2>
+  <h2 align="center" style="font-size:110%;">JAWABAN KONSULTASI</h2>
   
   <table>
     <tbody>
       
       <tr>
         <td class="contain" width="10%" rowspan="2">Kepada TS</td>
-        <td class="contain" width="40%" rowspan="2"> -</td>
+        <td class="contain" width="40%" rowspan="2">  {{ $jkonsultasi1 }}</td>
         <td class="contain" width="10%">Pekanbaru</td>
-        <td class="contain" width="40%">, 00/00/0000</td>
+        <td class="contain" width="40%">,  {{ $jkonsultasi6 }}</td>
       </tr>
       
       <tr>
         <td class="contain" width="10%">Jam</td>
-        <td class="contain" width="40%">: -</td>
+        <td class="contain" width="40%">:  {{ $jkonsultasi7 }}</td>
       </tr>
       
       <tr>
@@ -105,7 +105,7 @@ header('Content-Type: application/pdf');
         <td class="contain" colspan="4">Penemuan Klinik dari penderita yang dikonsultasikan :</td>
       </tr>
       <tr>
-        <td class="contain" colspan="4">-</td>
+        <td class="contain" colspan="4"> {{ $jkonsultasi2 }}</td>
       </tr>
 
       <tr>
@@ -116,7 +116,7 @@ header('Content-Type: application/pdf');
         <td class="contain" colspan="4">Pemeriksaan khusus lain :</td>
       </tr>
       <tr>
-        <td class="contain" colspan="4">-</td>
+        <td class="contain" colspan="4"> {{ $jkonsultasi3 }}</td>
       </tr>
 
       <tr>
@@ -127,7 +127,7 @@ header('Content-Type: application/pdf');
         <td class="contain" colspan="4">Kesimpulan :</td>
       </tr>
       <tr>
-        <td class="contain" colspan="4">-</td>
+        <td class="contain" colspan="4"> {{ $jkonsultasi4 }}</td>
       </tr>
 
       <tr>
@@ -138,7 +138,7 @@ header('Content-Type: application/pdf');
         <td class="contain" colspan="4">Saran :</td>
       </tr>
       <tr>
-        <td class="contain" colspan="4">-</td>
+        <td class="contain" colspan="4"> {{ $jkonsultasi5 }}</td>
       </tr>
     
     </tbody>

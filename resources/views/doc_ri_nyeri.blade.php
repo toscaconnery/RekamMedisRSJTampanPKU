@@ -18,29 +18,21 @@ header('Content-Type: application/pdf');
     <thead>
       <tr>
         <th class="default" style="width:30%;height:30px;">Tanggal, Bulan, Tahun</th>
-        <th class="default" style="height:30px;">P</th>
-        <th class="default" style="height:30px;">S</th>
-        <th class="default" style="height:30px;">M</th>
-        <th class="default" style="height:30px;">Skala Nyeri</th>
+        <th class="default" style="height:30px;width:30%">Waktu</th>
+        <th class="default" style="height:30px;width:30%">Skala Nyeri</th>
       </tr>
     </thead>
     
     <tbody>
       <tr>
         <td class="default" style="text-align:center;height:30px;">
-          -
+          {{ $tanggal }}
         </td>
         <td class="default" style="text-align:center;height:30px;">
-          -
+          {{ $waktu }}
         </td>
         <td class="default" style="text-align:center;height:30px;">
-          -
-        </td>
-        <td class="default" style="text-align:center;height:30px;">
-          -
-        </td>
-        <td class="default" style="text-align:center;height:30px;">
-          -
+          {{ $skala }}
         </td>
       </tr>       
     </tbody>
