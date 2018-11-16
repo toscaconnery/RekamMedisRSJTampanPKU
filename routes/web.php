@@ -69,6 +69,13 @@ Route::get('/penundaan_pelayanan_read', 'PenundaanPelayananController@get_penund
 Route::get('/penundaan_pelayanan_edit', 'PenundaanPelayananController@get_penundaan_pelayanan_edit');
 Route::post('/penundaan_pelayanan_edit', 'PenundaanPelayananController@post_penundaan_pelayanan_edit');
 
+//dokumen penundaan pelayanan
+Route::get('/penundaan_pelayanan_pdf', 'PenundaanPelayananController@penundaan_pelayanan_pdf');
+
+Route::get('/doc_penundaan_pelayanan', function () {
+    return view('/doc_penundaan_pelayanan');
+});
+
 Route::get('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@get_rj_asesmen_awal_perawat');
 Route::post('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_perawat');
 Route::get('/rj_asesmen_awal_perawat_read', 'RJAsesmenAwalController@get_rj_asesmen_awal_perawat_read');
@@ -244,9 +251,23 @@ Route::get('/ri_persetujuan_umum', 'RIPersetujuanUmumController@get_ri_persetuju
 Route::post('/ri_persetujuan_umum', 'RIPersetujuanUmumController@post_ri_persetujuan_umum');
 Route::get('/ri_persetujuan_umum_read', 'RIPersetujuanUmumController@get_ri_persetujuan_umum_read');
 
+//dokumen ri persetujuan umum
+Route::get('/ri_persetujuan_umum_pdf', 'RIPersetujuanUmumController@ri_persetujuan_umum_pdf');
+
+Route::get('/doc_ri_persetujuan_umum', function () {
+    return view('/doc_ri_persetujuan_umum');
+});
+
 Route::get('/ri_hak_kewajiban', 'RIHakKewajibanController@get_ri_hak_kewajiban');
 Route::post('/ri_hak_kewajiban', 'RIHakKewajibanController@post_ri_hak_kewajiban');
 Route::get('/ri_hak_kewajiban_read', 'RIHakKewajibanController@get_ri_hak_kewajiban_read');
+
+//dokumen permintaan hak dan kewajiban
+Route::get('/ri_hakkewajiban_pdf', 'RIHakKewajibanController@ri_hakkewajiban_pdf');
+
+Route::get('/doc_ri_permintaan_hakkewajiban', function () {
+    return view('/doc_ri_hakkewajiban');
+});
 
 Route::get('/ri_permintaan_privasi', 'RIPermintaanPrivasiController@get_ri_permintaan_privasi');
 Route::post('/ri_permintaan_privasi', 'RIPermintaanPrivasiController@post_ri_permintaan_privasi');
@@ -282,9 +303,23 @@ Route::get('/ri_persetujuan_tindakan', 'RIPersetujuanTindakanController@get_ri_p
 Route::post('/ri_persetujuan_tindakan', 'RIPersetujuanTindakanController@post_ri_persetujuan_tindakan');
 Route::get('/ri_persetujuan_tindakan_read', 'RIPersetujuanTindakanController@get_ri_persetujuan_tindakan_read');
 
+//dokumen persetujuan tindakan kedokteran
+Route::get('/ri_persetujuan_tindakan_pdf', 'RIPersetujuanTindakanController@ri_persetujuan_tindakan_pdf');
+
+Route::get('/doc_ri_persetujuan_tindakan', function () {
+    return view('/doc_ri_persetujuan_tindakan');
+});
+
 Route::get('/ri_penolakan_tindakan', 'RIPenolakanTindakanController@get_ri_penolakan_tindakan');
 Route::post('/ri_penolakan_tindakan', 'RIPenolakanTindakanController@post_ri_penolakan_tindakan');
 Route::get('/ri_penolakan_tindakan_read', 'RIPenolakanTindakanController@get_ri_penolakan_tindakan_read');
+
+//dokumen penolakan tindakan kedoketeran
+Route::get('/ri_penolakan_tindakan_pdf', 'RIPenolakanTindakanController@ri_penolakan_tindakan_pdf');
+
+Route::get('/doc_ri_penolakan_tindakan', function () {
+    return view('/doc_ri_penolakan_tindakan');
+});
 
 Route::get('/ri_do_not_resucitate', 'RIDoNotResucitateController@get_ri_do_not_resucitate');
 Route::post('/ri_do_not_resucitate', 'RIDoNotResucitateController@post_ri_do_not_resucitate');
@@ -621,12 +656,7 @@ Route::get('/doc_identifikasi', function () {
     return view('/doc_identifikasi');
 });
 
-//dokumen penundaan pelayanan
-Route::get('/pdf_penundaan_pelayanan', 'Pdf_Controller@pdf_penundaan_pelayanan');
 
-Route::get('/doc_penundaan_pelayanan', function () {
-    return view('/doc_penundaan_pelayanan');
-});
 
 
 //
@@ -781,12 +811,7 @@ Route::get('/doc_ri_dpjpcase', function () {
     return view('/doc_ri_dpjpcase');
 });
 
-//dokumen ri persetujuan umum
-Route::get('/pdf_ri_persetujuan_umum', 'Pdf_ri_Controller@pdf_ri_persetujuan_umum');
 
-Route::get('/doc_ri_persetujuan_umum', function () {
-    return view('/doc_ri_persetujuan_umum');
-});
 
 //dokumen ri asesmen
 Route::get('/pdf_ri_asesmen', 'Pdf_ri_Controller@pdf_ri_asesmen');
@@ -823,14 +848,6 @@ Route::get('/doc_ri_permintaan_privasi', function () {
     return view('/doc_ri_permintaan_privasi');
 });
 
-//dokumen permintaan ha dan kewajiban
-Route::get('/pdf_ri_hakkewajiban', 'Pdf_ri_Controller@pdf_ri_hakkewajiban');
-
-Route::get('/doc_ri_permintaan_hakkewajiban', function () {
-    return view('/doc_ri_hakkewajiban');
-});
-
-
 //dokumen permintaan rohani
 Route::get('/pdf_ri_permintaan_rohani', 'Pdf_ri_Controller@pdf_ri_permintaan_rohani');
 
@@ -857,20 +874,6 @@ Route::get('/pdf_ri_permintaan_resucitate', 'Pdf_ri_Controller@pdf_ri_permintaan
 
 Route::get('/doc_ri_permintaan_resucitate', function () {
     return view('/doc_ri_permintaan_resucitate');
-});
-
-//dokumen persetujuan tindakan kedokteran
-Route::get('/pdf_ri_persetujuan_tindakan', 'Pdf_ri_Controller@pdf_ri_persetujuan_tindakan');
-
-Route::get('/doc_ri_persetujuan_tindakan', function () {
-    return view('/doc_ri_persetujuan_tindakan');
-});
-
-//dokumen penolakan tindakan kedoketeran
-Route::get('/pdf_ri_penolakan_tindakan', 'Pdf_ri_Controller@pdf_ri_penolakan_tindakan');
-
-Route::get('/doc_ri_penolakan_tindakan', function () {
-    return view('/doc_ri_penolakan_tindakan');
 });
 
 //dokumen catatan perkembangan

@@ -41,9 +41,8 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_penolakan_tindakan_pdf">PDF</a>
+                      <a class="btn btn-success" href="#">EDIT</a>
                     </div>
                   </td>
                 </tr>
@@ -104,7 +103,7 @@
                           <td style="text-align:center;">1</td>
                           <td>Diagnosis (WD/DD)</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_1" required>
+                            <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_1}}">
                           </td>
                           <td><input type="checkbox" class="form-control" name="check_informasi_1" disabled="" value="{{$check_informasi_1}}"></td>
                         </tr>
@@ -112,7 +111,7 @@
                           <td style="text-align:center;">2</td>
                           <td>Dasar Diagnosis</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_2" required>
+                            <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_2}}">
                           </td>
                           <td><input type="checkbox" class="form-control" name="check_informasi_2" disabled="" value="{{$check_informasi_2}}"></td>
                         </tr>
@@ -120,7 +119,7 @@
                           <td style="text-align:center;">3</td>
                           <td>Tindakan Kedokteran</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_3" required>
+                            <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_3}}">
                           </td>
                           <td><input type="checkbox" class="form-control" name="check_informasi_3" disabled="" value="{{$check_informasi_3}}"></td>
                         </tr>
@@ -128,7 +127,7 @@
                           <td style="text-align:center;">4</td>
                           <td>Indikasi Tindakan</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_4" required>
+                            <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_4}}" >
                           </td>
                           <td><input type="checkbox" class="form-control" name="check_informasi_4" disabled="" value="{{$check_informasi_4}}"></td>
                         </tr>
@@ -136,7 +135,7 @@
                           <td style="text-align:center;">5</td>
                           <td>Tata Cara</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_5" required>
+                            <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_5}}" >
                           </td>
                           <td><input type="checkbox" class="form-control" name="check_informasi_5" disabled="" value="{{$check_informasi_5}}"></td>
                         </tr>
@@ -144,7 +143,7 @@
                           <td style="text-align:center;">6</td>
                           <td>Tujuan</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_6" required>
+                            <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_6}}" >
                           </td>
                           <td><input type="checkbox" class="form-control" name="check_informasi_6" disabled="" value="{{$check_informasi_6}}"></td>
                         </tr>
@@ -152,15 +151,15 @@
                           <td style="text-align:center;">7</td>
                           <td>Risiko</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_7" required>
+                            <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_7}}"> 
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_7" disabled="" value="{{$check_informasi_7}"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_7" disabled="" value="{{$check_informasi_7}}"></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">8</td>
                           <td>Komplikasi</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_8" required>
+                            <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_8}}" >
                           </td>
                           <td><input type="checkbox" class="form-control" name="check_informasi_8" disabled="" value="{{$check_informasi_8}}"></td>
                         </tr>
@@ -168,7 +167,7 @@
                           <td style="text-align:center;">9</td>
                           <td>Prognosis</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_9" required>
+                            <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_9}}" >
                           </td>
                           <td><input type="checkbox" class="form-control" name="check_informasi_9" disabled="" value="{{$check_informasi_9}}"></td>
                         </tr>
@@ -176,7 +175,7 @@
                           <td style="text-align:center;">10</td>
                           <td>Alternatif dan Risiko</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_10" required>
+                            <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_10}}" >
                           </td>
                           <td><input type="checkbox" class="form-control" name="check_informasi_10" disabled="" value="{{$check_informasi_10}}"></td>
                         </tr>
@@ -184,7 +183,7 @@
                           <td style="text-align:center;">11</td>
                           <td>Lain-lain</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_11" required>
+                            <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_11}}" >
                           </td>
                           <td><input type="checkbox" class="form-control" name="check_informasi_11" disabled="" value="{{$check_informasi_11}}"></td>
                         </tr>

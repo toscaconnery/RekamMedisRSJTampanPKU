@@ -169,13 +169,13 @@ header('Content-Type: application/pdf');
         <br>
       </td>
       <td class="ttd3" style="font-size:110%;">
-        Pekanbaru, 25 September 2018<br>Hormat Saya
+        Pekanbaru, dd mm yyyy<br>Hormat Saya
         <br>
         <br>
         <br>
         <br>
         <br>
-        (......................)
+        ( {{$nama_penanda_tangan}} )
       </td>
     </tr>  
   </table>

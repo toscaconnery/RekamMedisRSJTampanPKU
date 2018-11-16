@@ -137,7 +137,7 @@ header('Content-Type: application/pdf');
           <br>
           <br>
           <br>
-          (..............................)
+          ( {{ $nama_petugas }} )
         </td>
     </tr>
     <tr>
@@ -147,7 +147,7 @@ header('Content-Type: application/pdf');
           <br>
           <br>
           <br>
-          (..............................)
+          ( {{ $nama_pasien_keluarga }} )
       </td>
     </tr>
   </tbody>

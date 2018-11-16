@@ -21,15 +21,15 @@ header('Content-Type: application/pdf');
       </tr>
       <tr>
         <td class="konten_s_question">Dokter Pelaksana Tindakan</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$dokter_pelaksana_tindakan}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Pemberi Informasi</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$pemberi_informasi}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Penerima Informasi/<i>Pemberi Penolakan*</i></td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$penerima_informasi}}</td>
       </tr>
       <tr>
         <td class="konten_s_question" colspan="2">
@@ -53,67 +53,67 @@ header('Content-Type: application/pdf');
       <tr>
         <td class="box-c">1</td>
         <td class="box">Diagnosis (WD/DD)</td>
-        <td class="box">-</td>
+        <td class="box">{{$jenis_informasi_1}}</td>
         <td class="box-c">-</td>
       </tr>
       <tr>
         <td class="box-c">2</td>
         <td class="box">Dasar Diagnosis</td>
-        <td class="box">-</td>
+        <td class="box">{{$jenis_informasi_2}}</td>
         <td class="box-c">-</td>
       </tr>
       <tr>
         <td class="box-c">3</td>
         <td class="box">Tindakan Kedokteran</td>
-        <td class="box">-</td>
+        <td class="box">{{$jenis_informasi_3}}</td>
         <td class="box-c">-</td>
       </tr>
       <tr>
         <td class="box-c">4</td>
         <td class="box">Indikasi Tindakan</td>
-        <td class="box">-</td>
+        <td class="box">{{$jenis_informasi_4}}</td>
         <td class="box-c">-</td>
       </tr>
       <tr>
         <td class="box-c">5</td>
         <td class="box">Tata Cara</td>
-        <td class="box">-</td>
+        <td class="box">{{$jenis_informasi_5}}</td>
         <td class="box-c">-</td>
       </tr>
       <tr>
         <td class="box-c">6</td>
         <td class="box">Tujuan</td>
-        <td class="box">-</td>
+        <td class="box">{{$jenis_informasi_6}}</td>
         <td class="box-c">-</td>
       </tr>
       <tr>
         <td class="box-c">7</td>
         <td class="box">Risiko</td>
-        <td class="box">-</td>
+        <td class="box">{{$jenis_informasi_7}}</td>
         <td class="box-c">-</td>
       </tr>
       <tr>
         <td class="box-c">8</td>
         <td class="box">Komplikasi</td>
-        <td class="box">-</td>
+        <td class="box">{{$jenis_informasi_8}}</td>
         <td class="box-c">-</td>
       </tr>
       <tr>
         <td class="box-c">9</td>
         <td class="box">Prognosis</td>
-        <td class="box">-</td>
+        <td class="box">{{$jenis_informasi_9}}9</td>
         <td class="box-c">-</td>
       </tr>
       <tr>
         <td class="box-c">10</td>
         <td class="box">Alternatif & Risiko</td>
-        <td class="box">-</td>
+        <td class="box">{{$jenis_informasi_10}}</td>
         <td class="box-c">-</td>
       </tr>
       <tr>
         <td class="box"></td>
         <td class="box">Lain-lain</td>
-        <td class="box">-</td>
+        <td class="box">{{$jenis_informasi_11}}</td>
         <td class="box-c">-</td>
       </tr>
        <tr>
@@ -145,7 +145,7 @@ header('Content-Type: application/pdf');
     <body>
       <tr>
         <td class="contain">
-          Yang bertanda tangan dibawah ini, saya, nama ... Umur ... tahun, "laki-laki", alamat ... dengan ini menyatakan persetujuan untuk dilakukannya tidakan ... terhadap saya / ... saya* bernama ... umur ... tahun, laki-laki/perempuan*. alamat ...<br>
+          Yang bertanda tangan dibawah ini, saya, nama {{$nama}} Umur {{$umur}} tahun, {{$jk}}, alamat ... dengan ini menyatakan penolakan untuk dilakukannya tindakan {{$tindakan}} terhadap saya / ... saya* bernama {{$terhadap}} umur {{$umur_terhadap}} tahun, {{$jk_terhadap}}. alamat {{$alamat_terhadap}}<br>
           <br>
           Saya memahami perlunya dan manfaat tindakan tersebut sebagaimana telah dijelaskan seperti di atas kepada saya, termasuk resiko dan komplikasi yang mungkin timbul apabila tindakan tersebut tidak dilakukan.<br>
           Saya bertanggung jawab secara penuh atas segala akibat yang mungkin timbul sebagai akibat tidak dilakukannya tindakan kedokteran tersebut.
@@ -167,15 +167,15 @@ header('Content-Type: application/pdf');
         <br>
         <br>
         <br>
-        (......................)
+        ( {{$yang_menyatakan}} )
       </td>
       <td class="ttd3">
-        Pekanbaru, 25 September 1996, Pukul 12.00<br>
+        Pekanbaru, {{$tanggal}}, Pukul {{$waktu}}<br>
         Saksi
         <br>
         <br>
         <br>
-        (......................)
+        ( {{$saksi}} )
       </td>
     </tr>  
   </table>
