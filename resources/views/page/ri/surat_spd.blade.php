@@ -75,7 +75,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Lahir</label>
                   <div class="col-sm-8">
-                    <input type="date" class="form-control" name="tanggal_lahir">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_lahir" value="{{Session::get('tanggal_lahir')}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -83,13 +83,13 @@
                   <div class="col-sm-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jk" value="1">
+                        <input type="radio" name="jk" value="1" {{Session::get('jenis_kelamin') == 'L' ? 'checked' : ''}}>
                         Laki-laki
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jk" value="0">
+                        <input type="radio" name="jk" value="0" {{Session::get('jenis_kelamin') == 'P' ? 'checked' : ''}}>
                         Perempuan
                       </label>
                     </div>
@@ -212,7 +212,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" name="tanggal_masuk_rs">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_masuk_rs">
                   </div>
                 </div>
                 <div class="form-group">
@@ -237,7 +237,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" name="tanggal">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal">
                   </div>
                 </div>
                 <div class="form-group">
