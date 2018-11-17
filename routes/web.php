@@ -284,6 +284,13 @@ Route::get('/ri_permintaan_rohani', 'RIPermintaanRohaniController@get_ri_permint
 Route::post('/ri_permintaan_rohani', 'RIPermintaanRohaniController@post_ri_permintaan_rohani');
 Route::get('/ri_permintaan_rohani_read', 'RIPermintaanRohaniController@get_ri_permintaan_rohani_read');
 
+//dokumen permintaan rohani
+Route::get('/ri_permintaan_rohani_pdf', 'RIPermintaanRohaniController@ri_permintaan_rohani_pdf');
+
+Route::get('/doc_ri_permintaan_rohani', function () {
+    return view('/doc_ri_permintaan_rohani');
+});
+
 Route::get('/ri_permintaan_second', 'RIPermintaanSecondController@get_ri_permintaan_second');
 Route::post('/ri_permintaan_second', 'RIPermintaanSecondController@post_ri_permintaan_second');
 Route::get('/ri_permintaan_second_read', 'RIPermintaanSecondController@get_ri_permintaan_second_read');
@@ -332,9 +339,24 @@ Route::get('/ri_do_not_resucitate', 'RIDoNotResucitateController@get_ri_do_not_r
 Route::post('/ri_do_not_resucitate', 'RIDoNotResucitateController@post_ri_do_not_resucitate');
 Route::get('/ri_do_not_resucitate_read', 'RIDoNotResucitateController@get_ri_do_not_resucitate_read');
 
+//dokumen permintaan jangan resusitasi
+Route::get('/ri_permintaan_notresucitate_pdf', 'RIDoNotResucitateController@ri_permintaan_notresucitate_pdf');
+
+Route::get('/doc_ri_permintaan_notresucitate', function () {
+    return view('/doc_ri_permintaan_notresucitate');
+});
+
+
 Route::get('/ri_instruksi_do_not_resucitate', 'RIInstruksiDoNotResucitateController@get_ri_instruksi_do_not_resucitate');
 Route::post('/ri_instruksi_do_not_resucitate', 'RIInstruksiDoNotResucitateController@post_ri_instruksi_do_not_resucitate');
 Route::get('/ri_instruksi_do_not_resucitate_read', 'RIInstruksiDoNotResucitateController@get_ri_instruksi_do_not_resucitate_read');
+
+//dokumen instruksi jangan dilakukan resusitasi
+Route::get('/ri_instruksi_resucitate_pdf', 'RIInstruksiDoNotResucitateController@ri_instruksi_resucitate_pdf');
+
+Route::get('/doc_ri_instruksi_resucitate', function () {
+    return view('/doc_ri_instruksi_resucitate');
+});
 
 Route::get('/ri_penggunaan_obat', 'RIPenggunaanObatController@get_ri_penggunaan_obat');
 Route::post('/ri_penggunaan_obat', 'RIPenggunaanObatController@post_ri_penggunaan_obat');
@@ -848,32 +870,11 @@ Route::get('/doc_ri_edmunson', function () {
     return view('/doc_ri_edmunson');
 });
 
-//dokumen permintaan rohani
-Route::get('/pdf_ri_permintaan_rohani', 'Pdf_ri_Controller@pdf_ri_permintaan_rohani');
-
-Route::get('/doc_ri_permintaan_rohani', function () {
-    return view('/doc_ri_permintaan_rohani');
-});
-
 //dokumen permintaan second
 Route::get('/pdf_ri_permintaan_second', 'Pdf_ri_Controller@pdf_ri_permintaan_second');
 
 Route::get('/doc_ri_permintaan_second', function () {
     return view('/doc_ri_permintaan_second');
-});
-
-//dokumen permintaan jangan resusitasi
-Route::get('/pdf_ri_permintaan_notresucitate', 'Pdf_ri_Controller@pdf_ri_permintaan_notresucitate');
-
-Route::get('/doc_ri_permintaan_notresucitate', function () {
-    return view('/doc_ri_permintaan_notresucitate');
-});
-
-//dokumen permintaan resusitasi
-Route::get('/pdf_ri_permintaan_resucitate', 'Pdf_ri_Controller@pdf_ri_permintaan_resucitate');
-
-Route::get('/doc_ri_permintaan_resucitate', function () {
-    return view('/doc_ri_permintaan_resucitate');
 });
 
 //dokumen catatan perkembangan

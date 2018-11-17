@@ -29,15 +29,15 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$nama_pasien}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Tanggal Lahir</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$tanggal_lahir}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$alamat}}</td>
       </tr>
       <tr>
         <td class="konten_s_question" colspan="2">
@@ -139,7 +139,7 @@ header('Content-Type: application/pdf');
         <br>
         <br>
         <br>
-        (......................)
+        ( {{$dokter}} )
       </td>
     </tr>  
   </table>

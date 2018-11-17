@@ -103,8 +103,26 @@ class RIPermintaanPrivasiController extends Controller
         $this->data['alamat'] = $pasien->alamat;
         $this->data['agama'] = $pasien->agama;
         $this->data['no_telp'] = $pasien->no_telp;
-        $this->data['hub'] = $pasien->hub;
-        $this->data['hub_lain'] = $pasien->hub_lain;
+        
+        
+        if($pasien->hub=='6')
+        {
+            $this->data['hub'] = $pasien->hub_lain;
+        }
+        else
+        {
+            if($pasien->hub=='1')
+                $this->data['hub'] = 'Suami';
+            if($pasien->hub=='2')
+                $this->data['hub'] = 'Istri';
+            if($pasien->hub=='3')
+                $this->data['hub'] = 'Anak';
+            if($pasien->hub=='4')
+                $this->data['hub'] = 'Ayah';
+            if($pasien->hub=='5')
+                $this->data['hub'] = 'Ibu';
+        }
+        
         $this->data['nama_hub'] = $pasien->nama_hub;
         $this->data['umur_hub'] = $pasien->umur_hub;
         if($pasien->jk_hub=='1')

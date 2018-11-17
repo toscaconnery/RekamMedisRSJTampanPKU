@@ -40,9 +40,8 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_permintaan_notresucitate_pdf">PDF</a>
+                      <a class="btn btn-success" href="#">EDIT</a>
                     </div>
                   </td>
                 </tr>
@@ -182,7 +181,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Dokter</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="dokter" disabled="" value="{{$nama_dokter}}">
+                    <input type="text" class="form-control" name="dokter" disabled="" value="{{$dokter}}">
                   </div>
                 </div>
               </div>
