@@ -21,7 +21,7 @@ header('Content-Type: application/pdf');
           Nama
         </td>    
         <td class="konten_s_answer">  
-          : Ani Ananta
+          :  {{ $nama }} 
         </td>                
       </tr>
       <tr>
@@ -29,7 +29,7 @@ header('Content-Type: application/pdf');
           umur
         </td>    
         <td class="konten_s_answer">  
-          : 40 tahun
+          :  {{ $umur }} 
         </td>                
       </tr>
       <tr>
@@ -37,7 +37,7 @@ header('Content-Type: application/pdf');
           Hubungan Dengan Pasien
         </td>    
         <td class="konten_s_answer">  
-          : Ibu Kandung
+          :  {{ $hubungan }} 
         </td>                
       </tr>
       <tr>
@@ -45,7 +45,7 @@ header('Content-Type: application/pdf');
           Poli/Ruangan
         </td>    
         <td class="konten_s_answer">  
-          : Siak-1
+          :  {{ $poli_ruangan }} 
         </td>                
       </tr>
       <tr>
@@ -53,7 +53,7 @@ header('Content-Type: application/pdf');
           Nama Dokter Pengirim
         </td>    
         <td class="konten_s_answer">  
-          : Dewi Dwi
+          :  {{ $dokter_pengirim }} 
         </td>                
       </tr>
       <tr>
@@ -61,7 +61,7 @@ header('Content-Type: application/pdf');
           Pelayanan yang akan dilakukan
         </td>    
         <td class="konten_s_answer">  
-          : Tindak keperawatan
+          :  {{ $pelayanan_akan_dilakukan }} 
         </td>                
       </tr>
     </tbody>
@@ -69,7 +69,7 @@ header('Content-Type: application/pdf');
   <br>
 
   <p style="font-size:85%;">Dengan ini menyatakan bahwa saya telah menerima informasi terhadap penundaan pelayanan dan pengobatan dikarenakan:</p>
-  <ul>
+  <ul style="font-size:85%;">
     <li>Dokter berhalangan datang</li>
     <li>Kerusakan Alat</li>
   </ul> 
@@ -77,8 +77,56 @@ header('Content-Type: application/pdf');
   <br>
   <p style="font-size:85%;">Maka dengan ini saya <b>setuju</b> untuk dilakukan Penundaan Pelayanan dengan alternatif yang diberikan:</p>
   <ul>
-    <li>Dijadwalkan ulang</li>
+    <li style="font-size:85%;">Dijadwalkan ulang</li>
   </ul> 
+
+  <table>
+    <tbody>
+      <tr>
+       <td class="ttd3">
+          
+        </td>
+        <td class="ttd3">
+          
+        </td>
+        <td class="ttd3">
+          Pekanbaru, [DD-MM-YYYY] Jam: [Jam]
+        </td>
+      </tr>  
+      <tr>
+       <td class="ttd3">
+          Menyetujui Mengetahui DPJP
+          Pasien/Keluarga Pasien
+          <br>
+          <br>
+          <br>
+          <hr width="50%" style="text-align:center">
+          ( [nama] )<br>
+          Nama Jelas & Tanda Tangan
+        </td>
+        <td class="ttd3">
+          DPJP
+          <br>
+          <br>
+          <br>
+          <br>
+          <hr width="50%" style="text-align:center">
+          ( [nama] ) <br>
+          Nama Jelas & Tanda Tangan
+        </td>
+        <td class="ttd3">
+          Pemberi Informasi
+          <br>
+          <br>
+          <br>
+          <br>
+          <hr width="50%" style="text-align:center">
+          ( [nama] ) <br>
+          Nama Jelas & Tanda Tangan
+        </td>
+      </tr>  
+    </tbody>
+  </table>
 
 
 </body>
