@@ -273,6 +273,13 @@ Route::get('/ri_permintaan_privasi', 'RIPermintaanPrivasiController@get_ri_permi
 Route::post('/ri_permintaan_privasi', 'RIPermintaanPrivasiController@post_ri_permintaan_privasi');
 Route::get('/ri_permintaan_privasi_read', 'RIPermintaanPrivasiController@get_ri_permintaan_privasi_read');
 
+//dokumen permintaan privasi
+Route::get('/ri_permintaan_privasi_pdf', 'RIPermintaanPrivasiController@ri_permintaan_privasi_pdf');
+
+Route::get('/doc_ri_permintaan_privasi', function () {
+    return view('/doc_ri_permintaan_privasi');
+});
+
 Route::get('/ri_permintaan_rohani', 'RIPermintaanRohaniController@get_ri_permintaan_rohani');
 Route::post('/ri_permintaan_rohani', 'RIPermintaanRohaniController@post_ri_permintaan_rohani');
 Route::get('/ri_permintaan_rohani_read', 'RIPermintaanRohaniController@get_ri_permintaan_rohani_read');
@@ -839,13 +846,6 @@ Route::get('/pdf_ri_edmunson', 'Pdf_ri_Controller@pdf_ri_edmunson');
 
 Route::get('/doc_ri_edmunson', function () {
     return view('/doc_ri_edmunson');
-});
-
-//dokumen permintaan privasi
-Route::get('/pdf_ri_permintaan_privasi', 'Pdf_ri_Controller@pdf_ri_permintaan_privasi');
-
-Route::get('/doc_ri_permintaan_privasi', function () {
-    return view('/doc_ri_permintaan_privasi');
 });
 
 //dokumen permintaan rohani
