@@ -23,33 +23,29 @@ header('Content-Type: application/pdf');
         <th class="big-box" width="10%">Obat-Obatan</th>
         <th class="big-box" width="25%">Riwayat Rawat Inap <br>& Tindakan Sejak <br>Kunjungan Terakhir</th>  
         <th class="big-box" width="25%">Nama Jelas dan<br> Tanda Tangan Petugas<br> Kesehatan</th>
+        <th class="big-box" width="25%">Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="big-box">1.</td>
-        <td class="big-box">21/05/2008</td>
-        <td class="big-box">-</td>
-        <td class="big-box">-</td>
-        <td class="big-box">-</td>
-        <td class="big-box">-</td>
-      </tr>
-      <tr>
-        <td class="big-box">2.</td>
-        <td class="big-box">21/05/2008</td>
-        <td class="big-box">-</td>
-        <td class="big-box">-</td>
-        <td class="big-box">-</td>
-        <td class="big-box">-</td>
-      </tr>
-      <tr>
-        <td class="big-box">3.</td>
-        <td class="big-box">21/05/2008</td>
-        <td class="big-box">-</td>
-        <td class="big-box">-</td>
-        <td class="big-box">-</td>
-        <td class="big-box">-</td>
-      </tr>
+      @php
+        $idx = 1;
+      @endphp
+      @foreach($pasien as $p)
+        <tr>
+          <td class="big-box">{{$idx}}.</td>
+          <td class="big-box">{{$p['tanggal']}}</td>
+          <td class="big-box">{{$p['diagnosis_prosedur']}}</td>
+          <td class="big-box">{{$p['kode_icd']}}</td>
+          <td class="big-box">{{$p['obat']}}</td>
+          <td class="big-box">{{$p['riwayat']}}</td>
+          <td class="big-box">{{$p['nama_petugas']}}</td>
+          <td>
+          </td>
+        </tr>
+        @php
+          $idx += 1;
+        @endphp
+      @endforeach
     </tbody>
   </table>
 
