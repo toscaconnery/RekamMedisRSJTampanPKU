@@ -461,6 +461,8 @@ Route::get('/doc_ri_permintaan_hakkewajiban', function () {
 Route::get('/ri_permintaan_privasi', 'RIPermintaanPrivasiController@get_ri_permintaan_privasi');
 Route::post('/ri_permintaan_privasi', 'RIPermintaanPrivasiController@post_ri_permintaan_privasi');
 Route::get('/ri_permintaan_privasi_read', 'RIPermintaanPrivasiController@get_ri_permintaan_privasi_read');
+Route::get('/ri_permintaan_privasi_edit', 'RIPermintaanPrivasiController@get_ri_permintaan_privasi_edit');
+Route::post('/ri_permintaan_privasi_edit', 'RIPermintaanPrivasiController@post_ri_permintaan_privasi_edit');
 
 //dokumen permintaan privasi
 Route::get('/ri_permintaan_privasi_pdf', 'RIPermintaanPrivasiController@ri_permintaan_privasi_pdf');
