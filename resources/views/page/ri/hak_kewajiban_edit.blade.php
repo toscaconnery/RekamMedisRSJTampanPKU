@@ -53,7 +53,8 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" id="register_form">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_hak_kewajiban_edit">
+            {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
                 Pemberian Informasi
@@ -216,11 +217,14 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Penanda Tangan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="nama_penanda_tangan" disabled="" value="{{$nama_penanda_tangan}}">
+                    <input type="text" class="form-control" name="nama_penanda_tangan" value="{{$nama_penanda_tangan}}">
                   </div>
                 </div>
               </div>
             </section>
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </form>
         </div>
       </div>

@@ -323,8 +323,9 @@ Route::get('/doc_ri_resume', function () {
 
 Route::get('/ri_dpjp_case', 'RIDPJPCaseController@get_ri_dpjp_case');
 Route::post('/ri_dpjp_case', 'RIDPJPCaseController@post_ri_dpjp_case');
-Route::get('/ri_dpjp_case_read', 'RIDPJPCaseController@post_ri_dpjp_case_read'); // new add
-
+Route::get('/ri_dpjp_case_read', 'RIDPJPCaseController@get_ri_dpjp_case_read');
+Route::get('/ri_dpjp_case_edit', 'RIDPJPCaseController@get_ri_dpjp_case_edit');
+Route::post('/ri_dpjp_case_edit', 'RIDPJPCaseController@post_ri_dpjp_case_edit');
 
 //dokumen dpjp case
 Route::get('/ri_dpjpcase_pdf', 'RIDPJPCaseController@ri_dpjpcase_pdf');
@@ -434,6 +435,8 @@ Route::get('/doc_ri_spd', function () {
 Route::get('/ri_persetujuan_umum', 'RIPersetujuanUmumController@get_ri_persetujuan_umum');
 Route::post('/ri_persetujuan_umum', 'RIPersetujuanUmumController@post_ri_persetujuan_umum');
 Route::get('/ri_persetujuan_umum_read', 'RIPersetujuanUmumController@get_ri_persetujuan_umum_read');
+Route::get('/ri_persetujuan_umum_edit', 'RIPersetujuanUmumController@get_ri_persetujuan_umum_edit');
+Route::post('/ri_persetujuan_umum_edit', 'RIPersetujuanUmumController@post_ri_persetujuan_umum_edit');
 
 //dokumen ri persetujuan umum
 Route::get('/ri_persetujuan_umum_pdf', 'RIPersetujuanUmumController@ri_persetujuan_umum_pdf');
@@ -445,6 +448,8 @@ Route::get('/doc_ri_persetujuan_umum', function () {
 Route::get('/ri_hak_kewajiban', 'RIHakKewajibanController@get_ri_hak_kewajiban');
 Route::post('/ri_hak_kewajiban', 'RIHakKewajibanController@post_ri_hak_kewajiban');
 Route::get('/ri_hak_kewajiban_read', 'RIHakKewajibanController@get_ri_hak_kewajiban_read');
+Route::get('/ri_hak_kewajiban_edit', 'RIHakKewajibanController@get_ri_hak_kewajiban_edit');
+Route::post('/ri_hak_kewajiban_edit', 'RIHakKewajibanController@post_ri_hak_kewajiban_edit');
 
 //dokumen permintaan hak dan kewajiban
 Route::get('/ri_hakkewajiban_pdf', 'RIHakKewajibanController@ri_hakkewajiban_pdf');

@@ -36,17 +36,36 @@ class RIPersetujuanUmumController extends Controller
 		return redirect('daftar_dokumen');
     }
 
-    public function get_ri_persetujuan_umum_read()
+    public function get_ri_persetujuan_umum_data()
     {
-        $pasien = RIPersetujuanUmum::where('id', 1)->first();
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RIPersetujuanUmum::where('id_regis', $id_pasien)->first();
         
         $this->data['id_regis'] = $pasien->id_regis;
-        
         $this->data['nama_petugas'] = $pasien->nama_petugas;
         $this->data['nama_pasien_keluarga'] = $pasien->nama_pasien_keluarga;
+    }
 
+    public function get_ri_persetujuan_umum_read()
+    {
+        $this->get_ri_persetujuan_umum_data();
         return view('page.ri.persetujuan_umum_read', $this->data);
+    }
 
+    public function get_ri_persetujuan_umum_edit()
+    {
+        $this->get_ri_persetujuan_umum_data();
+        return view('page.ri.persetujuan_umum_edit', $this->data);
+    }
+
+    public function post_ri_persetujuan_umum_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RIPersetujuanUmum::where('id_regis', $id_pasien)->first();
+        $data->nama_petugas = $request->nama_petugas;
+        $data->nama_pasien_keluarga = $request->nama_pasien_keluarga;
+        $data->save();
+        return redirect('daftar_dokumen');
     }
 
     public function ri_persetujuan_umum_pdf()
@@ -55,7 +74,6 @@ class RIPersetujuanUmumController extends Controller
         $pasien = RIPersetujuanUmum::where('id', 1)->first();
         
         $this->data['id_regis'] = $pasien->id_regis;
-        
         $this->data['nama_petugas'] = $pasien->nama_petugas;
         $this->data['nama_pasien_keluarga'] = $pasien->nama_pasien_keluarga;
 

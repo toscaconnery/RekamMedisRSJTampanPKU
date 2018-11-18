@@ -22,7 +22,6 @@ class RIHakKewajibanController extends Controller
 
     public function post_ri_hak_kewajiban(Request $request)
     {
-
     	$data = new RIHakKewajiban;
     	$id_pasien = Session::get('id_pasien');
     	$data->id_regis = $id_pasien;
@@ -35,15 +34,33 @@ class RIHakKewajibanController extends Controller
         return redirect('daftar_dokumen');
     }
 
+    public function get_ri_hak_kewajiban_data()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RIHakKewajiban::where('id_regis', $id_pasien)->first();
+        $this->data['id_regis'] = $pasien->id_regis;   
+        $this->data['nama_penanda_tangan'] = $pasien->nama_penanda_tangan;
+    }
+
     public function get_ri_hak_kewajiban_read()
     {
-        $pasien = RIHakKewajiban::where('id', 1)->first();
-        
-        $this->data['id_regis'] = $pasien->id_regis;
-        
-        $this->data['nama_penanda_tangan'] = $pasien->nama_penanda_tangan;
-
+        $this->get_ri_hak_kewajiban_data();
         return view('page.ri.hak_kewajiban_read', $this->data);
+    }
+
+    public function get_ri_hak_kewajiban_edit()
+    {
+        $this->get_ri_hak_kewajiban_data();
+        return view('page.ri.hak_kewajiban_edit', $this->data);
+    }
+
+    public function post_ri_hak_kewajiban_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RIHakKewajiban::where('id_regis', $id_pasien)->first();
+        $data->nama_penanda_tangan = $request->nama_penanda_tangan;
+        $data->save();
+        return redirect('daftar_dokumen');
     }
 
     public function ri_hakkewajiban_pdf()

@@ -58,7 +58,8 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" id="register_form">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_persetujuan_umum_edit">
+            {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
                 Pemberian Informasi
@@ -205,7 +206,7 @@
                         <div class="form-group">
                           <label class="col-sm-2 control-label">Nama Petugas Rekam Medis</label>
                           <div class="col-sm-8">
-                            <input type="text" class="form-control" name="nama_petugas" disabled="" value="{{$nama_petugas}}">
+                            <input type="text" class="form-control" name="nama_petugas" value="{{$nama_petugas}}">
                           </div>
                         </div>
                         <div class="form-group">
@@ -231,7 +232,7 @@
                         <div class="form-group">
                           <label class="col-sm-2 control-label">Nama Pasien/Keluarga</label>
                           <div class="col-sm-8">
-                            <input type="text" class="form-control" name="nama_pasien_keluarga" disabled="" value="{{$nama_pasien_keluarga}}">
+                            <input type="text" class="form-control" name="nama_pasien_keluarga" value="{{$nama_pasien_keluarga}}">
                           </div>
                         </div>
                       </div>
@@ -240,6 +241,10 @@
                 </table>
               </div>
             </section>
+
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </form>
         </div>
       </div>
