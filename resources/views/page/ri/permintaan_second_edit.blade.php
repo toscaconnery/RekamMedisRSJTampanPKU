@@ -41,9 +41,8 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                     <a class="btn btn-primary" href="{{url('')}}/ri_permintaan_second_pdf">PDF</a>
+                      <a class="btn btn-success" href="#">EDIT</a>
                     </div>
                   </td>
                 </tr>
@@ -55,7 +54,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_permintaan_second">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_permintaan_second_edit">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
@@ -70,13 +69,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="nama">
+                    <input type="text" class="form-control" name="nama" value="{{$nama}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Umur</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="umur">
+                    <input type="text" class="form-control" name="umur" value="{{$umur}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -84,13 +83,13 @@
                   <div class="col-sm-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jk" value="1">
+                        <input type="radio" name="jk" value="1" {{$jk == 1 ? 'checked' : ''}}>
                         Laki-laki
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jk" value="0">
+                        <input type="radio" name="jk" value="0" {{$jk == 0 ? 'checked' : ''}}>
                         Perempuan
                       </label>
                     </div>
@@ -99,13 +98,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="alamat">
+                    <input type="text" class="form-control" name="alamat" value="{{$alamat}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Agama</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="agama">
+                    <input type="text" class="form-control" name="agama" value="{{$agama}}">
                   </div>
                 </div>
               </div>
@@ -124,7 +123,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label"></label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="permintaan_opini">
+                    <input type="text" class="form-control" name="permintaan_opini" value="{{$permintaan_opini}}">
                   </div>
                 </div>
               </div>
@@ -137,13 +136,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="nama_hub">
+                    <input type="text" class="form-control" name="nama_hub" value="{{$nama_hub}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Umur</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="umur_hub">
+                    <input type="text" class="form-control" name="umur_hub" value="{{$umur_hub}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -151,13 +150,13 @@
                   <div class="col-sm-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jk_hub" value="1">
+                        <input type="radio" name="jk_hub" value="1" {{$jk_hub == 1 ? 'checked' : ''}}>
                         Laki-laki
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jk_hub" value="0">
+                        <input type="radio" name="jk_hub" value="0" {{$jk_hub == 0 ? 'checked' : ''}}>
                         Perempuan
                       </label>
                     </div>
@@ -166,19 +165,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="alamat_hub">
+                    <input type="text" class="form-control" name="alamat_hub" value="{{$alamat_hub}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Agama</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="agama_hub">
+                    <input type="text" class="form-control" name="agama_hub" value="{{$agama_hub}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">No.Telp</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="no_telp_hub">
+                    <input type="text" class="form-control" name="no_telp_hub" value="{{$no_telp_hub}}">
                   </div>
                 </div>
               </div>
@@ -211,19 +210,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal" value="{{$tanggal}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Saksi</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="nama_saksi">
+                    <input type="text" class="form-control" name="nama_saksi" value="{{$nama_saksi}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Pasien/Wali</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="nama_pasien_wali">
+                    <input type="text" class="form-control" name="nama_pasien_wali" value="{{$nama_pasien_wali}}">
                   </div>
                 </div>
               </div>

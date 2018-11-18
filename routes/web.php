@@ -487,6 +487,8 @@ Route::get('/doc_ri_permintaan_rohani', function () {
 Route::get('/ri_permintaan_second', 'RIPermintaanSecondController@get_ri_permintaan_second');
 Route::post('/ri_permintaan_second', 'RIPermintaanSecondController@post_ri_permintaan_second');
 Route::get('/ri_permintaan_second_read', 'RIPermintaanSecondController@get_ri_permintaan_second_read');
+Route::get('/ri_permintaan_second_edit', 'RIPermintaanSecondController@get_ri_permintaan_second_edit');
+Route::post('/ri_permintaan_second_edit', 'RIPermintaanSecondController@post_ri_permintaan_second_edit');
 
 //dokumen permintaan second
 Route::get('/ri_permintaan_second_pdf', 'RIPermintaanSecondController@ri_permintaan_second_pdf');
