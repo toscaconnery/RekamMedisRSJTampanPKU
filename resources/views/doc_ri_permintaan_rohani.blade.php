@@ -21,27 +21,27 @@ header('Content-Type: application/pdf');
       </tr>
       <tr>
         <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $nama }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $umur }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Jenis Kelamin</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $jk }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $alamat }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Agama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $agama }}</td>
       </tr>
        <tr>
         <td class="konten_s_question">No.Telp</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $no_telp}}</td>
       </tr>
       <tr>
         <td class="konten_s_question" colspan="2">
@@ -51,31 +51,31 @@ header('Content-Type: application/pdf');
       </tr>
       <tr>
         <td class="konten_s_question">Hubungan dengan pasien</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $hub }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $nama_hub }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $umur_hub }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Jenis Kelamin</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $jk_hub }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $alamat }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Agama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $agama }}</td>
       </tr>
       <tr>
         <td class="konten_s_question">No.Telp</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{ $no_telp_hub }}</td>
       </tr>
     </tbody>
   </table>
@@ -84,12 +84,12 @@ header('Content-Type: application/pdf');
     <tr>
       <td class="konten_s_question" colspan="2">
         <br>
-        Dengan ini meminta diberikan pelayanan kerohanian ...
+        Dengan ini meminta diberikan pelayanan kerohanian {{ $permintaan_rohani }}
       </td>
     </tr>
     <tr>
       <td class="konten_s_question" colspan="2">
-        terhadap "saya"  
+        terhadap {{ $hd }}  
       </td>
     </tr>
   </table>
@@ -107,7 +107,7 @@ header('Content-Type: application/pdf');
         <br>
         <br>
         <br>
-        (......................)
+        ( {{ $nama_saksi }} )
       </td>
       <td class="ttd2">
         Pekanbaru, 25 September 2018<br>Pemohon
@@ -116,7 +116,7 @@ header('Content-Type: application/pdf');
         <br>
         <br>
         <br>
-        (......................)
+        ( {{ $nama_pemohon }} )
       </td>
     </tr>  
   </table>

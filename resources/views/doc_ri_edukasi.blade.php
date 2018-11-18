@@ -43,19 +43,25 @@ header('Content-Type: application/pdf');
           <p>e. Komplikasi yang mungkin terjadi</p>
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$medis_materi}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$medis_metode}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
           Mampu menjelaskan point: a,b,c,d,e
         </td>
-        <td class="default" style="text-align:left;height:30px;">
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
           
         </td>
-        <td class="default" style="text-align:left;height:30px;">
-          
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
+          {{$medis_nama_edukator}}
         </td>
       </tr> 
 
@@ -71,19 +77,25 @@ header('Content-Type: application/pdf');
           <p>b. Farmakologi</p>
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$mj_materi}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$mj_metode}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
           Mampu menjelaskan point: a,b<br>Mampu mendemonstrasikan point: 1,2
         </td>
-        <td class="default" style="text-align:left;height:30px;">
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
           
         </td>
-        <td class="default" style="text-align:left;height:30px;">
-          
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
+          {{$mj_nama_edukator}}
         </td>
       </tr>
 
@@ -100,19 +112,25 @@ header('Content-Type: application/pdf');
           <p>e. - </p>
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$psikologis_materi}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$psikologis_metode}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
           Mampu menjelaskan point: a,b,c,d,e
         </td>
-        <td class="default" style="text-align:left;height:30px;">
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
           
         </td>
-        <td class="default" style="text-align:left;height:30px;">
-          
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
+          {{$psikologis_nama_edukator}}
         </td>
       </tr>  
 
@@ -133,19 +151,25 @@ header('Content-Type: application/pdf');
           <p>f. Sumber-sumber pelayanan kesehatan di komunitas</p>
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$keperawatan_materi}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$keperawatan_metode}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
           Mampu menjelaskan point: <br>a. 1),2),3)<br>b.<br>c.<br>d.<br>e.<br>f.<br> Mampu mendemonstrasikan <br> 1)Cucitangan <br> 2)Penggunaan alat medis
         </td>
-        <td class="default" style="text-align:left;height:30px;">
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
           
         </td>
-        <td class="default" style="text-align:left;height:30px;">
-          
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
+          {{$keperawatan_nama_edukator}}
         </td>
       </tr>    
 
@@ -163,19 +187,25 @@ header('Content-Type: application/pdf');
           <p>f. Interaksi antar obat & interaksi obat dengan makanan</p>
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$farmasi_materi}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$farmasi_metode}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
           Mampu menjelaskan point: a,b,c,d,e,f
         </td>
-        <td class="default" style="text-align:left;height:30px;">
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
           
         </td>
-        <td class="default" style="text-align:left;height:30px;">
-          
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+           <br>
+          <br>
+          <br>
+          {{$farmasi_nama_edukator}}
         </td>
       </tr>
 
@@ -191,19 +221,25 @@ header('Content-Type: application/pdf');
           <p>d. Diet di Rumah</p>
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$nutrisi_materi}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$nutrisi_metode}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
           Mampu menjelaskan point: a,b,c,d
         </td>
-        <td class="default" style="text-align:left;height:30px;">
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
           
         </td>
-        <td class="default" style="text-align:left;height:30px;">
-          
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
+          {{$nutrisi_nama_edukator}}
         </td>
       </tr>
 
@@ -216,19 +252,25 @@ header('Content-Type: application/pdf');
           <p>Bimbingan & Konseling Rohani</p>
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$kerohanian_materi}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$kerohanian_metode}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
           Mampu menjelaskan & mendemonstrasikan Bimbingan dan Konseling rohani
         </td>
-        <td class="default" style="text-align:left;height:30px;">
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
           
         </td>
-        <td class="default" style="text-align:left;height:30px;">
-          
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
+          {{$kerohanian_nama_edukator}}
         </td>
       </tr>      
 
@@ -243,19 +285,25 @@ header('Content-Type: application/pdf');
           <p>c. Terapi Wicara</p>
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$rehabilitasi_materi}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$rehabilitasi_materi}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
           Mampu menjelaskan & mendemonstraskikan point: a,b,c
         </td>
-        <td class="default" style="text-align:left;height:30px;">
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
           
         </td>
-        <td class="default" style="text-align:left;height:30px;">
-          
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+           <br>
+          <br>
+          <br>
+          {{$rehabilitasi_nama_edukator}}
         </td>
       </tr>     
 
@@ -267,19 +315,25 @@ header('Content-Type: application/pdf');
           <p><b>Delay Treatment</b></p>
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$dt_materi}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
-          
+          {{$dt_metode}}
         </td>
         <td class="default" style="text-align:left;height:30px;">
+          {{$dt_evaluasi}}
+        </td>
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
           
         </td>
-        <td class="default" style="text-align:left;height:30px;">
-          
-        </td>
-        <td class="default" style="text-align:left;height:30px;">
-          
+        <td class="default" style="vertical-align:bottom;text-align:center;height:30px;">
+          <br>
+          <br>
+          <br>
+          {{$dt_nama_edukator}}
         </td>
       </tr>             
     </tbody>

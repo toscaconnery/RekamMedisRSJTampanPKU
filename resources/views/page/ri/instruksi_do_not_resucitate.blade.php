@@ -54,7 +54,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_instruksi_do_not_resucitate">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_instruksi_resucitate_pdf">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
