@@ -54,8 +54,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_permintaan_privasi">
-            {{ csrf_field() }}
+          <form class="form-horizontal form-validate" id="register_form">
             <section class="panel">
               <header class="panel-heading">
                 Pemohon
@@ -279,7 +278,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" name="tanggal" disabled="" value="{{$tanggal}}">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal" disabled="" value="{{$tanggal}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -296,11 +295,6 @@
                 </div>
               </div>
             </section>
-
-            <div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-
           </div>
         </div>
       </section>

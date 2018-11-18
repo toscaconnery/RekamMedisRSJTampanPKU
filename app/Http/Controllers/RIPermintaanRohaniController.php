@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIPermintaanRohani;
+use App\Models\ListDocument;
 use Session;
 use View;
 
@@ -46,12 +47,17 @@ class RIPermintaanRohaniController extends Controller
         $data->nama_pemohon = $request->nama_pemohon;
         $data->save();
 
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        $daftar_dokumen->ri_permintaan_rohani = True;
+        $daftar_dokumen->save();
+
     	return redirect('daftar_dokumen');
     }
 
-    public function get_ri_permintaan_rohani_read()
+    public function get_ri_permintaan_rohani_data()
     {
-        $pasien = RIPermintaanRohani::where('id', 1)->first();
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RIPermintaanRohani::where('id_regis', $id_pasien)->first();
         
         $this->data['id_regis'] = $pasien->id_regis;
 
@@ -78,7 +84,47 @@ class RIPermintaanRohaniController extends Controller
         $this->data['nama_saksi'] = $pasien->nama_saksi;
         $this->data['nama_pemohon'] = $pasien->nama_pemohon;
 
+    }
+
+    public function get_ri_permintaan_rohani_read()
+    {
+        $this->get_ri_permintaan_rohani_data();
         return view('page.ri.permintaan_rohani_read', $this->data);
+    }
+
+    public function get_ri_permintaan_rohani_edit()
+    {
+        $this->get_ri_permintaan_rohani_data();
+        return view('page.ri.permintaan_rohani_edit', $this->data);
+    }
+
+    public function post_ri_permintaan_rohani_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RIPermintaanRohani::where('id_regis', $id_pasien)->first();
+        $data->id_regis = $id_pasien;
+        $data->nama = $request->nama;
+        $data->umur = $request->umur;
+        $data->jk = $request->jk;
+        $data->alamat = $request->alamat;
+        $data->agama = $request->agama;
+        $data->no_telp = $request->no_telp;
+        $data->hub = $request->hub;
+        $data->hub_lain = $request->hub_lain;
+        $data->nama_hub = $request->nama_hub;
+        $data->umur_hub = $request->umur_hub;
+        $data->jk_hub = $request->jk_hub;
+        $data->alamat_hub = $request->alamat_hub;
+        $data->agama_hub = $request->agama_hub;
+        $data->no_telp_hub = $request->no_telp_hub;
+        $data->permintaan_rohani = $request->permintaan_rohani;
+        $data->hd = $request->hd;
+        $data->keterangan_hd = $request->keterangan_hd;
+        $data->tanggal = $request->tanggal;
+        $data->nama_saksi = $request->nama_saksi;
+        $data->nama_pemohon = $request->nama_pemohon;
+        $data->save();
+        return redirect('daftar_dokumen');
     }
 
     public function ri_permintaan_rohani_pdf()

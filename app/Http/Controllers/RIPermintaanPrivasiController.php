@@ -47,13 +47,19 @@ class RIPermintaanPrivasiController extends Controller
         $data->nama_saksi = $request->nama_saksi;
         $data->nama_pemohon = $request->nama_pemohon;
         $data->save();
+
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        $daftar_dokumen->ri_permintaan_privasi = True;
+        $daftar_dokumen->save();
+
     	return redirect('daftar_dokumen');
     }
 
-    public function get_ri_permintaan_privasi_read()
-    {
-        $pasien = RIPermintaanPrivasi::where('id', 1)->first();
-        
+    public function get_ri_permintaan_privasi_data()
+    {        
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RIPermintaanPrivasi::where('id_regis', $id_pasien)->first();
+
         $this->data['id_regis'] = $pasien->id_regis;
 
         $this->data['nama'] = $pasien->nama;
@@ -77,8 +83,47 @@ class RIPermintaanPrivasiController extends Controller
         $this->data['tanggal'] = $pasien->tanggal;
         $this->data['nama_saksi'] = $pasien->nama_saksi;
         $this->data['nama_pemohon'] = $pasien->nama_pemohon;
+    }
 
+    public function get_ri_permintaan_privasi_read()
+    {
+        $this->get_ri_permintaan_privasi_data();
         return view('page.ri.permintaan_privasi_read', $this->data);
+    }
+
+    public function get_ri_permintaan_privasi_edit()
+    {
+        $this->get_ri_permintaan_privasi_data();
+        return view('page.ri.permintaan_privasi_edit', $this->data);
+    }
+
+    public function post_ri_permintaan_privasi_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RIPermintaanPrivasi::where('id_regis', $id_pasien)->first();
+        $data->nama = $request->nama;
+        $data->umur = $request->umur;
+        $data->jk = $request->jk;
+        $data->alamat = $request->alamat;
+        $data->agama = $request->agama;
+        $data->no_telp = $request->no_telp;
+        $data->hub = $request->hub;
+        $data->hub_lain = $request->hub_lain;
+        $data->nama_hub = $request->nama_hub;
+        $data->umur_hub = $request->umur_hub;
+        $data->jk_hub = $request->jk_hub;
+        $data->alamat_hub = $request->alamat_hub;
+        $data->agama_hub = $request->agama_hub;
+        $data->no_telp_hub = $request->no_telp_hub;
+        $data->permintaan_privasi = $request->permintaan_privasi;
+        $data->keterangan_pp_1 = $request->keterangan_pp_1;
+        $data->keterangan_pp_2 = $request->keterangan_pp_2;
+        $data->keterangan_pp_3 = $request->keterangan_pp_3;
+        $data->tanggal = $request->tanggal;
+        $data->nama_saksi = $request->nama_saksi;
+        $data->nama_pemohon = $request->nama_pemohon;
+        $data->save();
+        return redirect('daftar_dokumen');
     }
 
     public function ri_permintaan_privasi_pdf()

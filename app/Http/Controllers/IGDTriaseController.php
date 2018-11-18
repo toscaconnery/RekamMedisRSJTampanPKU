@@ -171,7 +171,7 @@ class IGDTriaseController extends Controller
     	}
     	$data->save();
 
-        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
         $daftar_dokumen->igd_triase = True;
         $daftar_dokumen->save();
 
