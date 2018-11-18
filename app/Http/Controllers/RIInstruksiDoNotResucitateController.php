@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIInstruksiDoNotResucitate;
+use App\Models\ListDocument;
 use Session;
 use View;
 
@@ -30,23 +31,48 @@ class RIInstruksiDoNotResucitateController extends Controller
     	$data->dokter = $request->dokter;
     	$data->save();
 
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        $daftar_dokumen->ri_instruksi_do_not_resucitate = True;
+        $daftar_dokumen->save();
+
     	return redirect('daftar_dokumen');
 
     }
 
-    public function get_ri_instruksi_do_not_resucitate_read()
+    public function get_ri_instruksi_do_not_resucitate_data()
     {
-        $pasien = RIInstruksiDoNotResucitate::where('id', 1)->first();
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RIInstruksiDoNotResucitate::where('id_regis', $id_pasien)->first();
         
         $this->data['id_regis'] = $pasien->id_regis;
-
         $this->data['nama_pasien'] = $pasien->nama_pasien;
         $this->data['tanggal_lahir'] = $pasien->tanggal_lahir;
         $this->data['alamat'] = $pasien->alamat;
         $this->data['dokter'] = $pasien->dokter;
+    }
 
+    public function get_ri_instruksi_do_not_resucitate_read()
+    {
+        $this->get_ri_instruksi_do_not_resucitate_data();
         return view('page.ri.instruksi_do_not_resucitate_read', $this->data);
+    }
 
+    public function get_ri_instruksi_do_not_resucitate_edit()
+    {
+        $this->get_ri_instruksi_do_not_resucitate_data();
+        return view('page.ri.instruksi_do_not_resucitate_edit', $this->data);
+    }
+
+    public function post_ri_instruksi_do_not_resucitate_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RIInstruksiDoNotResucitate::where('id_regis', $id_pasien)->first();
+        $data->nama_pasien = $request->nama_pasien;
+        $data->tanggal_lahir = $request->tanggal_lahir;
+        $data->alamat = $request->alamat;
+        $data->dokter = $request->dokter;
+        $data->save();
+        dd($request);
     }
 
     public function ri_instruksi_resucitate_pdf()

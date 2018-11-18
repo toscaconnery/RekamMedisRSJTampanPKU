@@ -547,6 +547,8 @@ Route::get('/doc_ri_permintaan_notresucitate', function () {
 Route::get('/ri_instruksi_do_not_resucitate', 'RIInstruksiDoNotResucitateController@get_ri_instruksi_do_not_resucitate');
 Route::post('/ri_instruksi_do_not_resucitate', 'RIInstruksiDoNotResucitateController@post_ri_instruksi_do_not_resucitate');
 Route::get('/ri_instruksi_do_not_resucitate_read', 'RIInstruksiDoNotResucitateController@get_ri_instruksi_do_not_resucitate_read');
+Route::get('/ri_instruksi_do_not_resucitate_edit', 'RIInstruksiDoNotResucitateController@get_ri_instruksi_do_not_resucitate_edit');
+Route::post('/ri_instruksi_do_not_resucitate_edit', 'RIInstruksiDoNotResucitateController@post_ri_instruksi_do_not_resucitate_edit');
 
 //dokumen instruksi jangan dilakukan resusitasi
 Route::get('/ri_instruksi_resucitate_pdf', 'RIInstruksiDoNotResucitateController@ri_instruksi_resucitate_pdf');

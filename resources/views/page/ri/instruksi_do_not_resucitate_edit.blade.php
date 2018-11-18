@@ -53,7 +53,8 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" id="register_form">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_instruksi_do_not_resucitate_edit">
+            {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
                 Formulir
@@ -69,19 +70,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Pasien</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="nama_pasien" disabled="" value="{{$nama_pasien}}">
+                    <input type="text" class="form-control" name="nama_pasien" value="{{$nama_pasien}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Lahir</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_lahir" disabled="" value="{{$tanggal_lahir}}">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_lahir" value="{{$tanggal_lahir}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="alamat" disabled="" value="{{$alamat}}">
+                    <input type="text" class="form-control" name="alamat" value="{{$alamat}}">
                   </div>
                 </div>
               </div>
@@ -180,11 +181,15 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Dokter</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="dokter" disabled="" value="{{$dokter}}">
+                    <input type="text" class="form-control" name="dokter" value="{{$dokter}}">
                   </div>
                 </div>
               </div>
             </section>
+
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </form>
         </div>
       </div>

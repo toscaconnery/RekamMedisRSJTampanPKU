@@ -54,7 +54,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_instruksi_resucitate_pdf">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_instruksi_do_not_resucitate">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
@@ -77,7 +77,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Lahir</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" name="tanggal_lahir">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_lahir">
                   </div>
                 </div>
                 <div class="form-group">
