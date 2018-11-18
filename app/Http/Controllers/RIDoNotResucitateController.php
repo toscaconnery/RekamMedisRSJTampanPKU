@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIDoNotResucitate;
+use App\Models\ListDocument;
 use Session;
 use View;
 
@@ -32,12 +33,17 @@ class RIDoNotResucitateController extends Controller
     	$data->saksi_pemberi_asuhan = $request->saksi_pemberi_asuhan;
     	$data->save();
 
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        $daftar_dokumen->ri_do_not_resucitate = True;
+        $daftar_dokumen->save();
+
     	return redirect('daftar_dokumen');
     }
 
-    public function get_ri_do_not_resucitate_read()
+    public function get_ri_do_not_resucitate_data()
     {
-        $pasien = RIDoNotResucitate::where('id', 1)->first();
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RIDoNotResucitate::where('id_regis', $id_pasien)->first();
         
         $this->data['id_regis'] = $pasien->id_regis;
 
@@ -47,8 +53,32 @@ class RIDoNotResucitateController extends Controller
         $this->data['yang_menyatakan'] = $pasien->yang_menyatakan;
         $this->data['saksi_keluarga'] = $pasien->saksi_keluarga;
         $this->data['saksi_pemberi_asuhan'] = $pasien->saksi_pemberi_asuhan;
+    }
 
+    public function get_ri_do_not_resucitate_read()
+    {
+        $this->get_ri_do_not_resucitate_data();
         return view('page.ri.do_not_resucitate_read', $this->data);
+    }
+
+    public function get_ri_do_not_resucitate_edit()
+    {
+        $this->get_ri_do_not_resucitate_data();
+        return view('page.ri.do_not_resucitate_edit', $this->data);
+    }
+
+    public function post_ri_do_not_resucitate_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RIDoNotResucitate::where('id_regis', $id_pasien)->first();
+        $data->nama = $request->nama;
+        $data->alamat = $request->alamat;
+        $data->agama = $request->agama;
+        $data->yang_menyatakan = $request->yang_menyatakan;
+        $data->saksi_keluarga = $request->saksi_keluarga;
+        $data->saksi_pemberi_asuhan = $request->saksi_pemberi_asuhan;
+        $data->save();
+        return redirect('daftar_dokumen');
     }
 
     public function ri_permintaan_notresucitate_pdf()

@@ -53,7 +53,8 @@
 
     <div class="row">
       <div class="col-lg-12">
-        <form class="form-horizontal form-validate" id="register_form">
+        <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_do_not_resucitate_edit">
+          {{ csrf_field() }}
           <section class="panel">
             <header class="panel-heading">
               Pemohon
@@ -68,19 +69,19 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Nama</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="nama" disabled="" value="{{$nama}}">
+                  <input type="text" class="form-control" name="nama" value="{{$nama}}">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Alamat</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="alamat" disabled="" value="{{$alamat}}">
+                  <input type="text" class="form-control" name="alamat" value="{{$alamat}}">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Agama</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="agama" disabled="" value="{{$agama}}">
+                  <input type="text" class="form-control" name="agama" value="{{$agama}}">
                 </div>
               </div>
             </div>
@@ -121,23 +122,27 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Yang Menyatakan</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="yang_menyatakan" disabled="" value="{{$yang_menyatakan}}">
+                  <input type="text" class="form-control" name="yang_menyatakan" value="{{$yang_menyatakan}}">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Saksi Keluarga</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="saksi_keluarga" disabled="" value="{{$saksi_keluarga}}">
+                  <input type="text" class="form-control" name="saksi_keluarga" value="{{$saksi_keluarga}}">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Saksi Pemberi Asuhan</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" name="saksi_pemberi_asuhan" disabled="" value="{{$saksi_pemberi_asuhan}}">
+                  <input type="text" class="form-control" name="saksi_pemberi_asuhan" value="{{$saksi_pemberi_asuhan}}">
                 </div>
               </div>
             </div>
           </section>
+
+          <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
         </form>
       </div>
     </div>

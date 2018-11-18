@@ -531,6 +531,8 @@ Route::get('/doc_ri_penolakan_tindakan', function () {
 Route::get('/ri_do_not_resucitate', 'RIDoNotResucitateController@get_ri_do_not_resucitate');
 Route::post('/ri_do_not_resucitate', 'RIDoNotResucitateController@post_ri_do_not_resucitate');
 Route::get('/ri_do_not_resucitate_read', 'RIDoNotResucitateController@get_ri_do_not_resucitate_read');
+Route::get('/ri_do_not_resucitate_edit', 'RIDoNotResucitateController@get_ri_do_not_resucitate_edit');
+Route::post('/ri_do_not_resucitate_edit', 'RIDoNotResucitateController@post_ri_do_not_resucitate_edit');
 
 //dokumen permintaan jangan resusitasi
 Route::get('/ri_permintaan_notresucitate_pdf', 'RIDoNotResucitateController@ri_permintaan_notresucitate_pdf');
