@@ -474,6 +474,8 @@ Route::get('/doc_ri_permintaan_privasi', function () {
 Route::get('/ri_permintaan_rohani', 'RIPermintaanRohaniController@get_ri_permintaan_rohani');
 Route::post('/ri_permintaan_rohani', 'RIPermintaanRohaniController@post_ri_permintaan_rohani');
 Route::get('/ri_permintaan_rohani_read', 'RIPermintaanRohaniController@get_ri_permintaan_rohani_read');
+Route::get('/ri_permintaan_rohani_edit', 'RIPermintaanRohaniController@get_ri_permintaan_rohani_edit');
+Route::post('/ri_permintaan_rohani_edit', 'RIPermintaanRohaniController@post_ri_permintaan_rohani_edit');
 
 //dokumen permintaan rohani
 Route::get('/ri_permintaan_rohani_pdf', 'RIPermintaanRohaniController@ri_permintaan_rohani_pdf');
