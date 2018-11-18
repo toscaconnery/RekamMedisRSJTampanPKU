@@ -53,8 +53,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_surat_spd">
-            {{ csrf_field() }}
+          <form class="form-horizontal form-validate" id="register_form">
             <section class="panel">
               <header class="panel-heading">
               </header>
@@ -74,7 +73,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Lahir</label>
                   <div class="col-sm-8">
-                    <input type="date" class="form-control" name="tanggal_lahir" disabled="" value="{{$tanggal_lahir}}">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_lahir" disabled="" value="{{$tanggal_lahir}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -211,7 +210,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" name="tanggal_masuk_rs" disabled="" value="{{$tanggal_masuk_rs}}">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_masuk_rs" disabled="" value="{{$tanggal_masuk_rs}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -236,7 +235,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" name="tanggal" disabled="" value="{{$tanggal}}">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal" disabled="" value="{{$tanggal}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -247,10 +246,6 @@
                 </div>
               </div>
             </section>
-
-            <div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
           </form>
         </div>
       </div>

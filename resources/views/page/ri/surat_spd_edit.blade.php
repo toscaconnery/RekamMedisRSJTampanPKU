@@ -54,7 +54,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_surat_spd">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_surat_spd_edit">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
@@ -63,19 +63,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pendidikan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="pendidikan">
+                    <input type="text" class="form-control" name="pendidikan" value="{{$pendidikan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pekerjaan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="pekerjaan">
+                    <input type="text" class="form-control" name="pekerjaan" value="{{$pekerjaan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Lahir</label>
                   <div class="col-sm-8">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_lahir" value="{{Session::get('tanggal_lahir')}}">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_lahir" value="{{$tanggal_lahir}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -83,13 +83,13 @@
                   <div class="col-sm-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jk" value="1" {{Session::get('jenis_kelamin') == 'L' ? 'checked' : ''}}>
+                        <input type="radio" name="jk" value="1" {{$jk == 1 ? 'checked' : ''}}>
                         Laki-laki
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jk" value="0" {{Session::get('jenis_kelamin') == 'P' ? 'checked' : ''}}>
+                        <input type="radio" name="jk" value="0" {{$jk == 0 ? 'checked' : ''}}>
                         Perempuan
                       </label>
                     </div>
@@ -98,7 +98,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="alamat">
+                    <input type="text" class="form-control" name="alamat" value="{{$alamat}}">
                   </div>
                 </div>
               </div>
@@ -111,37 +111,37 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="nama_pj">
+                    <input type="text" class="form-control" name="nama_pj" value="{{$nama_pj}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="alamat_pj">
+                    <input type="text" class="form-control" name="alamat_pj" value="{{$alamat_pj}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">No.Telp/HP</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="no_telp_pj">
+                    <input type="text" class="form-control" name="no_telp_pj" value="{{$no_telp_pj}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label"></label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="no_telp_pj2">
+                    <input type="text" class="form-control" name="no_telp_pj2" value="{{$no_telp_pj2}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Ruang/Kelas</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="ruang">
+                    <input type="text" class="form-control" name="ruang" value="{{$ruang}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Cara Bayar</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="cara_bayar">
+                    <input type="text" class="form-control" name="cara_bayar" value="{{$cara_bayar}}">
                   </div>
                 </div>
               </div>
@@ -154,7 +154,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sebab Utama Dirawat</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="5" style="resize: none;" name="sebab_utama_dirawat"></textarea>
+                    <textarea class="form-control" rows="5" style="resize: none;" name="sebab_utama_dirawat">{{$sebab_utama_dirawat}}</textarea>
                   </div>
                 </div>
               </div>
@@ -167,7 +167,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Diagnosa</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="5" style="resize: none;" name="diagnosa"></textarea>
+                    <textarea class="form-control" rows="5" style="resize: none;" name="diagnosa">{{$diagnosa}}</textarea>
                   </div>
                 </div>
               </div>
@@ -180,13 +180,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">GAF (Global Asessment of Function)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="gaf">
+                    <input type="text" class="form-control" name="gaf" value="{{$gaf}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">PANSS - EC</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="panss_ec">
+                    <input type="text" class="form-control" name="panss_ec" value="{{$panss_ec}}">
                   </div>
                 </div>
               </div>
@@ -199,7 +199,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Terapi</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="5" style="resize: none;" name="terapi"></textarea>
+                    <textarea class="form-control" rows="5" style="resize: none;" name="terapi">{{$terapi}}</textarea>
                   </div>
                 </div>
               </div>
@@ -212,19 +212,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_masuk_rs">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_masuk_rs" value="{{$tanggal_masuk_rs}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Ruang</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="ruang_masuk_rs">
+                    <input type="text" class="form-control" name="ruang_masuk_rs" value="{{$ruang_masuk_rs}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kelas</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="kelas_masuk_rs">
+                    <input type="text" class="form-control" name="kelas_masuk_rs" value="{{$kelas_masuk_rs}}">
                   </div>
                 </div>
               </div>
@@ -237,13 +237,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal" value="{{$tanggal}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Dokter IGD/Klinik</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="dokter_igd_klinik">
+                    <input type="text" class="form-control" name="dokter_igd_klinik" value="{{$dokter_igd_klinik}}">
                   </div>
                 </div>
               </div>
