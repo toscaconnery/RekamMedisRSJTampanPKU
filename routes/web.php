@@ -448,6 +448,8 @@ Route::get('/doc_ri_persetujuan_umum', function () {
 Route::get('/ri_hak_kewajiban', 'RIHakKewajibanController@get_ri_hak_kewajiban');
 Route::post('/ri_hak_kewajiban', 'RIHakKewajibanController@post_ri_hak_kewajiban');
 Route::get('/ri_hak_kewajiban_read', 'RIHakKewajibanController@get_ri_hak_kewajiban_read');
+Route::get('/ri_hak_kewajiban_edit', 'RIHakKewajibanController@get_ri_hak_kewajiban_edit');
+Route::post('/ri_hak_kewajiban_edit', 'RIHakKewajibanController@post_ri_hak_kewajiban_edit');
 
 //dokumen permintaan hak dan kewajiban
 Route::get('/ri_hakkewajiban_pdf', 'RIHakKewajibanController@ri_hakkewajiban_pdf');
