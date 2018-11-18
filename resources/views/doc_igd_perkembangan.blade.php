@@ -25,102 +25,14 @@ header('Content-Type: application/pdf');
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td class="box-c">-</td>
-      <td class="box-c">-</td>
-      <td class="box">
-        <b>S - </b>
-        <br><b>O -</b>
-        <br><b>A -</b>
-        <br><b>P -</b>
-        <br>-
-      </td>
-      <td class="box-c">-</td>
-    </tr>
-     <tr>
-      <td class="box-c">-</td>
-      <td class="box-c">-</td>
-      <td class="box">
-        <b>S - </b>
-        <br><b>O -</b>
-        <br><b>A -</b>
-        <br><b>P -</b>
-        <br>-
-      </td>
-      <td class="box-c">-</td>
-    </tr>
-   <tr>
-      <td class="box-c">-</td>
-      <td class="box-c">-</td>
-      <td class="box">
-        <b>S - </b>
-        <br><b>O -</b>
-        <br><b>A -</b>
-        <br><b>P -</b>
-        <br>-
-      </td>
-      <td class="box-c">-</td>
-    </tr>
-    <tr>
-      <td class="box-c">-</td>
-      <td class="box-c">-</td>
-      <td class="box">
-        <b>S - </b>
-        <br><b>O -</b>
-        <br><b>A -</b>
-        <br><b>P -</b>
-        <br>-
-      </td>
-      <td class="box-c">-</td>
-    </tr>
-    <tr>
-      <td class="box-c">-</td>
-      <td class="box-c">-</td>
-      <td class="box">
-        <b>S - </b>
-        <br><b>O -</b>
-        <br><b>A -</b>
-        <br><b>P -</b>
-        <br>-
-      </td>
-      <td class="box-c">-</td>
-    </tr>
-    <tr>
-      <td class="box-c">-</td>
-      <td class="box-c">-</td>
-      <td class="box">
-        <b>S - </b>
-        <br><b>O -</b>
-        <br><b>A -</b>
-        <br><b>P -</b>
-        <br>-
-      </td>
-      <td class="box-c">-</td>
-    </tr>
-    <tr>
-      <td class="box-c">-</td>
-      <td class="box-c">-</td>
-      <td class="box">
-        <b>S - </b>
-        <br><b>O -</b>
-        <br><b>A -</b>
-        <br><b>P -</b>
-        <br>-
-      </td>
-      <td class="box-c">-</td>
-    </tr>
-    <tr>
-      <td class="box-c">-</td>
-      <td class="box-c">-</td>
-      <td class="box">
-        <b>S - </b>
-        <br><b>O -</b>
-        <br><b>A -</b>
-        <br><b>P -</b>
-        <br>-
-      </td>
-      <td class="box-c">-</td>
-    </tr>
+    @foreach($pasien as $p)
+      <tr id="form_{{$p['id_data']}}">
+        <td class="box-c">{{$p['tanggal']}}<br>{{$p['jam']}}</td>
+        <td class="box-c">{{$p['profesi_bagian']}}</td>
+        <td class="box">{{$p['hasil']}}</td>
+        <td class="box-c"><br><br></td>
+      </tr>
+    @endforeach
   </tbody>
 </table>
 
