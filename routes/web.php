@@ -323,8 +323,9 @@ Route::get('/doc_ri_resume', function () {
 
 Route::get('/ri_dpjp_case', 'RIDPJPCaseController@get_ri_dpjp_case');
 Route::post('/ri_dpjp_case', 'RIDPJPCaseController@post_ri_dpjp_case');
-Route::get('/ri_dpjp_case_read', 'RIDPJPCaseController@post_ri_dpjp_case_read'); // new add
-
+Route::get('/ri_dpjp_case_read', 'RIDPJPCaseController@get_ri_dpjp_case_read');
+Route::get('/ri_dpjp_case_edit', 'RIDPJPCaseController@get_ri_dpjp_case_edit');
+Route::post('/ri_dpjp_case_edit', 'RIDPJPCaseController@post_ri_dpjp_case_edit');
 
 //dokumen dpjp case
 Route::get('/ri_dpjpcase_pdf', 'RIDPJPCaseController@ri_dpjpcase_pdf');

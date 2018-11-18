@@ -122,7 +122,7 @@
                 </div>
                 <label class="col-sm-1 control-label" style="padding-left: 0mm; width: 3em;">Tanggal</label>
                 <div class="col-sm-1" style="width: 14em;">
-                  <input type="date" class="form-control" name="tanggal_dpjp_1">
+                  <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_dpjp_1">
                 </div>
               </div>
               <div class="form-group" id="form_dpjp_2">
@@ -132,7 +132,7 @@
                 </div>
                 <label class="col-sm-1 control-label" style="padding-left: 0mm; width: 3em;">Tanggal</label>
                 <div class="col-sm-1" style="width: 14em;">
-                  <input type="date" class="form-control" name="tanggal_dpjp_2">
+                  <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_dpjp_2">
                 </div>
                 <div class="col-sm-1" style="width: 5em; padding-left: 0em;">
                   <div class="btn-group">
@@ -162,7 +162,7 @@
                 </div>
                 <label class="col-sm-2 control-label">Tanggal</label>
                 <div class="col-sm-2">
-                  <input type="text" class="form-control" id="dp1" name="tanggal_pengalihan">
+                  <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pengalihan">
                 </div>
               </div>
               <div class="form-group">
@@ -228,7 +228,7 @@
       $('#tambah_dpjp').click(function() {
         var a = document.getElementById('jumlah_form_dpjp').value;
         a = parseInt(a) + 1;
-        $('#last_row_dpjp').before('<div class="form-group" id="form_dpjp_'+a+'"><label class="col-sm-2 control-label">DPJP</label><div class="col-sm-7"><input type="text" class="form-control" name="dpjp_'+a+'"></div><label class="col-sm-1 control-label" style="padding-left: 0mm; width: 3em;">Tanggal</label><div class="col-sm-1" style="width: 14em;"><input type="date" class="form-control" name="tanggal_dpjp_'+a+'"></div><div class="col-sm-1" style="width: 5em; padding-left: 0em;"><div class="btn-group"><button class="btn btn-primary tombol_hapus_dpjp" type="button" id="tombol_hapus_dpjp_'+a+'"><i class="icon_close_alt2"></i></button></div></div></div>');
+        $('#last_row_dpjp').before('<div class="form-group" id="form_dpjp_'+a+'"><label class="col-sm-2 control-label">DPJP</label><div class="col-sm-7"><input type="text" class="form-control" name="dpjp_'+a+'"></div><label class="col-sm-1 control-label" style="padding-left: 0mm; width: 3em;">Tanggal</label><div class="col-sm-1" style="width: 14em;"><input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_dpjp_'+a+'"></div><div class="col-sm-1" style="width: 5em; padding-left: 0em;"><div class="btn-group"><button class="btn btn-primary tombol_hapus_dpjp" type="button" id="tombol_hapus_dpjp_'+a+'"><i class="icon_close_alt2"></i></button></div></div></div>');
         document.getElementById('jumlah_form_dpjp').value = a;
       });
     });
