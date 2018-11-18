@@ -122,11 +122,11 @@ class RJInformasiEdukasiController extends Controller
     	if(isset($request->kebutuhan_10)) {
     		$data->kebutuhan_lain = $request->kebutuhan_lain;
     	}
-    	if($request->kesedian_menerima == 'true') {
-    		$data->kesedian_menerima = True;
+    	if($request->kesediaan_menerima == 'true') {
+    		$data->kesediaan_menerima = True;
     	}
     	else {
-    		$data->kesedian_menerima = False;
+    		$data->kesediaan_menerima = False;
     	}
     	$data->nama_keluarga = $request->nama_keluarga;
     	$data->hubungan= $request->hubungan;
