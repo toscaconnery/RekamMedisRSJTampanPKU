@@ -435,6 +435,8 @@ Route::get('/doc_ri_spd', function () {
 Route::get('/ri_persetujuan_umum', 'RIPersetujuanUmumController@get_ri_persetujuan_umum');
 Route::post('/ri_persetujuan_umum', 'RIPersetujuanUmumController@post_ri_persetujuan_umum');
 Route::get('/ri_persetujuan_umum_read', 'RIPersetujuanUmumController@get_ri_persetujuan_umum_read');
+Route::get('/ri_persetujuan_umum_edit', 'RIPersetujuanUmumController@get_ri_persetujuan_umum_edit');
+Route::post('/ri_persetujuan_umum_edit', 'RIPersetujuanUmumController@post_ri_persetujuan_umum_edit');
 
 //dokumen ri persetujuan umum
 Route::get('/ri_persetujuan_umum_pdf', 'RIPersetujuanUmumController@ri_persetujuan_umum_pdf');
