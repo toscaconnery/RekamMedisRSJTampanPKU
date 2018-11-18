@@ -26,7 +26,7 @@ header('Content-Type: application/pdf');
             Bahasa
           </td>    
           <td class="konten_s_answer">  
-            : Indonesia
+            : {{$bahasa}}
           </td>                
         </tr>
         <tr>
@@ -34,7 +34,7 @@ header('Content-Type: application/pdf');
             Kebutuhan Penterjemah
           </td>    
           <td class="konten_s_answer">  
-            : Tidak
+            : {{$penerjemah}}
           </td>                
         </tr>
         <tr>
@@ -42,7 +42,7 @@ header('Content-Type: application/pdf');
             Pendidikan Pasien
           </td>    
           <td class="konten_s_answer">  
-            : S-1
+            : {{$pendidikan}}
           </td>                
         </tr>
         <tr>
@@ -50,7 +50,7 @@ header('Content-Type: application/pdf');
             Baca dan Tulis
           </td>    
           <td class="konten_s_answer">  
-            : Baik
+            : {{$baca_tulis}}
           </td>                
         </tr>
         <tr>
@@ -58,7 +58,7 @@ header('Content-Type: application/pdf');
             Pilihan Cara Belajar
           </td>    
           <td class="konten_s_answer">  
-            : Tulisan
+            : {{$cara_belajar}}
           </td>                
         </tr>
         <tr>
@@ -66,7 +66,7 @@ header('Content-Type: application/pdf');
             Budaya/Suku/Etnis
           </td>    
           <td class="konten_s_answer">  
-            : Melayu
+            : {{$budaya}}
           </td>                
         </tr>
       </tbody>
@@ -79,7 +79,7 @@ header('Content-Type: application/pdf');
       <li>Kognitif terbatas</li>
       <li>Emosional</li>
       <li>Fisik lemah</li>
-      <li>Motivasi Kurang</li>
+      <li>...</li>
     </ul>
   </div>
 
@@ -88,17 +88,17 @@ header('Content-Type: application/pdf');
     <ul>
       <li>Proses Penyakit</li>
       <li>Pencegahan Faktor Risiko</li>
-      <li>Obat-obatan</li>
+      <li>...</li>
     </ul>
-    <p><b>Kedediaan Pasien dan/atau Keluarga/Wali untuk menerima informasi dan edukasi :</b> Ya</p>    
+    <p><b>Kesediaan Pasien dan/atau Keluarga/Wali untuk menerima informasi dan edukasi :</b> {{$kesediaan_menerima}}</p>    
   </div>
 
   <div style="font-size: 85%;">  
     <div class="row">
       <div class="column">
         <p><b>Keterangan Keluarga Wali</b></p>
-        <p>Nama : Ani Ananta</p>
-        <p>Hubungan dengan pasien : Ibu Kandung</p>
+        <p>Nama : {{$nama_keluarga}}</p>
+        <p>Hubungan dengan pasien : {{$hubunganh}}</p>
       </div>
       <div class="column">
         <p><b>Tanda Tangan Persetujuan Pernyataan</b></p>
@@ -106,7 +106,7 @@ header('Content-Type: application/pdf');
         <br>
         <br>
         <br>
-        <p>Ani Ananta</p>
+        <p>{{$nama_keluarga}}</p>
       </div>
     </div>
   </div>

@@ -7,6 +7,8 @@ use App\Models\RJInformasiEdukasi;
 use App\Models\RJEdukasiDiperoleh;
 use App\Models\ListDocument;
 use Session;
+use View;
+
 
 class RJInformasiEdukasiController extends Controller
 {
@@ -454,7 +456,8 @@ class RJInformasiEdukasiController extends Controller
 
     public function rj_infoedu_pdf()
     {
-        get_rj_informasi_edukasi_list_informasi_data();
+        $this->get_rj_informasi_edukasi_list_informasi_data();
+        $this->get_rj_informasi_edukasi_data();
 
         ob_clean();
 

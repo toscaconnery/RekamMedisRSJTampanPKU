@@ -417,7 +417,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Hubungan dengan pasien</label>
                   <div class="col-sm-10">
-                    <input disabled type="text" class="form-control" name="hubungan" value="{{$nama_keluarga}}">
+                    <input disabled type="text" class="form-control" name="hubungan" value="{{$hubungan}}">
                   </div>
                 </div>
                 <div>

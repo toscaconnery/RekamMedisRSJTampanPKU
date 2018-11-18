@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\IGDSuicideFisik;
 use App\Models\ListDocument;
 use Session;
+use View;
 
 class IGDSuicideFisikController extends Controller
 {
@@ -188,5 +189,136 @@ class IGDSuicideFisikController extends Controller
         $data->save();
 
         return redirect('daftar_dokumen');
+    }
+
+     public function answer($answer)
+    {
+        if($answer=='1')
+        {
+            return 'Yes';
+        }
+        else if($answer=='2')
+        {
+            return 'No';
+        }
+        else
+        {
+            return 'Not Known';
+        } 
+    }
+
+    public function igd_suicide_pdf()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $pasien = IGDSuicideFisik::where('id_regis', $id_pasien)->first();
+        
+        $this->data['id_regis'] = $pasien->id_regis;
+
+        $this->data['a1'] = $this->answer($pasien->a1);
+        $this->data['a2'] = $this->answer($pasien->a2);
+        $this->data['a3'] = $this->answer($pasien->a3);
+        $this->data['a4'] = $this->answer($pasien->a4);
+        $this->data['a5'] = $this->answer($pasien->a5);
+        $this->data['a6'] = $this->answer($pasien->a6);
+        $this->data['a7'] = $this->answer($pasien->a7);
+
+        $this->data['b1'] = $this->answer($pasien->b1);
+        $this->data['b2'] = $this->answer($pasien->b2);
+        $this->data['b3'] = $this->answer($pasien->b3);
+        $this->data['b4'] = $this->answer($pasien->b4);
+        $this->data['b5'] = $this->answer($pasien->b5);
+        $this->data['b6'] = $this->answer($pasien->b6);
+        $this->data['b7'] = $this->answer($pasien->b7);
+
+        $this->data['c1'] = $this->answer($pasien->c1);
+        $this->data['c2'] = $this->answer($pasien->c2);
+        $this->data['c3'] = $this->answer($pasien->c3);
+        $this->data['c4'] = $this->answer($pasien->c4);
+        $this->data['c5'] = $this->answer($pasien->c5);
+        $this->data['c6'] = $this->answer($pasien->c6);
+        $this->data['c7'] = $this->answer($pasien->c7);
+        $this->data['c8'] = $this->answer($pasien->c8);
+        $this->data['c9'] = $this->answer($pasien->c9);
+
+        $this->data['d1'] = $this->answer($pasien->d1);
+        $this->data['d2'] = $this->answer($pasien->d2);
+        $this->data['d3'] = $this->answer($pasien->d3);
+        $this->data['d4'] = $this->answer($pasien->d4);
+        $this->data['d5'] = $this->answer($pasien->d5);
+        $this->data['d6'] = $this->answer($pasien->d6);
+        $this->data['d7'] = $this->answer($pasien->d7);
+        $this->data['d8'] = $this->answer($pasien->d8);
+        $this->data['d9'] = $this->answer($pasien->d9);
+
+        $this->data['suicide_protective_factor'] = $pasien->suicide_protective_factor;
+        $this->data['violence_protective_factor'] = $pasien->violence_protective_factor;
+        $this->data['other_risk'] = $pasien->other_risk;
+
+        ob_clean();
+
+        header('Content-type: application/pdf');
+
+        $mpdf = new \Mpdf\Mpdf([
+        'mode' => 'utf-8', 
+        'format' => 'A4-P', 
+        'orientation' => 'P'
+        ]);
+
+        $view = View::make('doc_igd_suicide',$this->data);
+        $contents = $view->render();
+
+
+        $mpdf->SetHTMLHeader('
+            <table width="100%" >
+                <tbody>
+                        <tr>
+
+                            <td class= "doc_headerleft">
+                                <img class="relative" src="img/riau.png" height="9%" width="7%">
+                            </td>
+
+                            <td class="doc_headermid">
+                                <p style="font-size:120%;" ><b>Pemerintah Provinsi Riau</b></p>
+                                <br><p style="font-size:160%;" ><b>RUMAH SAKIT JIWA TAMPAN</b></p>
+                                <br><p style="font-size:90%;" >Jl. H. R. Soebrantas Km. 12,5 Pekanbaru Telp. (0761) 63240</p>
+                                <p style="font-size:90%;" >Fax. (0761) 63239 E-mail : rstampan@yahoo.com</p>
+                            </td>
+                            
+                            <td class="doc_headerright">
+                            <p>No. RM           </p><br>
+                            <p>Nama Pasien      </p><br>
+                            <p>Tanggal Lahir    </p><br>
+                            <p>Jenis Kelamin    </p><br>
+                            </td>    
+
+                            <td class="doc_headerright_ans">
+                            <p>:  123456</p><br>
+                            <p>:  Joko Pangestu</p><br>
+                            <p>:  13/08/1992</p><br>
+                            <p>:  L</p><br>
+                            </td>                       
+                        </tr>
+  
+                </tbody>
+            </table> <hr> <br>' );
+
+        $mpdf->SetHTMLFooter('<hr>
+            <table width="100%" style="vertical-align: bottom; font-family: "arial", Times, serif; 
+                font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+                <tr>
+                    <td width="33%">{DATE j-m-Y}</td>
+                    <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+                    <td width="33%" style="text-align: right;">RM. 03.00.IGD JULI 2015</td>
+                </tr>
+            </table>'); 
+
+        $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
+
+        $mpdf->AddPage('P','','','','',10,10,35,20,10,10);
+        //right,left
+        $mpdf->WriteHTML($stylesheet, 1);
+        $mpdf->WriteHTML($contents,2,true,false);
+
+        $mpdf->Output('igd_suicide.pdf',\Mpdf\Output\Destination::INLINE);
     }
 }

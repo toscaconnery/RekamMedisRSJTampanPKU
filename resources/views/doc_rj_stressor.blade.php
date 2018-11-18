@@ -79,39 +79,11 @@ header('Content-Type: application/pdf');
     </thead>
     <tbody>
       <tr>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-      </tr>
-       <tr>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-      </tr>
-       <tr>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-      </tr>
-       <tr>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-      </tr>
-       <tr>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
-        <td class="box">-</td>
+        <td class="box">{{$lingkungan_fisik}}</td>
+        <td class="box">{{$sosial_ekonomi_politik}}</td>
+        <td class="box">{{$keluarga}}</td>
+        <td class="box">{{$pekerjaan_karir}}</td>
+        <td class="box">{{$hubungan_pribadi_lingkungan}}</td>
       </tr>
     </tbody>
   </table>
@@ -124,7 +96,7 @@ header('Content-Type: application/pdf');
         <td colspan="2" class="contain">Tuliskanlah semua simptom-simptom (gejala yang muncul)!</td>
       </tr>
       <tr>
-        <td colspan="3" class="contain">[Isian]</td>
+        <td colspan="3" class="contain">{{$simptom}}</td>
       </tr>
       
       <tr>
@@ -132,7 +104,7 @@ header('Content-Type: application/pdf');
         <td colspan="2" class="contain">Bagaimana saudara menghadapi dan mengatasinya?</td>
       </tr>
       <tr>
-        <td colspan="3" class="contain">[Isian]</td>
+        <td colspan="3" class="contain">{{$cara_mengatasi}}</td>
       </tr>
 
       

@@ -95,7 +95,7 @@ header('Content-Type: application/pdf');
         <br>
         <br>
         <br>
-        <br>
+        {{$nama_klien}}
         <hr style="text-align:center;" width="85%">
         <div>Tanda Tangan atau Cap Jempol Klien</div>
       </td>
@@ -104,7 +104,7 @@ header('Content-Type: application/pdf');
         <br>
         <br>
         <br>
-        <br>
+        {{$konselor}}
         <hr style="text-align:center;" width="60%">
         <div>Tanda Tangan Konselor</div>
       </td>
@@ -113,7 +113,7 @@ header('Content-Type: application/pdf');
         <br>
         <br>
         <br>
-        <br>
+        {{$tanggal}}
         <hr style="text-align:center;" width="60%">
         <div>Tanggal</div>
       </td>
@@ -127,7 +127,7 @@ header('Content-Type: application/pdf');
   <table>
     <tbody>
       <tr>
-        <td class="contain">Untuk anak di bawah umur, saya ... "Teman" terdekat memberikan izin untuk melaksanakan tes/pemeriksaan HIV</td>
+        <td class="contain">Untuk anak di bawah umur, saya {{$pemberi_izin}}, {{$hubungan}} memberikan izin untuk melaksanakan tes/pemeriksaan HIV</td>
       </tr>
     </tbody>
   </table>

@@ -23,48 +23,14 @@ header('Content-Type: application/pdf');
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td class="box-c">21/05/2018</td>
-      <td class="box">-</td>
-      <td class="box">-</td>
-      <td class="box-c"><br><br>Nama<br><br></td>
-    </tr>
-    <tr>
-      <td class="box-c">21/05/2018</td>
-      <td class="box">-</td>
-      <td class="box">-</td>
-      <td class="box-c"><br><br>Nama<br><br></td>
-    </tr>
-    <tr>
-      <td class="box-c">21/05/2018</td>
-      <td class="box">-</td>
-      <td class="box">-</td>
-      <td class="box-c"><br><br>Nama<br><br></td>
-    </tr>
-    <tr>
-      <td class="box-c">21/05/2018</td>
-      <td class="box">-</td>
-      <td class="box">-</td>
-      <td class="box-c"><br><br>Nama<br><br></td>
-    </tr>
-    <tr>
-      <td class="box-c">21/05/2018</td>
-      <td class="box">-</td>
-      <td class="box">-</td>
-      <td class="box-c"><br><br>Nama<br><br></td>
-    </tr>
-    <tr>
-      <td class="box-c">21/05/2018</td>
-      <td class="box">-</td>
-      <td class="box">-</td>
-      <td class="box-c"><br><br>Nama<br><br></td>
-    </tr>
-    <tr>
-      <td class="box-c">21/05/2018</td>
-      <td class="box">-</td>
-      <td class="box">-</td>
-      <td class="box-c"><br><br>Nama<br><br></td>
-    </tr>
+    @foreach($pasien as $p)
+      <tr id="form_{{$p['id_data']}}">
+        <td class="box-c">{{$p['tanggal']}}<br>{{$p['jam']}}</td>
+        <td class="box">{{$p['catatan_kemajuan']}}</td>
+        <td class="box">{{$p['tindakan_terapi']}}</td>
+        <td class="box-c" style="vertical-align:bottom"><br><br><br>{{$p['nama_user']}}</td>
+      </tr>
+    @endforeach
   </tbody>
 </table>
 
