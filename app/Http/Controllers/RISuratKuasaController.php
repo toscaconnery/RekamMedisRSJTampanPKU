@@ -37,7 +37,7 @@ class RISuratKuasaController extends Controller
         $daftar_dokumen->ri_surat_kuasa = True;
         $daftar_dokumen->save();
 
-    	dd($request);
+    	return redirect('daftar_dokumen');
     }
 
     public function get_ri_surat_kuasa_data()
@@ -78,7 +78,7 @@ class RISuratKuasaController extends Controller
 		$data->kepala_ruangan = $request->kepala_ruangan;
 		$data->residen = $request->residen;
 		$data->save();
-    	dd($request);
+    	return redirect('daftar_dokumen');
     }
 
 }

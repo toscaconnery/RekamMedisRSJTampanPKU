@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIPernyataan;
+use App\Models\ListDocument;
 use Session;
 use View;
 
@@ -33,10 +34,14 @@ class RIPernyataanController extends Controller
         $data->residen = $request->residen;
         $data->save();
 
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        $daftar_dokumen->ri_pernyataan = True;
+        $daftar_dokumen->save();
+
         return redirect('daftar_dokumen');
     }
 
-    public function get_ri_pernyataan_read()
+    public function get_ri_pernyataan_data()
     {
         $pasien = RIPernyataan::where('id', 1)->first();
         
@@ -48,8 +53,33 @@ class RIPernyataanController extends Controller
         $this->data['konselor'] = $pasien->konselor;
         $this->data['kepala_ruangan'] = $pasien->kepala_ruangan;
         $this->data['residen'] = $pasien->residen;
+    }
 
+    public function get_ri_pernyataan_read()
+    {
+        $this->get_ri_pernyataan_data();
         return view('page.ri.pernyataan_read', $this->data);
+    }
+
+    public function get_ri_pernyataan_edit()
+    {
+        $this->get_ri_pernyataan_data();
+        return view('page.ri.pernyataan_edit', $this->data);
+    }
+    
+    public function post_ri_pernyataan_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RIPernyataan::where('id_regis', $id_pasien)->first();
+        $data->nama = $request->nama;
+        $data->umur = $request->umur;
+        $data->alamat = $request->alamat;
+        $data->tanggal = $request->tanggal;
+        $data->konselor = $request->konselor;
+        $data->kepala_ruangan = $request->kepala_ruangan;
+        $data->residen = $request->residen;
+        $data->save();
+        return redirect('daftar_dokumen');
     }
 
     public function ri_pernyataan_pdf()

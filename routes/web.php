@@ -500,6 +500,8 @@ Route::get('/doc_ri_permintaan_second', function () {
 Route::get('/ri_pernyataan', 'RIPernyataanController@get_ri_pernyataan');
 Route::post('/ri_pernyataan', 'RIPernyataanController@post_ri_pernyataan');
 Route::get('/ri_pernyataan_read', 'RIPernyataanController@get_ri_pernyataan_read');
+Route::get('/ri_pernyataan_edit', 'RIPernyataanController@get_ri_pernyataan_edit');
+Route::post('/ri_pernyataan_edit', 'RIPernyataanController@post_ri_pernyataan_edit');
 
 //dokumen Lembar Pernyataan
 Route::get('/ri_pernyataan_pdf', 'RIPernyataanController@ri_pernyataan_pdf');

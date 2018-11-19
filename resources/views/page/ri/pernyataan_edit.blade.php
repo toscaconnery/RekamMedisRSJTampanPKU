@@ -54,7 +54,8 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" id="register_form">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_pernyataan_edit">
+            {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
                 Pemohon
@@ -68,19 +69,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="nama" disabled value="{{$nama}}">
+                    <input type="text" class="form-control" name="nama" value="{{$nama}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Umur</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="umur" disabled value="{{$umur}}">
+                    <input type="text" class="form-control" name="umur" value="{{$umur}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="alamat" disabled value="{{$alamat}}">
+                    <input type="text" class="form-control" name="alamat" value="{{$alamat}}">
                   </div>
                 </div>
               </div>
@@ -111,29 +112,33 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal" disabled value="{{$tanggal}}">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal" value="{{$tanggal}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Konselor</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="konselor" disabled value="{{$konselor}}">
+                    <input type="text" class="form-control" name="konselor" value="{{$konselor}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kepala Ruangan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="kepala_ruangan" disabled value="{{$kepala_ruangan}}">
+                    <input type="text" class="form-control" name="kepala_ruangan" value="{{$kepala_ruangan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Residen</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="residen" disabled value="{{$residen}}">
+                    <input type="text" class="form-control" name="residen" value="{{$residen}}">
                   </div>
                 </div>
               </div>
             </section>
+
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </form>
         </div>
       </div>
