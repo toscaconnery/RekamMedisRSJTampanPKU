@@ -630,6 +630,12 @@ Route::get('/doc_ri_efek', function () {
     return view('/doc_ri_efek');
 });
 
+Route::get('/ri_pulang_paksa', 'RIPulangPaksaController@get_ri_pulang_paksa');
+Route::post('/ri_pulang_paksa', 'RIPulangPaksaController@post_ri_pulang_paksa');
+Route::get('/ri_pulang_paksa_read', 'RIPulangPaksaController@get_ri_pulang_paksa_read');
+Route::get('/ri_pulang_paksa_edit', 'RIPulangPaksaController@get_ri_pulang_paksa_edit');
+Route::post('/ri_pulang_paksa_edit', 'RIPulangPaksaController@post_ri_pulang_paksa_edit');
+
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -744,9 +750,9 @@ Route::get('/ri_asuhan_gizi', function () {
 //     return view('ri_permintaan_resucitate');
 // });
 
-Route::get('/ri_pulang_paksa', function () {
-    return view('ri_pulang_paksa');
-});
+// Route::get('/ri_pulang_paksa', function () {
+//     return view('ri_pulang_paksa');
+// });
 
 Route::get('/ri_residen', function () {
     return view('ri_residen');
