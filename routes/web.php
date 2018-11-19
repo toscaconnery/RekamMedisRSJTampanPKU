@@ -642,6 +642,12 @@ Route::get('/ri_residen_read', 'RIResidenController@get_ri_residen_read');
 Route::get('/ri_residen_edit', 'RIResidenController@get_ri_residen_edit');
 Route::post('/ri_residen_edit', 'RIResidenController@post_ri_residen_edit');
 
+Route::get('/ri_surat_kuasa', 'RISuratKuasaController@get_ri_surat_kuasa');
+Route::post('/ri_surat_kuasa', 'RISuratKuasaController@post_ri_surat_kuasa');
+Route::get('/ri_surat_kuasa_read', 'RISuratKuasaController@get_ri_surat_kuasa_read');
+Route::get('/ri_surat_kuasa_edit', 'RISuratKuasaController@get_ri_surat_kuasa_edit');
+Route::post('/ri_surat_kuasa_edit', 'RISuratKuasaController@post_ri_surat_kuasa_edit');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -763,9 +769,9 @@ Route::get('/ri_asuhan_gizi', function () {
 //     return view('ri_residen');
 // });
 
-Route::get('/ri_surat_kuasa', function () {
-    return view('ri_surat_kuasa');
-});
+// Route::get('/ri_surat_kuasa', function () {
+//     return view('ri_surat_kuasa');
+// });
 
 // Route::get('/ri_pernyataan', function () {
 //     return view('ri_pernyataan');

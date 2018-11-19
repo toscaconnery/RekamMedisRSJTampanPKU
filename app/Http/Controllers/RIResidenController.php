@@ -16,7 +16,7 @@ class RIResidenController extends Controller
 
     public function get_ri_residen()
     {
-    	return view('page.ri.residen');
+    	return view('page.ri.residen', $this->data);
     }
 
     public function post_ri_residen(Request $request)
