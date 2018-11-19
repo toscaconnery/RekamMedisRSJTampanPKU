@@ -98,7 +98,7 @@ header('Content-Type: application/pdf');
       <div class="column">
         <p><b>Keterangan Keluarga Wali</b></p>
         <p>Nama : {{$nama_keluarga}}</p>
-        <p>Hubungan dengan pasien : {{$hubunganh}}</p>
+        <p>Hubungan dengan pasien : {{$hubungan}}</p>
       </div>
       <div class="column">
         <p><b>Tanda Tangan Persetujuan Pernyataan</b></p>
@@ -112,7 +112,7 @@ header('Content-Type: application/pdf');
   </div>
 
   <br>
-
+  <hr>
 
   <div style="font-size: 85%;">  
     <div class="panel-body">
