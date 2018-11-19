@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIPersetujuanTindakan;
+use App\Models\ListDocument;
 use Session;
 use View;
 
@@ -31,46 +32,79 @@ class RIPersetujuanTindakanController extends Controller
 		if(isset($request->check_informasi_1)) {
 			$data->check_informasi_1 = True;
 		}
+        else {
+            $data->check_informasi_1 = False;
+        }
 		$data->jenis_informasi_2 = $request->jenis_informasi_2;
 		if(isset($request->check_informasi_2)) {
 			$data->check_informasi_2 = True;
 		}
+        else {
+            $data->check_informasi_2 = False;
+        }
 		$data->jenis_informasi_3 = $request->jenis_informasi_3;
 		if(isset($request->check_informasi_3)) {
 			$data->check_informasi_3 = True;
 		}
+        else {
+            $data->check_informasi_3 = False;
+        }
 		$data->jenis_informasi_4 = $request->jenis_informasi_4;
 		if(isset($request->check_informasi_4)) {
 			$data->check_informasi_4 = True;
 		}
+        else {
+            $data->check_informasi_4 = False;
+        }
 		$data->jenis_informasi_5 = $request->jenis_informasi_5;
 		if(isset($request->check_informasi_5)) {
 			$data->check_informasi_5 = True;
 		}
+        else {
+            $data->check_informasi_5 = False;
+        }
 		$data->jenis_informasi_6 = $request->jenis_informasi_6;
 		if(isset($request->check_informasi_6)) {
 			$data->check_informasi_6 = True;
 		}
+        else {
+            $data->check_informasi_6 = False;
+        }
 		$data->jenis_informasi_7 = $request->jenis_informasi_7;
 		if(isset($request->check_informasi_7)) {
 			$data->check_informasi_7 = True;
 		}
+        else {
+            $data->check_informasi_7 = False;
+        }
 		$data->jenis_informasi_8 = $request->jenis_informasi_8;
 		if(isset($request->check_informasi_8)) {
 			$data->check_informasi_8 = True;
 		}
+        else {
+            $data->check_informasi_8 = False;
+        }
 		$data->jenis_informasi_9 = $request->jenis_informasi_9;
 		if(isset($request->check_informasi_9)) {
 			$data->check_informasi_9 = True;
 		}
+        else {
+            $data->check_informasi_9 = False;
+        }
 		$data->jenis_informasi_10 = $request->jenis_informasi_10;
 		if(isset($request->check_informasi_10)) {
 			$data->check_informasi_10 = True;
 		}
+        else {
+            $data->check_informasi_10 = False;
+        }
 		$data->jenis_informasi_11 = $request->jenis_informasi_11;
 		if(isset($request->check_informasi_11)) {
 			$data->check_informasi_11 = True;
 		}
+        else {
+            $data->check_informasi_11 = False;
+        }
 		$data->nama = $request->nama;
 		$data->umur = $request->umur;
 		$data->jk = $request->jk;
@@ -85,12 +119,17 @@ class RIPersetujuanTindakanController extends Controller
 		$data->saksi = $request->saksi;
 		$data->save();
 
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        $daftar_dokumen->ri_persetujuan_tindakan = True;
+        $daftar_dokumen->save();
+
     	return redirect('daftar_dokumen');
     }
 
-    public function get_ri_persetujuan_tindakan_read()
+    public function get_ri_persetujuan_tindakan_data()
     {
-    	$pasien = RIPersetujuanTindakan::where('id', 1)->first();
+        $id_pasien = Session::get('id_pasien');
+    	$pasien = RIPersetujuanTindakan::where('id_regis', $id_pasien)->first();
         
         $this->data['id_regis'] = $pasien->id_regis;
 
@@ -110,40 +149,17 @@ class RIPersetujuanTindakanController extends Controller
         $this->data['jenis_informasi_10'] = $pasien->jenis_informasi_10;
         $this->data['jenis_informasi_11'] = $pasien->jenis_informasi_11;
 
-        if($pasien->check_informasi_1 == True){
-        	$this->data['check_informasi_1'] = $pasien->check_informasi_1;
-        }
-        if($pasien->check_informasi_2 == True){
-        	$this->data['check_informasi_2'] = $pasien->check_informasi_2;
-        }
-        if($pasien->check_informasi_3 == True){
-        	$this->data['check_informasi_3'] = $pasien->check_informasi_3;
-        }
-        if($pasien->check_informasi_4 == True){
-        	$this->data['check_informasi_4'] = $pasien->check_informasi_4;
-        }
-        if($pasien->check_informasi_5 == True){
-        	$this->data['check_informasi_5'] = $pasien->check_informasi_5;
-        }
-        if($pasien->check_informasi_6 == True){
-        	$this->data['check_informasi_6'] = $pasien->check_informasi_6;
-        }
-        if($pasien->check_informasi_7 == True){
-        	$this->data['check_informasi_7'] = $pasien->check_informasi_7;
-        }
-        if($pasien->check_informasi_8 == True){
-        	$this->data['check_informasi_8'] = $pasien->check_informasi_8;
-        }
-        if($pasien->check_informasi_9 == True){
-        	$this->data['check_informasi_9'] = $pasien->check_informasi_9;
-        }
-        if($pasien->check_informasi_10 == True){
-        	$this->data['check_informasi_10'] = $pasien->check_informasi_10;
-        }
-        if($pasien->check_informasi_11 == True){
-        	$this->data['check_informasi_11'] = $pasien->check_informasi_11;
-        }
-
+        $this->data['check_informasi_1'] = $pasien->check_informasi_1;
+        $this->data['check_informasi_2'] = $pasien->check_informasi_2;
+        $this->data['check_informasi_3'] = $pasien->check_informasi_3;
+        $this->data['check_informasi_4'] = $pasien->check_informasi_4;
+        $this->data['check_informasi_5'] = $pasien->check_informasi_5;
+        $this->data['check_informasi_6'] = $pasien->check_informasi_6;
+        $this->data['check_informasi_7'] = $pasien->check_informasi_7;
+        $this->data['check_informasi_8'] = $pasien->check_informasi_8;
+    	$this->data['check_informasi_9'] = $pasien->check_informasi_9;
+    	$this->data['check_informasi_10'] = $pasien->check_informasi_10;
+    	$this->data['check_informasi_11'] = $pasien->check_informasi_11;
 
         $this->data['nama'] = $pasien->nama;
         $this->data['umur'] = $pasien->umur;
@@ -158,8 +174,119 @@ class RIPersetujuanTindakanController extends Controller
         $this->data['waktu'] = $pasien->waktu;
         $this->data['yang_menyatakan'] = $pasien->yang_menyatakan;
         $this->data['saksi'] = $pasien->saksi;
+    }
 
+    public function get_ri_persetujuan_tindakan_read()
+    {
+        $this->get_ri_persetujuan_tindakan_data();
         return view('page.ri.persetujuan_tindakan_read', $this->data);
+    }
+
+    public function get_ri_persetujuan_tindakan_edit()
+    {
+        $this->get_ri_persetujuan_tindakan_data();
+        return view('page.ri.persetujuan_tindakan_edit', $this->data);
+    }
+
+    public function post_ri_persetujuan_tindakan_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RIPersetujuanTindakan::where('id_regis', $id_pasien)->first();
+        $data->id_regis = $id_pasien;
+        $data->dokter_pelaksana_tindakan = $request->dokter_pelaksana_tindakan;
+        $data->pemberi_informasi = $request->pemberi_informasi;
+        $data->penerima_informasi = $request->penerima_informasi;
+        $data->jenis_informasi_1 = $request->jenis_informasi_1;
+        if(isset($request->check_informasi_1)) {
+            $data->check_informasi_1 = True;
+        }
+        else {
+            $data->check_informasi_1 = False;
+        }
+        $data->jenis_informasi_2 = $request->jenis_informasi_2;
+        if(isset($request->check_informasi_2)) {
+            $data->check_informasi_2 = True;
+        }
+        else {
+            $data->check_informasi_2 = False;
+        }
+        $data->jenis_informasi_3 = $request->jenis_informasi_3;
+        if(isset($request->check_informasi_3)) {
+            $data->check_informasi_3 = True;
+        }
+        else {
+            $data->check_informasi_3 = False;
+        }
+        $data->jenis_informasi_4 = $request->jenis_informasi_4;
+        if(isset($request->check_informasi_4)) {
+            $data->check_informasi_4 = True;
+        }
+        else {
+            $data->check_informasi_4 = False;
+        }
+        $data->jenis_informasi_5 = $request->jenis_informasi_5;
+        if(isset($request->check_informasi_5)) {
+            $data->check_informasi_5 = True;
+        }
+        else {
+            $data->check_informasi_5 = False;
+        }
+        $data->jenis_informasi_6 = $request->jenis_informasi_6;
+        if(isset($request->check_informasi_6)) {
+            $data->check_informasi_6 = True;
+        }
+        else {
+            $data->check_informasi_6 = False;
+        }
+        $data->jenis_informasi_7 = $request->jenis_informasi_7;
+        if(isset($request->check_informasi_7)) {
+            $data->check_informasi_7 = True;
+        }
+        else {
+            $data->check_informasi_7 = False;
+        }
+        $data->jenis_informasi_8 = $request->jenis_informasi_8;
+        if(isset($request->check_informasi_8)) {
+            $data->check_informasi_8 = True;
+        }
+        else {
+            $data->check_informasi_8 = False;
+        }
+        $data->jenis_informasi_9 = $request->jenis_informasi_9;
+        if(isset($request->check_informasi_9)) {
+            $data->check_informasi_9 = True;
+        }
+        else {
+            $data->check_informasi_9 = False;
+        }
+        $data->jenis_informasi_10 = $request->jenis_informasi_10;
+        if(isset($request->check_informasi_10)) {
+            $data->check_informasi_10 = True;
+        }
+        else {
+            $data->check_informasi_10 = False;
+        }
+        $data->jenis_informasi_11 = $request->jenis_informasi_11;
+        if(isset($request->check_informasi_11)) {
+            $data->check_informasi_11 = True;
+        }
+        else {
+            $data->check_informasi_11 = False;
+        }
+        $data->nama = $request->nama;
+        $data->umur = $request->umur;
+        $data->jk = $request->jk;
+        $data->tindakan = $request->tindakan;
+        $data->terhadap = $request->terhadap;
+        $data->umur_terhadap = $request->umur_terhadap;
+        $data->jk_terhadap = $request->jk_terhadap;
+        $data->alamat_terhadap = $request->alamat_terhadap;
+        $data->tanggal = $request->tanggal;
+        $data->waktu = $request->waktu;
+        $data->yang_menyatakan = $request->yang_menyatakan;
+        $data->saksi = $request->saksi;
+        $data->save();
+        return redirect('daftar_dokumen');
     }
 
     public function ri_persetujuan_tindakan_pdf()

@@ -511,6 +511,8 @@ Route::get('/doc_ri_pernyataan', function () {
 Route::get('/ri_persetujuan_tindakan', 'RIPersetujuanTindakanController@get_ri_persetujuan_tindakan');
 Route::post('/ri_persetujuan_tindakan', 'RIPersetujuanTindakanController@post_ri_persetujuan_tindakan');
 Route::get('/ri_persetujuan_tindakan_read', 'RIPersetujuanTindakanController@get_ri_persetujuan_tindakan_read');
+Route::get('/ri_persetujuan_tindakan_edit', 'RIPersetujuanTindakanController@get_ri_persetujuan_tindakan_edit');
+Route::post('/ri_persetujuan_tindakan_edit', 'RIPersetujuanTindakanController@post_ri_persetujuan_tindakan_edit');
 
 //dokumen persetujuan tindakan kedokteran
 Route::get('/ri_persetujuan_tindakan_pdf', 'RIPersetujuanTindakanController@ri_persetujuan_tindakan_pdf');
