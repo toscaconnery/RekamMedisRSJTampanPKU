@@ -170,19 +170,19 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Yang Menyatakan</label>
+                  <label class="col-sm-2 control-label">Dokter Ruangan</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control" name="yang_menyatakan">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Saksi Keluarga</label>
+                  <label class="col-sm-2 control-label">Ka. Ruangan</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control" name="saksi_keluarga">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Saksi Pemberi Asuhan</label>
+                  <label class="col-sm-2 control-label">Yang Menyatakan</label>
                   <div class="col-sm-8">
                     <input type="text" class="form-control" name="saksi_pemberi_asuhan">
                   </div>

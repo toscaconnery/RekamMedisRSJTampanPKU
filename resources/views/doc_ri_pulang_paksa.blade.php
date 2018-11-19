@@ -28,23 +28,23 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$nama}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$umur}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Pekerjaan</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$pekerjaan}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Hubungan Keluarga</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$hubungan_keluarga}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$alamat}}</td>
       </tr>
     </tbody>
   </table>
@@ -66,15 +66,15 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$nama_pasien}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$umur_pasien}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$alamat_pasien}}</td>
       </tr>
     </tbody>
   </table>
@@ -85,7 +85,7 @@ header('Content-Type: application/pdf');
     <body>
       <tr>
         <td class="contain" colspan="2">
-          Dengan ini menyatakan telah mengambil kembali dengan paksa pasien tersebut di atas pada tanggal ..., meskipun Dokter telah menyatakan bahwa pasien tersebut belum diizinkan pulang.<br>
+          Dengan ini menyatakan telah mengambil kembali dengan paksa pasien tersebut di atas pada tanggal {{$tanggal_pengambilan}}, meskipun Dokter telah menyatakan bahwa pasien tersebut belum diizinkan pulang.<br>
           Dengan ini menyatakan bahwa kami menanggung segala akibat dari pulang paksa tersebut di atas. Demikian surat pernyataan ini kami buat dengan penuh kesadaran dan rasa tanggung jawab. 
         </td>
       </tr>
@@ -105,7 +105,7 @@ header('Content-Type: application/pdf');
           
         </td>
         <td class="ttd3">
-          Pekanbaru, 10/10/2019
+          Pekanbaru, {{$tanggal}}
         </td>
       </tr>  
       <tr>
@@ -115,6 +115,7 @@ header('Content-Type: application/pdf');
           <br>
           <br>
           <br>
+          {{$yang_menyatakan}}
           <hr width="50%" style="text-align:center">
         </td>
         <td class="ttd3">
@@ -123,6 +124,7 @@ header('Content-Type: application/pdf');
           <br>
           <br>
           <br>
+          {{$saksi_keluarga}}
           <hr width="50%" style="text-align:center">
         </td>
         <td class="ttd3">
@@ -131,6 +133,7 @@ header('Content-Type: application/pdf');
           <br>
           <br>
           <br>
+          {{$saksi_pemberi_asuhan}}
           <hr width="50%" style="text-align:center">
         </td>
       </tr>  

@@ -638,17 +638,38 @@ Route::get('/ri_pulang_paksa_read', 'RIPulangPaksaController@get_ri_pulang_paksa
 Route::get('/ri_pulang_paksa_edit', 'RIPulangPaksaController@get_ri_pulang_paksa_edit');
 Route::post('/ri_pulang_paksa_edit', 'RIPulangPaksaController@post_ri_pulang_paksa_edit');
 
+//dokumen Lembar Pulang Paksa
+Route::get('/ri_pulang_paksa_pdf', 'RIPulangPaksaController@ri_pulang_paksa_pdf');
+
+Route::get('/doc_ri_pulang_paksa', function () {
+    return view('/doc_ri_pulang_paksa');
+});
+
 Route::get('/ri_residen', 'RIResidenController@get_ri_residen');
 Route::post('/ri_residen', 'RIResidenController@post_ri_residen');
 Route::get('/ri_residen_read', 'RIResidenController@get_ri_residen_read');
 Route::get('/ri_residen_edit', 'RIResidenController@get_ri_residen_edit');
 Route::post('/ri_residen_edit', 'RIResidenController@post_ri_residen_edit');
 
+//dokumen Lembar residen
+Route::get('/ri_residen_pdf', 'RIResidenController@ri_residen_pdf');
+
+Route::get('/doc_ri_residen', function () {
+    return view('/doc_ri_residen');
+});
+
 Route::get('/ri_surat_kuasa', 'RISuratKuasaController@get_ri_surat_kuasa');
 Route::post('/ri_surat_kuasa', 'RISuratKuasaController@post_ri_surat_kuasa');
 Route::get('/ri_surat_kuasa_read', 'RISuratKuasaController@get_ri_surat_kuasa_read');
 Route::get('/ri_surat_kuasa_edit', 'RISuratKuasaController@get_ri_surat_kuasa_edit');
 Route::post('/ri_surat_kuasa_edit', 'RISuratKuasaController@post_ri_surat_kuasa_edit');
+
+//dokumen Lembar surat kuasa
+Route::get('/ri_surat_kuasa_pdf', 'RISuratKuasaController@ri_surat_kuasa_pdf');
+
+Route::get('/doc_ri_surat_kuasa', function () {
+    return view('/doc_ri_surat_kuasa');
+});
 
 Route::get('/ri_pemberian_informasi', 'RIPemberianInformasiController@get_ri_pemberian_informasi');
 Route::post('/ri_pemberian_informasi', 'RIPemberianInformasiController@post_ri_pemberian_informasi');
@@ -997,27 +1018,6 @@ Route::get('/pdf_ri_gizi', 'Pdf_ri_Controller@pdf_ri_gizi');
 
 Route::get('/doc_ri_gizi', function () {
     return view('/doc_ri_gizi');
-});
-
-//dokumen Lembar Pulang Paksa
-Route::get('/pdf_ri_pulang_paksa', 'Pdf_ri_Controller@pdf_ri_pulang_paksa');
-
-Route::get('/doc_ri_pulang_paksa', function () {
-    return view('/doc_ri_pulang_paksa');
-});
-
-//dokumen Lembar residen
-Route::get('/pdf_ri_residen', 'Pdf_ri_Controller@pdf_ri_residen');
-
-Route::get('/doc_ri_residen', function () {
-    return view('/doc_ri_residen');
-});
-
-//dokumen Lembar surat kuasa
-Route::get('/pdf_ri_surat_kuasa', 'Pdf_ri_Controller@pdf_ri_surat_kuasa');
-
-Route::get('/doc_ri_surat_kuasa', function () {
-    return view('/doc_ri_surat_kuasa');
 });
 
 //dokumen pemberian informasi
