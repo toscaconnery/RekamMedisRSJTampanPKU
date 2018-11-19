@@ -650,6 +650,12 @@ Route::get('/ri_surat_kuasa_read', 'RISuratKuasaController@get_ri_surat_kuasa_re
 Route::get('/ri_surat_kuasa_edit', 'RISuratKuasaController@get_ri_surat_kuasa_edit');
 Route::post('/ri_surat_kuasa_edit', 'RISuratKuasaController@post_ri_surat_kuasa_edit');
 
+Route::get('/ri_pemberian_informasi', 'RIPemberianInformasiController@get_ri_pemberian_informasi');
+Route::post('/ri_pemberian_informasi', 'RIPemberianInformasiController@post_ri_pemberian_informasi');
+Route::get('/ri_pemberian_informasi_read', 'RIPemberianInformasiController@get_ri_pemberian_informasi_read');
+Route::get('/ri_pemberian_informasi_edit', 'RIPemberianInformasiController@get_ri_pemberian_informasi_edit');
+Route::post('/ri_pemberian_informasi_edit', 'RIPemberianInformasiController@post_ri_pemberian_informasi_edit');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -879,9 +885,9 @@ Route::get('/ri_serah_terima', function () {
     return view('ri_serah_terima');
 });
 
-Route::get('/ri_pemberian_informasi', function () {
-    return view('ri_pemberian_informasi');
-});
+// Route::get('/ri_pemberian_informasi', function () {
+//     return view('ri_pemberian_informasi');
+// });
 
 
 // Route::get('/ri_lembar_konsultasi', function () {
