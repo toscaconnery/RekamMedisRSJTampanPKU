@@ -41,9 +41,8 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_penolakan_tindakan_pdf">PDF</a>
+                      <a class="btn btn-success" href="#">EDIT</a>
                     </div>
                   </td>
                 </tr>
@@ -55,7 +54,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_penolakan_tindakan">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_penolakan_tindakan_edit">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
@@ -65,19 +64,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Dokter Pelaksana Tindakan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="dokter_pelaksana_tindakan">
+                    <input type="text" class="form-control" name="dokter_pelaksana_tindakan" value="{{$dokter_pelaksana_tindakan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pemberian Informasi</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="pemberi_informasi">
+                    <input type="text" class="form-control" name="pemberi_informasi" value="{{$pemberi_informasi}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Penerima Informasi /<br><i>Pemberi Penolakan</i></label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="penerima_informasi">
+                    <input type="text" class="form-control" name="penerima_informasi" value="{{$penerima_informasi}}">
                   </div>
                 </div>
               </div>
@@ -104,89 +103,89 @@
                           <td style="text-align:center;">1</td>
                           <td>Diagnosis (WD/DD)</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_1" required>
+                            <input type="text" class="form-control" value="{{$jenis_informasi_1}}">
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_1"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_1" {{$check_informasi_1 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">2</td>
                           <td>Dasar Diagnosis</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_2" required>
+                            <input type="text" class="form-control" value="{{$jenis_informasi_2}}">
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_2"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_2" {{$check_informasi_2 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">3</td>
                           <td>Tindakan Kedokteran</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_3" required>
+                            <input type="text" class="form-control" value="{{$jenis_informasi_3}}">
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_3"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_3" {{$check_informasi_3 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">4</td>
                           <td>Indikasi Tindakan</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_4" required>
+                            <input type="text" class="form-control" value="{{$jenis_informasi_4}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_4"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_4" {{$check_informasi_4 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">5</td>
                           <td>Tata Cara</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_5" required>
+                            <input type="text" class="form-control" value="{{$jenis_informasi_5}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_5"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_5" {{$check_informasi_5 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">6</td>
                           <td>Tujuan</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_6" required>
+                            <input type="text" class="form-control" value="{{$jenis_informasi_6}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_6"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_6" {{$check_informasi_6 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">7</td>
                           <td>Risiko</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_7" required>
+                            <input type="text" class="form-control" value="{{$jenis_informasi_7}}"> 
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_7"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_7" {{$check_informasi_7 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">8</td>
                           <td>Komplikasi</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_8" required>
+                            <input type="text" class="form-control" value="{{$jenis_informasi_8}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_8"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_8" {{$check_informasi_8 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">9</td>
                           <td>Prognosis</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_9" required>
+                            <input type="text" class="form-control" value="{{$jenis_informasi_9}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_9"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_9" {{$check_informasi_9 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">10</td>
                           <td>Alternatif dan Risiko</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_10" required>
+                            <input type="text" class="form-control" value="{{$jenis_informasi_10}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_10"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_10" {{$check_informasi_10 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">11</td>
                           <td>Lain-lain</td>
                           <td>
-                            <input type="text" class="form-control" name="jenis_informasi_11" required>
+                            <input type="text" class="form-control" value="{{$jenis_informasi_11}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_11"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_11" {{$check_informasi_11 == True ? 'checked' : ''}}></td>
                         </tr>
                       </tbody>
                     </table>
@@ -219,13 +218,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="nama">
+                    <input type="text" class="form-control" name="nama" value="{{$nama}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Umur</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="umur">
+                    <input type="text" class="form-control" name="umur" value="{{$umur}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -233,13 +232,13 @@
                   <div class="col-sm-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jk" value="1">
+                        <input type="radio" name="jk" value="1" {{$jk == 1 ? 'checked' : ''}}>
                         Laki-laki
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jk" value="0">
+                        <input type="radio" name="jk" value="0" {{$jk == 0 ? 'checked' : ''}}>
                         Perempuan
                       </label>
                     </div>
@@ -260,19 +259,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tindakan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="tindakan">
+                    <input type="text" class="form-control" name="tindakan" value="{{$tindakan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Terhadap (Nama)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="terhadap">
+                    <input type="text" class="form-control" name="terhadap" value="{{$terhadap}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Umur</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="umur_terhadap">
+                    <input type="text" class="form-control" name="umur_terhadap" value="{{$umur_terhadap}}">
                   </div>
                 </div>     
                 <div class="form-group">
@@ -280,13 +279,13 @@
                   <div class="col-sm-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jk_terhadap" value="1">
+                        <input type="radio" name="jk_terhadap" value="1" {{$jk_terhadap == 1 ? 'checked' : ''}}>
                         Laki-laki
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jk_terhadap" value="0">
+                        <input type="radio" name="jk_terhadap" value="0" {{$jk_terhadap == 0 ? 'checked' : ''}}>
                         Perempuan
                       </label>
                     </div>
@@ -295,7 +294,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="alamat_terhadap">
+                    <input type="text" class="form-control" name="alamat_terhadap" value="{{$alamat_terhadap}}">
                   </div>
                 </div>               
               </div>
@@ -326,25 +325,25 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal" value="{{$tanggal}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Waktu</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="waktu">
+                    <input type="text" class="form-control" name="waktu" value="{{$waktu}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Yang Menyatakan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="yang_menyatakan">
+                    <input type="text" class="form-control" name="yang_menyatakan" value="{{$yang_menyatakan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Saksi</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="saksi">
+                    <input type="text" class="form-control" name="saksi" value="{{$saksi}}">
                   </div>
                 </div>
               </div>

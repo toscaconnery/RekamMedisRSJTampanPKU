@@ -524,6 +524,8 @@ Route::get('/doc_ri_persetujuan_tindakan', function () {
 Route::get('/ri_penolakan_tindakan', 'RIPenolakanTindakanController@get_ri_penolakan_tindakan');
 Route::post('/ri_penolakan_tindakan', 'RIPenolakanTindakanController@post_ri_penolakan_tindakan');
 Route::get('/ri_penolakan_tindakan_read', 'RIPenolakanTindakanController@get_ri_penolakan_tindakan_read');
+Route::get('/ri_penolakan_tindakan_edit', 'RIPenolakanTindakanController@get_ri_penolakan_tindakan_edit');
+Route::post('/ri_penolakan_tindakan_edit', 'RIPenolakanTindakanController@post_ri_penolakan_tindakan_edit');
 
 //dokumen penolakan tindakan kedoketeran
 Route::get('/ri_penolakan_tindakan_pdf', 'RIPenolakanTindakanController@ri_penolakan_tindakan_pdf');

@@ -54,8 +54,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_penolakan_tindakan">
-            {{ csrf_field() }}
+          <form class="form-horizontal form-validate" id="register_form">
             <section class="panel">
               <header class="panel-heading">
                 Pemberian Informasi
@@ -105,7 +104,7 @@
                           <td>
                             <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_1}}">
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_1" disabled="" value="{{$check_informasi_1}}"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_1" disabled="" {{$check_informasi_1 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">2</td>
@@ -113,7 +112,7 @@
                           <td>
                             <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_2}}">
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_2" disabled="" value="{{$check_informasi_2}}"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_2" disabled="" {{$check_informasi_2 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">3</td>
@@ -121,7 +120,7 @@
                           <td>
                             <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_3}}">
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_3" disabled="" value="{{$check_informasi_3}}"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_3" disabled="" {{$check_informasi_3 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">4</td>
@@ -129,7 +128,7 @@
                           <td>
                             <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_4}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_4" disabled="" value="{{$check_informasi_4}}"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_4" disabled="" {{$check_informasi_4 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">5</td>
@@ -137,7 +136,7 @@
                           <td>
                             <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_5}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_5" disabled="" value="{{$check_informasi_5}}"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_5" disabled="" {{$check_informasi_5 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">6</td>
@@ -145,7 +144,7 @@
                           <td>
                             <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_6}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_6" disabled="" value="{{$check_informasi_6}}"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_6" disabled="" {{$check_informasi_6 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">7</td>
@@ -153,7 +152,7 @@
                           <td>
                             <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_7}}"> 
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_7" disabled="" value="{{$check_informasi_7}}"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_7" disabled="" {{$check_informasi_7 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">8</td>
@@ -161,7 +160,7 @@
                           <td>
                             <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_8}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_8" disabled="" value="{{$check_informasi_8}}"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_8" disabled="" {{$check_informasi_8 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">9</td>
@@ -169,7 +168,7 @@
                           <td>
                             <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_9}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_9" disabled="" value="{{$check_informasi_9}}"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_9" disabled="" {{$check_informasi_9 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">10</td>
@@ -177,7 +176,7 @@
                           <td>
                             <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_10}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_10" disabled="" value="{{$check_informasi_10}}"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_10" disabled="" {{$check_informasi_10 == True ? 'checked' : ''}}></td>
                         </tr>
                         <tr>
                           <td style="text-align:center;">11</td>
@@ -185,7 +184,7 @@
                           <td>
                             <input type="text" class="form-control" disabled="" value="{{$jenis_informasi_11}}" >
                           </td>
-                          <td><input type="checkbox" class="form-control" name="check_informasi_11" disabled="" value="{{$check_informasi_11}}"></td>
+                          <td><input type="checkbox" class="form-control" name="check_informasi_11" disabled="" {{$check_informasi_11 == True ? 'checked' : ''}}></td>
                         </tr>
                       </tbody>
                     </table>
@@ -325,7 +324,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" name="tanggal" disabled="" value="{{$tanggal}}">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal" disabled="" value="{{$tanggal}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -348,10 +347,6 @@
                 </div>
               </div>
             </section>
-
-            <div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
           </form>
         </div>
       </div>
