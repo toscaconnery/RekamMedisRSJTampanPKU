@@ -677,6 +677,13 @@ Route::get('/ri_pemberian_informasi_read', 'RIPemberianInformasiController@get_r
 Route::get('/ri_pemberian_informasi_edit', 'RIPemberianInformasiController@get_ri_pemberian_informasi_edit');
 Route::post('/ri_pemberian_informasi_edit', 'RIPemberianInformasiController@post_ri_pemberian_informasi_edit');
 
+//dokumen pemberian informasi
+Route::get('/ri_informasi_pdf', 'RIPemberianInformasiController@ri_informasi_pdf');
+
+Route::get('/doc_ri_informasi', function () {
+    return view('/doc_ri_informasi');
+});
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -1018,13 +1025,6 @@ Route::get('/pdf_ri_gizi', 'Pdf_ri_Controller@pdf_ri_gizi');
 
 Route::get('/doc_ri_gizi', function () {
     return view('/doc_ri_gizi');
-});
-
-//dokumen pemberian informasi
-Route::get('/pdf_ri_informasi', 'Pdf_ri_Controller@pdf_ri_informasi');
-
-Route::get('/doc_ri_informasi', function () {
-    return view('/doc_ri_informasi');
 });
 
 //dokumen Lembar serah terima
