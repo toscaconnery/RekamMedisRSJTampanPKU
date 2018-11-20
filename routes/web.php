@@ -687,6 +687,13 @@ Route::post('/ri_pemeriksaan_psikologis', 'RIPemeriksaanPsikologisController@pos
 Route::get('/ri_pemeriksaan_psikologis_read', 'RIPemeriksaanPsikologisController@get_ri_pemeriksaan_psikologis_read');
 Route::get('/ri_pemeriksaan_psikologis_edit', 'RIPemeriksaanPsikologisController@get_ri_pemeriksaan_psikologis_edit');
 Route::post('/ri_pemeriksaan_psikologis_edit', 'RIPemeriksaanPsikologisController@post_ri_pemeriksaan_psikologis_edit');
+
+Route::get('/ri_serah_terima', 'RISerahTerimaController@get_ri_serah_terima');
+Route::post('/ri_serah_terima', 'RISerahTerimaController@post_ri_serah_terima');
+Route::get('/ri_serah_terima_read', 'RISerahTerimaController@get_ri_serah_terima_read');
+Route::get('/ri_serah_terima_edit', 'RISerahTerimaController@get_ri_serah_terima_edit');
+Route::post('/ri_serah_terima_edit', 'RISerahTerimaController@post_ri_serah_terima_edit');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -912,9 +919,9 @@ Route::get('/ri_rencanaklien7', function () {
 //     return view('ri_pemeriksaan_psikologis');
 // });
 
-Route::get('/ri_serah_terima', function () {
-    return view('ri_serah_terima');
-});
+// Route::get('/ri_serah_terima', function () {
+//     return view('ri_serah_terima');
+// });
 
 // Route::get('/ri_pemberian_informasi', function () {
 //     return view('ri_pemberian_informasi');
