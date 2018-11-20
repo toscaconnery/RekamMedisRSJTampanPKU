@@ -41,9 +41,8 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                      <a class="btn btn-primary" href="{{url('')}}/igd_asesmen_pdf">PDF</a>
+                      <a class="btn btn-success" href="#">EDIT</a>
                     </div>
                   </td>
                 </tr>
@@ -267,7 +266,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kapan</label>
                   <div class="col-sm-8">
-                    <input disabled type="text" class="form-control" name="waktu_operasi" value="waktu_operasi">
+                    <input disabled type="text" class="form-control" name="waktu_operasi" value="{{$waktu_operasi}}">
                   </div>
                 </div>
                 <div class="form-group">

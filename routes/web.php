@@ -688,11 +688,25 @@ Route::get('/ri_pemeriksaan_psikologis_read', 'RIPemeriksaanPsikologisController
 Route::get('/ri_pemeriksaan_psikologis_edit', 'RIPemeriksaanPsikologisController@get_ri_pemeriksaan_psikologis_edit');
 Route::post('/ri_pemeriksaan_psikologis_edit', 'RIPemeriksaanPsikologisController@post_ri_pemeriksaan_psikologis_edit');
 
+//dokumen pemeriksaan psikologis
+Route::get('/ri_psikologis_pdf', 'RIPemeriksaanPsikologisController@ri_psikologis_pdf');
+
+Route::get('/doc_ri_psikologis', function () {
+    return view('/doc_ri_psikologis');
+});
+
 Route::get('/ri_serah_terima', 'RISerahTerimaController@get_ri_serah_terima');
 Route::post('/ri_serah_terima', 'RISerahTerimaController@post_ri_serah_terima');
 Route::get('/ri_serah_terima_read', 'RISerahTerimaController@get_ri_serah_terima_read');
 Route::get('/ri_serah_terima_edit', 'RISerahTerimaController@get_ri_serah_terima_edit');
 Route::post('/ri_serah_terima_edit', 'RISerahTerimaController@post_ri_serah_terima_edit');
+
+//dokumen Lembar serah terima
+Route::get('/ri_serah_terima_pdf', 'RISerahTerimaController@ri_serah_terima_pdf');
+
+Route::get('/doc_ri_serah_terima', function () {
+    return view('/doc_ri_serah_terima');
+});
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -1037,12 +1051,7 @@ Route::get('/doc_ri_gizi', function () {
     return view('/doc_ri_gizi');
 });
 
-//dokumen Lembar serah terima
-Route::get('/pdf_ri_serah_terima', 'Pdf_ri_Controller@pdf_ri_serah_terima');
 
-Route::get('/doc_ri_serah_terima', function () {
-    return view('/doc_ri_serah_terima');
-});
 
 //dokumen transfer internal
 Route::get('/pdf_ri_internal', 'Pdf_ri_Controller@pdf_ri_internal');
@@ -1051,12 +1060,7 @@ Route::get('/doc_ri_internal', function () {
     return view('/doc_ri_internal');
 });
 
-//dokumen pemeriksaan psikologis
-Route::get('/pdf_ri_psikologis', 'Pdf_ri_Controller@pdf_ri_psikologis');
 
-Route::get('/doc_ri_psikologis', function () {
-    return view('/doc_ri_psikologis');
-});
 
 //dokumen serah terima pasien pulang
 Route::get('/pdf_ri_pulang', 'Pdf_ri_Controller@pdf_ri_pulang');
