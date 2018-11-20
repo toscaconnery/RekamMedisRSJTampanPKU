@@ -22,7 +22,7 @@ header('Content-Type: application/pdf');
       Psikolog
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$psikolog}}
     </div>
   </div>
   <div class="row" style="padding-bottom:5px;">
@@ -30,7 +30,7 @@ header('Content-Type: application/pdf');
       Tanggal
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$tanggal}}
     </div>
   </div>
 
@@ -39,7 +39,7 @@ header('Content-Type: application/pdf');
       Dikirim Oleh
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$dikirim_oleh}}
     </div>
   </div>
 
@@ -48,7 +48,7 @@ header('Content-Type: application/pdf');
       Dokter
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$dokter}}
     </div>
   </div>
 
@@ -68,7 +68,7 @@ header('Content-Type: application/pdf');
       &emsp;Kontak Mata
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$kontak_mata}}
     </div>
   </div>
 
@@ -77,7 +77,7 @@ header('Content-Type: application/pdf');
       &emsp;Respon
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$respon}}
     </div>
   </div>
 
@@ -86,7 +86,7 @@ header('Content-Type: application/pdf');
       &emsp;Cara Bicara
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$cara_bicara}}
     </div>
   </div>
 
@@ -95,7 +95,7 @@ header('Content-Type: application/pdf');
       &emsp;-Volume
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$volume}}
     </div>
   </div>
 
@@ -104,7 +104,7 @@ header('Content-Type: application/pdf');
       &emsp;-Intonasi
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$intonasi}}
     </div>
   </div>
 
@@ -113,7 +113,7 @@ header('Content-Type: application/pdf');
       &emsp;Ekspresi
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$ekspresi}}
     </div>
   </div>
 
@@ -122,7 +122,7 @@ header('Content-Type: application/pdf');
       &emsp;Gesture
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$gesture}}
     </div>
   </div>
 
@@ -131,7 +131,7 @@ header('Content-Type: application/pdf');
       &emsp;Performance
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$performance}}
     </div>
   </div>
 
@@ -151,7 +151,7 @@ header('Content-Type: application/pdf');
       &emsp;a. Autoanamnesa
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$autoanamnesa}}
     </div>
   </div>
 
@@ -160,7 +160,7 @@ header('Content-Type: application/pdf');
       &emsp;b. Alloanamnesa
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$alloanamnesa}}
     </div>
   </div>
 
@@ -171,7 +171,7 @@ header('Content-Type: application/pdf');
       III. Intelegensi
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$intelegensi}}
     </div>
   </div>
 
@@ -180,7 +180,7 @@ header('Content-Type: application/pdf');
       IV. Kepribadian
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$kepribadian}}
     </div>
   </div>
 
@@ -189,7 +189,7 @@ header('Content-Type: application/pdf');
       V. Diagnosa
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$diagnosa}}
     </div>
   </div>
 
@@ -198,7 +198,7 @@ header('Content-Type: application/pdf');
       VI. Kesimpulan
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$kesimpulan}}
     </div>
   </div>
 
@@ -207,7 +207,7 @@ header('Content-Type: application/pdf');
       VII. Terapi/Saran
     </div>
     <div class="colsize" style="width:70%;text-align:left;">
-      :
+      : {{$terapi_saran}}
     </div>
   </div>
 

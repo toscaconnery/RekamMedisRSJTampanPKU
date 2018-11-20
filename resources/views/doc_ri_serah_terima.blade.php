@@ -29,23 +29,23 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$nama}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$umur}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Jenis Kelamin</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$jenis_kelamin}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$alamat}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Hubungan dengan pasien</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$hubungan_dengan_pasien}}</td>
       </tr>
     </tbody>
   </table>
@@ -67,27 +67,27 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$nama_pasien}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$umur_pasien}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Jenis Kelamin</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$jenis_kelamin_pasien}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">No. RM</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$no_rm}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$alamat_pasien}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Jam dijemput</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$jam_dijemput}}</td>
       </tr>
     </tbody>
   </table>
@@ -108,18 +108,18 @@ header('Content-Type: application/pdf');
           <br>
           <br>
           <br>
-          <br>
+          [nama yang menyerahkan]
           <hr width="60%" style="text-align:center">
         </td>
         <td class="ttd2">
-          Pekanbaru, 00/00/0000<br>
+          Pekanbaru, [Tanggal]<br>
           Yang Menjemput Pasien,
           <br>
           <br>
           <br>
           <br>
           <br>
-          <br>
+          {{$nama}}
           <hr width="60%" style="text-align:center">
         </td>
       </tr>  
