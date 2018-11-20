@@ -22,12 +22,7 @@ class IGDTriaseController extends Controller
     public function post_igd_triase(Request $request)
     {
     	$data = new IGDTriase;
-        if(Session::has('id_pasien')) {
-            $id_pasien = Session::get('id_pasien');
-        }
-        else {
-            $id_pasien = 1;
-        }
+        $id_pasien = Session::get('id_pasien');
     	$data->id_regis = $id_pasien;
     	$data->tanggal_masuk = $request->tanggal_masuk;
     	$data->jam = $request->jam;
