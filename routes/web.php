@@ -694,6 +694,15 @@ Route::get('/ri_serah_terima_read', 'RISerahTerimaController@get_ri_serah_terima
 Route::get('/ri_serah_terima_edit', 'RISerahTerimaController@get_ri_serah_terima_edit');
 Route::post('/ri_serah_terima_edit', 'RISerahTerimaController@post_ri_serah_terima_edit');
 
+Route::get('/ri_transfer_internal', 'RITransferInternalController@get_ri_transfer_internal');
+Route::post('/ri_transfer_internal', 'RITransferInternalController@post_ri_transfer_internal');
+Route::get('/ri_transfer_internal_read', 'RITransferInternalController@get_ri_transfer_internal_read');
+Route::get('/ri_transfer_internal_edit', 'RITransferInternalController@get_ri_transfer_internal_edit');
+Route::post('/ri_transfer_internal_edit', 'RITransferInternalController@post_ri_transfer_internal_edit');
+Route::get('/ri_transfer_internal_2', function() {
+    return view('ri_transfer_internal');
+});
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -960,9 +969,9 @@ Route::get('/ri_asesmen', function () {
 //     return view('ri_persetujuan_umum');
 // });
 
-Route::get('/ri_transfer_internal', function () {
-    return view('ri_transfer_internal');
-});
+// Route::get('/ri_transfer_internal', function () {
+//     return view('ri_transfer_internal');
+// });
 
 Route::get('/ri_transfer_eksternal', function () {
     return view('ri_transfer_eksternal');
