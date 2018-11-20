@@ -29,15 +29,15 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="konten_s_question">Nama</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$nama}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Umur</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$umur}}</td>
       </tr>
       <tr>
         <td class="konten_s_question">Alamat</td>
-        <td class="konten_s_answer">: -</td>
+        <td class="konten_s_answer">: {{$alamat}}</td>
       </tr>
     </tbody>
   </table>
@@ -79,7 +79,7 @@ header('Content-Type: application/pdf');
           
         </td>
         <td class="ttd3">
-          Pekanbaru, 10/10/2019
+          Pekanbaru, {{$tanggal}}
         </td>
       </tr>  
       <tr>
@@ -89,7 +89,7 @@ header('Content-Type: application/pdf');
           <br>
           <br>
           <br>
-          (...........................)<br>
+          ( {{$konselor}} )<br>
           Konselor
         </td>
         <td class="ttd3">
@@ -98,7 +98,7 @@ header('Content-Type: application/pdf');
           <br>
           <br>
           <br>
-          (...........................)<br>
+          ( {{$kepala_ruangan}} )<br>
           Kepala Ruangan
         </td>
         <td class="ttd3">
@@ -107,7 +107,7 @@ header('Content-Type: application/pdf');
           <br>
           <br>
           <br>
-          (...........................)<br>
+          ( {{$residen}} )<br>
           Residen
         </td>
       </tr>  

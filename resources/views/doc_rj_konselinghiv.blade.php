@@ -24,34 +24,34 @@ header('Content-Type: application/pdf');
     <div class="row" style="padding-top:-20px;padding-left:10px;">
         <div class="column">
           <p class=""><b>NAMA</b></p>
-          <p class="answer">Ani Ananta</p>
+          <p class="answer">{{$nama}}</p>
 
           <p class="question"><b>ALAMAT</b></p>
-          <p class="answer">Jl Dahlia Ujung 20</p>
+          <p class="answer">{{$alamat}}</p>
 
           <p class="question"><b>PROPINSI</b></p>
-          <p class="answer">RIAU</p>
+          <p class="answer">{{$propinsi}}</p>
 
           <p class="question"><b>KOTA/KABUPATEN</b></p>
-          <p class="answer">Pekanbaru</p>
+          <p class="answer">{{$kota_kabupaten}}</p>
 
           <p class="question"><b>NAMA IBU KANDUNG</b></p>
-          <p class="answer">Anni</p>
+          <p class="answer">{{$nama_ibu_kandung}}</p>
         </div>
         <div class="column" style="padding-top:15px;">
-          <p class="question"><b>PASANGAN KLIEN</b></p>
+          <p class="question"><b>PASANGAN KLIEN</b></p><br>
           
           <p class="question"><b>KLIEN PUNYA PASANGAN TETAP</b></p>
-          <p class="answer">Ya</p>
+          <p class="answer">{{$pt}}</p>
 
           <p class="question"><b>TGL LAHIR PASANGAN</b></p>
-          <p class="answer">12 12 2018</p>
+          <p class="answer">{{$tanggal_lahir_pasangan}}</p>
 
           <p class="question"><b>STATUS PASANGAN</b></p>
-          <p class="answer">12</p>
+          <p class="answer">{{$sp}}</p>
 
           <p class="question"><b>TGL TES TERAKHIR PASANGAN</b></p>
-          <p class="answer">12 12 2018</p>
+          <p class="answer">{{$tgl_tes_terakhir_pasangan}}</p>
 
         </div>
       </div>
@@ -62,30 +62,30 @@ header('Content-Type: application/pdf');
       <div class="rowsize">
         <div class="colsize" style="width:28%">
           <p class="question"><b>JENIS KELAMIN</b></p>
-          <p class="answer">Perempuan</p>
+          <p class="answer">{{$jenis_kelamin}}</p>
         </div>
         <div class="colsize" style="width:28%">
           <p class="question"><b>STATUS PERKAWINAN</b></p>
-          <p class="answer">Kawin</p>
+          <p class="answer">$spk</p>
         </div>
         <div class="colsize" style="width:28%">
           <p class="question"><b>TGL LAHIR</b></p>
-          <p class="answer">21 12 1993</p>
+          <p class="answer">{{$tgl_lahir}}</p>
         </div>
       </div>
 
       <div class="rowsize">
         <div class="colsize" style="width:28%">
           <p class="question"><b>STATUS KEHAMILAN</b></p>
-          <p class="answer">Trisemester I</p>
+          <p class="answer">{{$skh}}</p>
         </div>
         <div class="colsize" style="width:28%">
           <p class="question"><b>UMUR ANAK TERAKHIR</b></p>
-          <p class="answer">12 Tahun</p>
+          <p class="answer">{{$umur_anak_terakhir}}</p>
         </div>
         <div class="colsize" style="width:28%">
           <p class="question"><b>JUMLAH ANAK KANDUNG</b></p>
-          <p class="answer">2 orang</p>
+          <p class="answer">{{$jumlah_anak_kandung}}</p>
         </div>
       </div>
     </div>
@@ -94,14 +94,14 @@ header('Content-Type: application/pdf');
 
     <div class="specialcase">
       <p class=""><b>PENDIDIKAN TERAKHIR</b></p>
-      <p class="answer">Akademi/Perguruan Tinggi/Sederajatnya</p>
+      <p class="answer">{{$pen}}</p>
     </div>
 
     <hr style="height:2px;">
 
     <div class="specialcase ">
       <p class=""><b>PEKERJAAN</b></p>
-      <p class="answer">Tidak Bekerja</p>
+      <p class="answer">{{$pek}}, {{$jenis_pekerjaan}}</p>
     </div>
 
     <hr style="height:2px;">
@@ -114,8 +114,8 @@ header('Content-Type: application/pdf');
     <hr style="height:2px;">
 
     <div class="specialcase ">
-      <p class=""><b>KELOMPOK RISIKO</b></p>
-      <p class="answer">12</p>
+      <p class=""><b>Lamanya</b></p>
+      <p class="answer">{{$lama_ps_penasun}}</p>
     </div>
 
     <hr style="height:2px;">
@@ -124,11 +124,11 @@ header('Content-Type: application/pdf');
       <div class="rowsize">
       <div class="colsize" style="width:28%">
         <p class="question"><b>STATUS KUNJUNGAN</b></p>
-        <p class="answer">Datang Sendiri</p>
+        <p class="answer">{{$sk}}</p>
       </div>
       <div class="colsize" style="width:28%">
         <p class="question"><b>STATUS RUJUKAN</b></p>
-        <p class="answer">Pasangan</p>
+        <p class="answer">{{$sr}}</p>
       </div>
     </div>
     </div>
@@ -138,7 +138,7 @@ header('Content-Type: application/pdf');
   <div style="font-size: 75%;border:3px solid black;">
     <p style="background-color: black;padding-left:10px;margin-top:-2px;"><font color="white"> POPULASI KHUSUS </font></p>
     <div class="specialcase">
-      <p class="">Klien WBP (Warga Binaan Permasyarakatan)? Ya</p>
+      <p class="">Klien WBP (Warga Binaan Permasyarakatan)? {{$wbp}}</p>
     </div>
     <br>
   </div>
@@ -153,10 +153,10 @@ header('Content-Type: application/pdf');
               <b>TGL PEMBERIAN INFORMASI</b>
             </td>    
             <td class="default2s" colspan="2">
-              12 12 2018
+              {{$tgl_konseling_pra_hiv}}
             </td> 
             <td class="default2s" colspan="2">
-              <b>STATUS KLIEN : </b>isi
+              <b>STATUS KLIEN : </b>{{$skl}}
             </td>                
           </tr>
           <tr>
@@ -181,27 +181,18 @@ header('Content-Type: application/pdf');
                <b>MENGETAHUI ADANYA TES DARI</b>
             </td>    
             <td class="default2s" colspan="2">
-              <ul>
-                <li>Brosur</li>
-                <li>Koran</li>
-              </ul>
-            </td>  
-            <td class="default2s" colspan="2">
-              <ul>
-                <li>Brosur</li>
-                <li>Koran</li>
-              </ul>
-            </td>               
+              {{$dmn}} {{$dmn_lainnya}}
+            </td>                 
           </tr>
           <tr>
             <td class="default2q">
               <b>KAJIAN TINGKAT RISIKO: HUBUNGAN SEKS VAGINAL BERESIKO</b>
             </td>    
             <td class="default2s" style="width:60px;" colspan="2">
-                Ya, 12 12 2018
+                {{$kaj}}, {{$waktu_kaj}}
             </td>  
             <td class="default2s" colspan="2">
-              <b>ANAL SEKS BERESIKO : Ya, 12 12 2018</b>
+              <b>ANAL SEKS BERESIKO : {{$an}}, {{$waktu_an}}</b>
             </td>            
           </tr>
           <tr>
@@ -209,10 +200,10 @@ header('Content-Type: application/pdf');
               <b>BERGANTIAN PERALATAN SUNTIK</b>
             </td>    
             <td class="default2s" style="width:60px;" colspan="2">
-                Ya, 12 12 2018
+                {{$per}}, {{$waktu_per}}
             </td>  
             <td class="default2s" colspan="2">
-              <b>TRANSFUSI DARAH : Ya, 12 12 2018</b>
+              <b>TRANSFUSI DARAH : {{$trf}}, {{$waktu_trf}}</b>
             </td>            
           </tr>
           <tr>
@@ -220,10 +211,10 @@ header('Content-Type: application/pdf');
               <b>TRANSMISI IBU KE ANAK</b>
             </td>    
             <td class="default2s" style="width:60px;" colspan="2">
-                Ya, 12 12 2018
+                {{$trm}}, {{$waktu_trm}}
             </td>  
             <td class="default2s" colspan="2">
-              <b>LAINNYA : Ya, 12 12 2018</b>
+              <b>LAINNYA : {{$ktr_lainnya}}, {{$waktu_ktr_lainnya}}</b>
             </td>            
           </tr>
           <tr>
@@ -231,10 +222,10 @@ header('Content-Type: application/pdf');
               <b>PERIODE JENDELA</b>
             </td>    
             <td class="default2s" style="width:60px;" colspan="2">
-                Ya, 12 12 2018
+                {{$jd}}, {{$waktu_jd}}
             </td>  
             <td class="default2s" colspan="2">
-              <b>KESEDIAAN UNTUK TES : Ya</b>
+              <b>KESEDIAAN UNTUK TES : $ksd</b>
             </td>            
           </tr>
 
@@ -262,7 +253,7 @@ header('Content-Type: application/pdf');
                <b>KESEDIAAN UNTUK TES</b>
             </td>    
             <td class="default2s" colspan="4">
-              Isi
+              {{$ksd}}
             </td>                
           </tr>
            <tr>
@@ -270,16 +261,16 @@ header('Content-Type: application/pdf');
               <b>PERNAH TES HIV SEBELUMNYA</b>
             </td>    
             <td class="default2s" style="width:60px;">
-                Ya
+                {{$tes_hiv}}
             </td>  
             <td class="default2s">
-              <b>Dimana : </b>ya
+              <b>Dimana : </b>{{$tt_hiv}}
             </td> 
             <td class="default2s">
-              <b>Kapan : </b> ... 
+              <b>Kapan : </b>{{$wt_hiv}}
             </td>
             <td class="default2s">
-              <b>Hasil : </b> ... 
+              <b>Hasil : </b>{{$ht_hiv}}
             </td>               
           </tr>
         </tbody>
@@ -300,7 +291,7 @@ header('Content-Type: application/pdf');
               <b>TGL PEMBERIAN INFORMASI</b>
             </td>    
             <td class="default2s" colspan="4">
-              12 12 2018
+              {{$tgl_pemberian_informasi}}
             </td>                
           </tr>
           <tr>
@@ -308,16 +299,16 @@ header('Content-Type: application/pdf');
               <b>PERNAH TES HIV SEBELUMNYA</b>
             </td>    
             <td class="default2s" style="width:60px;">
-                Ya
+                {{$tes_hiv2}}
             </td>  
             <td class="default2s">
-              <b>Dimana : </b>ya
+              <b>Dimana : </b>{{$tt_hiv2}}
             </td> 
             <td class="default2s">
-              <b>Kapan : </b> ... 
+              <b>Kapan : </b>{{$wt_hiv2}}
             </td>
             <td class="default2s">
-              <b>Hasil : </b> ... 
+              <b>Hasil : </b>{{$ht_hiv2}}
             </td>               
           </tr>
           <tr>
@@ -342,7 +333,7 @@ header('Content-Type: application/pdf');
                <b>KESEDIAAN UNTUK TES</b>
             </td>    
             <td class="default2s" colspan="4">
-              Isi
+              {{$kesediaan_tes_tipk}}
             </td>                
           </tr>
         </tbody>
@@ -361,10 +352,10 @@ header('Content-Type: application/pdf');
                <b>TGL TES HIV</b>
             </td>    
             <td class="default2s" style="width:60px;">
-              12 12 2018
+              {{$tgl_tes_hiv}}
             </td>  
             <td class="default2s">
-              <b>JENIS TES HIV : </b> Rapid Test
+              <b>JENIS TES HIV : </b> {{$jt}}
             </td>                      
           </tr>
           
@@ -373,10 +364,10 @@ header('Content-Type: application/pdf');
                <b>HASIL TES R1</b>
             </td>    
             <td class="default2s" style="width:60px;">
-              Non Reaktif
+              {{$r1}}
             </td>  
             <td class="default2s">
-              <b>Nama Reagen : </b> isi
+              <b>Nama Reagen : </b> {{$r1_reagen}}
             </td>             
           </tr>
           <tr>
@@ -386,10 +377,10 @@ header('Content-Type: application/pdf');
                <b>HASIL TES R2</b>
             </td>    
             <td class="default2s" style="width:60px;">
-              Non Reaktif
+              {{$r2}}
             </td>  
             <td class="default2s">
-              <b>Nama Reagen : </b> isi
+              <b>Nama Reagen : </b> {{$r2_reagen}}
             </td>             
           </tr>
           <tr>
@@ -399,10 +390,10 @@ header('Content-Type: application/pdf');
                <b>HASIL TES R2</b>
             </td>    
             <td class="default2s" style="width:60px;">
-              Non Reaktif
+              {{$r3}}
             </td>  
             <td class="default2s">
-              <b>Nama Reagen : </b> isi
+              <b>Nama Reagen : </b> {{$r3_reagen}}
             </td>             
           </tr>
           <tr>
@@ -412,7 +403,7 @@ header('Content-Type: application/pdf');
                <b>KESIMPULAN HASIL TES HIV</b>
             </td>    
             <td class="default2s" colspan="2">
-              Non Reaktif
+              {{$kes}}
             </td>                
           </tr>
 
@@ -421,10 +412,10 @@ header('Content-Type: application/pdf');
                <b>NOMOR REGISTRASI NASIONAL PDP</b>
             </td>    
             <td class="default2s" style="width:70px;">
-              Non Reaktif
+              {{$nrn_pdp}}
             </td>  
             <td class="default2s">
-              <b>Tanggal Masuk PDP : </b> 12 12 18
+              <b>Tanggal Masuk PDP : </b> {{$tgl_masuk_pdp}}
             </td>                   
           </tr>
           <tr>
@@ -451,7 +442,7 @@ header('Content-Type: application/pdf');
                Bagaimana Status HIV Pasangan?
             </td>    
             <td class="default2s"  style="padding-top:5px;">
-               HIV(+)
+               {{$shp}}
             </td>             
           </tr>
         </tbody>
@@ -470,7 +461,7 @@ header('Content-Type: application/pdf');
                <b>TGL KONSELING PASCA TES HIV</b>
             </td>    
             <td class="default2s" colspan="3">
-              12 12 2018
+              {{$tgl_konseling_pasca_tes}}
             </td>                
           </tr>
           <tr>
@@ -478,13 +469,13 @@ header('Content-Type: application/pdf');
                <b>TERIMA HASIL</b>
             </td>    
             <td class="default2s" style="width:60px;">
-              Ya
+              {{$tha}}
             </td>  
             <td class="default2s">
-              <b>KAJI GEJALA TB : </b>ya
+              <b>KAJI GEJALA TB : </b>{{$ktb}}
             </td> 
             <td class="default2s">
-              <b>Jumlah Kondom yang diberikan : </b> 00
+              <b>Jumlah Kondom yang diberikan : </b> {{$jkyd}}
             </td>               
           </tr>
           <tr>
@@ -503,7 +494,7 @@ header('Content-Type: application/pdf');
                <b>NAMA KONSELOR / PETUGAS KESEHATAN</b>
             </td>    
             <td class="default2s" colspan="3">
-              Isi
+              {{$nama_konselor}}
             </td>                
           </tr>
           <tr>
@@ -511,7 +502,7 @@ header('Content-Type: application/pdf');
                <b>STATUS LAYANAN</b>
             </td>    
             <td class="default2s" colspan="3">
-              Rumah sakit
+              {{$sl}}
             </td>                
           </tr>
           <tr>
@@ -519,7 +510,7 @@ header('Content-Type: application/pdf');
                <b>JENIS PELAYANAN</b>     
             </td>    
             <td class="default2s" colspan="3">
-              Layanan Menetap
+              {{$jpe}}
             </td>                
           </tr>
         </tbody>

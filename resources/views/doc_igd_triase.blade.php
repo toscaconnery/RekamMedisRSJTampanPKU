@@ -24,7 +24,7 @@ header('Content-Type: application/pdf');
             Tanggal Masuk IGD
           </td>    
           <td class="konten_s_answer">  
-            : 20/09/2018
+            : {{$tanggal_masuk}}
           </td>                
         </tr>
         <tr>
@@ -32,7 +32,7 @@ header('Content-Type: application/pdf');
             Jam
           </td>    
           <td class="konten_s_answer">  
-            : 20:00
+            : {{$jam}}
           </td>                
         </tr>
         <tr>
@@ -40,7 +40,7 @@ header('Content-Type: application/pdf');
             Keluhan Utama
           </td>    
           <td class="konten_s_answer">  
-            : Sakit pada
+            : {{$keluhan_utama}}
           </td>                
         </tr>
       </tbody>
@@ -49,28 +49,28 @@ header('Content-Type: application/pdf');
 
   <br>
 
-  <h4><b>PEMERIKSAAN :</b> RESUSITASI</h4>
+  <h4><b>PEMERIKSAAN :</b> TANDA VITAL</h4>
   <div style="font-size: 85%;">  
     <p><b>JALAN NAFAS :</b></p>
       <ul>
-        <li>Tekanan Darah : 90 mmHg</li>
-        <li>Frek Nadi : 90 x/mnt</li>
+        <li>Tekanan Darah : {{$tekanan_darah}} mmHg</li>
+        <li>Frek Nadi : {{$frek_nadi}} x/mnt</li>
       </ul>
     <p><b>PERNAFASAN :</b></p>
       <ul>
-        <li>Frek Nafas : 90 x/mnt</li>
-        <li>Suhu : 36 C</li>
+        <li>Frek Nafas : {{$frek_nafas}} x/mnt</li>
+        <li>Suhu : {{$suhu}} <sup>o</sup> C</li>
       </ul>
     <p><b>SIRKULASI :</b></p>
       <ul>
-        <li>Riwayat Alergi: alergi udang</li>
-        <li>Makanan : Ayam</li>
-        <li>Makanan : Tidak ada</li>
-        <li>Lainnya : Tidak ada</li>
+        <li>Riwayat Alergi:</li>
+        <li>Alargi Makanan : {{$alergi_makanan}}</li>
+        <li>Alergi Obat : {{$alergi_obat}}</li>
+        <li>Alergi Lainnya : {{$alergi_lainnya}}</li>
       </ul>
-    <p><b>KESADARAN :</b> GCS 15</p>
+    <p><b>KESADARAN :</b> GCS {{$gcs}}</p>
 
-    <p><b>DOA :</b> YA</p>
+    <p><b>DOA :</b> {{$doa}}</p>
   
   </div>
 
@@ -88,7 +88,7 @@ header('Content-Type: application/pdf');
         <br>
         <br>
         <br>
-        <p>( Ani Ananta )</p>
+        <p>( [nama Petugas]] )</p>
       </div>
     </div>
   </div>

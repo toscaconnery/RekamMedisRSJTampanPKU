@@ -77,7 +77,7 @@ header('Content-Type: application/pdf');
           
         </td>
         <td class="ttd3">
-          Pekanbaru, 10/10/2019
+          Pekanbaru, {{$tanggal}}
         </td>
       </tr>  
       <tr>
@@ -87,7 +87,7 @@ header('Content-Type: application/pdf');
           <br>
           <br>
           <br>
-          (...........................)<br>
+          ( {{$konselor}} )<br>
           Konselor
         </td>
         <td class="ttd3">
@@ -96,7 +96,7 @@ header('Content-Type: application/pdf');
           <br>
           <br>
           <br>
-          (...........................)<br>
+          ( {{$kepala_ruangan}} )<br>
           Kepala Ruangan
         </td>
         <td class="ttd3">
@@ -105,7 +105,7 @@ header('Content-Type: application/pdf');
           <br>
           <br>
           <br>
-          (...........................)<br>
+          ( {{$residen}} )<br>
           Residen
         </td>
       </tr>  
