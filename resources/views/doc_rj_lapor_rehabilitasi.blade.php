@@ -17,11 +17,26 @@ header('Content-Type: application/pdf');
       <td class="box-c" colspan="9" style="padding:1%;"><b>ASESMEN WAJIB LAPOR & REHABILITASI MEDIS</b></td>
     </tr>
     
+    <tr style="">
+      <td class="box-plain" colspan="2" style="border-left:1px solid black;">Tanggal kedatangan</td>
+      <td class="box-plain" colspan="7" style="border-right:1px solid black">: {{$tanggal_kedatangan}}</td>
+    </tr>
+
+    <tr>
+      <td class="box-plain" colspan="2" style="border-left:1px solid black">Alamat tempat tinggal</td>
+      <td class="box-plain" colspan="7" style="border-right:1px solid black">: {{$alamat}}</td>
+    </tr>
+    
+    <tr>
+      <td class="box-plain" colspan="2" style="border-left:1px solid black">Telp/Hp</td>
+      <td class="box-plain" colspan="7" style="border-right:1px solid black">: {{$telp}}</td>  
+    </tr>
+
     <tr>
       <td class="box-c" rowspan="8" width="5%">1</td>
       <td class="box" rowspan="8" width="20%">INFORMASI DEMOGRAFIS</td>
       <td class="box-c" rowspan="3" width="15%">1.</td>
-      <td class="box" colspan="2" width="25%" rowspan="3">Status Perkawinan :</td>
+      <td class="box" colspan="2" width="30%" rowspan="3">Status Perkawinan :</td>
       <td class="box" colspan="3" width="25%">Belum Menikah = 1</td>
       <td class="box" width="10%">-</td>
     </tr>
@@ -38,8 +53,8 @@ header('Content-Type: application/pdf');
 
     <tr>
       <td class="box-c" rowspan="5" width="5%">2.</td>
-      <td class="box" colspan="2" width="30%" rowspan="5">Pendidikan Terakhir :</td>
-      <td class="box" colspan="3" width="30%">Tamat SD = 1</td>
+      <td class="box" colspan="2" width="40%" rowspan="5">Pendidikan Terakhir :</td>
+      <td class="box" colspan="3" width="20%">Tamat SD = 1</td>
       <td class="box" width="10%">-</td>
     </tr>
 
@@ -124,7 +139,7 @@ header('Content-Type: application/pdf');
     <tr>
       <td class="box" colspan="6" width="5%">
         Jenis terapi medis yang dijalani saat ini : 
-        <br> -
+        <br> {{$jenis_terapi_dijalani}}
       </td>
     </tr>
 
@@ -214,14 +229,14 @@ header('Content-Type: application/pdf');
     <tr>
       <td class="box-c" width="5%">3.</td>
       <td class="box" colspan="2">Kode Pekerjaan :</td>
-      <td class="box" colspan="3">-</td>
+      <td class="box" colspan="3">{{$kode_pekerjaan}}</td>
       <td class="box">-</td>
     </tr>
 
     <tr>
       <td class="box-c" rowspan="2" width="5%">4.</td>
       <td class="box" colspan="2" rowspan="2">Keterampilan teknis yang dimiliki :</td>
-      <td class="box" colspan="3">-</td>
+      <td class="box" colspan="3">{{$keterampilan_teknis}}</td>
       <td class="box" colspan="3">-</td>
     </tr>
 
@@ -242,7 +257,7 @@ header('Content-Type: application/pdf');
     <tr>
       <td class="box-c" width="5%">6.</td>
       <td class="box" colspan="2">Bila Ya, siapakah?</td>
-      <td class="box" colspan="4">-</td>
+      <td class="box" colspan="4">{{$nama_pemberi_dukungan}}</td>
     </tr>
 
     <tr>
@@ -411,7 +426,7 @@ header('Content-Type: application/pdf');
     <tr>
       <td class="box-c" width="5%">13</td>
       <td class="box" colspan="3">Jenis zat utama yang disalahgunakan :</td>
-      <td class="box"></td>
+      <td class="box">{{$zat_utama_disalahgunakan}}</td>
       <td class="box"></td>
       <td class="box"></td>
     </tr>
@@ -427,7 +442,7 @@ header('Content-Type: application/pdf');
      <tr>
       <td class="box-c" width="5%">15</td>
       <td class="box" colspan="6">Bila ya, jenis terapi rehabilitasi yang dijalani
-        <br>Keterangan : ...
+        <br>Keterangan : {{$jenis_terapi_rehabilitasi}}
       </td>
     </tr>
 
@@ -441,13 +456,14 @@ header('Content-Type: application/pdf');
 
      <tr>
       <td class="box-c" width="5%">17</td>
-      <td class="box" colspan="6">Bila ya, kapan dan bagaimana penanggulangannya</td>
+      <td class="box" colspan="4">Bila ya, kapan dan bagaimana penanggulangannya</td>
+      <td class="box" colspan="2">{{$keterangan_overdosis}}</td>
     </tr>
 
      <tr>
       <td class="box-c" width="5%">18</td>
       <td class="box" colspan="2">Waktu Overdosis</td>
-      <td class="box" colspan="4"> ...</td>
+      <td class="box" colspan="4">{{$waktu_overdosis}}</td>
     </tr>
 
      <tr>
@@ -680,7 +696,7 @@ header('Content-Type: application/pdf');
 
     <tr>
       <td class="box-c">6</td>
-      <td class="box" colspan="2">Lainnya ...</td>
+      <td class="box" colspan="2">Lainnya {{$keterangan_lainnya_pengguna}}</td>
       <td class="box">Ya = 1</td>
       <td class="box">Tidak = 0</td>
       <td class="box"></td>
@@ -849,28 +865,28 @@ header('Content-Type: application/pdf');
       <td class="box" width="20%" rowspan="14" >PEMERIKSAAN FISIK</td>
       <td class="box-c" width="5%">1</td>
       <td class="box" colspan="6" width="5%"> 
-        Tekanan darah:
+        Tekanan darah: {{$tekanan_darah}}
       </td>
     </tr>
 
     <tr>
       <td class="box-c" width="5%">2</td>
       <td class="box" colspan="6" width="5%"> 
-        Nadi:
+        Nadi: {{$nadi}} 
       </td>
     </tr>
 
     <tr>
       <td class="box-c" width="5%">3</td>
       <td class="box" colspan="6" width="5%"> 
-        Pernapasan(RR):
+        Pernapasan(RR): {{$pernapasan}}
       </td>
     </tr>
 
     <tr>
       <td class="box-c" width="5%">4</td>
       <td class="box" colspan="6" width="5%"> 
-        Suhu(celcius) :
+        Suhu(celcius) : {{$suhu}}
       </td>
     </tr>
 
@@ -1033,6 +1049,218 @@ header('Content-Type: application/pdf');
 
   </tbody>
 </table>
+
+<pagebreak>
+
+  <table>
+    <body>
+      <tr>
+        <td class="box" colspan="11">Formulir 1. Formulir Asesmen & Petunjuk Pengisian Formulir</td>
+      </tr>
+
+      <tr>
+        <td class="box-c" colspan="11"><b>FORMULIR ASESMEN WAJIB LAPOR DAN REAHBILITASI MEDIS</b></td>
+      </tr>
+
+      <tr>
+        <td class="box" colspan="3">Tanggal Kedatangan</td>
+        <td class="box" colspan="8">{{$tanggal_kedatangan}}</td>
+      </tr>
+
+      <tr>
+        <td class="box" colspan="3">Nomor Rekam Medik</td>
+        <td class="box" colspan="8">[no.rm]</td>
+      </tr>
+
+      <tr>
+        <td class="box" colspan="3">Nama</td>
+        <td class="box" colspan="8">[nama pasien]</td>
+      </tr>
+
+      <tr>
+        <td class="box-C" rowspan="8" width="15%">KESIMPULAN</td>
+        <td class="box"></td>
+        <td class="box" colspan="9">MASALAH YANG DIHADAPI</td>
+      </tr>
+
+      <tr>
+        <td class="box"></td>
+        <td class="box">1</td>
+        <td class="box">2</td>
+        <td class="box">3</td>
+        <td class="box">4</td>
+        <td class="box">5</td>
+        <td class="box">6</td>
+        <td class="box">7</td>
+        <td class="box">8</td>
+        <td class="box">9</td>
+      </tr>
+
+      <tr>
+        <td class="box">Medis</td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+      </tr>
+
+      <tr>
+        <td class="box">Pekerjaan / Dukungan</td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+      </tr>
+
+      <tr>
+        <td class="box">Napza</td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+      </tr>
+
+      <tr>
+        <td class="box">Legal</td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+      </tr>
+
+      <tr>
+        <td class="box">Keluarga / Sosial</td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+      </tr>
+
+      <tr>
+        <td class="box">Psikiatris</td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+        <td class="box"></td>
+      </tr>
+
+      <tr>
+        <td class="box-C" rowspan="2">DIAGNOSA KERJA</td>
+        <td class="box" colspan="8">Klien memenuhi kriteria diagnosis Napza</td>
+        <td class="box-c" colspan="2">F. {{$kriteria_napza}}</td>
+      </tr>
+
+      <tr>
+        <td class="box">Diagnosis Lainnya: </td>
+        <td class="box" colspan="9">{{$diagnosis_lainnya}}</td>
+      </tr>
+
+      <tr>
+        <td class="box-c" rowspan="10">RENCANA TERAPI DAN REHABILITASI MEDIS</td>
+        <td class="box">Resume Masalah: </td>
+        <td class="box" colspan="9"></td>
+      </tr>
+
+      <tr>
+        <td class="box" rowspan="9">Rencana Tindak Lanjut</td>
+        <td class="box">1</td>
+        <td class="box" colspan="8">Asesmen lanjutan/mendalam</td>
+      </tr>
+
+      <tr>
+        <td class="box">2</td>
+        <td class="box" colspan="8">Evaluasi Psikologis</td>
+      </tr>
+
+      <tr>
+        <td class="box">3</td>
+        <td class="box" colspan="8">Program Detoksifikasi</td>
+      </tr>
+
+      <tr>
+        <td class="box">4</td>
+        <td class="box" colspan="8">Wawancara Motivasional</td>
+      </tr>
+
+      <tr>
+        <td class="box">5</td>
+        <td class="box" colspan="8">Intervensi Singkat</td>
+      </tr>
+
+      <tr>
+        <td class="box">6</td>
+        <td class="box" colspan="8">Terapi rumatan ...</td>
+      </tr>
+
+      <tr>
+        <td class="box">7</td>
+        <td class="box" colspan="8">Rehabilitasi rawat inap ...</td>
+      </tr>
+
+      <tr>
+        <td class="box">8</td>
+        <td class="box" colspan="8">Konseling ...</td>
+      </tr>
+
+      <tr>
+        <td class="box">9</td>
+        <td class="box" colspan="8">Lain-lain ...</td>
+      </tr>
+
+      <tr>
+       <td class="box-c">MENGETAHUI DOKTER</td>
+       <td class="box-c">Tanda Tangan / Nama Jelas</td>
+       <td class="box-c" colspan="9">
+         <br>
+         <br>
+         <br>
+         {{$nama_dokter}}
+       </td>
+      </tr>
+
+      <tr>
+       <td class="box-c">MENYETUJUI PASIEN</td>
+       <td class="box-c">Tanda Tangan / Nama Jelas</td>
+       <td class="box-c" colspan="9">
+         <br>
+         <br>
+         <br>
+         [nama pasien]
+       </td>
+      </tr>
+
+    </body>
+  </table>
 
 </body>
 

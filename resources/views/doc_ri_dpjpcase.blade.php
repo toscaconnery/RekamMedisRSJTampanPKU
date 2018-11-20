@@ -25,7 +25,7 @@ header('Content-Type: application/pdf');
                   Diagnosa
                 </td>    
                 <td class="konten_s_answer">  
-                  : -
+                  : {{$diagnosa}}
                 </td>                
               </tr>
               <tr>
@@ -33,7 +33,7 @@ header('Content-Type: application/pdf');
                   Ruang
                 </td>    
                 <td class="konten_s_answer">  
-                  : -
+                  : {{$ruang}}
                 </td>                
               </tr>
               <tr>
@@ -41,7 +41,7 @@ header('Content-Type: application/pdf');
                   DPJP
                 </td>    
                 <td class="konten_s_answer">  
-                  : -
+                  : {{$nama_dpjp}}
                 </td>                
               </tr>
             </tbody>
@@ -50,7 +50,7 @@ header('Content-Type: application/pdf');
         <div class="column">
           <p style="text-align: center;">Tanda Tangan</p>
           <br>
-          <p style="text-align: center;">( ................)</p>
+          <p style="text-align: center;">( {{$nama_dpjp}} )</p>
         </div>
       </div>
     </div>
@@ -96,7 +96,7 @@ header('Content-Type: application/pdf');
                   Pengalihan DPJP ke
                 </td>    
                 <td class="konten_s_answer">  
-                  : -
+                  : {{$pengalihan_dpjp_ke}}
                 </td>                
               </tr>
               <tr>
@@ -104,7 +104,7 @@ header('Content-Type: application/pdf');
                   Tanggal
                 </td>    
                 <td class="konten_s_answer">  
-                  : -
+                  : {{$tanggal_pengalihan}}
                 </td>                
               </tr>
               <tr>
@@ -112,7 +112,7 @@ header('Content-Type: application/pdf');
                   Alasan
                 </td>    
                 <td class="konten_s_answer">  
-                  : -
+                  : {{$alasan_pengalihan}}
                 </td>                
               </tr>
             </tbody>
@@ -121,7 +121,7 @@ header('Content-Type: application/pdf');
         <div class="column">
           <p style="text-align: center;">Tanda Tangan</p>
           <br>
-          <p style="text-align: center;">( ................)</p>
+          <p style="text-align: center;">( {{$pengalihan_dpjp_ke}} )</p>
         </div>
       </div>
   </div>
@@ -140,7 +140,7 @@ header('Content-Type: application/pdf');
       <tbody>
         <tr>
           <td style="height: 50px" class="default">
-            CASE MANAGER 1 :
+            CASE MANAGER 1 : {{$cm_1}}
           </td>
           <td class="default">
             
@@ -148,7 +148,7 @@ header('Content-Type: application/pdf');
         </tr>
         <tr>
           <td style="height:50px" class="default">
-            CASE MANAGER 2 :
+            CASE MANAGER 2 : {{$cm_2}}
           </td>
           <td class="default">
             
@@ -156,7 +156,7 @@ header('Content-Type: application/pdf');
         </tr>
         <tr>
           <td style="height:50px" class="default">
-            CASE MANAGER 3 :
+            CASE MANAGER 3 : {{$cm_3}}
           </td>
           <td class="default">
             
