@@ -40,9 +40,8 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                      <a class="btn btn-primary" href="{{url('')}}/rj_ikhtisarhiv_pdf">PDF</a>
+                      <a class="btn btn-success" href="#">EDIT</a>
                     </div>
                   </td>
                 </tr>
@@ -536,10 +535,10 @@
                         </select>
                       </td>
                       <td>
-                        <input type="text" name="cd4_pkl_6" class="form-control" disabled {{$cd4_pkl_6}}>
+                        <input type="text" name="cd4_pkl_6" class="form-control" disabled value="{{$cd4_pkl_6}}" >
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="lain_lain_pkl_6" disabled {{$lain_lain_pkl_6}}>
+                        <input type="text" class="form-control" name="lain_lain_pkl_6" disabled value="{{$lain_lain_pkl_6}}">
                       </td>
                     </tr>
                   </tbody>
@@ -575,7 +574,7 @@
                           <input type="hidden" name="nama_panduan_orisinil_art_1" disabled value="{{$t[0]}}">
                         </td>
                         <td>
-                          <input type="text" class="form-control" name="tanggal_art_1" disabled value="{{$t[1]}}">
+                          <input type="text" style="width:300%" class="form-control" name="tanggal_art_1" disabled value="{{$t[1]}}">
                         </td>
                         <td>
                           <select class="form-control" name="substitusi_art_" disabled>

@@ -23,7 +23,7 @@ header('Content-Type: application/pdf');
               No.Reg.Nasional
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$no_reg_nasional}}
             </td>                
           </tr>
           <tr>
@@ -31,7 +31,7 @@ header('Content-Type: application/pdf');
               Riwayat Alergi Obat 
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$riwayat_alergi_obat}}
             </td>                
           </tr>
           <tr>
@@ -39,7 +39,7 @@ header('Content-Type: application/pdf');
               NIK
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$nik}}
             </td>                
           </tr>
           <tr>
@@ -47,7 +47,7 @@ header('Content-Type: application/pdf');
               Nama Ibu Kandung
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$nama_ibu_kandung}}
             </td>                
           </tr>
           <tr>
@@ -55,7 +55,7 @@ header('Content-Type: application/pdf');
               Alamat dan No. Telp. Pasien
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$alamat_pasien}}, {{$no_telp}}
             </td>                
           </tr>
           <tr>
@@ -63,7 +63,7 @@ header('Content-Type: application/pdf');
               Nama Pengawas Minum Obat (PMO)
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$nama_pmo}}
             </td>                
           </tr>
           <tr>
@@ -71,7 +71,7 @@ header('Content-Type: application/pdf');
               Hubungan dengan Pasien
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$hubungan_dengan_pasien}}
             </td>                
           </tr>
           <tr>
@@ -79,7 +79,7 @@ header('Content-Type: application/pdf');
               Alamat dan No. Telp. PMO
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$alamat_pmo}}. {{$no_telp_pmo}}
             </td>                
           </tr>
           <tr>
@@ -87,7 +87,7 @@ header('Content-Type: application/pdf');
               Tanggal Konfirmasi tes HIV +
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$tgl_konfirm_tes_hiv}}
             </td>                
           </tr>
           <tr>
@@ -95,7 +95,7 @@ header('Content-Type: application/pdf');
               &emsp;Tempat
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$tempat_tes_hiv}}
             </td>                
           </tr>
         </tbody>
@@ -110,7 +110,7 @@ header('Content-Type: application/pdf');
               <i><b>Entry Point</b></i>
             </td> 
             <td class="konten_l_answer">  
-              : -
+              : {{$entry_point}} {{$keterangan_entry_point}}
             </td>             
           </tr>
         </tbody>
@@ -124,7 +124,7 @@ header('Content-Type: application/pdf');
               Pendidikan
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$pendidikan}}
             </td>                
           </tr>
           <tr>
@@ -132,7 +132,7 @@ header('Content-Type: application/pdf');
              Pekerjaan 
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$pekerjaan}} {{$nama_pekerjaan}}
             </td>                
           </tr>
           <tr>
@@ -147,7 +147,7 @@ header('Content-Type: application/pdf');
           </tr>
           <tr>
             <td class="konten_l_question" colspan="2">
-              &emsp;NAPZA suntik
+              &emsp;Lainnya uraikan, {{$keterangan_fr_lainnya}}
             </td>                  
           </tr>
         </tbody>
@@ -161,7 +161,7 @@ header('Content-Type: application/pdf');
               Status Pernikahan
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$status_pernikahan}}
             </td>                
           </tr>
         </tbody>
@@ -179,46 +179,16 @@ header('Content-Type: application/pdf');
           </tr>
         </thead>
         <tbody>
+          @foreach($riwayat_keluarga as $r)
           <tr>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
+            <td class="default">{{$r[0]}}</td>
+            <td class="default">{{$r[1]}}</td>
+            <td class="default">{{$r[2]}}</td>
+            <td class="default">{{$r[3]}}</td>
+            <td class="default">{{$r[4]}}</td>
+            <td class="default">{{$r[5]}}</td>
           </tr>
-          <tr>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-          </tr>
-          <tr>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-          </tr>
-          <tr>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-          </tr>
-          <tr>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-          </tr>
+          @endforeach
         </tbody>
       </table>
     </div>
@@ -233,12 +203,12 @@ header('Content-Type: application/pdf');
           <tr>
             <thead style="font-size:60%">
               <tr>
-                <td style="border: 1px solid black" rowspan="2">Pernah menerima ART?<br>Ya 2</td>
-                <td style="border: 1px solid black" >Ya, PPIA</td>
-                <td style="border: 1px solid black">Tempat ART dulu: RS Pem</td>
+                <td style="border: 1px solid black" rowspan="2">Pernah menerima ART?<br></td>
+                <td style="border: 1px solid black" >{{$pernah_menerima_art}}, {{$jenis_art}}</td>
+                <td style="border: 1px solid black">Tempat ART dulu: {{$tempat_art_dulu}}</td>
               </tr>
               <tr>
-                <td style="border: 1px solid black" colspan="2">Nama, Dosis ARV & Lama Penggunaannya: -</td>
+                <td style="border: 1px solid black" colspan="2">Nama, Dosis ARV & Lama Penggunaannya: {{$nama_arv}}, {{$lama_penggunaan}}</td>
               </tr>
             </thead>
           </tr>
@@ -263,57 +233,57 @@ header('Content-Type: application/pdf');
         <tbody>
           <tr>
             <td class="default">Kunjungan pertama</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
+            <td class="default">{{$tanggal_pkl_1}}</td>
+            <td class="default">{{$stad_klinis_pkl_1}}</td>
+            <td class="default">{{$bb_pkl_1}}</td>
+            <td class="default">{{$status_fungsional_pkl_1}}</td>
+            <td class="default">{{$cd4_pkl_1}}</td>
+            <td class="default">{{$lain_lain_pkl_1}}</td>
           </tr>
           <tr>
             <td class="default">Memenuhi syarat medis untuk ART</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
+            <td class="default">{{$tanggal_pkl_2}}</td>
+            <td class="default">{{$stad_klinis_pkl_2}}</td>
+            <td class="default">{{$bb_pkl_2}}</td>
+            <td class="default">{{$status_fungsional_pkl_2}}</td>
+            <td class="default">{{$cd4_pkl_2}}</td>
+            <td class="default">{{$lain_lain_pkl_2}}</td>
           </tr>
           <tr>
             <td class="default">Saat mulai ART</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
+            <td class="default">{{$tanggal_pkl_3}}</td>
+            <td class="default">{{$stad_klinis_pkl_3}}</td>
+            <td class="default">{{$bb_pkl_3}}</td>
+            <td class="default">{{$status_fungsional_pkl_3}}</td>
+            <td class="default">{{$cd4_pkl_3}}</td>
+            <td class="default">{{$lain_lain_pkl_3}}</td>
           </tr>
           <tr>
             <td class="default">Setelah 6 bulan ART</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
+            <td class="default">{{$tanggal_pkl_4}}</td>
+            <td class="default">{{$stad_klinis_pkl_4}}</td>
+            <td class="default">{{$bb_pkl_4}}</td>
+            <td class="default">{{$status_fungsional_pkl_4}}</td>
+            <td class="default">{{$cd4_pkl_4}}</td>
+            <td class="default">{{$lain_lain_pkl_4}}</td>
           </tr>
           <tr>
             <td class="default">Setelah 12 bulan ART</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
+            <td class="default">{{$tanggal_pkl_5}}</td>
+            <td class="default">{{$stad_klinis_pkl_5}}</td>
+            <td class="default">{{$bb_pkl_5}}</td>
+            <td class="default">{{$status_fungsional_pkl_5}}</td>
+            <td class="default">{{$cd4_pkl_5}}</td>
+            <td class="default">{{$lain_lain_pkl_5}}</td>
           </tr>
           <tr>
             <td class="default">Setelah 24 bulan ART</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
+            <td class="default">{{$tanggal_pkl_6}}</td>
+            <td class="default">{{$stad_klinis_pkl_6}}</td>
+            <td class="default">{{$bb_pkl_6}}</td>
+            <td class="default">{{$status_fungsional_pkl_6}}</td>
+            <td class="default">{{$cd4_pkl_6}}</td>
+            <td class="default">{{$lain_lain_pkl_6}}</td>
           </tr>
         </tbody>
       </table>
@@ -325,8 +295,8 @@ header('Content-Type: application/pdf');
       <table style="font-size:70%">
         <thead>
           <tr>
-            <th class="default" rowspan="6" style="vertical-align:top;font-size:80%;">
-              <b>Nama Paduan ART Orisinal</b><br>
+            <th class="default" rowspan="8" style="vertical-align:middle;font-size:80%;">
+              <b>Nama Panduan ART Orisinal</b><br>
               1. TDF+3TC+EFV<br>
               2. TDF+FTC+EFV<br>
               3. TDF+3TC+NVP<br>
@@ -348,50 +318,25 @@ header('Content-Type: application/pdf');
           </tr>
         </thead>
         <tbody style="font-size:60%">
-          <tr>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-          </tr>
-          <tr>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-          </tr>
-          <tr>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-          </tr>
-          <tr>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-            <td class="default">-</td>
-          </tr>
+          @foreach($terapi_art as $t)
+            <tr>
+              <td class="default">{{$t[1]}}</td>
+              <td class="default">{{$t[2]}}</td>
+              <td class="default">{{$t[3]}}</td>
+              <td class="default">{{$t[4]}}</td>
+              <td class="default">{{$t[5]}}</td>
+              <td class="default">{{$t[6]}}</td>
+              <td class="default">{{$t[7]}}</td>
+            </tr>
+          @endforeach
         </tbody>
       </table>
     </div>
 
     <p style="font-size:65%;margin-top:1%;margin-bottom:1%">
-      <b>Alasan SUBTITUSI/SWITCH:</b> -<br>
-      <b>Alasan hanya untuk SWITCH:</b> -<br>
-      <b>Alasan STOP:</b> -
+      <b>Alasan SUBTITUSI/SWITCH:</b> {{$alasan_lain_substitusi}}<br>
+      <b>Alasan hanya untuk SWITCH:</b> {{$alasan_lain_switch}}<br>
+      <b>Alasan STOP:</b> {{$alasan_lain_stop}}
     </p>
     
     <h4 style="font-size:80%">7. Pengobatan TB selama perawatan HIV</h4>
@@ -401,20 +346,16 @@ header('Content-Type: application/pdf');
         <tbody>
           <tr>
             <td class="default3" style="text-align:left;vertical-align:top;padding:2%">
-              Klasifikasi TB :
+              Klasifikasi TB : {{$klasifikasi_tb}}
             </td>
             <td class="default3" style="text-align:left;vertical-align:top;padding:2%">
-              Panduan TB
-              <br>1.
-              <br>2.
-              <br>3.
-              <br>4.
+              Panduan TB : {{$ptb}}
             </td>
             <td class="default3" style="text-align:left;vertical-align:top;padding:2%">
               Tempat Pengobatan TB:<br>
-              Kabupaten - <br>
-              Nama sarana kesehatan -<br>
-              No.Reg. TB Kabutaen.Kota -
+              Kabupaten: {{$kabupaten_tptb}} <br>
+              Nama sarana kesehatan: {{$nama_tptb}}<br>
+              No.Reg. TB Kabutaen.Kota: {{$noreg_tptb}}
             </td>
           </tr>
         </tbody>
@@ -436,7 +377,7 @@ header('Content-Type: application/pdf');
               Tipe TB
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$ttb}}
             </td>                
           </tr>
           <tr>
@@ -444,7 +385,7 @@ header('Content-Type: application/pdf');
               Tgl. mulai trapi TB 
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$tgl_mulai_terapi_tb}}
             </td>                
           </tr>
           <tr>
@@ -452,7 +393,7 @@ header('Content-Type: application/pdf');
               Tgl. selesai terapi TB
             </td>    
             <td class="konten_l_answer">  
-              : -
+              : {{$tgl_selesai_terapi_tb}}
             </td>                
           </tr>
         </tbody>
@@ -463,7 +404,7 @@ header('Content-Type: application/pdf');
   
   <div class="colsize" style="border:1px solid black; width:40.6%;height:11.5%;padding-left:10px;">
     <h4 style="font-size:80%" >8. Indikasi Inisial ART</h4>
-    <p>isi</p>
+    <p>{{$ii}}</p>
   </div>
 </div>
 <table class="tabel">
@@ -510,238 +451,30 @@ header('Content-Type: application/pdf');
       </thead>
       <tbody>
         <tr>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-        </tr>
-        <tr>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-        </tr>
-        <tr>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-        </tr>
-        <tr>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-        </tr>
-        <tr>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-        </tr>
-        <tr>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-        </tr>
-        <tr>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-        </tr>
-        <tr>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-        </tr>
-        <tr>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
-          <td class="default" style="height:30px"> - </td>
+          <td class="default" style="height:30px"> {{$tgl_kunjungan_follow_up}} </td>
+          <td class="default" style="height:30px"> {{$rencana_tgl_kunjungan}} </td>
+          <td class="default" style="height:30px"> {{$prm}} </td>
+          <td class="default" style="height:30px"> {{$drt}} </td>
+          <td class="default" style="height:30px"> {{$nama_klinik_sebelumnya}} </td>
+          <td class="default" style="height:30px"> {{$tbf}} </td>
+          <td class="default" style="height:30px"> {{$sfu}} </td>
+          <td class="default" style="height:30px"> {{$stad_klinis}} </td>
+          <td class="default" style="height:30px"> {{$hkb}} </td>
+          <td class="default" style="height:30px"> [infeksi] {{$keterangan_infop}} </td>
+          <td class="default" style="height:30px"> {{$obat_untuk_io}} </td>
+          <td class="default" style="height:30px"> {{$stb}} </td>
+          <td class="default" style="height:30px"> {{$ppk}} </td>
+          <td class="default" style="height:30px"> {{$inh}} </td>
+          <td class="default" style="height:30px"> {{$hkr}} </td>
+          <td class="default" style="height:30px"> {{$obat_arv}} </td>
+          <td class="default" style="height:30px"> [sisa obat] </td>
+          <td class="default" style="height:30px"> {{$adr}} </td>
+          <td class="default" style="height:30px"> [efek] </td>
+          <td class="default" style="height:30px"> {{$jumlah_cd4}} </td>
+          <td class="default" style="height:30px"> {{$hasil_lab}} </td>
+          <td class="default" style="height:30px"> {{$dkr}} {{$jumlah_kondom}} </td>
+          <td class="default" style="height:30px"> {{$rsmrs}} </td>
+          <td class="default" style="height:30px"> {{$fll}} {{$tgl_meninggal}} {{$tgl_kunjungan_terakhir}} {{$tgl_keluar}} {{$nama_klinik_baru}} </td>
         </tr>
       </tbody>
 
