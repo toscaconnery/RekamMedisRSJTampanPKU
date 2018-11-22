@@ -588,6 +588,8 @@ Route::get('/doc_ri_rekonsiliasi', function () {
 Route::get('/ri_panss_ec', 'RIPanssEcController@get_ri_panss_ec');
 Route::post('/ri_panss_ec', 'RIPanssEcController@post_ri_panss_ec');
 Route::get('/ri_panss_ec_read', 'RIPanssEcController@get_ri_panss_ec_read');
+Route::get('/ri_panss_ec_edit', 'RIPanssEcController@get_ri_panss_ec_edit');
+Route::post('/ri_panss_ec_edit', 'RIPanssEcController@post_ri_panss_ec_edit');
 
 Route::get('/ri_penilaian_panss', 'RIPenilaianPanssController@get_ri_penilaian_panss');
 Route::post('/ri_penilaian_panss', 'RIPenilaianPanssController@post_ri_penilaian_panss');
