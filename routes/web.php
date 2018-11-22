@@ -712,6 +712,11 @@ Route::get('/ri_transfer_internal_read', 'RITransferInternalController@get_ri_tr
 Route::get('/ri_transfer_internal_edit', 'RITransferInternalController@get_ri_transfer_internal_edit');
 Route::post('/ri_transfer_internal_edit', 'RITransferInternalController@post_ri_transfer_internal_edit');
 
+Route::get('/ri_transfer_eksternal', 'RITransferEksternalController@get_ri_transfer_eksternal');
+Route::post('/ri_transfer_eksternal', 'RITransferEksternalController@post_ri_transfer_eksternal');
+Route::get('/ri_transfer_eksternal_read', 'RITransferEksternalController@get_ri_transfer_eksternal_read');
+Route::get('/ri_transfer_eksternal_edit', 'RITransferEksternalController@get_ri_transfer_eksternal_edit');
+Route::post('/ri_transfer_eksternal_edit', 'RITransferEksternalController@post_ri_transfer_eksternal_edit');
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -983,9 +988,9 @@ Route::get('/ri_asesmen', function () {
 //     return view('ri_transfer_internal');
 // });
 
-Route::get('/ri_transfer_eksternal', function () {
-    return view('ri_transfer_eksternal');
-});
+// Route::get('/ri_transfer_eksternal', function () {
+//     return view('ri_transfer_eksternal');
+// });
 
 Route::get('/test_pdf', function () {
     return view('test_pdf');
