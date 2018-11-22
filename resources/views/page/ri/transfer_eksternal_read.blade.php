@@ -41,9 +41,8 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_eksternal_pdf">PDF</a>
+                      <a class="btn btn-success" href="#">EDIT</a>
                     </div>
                   </td>
                 </tr>
@@ -69,7 +68,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">RS Tujuan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="rs_tujuan" value="rs_tujuan">
+                    <input type="text" disabled class="form-control" name="rs_tujuan" value="{{$rs_tujuan}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -317,9 +316,8 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <div class="col-sm-6"></div>
-                  <div class="col-sm-4">
-                    <label for="nama_dokter">Nama Dokter</label>
+                  <label class="col-sm-2 control-label" for="nama_dokter">Nama Dokter</label>
+                  <div class="col-sm-6">
                     <input id="nama_dokter" type="text" disabled class="form-control" name="nama_dokter" value="{{$nama_dokter}}">
                   </div>
                 </div>
