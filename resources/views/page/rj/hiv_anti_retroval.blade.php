@@ -664,7 +664,7 @@
                         <input type="hidden" name="nama_panduan_orisinil_art_1" value="TDF+3TC+EFV">
                       </td>
                       <td>
-                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_art_1">
+                        <input type="text" style="width:300%" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_art_1">
                       </td>
                       <td>
                         <select class="form-control" name="substitusi_art_1">

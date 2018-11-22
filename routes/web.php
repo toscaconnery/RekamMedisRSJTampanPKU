@@ -202,7 +202,7 @@ Route::get('/rj_hiv_anti_retroval_edit', 'RJHIVAntiRetrovalController@get_rj_hiv
 Route::post('/rj_hiv_anti_retroval_edit', 'RJHIVAntiRetrovalController@post_rj_hiv_anti_retroval_edit');
 
 //dokumen ikhtisar HIV
-Route::get('/rj_ikhtisarhiv_pdf', 'RJHIVAntiRetrovalController@rj_ikhtisarhiv_pdf_');
+Route::get('/rj_ikhtisarhiv_pdf', 'RJHIVAntiRetrovalController@rj_ikhtisarhiv_pdf');
 
 Route::get('/doc_rj_ikhtisarhiv', function () {
     return view('/doc_rj_ikhtisarhiv');
@@ -711,6 +711,12 @@ Route::post('/ri_transfer_internal', 'RITransferInternalController@post_ri_trans
 Route::get('/ri_transfer_internal_read', 'RITransferInternalController@get_ri_transfer_internal_read');
 Route::get('/ri_transfer_internal_edit', 'RITransferInternalController@get_ri_transfer_internal_edit');
 Route::post('/ri_transfer_internal_edit', 'RITransferInternalController@post_ri_transfer_internal_edit');
+//dokumen transfer internal
+Route::get('/ri_internal_pdf', 'RITransferInternalController@ri_internal_pdf');
+Route::get('/doc_ri_internal', function () {
+    return view('/doc_ri_internal');
+});
+
 
 Route::get('/ri_transfer_eksternal', 'RITransferEksternalController@get_ri_transfer_eksternal');
 Route::post('/ri_transfer_eksternal', 'RITransferEksternalController@post_ri_transfer_eksternal');
@@ -1060,17 +1066,6 @@ Route::get('/pdf_ri_gizi', 'Pdf_ri_Controller@pdf_ri_gizi');
 Route::get('/doc_ri_gizi', function () {
     return view('/doc_ri_gizi');
 });
-
-
-
-//dokumen transfer internal
-Route::get('/pdf_ri_internal', 'Pdf_ri_Controller@pdf_ri_internal');
-
-Route::get('/doc_ri_internal', function () {
-    return view('/doc_ri_internal');
-});
-
-
 
 //dokumen serah terima pasien pulang
 Route::get('/pdf_ri_pulang', 'Pdf_ri_Controller@pdf_ri_pulang');

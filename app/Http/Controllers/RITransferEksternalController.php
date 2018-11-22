@@ -303,6 +303,6 @@ class RITransferEksternalController extends Controller
         $data->jam = $request->jam;
         $data->rs = $request->rs;
         $data->save();
-    	dd('editing posting');
+    	return redirect('daftar_dokumen');
     }
 }

@@ -20,35 +20,35 @@ header('Content-Type: application/pdf');
      <table>
       <tbody>
         <tr>
-          <td class="konten_s_question">
+          <td class="konten_s_question_l">
             Tanggal Masuk RS
           </td>    
           <td class="konten_s_answer">  
-            : 12/12/18
+            : {{$tanggal_masuk}}
           </td>                
         </tr>
         <tr>
-          <td class="konten_s_question">
+          <td class="konten_s_question_l">
             Tanggal Keluar RS 
           </td>    
           <td class="konten_s_answer">  
-            : 12/12/18
+            : {{$tanggal_keluar}}
           </td>                
         </tr>
         <tr>
-          <td class="konten_s_question">
+          <td class="konten_s_question_l">
             Ruang Rawat Terakhir
           </td>    
           <td class="konten_s_answer">  
-            : Siak-1
+            : {{$ruang_rawat_terakhir}}
           </td>                
         </tr>
         <tr>
-          <td class="konten_s_question">
+          <td class="konten_s_question_l">
             DPJP
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$dpjp}}
           </td>                
         </tr>
       </tbody>
@@ -57,47 +57,47 @@ header('Content-Type: application/pdf');
   
   <h4>B. RINGKASAN PERAWATAN PASIEN</h4>
   <hr class="limit">
-  <div style="font-size: 85%;">  
+  <div style="font-size: 100%;">  
     <table>
       <tbody>
         <tr>
-          <td class="konten_s_question">
+          <td class="konten_S_question_L">
            Alergi
           </td>    
           <td class="konten_s_answer">  
-            : - 
+            : {{$alergi}} 
           </td>                
         </tr>
         <tr>
-          <td class="konten_s_question">
+          <td class="konten_S_question_L">
             Diagnosa Masuk
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$diagnosa_masuk}}
           </td>                
         </tr>
         <tr>
-          <td class="konten_s_question">
+          <td class="konten_S_question_l">
             Indikasi Dirawat / Alasan di rawat
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$alasan_dirawat}}
           </td>                
         </tr>
          <tr>
-          <td class="konten_s_question">
+          <td class="konten_s_question_l">
             Hasil Pemeriksaan Penunjang
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$hasil_pemeriksaan_penunjang}}
           </td>                
         </tr>
          <tr>
-          <td class="konten_s_question">
+          <td class="konten_s_question_l">
             Terapi yang Diberikan Saat di RS
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$terapi}}
           </td>                
         </tr>
       </tbody>
@@ -114,49 +114,49 @@ header('Content-Type: application/pdf');
             <thead>
                 <tr>   
                     <th class="default" style="width:90%" data-field="name">DIAGNOSA PSIKIATRI</th>
-                    <th class="default" data-field="name">KODE ICD-10</th>
+                    <th class="default" data-field="name" style="padding-left:2%;padding-right:2%">KODE ICD-10</th>
                 </tr>    
             </thead>
 
             <tbody>
               <tr>
                 <td class="default">
-                  Axis 1 :
+                  Axis 1 : {{$diagnosa_psikiatri_1}}
                 </td>
-                <td class="default">
-                  -
-                </td>
-              </tr>
-              <tr>
-                <td class="default">
-                  Axis 2 :
-                </td>
-                <td class="default">
-                  -
+                <td class="default" style="text-align:center">
+                  {{$kode_psikiatri_1}}
                 </td>
               </tr>
               <tr>
                 <td class="default">
-                  Axis 3 :
+                  Axis 2 : {{$diagnosa_psikiatri_2}}
                 </td>
-                <td class="default">
-                  -
+                <td class="default" style="text-align:center">
+                  {{$kode_psikiatri_2}}
                 </td>
               </tr>
               <tr>
                 <td class="default">
-                  Axis 4 :
+                  Axis 3 : {{$diagnosa_psikiatri_3}}
                 </td>
+                <td class="default" style="text-align:center">
+                  {{$kode_psikiatri_3}}
+                </td>
+              </tr>
+              <tr>
                 <td class="default">
-                  -
+                  Axis 4 : {{$diagnosa_psikiatri_4}}
+                </td>
+                <td class="default" style="text-align:center">
+                  {{$kode_psikiatri_4}}
                 </td>    
               </tr>
               <tr>
                 <td class="default">
-                  Axis 5 :
+                  Axis 5 : {{$diagnosa_psikiatri_5}}
                 </td>
-                <td class="default">
-                  -
+                <td class="default" style="text-align:center">
+                  {{$kode_psikiatri_5}}
                 </td>  
               </tr>
             </tbody>
@@ -168,7 +168,7 @@ header('Content-Type: application/pdf');
             <thead>
                 <tr>   
                     <th class="default" style="width:90%" data-field="name">DIAGNOSA NON PSIKIATRI</th>
-                    <th class="default" data-field="name">KODE ICD-10</th>
+                    <th class="default" data-field="name" style="padding-left:2%;padding-right:2%">KODE ICD-10</th>
                 </tr>    
             </thead>
 
@@ -178,15 +178,15 @@ header('Content-Type: application/pdf');
                   Diagnosa Utama
                 </td>
                 <td class="default">
-                  -
+                  
                 </td>
               </tr>
               <tr>
                 <td class="default">
-                  -
+                  {{$diagnosa_non_psikiatri_1}}
                 </td>
-                <td class="default">
-                  -
+                <td class="default" style="text-align:center">
+                  {{$kode_non_psikiatri_1}}
                 </td>    
               </tr>
               <tr>
@@ -194,23 +194,23 @@ header('Content-Type: application/pdf');
                   Diagnosa Sekunder
                 </td>
                 <td class="default">
-                  -
+                  
                 </td>  
               </tr>
               <tr>
                 <td class="default">
-                  1.
+                  1. {{$diagnosa_non_psikiatri_2}}
                 </td>
-                <td class="default">
-                  -
+                <td class="default" style="text-align:center">
+                  {{$kode_non_psikiatri_2}}
                 </td>  
               </tr>
               <tr>
                 <td class="default">
-                  2.
+                  2. {{$diagnosa_non_psikiatri_3}}
                 </td>
-                <td class="default">
-                  -
+                <td class="default" style="text-align:center">
+                  {{$kode_non_psikiatri_3}}
                 </td>  
               </tr>
             </tbody>
@@ -227,51 +227,37 @@ header('Content-Type: application/pdf');
           <tr>   
               <th class="default" style="width:10%" data-field="name">Tgl</th>
               <th class="default" style="width:85%" data-field="name">Nama Tindakan Medis</th>
-              <th class="default" style="width:5%" data-field="name">KODE ICD-9-CM</th>
+              <th class="default" style="width:5%" data-field="name" style="padding-left:2%;padding-right:2%">KODE ICD-9-CM</th>
           </tr>    
       </thead>
 
       <tbody>
-        <tr>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-        </tr>
-        <tr>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-        </tr>
-        <tr>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-        </tr>
+        @php
+          $idx_tindakan = 0;
+        @endphp
+        @foreach($tindakan_kedokteran as $key => $value)
+          @php
+            $idx_tindakan += 1;
+          @endphp
+          <tr id="form_tindakan_{{$idx_tindakan}}">
+            <td class="default">
+              {{$value[0]}}
+            </td>
+            <td class="default">
+              {{$value[1]}}
+            </td>
+            <td class="default" style="text-align:center">
+              {{$value[2]}}
+            </td>
+          </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
 
   <h4>E. PENYEBAB LUAR/CEDERA/KECELAKAAN (jika ada)</h4><hr class="limit">
   <div style="font-size:85%">
-    <p>Isi</p>
+    <p>{{$penyebab_luar}}</p>
     <p>Keadaan Keluar : -</p>
     <p>Cara Pulang : -</p>
     <table>
@@ -281,7 +267,7 @@ header('Content-Type: application/pdf');
             Keadaan Keluar
           </td>    
           <td class="konten_s_answer">  
-            : Sembuh
+            : {{$keadaan_keluar}}
           </td>                
         </tr>
         <tr>
@@ -289,7 +275,7 @@ header('Content-Type: application/pdf');
             Cara Pulang 
           </td>    
           <td class="konten_s_answer">  
-            : Diijinkan Pulang
+            : {{$cara_pulang}}
           </td>                
         </tr>
       </tbody>
@@ -304,7 +290,7 @@ header('Content-Type: application/pdf');
             Kondisi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$kondisi_pulang}}
           </td>                
         </tr>
         <tr>
@@ -312,7 +298,7 @@ header('Content-Type: application/pdf');
             Jam Keluar 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$jam_keluar}}
           </td>                
         </tr>
         <tr>
@@ -320,7 +306,7 @@ header('Content-Type: application/pdf');
             TD 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$td}}
           </td>                
         </tr>
         <tr>
@@ -328,7 +314,7 @@ header('Content-Type: application/pdf');
             HR 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$hr}}
           </td>                
         </tr>
         <tr>
@@ -336,7 +322,7 @@ header('Content-Type: application/pdf');
             RR 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$rr}}
           </td>                
         </tr>
         <tr>
@@ -344,7 +330,7 @@ header('Content-Type: application/pdf');
             T 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$t}}
           </td>                
         </tr>
         <tr>
@@ -352,7 +338,7 @@ header('Content-Type: application/pdf');
             BB 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$bb}}
           </td>                
         </tr>
       </tbody>
@@ -374,57 +360,29 @@ header('Content-Type: application/pdf');
       </thead>
 
       <tbody>
-        <tr>
-          <td class="default" style="text-align:center">
-            1
-          </td>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-        </tr>
-        <tr>
-          <td class="default" style="text-align:center">
-            2
-          </td>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-        </tr>
-        <tr>
-          <td class="default" style="text-align:center">
-            3
-          </td>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-          <td class="default">
-            -
-          </td>
-        </tr>
+        @php
+          $idx_obat = 0;
+        @endphp
+        @foreach($obat_dibawa_pulang as $key => $value)
+          @php
+            $idx_obat += 1;
+          @endphp
+          <tr id="form_obat_{{$idx_obat}}">
+            <td class="default" style="text-align:center">{{$idx_obat}}</td>
+            <td class="default" style="text-align:center">
+              {{$value[0]}}
+            </td>
+            <td class="default" style="text-align:center">
+              {{$value[1]}}
+            </td>
+            <td class="default" style="text-align:center">
+              {{$value[2]}}
+            </td>
+            <td class="default" style="text-align:center">
+              {{$value[3]}}
+            </td>
+          </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
@@ -438,7 +396,7 @@ header('Content-Type: application/pdf');
             Penyakit Diet
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$penyakit}}
           </td>                
         </tr>
         <tr>
@@ -446,7 +404,7 @@ header('Content-Type: application/pdf');
             Diet 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$diet}}
           </td>                
         </tr>
       </tbody>
@@ -462,7 +420,7 @@ header('Content-Type: application/pdf');
             Perlu Kontrol/ berobat jalan di
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$tempat_kontrol}}
           </td>                
         </tr>
         <tr>
@@ -470,7 +428,7 @@ header('Content-Type: application/pdf');
             Tanggal 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$tanggal_kontrol}}
           </td>                
         </tr>
       </tbody>
@@ -486,7 +444,7 @@ header('Content-Type: application/pdf');
             Hasil Pemeriksaan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$hasil_tertunda}}
           </td>                
         </tr>
         <tr>
@@ -494,7 +452,7 @@ header('Content-Type: application/pdf');
             Diambil Tanggal 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$tanggal_pengambilan}}
           </td>                
         </tr>
       </tbody>
@@ -507,13 +465,13 @@ header('Content-Type: application/pdf');
         <p></p>
       </div>
       <div class="column">
-        <p style="text-align: center;">Pekanbaru, 28/12/2018</p>
+        <p style="text-align: center;">Pekanbaru, [tanggal]</p>
         <p style="text-align: center;">Dokter Penanggung Jawab Pelayanan</p>
         <br>
         <br>
         <br>
         <br>
-        <p style="text-align: center;">( ................)</p>
+        <p style="text-align: center;">( {{$dpjp}} )</p>
       </div>
     </div>
   </div>
