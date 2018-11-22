@@ -41,9 +41,8 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_konsultasi_pdf">PDF</a>
+                      <a class="btn btn-success" href="#">EDIT</a>
                     </div>
                   </td>
                 </tr>
@@ -55,7 +54,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_lembar_konsultasi">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_lembar_konsultasi_edit">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
@@ -65,31 +64,31 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kepada TS</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="konsultasi1">
+                    <input type="text" class="form-control" name="konsultasi1" value="{{$konsultasi1}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Ikhtisar Klinik + Laboratorium singkat</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="konsultasi2">
+                    <input type="text" class="form-control" name="konsultasi2" value="{{$konsultasi2}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Konsultasi yang diminta</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="konsultasi3">
+                    <input type="text" class="form-control" name="konsultasi3" value="{{$konsultasi3}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="konsultasi4">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="konsultasi4" value="{{$konsultasi4}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jam</label>
                   <div class="col-sm-2">
-                    <input type="time" class="form-control" name="konsultasi5">
+                    <input type="time" class="form-control" name="konsultasi5" value="{{$konsultasi5}}">
                   </div>
                 </div>
               </div>
@@ -103,43 +102,43 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kepada TS</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="jkonsultasi1">
+                    <input type="text" class="form-control" name="jkonsultasi1" value="{{$jkonsultasi1}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Penemuan Klinik dari penderita yang dikonsultasikan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="jkonsultasi2">
+                    <input type="text" class="form-control" name="jkonsultasi2" value="{{$jkonsultasi2}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pemeriksaan khusus lain</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="jkonsultasi3">
+                    <input type="text" class="form-control" name="jkonsultasi3" value="{{$jkonsultasi3}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kesimpulan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="jkonsultasi4">
+                    <input type="text" class="form-control" name="jkonsultasi4" value="{{$jkonsultasi4}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Saran</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="jkonsultasi5">
+                    <input type="text" class="form-control" name="jkonsultasi5" value="{{$jkonsultasi5}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="jkonsultasi6">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="jkonsultasi6" value="{{$jkonsultasi6}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jam</label>
                   <div class="col-sm-2">
-                    <input type="time" class="form-control" name="jkonsultasi7">
+                    <input type="time" class="form-control" name="jkonsultasi7" value="{{$jkonsultasi7}}">
                   </div>
                 </div>
               </div>

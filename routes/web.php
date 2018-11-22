@@ -603,6 +603,8 @@ Route::get('/doc_ri_nilaipanss', function () {
 Route::get('/ri_lembar_konsultasi', 'RILembarKonsultasiController@get_ri_lembar_konsultasi');
 Route::post('/ri_lembar_konsultasi', 'RILembarKonsultasiController@post_ri_lembar_konsultasi');
 Route::get('/ri_lembar_konsultasi_read', 'RILembarKonsultasiController@get_ri_lembar_konsultasi_read');
+Route::get('/ri_lembar_konsultasi_edit', 'RILembarKonsultasiController@get_ri_lembar_konsultasi_edit');
+Route::post('/ri_lembar_konsultasi_edit', 'RILembarKonsultasiController@post_ri_lembar_konsultasi_edit');
 
 //dokumen Lembar konsultasi
 Route::get('/ri_konsultasi_pdf', 'RILembarKonsultasiController@ri_konsultasi_pdf');
