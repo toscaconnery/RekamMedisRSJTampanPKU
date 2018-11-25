@@ -735,6 +735,13 @@ Route::get('/doc_ri_eksternal', function () {
     return view('/doc_ri_eksternal');
 });
 
+
+Route::get('/ri_laboratorium', 'RILaboratoriumController@get_ri_laboratorium');
+Route::post('/ri_laboratorium', 'RILaboratoriumController@post_ri_laboratorium');
+Route::get('/ri_laboratorium_read', 'RILaboratoriumController@get_ri_laboratorium_read');
+Route::get('/ri_laboratorium_read_edit', 'RILaboratoriumController@get_ri_laboratorium_edit');
+Route::post('/ri_laboratorium_read_edit', 'RILaboratoriumController@post_ri_laboratorium_edit');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -804,9 +811,9 @@ Route::get('/rj_rencana_pemulangan', function () {
 
 //new addition page
 
-Route::get('/ri_laboratorium', function () {
-    return view('ri_laboratorium');
-});
+// Route::get('/ri_laboratorium', function () {
+//     return view('ri_laboratorium');
+// });
 
 // Route::get('/rj_teskonseling_hiv', function () {
 //     return view('rj_teskonseling_hiv');
