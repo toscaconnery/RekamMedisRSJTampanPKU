@@ -596,7 +596,7 @@ Route::post('/ri_penilaian_panss', 'RIPenilaianPanssController@post_ri_penilaian
 Route::get('/ri_penilaian_panss_read', 'RIPenilaianPanssController@get_ri_penilaian_panss_read');
 
 //dokumen penilaian panss
-Route::get('/ri_nilaipanss_pdf', 'RIPenilaianPanssController@ri_nilaipanss_pdf');
+Route::get('/ri_nilaipanss_pdf', 'RIPanssEcController@ri_nilaipanss_pdf');
 
 Route::get('/doc_ri_nilaipanss', function () {
     return view('/doc_ri_nilaipanss');
