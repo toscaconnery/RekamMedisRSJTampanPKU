@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class RILaboratoriumNarkoba extends Model
 {
-    protected $table = 'ri_laboratorium_serologi';
+    protected $table = 'ri_laboratorium_narkoba';
 
     public $incrementing = true;
 

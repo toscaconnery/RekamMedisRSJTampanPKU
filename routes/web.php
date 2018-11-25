@@ -739,8 +739,8 @@ Route::get('/doc_ri_eksternal', function () {
 Route::get('/ri_laboratorium', 'RILaboratoriumController@get_ri_laboratorium');
 Route::post('/ri_laboratorium', 'RILaboratoriumController@post_ri_laboratorium');
 Route::get('/ri_laboratorium_read', 'RILaboratoriumController@get_ri_laboratorium_read');
-Route::get('/ri_laboratorium_read_edit', 'RILaboratoriumController@get_ri_laboratorium_edit');
-Route::post('/ri_laboratorium_read_edit', 'RILaboratoriumController@post_ri_laboratorium_edit');
+Route::get('/ri_laboratorium_edit', 'RILaboratoriumController@get_ri_laboratorium_edit');
+Route::post('/ri_laboratorium_edit', 'RILaboratoriumController@post_ri_laboratorium_edit');
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
