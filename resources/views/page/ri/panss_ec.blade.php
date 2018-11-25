@@ -15,7 +15,7 @@
     <section class="wrapper">
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="page-header"><i class="fa fa-file-text-o"></i> PANSS EC</h3>
+          <h3 class="page-header"><i class="fa fa-file-text-o"></i> Penilaian PANSS EC</h3>
         </div>
       </div>
       @include('layouts.bio')
@@ -24,7 +24,7 @@
         <div class="col-lg-12">
           <section class="panel">
             <header class="panel-heading">
-              Dokumen PANSS EC
+              Dokumen Penilaian PANSS EC
             </header>
 
             <table class="table table-striped table-advance table-hover">
@@ -36,7 +36,7 @@
                   <th><i class="icon_cogs"></i> Action</th>
                 </tr>
                 <tr>
-                  <td>PANSS EC</td>
+                  <td>Penilaian PANSS EC</td>
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>
@@ -59,10 +59,15 @@
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
-                PANSS EC
+                Penilaian PANSS EC
               </header>
               <div class="panel-body">
-
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Tanggal</label>
+                  <div class="col-sm-2">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pemeriksaan">
+                  </div>
+                </div>
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">P4. GADUH GELISAH</label>
                   <div class="col-lg-3">
@@ -304,12 +309,7 @@
                     <input type="text" class="form-control" name="bangsal">
                   </div>
                 </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Tanggal Pemeriksaan</label>
-                  <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pemeriksaan">
-                  </div>
-                </div>
+               
               </div>
             </section>
 

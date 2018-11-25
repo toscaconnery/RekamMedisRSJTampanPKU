@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="{{url('')}}/admin_bootstrap/img/favicon.png">
 
-  <title>Rencana Tindakan Keperawatan Intensif</title>
+  <title>Rencana Tindakan Keperawatan Intensif Isolasi Sosial: Menarik Diri</title>
 
   <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
   <section class="wrapper">
     <div class="row">
       <div class="col-lg-12">
-        <h3 class="page-header"><i class="fa fa-file-text-o"></i>RENCANA TINDAKAN KEPERAWATAN INTENSIF</h3>
+        <h3 class="page-header"><i class="fa fa-file-text-o"></i>RENCANA TINDAKAN KEPERAWATAN INTENSIF ISOLASI SOSIAL: MENARIK DIRI</h3>
             <!--<ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_document_alt"></i>Forms</li>
@@ -78,7 +78,7 @@
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Rencana Tindakan Keperawatan Intensif
+                Rencana Tindakan Keperawatan Intensif Isolasi Sosial: Menarik Diri
               </header>
 
               <table class="table table-striped table-advance table-hover">
@@ -87,97 +87,17 @@
                     <th><i class="icon_document_alt"></i> Dokumen</th>
                     <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                     <th><i class="icon_profile"></i> Pengisi</th>
-                    <th><i class="icon_cogs"></i> Status</th>
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
                   <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Resiko Bunuh Diri</td>
+                    <td>Rencana Tindakan Keperawatan Intensif Isolasi Sosial: Menarik Diri</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
-                    <td>Tidak Terisi</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
-                        <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Defisit Perawatan Diri</td>
-                    <td>20/08/2018</td>
-                    <td>[Nama Pengisi]</td>
-                    <td>Tidak Terisi</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
-                        <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Gangguan Persepsi Sensori: Halusinasi</td>
-                    <td>20/08/2018</td>
-                    <td>[Nama Pengisi]</td>
-                    <td>Tidak Terisi</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
-                        <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Perilaku Kekerasan</td>
-                    <td>20/08/2018</td>
-                    <td>[Nama Pengisi]</td>
-                    <td>Tidak Terisi</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
-                        <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Panik</td>
-                    <td>20/08/2018</td>
-                    <td>[Nama Pengisi]</td>
-                    <td>Tidak Terisi</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
-                        <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Waham</td>
-                    <td>20/08/2018</td>
-                    <td>[Nama Pengisi]</td>
-                    <td>Tidak Terisi</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
-                        <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Isolasi Sosial Menarik Diri</td>
-                    <td>20/08/2018</td>
-                    <td>[Nama Pengisi]</td>
-                    <td>Tidak Terisi</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
-                        <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
+                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
+                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
                       </div>
                     </td>
                   </tr>
@@ -187,10 +107,147 @@
           </div>
         </div>
 
-        
+        <div class="row">
+          <div class="col-lg-12">
 
+            <section class="panel">
+              <header class="panel-heading">
+               Rencana Tindakan Keperawatan Intensif Isolasi Sosial: Menarik Diri
+             </header>
+             <div class="panel-body">
+              <form class="form-horizontal " method="get">
+
+                <div class="form-group">
+                  <label class="col-lg-2 control-label"> Tanggal Pengkajian</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-lg-2 control-label"> Jam Pengkajian</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-lg-2 control-label"> Ruangan</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-lg-2 control-label"> Diagnosa Medis</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+
+        <section class="panel">
+          <header class="panel-heading">
+           Rencana Tindakan Keperawatan Intensif Isolasi Sosial: Menarik Diri
+         </header>
+         <div class="panel-body">
+          <form class="form-horizontal " method="get">
+
+            <div class="form-group">
+              <label class="control-label col-lg-2" for="inputSuccess">Tindakan Intensif I</label>
+              <div class="col-lg-4">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Penuhi kebutuhan dasar pasien (tidur makan, personal hyegene)
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Kolaborasi dengan dokter untuk pemberian obat yang dibutuhkan pasien
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-lg-2" for="inputSuccess">Tindakan Intensif II</label>
+              <div class="col-lg-4">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Kaji tingkat masah isolasi sosial pada pasien
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Penuhi kebutuhan dasar (tidur,makan,personal hyegene)
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Latih pasien berhubungan dengan perawat
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-lg-2" for="inputSuccess">Tindakan Intensif III</label>
+              <div class="col-lg-4">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Bantu pasien mengenal penyebab isolasi
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Bantu klien mengenal keuntungan berhubungan dengan orang lain
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Bantu pasien mengenal kerugian bila tidak berhubungan dengan orang lain
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Bantu pasien berinteraksi dengan orang lain secara bertahap
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </section>
     </div>
   </div>
+
+<div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- javascripts -->
