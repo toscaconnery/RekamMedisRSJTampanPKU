@@ -22,7 +22,7 @@ header('Content-Type: application/pdf');
             Diagnosa Medis
           </td>    
           <td class="konten_s_answer">  
-            : Isinya ...
+            : {{$diagnosis_medis}}
           </td>                
         </tr>
         <tr>
@@ -30,7 +30,7 @@ header('Content-Type: application/pdf');
             Ruangan  
           </td>    
           <td class="konten_s_answer">  
-            : Siak-1
+            : {{$ruangan}}
           </td>                
         </tr>
       </tbody>
@@ -60,7 +60,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;Pasien dan Keluarga Pasien
           </td>    
           <td class="konten_s_answer">  
-            : Ya
+            : {{$a1}}
           </td>                
         </tr>
         <tr>
@@ -68,7 +68,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;Pekerjaan 
           </td>    
           <td class="konten_s_answer">  
-            : Ya
+            : {{$a2}}
           </td>                
         </tr>
         <tr>
@@ -76,23 +76,29 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;Keuangan 
           </td>    
           <td class="konten_s_answer">  
-            : Ya
+            : {{$a3}}
           </td>                
         </tr>
       </tbody>
     </table>
-    <p>Antisipasi terhadap masalah saat pulang : Ya, penjelasannya adalah</p>
+    <p>Antisipasi terhadap masalah saat pulang : {{$a4}}, {{$keterangan_a4}}</p>
     <p>Bantuan diperlukan dalam hal : </b></p>
     <ul>
-      <li>minum obat</li>
-      <li>mandi</li>
+      <li><?php if(isset($bantuan[1])) echo "minum obat"; ?></li>
+      <li><?php if(isset($bantuan[2])) echo "makan"; ?></li>
+      <li><?php if(isset($bantuan[3])) echo "menyipakan makanan"; ?></li>
+      <li><?php if(isset($bantuan[4])) echo "edukasi kesehatan"; ?></li>
+      <li><?php if(isset($bantuan[5])) echo "mandi"; ?></li>
+      <li><?php if(isset($bantuan[6])) echo "diet"; ?></li>
+      <li><?php if(isset($bantuan[7])) echo "berpakaian"; ?></li>
+      <li><?php if(isset($bantuan[8])) echo "transportasi"; ?></li>
     </ul>
     <div class="row">
       <div class="column">
         <p>Adakah yang membantu keperluan tersebut di atas?</p>
       </div>
       <div class="column">
-        <p>: Ya, ...</p>
+        <p>: {{$a5}}, {{$keterangan_a5}}</p>
       </div>
     </div>
     <div class="row">
@@ -100,7 +106,7 @@ header('Content-Type: application/pdf');
         <p>Apakah pasien hidup/tinggal sendiri setelah keluar dari rumah sakit?</p>
       </div>
       <div class="column">
-        <p>: Ya, ...</p>
+        <p>: {{$a6}}, {{$keterangan_a6}}</p>
       </div>
     </div>
     <div class="row">
@@ -108,7 +114,7 @@ header('Content-Type: application/pdf');
         <p>Apakah pasien menggunakan peralatan medis di rumah setelah keluar rumah sakit (cateter, NGT, double lumen, oksigen)?</p>
       </div>
       <div class="column">
-        <p>: Ya, ...</p>
+        <p>: {{$a7}}, {{$keterangan_a7}}</p>
       </div>
     </div>
     <div class="row">
@@ -116,7 +122,7 @@ header('Content-Type: application/pdf');
         <p>Apakah pasien memerlukan alat bantu setelah keluar dari rumah sakit (tongkat, kursi roda, walker, dll)?</p>
       </div>
       <div class="column">
-        <p>: Ya, ...</p>
+        <p>: {{$a8}}, {{$keterangan_a8}}</p>
       </div>
     </div>
     <div class="row">
@@ -124,7 +130,7 @@ header('Content-Type: application/pdf');
         <p>Apakah memerlukan bantuan/peralatan medis di rumah setelah keluar rumah sakit (homecare, home visit)?</p>
       </div>
       <div class="column">
-        <p>: Ya, ...</p>
+        <p>: {{$a9}}, {{$keterangan_a9}}</p>
       </div>
     </div>
     <div class="row">
@@ -132,7 +138,7 @@ header('Content-Type: application/pdf');
         <p>Apakah pasien bermasalah dalam memenuhi kebutuhan pribadinya setelah keluar dari rumah sakit (makan,minum, toileting, dll)?</p>
       </div>
       <div class="column">
-        <p>: Ya, ...</p>
+        <p>: {{$a10}}, {{$keterangan_a10}}</p>
       </div>
     </div>
     <div class="row">
@@ -140,7 +146,7 @@ header('Content-Type: application/pdf');
         <p>Apakah pasien memiliki nyeri kronis dan kelelahan setelah keluar dari rumah sakit?</p>
       </div>
       <div class="column">
-        <p>: Ya, ...</p>
+        <p>: {{$a11}}, {{$keterangan_a11}}</p>
       </div>
     </div>
     <div class="row">
@@ -148,7 +154,7 @@ header('Content-Type: application/pdf');
         <p>Apakah pasien dan keluargag memmerlukan edukasi kesehatan setelah keluar dari rumah sakit (obat-obatan, nyeri, diit, mencari pertolongan , follow up, dll)?</p>
       </div>
       <div class="column">
-        <p>: Ya, ...</p>
+        <p>: {{$a12}}, {{$keterangan_a12}}</p>
       </div>
     </div>
     <div class="row">
@@ -156,7 +162,7 @@ header('Content-Type: application/pdf');
         <p>Apakah pasien dan keluarga memerlukan keterampilan khusus setelah keluar dari rumah sakit (perawatan luka, injeksi, dll)?</p>
       </div>
       <div class="column">
-        <p>: Ya, ...</p>
+        <p>: {{$a13}}, {{$keterangan_a13}}</p>
       </div>
     </div>  
   </div>
