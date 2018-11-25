@@ -748,6 +748,13 @@ Route::get('/ri_rencana_napza_read', 'RIRencanaNapzaController@get_ri_rencana_na
 Route::get('/ri_rencana_napza_edit', 'RIRencanaNapzaController@get_ri_rencana_napza_edit');
 Route::post('/ri_rencana_napza_edit', 'RIRencanaNapzaController@post_ri_rencana_napza_edit');
 
+Route::get('/ri_rencana_keperawatan', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan');
+Route::post('/ri_rencana_keperawatan', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan');
+Route::get('/ri_rencana_keperawatan_read', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_read');
+Route::get('/ri_rencana_keperawatan_edit', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_edit');
+Route::post('/ri_rencana_keperawatan_edit', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_edit');
+
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -949,9 +956,9 @@ Route::get('/ri_rencanaklien7', function () {
 //     return view('ri_rawat_napza');
 // });
 
-Route::get('/ri_rencana_keperawatan', function () {
-     return view('ri_rencana_keperawatan');
- });
+// Route::get('/ri_rencana_keperawatan', function () {
+//      return view('ri_rencana_keperawatan');
+// });
 
 // Route::get('/ri_penggunaan_obat', function () {
 //     return view('ri_penggunaan_obat');
