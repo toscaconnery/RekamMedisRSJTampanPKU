@@ -97,9 +97,9 @@
                     <td>Tidak Terisi</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
+                        <a class="btn btn-info" href="#">Lihat</a>
                         <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
+                        <a class="btn btn-primary" href="#">Edit</a>
                       </div>
                     </td>
                   </tr>
@@ -110,9 +110,9 @@
                     <td>Tidak Terisi</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
+                        <a class="btn btn-info" href="#">Lihat</a>
                         <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
+                        <a class="btn btn-primary" href="#">Edit</a>
                       </div>
                     </td>
                   </tr>
@@ -123,9 +123,9 @@
                     <td>Tidak Terisi</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
+                        <a class="btn btn-info" href="#">Lihat</a>
                         <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
+                        <a class="btn btn-primary" href="#">Edit</a>
                       </div>
                     </td>
                   </tr>
@@ -136,9 +136,9 @@
                     <td>Tidak Terisi</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
+                        <a class="btn btn-info" href="#">Lihat</a>
                         <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
+                        <a class="btn btn-primary" href="#">Edit</a>
                       </div>
                     </td>
                   </tr>
@@ -149,9 +149,9 @@
                     <td>Tidak Terisi</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
+                        <a class="btn btn-info" href="#">Lihat</a>
                         <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
+                        <a class="btn btn-primary" href="#">Edit</a>
                       </div>
                     </td>
                   </tr>
@@ -162,9 +162,9 @@
                     <td>Tidak Terisi</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
+                        <a class="btn btn-info" href="#">Lihat</a>
                         <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
+                        <a class="btn btn-primary" href="#">Edit</a>
                       </div>
                     </td>
                   </tr>
@@ -175,9 +175,9 @@
                     <td>Tidak Terisi</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#">Lihat</a>
+                        <a class="btn btn-info" href="#">Lihat</a>
                         <a class="btn btn-success" href="#">PDF</a>
-                        <a class="btn btn-info" href="#">Edit</a>
+                        <a class="btn btn-primary" href="#">Edit</a>
                       </div>
                     </td>
                   </tr>
