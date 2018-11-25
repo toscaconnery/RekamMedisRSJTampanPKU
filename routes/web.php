@@ -742,11 +742,26 @@ Route::get('/ri_laboratorium_read', 'RILaboratoriumController@get_ri_laboratoriu
 Route::get('/ri_laboratorium_edit', 'RILaboratoriumController@get_ri_laboratorium_edit');
 Route::post('/ri_laboratorium_edit', 'RILaboratoriumController@post_ri_laboratorium_edit');
 
+//dokumen laboratorium
+Route::get('/ri_lab_pdf', 'RILaboratoriumController@ri_lab_pdf');
+
+Route::get('/doc_ri_lab', function () {
+    return view('/doc_ri_lab');
+});
+
 Route::get('/ri_rencana_napza', 'RIRencanaNapzaController@get_ri_rencana_napza');
 Route::post('/ri_rencana_napza', 'RIRencanaNapzaController@post_ri_rencana_napza');
 Route::get('/ri_rencana_napza_read', 'RIRencanaNapzaController@get_ri_rencana_napza_read');
 Route::get('/ri_rencana_napza_edit', 'RIRencanaNapzaController@get_ri_rencana_napza_edit');
 Route::post('/ri_rencana_napza_edit', 'RIRencanaNapzaController@post_ri_rencana_napza_edit');
+
+//dokumen rawat NAPZA
+Route::get('/ri_rawat_napza_pdf', 'RIRencanaNapzaController@ri_rawat_napza_pdf');
+
+Route::get('/doc_ri_rawat_napza', function () {
+    return view('/doc_ri_rawat_napza');
+});
+
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -1062,13 +1077,6 @@ Route::get('/doc_ri_tindak', function () {
     return view('/doc_ri_tindak');
 });
 
-//dokumen laboratorium
-Route::get('/pdf_ri_lab', 'Pdf_ri_Controller@pdf_ri_lab');
-
-Route::get('/doc_ri_lab', function () {
-    return view('/doc_ri_lab');
-});
-
 //dokumen evaluasi evaluasi
 Route::get('/pdf_ri_evaluasi', 'Pdf_ri_Controller@pdf_ri_evaluasi');
 
@@ -1199,12 +1207,7 @@ Route::get('/doc_ri_rencanaklien7', function () {
     return view('/doc_ri_rencanaklien7');
 });
 
-//dokumen rawat NAPZA
-Route::get('/pdf_ri_rawat_napza', 'Pdf_ri_Controller@pdf_ri_rawat_napza');
 
-Route::get('/doc_ri_rawat_napza', function () {
-    return view('/doc_ri_rawat_napza');
-});
 
 
 
