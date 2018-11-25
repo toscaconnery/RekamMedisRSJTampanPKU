@@ -51,6 +51,7 @@ class CreateListDocumentTable extends Migration
             $table->boolean('ri_evaluasi_keperawatan')->default(False);
             $table->boolean('ri_monitoring_observasi')->default(False);
             $table->boolean('ri_laboratorium')->default(False);
+            $table->boolean('ri_rencana_napza')->default(False);
             $table->boolean('ri_penggunaan_obat')->default(False);
             $table->boolean('ri_riwayat_obat')->default(False);
             $table->boolean('ri_efek_samping')->default(False);
