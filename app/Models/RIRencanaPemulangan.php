@@ -39,5 +39,6 @@ class RIRencanaPemulangan extends Model
         'keterangan_a11',
         'keterangan_a12',
         'keterangan_a13',
+        'bantuan',
     ];
 }

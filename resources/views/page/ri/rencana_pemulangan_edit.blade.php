@@ -54,7 +54,8 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" id="register_form">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_rencana_pemulangan_edit">
+            {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
               </header>
@@ -63,13 +64,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Diagnosa Medis</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="diagnosis_medis" disabled="" value="{{$diagnosis_medis}}">
+                    <input type="text" class="form-control" name="diagnosis_medis" value="{{$diagnosis_medis}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Ruangan</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="ruangan" disabled="" value="{{$ruangan}}">
+                    <input type="text" class="form-control" name="ruangan" value="{{$ruangan}}">
                   </div>
                 </div>
               </div>
@@ -85,13 +86,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a1" value="1" disabled {{$a1 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a1" value="1" {{$a1 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a1" value="0" disabled {{$a1 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a1" value="0" {{$a1 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -103,13 +104,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a2" value="1" disabled {{$a2 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a2" value="1" {{$a2 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a2" value="0" disabled {{$a2 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a2" value="0" {{$a2 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -121,13 +122,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a3" value="1" disabled {{$a3 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a3" value="1" {{$a3 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a3" value="0" disabled {{$a3 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a3" value="0" {{$a3 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -139,13 +140,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a4" value="1" disabled {{$a4 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a4" value="1" {{$a4 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a4" value="0" disabled {{$a4 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a4" value="0" {{$a4 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -154,7 +155,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_a4" disabled="" value="{{$keterangan_a4}}">
+                    <input type="text" class="form-control" name="keterangan_a4" value="{{$keterangan_a4}}">
                   </div>
                 </div>
 
@@ -163,49 +164,49 @@
                   <div class="col-lg-4">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="bantuan_1" disabled {{isset($bantuan[1]) ? 'checked' : ''}}>
+                        <input type="checkbox" name="bantuan_1" {{isset($bantuan[1]) ? 'checked' : ''}}>
                         Minum Obat
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="bantuan_2" disabled {{isset($bantuan[2]) ? 'checked' : ''}}>
+                        <input type="checkbox" name="bantuan_2" {{isset($bantuan[2]) ? 'checked' : ''}}>
                         Makan
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="bantuan_3" disabled {{isset($bantuan[3]) ? 'checked' : ''}}>
+                        <input type="checkbox" name="bantuan_3" {{isset($bantuan[3]) ? 'checked' : ''}}>
                         Menyiapkan Makanan
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="bantuan_4" disabled {{isset($bantuan[4]) ? 'checked' : ''}}>
+                        <input type="checkbox" name="bantuan_4" {{isset($bantuan[4]) ? 'checked' : ''}}>
                         Edukasi Kesehatan
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="bantuan_5" disabled {{isset($bantuan[5]) ? 'checked' : ''}}>
+                        <input type="checkbox" name="bantuan_5" {{isset($bantuan[5]) ? 'checked' : ''}}>
                         Mandi
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="bantuan_6" disabled {{isset($bantuan[6]) ? 'checked' : ''}}>
+                        <input type="checkbox" name="bantuan_6" {{isset($bantuan[6]) ? 'checked' : ''}}>
                         Diet
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="bantuan_7" disabled {{isset($bantuan[7]) ? 'checked' : ''}}>
+                        <input type="checkbox" name="bantuan_7" {{isset($bantuan[7]) ? 'checked' : ''}}>
                         Berpakaian 
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="bantuan_8" disabled {{isset($bantuan[8]) ? 'checked' : ''}}>
+                        <input type="checkbox" name="bantuan_8" {{isset($bantuan[8]) ? 'checked' : ''}}>
                         Transportasi
                       </label>
                     </div>
@@ -217,13 +218,13 @@
                   <div class="col-lg-8">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a5" value="1" disabled {{$a5 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a5" value="1" {{$a5 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a5" value="0" disabled {{$a5 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a5" value="0" {{$a5 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -232,7 +233,7 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_a5" disabled="" value="{{$keterangan_a5}}">
+                    <input type="text" class="form-control" name="keterangan_a5" value="{{$keterangan_a5}}">
                   </div>
                 </div>
 
@@ -241,13 +242,13 @@
                   <div class="col-lg-8">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a6" value="1" disabled {{$a6 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a6" value="1" {{$a6 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a6" value="0" disabled {{$a6 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a6" value="0" {{$a6 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -256,7 +257,7 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_a6" disabled="" value="{{$keterangan_a6}}">
+                    <input type="text" class="form-control" name="keterangan_a6" value="{{$keterangan_a6}}">
                   </div>
                 </div>
 
@@ -265,13 +266,13 @@
                   <div class="col-lg-8">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a7" value="1" disabled {{$a7 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a7" value="1" {{$a7 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a7" value="0" disabled {{$a7 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a7" value="0" {{$a7 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -280,7 +281,7 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_a7" disabled="" value="{{$keterangan_a7}}">
+                    <input type="text" class="form-control" name="keterangan_a7" value="{{$keterangan_a7}}">
                   </div>
                 </div>
 
@@ -289,13 +290,13 @@
                   <div class="col-lg-8">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a8" value="1" disabled {{$a8 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a8" value="1" {{$a8 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a8" value="0" disabled {{$a8 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a8" value="0" {{$a8 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -304,7 +305,7 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_a8" disabled="" value="{{$keterangan_a8}}">
+                    <input type="text" class="form-control" name="keterangan_a8" value="{{$keterangan_a8}}">
                   </div>
                 </div>
 
@@ -313,13 +314,13 @@
                   <div class="col-lg-8">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a9" value="1" disabled {{$a9 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a9" value="1" {{$a9 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a9" value="0" disabled {{$a9 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a9" value="0" {{$a9 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -328,7 +329,7 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_a9" disabled="" value="{{$keterangan_a9}}">
+                    <input type="text" class="form-control" name="keterangan_a9" value="{{$keterangan_a9}}">
                   </div>
                 </div>
 
@@ -337,13 +338,13 @@
                   <div class="col-lg-8">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a10" value="1" disabled {{$a10 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a10" value="1" {{$a10 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a10" value="0" disabled {{$a10 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a10" value="0" {{$a10 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -352,7 +353,7 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_a10" disabled="" value="{{$keterangan_a10}}">
+                    <input type="text" class="form-control" name="keterangan_a10" value="{{$keterangan_a10}}">
                   </div>
                 </div>
 
@@ -361,13 +362,13 @@
                   <div class="col-lg-8">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a11" value="1" disabled {{$a11 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a11" value="1" {{$a11 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a11" value="0" disabled {{$a11 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a11" value="0" {{$a11 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -376,7 +377,7 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_a11" disabled="" value="{{$keterangan_a11}}">
+                    <input type="text" class="form-control" name="keterangan_a11" value="{{$keterangan_a11}}">
                   </div>
                 </div>
 
@@ -385,13 +386,13 @@
                   <div class="col-lg-8">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a12" value="1" disabled {{$a12 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a12" value="1" {{$a12 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a12" value="0" disabled {{$a12 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a12" value="0" {{$a12 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -400,7 +401,7 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_a12" disabled="" value="{{$keterangan_a12}}">
+                    <input type="text" class="form-control" name="keterangan_a12" value="{{$keterangan_a12}}">
                   </div>
                 </div>
 
@@ -409,13 +410,13 @@
                   <div class="col-lg-8">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a13" value="1" disabled {{$a13 == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="a13" value="1" {{$a13 == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="a13" value="0" disabled {{$a13 == 0 ? 'checked' : ''}}>
+                        <input type="radio" name="a13" value="0" {{$a13 == 0 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -424,11 +425,15 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_a13" disabled="" value="{{$keterangan_a13}}">
+                    <input type="text" class="form-control" name="keterangan_a13" value="{{$keterangan_a13}}">
                   </div>
                 </div>
               </div>
             </section>
+
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
           </form>
 
         </div>

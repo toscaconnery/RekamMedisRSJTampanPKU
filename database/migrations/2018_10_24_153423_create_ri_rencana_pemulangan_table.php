@@ -32,15 +32,16 @@ class CreateRiRencanaPemulanganTable extends Migration
             $table->string('a12')->nullable();
             $table->string('a13')->nullable();
             $table->string('keterangan_a4')->nullable();
-            $table->string('keterangan_a5')->nullabl();
-            $table->string('keterangan_a6')->nullabl();
-            $table->string('keterangan_a7')->nullabl();
-            $table->string('keterangan_a8')->nullabl();
-            $table->string('keterangan_a9')->nullabl();
-            $table->string('keterangan_a10')->nullabl();
-            $table->string('keterangan_a11')->nullabl();
-            $table->string('keterangan_a12')->nullabl();
-            $table->string('keterangan_a13')->nullabl();
+            $table->string('keterangan_a5')->nullable();
+            $table->string('keterangan_a6')->nullable();
+            $table->string('keterangan_a7')->nullable();
+            $table->string('keterangan_a8')->nullable();
+            $table->string('keterangan_a9')->nullable();
+            $table->string('keterangan_a10')->nullable();
+            $table->string('keterangan_a11')->nullable();
+            $table->string('keterangan_a12')->nullable();
+            $table->string('keterangan_a13')->nullable();
+            $table->string('bantuan',15)->nullable();
             $table->timestamps();
         });
     }
