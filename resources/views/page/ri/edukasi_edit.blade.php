@@ -49,9 +49,8 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_edukasi_pdf">PDF</a>
+                      <a class="btn btn-success" href="#">EDIT</a>
                     </div>
                   </td>
                 </tr>
@@ -63,8 +62,9 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_edukasi">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_edukasi_edit">
             {{ csrf_field() }}
+            <fieldset >
             <section class="panel">
               <header class="panel-heading">
                 
@@ -94,16 +94,16 @@
                           <li>Komplikasi yang mungkin terjadi</li>
                         </ul>
                       </td>
-                      <td><textarea class="form-control" name="medis_materi"></textarea></td>
-                      <td><textarea class="form-control" name="medis_metode"></textarea></td>
+                      <td><textarea class="form-control" name="medis_materi">{{$medis_materi}}</textarea></td>
+                      <td><textarea class="form-control" name="medis_metode">{{$medis_metode}}</textarea></td>
                       <td>Mampu menjelaskan point : a,b,c,d,e</td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="medis_paraf_pasien">
+                        <input type="checkbox" class="form-control" name="medis_paraf_pasien" {{$medis_paraf_pasien ? 'checked' : ''}}>
                         {{Session::get('nama')}}
                       </td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="medis_paraf_edukator">
-                        <input type="text" class="form-control" name="medis_nama_edukator">
+                        <input type="checkbox" class="form-control" name="medis_paraf_edukator" {{$medis_paraf_edukator ? 'checked' : ''}}>
+                        <input type="text" class="form-control" name="medis_nama_edukator" value="{{$medis_nama_edukator}}">
                       </td>
                     </tr>
                     <tr>
@@ -118,16 +118,16 @@
                           <li>Farmakologi</li>
                         </ul>
                       </td>
-                      <td><textarea class="form-control" name="mj_materi"></textarea></td>
-                      <td><textarea class="form-control" name="mj_metode"></textarea></td>
+                      <td><textarea class="form-control" name="mj_materi">{{$mj_materi}}</textarea></td>
+                      <td><textarea class="form-control" name="mj_metode">{{$mj_metode}}</textarea></td>
                       <td>Mampu menjelaskan point : a,b<br>Mampu mendemonstrasikan point : 1,2</td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="mj_paraf_pasien">
+                        <input type="checkbox" class="form-control" name="mj_paraf_pasien" {{$mj_paraf_pasien ? 'checked' : ''}}>
                         {{Session::get('nama')}}
                       </td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="mj_paraf_edukator">
-                        <input type="text" class="form-control" name="mj_nama_edukator">
+                        <input type="checkbox" class="form-control" name="mj_paraf_edukator" {{$mj_paraf_edukator ? 'checked' : ''}}>
+                        <input type="text" class="form-control" name="mj_nama_edukator" value="{{$mj_nama_edukator}}">
                       </td>
                     </tr>
                     <tr>
@@ -140,16 +140,16 @@
                           <li>Konseling berita buruk</li>
                         </ul>
                       </td>
-                      <td><textarea class="form-control" name="psikologis_materi"></textarea></td>
-                      <td><textarea class="form-control" name="psikologis_metode"></textarea></td>
+                      <td><textarea class="form-control" name="psikologis_materi">{{$psikologis_materi}}</textarea></td>
+                      <td><textarea class="form-control" name="psikologis_metode">{{$psikologis_metode}}</textarea></td>
                       <td>Mampu menjelaskan point : a,b,c,d,e</td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="psikologis_paraf_pasien">
+                        <input type="checkbox" class="form-control" name="psikologis_paraf_pasien" {{$psikologis_paraf_pasien ? 'checked' : ''}}>
                         {{Session::get('nama')}}
                       </td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="psikologis_paraf_edukator">
-                        <input type="text" class="form-control" name="psikologis_nama_edukator">
+                        <input type="checkbox" class="form-control" name="psikologis_paraf_edukator" {{$psikologis_paraf_edukator ? 'checked' : ''}}>
+                        <input type="text" class="form-control" name="psikologis_nama_edukator" value="{{$psikologis_nama_edukator}}">
                       </td>
                     </tr>
                     <tr>
@@ -169,16 +169,16 @@
                           <li>Sumber-sumber pelayanan kesehatan di komunitas</li>
                         </ul>
                       </td>
-                      <td><textarea class="form-control" name="keperawatan_materi"></textarea></td>
-                      <td><textarea class="form-control" name="keperawatan_metode"></textarea></td>
+                      <td><textarea class="form-control" name="keperawatan_materi">{{$keperawatan_materi}}</textarea></td>
+                      <td><textarea class="form-control" name="keperawatan_metode">{{$keperawatan_metode}}</textarea></td>
                       <td>Mampu menjelaskan point :<br>a. 1), 2), 3)<br>b.<br>c.<br>d.<br>e.<br>f.<br>Mampu mendemonstrasikan<br>1) Cucitangan<br>2) Penggunaan alat medis</td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="keperawatan_paraf_pasien">
+                        <input type="checkbox" class="form-control" name="keperawatan_paraf_pasien" {{$psikologis_paraf_pasien ? 'checked' : ''}}>
                         {{Session::get('nama')}}
                       </td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="keperawatan_paraf_edukator">
-                        <input type="text" class="form-control" name="keperawatan_nama_edukator">
+                        <input type="checkbox" class="form-control" name="keperawatan_paraf_edukator" {{$psikologis_paraf_edukator ? 'checked' : ''}}>
+                        <input type="text" class="form-control" name="keperawatan_nama_edukator" value="{{$keperawatan_nama_edukator}}">
                       </td>
                     </tr>
                     <tr>
@@ -193,16 +193,16 @@
                           <li>Interaksi antar obat & interaksi obat dengan makanan</li>
                         </ul>
                       </td>
-                      <td><textarea class="form-control" name="farmasi_materi"></textarea></td>
-                      <td><textarea class="form-control" name="farmasi_metode"></textarea></td>
+                      <td><textarea class="form-control" name="farmasi_materi">{{$farmasi_materi}}</textarea></td>
+                      <td><textarea class="form-control" name="farmasi_metode">{{$farmasi_metode}}</textarea></td>
                       <td>Mampu menjelaskan point : a,b,c,d,e,f</td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="farmasi_paraf_pasien">
+                        <input type="checkbox" class="form-control" name="farmasi_paraf_pasien" {{$farmasi_paraf_pasien ? 'checked' : ''}}>
                         {{Session::get('nama')}}
                       </td style="vertical-align: middle;">
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="farmasi_paraf_edukator">
-                        <input type="text" class="form-control" name="farmasi_nama_edukator">
+                        <input type="checkbox" class="form-control" name="farmasi_paraf_edukator" {{$farmasi_paraf_edukator ? 'checked' : ''}}>
+                        <input type="text" class="form-control" name="farmasi_nama_edukator" value="{{$farmasi_nama_edukator}}">
                       </td>
                     </tr>
                     <tr>
@@ -215,16 +215,16 @@
                           <li>Diet di rumah</li>
                         </ul>
                       </td>
-                      <td><textarea class="form-control" name="nutrisi_materi"></textarea></td>
-                      <td><textarea class="form-control" name="nutrisi_metode"></textarea></td>
+                      <td><textarea class="form-control" name="nutrisi_materi">{{$nutrisi_materi}}</textarea></td>
+                      <td><textarea class="form-control" name="nutrisi_metode">{{$nutrisi_metode}}</textarea></td>
                       <td>Mampu menjelaskan point : a,b,c,d</td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="nutrisi_paraf_pasien">
+                        <input type="checkbox" class="form-control" name="nutrisi_paraf_pasien" {{$nutrisi_paraf_pasien ? 'checked' : ''}}>
                         {{Session::get('nama')}}
                       </td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="nutrisi_paraf_edukator">
-                        <input type="text" class="form-control" name="nutrisi_nama_edukator">
+                        <input type="checkbox" class="form-control" name="nutrisi_paraf_edukator" {{$nutrisi_paraf_edukator ? 'checked' : ''}}>
+                        <input type="text" class="form-control" name="nutrisi_nama_edukator" value="{{$nutrisi_nama_edukator}}">
                       </td>
                     </tr>
                     <tr>
@@ -232,16 +232,16 @@
                       <td><span>Kerohanian</span><br>
                         Bimbingan & Konseling Rohani
                       </td>
-                      <td><textarea class="form-control" name="kerohanian_materi"></textarea></td>
-                      <td><textarea class="form-control" name="kerohanian_metode"></textarea></td>
+                      <td><textarea class="form-control" name="kerohanian_materi">{{$kerohanian_materi}}</textarea></td>
+                      <td><textarea class="form-control" name="kerohanian_metode">{{$kerohanian_metode}}</textarea></td>
                       <td>Mampu menjelaskan & mendemonstrasikan Bimbingan & Konseling rohani</td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="kerohanian_paraf_pasien">
+                        <input type="checkbox" class="form-control" name="kerohanian_paraf_pasien" {{$kerohanian_paraf_pasien ? 'checked' : ''}}>
                         {{Session::get('nama')}}
                       </td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="kerohanian_paraf_edukator">
-                        <input type="text" class="form-control" name="kerohanian_nama_edukator">
+                        <input type="checkbox" class="form-control" name="kerohanian_paraf_edukator" {{$kerohanian_paraf_edukator ? 'checked' : ''}}>
+                        <input type="text" class="form-control" name="kerohanian_nama_edukator" value="{{$kerohanian_nama_edukator}}">
                       </td>
                     </tr>
                     <tr>
@@ -253,38 +253,39 @@
                           <li>Terapi Wicara</li>
                         </ul>
                       </td>
-                      <td><textarea class="form-control" name="rehabilitasi_materi"></textarea></td>
-                      <td><textarea class="form-control" name="rehabilitasi_metode"></textarea></td>
+                      <td><textarea class="form-control" name="rehabilitasi_materi">{{$rehabilitasi_materi}}</textarea></td>
+                      <td><textarea class="form-control" name="rehabilitasi_metode">{{$rehabilitasi_metode}}</textarea></td>
                       <td>Mampu menjelaskan & mendemonstrasikan point : a,b,c</td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="rehabilitasi_paraf_pasien">
+                        <input type="checkbox" class="form-control" name="rehabilitasi_paraf_pasien" {{$rehabilitasi_paraf_pasien ? 'checked' : ''}}>
                         {{Session::get('nama')}}
                       </td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="rehabilitasi_paraf_edukator">
-                        <input type="text" class="form-control" name="rehabilitasi_nama_edukator">
+                        <input type="checkbox" class="form-control" name="rehabilitasi_paraf_edukator" {{$rehabilitasi_paraf_edukator ? 'checked' : ''}}>
+                        <input type="text" class="form-control" name="rehabilitasi_nama_edukator" value="{{$rehabilitasi_nama_edukator}}">
                       </td>
                     </tr>
                     <tr style="height: 10em;">
                       <td style="text-align: center;">9</td>
                       <td><span>Delay Treatment</span>
                       </td>
-                      <td><textarea class="form-control" name="dt_materi"></textarea></td>
-                      <td><textarea class="form-control" name="dt_metode"></textarea></td>
-                      <td><textarea class="form-control" name="dt_evaluasi"></textarea></td>
+                      <td><textarea class="form-control" name="dt_materi">{{$dt_materi}}</textarea></td>
+                      <td><textarea class="form-control" name="dt_metode">{{$dt_metode}}</textarea></td>
+                      <td><textarea class="form-control" name="dt_evaluasi">{{$dt_evaluasi}}</textarea></td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="dt_paraf_pasien">
+                        <input type="checkbox" class="form-control" name="dt_paraf_pasien" {{$dt_paraf_pasien ? 'checked' : ''}}>
                         {{Session::get('nama')}}
                       </td>
                       <td style="vertical-align: middle;">
-                        <input type="checkbox" class="form-control" name="dt_paraf_edukator">
-                        <input type="text" class="form-control" name="dt_nama_edukator">
+                        <input type="checkbox" class="form-control" name="dt_paraf_edukator" {{$dt_paraf_edukator ? 'checked' : ''}}>
+                        <input type="text" class="form-control" name="dt_nama_edukator" value="{{$dt_nama_edukator}}">
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </section>
+            </fieldset>
 
             <div>
               <button type="submit" class="btn btn-primary">Submit</button>
