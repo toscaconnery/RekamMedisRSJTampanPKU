@@ -49,6 +49,7 @@ class ListDocument extends Model
         'ri_evaluasi_keperawatan',
         'ri_monitoring_observasi',
         'ri_laboratorium',
+        'ri_rencana_napza',
         'ri_penggunaan_obat',
         'ri_riwayat_obat',
         'ri_efek_samping',

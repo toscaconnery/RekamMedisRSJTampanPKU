@@ -742,6 +742,12 @@ Route::get('/ri_laboratorium_read', 'RILaboratoriumController@get_ri_laboratoriu
 Route::get('/ri_laboratorium_edit', 'RILaboratoriumController@get_ri_laboratorium_edit');
 Route::post('/ri_laboratorium_edit', 'RILaboratoriumController@post_ri_laboratorium_edit');
 
+Route::get('/ri_rencana_napza', 'RIRencanaNapzaController@get_ri_rencana_napza');
+Route::post('/ri_rencana_napza', 'RIRencanaNapzaController@post_ri_rencana_napza');
+Route::get('/ri_rencana_napza_read', 'RIRencanaNapzaController@get_ri_rencana_napza_read');
+Route::get('/ri_rencana_napza_edit', 'RIRencanaNapzaController@get_ri_rencana_napza_edit');
+Route::post('/ri_rencana_napza_edit', 'RIRencanaNapzaController@post_ri_rencana_napza_edit');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -797,9 +803,9 @@ Route::get('/igd_asesmen_darurat', function () {
 });
 
 
-Route::get('/ri_rencana_napza', function () {
-    return view('ri_rencana_napza');
-});
+// Route::get('/ri_rencana_napza', function () {
+//     return view('ri_rencana_napza');
+// });
 
 Route::get('/rj_rencana_pemulangan', function () {
     return view('rj_rencana_pemulangan');
