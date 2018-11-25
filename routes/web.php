@@ -382,7 +382,9 @@ Route::get('/doc_ri_nyeri', function () {
 
 Route::get('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan');
 Route::post('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@post_ri_catatan_perkembangan');
-Route::get('/ri_catatan_perkembangan_read', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan_read'); // new add
+Route::get('/ri_catatan_perkembangan_read', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan_read');
+Route::get('/ri_catatan_perkembangan_edit', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan_edit');
+Route::post('/ri_catatan_perkembangan_edit', 'RIPerkembanganPasienController@post_ri_catatan_perkembangan_edit');
 
 //dokumen catatan perkembangan
 Route::get('/ri_catatan_perkembangan_pdf', 'RIPerkembanganPasienController@ri_catatan_perkembangan_pdf');
