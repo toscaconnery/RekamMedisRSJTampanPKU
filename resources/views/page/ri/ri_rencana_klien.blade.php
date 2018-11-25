@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="{{url('')}}/admin_bootstrap/img/favicon.png">
 
-  <title>Rencana Tindakan Keperawatan Intensif</title>
+  <title>Rencana Tindakan Keperawatan Klien</title>
 
   <!-- Bootstrap CSS -->
   <link href="{{url('')}}/admin_bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
   <section class="wrapper">
     <div class="row">
       <div class="col-lg-12">
-        <h3 class="page-header"><i class="fa fa-file-text-o"></i>RENCANA TINDAKAN KEPERAWATAN INTENSIF</h3>
+        <h3 class="page-header"><i class="fa fa-file-text-o"></i>RENCANA TINDAKAN KEPERAWATAN KLIEN</h3>
             <!--<ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
               <li><i class="icon_document_alt"></i>Forms</li>
@@ -78,7 +78,7 @@
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Rencana Tindakan Keperawatan Intensif
+                Rencana Tindakan Keperawatan Klien
               </header>
 
               <table class="table table-striped table-advance table-hover">
@@ -91,7 +91,7 @@
                     <th><i class="icon_cogs"></i> Action</th>
                   </tr>
                   <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Resiko Bunuh Diri</td>
+                    <td>Rencana Tindakan Keperawatan Klien Dengan Perilaku Kekerasan</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>Tidak Terisi</td>
@@ -104,7 +104,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Defisit Perawatan Diri</td>
+                    <td>Rencana Tindakan Keperawatan Klien Dengan Gangguan Konsep Diri : Harga Diri Rendah</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>Tidak Terisi</td>
@@ -117,7 +117,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Gangguan Persepsi Sensori: Halusinasi</td>
+                    <td>Rencana Tindakan Keperawatan Klien Dengan Pola Pikir : WAHAM</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>Tidak Terisi</td>
@@ -130,7 +130,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Perilaku Kekerasan</td>
+                    <td>Rencana Tindakan Keperawatan Klien Dengan Menarik Diri</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>Tidak Terisi</td>
@@ -143,7 +143,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Panik</td>
+                    <td>Rencana Tindakan Keperawatan Klien Dengan Defisit Perawatan Diri</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>Tidak Terisi</td>
@@ -156,7 +156,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Waham</td>
+                    <td>Rencana Tindakan Keperawatan Klien Dengan Gangguan Persepsi Sensori : Halusinasi</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>Tidak Terisi</td>
@@ -169,7 +169,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Rencana Tindakan Keperawatan Intensif Isolasi Sosial Menarik Diri</td>
+                    <td>Rencana Tindakan Keperawatan Klien Dengan Risiko Bunuh Diri</td>
                     <td>20/08/2018</td>
                     <td>[Nama Pengisi]</td>
                     <td>Tidak Terisi</td>
