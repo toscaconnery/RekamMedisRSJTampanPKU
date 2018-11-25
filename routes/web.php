@@ -358,7 +358,9 @@ Route::get('/doc_ri_napza', function () {
 
 Route::get('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson');
 Route::post('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@post_ri_penilaian_edmunson');
-Route::get('/ri_penilaian_edmunson_read', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson_read'); // new add
+Route::get('/ri_penilaian_edmunson_read', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson_read');
+Route::get('/ri_penilaian_edmunson_edit', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson_edit');
+Route::post('/ri_penilaian_edmunson_edit', 'RIPenilaianEdmunsonController@post_ri_penilaian_edmunson_edit');
 
 //dokumen penilaian edmunson
 Route::get('/ri_edmunson_pdf', 'RIPenilaianEdmunsonController@ri_edmunson_pdf');
@@ -594,6 +596,8 @@ Route::post('/ri_panss_ec_edit', 'RIPanssEcController@post_ri_panss_ec_edit');
 Route::get('/ri_penilaian_panss', 'RIPenilaianPanssController@get_ri_penilaian_panss');
 Route::post('/ri_penilaian_panss', 'RIPenilaianPanssController@post_ri_penilaian_panss');
 Route::get('/ri_penilaian_panss_read', 'RIPenilaianPanssController@get_ri_penilaian_panss_read');
+Route::get('/ri_penilaian_panss_edit', 'RIPenilaianPanssController@get_ri_penilaian_panss_edit');
+Route::post('/ri_penilaian_panss_edit', 'RIPenilaianPanssController@post_ri_penilaian_panss_edit');
 
 //dokumen penilaian panss
 Route::get('/ri_nilaipanss_pdf', 'RIPenilaianPanssController@ri_nilaipanss_pdf');
@@ -933,9 +937,9 @@ Route::get('/ri_rencanaklien7', function () {
 //     return view('ri_rawat_napza');
 // });
 
-// Route::get('/ri_rencana_keperawatan', function () {
-//     return view('ri_rencana_keperawatan');
-// });
+Route::get('/ri_rencana_keperawatan', function () {
+    return view('ri_rencana_keperawatan');
+});
 
 // Route::get('/ri_penggunaan_obat', function () {
 //     return view('ri_penggunaan_obat');
