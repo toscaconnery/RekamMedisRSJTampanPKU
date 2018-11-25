@@ -790,17 +790,13 @@ Route::get('/igd_asesmen_darurat', function () {
 });
 
 
-
-
-
-
+Route::get('/ri_rencana_napza', function () {
+    return view('ri_rencana_napza');
+});
 
 Route::get('/rj_rencana_pemulangan', function () {
     return view('rj_rencana_pemulangan');
 });
-
-
-
 
 //new addition page
 

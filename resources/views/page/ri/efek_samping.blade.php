@@ -332,67 +332,64 @@
           </div>
         </div>
 
-
         <div class="row">
           <div class="col-lg-12">
+
             <section class="panel">
               <header class="panel-heading">
-                Obat
+                 Obat
               </header>
               <div class="panel-body">
-                <div class="form-group">
-                  <label class="col-lg-2 control-label">Nama (Nama dagang/Pabrik)</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="nama_dagang">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-lg-2 control-label">Bentuk Sediaan</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="bentuk_sediaan">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-lg-2 control-label">Apakah obat dicurigai</label>
-                  <div class="col-sm-10">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="obat_dicurigai">
-                        Obat yang dicurigai
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-lg-2 control-label">Pemberian Rute</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="pemberian_rute">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-lg-2 control-label">Pemberian Dosis/Waktu</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="pemberian_dosis_waktu">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-lg-2 control-label">Tanggal Mulai</label>
-                  <div class="col-sm-2">
-                    <input type="date" class="form-control" name="tanggal_mulai">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-lg-2 control-label">Tanggal Akhir</label>
-                  <div class="col-sm-10">
-                    <input type="date" class="form-control" name="tanggal_akhir">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-lg-2 control-label">Indikasi Penggunaan</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="indikasi_penggunaan">
-                  </div>
-                </div>
+                <table class="table table-bordered">
+
+                  <thead>
+                    <tr>
+                      <th style="width: 15%; text-align: center;vertical-align:middle;" rowspan="2">Nama (Nama dagang/Pabrik)</th>
+                      <th style="width: 15%; text-align: center;vertical-align:middle;" rowspan="2">Bentuk Sediaan</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;" rowspan="2">Obat yang dicurigai</th>
+                      <th style="width: 48%; text-align: center;vertical-align:middle;" colspan="4">Pemberian</th>
+                      <th style="width: 15%; text-align: center;vertical-align:middle;" rowspan="2">Indikasi Penggunaan</th>
+                    </tr>
+                    <tr>
+                      <th style="width: 12%; text-align: center;vertical-align:middle;">Rute</th>
+                      <th style="width: 12%; text-align: center;vertical-align:middle;">Dosis/Waktu</th>
+                      <th style="width: 12%; text-align: center;vertical-align:middle;">Tgl Mulai</th>
+                      <th style="width: 12%; text-align: center;vertical-align:middle;">Tgl Akhir</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    
+                    <tr>
+                      <td style="text-align:center;">
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                       <td style="text-align:center;">
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td style="text-align:center;">
+                        <input type="checkbox" class="form-control" name="dicurigai">
+                      </td>
+                       <td style="text-align:center;">
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td style="text-align:center;">
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                      <td style="text-align:center;">
+                        <input type="date" class="form-control" name="tanggal_mulai">
+                      </td>
+                      <td style="text-align:center;">
+                        <input type="date" class="form-control" name="tanggal_akhir">
+                      </td>
+                      <td style="text-align:center;">
+                        <input type="text" class="form-control" name="" required>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                
               </div>
             </section>
           </div>
