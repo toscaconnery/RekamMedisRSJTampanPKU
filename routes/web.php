@@ -613,10 +613,8 @@ Route::post('/ri_lembar_konsultasi', 'RILembarKonsultasiController@post_ri_lemba
 Route::get('/ri_lembar_konsultasi_read', 'RILembarKonsultasiController@get_ri_lembar_konsultasi_read');
 Route::get('/ri_lembar_konsultasi_edit', 'RILembarKonsultasiController@get_ri_lembar_konsultasi_edit');
 Route::post('/ri_lembar_konsultasi_edit', 'RILembarKonsultasiController@post_ri_lembar_konsultasi_edit');
-
 //dokumen Lembar konsultasi
 Route::get('/ri_konsultasi_pdf', 'RILembarKonsultasiController@ri_konsultasi_pdf');
-
 Route::get('/doc_ri_konsultasi', function () {
     return view('/doc_ri_konsultasi');
 });
@@ -624,10 +622,10 @@ Route::get('/doc_ri_konsultasi', function () {
 Route::get('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan');
 Route::post('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@post_ri_rencana_pemulangan');
 Route::get('/ri_rencana_pemulangan_read', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan_read');
-
+Route::get('/ri_rencana_pemulangan_edit', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan_edit');
+Route::post('/ri_rencana_pemulangan_edit', 'RIRencanaPemulanganController@post_ri_rencana_pemulangan_edit');
 //dokumen rencana pemulangan
 Route::get('/ri_pemulangan_pdf', 'RIRencanaPemulanganController@ri_pemulangan_pdf');
-
 Route::get('/doc_ri_pemulangan', function () {
     return view('/doc_ri_pemulangan');
 });
