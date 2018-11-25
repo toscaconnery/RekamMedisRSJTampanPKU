@@ -940,9 +940,9 @@ Route::get('/ri_rencanaklien7', function () {
 //     return view('ri_rawat_napza');
 // });
 
-// Route::get('/ri_rencana_keperawatan', function () {
-//     return view('ri_rencana_keperawatan');
-// });
+Route::get('/ri_rencana_keperawatan', function () {
+     return view('ri_rencana_keperawatan');
+ });
 
 // Route::get('/ri_penggunaan_obat', function () {
 //     return view('ri_penggunaan_obat');
