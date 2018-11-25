@@ -415,10 +415,10 @@ Route::get('/doc_ri_monitoring', function () {
 Route::get('/ri_edukasi', 'RIEdukasiController@get_ri_edukasi');
 Route::post('/ri_edukasi', 'RIEdukasiController@post_ri_edukasi');
 Route::get('/ri_edukasi_read', 'RIEdukasiController@get_ri_edukasi_read');
-
+Route::get('/ri_edukasi_edit', 'RIEdukasiController@get_ri_edukasi_edit');
+Route::post('/ri_edukasi_edit', 'RIEdukasiController@post_ri_edukasi_edit');
 //dokumen edukasi pasien dan keluarga
 Route::get('/ri_edukasi_pdf', 'RIEdukasiController@ri_edukasi_pdf');
-
 Route::get('/doc_ri_edukasi', function () {
     return view('/doc_ri_edukasi');
 });
