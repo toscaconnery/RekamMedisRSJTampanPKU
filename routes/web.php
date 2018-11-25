@@ -732,6 +732,13 @@ Route::get('/ri_transfer_eksternal_read', 'RITransferEksternalController@get_ri_
 Route::get('/ri_transfer_eksternal_edit', 'RITransferEksternalController@get_ri_transfer_eksternal_edit');
 Route::post('/ri_transfer_eksternal_edit', 'RITransferEksternalController@post_ri_transfer_eksternal_edit');
 
+//dokumen transfer eksternal
+Route::get('/ri_eksternal_pdf', 'RITransferEksternalController@ri_eksternal_pdf');
+
+Route::get('/doc_ri_eksternal', function () {
+    return view('/doc_ri_eksternal');
+});
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -1080,13 +1087,6 @@ Route::get('/pdf_ri_pulang', 'Pdf_ri_Controller@pdf_ri_pulang');
 
 Route::get('/doc_ri_pulang', function () {
     return view('/doc_ri_pulang');
-});
-
-//dokumen transfer eksternal
-Route::get('/pdf_ri_eksternal', 'Pdf_ri_Controller@pdf_ri_eksternal');
-
-Route::get('/doc_ri_eksternal', function () {
-    return view('/doc_ri_eksternal');
 });
 
 //dokumen ri asesmen

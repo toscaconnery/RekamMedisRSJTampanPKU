@@ -318,10 +318,9 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <div class="col-sm-6"></div>
-                  <div class="col-sm-4">
-                    <label for="nama_dokter">Nama Dokter</label>
-                    <input id="nama_dokter" type="text" class="form-control" name="nama_dokter">
+                  <label class="col-sm-2 control-label" for="nama_dokter">Nama Dokter</label>
+                  <div class="col-sm-6">
+                     <input id="nama_dokter" type="text" class="form-control" name="nama_dokter">
                   </div>
                 </div>
               </div>

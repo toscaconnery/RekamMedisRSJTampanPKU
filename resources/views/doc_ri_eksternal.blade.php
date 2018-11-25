@@ -13,7 +13,7 @@ header('Content-Type: application/pdf');
 
 
   <h2 align="center" style="font-size:110%;">LEMBAR TRANSFER PASIEN EKSTERNAL RUMAH SAKIT</h2>
-  <h2 align="center" style="font-size:85%;padding-top:-10px;"> Nomor : .................................</h2>
+  <h2 align="center" style="font-size:85%;padding-top:-10px;"> Nomor : {{$nomor}}</h2>
 
   <hr>
 
@@ -28,7 +28,7 @@ header('Content-Type: application/pdf');
                 RS Tujuan
               </td>    
               <td class="konten_l_answer" style="width:40%;">  
-                : -
+                : {{$rs_tujuan}}
               </td>                
             </tr>
             <tr>
@@ -36,7 +36,7 @@ header('Content-Type: application/pdf');
                 Petugas RS tujuan yang dihubungi 
               </td>    
               <td class="konten_l_answer">  
-                : -
+                : {{$petugas_dihubungi}}
               </td>                
             </tr>
           </tbody>
@@ -50,7 +50,7 @@ header('Content-Type: application/pdf');
                 Tanggal
               </td>    
               <td class="konten_l_answer">  
-                : -
+                : {{$tanggal_dihubungi}}
               </td>                
             </tr>
             <tr>
@@ -58,7 +58,7 @@ header('Content-Type: application/pdf');
                 Jam
               </td>    
               <td class="konten_l_answer">  
-                : -
+                : {{$jam_dihubungi}}
               </td>                
             </tr>
           </tbody>
@@ -75,11 +75,11 @@ header('Content-Type: application/pdf');
         <table style="font-size: 60%;">
           <tbody>
             <tr>
-              <td class="konten_question" style="width:30%;">
+              <td class="konten_l_question" style="width:50%;">
                 Alasan/tujuan transfer
               </td>    
-              <td class="konten_answer">  
-                : -
+              <td class="konten_l_answer" style="width:50%;">  
+                : {{$alasan_transfer}}
               </td>                
             </tr>
           </tbody>
@@ -93,7 +93,7 @@ header('Content-Type: application/pdf');
                 Tanggal transfer
               </td>    
               <td class="konten_l_answer">  
-                : -
+                : {{$tanggal_transfer}}
               </td>                
             </tr>
             <tr>
@@ -101,7 +101,7 @@ header('Content-Type: application/pdf');
                 Jam transfer
               </td>    
               <td class="konten_l_answer">  
-                : -
+                : {{$jam_transfer}}
               </td>                
             </tr>
           </tbody>
@@ -118,11 +118,11 @@ header('Content-Type: application/pdf');
         <table style="font-size: 60%;">
           <tbody>
             <tr>
-              <td class="konten_question" style="width:30%;">
+              <td class="konten_l_question" style="width:50%;">
                 Atas Permintaan
               </td>    
-              <td class="konten_answer">  
-                : -
+              <td class="konten_l_answer" style="width:50%;">  
+                : {{$atas_permintaan}}
               </td>                
             </tr>
           </tbody>
@@ -136,7 +136,7 @@ header('Content-Type: application/pdf');
                 Kategori pasien transfer
               </td>    
               <td class="konten_l_answer">  
-                : -
+                : {{$kategori_pasien}}
               </td>                
             </tr>
           </tbody>
@@ -150,12 +150,12 @@ header('Content-Type: application/pdf');
   	<table style="font-size: 60%;">
       <tbody>
         <tr>
-          <td class="konten_question">
+          <td class="konten_l_question">
             Petugas Pendamping
           </td>                
         </tr>
         <tr>
-          <td class="konten_question">
+          <td class="konten_l_question">
             <ul>
             	<li></li>
             	<li></li>
@@ -170,23 +170,28 @@ header('Content-Type: application/pdf');
 
 	<hr>
 	<div style= style="font-size: 65%;"> 
+    <p class="question">Tanggal Masuk RS: {{$tanggal_masuk_rs}}</p>
+    <br>
 
-		<p class="question"><b>Anamnesia:</b></p>
-		<p class="answer">Isi</p>
+		<p class="question"><b>Anamnesa:</b></p>
+		<p class="answer">{{$anamnesa}}</p>
+
+    <p class="question"><b>Diagnosa:</b></p>
+    <p class="answer">{{$diagnosa}}</p>
 
 		<p class="question"><b>Indikasi di rawat:</b></p>
-		<p class="answer">Isi</p>
+		<p class="answer">{{$indikasi_dirawat}}</p>
 
 		<p class="question"><b>Tindakan yang telah dilakukan:</b></p>
-		<p class="answer">Isi</p>
+		<p class="answer">{{$tindakan_dilakukan}}</p>
 
 		<p class="question"><b>Terapi yang telah diberikan:</b></p>
-		<p class="answer">Isi</p>
+		<p class="answer">{{$terapi_diberikan}}</p>
 
 		<p class="question"><b>Resiko:</b></p>
-		<p class="answer">Isi</p>
+		<p class="answer">{{$resiko}}</p>
 
-		<p class="question"><b>Transportasi yang digunakan: </b>-</p>
+		<p class="question"><b>Transportasi yang digunakan: </b>{{$transportasi}}</p>
   	
   	</div>
 
@@ -209,55 +214,58 @@ header('Content-Type: application/pdf');
 
     <tbody>
       <tr>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
+       <td class="default" style="text-align:center;"><br></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
       </tr>
       <tr>
         <td class="default" style="text-align:center;" colspan="9"><b>STATUS PASIEN SEBELUM TRANSFER</b></td>
       </tr>
-      <tr>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
+       <tr>
+        <td class="default" style="text-align:center;">{{$jam_sebelum}}</td>
+        <td class="default" style="text-align:center;">{{$keadaan_umum_sebelum}}</td>
+        <td class="default" style="text-align:center;">{{$td_sebelum}}</td>
+        <td class="default" style="text-align:center;">{{$hr_sebelum}}</td>
+        <td class="default" style="text-align:center;">{{$rr_sebelum}}</td>
+        <td class="default" style="text-align:center;">{{$suhu_sebelum}}</td>
+        <td class="default" style="text-align:center;">{{$spo2_sebelum}}</td>
+        <td class="default" style="text-align:center;">{{$lainnya_sebelum}}</td>
+        <td class="default" style="text-align:center;">{{$keterangan_sebelum}}</td>
       </tr>
+  
       <tr>
         <td class="default" style="text-align:center;" colspan="9"><b>STATUS PASIEN SELAMA TRANSFER</b></td>
       </tr>
       <tr>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
+        <td class="default" style="text-align:center;">{{$jam_selama}}</td>
+        <td class="default" style="text-align:center;">{{$keadaan_umum_selama}}</td>
+        <td class="default" style="text-align:center;">{{$td_selama}}</td>
+        <td class="default" style="text-align:center;">{{$hr_selama}}</td>
+        <td class="default" style="text-align:center;">{{$rr_selama}}</td>
+        <td class="default" style="text-align:center;">{{$suhu_selama}}</td>
+        <td class="default" style="text-align:center;">{{$spo2_selama}}</td>
+        <td class="default" style="text-align:center;">{{$lainnya_selama}}</td>
+        <td class="default" style="text-align:center;">{{$keterangan_selama}}</td>
       </tr>
+
       <tr>
-       <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
+       <td class="default" style="text-align:center;"><br></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
+        <td class="default" style="text-align:center;"></td>
       </tr>
+      
       <tr>
       	<td class="default" style="text-align:right;border-right: white;" colspan="7"></td>
         <td class="default" style="text-align:center;border-left: white;" colspan="2">
@@ -265,22 +273,22 @@ header('Content-Type: application/pdf');
         	<br>
         	<br>
         	<br>
-        	<p>(...........................)</p>
+        	<p>( {{$nama_dokter}} )</p>
         </td>
       </tr>
       <tr>
         <td class="default" style="text-align:center;" colspan="9"><b>STATUS AKHIR SETELAH TRANSFER</b></td>
       </tr>
       <tr>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
-        <td class="default" style="text-align:center;">-</td>
+        <td class="default" style="text-align:center;">{{$jam_setelah}}</td>
+        <td class="default" style="text-align:center;">{{$keadaan_umum_setelah}}</td>
+        <td class="default" style="text-align:center;">{{$td_setelah}}</td>
+        <td class="default" style="text-align:center;">{{$hr_setelah}}</td>
+        <td class="default" style="text-align:center;">{{$rr_setelah}}</td>
+        <td class="default" style="text-align:center;">{{$suhu_setelah}}</td>
+        <td class="default" style="text-align:center;">{{$spo2_setelah}}</td>
+        <td class="default" style="text-align:center;">{{$lainnya_setelah}}</td>
+        <td class="default" style="text-align:center;">{{$keterangan_setelah}}</td>
       </tr>
     </tbody>
   </table>
@@ -301,7 +309,7 @@ header('Content-Type: application/pdf');
 	                    Tanggal
 	                  </td>    
 	                  <td class="konten_answer" style="font-size: 80%;">  
-	                    : 21/05/2018
+	                    : {{$tanggal}}
 	                  </td>                
 	                </tr>
 	                <tr>
@@ -309,7 +317,7 @@ header('Content-Type: application/pdf');
 	                    Jam
 	                  </td>    
 	                  <td class="konten_answer" style="font-size: 80%;">  
-	                    : -
+	                    : {{$jam}}
 	                  </td>                
 	                </tr>
 	                <tr>
@@ -317,17 +325,27 @@ header('Content-Type: application/pdf');
 	                    RS
 	                  </td>    
 	                  <td class="konten_answer" style="font-size: 80%;">  
-	                    : -
+	                    : {{$rs}}
 	                  </td>                
 	                </tr>
 	              </tbody>
 	            </table>
 	          </td>
-	          <td class="default3" style="text-align:center;vertical-align:top;height:70px">
+	          <td class="default3" style="font-size:80%;text-align:center;vertical-align:middle;height:70px">
 	            Yang Menyerahkan
+              <br>
+              <br>
+              <br>
+              <br>
+              {{$nama_petugas_menyerahkan}}
 	          </td>
-	          <td class="default3" style="text-align:center;vertical-align:top;height:70px">
-	            Yang menerima
+	          <td class="default3" style="font-size:80%;text-align:center;vertical-align:middle;height:70px">
+	            Yang Menerima
+              <br>
+              <br>
+              <br>
+              <br>
+              {{$nama_petugas_penerima}}
 	          </td>  
 	        </tr>
 	      </tbody>
