@@ -75,10 +75,8 @@ Route::post('/penundaan_pelayanan', 'PenundaanPelayananController@post_penundaan
 Route::get('/penundaan_pelayanan_read', 'PenundaanPelayananController@get_penundaan_pelayanan_read');
 Route::get('/penundaan_pelayanan_edit', 'PenundaanPelayananController@get_penundaan_pelayanan_edit');
 Route::post('/penundaan_pelayanan_edit', 'PenundaanPelayananController@post_penundaan_pelayanan_edit');
-
 //dokumen penundaan pelayanan
 Route::get('/penundaan_pelayanan_pdf', 'PenundaanPelayananController@penundaan_pelayanan_pdf');
-
 Route::get('/doc_penundaan_pelayanan', function () {
     return view('/doc_penundaan_pelayanan');
 });
@@ -89,10 +87,8 @@ Route::get('/rj_asesmen_awal_perawat_read', 'RJAsesmenAwalController@get_rj_ases
 Route::get('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@get_rj_asesmen_awal_dokter');
 Route::post('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@post_rj_asesmen_awal_dokter');
 Route::get('/rj_asesmen_awal_dokter_read', 'RJAsesmenAwalController@get_rj_asesmen_awal_dokter_read');
-
 //dokumen asesmen awal pasien rawat jalan
 Route::get('/rj_asesmen_pdf', 'RJAsesmenAwalController@rj_asesmen_pdf');
-
 Route::get('/doc_rj_asesmen', function () {
     return view('/doc_rj_asesmen');
 });
@@ -103,10 +99,8 @@ Route::get('/rj_asesmen_awal_gigi_perawat_read', 'RJAsesmenAwalGigiController@ge
 Route::get('/rj_asesmen_awal_gigi_dokter', 'RJAsesmenAwalGigiController@get_rj_asesmen_awal_gigi_dokter');
 Route::post('/rj_asesmen_awal_gigi_dokter', 'RJAsesmenAwalGigiController@post_rj_asesmen_awal_gigi_dokter');
 Route::get('/rj_asesmen_awal_gigi_dokter_read', 'RJAsesmenAwalGigiController@get_rj_asesmen_awal_gigi_dokter_read');
-
 //dokumen asesmen awal pasien gigi
 Route::get('/rj_gigi_pdf', 'RJAsesmenAwalGigiController@rj_gigi_pdf');
-
 Route::get('/doc_rj_gigi', function () {
     return view('/doc_rj_gigi');
 });
@@ -121,10 +115,8 @@ Route::post('/rj_informasi_edukasi_list_informasi', 'RJInformasiEdukasiControlle
 Route::get('/rj_informasi_edukasi_list_informasi_read', 'RJInformasiEdukasiController@get_rj_informasi_edukasi_list_informasi_read');
 Route::get('/rj_informasi_edukasi_list_informasi_edit', 'RJInformasiEdukasiController@get_rj_informasi_edukasi_list_informasi_edit');
 Route::post('/rj_informasi_edukasi_list_informasi_edit', 'RJInformasiEdukasiController@post_rj_informasi_edukasi_list_informasi_edit');
-
 //dokumen informasi edukasi
 Route::get('/rj_infoedu_pdf', 'RJInformasiEdukasiController@rj_infoedu_pdf');
-
 Route::get('/doc_rj_infoedu', function () {
     return view('/doc_rj_infoedu');
 });
@@ -134,10 +126,8 @@ Route::post('/rj_lapor_rehabilitasi', 'RJLaporRehabilitasiController@post_rj_lap
 Route::get('/rj_lapor_rehabilitasi_read', 'RJLaporRehabilitasiController@get_rj_lapor_rehabilitasi_read');
 Route::get('/rj_lapor_rehabilitasi_edit', 'RJLaporRehabilitasiController@get_rj_lapor_rehabilitasi_edit');
 Route::post('/rj_lapor_rehabilitasi_edit', 'RJLaporRehabilitasiController@post_rj_lapor_rehabilitasi_edit');
-
 //dokumen informasi lapor rehabilitasi
 Route::get('/rj_lapor_rehabilitasi_pdf', 'RJLaporRehabilitasiController@rj_lapor_rehabilitasi_pdf');
-
 Route::get('/doc_rj_lapor_rehabilitasi', function () {
     return view('/doc_rj_lapor_rehabilitasi');
 });
@@ -147,10 +137,8 @@ Route::post('/rj_perkembangan_pasien', 'RJPerkembanganPasienController@post_rj_p
 Route::get('/rj_perkembangan_pasien_read', 'RJPerkembanganPasienController@get_rj_perkembangan_pasien_read');
 Route::get('/rj_perkembangan_pasien_edit', 'RJPerkembanganPasienController@get_rj_perkembangan_pasien_edit');
 Route::post('/rj_perkembangan_pasien_edit', 'RJPerkembanganPasienController@post_rj_perkembangan_pasien_edit');
-
 //dokumen catatan perkembangan
 Route::get('/rj_catatan_perkembangan_pdf', 'RJPerkembanganPasienController@rj_catatan_perkembangan_pdf');
-
 Route::get('/doc_rj_catatan_perkembangan', function () {
     return view('/doc_rj_catatan_perkembangan');
 });
@@ -161,10 +149,8 @@ Route::post('/rj_identifikasi_stresor', 'RJIdentifikasiStresorController@post_rj
 Route::get('/rj_identifikasi_stresor_read', 'RJIdentifikasiStresorController@get_rj_identifikasi_stresor_read');
 Route::get('/rj_identifikasi_stresor_edit', 'RJIdentifikasiStresorController@get_rj_identifikasi_stresor_edit');
 Route::post('/rj_identifikasi_stresor_edit', 'RJIdentifikasiStresorController@post_rj_identifikasi_stresor_edit');
-
 //dokumen stressor
 Route::get('/rj_stressor_pdf', 'RJIdentifikasiStresorController@rj_stressor_pdf');
-
 Route::get('/doc_rj_stressor', function () {
     return view('/doc_rj_stressor');
 });
@@ -174,10 +160,8 @@ Route::post('/rj_tes_konseling_hiv', 'RJTesKonselingHIVController@post_tes_konse
 Route::get('/rj_tes_konseling_hiv_read', 'RJTesKonselingHIVController@get_tes_konseling_hiv_read');
 Route::get('/rj_tes_konseling_hiv_edit', 'RJTesKonselingHIVController@get_tes_konseling_hiv_edit');
 Route::post('/rj_tes_konseling_hiv_edit', 'RJTesKonselingHIVController@post_tes_konseling_hiv_edit');
-
 //dokumen konseling HIV
 Route::get('/rj_konselinghiv_pdf', 'RJTesKonselingHIVController@rj_konselinghiv_pdf');
-
 Route::get('/doc_rj_konselinghiv', function () {
     return view('/doc_rj_konselinghiv');
 });
@@ -187,10 +171,8 @@ Route::post('/rj_izin_vct_hiv', 'RJIzinVCTHIVController@post_rj_izin_vct_hiv');
 Route::get('/rj_izin_vct_hiv_read', 'RJIzinVCTHIVController@get_rj_izin_vct_hiv_read');
 Route::get('/rj_izin_vct_hiv_edit', 'RJIzinVCTHIVController@get_rj_izin_vct_hiv_edit');
 Route::post('/rj_izin_vct_hiv_edit', 'RJIzinVCTHIVController@post_rj_izin_vct_hiv_edit');
-
 //dokumen izinvct
 Route::get('/rj_izinvct_pdf', 'RJIzinVCTHIVController@rj_izinvct_pdf');
-
 Route::get('/doc_rj_izinvct', function () {
     return view('/doc_rj_izinvct');
 });
@@ -200,10 +182,8 @@ Route::post('/rj_hiv_anti_retroval', 'RJHIVAntiRetrovalController@post_rj_hiv_an
 Route::get('/rj_hiv_anti_retroval_read', 'RJHIVAntiRetrovalController@get_rj_hiv_anti_retroval_read');
 Route::get('/rj_hiv_anti_retroval_edit', 'RJHIVAntiRetrovalController@get_rj_hiv_anti_retroval_edit');
 Route::post('/rj_hiv_anti_retroval_edit', 'RJHIVAntiRetrovalController@post_rj_hiv_anti_retroval_edit');
-
 //dokumen ikhtisar HIV
 Route::get('/rj_ikhtisarhiv_pdf', 'RJHIVAntiRetrovalController@rj_ikhtisarhiv_pdf');
-
 Route::get('/doc_rj_ikhtisarhiv', function () {
     return view('/doc_rj_ikhtisarhiv');
 });
@@ -215,10 +195,8 @@ Route::post('/rj_asesmen_awal_tumbuh_kembang_psikolog_read', 'RJAsesmenAwalTumbu
 Route::get('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_dokter');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter_read', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter_read');
-
 //dokumen informasi tumbuh kembang
 Route::get('/rj_tumbuhkembang_pdf', 'RJAsesmenAwalTumbuhKembangController@rj_tumbuhkembang_pdf');
-
 Route::get('/doc_rj_tumbuhkembang', function () {
     return view('/doc_rj_tumbuhkembang');
 });
@@ -228,10 +206,8 @@ Route::post('/rj_resume', 'RJResumeController@post_rj_resume');
 Route::get('/rj_resume_read', 'RJResumeController@get_rj_resume_read');
 Route::get('/rj_resume_edit', 'RJResumeController@get_rj_resume_edit');
 Route::post('/rj_resume_edit', 'RJResumeController@post_rj_resume_edit');
-
 //dokumen resume rawat jalan
 Route::get('/rj_resume_pdf', 'RJResumeController@rj_resume_pdf');
-
 Route::get('/doc_rj_resume', function () {
     return view('/doc_rj_resume');
 });
@@ -241,10 +217,8 @@ Route::post('/igd_triase', 'IGDTriaseController@post_igd_triase');
 Route::get('/igd_triase_read', 'IGDTriaseController@get_igd_triase_read');
 Route::get('/igd_triase_edit', 'IGDTriaseController@get_igd_triase_edit');
 Route::post('/igd_triase_edit', 'IGDTriaseController@post_igd_triase_edit');
-
 //dokumen igd_triase_pasien
 Route::get('/igd_triase_pdf', 'IGDTriaseController@igd_triase_pdf');
-
 Route::get('/doc_igd_triase', function () {
     return view('doc_igd_triase');
 });
@@ -254,10 +228,8 @@ Route::post('/igd_suicide_fisik', 'IGDSuicideFisikController@post_igd_suicide_fi
 Route::get('/igd_suicide_fisik_read', 'IGDSuicideFisikController@get_igd_suicide_fisik_read');
 Route::get('/igd_suicide_fisik_edit', 'IGDSuicideFisikController@get_igd_suicide_fisik_edit');
 Route::post('/igd_suicide_fisik_edit', 'IGDSuicideFisikController@post_igd_suicide_fisik_edit');
-
 //dokumen igd_suicide
 Route::get('/igd_suicide_pdf', 'IGDSuicideFisikController@igd_suicide_pdf');
-
 Route::get('/doc_igd_suicide', function () {
     return view('doc_igd_suicide');
 });
@@ -267,10 +239,8 @@ Route::post('/igd_catatan_kemajuan', 'IGDCatatanKemajuanController@post_igd_cata
 Route::get('/igd_catatan_kemajuan_read', 'IGDCatatanKemajuanController@get_igd_catatan_kemajuan_read');
 Route::get('/igd_catatan_kemajuan_edit', 'IGDCatatanKemajuanController@get_igd_catatan_kemajuan_edit');
 Route::post('/igd_catatan_kemajuan_edit', 'IGDCatatanKemajuanController@post_igd_catatan_kemajuan_edit');
-
 //dokumen igd_catatan_kemajuan
 Route::get('/igd_kemajuan_pdf', 'IGDCatatanKemajuanController@igd_kemajuan_pdf');
-
 Route::get('/doc_igd_kemajuan', function () {
     return view('doc_igd_kemajuan');
 });
@@ -280,10 +250,8 @@ Route::post('/igd_catatan_perkembangan', 'IGDCatatanPerkembanganController@post_
 Route::get('/igd_catatan_perkembangan_read', 'IGDCatatanPerkembanganController@get_igd_catatan_perkembangan_read');
 Route::get('/igd_catatan_perkembangan_edit', 'IGDCatatanPerkembanganController@get_igd_catatan_perkembangan_edit');
 Route::post('/igd_catatan_perkembangan_edit', 'IGDCatatanPerkembanganController@post_igd_catatan_perkembangan_edit');
-
 //dokumen igd_catatan_perkembangan
 Route::get('/igd_perkembangan_pdf', 'IGDCatatanPerkembanganController@igd_perkembangan_pdf');
-
 Route::get('/doc_igd_perkembangan', function () {
     return view('doc_igd_perkembangan');
 });
@@ -300,10 +268,8 @@ Route::post('/igd_asesmen_awal_rawat_darurat_dokter', 'IGDAsesmenAwalRawatDarura
 Route::get('/igd_asesmen_awal_rawat_darurat_dokter_read', 'IGDAsesmenAwalRawatDaruratController@get_igd_asesmen_awal_rawat_darurat_dokter_read');
 Route::get('/igd_asesmen_awal_rawat_darurat_dokter_edit', 'IGDAsesmenAwalRawatDaruratController@get_igd_asesmen_awal_rawat_darurat_dokter_edit');
 Route::post('/igd_asesmen_awal_rawat_darurat_dokter_edit', 'IGDAsesmenAwalRawatDaruratController@post_igd_asesmen_awal_rawat_darurat_dokter_edit');
-
 //dokumen igd_asesmen
 Route::get('/igd_asesmen_pdf', 'IGDAsesmenAwalRawatDaruratController@igd_asesmen_pdf');
-
 Route::get('/doc_igd_asesmen', function () {
     return view('doc_igd_asesmen');
 });
@@ -313,10 +279,8 @@ Route::post('/ri_resume_medis', 'RIResumeMedisController@post_ri_resume_medis');
 Route::get('/ri_resume_medis_read', 'RIResumeMedisController@get_ri_resume_medis_read');
 Route::get('/ri_resume_medis_edit', 'RIResumeMedisController@get_ri_resume_medis_edit');
 Route::post('/ri_resume_medis_edit', 'RIResumeMedisController@post_ri_resume_medis_edit');
-
 //dokumen resume medis rawat inap
 Route::get('/ri_resume_pdf', 'RIResumeMedisController@ri_resume_pdf');
-
 Route::get('/doc_ri_resume', function () {
     return view('/doc_ri_resume');
 });
@@ -326,10 +290,8 @@ Route::post('/ri_dpjp_case', 'RIDPJPCaseController@post_ri_dpjp_case');
 Route::get('/ri_dpjp_case_read', 'RIDPJPCaseController@get_ri_dpjp_case_read');
 Route::get('/ri_dpjp_case_edit', 'RIDPJPCaseController@get_ri_dpjp_case_edit');
 Route::post('/ri_dpjp_case_edit', 'RIDPJPCaseController@post_ri_dpjp_case_edit');
-
 //dokumen dpjp case
 Route::get('/ri_dpjpcase_pdf', 'RIDPJPCaseController@ri_dpjpcase_pdf');
-
 Route::get('/doc_ri_dpjpcase', function () {
     return view('/doc_ri_dpjpcase');
 });
@@ -337,10 +299,8 @@ Route::get('/doc_ri_dpjpcase', function () {
 Route::get('/ri_suicide_fisik', 'RISuicideFisikController@get_ri_suicide_fisik');
 Route::post('/ri_suicide_fisik', 'RISuicideFisikController@post_ri_suicide_fisik');
 Route::get('/ri_suicide_fisik_read', 'RISuicideFisikController@get_ri_suicide_fisik_read'); // new add
-
 //dokumen ri suicide
 Route::get('/ri_suicide_pdf', 'RISuicideFisikController@ri_suicide_pdf');
-
 Route::get('/doc_ri_suicide', function () {
     return view('/doc_ri_suicide');
 });
@@ -348,10 +308,8 @@ Route::get('/doc_ri_suicide', function () {
 Route::get('/ri_rawat_napza', 'RIRawatNapzaController@get_ri_rawat_napza');
 Route::post('/ri_rawat_napza', 'RIRawatNapzaController@post_ri_rawat_napza');
 Route::get('/ri_rawat_napza_read', 'RIRawatNapzaController@get_ri_rawat_napza_read'); // new add
-
 //dokumen asesmen napza
 Route::get('/ri_napza_pdf', 'RIRawatNapzaController@ri_napza_pdf');
-
 Route::get('/doc_ri_napza', function () {
     return view('/doc_ri_napza');
 });
@@ -359,10 +317,8 @@ Route::get('/doc_ri_napza', function () {
 Route::get('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson');
 Route::post('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@post_ri_penilaian_edmunson');
 Route::get('/ri_penilaian_edmunson_read', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson_read'); // new add
-
 //dokumen penilaian edmunson
 Route::get('/ri_edmunson_pdf', 'RIPenilaianEdmunsonController@ri_edmunson_pdf');
-
 Route::get('/doc_ri_edmunson', function () {
     return view('/doc_ri_edmunson');
 });
@@ -370,10 +326,8 @@ Route::get('/doc_ri_edmunson', function () {
 Route::get('/ri_risiko_nyeri', 'RIRisikoNyeriController@get_ri_risiko_nyeri');
 Route::post('/ri_risiko_nyeri', 'RIRisikoNyeriController@post_ri_risiko_nyeri');
 Route::get('/ri_risiko_nyeri_read', 'RIRisikoNyeriController@get_ri_risiko_nyeri_read'); // new add
-
 //dokumen penilaian nyeri
 Route::get('/ri_nyeri_pdf', 'RIRisikoNyeriController@ri_nyeri_pdf');
-
 Route::get('/doc_ri_nyeri', function () {
     return view('/doc_ri_nyeri');
 });
@@ -381,10 +335,8 @@ Route::get('/doc_ri_nyeri', function () {
 Route::get('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan');
 Route::post('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@post_ri_catatan_perkembangan');
 Route::get('/ri_catatan_perkembangan_read', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan_read'); // new add
-
 //dokumen catatan perkembangan
 Route::get('/ri_catatan_perkembangan_pdf', 'RIPerkembanganPasienController@ri_catatan_perkembangan_pdf');
-
 Route::get('/doc_ri_catatan_perkembangan', function () {
     return view('/doc_ri_catatan_perkembangan');
 });
@@ -400,10 +352,8 @@ Route::get('/ri_evaluasi_keperawatan_read', 'RIEvaluasiKeperawatanController@get
 Route::get('/ri_monitoring_observasi', 'RIMonitoringObservasiController@get_ri_monitoring_observasi');
 Route::post('/ri_monitoring_observasi', 'RIMonitoringObservasiController@post_ri_monitoring_observasi');
 Route::get('/ri_monitoring_observasi_read', 'RIMonitoringObservasiController@get_ri_monitoring_observasi_read'); // new add
-
 //dokumen monitoring observasi khusus
 Route::get('/ri_monitoring_pdf', 'RIMonitoringObservasiController@ri_monitoring_pdf');
-
 Route::get('/doc_ri_monitoring', function () {
     return view('/doc_ri_monitoring');
 });
@@ -424,10 +374,8 @@ Route::post('/ri_surat_spd', 'RISuratPengantarDirawatController@post_ri_surat_sp
 Route::get('/ri_surat_spd_read', 'RISuratPengantarDirawatController@get_ri_surat_spd_read');
 Route::get('/ri_surat_spd_edit', 'RISuratPengantarDirawatController@get_ri_surat_spd_edit');
 Route::post('/ri_surat_spd_edit', 'RISuratPengantarDirawatController@post_ri_surat_spd_edit');
-
 //dokumen spd
 Route::get('/ri_spd_pdf', 'RISuratPengantarDirawatController@ri_spd_pdf');
-
 Route::get('/doc_ri_spd', function () {
     return view('/doc_ri_spd');
 });
@@ -437,10 +385,8 @@ Route::post('/ri_persetujuan_umum', 'RIPersetujuanUmumController@post_ri_persetu
 Route::get('/ri_persetujuan_umum_read', 'RIPersetujuanUmumController@get_ri_persetujuan_umum_read');
 Route::get('/ri_persetujuan_umum_edit', 'RIPersetujuanUmumController@get_ri_persetujuan_umum_edit');
 Route::post('/ri_persetujuan_umum_edit', 'RIPersetujuanUmumController@post_ri_persetujuan_umum_edit');
-
 //dokumen ri persetujuan umum
 Route::get('/ri_persetujuan_umum_pdf', 'RIPersetujuanUmumController@ri_persetujuan_umum_pdf');
-
 Route::get('/doc_ri_persetujuan_umum', function () {
     return view('/doc_ri_persetujuan_umum');
 });
@@ -450,10 +396,8 @@ Route::post('/ri_hak_kewajiban', 'RIHakKewajibanController@post_ri_hak_kewajiban
 Route::get('/ri_hak_kewajiban_read', 'RIHakKewajibanController@get_ri_hak_kewajiban_read');
 Route::get('/ri_hak_kewajiban_edit', 'RIHakKewajibanController@get_ri_hak_kewajiban_edit');
 Route::post('/ri_hak_kewajiban_edit', 'RIHakKewajibanController@post_ri_hak_kewajiban_edit');
-
 //dokumen permintaan hak dan kewajiban
 Route::get('/ri_hakkewajiban_pdf', 'RIHakKewajibanController@ri_hakkewajiban_pdf');
-
 Route::get('/doc_ri_permintaan_hakkewajiban', function () {
     return view('/doc_ri_hakkewajiban');
 });
@@ -463,10 +407,8 @@ Route::post('/ri_permintaan_privasi', 'RIPermintaanPrivasiController@post_ri_per
 Route::get('/ri_permintaan_privasi_read', 'RIPermintaanPrivasiController@get_ri_permintaan_privasi_read');
 Route::get('/ri_permintaan_privasi_edit', 'RIPermintaanPrivasiController@get_ri_permintaan_privasi_edit');
 Route::post('/ri_permintaan_privasi_edit', 'RIPermintaanPrivasiController@post_ri_permintaan_privasi_edit');
-
 //dokumen permintaan privasi
 Route::get('/ri_permintaan_privasi_pdf', 'RIPermintaanPrivasiController@ri_permintaan_privasi_pdf');
-
 Route::get('/doc_ri_permintaan_privasi', function () {
     return view('/doc_ri_permintaan_privasi');
 });
@@ -476,10 +418,8 @@ Route::post('/ri_permintaan_rohani', 'RIPermintaanRohaniController@post_ri_permi
 Route::get('/ri_permintaan_rohani_read', 'RIPermintaanRohaniController@get_ri_permintaan_rohani_read');
 Route::get('/ri_permintaan_rohani_edit', 'RIPermintaanRohaniController@get_ri_permintaan_rohani_edit');
 Route::post('/ri_permintaan_rohani_edit', 'RIPermintaanRohaniController@post_ri_permintaan_rohani_edit');
-
 //dokumen permintaan rohani
 Route::get('/ri_permintaan_rohani_pdf', 'RIPermintaanRohaniController@ri_permintaan_rohani_pdf');
-
 Route::get('/doc_ri_permintaan_rohani', function () {
     return view('/doc_ri_permintaan_rohani');
 });
@@ -489,10 +429,8 @@ Route::post('/ri_permintaan_second', 'RIPermintaanSecondController@post_ri_permi
 Route::get('/ri_permintaan_second_read', 'RIPermintaanSecondController@get_ri_permintaan_second_read');
 Route::get('/ri_permintaan_second_edit', 'RIPermintaanSecondController@get_ri_permintaan_second_edit');
 Route::post('/ri_permintaan_second_edit', 'RIPermintaanSecondController@post_ri_permintaan_second_edit');
-
 //dokumen permintaan second
 Route::get('/ri_permintaan_second_pdf', 'RIPermintaanSecondController@ri_permintaan_second_pdf');
-
 Route::get('/doc_ri_permintaan_second', function () {
     return view('/doc_ri_permintaan_second');
 });
@@ -502,10 +440,8 @@ Route::post('/ri_pernyataan', 'RIPernyataanController@post_ri_pernyataan');
 Route::get('/ri_pernyataan_read', 'RIPernyataanController@get_ri_pernyataan_read');
 Route::get('/ri_pernyataan_edit', 'RIPernyataanController@get_ri_pernyataan_edit');
 Route::post('/ri_pernyataan_edit', 'RIPernyataanController@post_ri_pernyataan_edit');
-
 //dokumen Lembar Pernyataan
 Route::get('/ri_pernyataan_pdf', 'RIPernyataanController@ri_pernyataan_pdf');
-
 Route::get('/doc_ri_pernyataan', function () {
     return view('/doc_ri_pernyataan');
 });
@@ -515,10 +451,8 @@ Route::post('/ri_persetujuan_tindakan', 'RIPersetujuanTindakanController@post_ri
 Route::get('/ri_persetujuan_tindakan_read', 'RIPersetujuanTindakanController@get_ri_persetujuan_tindakan_read');
 Route::get('/ri_persetujuan_tindakan_edit', 'RIPersetujuanTindakanController@get_ri_persetujuan_tindakan_edit');
 Route::post('/ri_persetujuan_tindakan_edit', 'RIPersetujuanTindakanController@post_ri_persetujuan_tindakan_edit');
-
 //dokumen persetujuan tindakan kedokteran
 Route::get('/ri_persetujuan_tindakan_pdf', 'RIPersetujuanTindakanController@ri_persetujuan_tindakan_pdf');
-
 Route::get('/doc_ri_persetujuan_tindakan', function () {
     return view('/doc_ri_persetujuan_tindakan');
 });
@@ -528,10 +462,8 @@ Route::post('/ri_penolakan_tindakan', 'RIPenolakanTindakanController@post_ri_pen
 Route::get('/ri_penolakan_tindakan_read', 'RIPenolakanTindakanController@get_ri_penolakan_tindakan_read');
 Route::get('/ri_penolakan_tindakan_edit', 'RIPenolakanTindakanController@get_ri_penolakan_tindakan_edit');
 Route::post('/ri_penolakan_tindakan_edit', 'RIPenolakanTindakanController@post_ri_penolakan_tindakan_edit');
-
 //dokumen penolakan tindakan kedoketeran
 Route::get('/ri_penolakan_tindakan_pdf', 'RIPenolakanTindakanController@ri_penolakan_tindakan_pdf');
-
 Route::get('/doc_ri_penolakan_tindakan', function () {
     return view('/doc_ri_penolakan_tindakan');
 });
@@ -541,10 +473,8 @@ Route::post('/ri_do_not_resucitate', 'RIDoNotResucitateController@post_ri_do_not
 Route::get('/ri_do_not_resucitate_read', 'RIDoNotResucitateController@get_ri_do_not_resucitate_read');
 Route::get('/ri_do_not_resucitate_edit', 'RIDoNotResucitateController@get_ri_do_not_resucitate_edit');
 Route::post('/ri_do_not_resucitate_edit', 'RIDoNotResucitateController@post_ri_do_not_resucitate_edit');
-
 //dokumen permintaan jangan resusitasi
 Route::get('/ri_permintaan_notresucitate_pdf', 'RIDoNotResucitateController@ri_permintaan_notresucitate_pdf');
-
 Route::get('/doc_ri_permintaan_notresucitate', function () {
     return view('/doc_ri_permintaan_notresucitate');
 });
@@ -555,10 +485,8 @@ Route::post('/ri_instruksi_do_not_resucitate', 'RIInstruksiDoNotResucitateContro
 Route::get('/ri_instruksi_do_not_resucitate_read', 'RIInstruksiDoNotResucitateController@get_ri_instruksi_do_not_resucitate_read');
 Route::get('/ri_instruksi_do_not_resucitate_edit', 'RIInstruksiDoNotResucitateController@get_ri_instruksi_do_not_resucitate_edit');
 Route::post('/ri_instruksi_do_not_resucitate_edit', 'RIInstruksiDoNotResucitateController@post_ri_instruksi_do_not_resucitate_edit');
-
 //dokumen instruksi jangan dilakukan resusitasi
 Route::get('/ri_instruksi_resucitate_pdf', 'RIInstruksiDoNotResucitateController@ri_instruksi_resucitate_pdf');
-
 Route::get('/doc_ri_instruksi_resucitate', function () {
     return view('/doc_ri_instruksi_resucitate');
 });
@@ -566,10 +494,8 @@ Route::get('/doc_ri_instruksi_resucitate', function () {
 Route::get('/ri_penggunaan_obat', 'RIPenggunaanObatController@get_ri_penggunaan_obat');
 Route::post('/ri_penggunaan_obat', 'RIPenggunaanObatController@post_ri_penggunaan_obat');
 Route::get('/ri_penggunaan_obat_read', 'RIPenggunaanObatController@get_ri_penggunaan_obat_read');
-
 //dokumen catatan penggunaan obat
 Route::get('/ri_cpo_pdf', 'RIPenggunaanObatController@ri_cpo_pdf');
-
 Route::get('/doc_ri_cpo', function () {
     return view('/doc_ri_cpo');
 });
@@ -577,10 +503,8 @@ Route::get('/doc_ri_cpo', function () {
 Route::get('/ri_riwayat_obat', 'RIRiwayatObatController@get_ri_riwayat_obat');
 Route::post('/ri_riwayat_obat', 'RIRiwayatObatController@post_ri_riwayat_obat');
 Route::get('/ri_riwayat_obat_read', 'RIRiwayatObatController@get_ri_riwayat_obat_read');
-
 //dokumen rekonsiliasi obat
 Route::get('/ri_rekonsiliasi_pdf', 'RIRiwayatObatController@ri_rekonsiliasi_pdf');
-
 Route::get('/doc_ri_rekonsiliasi', function () {
     return view('/doc_ri_rekonsiliasi');
 });
@@ -594,10 +518,8 @@ Route::post('/ri_panss_ec_edit', 'RIPanssEcController@post_ri_panss_ec_edit');
 Route::get('/ri_penilaian_panss', 'RIPenilaianPanssController@get_ri_penilaian_panss');
 Route::post('/ri_penilaian_panss', 'RIPenilaianPanssController@post_ri_penilaian_panss');
 Route::get('/ri_penilaian_panss_read', 'RIPenilaianPanssController@get_ri_penilaian_panss_read');
-
 //dokumen penilaian panss
 Route::get('/pdf_ri_nilaipanss', 'Pdf_ri_Controller@pdf_ri_nilaipanss');
-
 Route::get('/doc_ri_nilaipanss', function () {
     return view('/doc_ri_nilaipanss');
 });
@@ -607,10 +529,8 @@ Route::post('/ri_lembar_konsultasi', 'RILembarKonsultasiController@post_ri_lemba
 Route::get('/ri_lembar_konsultasi_read', 'RILembarKonsultasiController@get_ri_lembar_konsultasi_read');
 Route::get('/ri_lembar_konsultasi_edit', 'RILembarKonsultasiController@get_ri_lembar_konsultasi_edit');
 Route::post('/ri_lembar_konsultasi_edit', 'RILembarKonsultasiController@post_ri_lembar_konsultasi_edit');
-
 //dokumen Lembar konsultasi
 Route::get('/ri_konsultasi_pdf', 'RILembarKonsultasiController@ri_konsultasi_pdf');
-
 Route::get('/doc_ri_konsultasi', function () {
     return view('/doc_ri_konsultasi');
 });
@@ -618,20 +538,16 @@ Route::get('/doc_ri_konsultasi', function () {
 Route::get('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan');
 Route::post('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@post_ri_rencana_pemulangan');
 Route::get('/ri_rencana_pemulangan_read', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan_read');
-
 //dokumen rencana pemulangan
 Route::get('/ri_pemulangan_pdf', 'RIRencanaPemulanganController@ri_pemulangan_pdf');
-
 Route::get('/doc_ri_pemulangan', function () {
     return view('/doc_ri_pemulangan');
 });
 
 Route::get('/ri_efek_samping', 'RIEfekSampingController@get_ri_efek_samping');
 Route::post('/ri_efek_samping', 'RIEfekSampingController@post_ri_efek_samping');
-
 //dokumen pelaporan efek samping
 Route::get('/ri_efek_pdf', 'RIEfekSampingController@ri_efek_pdf');
-
 Route::get('/doc_ri_efek', function () {
     return view('/doc_ri_efek');
 });
@@ -641,10 +557,8 @@ Route::post('/ri_pulang_paksa', 'RIPulangPaksaController@post_ri_pulang_paksa');
 Route::get('/ri_pulang_paksa_read', 'RIPulangPaksaController@get_ri_pulang_paksa_read');
 Route::get('/ri_pulang_paksa_edit', 'RIPulangPaksaController@get_ri_pulang_paksa_edit');
 Route::post('/ri_pulang_paksa_edit', 'RIPulangPaksaController@post_ri_pulang_paksa_edit');
-
 //dokumen Lembar Pulang Paksa
 Route::get('/ri_pulang_paksa_pdf', 'RIPulangPaksaController@ri_pulang_paksa_pdf');
-
 Route::get('/doc_ri_pulang_paksa', function () {
     return view('/doc_ri_pulang_paksa');
 });
@@ -654,10 +568,8 @@ Route::post('/ri_residen', 'RIResidenController@post_ri_residen');
 Route::get('/ri_residen_read', 'RIResidenController@get_ri_residen_read');
 Route::get('/ri_residen_edit', 'RIResidenController@get_ri_residen_edit');
 Route::post('/ri_residen_edit', 'RIResidenController@post_ri_residen_edit');
-
 //dokumen Lembar residen
 Route::get('/ri_residen_pdf', 'RIResidenController@ri_residen_pdf');
-
 Route::get('/doc_ri_residen', function () {
     return view('/doc_ri_residen');
 });
@@ -667,10 +579,8 @@ Route::post('/ri_surat_kuasa', 'RISuratKuasaController@post_ri_surat_kuasa');
 Route::get('/ri_surat_kuasa_read', 'RISuratKuasaController@get_ri_surat_kuasa_read');
 Route::get('/ri_surat_kuasa_edit', 'RISuratKuasaController@get_ri_surat_kuasa_edit');
 Route::post('/ri_surat_kuasa_edit', 'RISuratKuasaController@post_ri_surat_kuasa_edit');
-
 //dokumen Lembar surat kuasa
 Route::get('/ri_surat_kuasa_pdf', 'RISuratKuasaController@ri_surat_kuasa_pdf');
-
 Route::get('/doc_ri_surat_kuasa', function () {
     return view('/doc_ri_surat_kuasa');
 });
@@ -691,10 +601,8 @@ Route::post('/ri_pemeriksaan_psikologis', 'RIPemeriksaanPsikologisController@pos
 Route::get('/ri_pemeriksaan_psikologis_read', 'RIPemeriksaanPsikologisController@get_ri_pemeriksaan_psikologis_read');
 Route::get('/ri_pemeriksaan_psikologis_edit', 'RIPemeriksaanPsikologisController@get_ri_pemeriksaan_psikologis_edit');
 Route::post('/ri_pemeriksaan_psikologis_edit', 'RIPemeriksaanPsikologisController@post_ri_pemeriksaan_psikologis_edit');
-
 //dokumen pemeriksaan psikologis
 Route::get('/ri_psikologis_pdf', 'RIPemeriksaanPsikologisController@ri_psikologis_pdf');
-
 Route::get('/doc_ri_psikologis', function () {
     return view('/doc_ri_psikologis');
 });
@@ -727,10 +635,8 @@ Route::post('/ri_transfer_eksternal', 'RITransferEksternalController@post_ri_tra
 Route::get('/ri_transfer_eksternal_read', 'RITransferEksternalController@get_ri_transfer_eksternal_read');
 Route::get('/ri_transfer_eksternal_edit', 'RITransferEksternalController@get_ri_transfer_eksternal_edit');
 Route::post('/ri_transfer_eksternal_edit', 'RITransferEksternalController@post_ri_transfer_eksternal_edit');
-
 //dokumen transfer eksternal
 Route::get('/ri_eksternal_pdf', 'RITransferEksternalController@ri_eksternal_pdf');
-
 Route::get('/doc_ri_eksternal', function () {
     return view('/doc_ri_eksternal');
 });
@@ -741,10 +647,8 @@ Route::post('/ri_laboratorium', 'RILaboratoriumController@post_ri_laboratorium')
 Route::get('/ri_laboratorium_read', 'RILaboratoriumController@get_ri_laboratorium_read');
 Route::get('/ri_laboratorium_edit', 'RILaboratoriumController@get_ri_laboratorium_edit');
 Route::post('/ri_laboratorium_edit', 'RILaboratoriumController@post_ri_laboratorium_edit');
-
 //dokumen laboratorium
 Route::get('/ri_lab_pdf', 'RILaboratoriumController@ri_lab_pdf');
-
 Route::get('/doc_ri_lab', function () {
     return view('/doc_ri_lab');
 });
@@ -754,14 +658,27 @@ Route::post('/ri_rencana_napza', 'RIRencanaNapzaController@post_ri_rencana_napza
 Route::get('/ri_rencana_napza_read', 'RIRencanaNapzaController@get_ri_rencana_napza_read');
 Route::get('/ri_rencana_napza_edit', 'RIRencanaNapzaController@get_ri_rencana_napza_edit');
 Route::post('/ri_rencana_napza_edit', 'RIRencanaNapzaController@post_ri_rencana_napza_edit');
-
 //dokumen rawat NAPZA
 Route::get('/ri_rawat_napza_pdf', 'RIRencanaNapzaController@ri_rawat_napza_pdf');
-
 Route::get('/doc_ri_rawat_napza', function () {
     return view('/doc_ri_rawat_napza');
 });
 
+Route::get('/ri_rencana_keperawatan', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan');
+Route::get('/ri_rencana_keperawatan_1', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_1');
+Route::get('/ri_rencana_keperawatan_2', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_2');
+Route::get('/ri_rencana_keperawatan_3', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_3');
+Route::get('/ri_rencana_keperawatan_4', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_4');
+Route::get('/ri_rencana_keperawatan_5', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_5');
+Route::get('/ri_rencana_keperawatan_6', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_6');
+Route::get('/ri_rencana_keperawatan_7', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_7');
+Route::post('/ri_rencana_keperawatan_1', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_1');
+Route::post('/ri_rencana_keperawatan_2', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_2');
+Route::post('/ri_rencana_keperawatan_3', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_3');
+Route::post('/ri_rencana_keperawatan_4', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_4');
+Route::post('/ri_rencana_keperawatan_5', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_5');
+Route::post('/ri_rencana_keperawatan_6', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_6');
+Route::post('/ri_rencana_keperawatan_7', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_7');
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -964,9 +881,9 @@ Route::get('/ri_rencanaklien7', function () {
 //     return view('ri_rawat_napza');
 // });
 
-Route::get('/ri_rencana_keperawatan', function () {
-     return view('ri_rencana_keperawatan');
- });
+// Route::get('/ri_rencana_keperawatan', function () {
+//      return view('ri_rencana_keperawatan');
+// });
 
 // Route::get('/ri_penggunaan_obat', function () {
 //     return view('ri_penggunaan_obat');
