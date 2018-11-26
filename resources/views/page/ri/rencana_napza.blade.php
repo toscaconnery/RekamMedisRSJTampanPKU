@@ -150,13 +150,19 @@
                     <div class="checkbox">
                       <label>
                         <input type="checkbox" name="pola_tidur_6">
-                        6. Lakukan pengantar tidur (membaca, mendengar musik)
+                        6. Lakukan relaksasi
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
                         <input type="checkbox" name="pola_tidur_7">
-                        7. Tata ruangan nyaman (suhu, cahaya, suara)
+                        7. Lakukan pengantar tidur (membaca, mendengar musik)
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="pola_tidur_8">
+                        8. Tata ruangan nyaman (suhu, cahaya, suara)
                       </label>
                     </div>
                   </div>
