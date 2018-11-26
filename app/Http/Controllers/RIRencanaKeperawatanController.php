@@ -632,6 +632,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_1_read()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Resiko Bunuh Diri';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan1::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -640,6 +641,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_1_edit()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Resiko Bunuh Diri';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan1::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -648,6 +650,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_2_read()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Defisit Perawatan Diri';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan2::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -656,6 +659,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_2_edit()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Defisit Perawatan Diri';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan2::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -664,6 +668,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_3_read()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Gangguan Persepsi Sensori: Halusinasi';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan3::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -672,6 +677,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_3_edit()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Gangguan Persepsi Sensori: Halusinasi';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan3::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -680,6 +686,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_4_read()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Perilaku Kekerasan';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan4::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -688,6 +695,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_4_edit()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Perilaku Kekerasan';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan4::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -696,6 +704,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_5_read()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Panik';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan5::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -704,6 +713,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_5_edit()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Panik';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan5::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -712,6 +722,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_6_read()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Waham';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan6::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -720,6 +731,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_6_edit()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Waham';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan6::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -728,6 +740,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_7_read()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Isolasi Sosial: Menarik Diri';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan7::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
@@ -736,6 +749,7 @@ class RIRencanaKeperawatanController extends Controller
 
     public function get_ri_rencana_keperawatan_7_edit()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif Isolasi Sosial: Menarik Diri';
     	$id_pasien = Session::get('id_pasien');
     	$pasien = RIRencanaKeperawatan7::where('id_regis', $id_pasien)->first();
     	$this->get_ri_rencana_keperawatan_data($pasien);
