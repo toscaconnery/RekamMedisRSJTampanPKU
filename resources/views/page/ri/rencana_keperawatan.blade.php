@@ -38,9 +38,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Intensif Resiko Bunuh Diri</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_keperawatan_1_tanggal}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_1_pengisi}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_1 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
@@ -51,9 +51,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Intensif Defisit Perawatan Diri</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_keperawatan_2_tanggal}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_2_pengisi}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_2 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
@@ -64,9 +64,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Intensif Gangguan Persepsi Sensori: Halusinasi</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_keperawatan_3_tanggal}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_3_pengisi}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_3 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
@@ -77,9 +77,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Intensif Perilaku Kekerasan</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_keperawatan_4_tanggal}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_4_pengisi}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_4 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
@@ -90,9 +90,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Intensif Panik</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_keperawatan_5_tanggal}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_5_pengisi}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_5 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
@@ -103,9 +103,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Intensif Waham</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_keperawatan_6_tanggal}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_6_pengisi}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_6 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
@@ -116,9 +116,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Intensif Isolasi Sosial Menarik Diri</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_keperawatan_7_tanggal}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_7_pengisi}}</td>
+                  <td>{{$file->ri_rencana_keperawatan_7 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>

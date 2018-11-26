@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\RIRencanaKeperawatan;
 use App\Models\RIRencanaKeperawatan1;
 use App\Models\RIRencanaKeperawatan2;
 use App\Models\RIRencanaKeperawatan3;
@@ -11,18 +12,33 @@ use App\Models\RIRencanaKeperawatan5;
 use App\Models\RIRencanaKeperawatan6;
 use App\Models\RIRencanaKeperawatan7;
 use Session;
+use Auth;
 
 class RIRencanaKeperawatanController extends Controller
 {
     public function __construct()
     {
-    	// $id_pasien = Session::get('id_pasien');
-    	// dd($id_pasien);
-    	// $this->data['title'] = 'Rencana Tindakan Keperawatan Intensif';
+    	//
+    }
+
+    public function cek_list_dokumen_pasien()
+    {
+    	$id_pasien = Session::get('id_pasien');
+    	$dokumen = RIRencanaKeperawatan::where('id_regis', $id_pasien)->count();
+    	if($dokumen == 0) {
+    		$data = new RIRencanaKeperawatan;
+    		$data->id_regis = $id_pasien;
+    		$data->save();
+    	}
     }
 
     public function get_ri_rencana_keperawatan()
     {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Intensif';
+    	$this->cek_list_dokumen_pasien();
+    	$id_pasien = Session::get('id_pasien');
+    	$file = RIRencanaKeperawatan::where('id_regis', $id_pasien)->first();
+    	$this->data['file'] = $file;
     	return view('page.ri.rencana_keperawatan', $this->data);
     }
 
@@ -152,6 +168,13 @@ class RIRencanaKeperawatanController extends Controller
     {
     	$data = new RIRencanaKeperawatan1;
     	$this->posting_1($request, $data);
+
+    	$id_pasien = Session::get('id_pasien');
+    	$dokumen = RIRencanaKeperawatan::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_keperawatan_1 = True;
+    	$dokumen->ri_rencana_keperawatan_1_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_keperawatan_1_pengisi = Auth::user()->nama;
+    	$dokumen->save();
     	return redirect('daftar_dokumen');
     }
 
@@ -218,6 +241,13 @@ class RIRencanaKeperawatanController extends Controller
     {
     	$data = new RIRencanaKeperawatan2;
     	$this->posting_2($request, $data);
+
+    	$id_pasien = Session::get('id_pasien');
+    	$dokumen = RIRencanaKeperawatan::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_keperawatan_2 = True;
+    	$dokumen->ri_rencana_keperawatan_2_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_keperawatan_2_pengisi = Auth::user()->nama;
+    	$dokumen->save();
     	return redirect('daftar_dokumen');
     }
 
@@ -293,6 +323,13 @@ class RIRencanaKeperawatanController extends Controller
     {
     	$data = new RIRencanaKeperawatan3;
     	$this->posting_3($request, $data);
+
+    	$id_pasien = Session::get('id_pasien');
+    	$dokumen = RIRencanaKeperawatan::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_keperawatan_3 = True;
+    	$dokumen->ri_rencana_keperawatan_3_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_keperawatan_3_pengisi = Auth::user()->nama;
+    	$dokumen->save();
     	return redirect('daftar_dokumen');
     }
 
@@ -368,6 +405,13 @@ class RIRencanaKeperawatanController extends Controller
     {
     	$data = new RIRencanaKeperawatan4;
     	$this->posting_4($request, $data);
+
+    	$id_pasien = Session::get('id_pasien');
+    	$dokumen = RIRencanaKeperawatan::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_keperawatan_4 = True;
+    	$dokumen->ri_rencana_keperawatan_4_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_keperawatan_4_pengisi = Auth::user()->nama;
+    	$dokumen->save();
     	return redirect('daftar_dokumen');
     }
 
@@ -446,6 +490,13 @@ class RIRencanaKeperawatanController extends Controller
     {
     	$data = new RIRencanaKeperawatan5;
     	$this->posting_5($request, $data);
+
+    	$id_pasien = Session::get('id_pasien');
+    	$dokumen = RIRencanaKeperawatan::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_keperawatan_5 = True;
+    	$dokumen->ri_rencana_keperawatan_5_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_keperawatan_5_pengisi = Auth::user()->nama;
+    	$dokumen->save();
     	return redirect('daftar_dokumen');
     }
 
@@ -521,6 +572,13 @@ class RIRencanaKeperawatanController extends Controller
     {
     	$data = new RIRencanaKeperawatan6;
     	$this->posting_6($request, $data);
+
+    	$id_pasien = Session::get('id_pasien');
+    	$dokumen = RIRencanaKeperawatan::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_keperawatan_6 = True;
+    	$dokumen->ri_rencana_keperawatan_6_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_keperawatan_6_pengisi = Auth::user()->nama;
+    	$dokumen->save();
     	return redirect('daftar_dokumen');
     }
 
@@ -596,6 +654,13 @@ class RIRencanaKeperawatanController extends Controller
     {
     	$data = new RIRencanaKeperawatan7;
     	$this->posting_7($request, $data);
+
+    	$id_pasien = Session::get('id_pasien');
+    	$dokumen = RIRencanaKeperawatan::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_keperawatan_7 = True;
+    	$dokumen->ri_rencana_keperawatan_7_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_keperawatan_7_pengisi = Auth::user()->nama;
+    	$dokumen->save();
     	return redirect('daftar_dokumen');
     }
 
