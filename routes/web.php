@@ -679,6 +679,27 @@ Route::post('/ri_rencana_keperawatan_4', 'RIRencanaKeperawatanController@post_ri
 Route::post('/ri_rencana_keperawatan_5', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_5');
 Route::post('/ri_rencana_keperawatan_6', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_6');
 Route::post('/ri_rencana_keperawatan_7', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_7');
+Route::get('/ri_rencana_keperawatan_1_read', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_1_read');
+Route::get('/ri_rencana_keperawatan_2_read', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_2_read');
+Route::get('/ri_rencana_keperawatan_3_read', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_3_read');
+Route::get('/ri_rencana_keperawatan_4_read', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_4_read');
+Route::get('/ri_rencana_keperawatan_5_read', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_5_read');
+Route::get('/ri_rencana_keperawatan_6_read', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_6_read');
+Route::get('/ri_rencana_keperawatan_7_read', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_7_read');
+Route::get('/ri_rencana_keperawatan_1_edit', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_1_edit');
+Route::get('/ri_rencana_keperawatan_2_edit', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_2_edit');
+Route::get('/ri_rencana_keperawatan_3_edit', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_3_edit');
+Route::get('/ri_rencana_keperawatan_4_edit', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_4_edit');
+Route::get('/ri_rencana_keperawatan_5_edit', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_5_edit');
+Route::get('/ri_rencana_keperawatan_6_edit', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_6_edit');
+Route::get('/ri_rencana_keperawatan_7_edit', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_7_edit');
+Route::post('/ri_rencana_keperawatan_1_edit', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_1_edit');
+Route::post('/ri_rencana_keperawatan_2_edit', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_2_edit');
+Route::post('/ri_rencana_keperawatan_3_edit', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_3_edit');
+Route::post('/ri_rencana_keperawatan_4_edit', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_4_edit');
+Route::post('/ri_rencana_keperawatan_5_edit', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_5_edit');
+Route::post('/ri_rencana_keperawatan_6_edit', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_6_edit');
+Route::post('/ri_rencana_keperawatan_7_edit', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_7_edit');
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
