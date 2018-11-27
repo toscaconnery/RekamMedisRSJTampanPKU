@@ -102,7 +102,7 @@
                     <div class="checkbox">
                       <label>
                         <input type="checkbox" name="ti1_1">
-                        Kendalika secara verbal
+                        Kendalikan secara verbal
                       </label>
                     </div>
                     <div class="checkbox">

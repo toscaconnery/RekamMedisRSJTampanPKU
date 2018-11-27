@@ -102,7 +102,7 @@
                     <div class="checkbox">
                       <label>
                         <input type="checkbox" name="ti1_1" {{isset($ti1[1]) ? 'checked' : ''}}>
-                        Kendalika secara verbal
+                        Kendalikan secara verbal
                       </label>
                     </div>
                     <div class="checkbox">

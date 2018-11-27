@@ -173,7 +173,7 @@
                     <div class="checkbox">
                       <label>
                         <input type="checkbox" name="ti2_6">
-                        Beripsikofarmaka: anti depresan oral
+                        Beri psikofarmaka: anti depresan oral
                       </label>
                     </div>
                   </div>
