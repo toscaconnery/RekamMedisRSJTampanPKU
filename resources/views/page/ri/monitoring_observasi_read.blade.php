@@ -54,9 +54,8 @@
 
     <div class="row">
       <div class="col-lg-12">
-        <form class="form-horizontal" method="post" action="ri_monitoring_observasi">
-          {{ csrf_field() }}
-          <input type="hidden" name="jumlah_form" id="jumlah_form" value="1">
+        <form class="form-horizontal">
+          <input type="hidden" name="jumlah_form" id="jumlah_form" value="0">
           <section class="panel">
             <header class="panel-heading">
               Monitoring dan Observasi Pasien Khusus
@@ -74,68 +73,36 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr id="form_1">
+                  <input type="hidden" name="previous_data" value="{{$previous_data}}">
+                  @foreach($pasien as $p)
+                  <tr id="form_{{$p['id_data']}}">
                     <td>
-                      <input type="text" id="dp1" class="form-control" name="tanggal_1" required>
+                      <input type="text" disabled autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_{{$p['id_data']}}" required value="{{$p['tanggal']}}">
                     </td>
                     <td>
-                      <input type="time" style="width: 8em;" class="form-control" name="jam_1" required>
+                      <input type="time" disabled style="width: 9em;" class="form-control" name="jam_{{$p['id_data']}}" required value="{{$p['jam']}}">
                     </td>
                     <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="hasil_monitoring_1"></textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="hasil_monitoring_{{$p['id_data']}}" readonly>{{$p['hasil_monitoring']}}</textarea>
                     </td>
                     <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="implementasi_1"></textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="implementasi_{{$p['id_data']}}" readonly>{{$p['implementasi']}}</textarea>
                     </td>
-                    <td><input type="checkbox" class="form-control" name="ttd_1"></td>
+                    <td><input type="checkbox" disabled class="form-control" name="ttd_{{$p['id_data']}}" {{$p['ttd'] == True ? 'checked' : ''}}></td>
                     <td>
-                      <div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_1"><i class="icon_close_alt2"></i></button></div>
                     </td>
                   </tr>
-                  <tr id="last_row">
-                    <td colspan="6">
-                      <div class="btn-group">
-                        <button class="btn btn-primary" type="button" id="tambah_form"><i class="icon_plus_alt2"></i> Tambah</button>
-                      </div>
-                    </td>
-                  </tr>
+                  @endforeach
                 </tbody>
               </table>
             </div>
           </section>
-          <div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
         </form>
       </div>
     </div>
   </section>
 
   @include('layouts.tailscript')
-
-  {{-- menambah row inputan --}}
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#tambah_form').click(function() {
-        var a = document.getElementById('jumlah_form').value;
-        // alert('a');
-        a = parseInt(a) + 1;
-        $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" id="dp'+a+'" class="form-control" name="tanggal_'+a+'" required></td><td><input type="time" style="width: 8em;" class="form-control" name="jam_'+a+'" required></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="hasil_monitoring_'+a+'"></textarea></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="implementasi_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="ttd_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-        document.getElementById('jumlah_form').value = a;
-      });
-    });
-  </script>
-
-  {{-- menghapus row --}}
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(document).on('click', '.tombol_hapus', function() {
-        var x = $(this).attr('id');
-        var nomor = x.substring(13)
-        $('#form_'+nomor).remove();
-      });
-    });
-  </script>
 </body>
 
 

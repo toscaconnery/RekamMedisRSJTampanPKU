@@ -353,7 +353,10 @@ Route::post('/ri_evaluasi_keperawatan_edit', 'RIEvaluasiKeperawatanController@po
 
 Route::get('/ri_monitoring_observasi', 'RIMonitoringObservasiController@get_ri_monitoring_observasi');
 Route::post('/ri_monitoring_observasi', 'RIMonitoringObservasiController@post_ri_monitoring_observasi');
-Route::get('/ri_monitoring_observasi_read', 'RIMonitoringObservasiController@get_ri_monitoring_observasi_read'); // new add
+Route::get('/ri_monitoring_observasi_read', 'RIMonitoringObservasiController@get_ri_monitoring_observasi_read');
+Route::get('/ri_monitoring_observasi_edit', 'RIMonitoringObservasiController@get_ri_monitoring_observasi_edit');
+Route::post('/ri_monitoring_observasi_edit', 'RIMonitoringObservasiController@post_ri_monitoring_observasi_edit');
+
 //dokumen monitoring observasi khusus
 Route::get('/ri_monitoring_pdf', 'RIMonitoringObservasiController@ri_monitoring_pdf');
 Route::get('/doc_ri_monitoring', function () {
