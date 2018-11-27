@@ -18,34 +18,34 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="konten_s_question">
-          Tanggal Masuk RS
+          Tanggal Pengkajian
         </td>    
         <td class="konten_s_answer">  
-          : 12/12/18
+          : {{$tanggal_pengkajian}}
         </td>                
       </tr>
       <tr>
         <td class="konten_s_question">
-          Tanggal Keluar RS 
+          Jam Pengkajian
         </td>    
         <td class="konten_s_answer">  
-          : 12/12/18
+          : {{$jam_pengkajian}}
         </td>                
       </tr>
       <tr>
         <td class="konten_s_question">
-          Ruang Rawat Terakhir
+          Ruangan
         </td>    
         <td class="konten_s_answer">  
-          : Siak-1
+          : {{$ruangan}}
         </td>                
       </tr>
       <tr>
         <td class="konten_s_question">
-          DPJP
+          Diagnosa Medis
         </td>    
         <td class="konten_s_answer">  
-          : -
+          : {{$diagnosa_medis}}
         </td>                
       </tr>
     </tbody>
@@ -66,23 +66,41 @@ header('Content-Type: application/pdf');
     <tr>
       <td class="box">
         <ul>
-          <li>-</li>
-          <li>-</li>
-          <li>-</li>
+          <?php if(isset($ti1[1])) echo 
+          "<li>Dengarkan ungkapan klien</li>";
+          ?>
+          <?php if(isset($ti1[2])) echo 
+          "<li>Yakinkan pasien dalam keadaan tenang</li>";
+          ?>
+          <?php if(isset($ti1[3])) echo 
+          "<li>Berikan psikofarmaka parental: anti psikotik</li>";
+          ?>
         </ul>
       </td>
       <td class="box">
         <ul>
-          <li>-</li>
-          <li>-</li>
-          <li>-</li>
+          <?php if(isset($ti2[1])) echo 
+          "<li>Dengarkan keluhan pasien tanpa menghakimi</li>";
+          ?>
+          <?php if(isset($ti2[2])) echo 
+          "<li>Latih cara mengontrol halusinasi dengan menghardik</li>";
+          ?>
+          <?php if(isset($ti2[3])) echo 
+          "<li>Berikan psikofarmaka parenteral: anti psikotik oral</li>";
+          ?>
         </ul>
       </td>
       <td class="box">
         <ul>
-          <li>-</li>
-          <li>-</li>
-          <li>-</li>
+          <?php if(isset($ti3[1])) echo 
+          "<li>Dengarkan keluhan pasien</li>";
+          ?>
+          <?php if(isset($ti3[2])) echo 
+          "<li>Latih cara mengontrol halusinasi dengan bercakap dengan orang lain, dan melakukan aktivitas terjadwal</li>";
+          ?>
+          <?php if(isset($ti3[3])) echo 
+          "<li>Pertahankan pemberian psikofarmaka oral: anti psikotik</li>";
+          ?>
         </ul>
       </td>
     </tr>

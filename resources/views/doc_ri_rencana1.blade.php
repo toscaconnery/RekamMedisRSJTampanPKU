@@ -18,34 +18,34 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="konten_s_question">
-          Tanggal Masuk RS
+          Tanggal Pengkajian
         </td>    
         <td class="konten_s_answer">  
-          : 12/12/18
+          : {{$tanggal_pengkajian}}
         </td>                
       </tr>
       <tr>
         <td class="konten_s_question">
-          Tanggal Keluar RS 
+          Jam Pengkajian
         </td>    
         <td class="konten_s_answer">  
-          : 12/12/18
+          : {{$jam_pengkajian}}
         </td>                
       </tr>
       <tr>
         <td class="konten_s_question">
-          Ruang Rawat Terakhir
+          Ruangan
         </td>    
         <td class="konten_s_answer">  
-          : Siak-1
+          : {{$ruangan}}
         </td>                
       </tr>
       <tr>
         <td class="konten_s_question">
-          DPJP
+          Diagnosa Medis
         </td>    
         <td class="konten_s_answer">  
-          : -
+          : {{$diagnosa_medis}}
         </td>                
       </tr>
     </tbody>
@@ -66,23 +66,62 @@ header('Content-Type: application/pdf');
     <tr>
       <td class="box">
         <ul>
-          <li>-</li>
-          <li>-</li>
-          <li>-</li>
+          <?php if(isset($ti1[1])) echo 
+          "<li>Tempatkan di tempat yang mudah diawasi</li>";
+          ?>
+          <?php if(isset($ti1[2])) echo 
+          "<li>Awasi kondisi pasien dengan ketat</li>";
+          ?>
+          <?php if(isset($ti1[3])) echo 
+          "<li>Observasi variatif</li>";
+          ?>
+          <?php if(isset($ti1[4])) echo 
+          "<li>Berikan psikofarmaka</li>";
+          ?>
+          <?php if(isset($ti1[5])) echo 
+          "<li>Pertimbangkan mengusulkan</li>";
+          ?>
+          <?php if(isset($ti1[6])) echo 
+          "<li>ECT jika perlu</li>";
+          ?>
         </ul>
       </td>
       <td class="box">
         <ul>
-          <li>-</li>
-          <li>-</li>
-          <li>-</li>
+          <?php if(isset($ti2[1])) echo 
+          "<li>Dengarkan keluhan pasien tanpa menghakimi</li>";
+          ?>
+          <?php if(isset($ti2[2])) echo 
+          "<li>Buat kontrak keamanan</li>";
+          ?>
+          <?php if(isset($ti2[3])) echo 
+          "<li>Tingkatkan harga diri pasien</li>";
+          ?>
+          <?php if(isset($ti2[4])) echo 
+          "<li>Kerahkan dukungan sosial</li>";
+          ?>
+          <?php if(isset($ti2[5])) echo 
+          "<li>Awasi dengan ketat</li>";
+          ?>
+          <?php if(isset($ti2[6])) echo 
+          "<li>Beri psikofarmaka: anti depresan oral</li>";
+          ?>
         </ul>
       </td>
       <td class="box">
         <ul>
-          <li>-</li>
-          <li>-</li>
-          <li>-</li>
+          <?php if(isset($ti3[1])) echo 
+          "<li>Dengarkan keluhan pasien</li>";
+          ?>
+          <?php if(isset($ti3[2])) echo 
+          "<li>Latih cara mengendalikan dorongan bunuh diri</li>";
+          ?>
+          <?php if(isset($ti3[3])) echo 
+          "<li>Awasi dengan ketat</li>";
+          ?>
+           <?php if(isset($ti3[4])) echo 
+          "<li>Pertahankan pemberian psikofarmaka oral: anti depresan</li>";
+          ?>
         </ul>
       </td>
     </tr>

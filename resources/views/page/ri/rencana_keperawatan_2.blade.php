@@ -125,7 +125,7 @@
                     <div class="checkbox">
                       <label>
                         <input type="checkbox" name="ti2_2">
-                        Bombing melakukan perawatan diri dengan benar (sesuai jenis perawatan diri yang mengalami kemunduran)
+                        Bimbing melakukan perawatan diri dengan benar (sesuai jenis perawatan diri yang mengalami kemunduran)
                       </label>
                     </div>
                   </div>

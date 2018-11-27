@@ -18,34 +18,34 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="konten_s_question">
-          Tanggal Masuk RS
+          Tanggal Pengkajian
         </td>    
         <td class="konten_s_answer">  
-          : 12/12/18
+          : {{$tanggal_pengkajian}}
         </td>                
       </tr>
       <tr>
         <td class="konten_s_question">
-          Tanggal Keluar RS 
+          Jam Pengkajian
         </td>    
         <td class="konten_s_answer">  
-          : 12/12/18
+          : {{$jam_pengkajian}}
         </td>                
       </tr>
       <tr>
         <td class="konten_s_question">
-          Ruang Rawat Terakhir
+          Ruangan
         </td>    
         <td class="konten_s_answer">  
-          : Siak-1
+          : {{$ruangan}}
         </td>                
       </tr>
       <tr>
         <td class="konten_s_question">
-          DPJP
+          Diagnosa Medis
         </td>    
         <td class="konten_s_answer">  
-          : -
+          : {{$diagnosa_medis}}
         </td>                
       </tr>
     </tbody>
@@ -66,23 +66,32 @@ header('Content-Type: application/pdf');
     <tr>
       <td class="box">
         <ul>
-          <li>-</li>
-          <li>-</li>
-          <li>-</li>
+          <?php if(isset($ti1[1])) echo 
+          "<li>Bantuan total dalam perawatan diri (sesuaikan dengan jenis perawatan diri yang mengalami kemunduran)</li>";
+          ?>
+          <?php if(isset($ti1[2])) echo 
+          "<li>Jelaskan manfaat melakukan perawatan diri</li>";
+          ?>
         </ul>
       </td>
       <td class="box">
         <ul>
-          <li>-</li>
-          <li>-</li>
-          <li>-</li>
+          <?php if(isset($ti2[1])) echo 
+          "<li>Jelaskan cara melakukan upaya perawatan diri</li>";
+          ?>
+          <?php if(isset($ti2[2])) echo 
+          "<li>Bimbing melakukan perawatan diri dengan benar (sesuai jenis perawatan diri yang mengalami kemunduran)</li>";
+          ?>
         </ul>
       </td>
       <td class="box">
         <ul>
-          <li>-</li>
-          <li>-</li>
-          <li>-</li>
+          <?php if(isset($ti3[1])) echo 
+          "<li>Ingatkan pasien melakukan perawatan diri</li>";
+          ?>
+          <?php if(isset($ti3[2])) echo 
+          "<li>Bimbing jika masih ada perawatan diri yang tidak benar (sesuai jenis perawatan diri yang mengalami kemunduran)</li>";
+          ?>
         </ul>
       </td>
     </tr>

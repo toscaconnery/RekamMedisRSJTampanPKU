@@ -41,7 +41,7 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="{{url('')}}/ri_surat_kuasa_pdf">PDF</a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_rencana1_pdf">PDF</a>
                       <a class="btn btn-success" href="#">EDIT</a>
                     </div>
                   </td>
