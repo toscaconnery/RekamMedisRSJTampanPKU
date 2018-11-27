@@ -587,7 +587,7 @@
 
                     <tr>
                       <td style="vertical-align:center">
-                        <b></b>
+                        <b>ELIMINASI</b>
                       </td>
                       <td style="text-align:center;">
                         
@@ -641,7 +641,277 @@
 
                     <tr>
                       <td style="vertical-align:center">
-                        <b></b>
+                        <b>a. Mandiri dan mampu mengontrol BAB/BAK</b>
+                      </td>
+                      <td style="text-align:center;">
+                        8
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="vertical-align:center">
+                        b. Dower Catheter/Colostomy
+                      </td>
+                      <td style="text-align:center;">
+                        12
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="vertical-align:center">
+                        c. Eliminasi dengan bantuan
+                      </td>
+                      <td style="text-align:center;">
+                        13
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="vertical-align:center">
+                       d. Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)
+                      </td>
+                      <td style="text-align:center;">
+                        12
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="vertical-align:center">
+                        e. Inkontinesia tetapi mampu untuk mobilisasi
+                      </td>
+                      <td style="text-align:center;">
+                        12
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                      <td style="text-align:center;vertical-align:center">
+                        <input type="checkbox" class="form-control" name="">
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="vertical-align:center">
+                        <b>PENGOBATAN</b>
                       </td>
                       <td style="text-align:center;">
                         
@@ -695,277 +965,7 @@
 
                     <tr>
                       <td style="vertical-align:center">
-                        <b></b>
-                      </td>
-                      <td style="text-align:center;">
-                        
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td style="vertical-align:center">
-                        <b></b>
-                      </td>
-                      <td style="text-align:center;">
-                        
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td style="vertical-align:center">
-                        <b></b>
-                      </td>
-                      <td style="text-align:center;">
-                        
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td style="vertical-align:center">
-                        <b></b>
-                      </td>
-                      <td style="text-align:center;">
-                        
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td style="vertical-align:center">
-                        <b></b>
-                      </td>
-                      <td style="text-align:center;">
-                        
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td style="vertical-align:center">
-                        <b></b>
+                        a. Tanpa obat-obatan
                       </td>
                       <td style="text-align:center;">
                         
