@@ -760,9 +760,7 @@ Route::get('/igd_asesmen_darurat', function () {
 //     return view('ri_rencana_napza');
 // });
 
-Route::get('/rj_rencana_pemulangan', function () {
-    return view('rj_rencana_pemulangan');
-});
+
 
 //new addition page
 
@@ -1031,13 +1029,6 @@ Route::get('/pdf_ri_gizi', 'Pdf_ri_Controller@pdf_ri_gizi');
 
 Route::get('/doc_ri_gizi', function () {
     return view('/doc_ri_gizi');
-});
-
-//dokumen serah terima pasien pulang
-Route::get('/pdf_ri_pulang', 'Pdf_ri_Controller@pdf_ri_pulang');
-
-Route::get('/doc_ri_pulang', function () {
-    return view('/doc_ri_pulang');
 });
 
 //dokumen ri asesmen
