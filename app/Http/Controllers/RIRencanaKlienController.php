@@ -221,4 +221,60 @@ class RIRencanaKlienController extends Controller
 
 		$data->save();
     }
+
+    public function get_ri_rencana_klien_2_data()
+    {
+    	$id_pasien = Session::get('id_pasien');
+    	$pasien = RIRencanaKlien2::where('id_regis', $id_pasien)->first();
+    	$this->data['tanggal_pengkajian'] = $pasien->tanggal_pengkajian;
+		$this->data['jam_pengkajian'] = $pasien->jam_pengkajian;
+		$this->data['ruangan'] = $pasien->ruangan;
+		$this->data['diagnosa_medis'] = $pasien->diagnosa_medis;
+
+    	$this->data['tanggal_1'] = $pasien->tanggal_1;
+		$this->data['tanggal_2'] = $pasien->tanggal_2;
+		$this->data['nodx_1'] = $pasien->nodx_1;
+		$this->data['nodx_2'] = $pasien->nodx_2;
+		$this->data['dxk_1'] = $pasien->dxk_1;
+		$this->data['dxk_2'] = $pasien->dxk_2;
+		$this->data['t1'] = $pasien->t1;
+		$this->data['k1'] = $pasien->k1;
+		$this->data['k2'] = $pasien->k2;
+    }
+
+    public function get_ri_rencana_klien_2_read()
+    {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Klien Dengan Gangguan Konsep Diri : Harga Diri Rendah';
+    	$this->get_ri_rencana_klien_2_data();
+    	return view('page.ri.rencana_klien_2_read', $this->data);
+    }
+
+    public function get_ri_rencana_klien_2_edit()
+    {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Klien Dengan Gangguan Konsep Diri : Harga Diri Rendah';
+    	$this->get_ri_rencana_klien_2_data();
+    	return view('page.ri.rencana_klien_2_edit', $this->data);
+    }
+
+    public function post_ri_rencana_klien_2_edit(Request $request)
+    {
+    	$id_pasien = Session::get('id_pasien');
+    	$data = RIRencanaKlien2::where('id_regis', $id_pasien)->first();
+    	$data->tanggal_pengkajian = $request->tanggal_pengkajian;
+		$data->jam_pengkajian = $request->jam_pengkajian;
+		$data->ruangan = $request->ruangan;
+		$data->diagnosa_medis = $request->diagnosa_medis;
+
+    	$data->tanggal_1 = $request->tanggal_1;
+		$data->tanggal_2 = $request->tanggal_2;
+		$data->nodx_1 = $request->nodx_1;
+		$data->nodx_2 = $request->nodx_2;
+		$data->dxk_1 = $request->dxk_1;
+		$data->dxk_2 = $request->dxk_2;
+		$data->t1 = $request->t1;
+		$data->k1 = $request->k1;
+		$data->k2 = $request->k2;
+		$data->save();
+    	dd($data);
+    }
 }
