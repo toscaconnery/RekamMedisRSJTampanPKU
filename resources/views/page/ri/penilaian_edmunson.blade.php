@@ -55,6 +55,32 @@
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
+                Penilaian Resiko Nyeri
+              </header>
+              <div class="panel-body">
+                <div class="form-group"></div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Tanggal</label>
+                  <div class="col-sm-2">
+                    <input type="text" id="dp1" class="form-control" name="tanggal">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-lg-2" for="inputSuccess">Waktu</label>
+                  <div class="col-lg-2">
+                    <select class="form-control m-bot15" name="waktu">
+                      <option value="p">Pagi</option>
+                      <option value="s">Siang</option>
+                      <option value="m">Malam</option>
+                    </select>
+                  </div> 
+                </div>
+              </div>
+            </section>
+
+
+            <section class="panel">
+              <header class="panel-heading">
                 EDMUNSON (Jiwa)
               </header>
               <div class="panel-body">
