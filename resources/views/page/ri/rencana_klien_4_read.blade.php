@@ -63,8 +63,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal" method="post" action="ri_rencana_klien_4_edit">
-            {{ csrf_field() }}
+          <form class="form-horizontal">
             <section class="panel">
               <header class="panel-heading">
                 Rencana Tindakan
@@ -336,10 +335,6 @@
                 </table>
               </div>
             </section>
-
-            <div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
           </form>
         </div>
       </div>
