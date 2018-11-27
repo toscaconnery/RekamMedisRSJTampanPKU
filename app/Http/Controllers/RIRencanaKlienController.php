@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\RIRencanaKlien;
 use App\Models\RIRencanaKlien1;
 use App\Models\RIRencanaKlien2;
 use App\Models\RIRencanaKlien3;
@@ -11,6 +12,7 @@ use App\Models\RIRencanaKlien5;
 use App\Models\RIRencanaKlien6;
 use App\Models\RIRencanaKlien7;
 use Session;
+use Auth;
 
 class RIRencanaKlienController extends Controller
 {
@@ -19,9 +21,25 @@ class RIRencanaKlienController extends Controller
     	//
     }
 
+    public function cek_list_dokumen_pasien()
+    {
+    	$id_pasien = Session::get('id_pasien');
+    	$dokumen = RIRencanaKlien::where('id_regis', $id_pasien)->count();
+    	if($dokumen == 0) {
+    		$data = new RIRencanaKlien;
+    		$data->id_regis = $id_pasien;
+    		$data->save();
+    	}
+    }
+
     public function get_index()
     {
-    	return view('page.ri.rencana_klien');
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Klien';
+    	$this->cek_list_dokumen_pasien();
+    	$id_pasien = Session::get('id_pasien');
+    	$file = RIRencanaKlien::where('id_regis', $id_pasien)->first();
+    	$this->data['file'] = $file;
+    	return view('page.ri.rencana_klien', $this->data);
     }
 
     public function get_ri_rencana_klien_1()
@@ -79,6 +97,13 @@ class RIRencanaKlienController extends Controller
 		$data->k9 = $request->k9;
 		$data->k10 = $request->k10;
 		$data->save();
+
+    	$dokumen = RIRencanaKlien::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_klien_1 = True;
+    	$dokumen->ri_rencana_klien_1_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_klien_1_pengisi = Auth::user()->nama;
+    	$dokumen->save();
+
 		return redirect('ri_rencana_klien_1_read');
     }
 
@@ -224,6 +249,12 @@ class RIRencanaKlienController extends Controller
 		$data->k1 = $request->k1;
 		$data->k2 = $request->k2;
 		$data->save();
+
+		$dokumen = RIRencanaKlien::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_klien_2 = True;
+    	$dokumen->ri_rencana_klien_2_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_klien_2_pengisi = Auth::user()->nama;
+    	$dokumen->save();
 		return redirect('ri_rencana_klien_2_read');
     }
 
@@ -313,6 +344,12 @@ class RIRencanaKlienController extends Controller
 		$data->k2 = $request->k2;
 		$data->k3 = $request->k3;
 		$data->save();
+
+		$dokumen = RIRencanaKlien::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_klien_3 = True;
+    	$dokumen->ri_rencana_klien_3_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_klien_3_pengisi = Auth::user()->nama;
+    	$dokumen->save();
 		return redirect('ri_rencana_klien_3_read');
     }
 
@@ -430,6 +467,13 @@ class RIRencanaKlienController extends Controller
 		$data->k7b = $request->k7b;
 		$data->k7c = $request->k7c;
 		$data->save();
+
+		$dokumen = RIRencanaKlien::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_klien_4 = True;
+    	$dokumen->ri_rencana_klien_4_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_klien_4_pengisi = Auth::user()->nama;
+    	$dokumen->save();
+
 		return redirect('ri_rencana_klien_4_read');
     }
 
@@ -592,6 +636,13 @@ class RIRencanaKlienController extends Controller
 		$data->k8b = $request->k8b;
 		$data->k8c = $request->k8c;
 		$data->save();
+
+		$dokumen = RIRencanaKlien::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_klien_5 = True;
+    	$dokumen->ri_rencana_klien_5_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_klien_5_pengisi = Auth::user()->nama;
+    	$dokumen->save();
+
 		return redirect('ri_rencana_klien_5_read');
     }
 
@@ -760,6 +811,13 @@ class RIRencanaKlienController extends Controller
 		$data->k5b = $request->k5b;
 		$data->k5c = $request->k5c;
 		$data->save();
+
+		$dokumen = RIRencanaKlien::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_klien_6 = True;
+    	$dokumen->ri_rencana_klien_6_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_klien_6_pengisi = Auth::user()->nama;
+    	$dokumen->save();
+
 		return redirect('ri_rencana_klien_6_read');
     }
 
@@ -901,6 +959,13 @@ class RIRencanaKlienController extends Controller
 		$data->k4 = $request->k4;
 		$data->k5 = $request->k5;
 		$data->save();
+
+		$dokumen = RIRencanaKlien::where('id_regis', $id_pasien)->first();
+    	$dokumen->ri_rencana_klien_7 = True;
+    	$dokumen->ri_rencana_klien_7_tanggal = date("d/m/Y");
+    	$dokumen->ri_rencana_klien_7_pengisi = Auth::user()->nama;
+    	$dokumen->save();
+
 		return redirect('ri_rencana_klien_7_read');
     }
 

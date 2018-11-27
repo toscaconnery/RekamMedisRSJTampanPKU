@@ -38,9 +38,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Klien Dengan Perilaku Kekerasan</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_klien_1_tanggal}}</td>
+                  <td>{{$file->ri_rencana_klien_1_pengisi}}</td>
+                  <td>{{$file->ri_rencana_klien_1 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
@@ -51,9 +51,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Klien Dengan Gangguan Konsep Diri : Harga Diri Rendah</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_klien_2_tanggal}}</td>
+                  <td>{{$file->ri_rencana_klien_2_pengisi}}</td>
+                  <td>{{$file->ri_rencana_klien_2 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
@@ -64,9 +64,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Klien Dengan Pola Pikir : WAHAM</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_klien_3_tanggal}}</td>
+                  <td>{{$file->ri_rencana_klien_3_pengisi}}</td>
+                  <td>{{$file->ri_rencana_klien_3 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
@@ -77,9 +77,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Klien Dengan Menarik Diri</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_klien_4_tanggal}}</td>
+                  <td>{{$file->ri_rencana_klien_4_pengisi}}</td>
+                  <td>{{$file->ri_rencana_klien_4 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
@@ -90,9 +90,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Klien Dengan Defisit Perawatan Diri</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_klien_5_tanggal}}</td>
+                  <td>{{$file->ri_rencana_klien_5_pengisi}}</td>
+                  <td>{{$file->ri_rencana_klien_5 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
@@ -103,9 +103,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Klien Dengan Gangguan Persepsi Sensori : Halusinasi</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_klien_6_tanggal}}</td>
+                  <td>{{$file->ri_rencana_klien_6_pengisi}}</td>
+                  <td>{{$file->ri_rencana_klien_6 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
@@ -116,9 +116,9 @@
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Klien Dengan Risiko Bunuh Diri</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
-                  <td>Tidak Terisi</td>
+                  <td>{{$file->ri_rencana_klien_7_tanggal}}</td>
+                  <td>{{$file->ri_rencana_klien_7_pengisi}}</td>
+                  <td>{{$file->ri_rencana_klien_7 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="#">Lihat</a>
