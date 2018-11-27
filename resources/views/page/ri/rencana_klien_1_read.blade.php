@@ -129,7 +129,7 @@
                         1. Klien dapat membina hubungan saling percaya
                       </td>
                       <td>
-                        1. Setelah <input type="text" disabled name="k1" style="width: 4em; display: inline;" class="form-control" value="{{$k1}}"> x pertemuan klien menunjukkan tanda-tanda percaya kepada perawat:<br>
+                        1. Setelah <input type="text" disabled name="k1" style="width: 6em; display: inline;" class="form-control" value="{{$k1}}"> x pertemuan klien menunjukkan tanda-tanda percaya kepada perawat:<br>
                         <ul>
                           <li>Wajah cerah, tersenyum</li>
                           <li>Mau berkenalan</li>
@@ -160,7 +160,7 @@
                         2. Klien dapat mengidentifikasi penyebab perilaku kekerasan yang dilakukannya
                       </td>
                       <td>
-                        2. Setelah <input type="text" disabled name="k2" style="width: 4em; display: inline;" class="form-control" value="{{$k2}}"> x pertemuan klien menceritakan penyebab perilaku kekerasan yang dilakukannya:<br>
+                        2. Setelah <input type="text" disabled name="k2" style="width: 6em; display: inline;" class="form-control" value="{{$k2}}"> x pertemuan klien menceritakan penyebab perilaku kekerasan yang dilakukannya:<br>
                         <ul>
                           <li>Menceritakan penyebab perasaan jengkel/kesal baik dari diri sendiri maupun lingkungannya</li>
                         </ul>
@@ -183,7 +183,7 @@
                         3. Klien dapat mengidentifikasi tanda-tanda perilaku kekerasan
                       </td>
                       <td>
-                        3. Setelah <input type="text" disabled name="k3" style="width: 4em; display: inline;" class="form-control" value="{{$k3}}"> x pertemuan klien menceritakan tanda-tanda saat terjadi perilaku kekerasan<br>
+                        3. Setelah <input type="text" disabled name="k3" style="width: 6em; display: inline;" class="form-control" value="{{$k3}}"> x pertemuan klien menceritakan tanda-tanda saat terjadi perilaku kekerasan<br>
                         <ul>
                           <li>Tanda fisik : mata merah, tangan mengepal, ekspresi tegang, dan lain-lain.</li>
                           <li>Tanda emosional : perasaan marah, jengkel, bicara kasar.</li>
@@ -209,7 +209,7 @@
                         4. Klien dapat mengidentifikasi jenis perilaku kekerasan yang pernah dilakukannya
                       </td>
                       <td>
-                        4. Setelah <input type="text" disabled name="k4" style="width: 4em; display: inline;" class="form-control" value="{{$k4}}"> x pertemuan klien menjelaskan:<br>
+                        4. Setelah <input type="text" disabled name="k4" style="width: 6em; display: inline;" class="form-control" value="{{$k4}}"> x pertemuan klien menjelaskan:<br>
                         <ul>
                           <li>Jenis-jenis ekspresi kemarahan yang selama ini dilakukannya</li>
                           <li>Perasaannya saat melakukan kekerasan</li>
@@ -235,7 +235,7 @@
                         5. Klien dapat mengidentifikasi akibat perilaku kekerasan
                       </td>
                       <td>
-                        5. Setelah <input type="text" disabled name="k5" value="{{$k5}}" style="width: 4em; display: inline;" class="form-control"> x pertemuan klien menjelaskan akibat tindak kekerasan yang dilakukannya<br>
+                        5. Setelah <input type="text" disabled name="k5" value="{{$k5}}" style="width: 6em; display: inline;" class="form-control"> x pertemuan klien menjelaskan akibat tindak kekerasan yang dilakukannya<br>
                         <ul>
                           <li>Diri sendiri: luka, dijauhi teman, dll</li>
                           <li>Orang lain/keluarga: luka, tersinggung, ketakutan, dll</li>
@@ -261,7 +261,7 @@
                         6. Klien dapat mengidentifikasi cara konstruktif dalam mengungkapkan kemarahan
                       </td>
                       <td>
-                        6. Setelah <input type="text" disabled name="k6" value="{{$k6}}" style="width: 4em; display: inline;" class="form-control"> x pertemuan klien :<br>
+                        6. Setelah <input type="text" disabled name="k6" value="{{$k6}}" style="width: 6em; display: inline;" class="form-control"> x pertemuan klien :<br>
                         <ul>
                           <li>Menjelaskan cara-cara sehat mengungkapkan marah</li>
                         </ul>
@@ -292,7 +292,7 @@
                         7. Klien dapat mendemonstrasikan cara mengontrol perilaku kekerasan
                       </td>
                       <td>
-                        7. Setelah <input type="text" disabled name="k7" value="{{$k7}}" style="width: 4em; display: inline;" class="form-control"> x pertemuan klien memperagakan cara mengontrol perilaku kekerasan:<br>
+                        7. Setelah <input type="text" disabled name="k7" value="{{$k7}}" style="width: 6em; display: inline;" class="form-control"> x pertemuan klien memperagakan cara mengontrol perilaku kekerasan:<br>
                         <ul>
                           <li>Fisik: tarik nafas dalam, memukul bantal/kasur</li>
                           <li>Verbal: mengungkapkan perasaan kesal/jengkel pada orang lain tanpa menyakiti</li>
@@ -319,7 +319,7 @@
                         8. Klien mendapat dukungan keluarga untuk mengontrol perilaku kekerasan
                       </td>
                       <td>
-                        8. Setelah  <input type="text" disabled name="k8" value="{{$k8}}" style="width: 4em; display: inline;" class="form-control"> x pertemuan keluarga:<br>
+                        8. Setelah  <input type="text" disabled name="k8" value="{{$k8}}" style="width: 6em; display: inline;" class="form-control"> x pertemuan keluarga:<br>
                         <ul>
                           <li>Menjelaskan cara merawat klien dengan perilaku kekerasan</li>
                           <li>Mengungkapkan rasa puas dalam merawat klien</li>
@@ -344,7 +344,7 @@
                         9. Klien menggunakan obat sesuai program yang telah ditetapkan
                       </td>
                       <td>
-                        9.1. Setelah <input type="text" disabled name="k9" value="{{$k9}}" style="width: 4em; display: inline;" class="form-control"> x pertemuan klien menjelaskan:<br>
+                        9.1. Setelah <input type="text" disabled name="k9" value="{{$k9}}" style="width: 6em; display: inline;" class="form-control"> x pertemuan klien menjelaskan:<br>
                         <ul>
                           <li>Manfaat minum obat</li>
                           <li>Kerugian tidak minum obat</li>
@@ -355,7 +355,7 @@
                           <li>Cara pemakaian</li>
                           <li>Efek yang dirasakan</li>
                         </ul><br>
-                        9.2. Setelah <input type="text" disabled name="k10" value="{{$k10}}" style="width: 4em; display: inline;" class="form-control"> x pertemuan klien menggunakan obat sesuai program 
+                        9.2. Setelah <input type="text" disabled name="k10" value="{{$k10}}" style="width: 6em; display: inline;" class="form-control"> x pertemuan klien menggunakan obat sesuai program 
                       </td>
                       <td>
                         9.1. Jelaskan manfaat menggunakan obat secara teratur dan kerugian jika tidak menggunakan obat<br>

@@ -23,7 +23,7 @@
     <section class="wrapper">
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="page-header"><i class="fa fa-file-text-o"></i> RENCANA TINDAKAN KEPERAWATAN KLIEN DENGAN GANGGUAN KONSEP DIRI : HARGA DIRI RENDAH</h3>
+          <h3 class="page-header"><i class="fa fa-file-text-o"></i> RENCANA TINDAKAN KEPERAWATAN KLIEN DENGAN POLA PIKIR : WAHAM</h3>
         </div>
       </div>
       @include('layouts.bio')
@@ -32,7 +32,7 @@
         <div class="col-lg-12">
           <section class="panel">
             <header class="panel-heading">
-              Dokumen Rencana Tindakan Keperawatan Klien Dengan Gangguan Konsep Diri : Harga Diri Rendah
+              Dokumen Rencana Tindakan Keperawatan Klien Dengan Pola Pikir : WAHAM
             </header>
 
             <table class="table table-striped table-advance table-hover">
@@ -44,7 +44,7 @@
                   <th><i class="icon_cogs"></i> Action</th>
                 </tr>
                 <tr>
-                  <td>Rencana Tindakan Keperawatan Klien Dengan Gangguan Konsep Diri : Harga Diri Rendah</td>
+                  <td>Rencana Tindakan Keperawatan Klien Dengan Pola Pikir : WAHAM</td>
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>
@@ -63,7 +63,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal" method="post" action="ri_rencana_klien_2">
+          <form class="form-horizontal" method="post" action="ri_rencana_klien_3">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
@@ -73,19 +73,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Pengkajian</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pengkajian" required>
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pengkajian">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jam Pengkajian</label>
                   <div class="col-sm-2">
-                    <input type="time" class="form-control" name="jam_pengkajian" required>
+                    <input type="time" class="form-control" name="jam_pengkajian">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Ruangan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="ruangan" required>
+                    <input type="text" class="form-control" name="ruangan">
                   </div>
                 </div>
                 <div class="form-group">
@@ -122,27 +122,33 @@
                       <td><input type="text" class="form-control" name="nodx_1"></td>
                       <td>
                         <input type="text" class="form-control" name="dxk_1"><br>
-                        b.d. harga diri rendah.
+                        b.d. Waham
                       </td>
                       <td>
                         TUM: <br>
                         <input type="text" class="form-control" name="t1">
                         TUK:<br>
-                        1. Klien dapat membina hubungan saling percaya dengan perawat.
+                        1. Klien dapat membina hubungan saling percaya dengan perawat
                       </td>
                       <td>
-                        1. Setelah <input type="text" name="k1" style="width: 6em; display: inline;" class="form-control"> kali interaksi, klien menunjukkan ekspresi wajah bersahabat, menunjukkan rasa senang, ada kontak mata, mau berjabat tangan, mau menyebutkan nama, mau menjawab salam, klien mau duduk berdampingan dengan perawat, mau mengutarakan masalah yang dihadapi.
-                      </td>
-                      <td>
-                        1. Bina hubungan saling percaya dengan menggunakan prinsip komunikasi terapeutik:<br>
+                        1.1. Setelah <input type="text" name="k1" style="width: 6em; display: inline;" class="form-control"> x interaksi klien:<br>
                         <ul>
-                          <li>Sapa klien dengan ramah baik verbal maupun non verbal.</li>
-                          <li>Perkenalkan diri dengan sopan.</li>
-                          <li>Tanyakan nama lengkap dan nama panggilan yang disukai klien.</li>
-                          <li>Jelaskan tujuan pertemuan.</li>
-                          <li>Jujur dan menepati janji</li>
-                          <li>Tujukkan sikap empati dan menerima klien apa adanya.</li>
-                          <li>Beri perhatian dan perhatikan kebutuhan dasar klien.</li>
+                          <li>Mau menerima kehadiran perawat di sampingnya.</li>
+                          <li>Mengatakan mau menerima bantuan perawat</li>
+                          <li>Tidak menunjukkan tanda-tanda curiga</li>
+                          <li>Mengijinkan duduk di samping</li>
+                        </ul>
+                      </td>
+                      <td>
+                        1.1. Bina hubungan saling percaya dengan klien:<br>
+                        <ul>
+                          <li>Beri salam</li>
+                          <li>Perkenalkan diri, tanyakan nama serta nama panggilan yang disukai.</li>
+                          <li>Jelaskan tujuan interaksi</li>
+                          <li>Yakinkan klien dalam keadaan aman dan perawat siap menolong dan mendampinginya</li>
+                          <li>Yakinkan bahwa kerahasiaan klien akan tetap terjaga</li>
+                          <li>Tunjukkan sikap terbuka dan jujur</li>
+                          <li>Perhatikan kebutuhan dasar dan beri bantuan untuk memenuhinya</li>
                         </ul>
                       </td>
                     </tr>
@@ -152,30 +158,48 @@
                       <td><input type="text" class="form-control" name="nodx_2"></td>
                       <td><input type="text" class="form-control" name="dxk_2"></td>
                       <td>
-                        2. Klien dapat mengidentifikasi aspek positif dan kemampuan yang dimiliki.
+                        2. Klien dapat mengidentifikasi perasaan yang muncul secara berulang dalam pikiran klien.
                       </td>
                       <td>
-                        2. Setelah <input type="text" name="k2" style="width: 6em; display: inline;" class="form-control"> kali interaksi klien menyebutkan:<br>
+                        2.1. Setelah <input type="text" name="k2" style="width: 6em; display: inline;" class="form-control"> x interaksi klien: <br>
                         <ul>
-                          <li>Aspek positif dan kemampuan yang dimiliki klien.</li>
-                          <li>Aspek positif keluarga.</li>
-                          <li>aspek positif lingkungan klien.</li>
+                          <li>Klien menceritakan ide-ide dan perasaan yang muncul secara berulang dalam pikirannya.</li>
                         </ul>
                       </td>
                       <td>
-                        2.1. Diskusikan dengan klien tentang:<br>
+                        2. Bantu klien untuk mengungkapkan perasaan dan pikirannya.<br>
                         <ul>
-                          <li>Aspek positif yang dimiliki klien, keluarga, lingkungan.</li>
-                          <li>Kemampuan yang dimiliki klien.</li>
+                          <li>Diskusikan dengan klien pengalaman yag dialami selama ini termasuk hubungan dengan orang yang berarti, lingkungan kerja, sekolah, dsb.</li>
+                          <li>Dengarkan pernyataan klien dengan empati tanpa mendukung/ menentang pernyataan wahamnya.</li>
+                          <li>Katakan perawat dapat memahami apa yang diceritakan klien.</li>
                         </ul>
-                        2.2. Bersama klien buat daftar tentang:<br>
-                        <ul>
-                          <li>Aspek positif klien, keluarga, lingkungan.</li>
-                          <li>Kemampuan yang dimiliki klien.</li>
-                        </ul>
-                        2.3. Beri pujian yang realistis, hindarkan memberi penilaian negatif.
                       </td>
                     </tr>
+
+                    <tr>
+                      <td style="text-align:center;"><input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_3"></td>
+                      <td><input type="text" class="form-control" name="nodx_3"></td>
+                      <td><input type="text" class="form-control" name="dxk_3"></td>
+                      <td>
+                        3. Klien dapat mengidentifikasi stressor/ pencetus wahamnya. (Triggers Factor)
+                      </td>
+                      <td>
+                        3. Setelah <input type="text" name="k3" style="width: 6em; display: inline;" class="form-control"> x interaksi klien:<br>
+                        <ul>
+                          <li>Dapat menyebutkan kejadian-kejadian sesuai dengan urutan waktu serta harapan / kebutuhan dasar yang tidak terpenuhi seperti : Harga diri, rasa aman dsb.</li>
+                          <li>Dapat menyebutkan hubungan antara kejadian traumatis/kebutuhan tidak terpenuhi dengan wahamnya.</li>
+                        </ul> 
+                      </td>
+                      <td>
+                        3. Bantu klien untuk mengidentifikasi kebutuhan yang tidak terpenuhi serta kejadian yang menjadi factor pencetus wahamnya.<br>
+                        <ul>
+                          <li>Diskusikan dengan klien tentang kejadian-kejadian traumatik yang menimbulkan rasa takut, ansietas maupun perasaan tidak dihargai.</li>
+                          <li>Diskusikan kebutuhan/harapan yang belum terpenuhi.</li>
+                          <li>Diskusikan dengan klien cara-cara mengatasi kebutuhan yang tidak terpenuhi dan kejadian yang traumatis.</li>
+                        </ul>
+                      </td>
+                    </tr>
+
                   </tbody>
                 </table>
               </div>
@@ -190,7 +214,6 @@
     </div>
   </div>
 </section>
-
 @include('layouts.tailscript')
 </body>
 
