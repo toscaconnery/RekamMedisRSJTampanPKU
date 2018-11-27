@@ -347,7 +347,9 @@ Route::get('/ri_keperawatan_intensif_read', 'RIKeperawatanIntensifController@get
 
 Route::get('/ri_evaluasi_keperawatan', 'RIEvaluasiKeperawatanController@get_ri_evaluasi_keperawatan');
 Route::post('/ri_evaluasi_keperawatan', 'RIEvaluasiKeperawatanController@post_ri_evaluasi_keperawatan');
-Route::get('/ri_evaluasi_keperawatan_read', 'RIEvaluasiKeperawatanController@get_ri_evaluasi_keperawatan_read'); // new add
+Route::get('/ri_evaluasi_keperawatan_read', 'RIEvaluasiKeperawatanController@get_ri_evaluasi_keperawatan_read');
+Route::get('/ri_evaluasi_keperawatan_edit', 'RIEvaluasiKeperawatanController@get_ri_evaluasi_keperawatan_edit');
+Route::post('/ri_evaluasi_keperawatan_edit', 'RIEvaluasiKeperawatanController@post_ri_evaluasi_keperawatan_edit');
 
 Route::get('/ri_monitoring_observasi', 'RIMonitoringObservasiController@get_ri_monitoring_observasi');
 Route::post('/ri_monitoring_observasi', 'RIMonitoringObservasiController@post_ri_monitoring_observasi');
