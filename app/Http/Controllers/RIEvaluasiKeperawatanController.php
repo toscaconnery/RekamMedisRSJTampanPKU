@@ -43,7 +43,7 @@ class RIEvaluasiKeperawatanController extends Controller
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
         $daftar_dokumen->ri_evaluasi_keperawatan = True;
         $daftar_dokumen->save();
-    	return back();
+    	return redirect('ri_evaluasi_keperawatan_read');
     }
 
     public function get_ri_evaluasi_keperawatan_data()
@@ -66,25 +66,6 @@ class RIEvaluasiKeperawatanController extends Controller
             $previous_value = substr($previous_value, 0, -1);
         }
         $this->data['previous_value'] = $previous_value;
-        // dd($this->data);
-
-        // $jumlah_form = $request->jumlah_form;
-        // for($i = 1; $i <= $jumlah_form; $i++) {
-        //     $str_tanggal = 'tanggal_'.$i;
-        //     $str_jam = 'jam_'.$i;
-        //     $str_implementasi = 'implementasi_'.$i;
-        //     $str_evaluasi = 'evaluasi_'.$i;
-        //     $str_nama_user = 'nama_user_'.$i;
-        //     if(!is_null($request->$str_tanggal)) {
-        //         $pasien = RIEvaluasiKeperawatan::where('id', 1)->first();
-        //         $this->data['id_regis'] = $pasien->id_regis;
-        //         $this->data['tanggal'] = $pasien->tanggal;
-        //         $this->data['jam'] = $pasien->jam;
-        //         $this->data['evaluasi'] = $pasien->evaluasi;
-        //         $this->data['implementasi'] = $pasien->implementasi;
-        //         $this->data['nama_user'] = $pasien->nama_user;
-        //     }
-        // }
     }
 
     public function get_ri_evaluasi_keperawatan_read()
@@ -145,5 +126,6 @@ class RIEvaluasiKeperawatanController extends Controller
                 $data->save();
             }
         }
+        return redirect('ri_evaluasi_keperawatan_read');
     }
 }
