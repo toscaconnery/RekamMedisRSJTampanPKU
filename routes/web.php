@@ -701,6 +701,43 @@ Route::post('/ri_rencana_keperawatan_5_edit', 'RIRencanaKeperawatanController@po
 Route::post('/ri_rencana_keperawatan_6_edit', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_6_edit');
 Route::post('/ri_rencana_keperawatan_7_edit', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_7_edit');
 
+Route::get('/ri_rencana_klien', 'RIRencanaKlienController@get_index');
+Route::get('/ri_rencana_klien_1', 'RIRencanaKlienController@get_ri_rencana_klien_1');
+Route::post('/ri_rencana_klien_1', 'RIRencanaKlienController@post_ri_rencana_klien_1');
+Route::get('/ri_rencana_klien_1_read', 'RIRencanaKlienController@get_ri_rencana_klien_1_read');
+Route::get('/ri_rencana_klien_1_edit', 'RIRencanaKlienController@get_ri_rencana_klien_1_edit');
+Route::post('/ri_rencana_klien_1_edit', 'RIRencanaKlienController@post_ri_rencana_klien_1_edit');
+Route::get('/ri_rencana_klien_2', 'RIRencanaKlienController@get_ri_rencana_klien_2');
+Route::post('/ri_rencana_klien_2', 'RIRencanaKlienController@post_ri_rencana_klien_2');
+Route::get('/ri_rencana_klien_2_read', 'RIRencanaKlienController@get_ri_rencana_klien_2_read');
+Route::get('/ri_rencana_klien_2_edit', 'RIRencanaKlienController@get_ri_rencana_klien_2_edit');
+Route::post('/ri_rencana_klien_2_edit', 'RIRencanaKlienController@post_ri_rencana_klien_2_edit');
+Route::get('/ri_rencana_klien_3', 'RIRencanaKlienController@get_ri_rencana_klien_3');
+Route::post('/ri_rencana_klien_3', 'RIRencanaKlienController@post_ri_rencana_klien_3');
+Route::get('/ri_rencana_klien_3_read', 'RIRencanaKlienController@get_ri_rencana_klien_3_read');
+Route::get('/ri_rencana_klien_3_edit', 'RIRencanaKlienController@get_ri_rencana_klien_3_edit');
+Route::post('/ri_rencana_klien_3_edit', 'RIRencanaKlienController@post_ri_rencana_klien_3_edit');
+Route::get('/ri_rencana_klien_4', 'RIRencanaKlienController@get_ri_rencana_klien_4');
+Route::post('/ri_rencana_klien_4', 'RIRencanaKlienController@post_ri_rencana_klien_4');
+Route::get('/ri_rencana_klien_4_read', 'RIRencanaKlienController@get_ri_rencana_klien_4_read');
+Route::get('/ri_rencana_klien_4_edit', 'RIRencanaKlienController@get_ri_rencana_klien_4_edit');
+Route::post('/ri_rencana_klien_4_edit', 'RIRencanaKlienController@post_ri_rencana_klien_4_edit');
+Route::get('/ri_rencana_klien_5', 'RIRencanaKlienController@get_ri_rencana_klien_5');
+Route::post('/ri_rencana_klien_5', 'RIRencanaKlienController@post_ri_rencana_klien_5');
+Route::get('/ri_rencana_klien_5_read', 'RIRencanaKlienController@get_ri_rencana_klien_5_read');
+Route::get('/ri_rencana_klien_5_edit', 'RIRencanaKlienController@get_ri_rencana_klien_5_edit');
+Route::post('/ri_rencana_klien_5_edit', 'RIRencanaKlienController@post_ri_rencana_klien_5_edit');
+Route::get('/ri_rencana_klien_6', 'RIRencanaKlienController@get_ri_rencana_klien_6');
+Route::post('/ri_rencana_klien_6', 'RIRencanaKlienController@post_ri_rencana_klien_6');
+Route::get('/ri_rencana_klien_6_read', 'RIRencanaKlienController@get_ri_rencana_klien_6_read');
+Route::get('/ri_rencana_klien_6_edit', 'RIRencanaKlienController@get_ri_rencana_klien_6_edit');
+Route::post('/ri_rencana_klien_6_edit', 'RIRencanaKlienController@post_ri_rencana_klien_6_edit');
+Route::get('/ri_rencana_klien_7', 'RIRencanaKlienController@get_ri_rencana_klien_7');
+Route::post('/ri_rencana_klien_7', 'RIRencanaKlienController@post_ri_rencana_klien_7');
+Route::get('/ri_rencana_klien_7_read', 'RIRencanaKlienController@get_ri_rencana_klien_7_read');
+Route::get('/ri_rencana_klien_7_edit', 'RIRencanaKlienController@get_ri_rencana_klien_7_edit');
+Route::post('/ri_rencana_klien_7_edit', 'RIRencanaKlienController@post_ri_rencana_klien_7_edit');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////

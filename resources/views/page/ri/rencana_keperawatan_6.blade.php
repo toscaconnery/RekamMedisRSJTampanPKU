@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <form class="form-horizontal " method="post" action="ri_rencana_keperawatan_6">
+      <form class="form-horizontal" method="post" action="ri_rencana_keperawatan_6">
         {{ csrf_field() }}
         <div class="row">
           <div class="col-lg-12">
