@@ -55,7 +55,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal" method="post" action="ri_asuhan_gizi">
+          <form class="form-horizontal" method="post" action="ri_asuhan_gizi_edit">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">Riwayat Klien
@@ -71,8 +71,8 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Etnik/Agama</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" disabled value="{{$etnik}}/{{$etnik}}">
-                    <input type="hidden" name="etnik_agama" value="{{$etnik}}/{{$etnik}}">
+                    <input type="text" class="form-control" disabled value="{{$etnik_agama}}">
+                    <input type="hidden" name="etnik_agama" value="{{$etnik_agama}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -85,8 +85,8 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kemampuan Baca</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="kemampuan_baca" value="1">Bisa</label>
-                    <label class="radio-inline"><input type="radio" name="kemampuan_baca" value="0">Tidak Bisa</label>
+                    <label class="radio-inline"><input type="radio" name="kemampuan_baca" value="1" {{$kemampuan_baca == 1 ? 'checked' : ''}}>Bisa</label>
+                    <label class="radio-inline"><input type="radio" name="kemampuan_baca" value="0" {{$kemampuan_baca == 0 ? 'checked' : ''}}>Tidak Bisa</label>
                   </div>
                 </div>
                 <div class="form-group">
@@ -106,45 +106,45 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Peran Dalam Keluarga</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="peran_dalam_keluarga">
+                    <input type="text" class="form-control" name="peran_dalam_keluarga" value="{{$peran_dalam_keluarga}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Keterbatasan Fisik</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterbatasan_fisik">
+                    <input type="text" class="form-control" name="keterbatasan_fisik" value="{{$keterbatasan_fisik}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Mobilitas</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="mobilitas">
+                    <input type="text" class="form-control" name="mobilitas" value="{{$mobilitas}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Perokok</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="perokok" value="0">Ya</label>
-                    <label class="radio-inline"><input type="radio" name="perokok" value="1">Tidak</label>
-                    <label class="radio-inline"><input type="radio" name="perokok" value="2">Pasif</label>
+                    <label class="radio-inline"><input type="radio" name="perokok" value="0" {{$perokok == 0 ? 'checked' : ''}}>Ya</label>
+                    <label class="radio-inline"><input type="radio" name="perokok" value="1" {{$perokok == 1 ? 'checked' : ''}}>Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="perokok" value="2" {{$perokok == 2 ? 'checked' : ''}}>Pasif</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Riwayat Medis/ Kesehatan Pasien/ Keluarga</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="riwayat">
+                    <input type="text" class="form-control" name="riwayat" value="{{$riwayat}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Riwayat Sosial Ekonomi</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="riwayat_sosial_ekonomi">
+                    <input type="text" class="form-control" name="riwayat_sosial_ekonomi" value="{{$riwayat_sosial_ekonomi}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Diagnosa Dokter</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="diagnosa_dokter">
+                    <input type="text" class="form-control" name="diagnosa_dokter" value="{{$diagnosa_dokter}}">
                   </div>
                 </div>
               </div>
@@ -157,32 +157,32 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alergi Makanan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="alergi_makanan">
+                    <input type="text" class="form-control" name="alergi_makanan" value="{{$alergi_makanan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Ketidaksukaan Makanan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="ketidaksukaan_makanan">
+                    <input type="text" class="form-control" name="ketidaksukaan_makanan" value="{{$ketidaksukaan_makanan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pantangan Makanan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="pantangan_makanan">
+                    <input type="text" class="form-control" name="pantangan_makanan" value="{{$pantangan_makanan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pengalaman diit/ konseling sebelumnya</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="konseling_sebelumnya" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="konseling_sebelumnya" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="konseling_sebelumnya" value="1" {{$konseling_sebelumnya == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="konseling_sebelumnya" value="0" {{$konseling_sebelumnya == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Bila ada, sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_konseling">
+                    <input type="text" class="form-control" name="keterangan_konseling" value="{{$keterangan_konseling}}">
                   </div>
                 </div>
               </div>
@@ -195,25 +195,25 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">BB saat ini</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="bb_saat_ini">
+                    <input type="text" class="form-control" name="bb_saat_ini" value="{{$bb_saat_ini}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">PB/TB</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="pbtb">
+                    <input type="text" class="form-control" name="pbtb" value="{{$pbtb}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">IMT</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="imt">
+                    <input type="text" class="form-control" name="imt" value="{{$imt}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Status Gizi</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="status_gizi">
+                    <input type="text" class="form-control" name="status_gizi" value="{{$status_gizi}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -224,24 +224,24 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">BB Biasanya</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="bb_biasanya">
+                    <input type="text" class="form-control" name="bb_biasanya" value="{{$bb_biasanya}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Penurunan BB</label>
                   <div class="col-sm-2" style="display: inline;">
-                    <input type="text" class="form-control" name="penurunan_bb">
+                    <input type="text" class="form-control" name="penurunan_bb" value="{{$penurunan_bb}}">
                   </div>
                   <label class="col-sm-1 control-label" style="padding-left: 0px; padding-right: 0px; width: 6em; text-align: left;">% &nbsp&nbsp&nbsp&nbsp&nbsp  dalam</label>
                   <div class="col-sm-2" style="display: inline;">
-                    <input type="text" class="form-control" name="penurunan_bb_adj">
+                    <input type="text" class="form-control" name="penurunan_bb_adj" value="{{$penurunan_bb_adj}}">
                   </div>
                   <label class="col-sm-1 control-label" style="padding-left: 0px; padding-right: 0px; width: 6em; text-align: left;">mgg/bln</label>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pengukuran Lainnya</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="pengukuran_lainnya">
+                    <input type="text" class="form-control" name="pengukuran_lainnya" value="{{$pengukuran_lainnya}}">
                   </div>
                 </div>
               </div>
@@ -255,7 +255,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Biokimia Terkait Gizi</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="4" name="biokimia_terkait"></textarea>
+                    <textarea class="form-control" rows="4" name="biokimia_terkait">{{$biokimia_terkait}}</textarea>
                   </div>
                 </div>
               </div>
@@ -269,103 +269,103 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Atropi Otot Lengan</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="fk1" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="fk1" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="fk1" value="1" {{$fk1 == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="fk1" value="0" {{$fk1 == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Hilang Lemak Subkutan</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="fk2" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="fk2" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="fk2" value="1" {{$fk2 == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="fk2" value="0" {{$fk2 == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Odema</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="fk3" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="fk3" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="fk3" value="1" {{$fk3 == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="fk3" value="0" {{$fk3 == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nafsu Makan</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="fk4" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="fk4" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="fk4" value="1" {{$fk4 == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="fk4" value="0" {{$fk4 == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Mual</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="fk5" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="fk5" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="fk5" value="1" {{$fk5 == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="fk5" value="0" {{$fk5 == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Muntah</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="fk6" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="fk6" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="fk6" value="1" {{$fk6 == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="fk6" value="0" {{$fk6 == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kembung</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="fk7" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="fk7" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="fk7" value="1" {{$fk7 == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="fk7" value="0" {{$fk7 == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Konstipasi</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="fk8" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="fk8" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="fk8" value="1" {{$fk8 == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="fk8" value="0" {{$fk8 == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Diare</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="fk9" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="fk9" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="fk9" value="1" {{$fk9 == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="fk9" value="0" {{$fk9 == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div>              
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kulit</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="fk10">
+                    <input type="text" class="form-control" name="fk10" value="{{$fk10}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kepala dan Mata</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="fk11">
+                    <input type="text" class="form-control" name="fk11" value="{{$fk11}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Gigi Geligi</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="fk12">
+                    <input type="text" class="form-control" name="fk12" value="{{$fk12}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Gangguan Menelan</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="fk13" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="fk13" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="fk13" value="1" {{$fk13 == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="fk13" value="0" {{$fk13 == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Gangguan Mengunyah</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="fk14" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="fk14" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="fk14" value="1" {{$fk14 == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="fk14" value="0" {{$fk14 == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div> 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Gangguan Menghisap</label>
                   <div class="col-sm-4">
-                    <label class="radio-inline"><input type="radio" name="fk15" value="1">Ada</label>
-                    <label class="radio-inline"><input type="radio" name="fk15" value="0">Tidak</label>
+                    <label class="radio-inline"><input type="radio" name="fk15" value="1" {{$fk15 == 1 ? 'checked' : ''}}>Ada</label>
+                    <label class="radio-inline"><input type="radio" name="fk15" value="0" {{$fk15 == 0 ? 'checked' : ''}}>Tidak</label>
                   </div>
                 </div>
                 <div class="form-group">
@@ -376,25 +376,25 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nadi</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="fk16">
+                    <input type="text" class="form-control" name="fk16" value="{{$fk16}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Respitori</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="fk17">
+                    <input type="text" class="form-control" name="fk17" value="{{$fk17}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Suhu</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="fk18">
+                    <input type="text" class="form-control" name="fk18" value="{{$fk18}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Data Lain</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="fk19">
+                    <input type="text" class="form-control" name="fk19" value="{{$fk19}}">
                   </div>
                 </div>
               </div>
@@ -408,7 +408,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Diagnosa Gizi</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="5" name="diagnosa_gizi"></textarea>
+                    <textarea class="form-control" rows="5" name="diagnosa_gizi">{{$diagnosa_gizi}}</textarea>
                   </div>
                 </div>
               </div>
@@ -422,11 +422,11 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tujuan</label>
                   <div class="col-sm-4">
-                    <textarea class="form-control" name="tujuan_intervensi" rows="4"></textarea>
+                    <textarea class="form-control" name="tujuan_intervensi" rows="4">{{$tujuan_intervensi}}</textarea>
                   </div>
                   <label class="col-sm-1 control-label">Target</label>
                   <div class="col-sm-4">
-                    <textarea class="form-control" name="target_intervensi" rows="4"></textarea>
+                    <textarea class="form-control" name="target_intervensi" rows="4">{{$target_intervensi}}</textarea>
                   </div>
                 </div>
               </div>
@@ -440,7 +440,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Rencana Monitoring dan Evaluasi Gizi</label>
                   <div class="col-sm-8">
-                    <textarea class="form-control" rows="5" name="rencana_monitoring_evaluasi"></textarea>
+                    <textarea class="form-control" rows="5" name="rencana_monitoring_evaluasi">{{$rencana_monitoring_evaluasi}}</textarea>
                   </div>
                 </div>
               </div>
@@ -458,11 +458,11 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="p_gr_nasi">
+                    <input type="text" class="form-control" name="p_gr_nasi" value="{{$p_gr_nasi}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="p_urt_nasi">
+                    <input type="text" class="form-control" name="p_urt_nasi" value="{{$p_urt_nasi}}">
                   </div>
                 </div>
 
@@ -473,11 +473,11 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="p_gr_lauk">
+                    <input type="text" class="form-control" name="p_gr_lauk" value="{{$p_gr_lauk}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="p_urt_lauk">
+                    <input type="text" class="form-control" name="p_urt_lauk" value="{{$p_urt_lauk}}">
                   </div>
                 </div>
 
@@ -488,26 +488,26 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="p_gr_sayur">
+                    <input type="text" class="form-control" name="p_gr_sayur" value="{{$p_gr_sayur}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="p_urt_sayur">
+                    <input type="text" class="form-control" name="p_urt_sayur" value="{{$p_urt_sayur}}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Snack</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="p_nama_snack">
+                    <input type="text" class="form-control" name="p_nama_snack" value="{{$p_nama_snack}}">
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="p_gr_snack">
+                    <input type="text" class="form-control" name="p_gr_snack" value="{{$p_gr_snack}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="p_urt_snack">
+                    <input type="text" class="form-control" name="p_urt_snack" value="{{$p_urt_snack}}">
                   </div>
                 </div>
               </div>
@@ -521,25 +521,25 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Energi (Kal)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="energi_pagi">
+                    <input type="text" class="form-control" name="energi_pagi" value="{{$energi_pagi}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Protein (Gr)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="protein_pagi">
+                    <input type="text" class="form-control" name="protein_pagi" value="{{$protein_pagi}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Lemak (Gr)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="lemak_pagi">
+                    <input type="text" class="form-control" name="lemak_pagi" value="{{$lemak_pagi}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">KH (Gr)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="kh_pagi">
+                    <input type="text" class="form-control" name="kh_pagi" value="{{$kh_pagi}}">
                   </div>
                 </div>
               </div>
@@ -557,11 +557,11 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_gr_nasi">
+                    <input type="text" class="form-control" name="s_gr_nasi" value="{{$s_gr_nasi}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_urt_nasi">
+                    <input type="text" class="form-control" name="s_urt_nasi" value="{{$s_urt_nasi}}">
                   </div>
                 </div>
 
@@ -572,11 +572,11 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_gr_lauk">
+                    <input type="text" class="form-control" name="s_gr_lauk" value="{{$s_gr_lauk}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_urt_lauk">
+                    <input type="text" class="form-control" name="s_urt_lauk" value="{{$s_urt_lauk}}">
                   </div>
                 </div>
 
@@ -587,11 +587,11 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_gr_tempe">
+                    <input type="text" class="form-control" name="s_gr_tempe" value="{{$s_gr_tempe}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_urt_tempe">
+                    <input type="text" class="form-control" name="s_urt_tempe" value="{{$s_urt_tempe}}">
                   </div>
                 </div>
 
@@ -602,11 +602,11 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_gr_sayur">
+                    <input type="text" class="form-control" name="s_gr_sayur" value="{{$s_gr_sayur}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_urt_sayur">
+                    <input type="text" class="form-control" name="s_urt_sayur" value="{{$s_urt_sayur}}">
                   </div>
                 </div>
 
@@ -617,25 +617,25 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_gr_buah">
+                    <input type="text" class="form-control" name="s_gr_buah" value="{{$s_gr_buah}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_urt_buah">
+                    <input type="text" class="form-control" name="s_urt_buah" value="{{$s_urt_buah}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Snack</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_nama_snack">
+                    <input type="text" class="form-control" name="s_nama_snack" value="{{$s_nama_snack}}">
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_gr_snack">
+                    <input type="text" class="form-control" name="s_gr_snack" value="{{$s_gr_snack}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="s_urt_snack">
+                    <input type="text" class="form-control" name="s_urt_snack" value="{{$s_urt_snack}}">
                   </div>
                 </div>
               </div>
@@ -649,25 +649,25 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Energi (Kal)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="energi_siang">
+                    <input type="text" class="form-control" name="energi_siang" value="{{$energi_siang}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Protein (Gr)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="protein_siang">
+                    <input type="text" class="form-control" name="protein_siang" value="{{$protein_siang}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Lemak (Gr)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="lemak_siang">
+                    <input type="text" class="form-control" name="lemak_siang" value="{{$lemak_siang}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">KH (Gr)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="kh_siang">
+                    <input type="text" class="form-control" name="kh_siang" value="{{$kh_siang}}">
                   </div>
                 </div>
               </div>
@@ -685,11 +685,11 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_gr_nasi">
+                    <input type="text" class="form-control" name="m_gr_nasi" value="{{$m_gr_nasi}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_urt_nasi">
+                    <input type="text" class="form-control" name="m_urt_nasi" value="{{$m_urt_nasi}}">
                   </div>
                 </div>
 
@@ -700,11 +700,11 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_gr_lauk">
+                    <input type="text" class="form-control" name="m_gr_lauk" value="{{$m_gr_lauk}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_urt_lauk">
+                    <input type="text" class="form-control" name="m_urt_lauk" value="{{$m_urt_lauk}}">
                   </div>
                 </div>
 
@@ -715,11 +715,11 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_gr_tempe">
+                    <input type="text" class="form-control" name="m_gr_tempe" value="{{$m_gr_tempe}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_urt_tempe">
+                    <input type="text" class="form-control" name="m_urt_tempe" value="{{$m_urt_tempe}}">
                   </div>
                 </div>
 
@@ -730,11 +730,11 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_gr_sayur">
+                    <input type="text" class="form-control" name="m_gr_sayur" value="{{$m_gr_sayur}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_urt_sayur">
+                    <input type="text" class="form-control" name="m_urt_sayur" value="{{$m_urt_sayur}}">
                   </div>
                 </div>
 
@@ -745,26 +745,26 @@
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_gr_buah">
+                    <input type="text" class="form-control" name="m_gr_buah" value="{{$m_gr_buah}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_urt_buah">
+                    <input type="text" class="form-control" name="m_urt_buah" value="{{$m_urt_buah}}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Snack</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_nama_snack">
+                    <input type="text" class="form-control" name="m_nama_snack" value="{{$m_nama_snack}}">
                   </div>
                   <label class="col-sm-1 control-label">GR</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_gr_snack">
+                    <input type="text" class="form-control" name="m_gr_snack" value="{{$m_gr_snack}}">
                   </div>
                   <label class="col-sm-1 control-label">URT</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control" name="m_urt_snack">
+                    <input type="text" class="form-control" name="m_urt_snack" value="{{$m_urt_snack}}">
                   </div>
                 </div>
               </div>
@@ -778,25 +778,25 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Energi (Kal)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="energi_malam">
+                    <input type="text" class="form-control" name="energi_malam" value="{{$energi_malam}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Protein (Gr)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="protein_malam">
+                    <input type="text" class="form-control" name="protein_malam" value="{{$protein_malam}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Lemak (Gr)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="lemak_malam">
+                    <input type="text" class="form-control" name="lemak_malam" value="{{$lemak_malam}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">KH (Gr)</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="kh_malam">
+                    <input type="text" class="form-control" name="kh_malam" value="{{$kh_malam}}">
                   </div>
                 </div>
               </div>
@@ -823,11 +823,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_1">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_1 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_1 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_1 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_1 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_1 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -838,11 +838,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_23">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_23 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_23 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_23 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_23 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_23 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -855,11 +855,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_2">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_2 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_2 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_2 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_2 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_2 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -870,11 +870,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_24">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_24 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_24 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_24 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_24 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_24 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -887,11 +887,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_3">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_3 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_3 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_3 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_3 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_3 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -902,11 +902,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_25">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_25 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_25 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_25 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_25 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_25 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -919,11 +919,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_4">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_4 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_4 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_4 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_4 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_4 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -934,11 +934,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_26">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_26 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_26 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_26 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_26 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_26 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -951,11 +951,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_5">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_5 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_5 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_5 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_5 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_5 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -966,11 +966,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_27">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_27 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_27 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_27 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_27 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_27 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -983,11 +983,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_6">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_6 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_6 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_6 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_6 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_6 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -998,11 +998,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_28">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_28 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_28 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_28 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_28 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_28 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1015,11 +1015,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_7">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_7 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_7 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_7 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_7 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_7 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1030,11 +1030,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_29">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_29 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_29 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_29 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_29 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_29 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1047,11 +1047,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_8">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_8 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_8 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_8 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_8 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_8 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1062,11 +1062,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_30">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_30 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_30 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_30 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_30 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_30 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1079,11 +1079,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_9">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_9 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_9 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_9 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_9 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_9 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1094,11 +1094,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_31">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_31 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_31 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_31 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_31 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_31 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1111,11 +1111,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_10">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_10 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_10 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_10 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_10 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_10 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1126,11 +1126,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_32">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_32 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_32 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_32 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_32 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_32 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1143,11 +1143,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_11">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_11 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_11 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_11 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_11 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_11 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1158,11 +1158,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_33">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_33 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_33 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_33 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_33 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_33 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1175,11 +1175,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_12">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_12 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_12 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_12 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_12 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_12 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1190,11 +1190,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_34">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_34 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_34 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_34 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_34 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_34 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1207,11 +1207,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_13">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_13 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_13 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_13 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_13 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_13 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1222,11 +1222,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_35">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_35 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_35 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_35 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_35 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_35 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1239,11 +1239,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_14">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_14 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_14 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_14 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_14 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_14 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1254,11 +1254,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_36">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_36 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_36 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_36 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_36 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_36 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1271,11 +1271,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_15">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_15 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_15 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_15 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_15 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_15 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1286,11 +1286,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_37">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_37 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_37 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_37 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_37 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_37 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1303,11 +1303,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_16">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_16 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_16 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_16 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_16 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_16 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1318,11 +1318,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_38">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_38 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_38 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_38 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_38 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_38 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1335,11 +1335,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_17">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_17 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_17 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_17 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_17 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_17 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1350,11 +1350,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_39">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_39 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_39 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_39 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_39 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_39 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1367,11 +1367,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_18">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_18 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_18 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_18 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_18 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_18 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1382,11 +1382,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_40">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_40 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_40 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_40 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_40 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_40 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1399,11 +1399,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_19">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_19 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_19 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_19 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_19 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_19 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1414,11 +1414,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_41">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_41 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_41 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_41 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_41 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_41 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1431,11 +1431,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_20">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_20 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_20 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_20 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_20 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_20 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1446,11 +1446,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_42">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_42 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_42 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_42 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_42 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_42 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1463,11 +1463,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_21">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_21 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_21 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_21 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_21 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_21 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1478,11 +1478,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_43">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_43 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_43 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_43 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_43 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_43 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1495,11 +1495,11 @@
                   <div class="col-lg-2">
                     <select class="form-control" name="jumlah_22">
                       <option></option>
-                      <option value="1">Lebih 1x Sehari</option>
-                      <option value="2">1x Sehari</option>
-                      <option value="3">3-6x Sehari</option>
-                      <option value="4">1-2x Sehari</option>
-                      <option value="5">Kurang 1x</option>
+                      <option {{$jumlah_22 == 1 ? 'selected' : ''}} value="1">Lebih 1x Sehari</option>
+                      <option {{$jumlah_22 == 2 ? 'selected' : ''}} value="2">1x Sehari</option>
+                      <option {{$jumlah_22 == 3 ? 'selected' : ''}} value="3">3-6x Sehari</option>
+                      <option {{$jumlah_22 == 4 ? 'selected' : ''}} value="4">1-2x Sehari</option>
+                      <option {{$jumlah_22 == 5 ? 'selected' : ''}} value="5">Kurang 1x</option>
                     </select>
                   </div>
                 </div>
@@ -1513,19 +1513,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal" value="{{$tanggal}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jam</label>
                   <div class="col-sm-2">
-                    <input type="time" class="form-control" name="jam">
+                    <input type="time" class="form-control" name="jam" value="{{$jam}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Ahli Gizi</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="nama_ahli_gizi">
+                    <input type="text" class="form-control" name="nama_ahli_gizi" value="{{$nama_ahli_gizi}}">
                   </div>
                 </div>
               </div>

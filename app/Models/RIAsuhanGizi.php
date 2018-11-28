@@ -25,6 +25,7 @@ class RIAsuhanGizi extends Model
 		'mobilitas',
 		'perokok',
 		'riwayat',
+		'riwayat_sosial_ekonomi',
 		'diagnosa_dokter',
 		'alergi_makanan',
 		'ketidaksukaan_makanan',
