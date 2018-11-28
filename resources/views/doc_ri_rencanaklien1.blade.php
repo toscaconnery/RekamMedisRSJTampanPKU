@@ -17,10 +17,10 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="contain" width="20%" style="padding:-0.2%">
-          Jam Pengkajian 
+          Tanggal Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : 00:00
+          : {{$tanggal_pengkajian}}
         </td>                
       </tr>      
       <tr>
@@ -28,7 +28,7 @@ header('Content-Type: application/pdf');
           Jam Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : 00:00
+          : {{$jam_pengkajian}}
         </td>                
       </tr>
       <tr>
@@ -36,7 +36,7 @@ header('Content-Type: application/pdf');
           Ruangan
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : -
+          : {{$ruangan}}
         </td>                
       </tr>
       <tr>
@@ -44,7 +44,7 @@ header('Content-Type: application/pdf');
           Diagnosa Medis
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : -
+          : {{$diagnosa_medis}}
         </td>                
       </tr>
     </tbody>
@@ -66,19 +66,19 @@ header('Content-Type: application/pdf');
   </thead>
   <tbody>
     <tr>
-      <td class="box-top"></td>
-      <td class="box-top"></td>
+      <td class="box-top">{{$tanggal_1}}</td>
+      <td class="box-top">{{$nodx_1}}</td>
       <td class="box-top">
-        ...<br>
+        {{$dxk_1}}<br>
         b.d. Perilaku Kekerasan
       </td>
       <td class="box-top">
-        TUM: ... <br>
+        TUM: {{$t1}} <br>
         TUK:<br>
         1. Klien dapat membina hubungan saling percaya
       </td>
       <td class="box-top">
-        1. Setelah .. X pertemuan klien menunjukkan tanda-tanda percaya kepada perawat:<br>
+        1. Setelah {{$k1}} X pertemuan klien menunjukkan tanda-tanda percaya kepada perawat:<br>
         <ul>
           <li>Wajah cerah, tersenyum</li>
           <li>Mau berkenalan</li>
@@ -101,14 +101,14 @@ header('Content-Type: application/pdf');
 
     </tr>
      <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_2}}</td>
+      <td class="box-top">{{$nodx_2}}</td>
+      <td class="box-top">{{$dxk_2}}</td>
       <td class="box-top">
         2. Klien dapat mengidentifikasi penyebab perilaku kekerasan yang dilakukannya
       </td>
       <td class="box-top">
-        2. Setelah ... X pertemuan klien menceritakan penyebab perilaku kekerasan yang dilakukannya:<br>
+        2. Setelah {{$k2}} X pertemuan klien menceritakan penyebab perilaku kekerasan yang dilakukannya:<br>
         <ul>
           <li>Menceritakan penyebab perasaan jengkel/kesal baik dari diri sendiri maupun lingkungannya</li>
         </ul>
@@ -123,12 +123,12 @@ header('Content-Type: application/pdf');
     </tr>
 
      <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_3}}</td>
+      <td class="box-top">{{$nodx_3}}</td>
+      <td class="box-top">{{$dxk_3}}</td>
       <td class="box-top">3. Klien dapat mengidentifikasi tanda-tanda perilaku kekerasan</td>
       <td class="box-top">
-        3. Setelah ... X pertemuan klien menceritakan tanda-tanda saat terjadi perilaku kekerasan<br>
+        3. Setelah {{$k3}} X pertemuan klien menceritakan tanda-tanda saat terjadi perilaku kekerasan<br>
         <ul>
           <li>Tanda fisik : mata merah, tangan mengepal, ekspresi tegang, dan lain-lain.</li>
           <li>Tanda emosional : perasaan marah, jengkel, bicara kasar.</li>
@@ -146,12 +146,12 @@ header('Content-Type: application/pdf');
     </tr>
 
      <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_4}}</td>
+      <td class="box-top">{{$nodx_4}}</td>
+      <td class="box-top">{{$dxk_4}}</td>
       <td class="box-top">4. Klien dapat mengidentifikasi jenis perilaku kekerasan yang pernah dilakukannya</td>
       <td class="box-top">
-        4. Setelah ... X pertemuan klien menjelaskan:<br>
+        4. Setelah {{$k4}} X pertemuan klien menjelaskan:<br>
         <ul>
           <li>Jenis-jenis ekspresi kemarahan yang selama ini dilakukannya</li>
           <li>Perasaannya saat melakukan kekerasan</li>
@@ -168,12 +168,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
      <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_5}}</td>
+      <td class="box-top">{{$nodx_5}}</td>
+      <td class="box-top">{{$dxk_5}}</td>
       <td class="box-top">5. Klien dapat mengidentifikasi akibat perilaku kekerasan</td>
       <td class="box-top">
-        5. Setelah ... X pertemuan klien menjelaskan akibat tindak kekerasan yang dilakukannya<br>
+        5. Setelah {{$k5}} X pertemuan klien menjelaskan akibat tindak kekerasan yang dilakukannya<br>
         <ul>
           <li>Diri sendiri: luka, dijauhi teman, dll</li>
           <li>Orang lain/keluarga: luka, tersinggung, ketakutan, dll</li>
@@ -190,12 +190,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
      <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_6}}</td>
+      <td class="box-top">{{$nodx_6}}</td>
+      <td class="box-top">{{$dxk_6}}</td>
       <td class="box-top">6. Klien dapat mengidentifikasi cara konstruktif dalam mengungkapkan kemarahan</td>
       <td class="box-top">
-        6. Setelah ... X pertemuan klien :<br>
+        6. Setelah {{$k6}} X pertemuan klien :<br>
         <ul>
           <li>Menjelaskan cara-cara sehat mengungkapkan marah</li>
         </ul>
@@ -218,12 +218,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
      <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_7}}</td>
+      <td class="box-top">{{$nodx_7}}</td>
+      <td class="box-top">{{$dxk_7}}</td>
       <td class="box-top">7. Klien dapat mendemonstrasikan cara mengontrol perilaku kekerasan</td>
       <td class="box-top">
-        7. Setelah ... X pertemuan klien memperagakan cara mengontrol perilaku kekerasan:<br>
+        7. Setelah {{$k7}} X pertemuan klien memperagakan cara mengontrol perilaku kekerasan:<br>
         <ul>
           <li>Fisik: tarik nafas dalam, memukul bantal/kasur</li>
           <li>Verbal: mengungkapkan perasaan kesal/jengkel pada orang lain tanpa menyakiti</li>
@@ -242,12 +242,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
      <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_8}}</td>
+      <td class="box-top">{{$nodx_8}}</td>
+      <td class="box-top">{{$dxk_8}}</td>
       <td class="box-top">8. Klien mendapat dukungan keluarga untuk mengontrol perilaku kekerasan</td>
       <td class="box-top">
-        8. Setelah  ... X pertemuan keluarga:<br>
+        8. Setelah  {{$k8}} X pertemuan keluarga:<br>
         <ul>
           <li>Menjelaskan cara merawat klien dengan perilaku kekerasan</li>
           <li>Mengungkapkan rasa puas dalam merawat klien</li>
@@ -264,12 +264,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
      <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_9}}</td>
+      <td class="box-top">{{$nodx_9}}</td>
+      <td class="box-top">{{$dxk_9}}</td>
       <td class="box-top">9. Klien menggunakan obat sesuai program yang telah ditetapkan</td>
       <td class="box-top">
-        9.1. Setelah ... X pertemuan klien menjelaskan:<br>
+        9.1. Setelah {{$k9}} X pertemuan klien menjelaskan:<br>
         <ul>
           <li>Manfaat minum obat</li>
           <li>Kerugian tidak minum obat</li>
@@ -280,7 +280,7 @@ header('Content-Type: application/pdf');
           <li>Cara pemakaian</li>
           <li>Efek yang dirasakan</li>
         </ul><br>
-        9.2. Setelah ... X pertemuan klien menggunakan obat sesuai program  
+        9.2. Setelah {{$k10}} X pertemuan klien menggunakan obat sesuai program  
       </td>
       <td class="box-top">
         9.1. Jelaskan manfaat menggunakan obat secara teratur dan kerugian jika tidak menggunakan obat<br>

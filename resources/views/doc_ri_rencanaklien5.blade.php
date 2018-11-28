@@ -17,10 +17,10 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="contain" width="20%" style="padding:-0.2%">
-          Jam Pengkajian 
+          Tanggal Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : 00:00
+          : {{$tanggal_pengkajian}}
         </td>                
       </tr>      
       <tr>
@@ -28,7 +28,7 @@ header('Content-Type: application/pdf');
           Jam Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : 00:00
+          : {{$jam_pengkajian}}
         </td>                
       </tr>
       <tr>
@@ -36,7 +36,7 @@ header('Content-Type: application/pdf');
           Ruangan
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : -
+          : {{$ruangan}}
         </td>                
       </tr>
       <tr>
@@ -44,7 +44,7 @@ header('Content-Type: application/pdf');
           Diagnosa Medis
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : -
+          : {{$diagnosa_medis}}
         </td>                
       </tr>
     </tbody>
@@ -67,16 +67,16 @@ header('Content-Type: application/pdf');
   </thead>
   <tbody>
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">...<br>b.d. defisit perawatan</td>
+      <td class="box-top">{{$tanggal_1}}</td>
+      <td class="box-top">{{$nodx_1}}</td>
+      <td class="box-top">{{$dxk_1}}<br>b.d. defisit perawatan</td>
       <td class="box-top">
-        TUM: ...<br>
-        TUK: ...<br>
+        TUM: {{$t1}}<br>
+        TUK: {{$t1b}}<br>
         1. Klien dapat membina hubungan saling percaya dengan perawat
       </td>
       <td class="box-top">
-        1. Dalam ... kali interaksi klien menunjukkan tanda-tanda percaya kepada perawat:<br>
+        1. Dalam {{$k1}} kali interaksi klien menunjukkan tanda-tanda percaya kepada perawat:<br>
         <ul>
           <li>Waja cerah, tersenyum</li>
           <li>Mau berkenalan</li>
@@ -101,12 +101,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
      <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_2}}</td>
+      <td class="box-top">{{$nodx_2}}</td>
+      <td class="box-top">{{$dxk_2}}</td>
       <td class="box-top">2. Klien mengetahui pentingnya perawatan diri</td>
       <td class="box-top">
-        2. Dalam ... kali interaksi klien menyebutkan:<br>
+        2. Dalam {{$k2}} kali interaksi klien menyebutkan:<br>
         <ul>
           <li>Penyebab tidak merawat diri</li>
           <li>Manfaat menjaga perawatan diri</li>
@@ -125,9 +125,9 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
      <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_3}}</td>
+      <td class="box-top">{{$nodx_3}}</td>
+      <td class="box-top">{{$dxk_3}}</td>
       <td class="box-top">3. Klien mengetahui cara-cara melakukan perawatan diri</td>
       <td class="box-top">
         3.1. Dalam ... kali interaksi klien menyebutkan frekuensi menjaga perawatan diri:<br>

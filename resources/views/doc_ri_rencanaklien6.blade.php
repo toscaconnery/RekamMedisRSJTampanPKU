@@ -17,7 +17,7 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="contain" width="20%" style="padding:-0.2%">
-          Jam Pengkajian 
+          Tanggal Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
           : 00:00

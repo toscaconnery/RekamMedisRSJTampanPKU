@@ -17,10 +17,10 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="contain" width="20%" style="padding:-0.2%">
-          Jam Pengkajian 
+          Tanggal Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : 00:00
+          : {{$tanggal_pengkajian}}
         </td>                
       </tr>      
       <tr>
@@ -28,7 +28,7 @@ header('Content-Type: application/pdf');
           Jam Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : 00:00
+          : {{$jam_pengkajian}}
         </td>                
       </tr>
       <tr>
@@ -36,7 +36,7 @@ header('Content-Type: application/pdf');
           Ruangan
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : -
+          : {{$ruangan}}
         </td>                
       </tr>
       <tr>
@@ -44,7 +44,7 @@ header('Content-Type: application/pdf');
           Diagnosa Medis
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : -
+          : {{$diagnosa_medis}}
         </td>                
       </tr>
     </tbody>
@@ -66,19 +66,19 @@ header('Content-Type: application/pdf');
   </thead>
   <tbody>
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_1}}</td>
+      <td class="box-top">{{$nodx_1}}</td>
       <td class="box-top">
-        ...<br>
+        {{$dxk_1}}<br>
         b.d. Waham ...
       </td>
       <td class="box-top">
-        TUM: ...<br>
+        TUM: {{$t1}}<br>
         TUK:<br>
         1. Klien dapat membina hubungan saling percaya dengan perawat
       </td>
       <td class="box-top">
-        1.1. Setelah ... X interaksi klien:<br>
+        1.1. Setelah {{$k1}} X interaksi klien:<br>
         <ul>
           <li>Mau menerima kehadiran perawat di sampingnya.</li>
           <li>Mengatakan mau menerima bantuan perawat</li>
@@ -100,12 +100,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
      <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_2}}</td>
+      <td class="box-top">{{$nodx_2}}</td>
+      <td class="box-top">{{$dxk_2}}</td>
       <td class="box-top">2. Klien dapat mengidentifikasi perasaan yang muncul secara berulang dalam pikiran klien.</td>
       <td class="box-top">
-        2.1. Setelah ... X interaksi klien: <br>
+        2.1. Setelah {{$k2}} X interaksi klien: <br>
         <ul>
           <li>Klien menceritakan ide-ide dan perasaan yang muncul secara berulang dalam pikirannya.</li>
         </ul>
@@ -120,12 +120,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
      <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_3}}</td>
+      <td class="box-top">{{$nodx_3}}</td>
+      <td class="box-top">{{$dxk_3}}</td>
       <td class="box-top">3. Klien dapat mengidentifikasi stressor/ pencetus wahamnya. (Triggers Factor)</td>
       <td class="box-top">
-        3. Setelah ... X interaksi klien:<br>
+        3. Setelah {{$k3}} X interaksi klien:<br>
         <ul>
           <li>Dapat menyebutkan kejadian-kejadian sesuai dengan urutan waktu serta harapan / kebutuhan dasar yang tidak terpenuhi seperti : Harga diri, rasa aman dsb.</li>
           <li>Dapat menyebutkan hubungan antara kejadian traumatis/kebutuhan tidak terpenuhi dengan wahamnya.</li>

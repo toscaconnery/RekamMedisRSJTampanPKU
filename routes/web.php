@@ -713,6 +713,55 @@ Route::post('/ri_rencana_keperawatan_5_edit', 'RIRencanaKeperawatanController@po
 Route::post('/ri_rencana_keperawatan_6_edit', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_6_edit');
 Route::post('/ri_rencana_keperawatan_7_edit', 'RIRencanaKeperawatanController@post_ri_rencana_keperawatan_7_edit');
 
+//dokumen rencana keperawatan intensif
+Route::get('/ri_rencana1_pdf', 'RIRencanaKeperawatanController@ri_rencana1_pdf');
+
+Route::get('/doc_ri_rencana1', function () {
+    return view('/doc_ri_rencana1');
+});
+
+//dokumen rencana keperawatan intensif
+Route::get('/ri_rencana2_pdf', 'RIRencanaKeperawatanController@ri_rencana2_pdf');
+
+Route::get('/doc_ri_rencana2', function () {
+    return view('/doc_ri_rencana2');
+});
+
+//dokumen rencana keperawatan intensif
+Route::get('/ri_rencana3_pdf', 'RIRencanaKeperawatanController@ri_rencana3_pdf');
+
+Route::get('/doc_ri_rencana3', function () {
+    return view('/doc_ri_rencana3');
+});
+
+//dokumen rencana keperawatan intensif
+Route::get('/ri_rencana4_pdf', 'RIRencanaKeperawatanController@ri_rencana4_pdf');
+
+Route::get('/doc_ri_rencana4', function () {
+    return view('/doc_ri_rencana4');
+});
+
+//dokumen rencana keperawatan intensif
+Route::get('/ri_rencana5_pdf', 'RIRencanaKeperawatanController@ri_rencana5_pdf');
+
+Route::get('/doc_ri_rencana5', function () {
+    return view('/doc_ri_rencana5');
+});
+
+//dokumen rencana keperawatan intensif
+Route::get('/ri_rencana6_pdf', 'RIRencanaKeperawatanController@ri_rencana6_pdf');
+
+Route::get('/doc_ri_rencana6', function () {
+    return view('/doc_ri_rencana6');
+});
+
+//dokumen rencana keperawatan intensif
+Route::get('/ri_rencana7_pdf', 'RIRencanaKeperawatanController@ri_rencana7_pdf');
+
+Route::get('/doc_ri_rencana7', function () {
+    return view('/doc_ri_rencana7');
+});
+
 Route::get('/ri_rencana_klien', 'RIRencanaKlienController@get_index');
 Route::get('/ri_rencana_klien_1', 'RIRencanaKlienController@get_ri_rencana_klien_1');
 Route::post('/ri_rencana_klien_1', 'RIRencanaKlienController@post_ri_rencana_klien_1');
@@ -749,6 +798,55 @@ Route::post('/ri_rencana_klien_7', 'RIRencanaKlienController@post_ri_rencana_kli
 Route::get('/ri_rencana_klien_7_read', 'RIRencanaKlienController@get_ri_rencana_klien_7_read');
 Route::get('/ri_rencana_klien_7_edit', 'RIRencanaKlienController@get_ri_rencana_klien_7_edit');
 Route::post('/ri_rencana_klien_7_edit', 'RIRencanaKlienController@post_ri_rencana_klien_7_edit');
+
+//dokumen rencana klien tindakan keperawatan klien
+Route::get('/ri_rencanaklien1_pdf', 'RIRencanaKlienController@ri_rencanaklien1_pdf');
+
+Route::get('/doc_ri_rencanaklien1', function () {
+    return view('/doc_ri_rencanaklien1');
+});
+
+//dokumen rencana klien tindakan keperawatan klien
+Route::get('/ri_rencanaklien2_pdf', 'RIRencanaKlienController@ri_rencanaklien2_pdf');
+
+Route::get('/doc_ri_rencanaklien2', function () {
+    return view('/doc_ri_rencanaklien2');
+});
+
+//dokumen rencana klien tindakan keperawatan klien
+Route::get('/ri_rencanaklien3_pdf', 'RIRencanaKlienController@ri_rencanaklien3_pdf');
+
+Route::get('/doc_ri_rencanaklien3', function () {
+    return view('/doc_ri_rencanaklien3');
+});
+
+//dokumen rencana klien tindakan keperawatan klien
+Route::get('/ri_rencanaklien4_pdf', 'RIRencanaKlienController@ri_rencanaklien4_pdf');
+
+Route::get('/doc_ri_rencanaklien4', function () {
+    return view('/doc_ri_rencanaklien4');
+});
+
+//dokumen rencana klien tindakan keperawatan klien
+Route::get('/ri_rencanaklien5_pdf', 'RIRencanaKlienController@ri_rencanaklien5_pdf');
+
+Route::get('/doc_ri_rencanaklien5', function () {
+    return view('/doc_ri_rencanaklien5');
+});
+
+//dokumen rencana klien tindakan keperawatan klien
+Route::get('/ri_rencanaklien6_pdf', 'RIRencanaKlienController@ri_rencanaklien6_pdf');
+
+Route::get('/doc_ri_rencanaklien6', function () {
+    return view('/doc_ri_rencanaklien6');
+});
+
+//dokumen rencana klien tindakan keperawatan klien
+Route::get('/ri_rencanaklien7_pdf', 'RIRencanaKlienController@ri_rencanaklien7_pdf');
+
+Route::get('/doc_ri_rencanaklien7', function () {
+    return view('/doc_ri_rencanaklien7');
+});
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -1085,104 +1183,6 @@ Route::get('/pdf_ri_asesmen', 'Pdf_ri_Controller@pdf_ri_asesmen');
 
 Route::get('/doc_ri_asesmen', function () {
     return view('/doc_ri_asesmen');
-});
-
-//dokumen rencana keperawatan intensif
-Route::get('/pdf_ri_rencana1', 'Pdf_ri_Controller@pdf_ri_rencana1');
-
-Route::get('/doc_ri_rencana1', function () {
-    return view('/doc_ri_rencana1');
-});
-
-//dokumen rencana keperawatan intensif
-Route::get('/pdf_ri_rencana2', 'Pdf_ri_Controller@pdf_ri_rencana2');
-
-Route::get('/doc_ri_rencana2', function () {
-    return view('/doc_ri_rencana2');
-});
-
-//dokumen rencana keperawatan intensif
-Route::get('/pdf_ri_rencana3', 'Pdf_ri_Controller@pdf_ri_rencana3');
-
-Route::get('/doc_ri_rencana3', function () {
-    return view('/doc_ri_rencana3');
-});
-
-//dokumen rencana keperawatan intensif
-Route::get('/pdf_ri_rencana4', 'Pdf_ri_Controller@pdf_ri_rencana4');
-
-Route::get('/doc_ri_rencana4', function () {
-    return view('/doc_ri_rencana4');
-});
-
-//dokumen rencana keperawatan intensif
-Route::get('/pdf_ri_rencana5', 'Pdf_ri_Controller@pdf_ri_rencana5');
-
-Route::get('/doc_ri_rencana5', function () {
-    return view('/doc_ri_rencana5');
-});
-
-//dokumen rencana keperawatan intensif
-Route::get('/pdf_ri_rencana6', 'Pdf_ri_Controller@pdf_ri_rencana6');
-
-Route::get('/doc_ri_rencana6', function () {
-    return view('/doc_ri_rencana6');
-});
-
-//dokumen rencana keperawatan intensif
-Route::get('/pdf_ri_rencana7', 'Pdf_ri_Controller@pdf_ri_rencana7');
-
-Route::get('/doc_ri_rencana7', function () {
-    return view('/doc_ri_rencana7');
-});
-
-//dokumen rencana klien tindakan keperawatan klien
-Route::get('/pdf_ri_rencanaklien1', 'Pdf_ri_Controller@pdf_ri_rencanaklien1');
-
-Route::get('/doc_ri_rencanaklien1', function () {
-    return view('/doc_ri_rencanaklien1');
-});
-
-//dokumen rencana klien tindakan keperawatan klien
-Route::get('/pdf_ri_rencanaklien2', 'Pdf_ri_Controller@pdf_ri_rencanaklien2');
-
-Route::get('/doc_ri_rencanaklien2', function () {
-    return view('/doc_ri_rencanaklien2');
-});
-
-//dokumen rencana klien tindakan keperawatan klien
-Route::get('/pdf_ri_rencanaklien3', 'Pdf_ri_Controller@pdf_ri_rencanaklien3');
-
-Route::get('/doc_ri_rencanaklien3', function () {
-    return view('/doc_ri_rencanaklien3');
-});
-
-//dokumen rencana klien tindakan keperawatan klien
-Route::get('/pdf_ri_rencanaklien4', 'Pdf_ri_Controller@pdf_ri_rencanaklien4');
-
-Route::get('/doc_ri_rencanaklien4', function () {
-    return view('/doc_ri_rencanaklien4');
-});
-
-//dokumen rencana klien tindakan keperawatan klien
-Route::get('/pdf_ri_rencanaklien5', 'Pdf_ri_Controller@pdf_ri_rencanaklien5');
-
-Route::get('/doc_ri_rencanaklien5', function () {
-    return view('/doc_ri_rencanaklien5');
-});
-
-//dokumen rencana klien tindakan keperawatan klien
-Route::get('/pdf_ri_rencanaklien6', 'Pdf_ri_Controller@pdf_ri_rencanaklien6');
-
-Route::get('/doc_ri_rencanaklien6', function () {
-    return view('/doc_ri_rencanaklien6');
-});
-
-//dokumen rencana klien tindakan keperawatan klien
-Route::get('/pdf_ri_rencanaklien7', 'Pdf_ri_Controller@pdf_ri_rencanaklien7');
-
-Route::get('/doc_ri_rencanaklien7', function () {
-    return view('/doc_ri_rencanaklien7');
 });
 
 

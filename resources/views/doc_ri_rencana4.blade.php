@@ -67,7 +67,7 @@ header('Content-Type: application/pdf');
       <td class="box">
         <ul>
           <?php if(isset($ti1[1])) echo 
-          "<li>PKendalikan secara verbal</li>";
+          "<li>Kendalikan secara verbal</li>";
           ?>
           <?php if(isset($ti1[2])) echo 
           "<li>Pengikatan atau isolasi</li>";
