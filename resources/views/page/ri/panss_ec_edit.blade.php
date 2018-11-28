@@ -55,13 +55,14 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_panss_ec_edit">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="{{url('ri_panss_ec_edit')}}">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
                 PANSS EC
               </header>
               <div class="panel-body">
+                <input type="hidden" name="id_data" value="{{$id_data}}">
 
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">P4. GADUH GELISAH</label>

@@ -68,6 +68,7 @@
                       <th style="width: 13%; text-align: center;vertical-align:middle;">G8<br>Ketidakoperatifan</th>
                       <th style="width: 13%; text-align: center;vertical-align:middle;">G14<br>Pengendalian Impuls yang buruk</th>
                       <th style="width: 13%; text-align: center;vertical-align:middle;">Jumlah</th>
+                      <th style="">Action</a></th>
                     </tr>
                   </thead>
 
@@ -94,6 +95,9 @@
                       </td>
                       <td>
                         <input type="text" class="form-control" value="{{$p['p4'] + $p['p7'] + $p['g4'] + $p['g8'] + $p['g14']}}" disabled>
+                      </td>
+                      <td>
+                        <a href="{{url('')}}/ri_panss_ec_edit/{{$p['id_data']}}"><button type="button" class="btn btn-primary">Edit</button></a>
                       </td>
                     </tr>
                     @endforeach

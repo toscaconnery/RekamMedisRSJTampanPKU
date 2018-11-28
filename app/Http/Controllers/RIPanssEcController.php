@@ -37,7 +37,7 @@ class RIPanssEcController extends Controller
         $daftar_dokumen->ri_panss_ec = True;
         $daftar_dokumen->save();
 
-    	return redirect('daftar_dokumen');
+    	return redirect('ri_panss_ec_read');
     }
 
     public function get_ri_panss_ec_data()
@@ -75,16 +75,27 @@ class RIPanssEcController extends Controller
         return view('page.ri.panss_ec_read', $this->data);
     }
 
-    public function get_ri_panss_ec_edit()
+    public function get_ri_panss_ec_edit($id)
     {
-        $this->get_ri_panss_ec_data();
+        // $this->get_ri_panss_ec_data();
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RIPanssEc::where('id_regis', $id_pasien)->where('id', $id)->first();
+        $this->data['tanggal'] = $pasien->tanggal;
+        $this->data['p4'] = $pasien->p4;
+        $this->data['p7'] = $pasien->p7;
+        $this->data['g8'] = $pasien->g8;
+        $this->data['g14'] = $pasien->g14;
+        $this->data['g4'] = $pasien->g4;
+        $this->data['bangsal'] = $pasien->bangsal;
+        $this->data['id_data'] = $id;
+        $this->data['tanggal_pemeriksaan'] = $pasien->tanggal_pemeriksaan;
         return view('page.ri.panss_ec_edit', $this->data);
     }
 
     public function post_ri_panss_ec_edit(Request $request)
     {
         $id_pasien = Session::get('id_pasien');
-        $data = RIPanssEc::where('id_regis', $id_pasien)->first();
+        $data = RIPanssEc::where('id_regis', $id_pasien)->where('id', $request->id_data)->first();
         $data->id_regis = $id_pasien;
         $data->p4 = $request->p4;
         $data->g8 = $request->g8;
@@ -94,6 +105,6 @@ class RIPanssEcController extends Controller
         $data->bangsal = $request->bangsal;
         $data->tanggal_pemeriksaan = $request->tanggal_pemeriksaan;
         $data->save();
-        return redirect('daftar_dokumen');
+        return redirect('ri_panss_ec_read');
     }
 }
