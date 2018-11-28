@@ -27,6 +27,7 @@ class CreateRiAsuhanGiziTable extends Migration
             $table->string('mobilitas')->nullable();
             $table->string('perokok',1)->nullable();
             $table->string('riwayat')->nullable();
+            $table->string('riwayat_sosial_ekonomi')->nullable();
             $table->string('diagnosa_dokter')->nullable();
             $table->string('alergi_makanan')->nullable();
             $table->string('ketidaksukaan_makanan')->nullable();

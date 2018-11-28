@@ -61,41 +61,42 @@
 
                   <thead>
                     <tr>
-                      <th style="width: 22%; text-align: center;vertical-align:middle;">Tanggal</th>
+                      <th style="width: 13%; text-align: center;vertical-align:middle;">Tanggal</th>
                       <th style="width: 13%; text-align: center;vertical-align:middle;">P4<br>Gaduh Gelisah</th>
                       <th style="width: 13%; text-align: center;vertical-align:middle;">P7<br>Permusuhan</th>
-                      <th style="width: 13%; text-align: center;vertical-align:middle;">G7<br>Ketegangan</th>
+                      <th style="width: 13%; text-align: center;vertical-align:middle;">G4<br>Ketegangan</th>
                       <th style="width: 13%; text-align: center;vertical-align:middle;">G8<br>Ketidakoperatifan</th>
-                      <th style="width: 13%; text-align: center;vertical-align:middle;">G7<br>Pengendalian Impuls yang buruk</th>
+                      <th style="width: 13%; text-align: center;vertical-align:middle;">G14<br>Pengendalian Impuls yang buruk</th>
                       <th style="width: 13%; text-align: center;vertical-align:middle;">Jumlah</th>
                     </tr>
                   </thead>
 
                   <tbody>
-                    
+                    @foreach($pasien as $p)
                     <tr>
                       <td>
-                        <input type="date" class="form-control" name="" disabled="">
+                        <input type="text" class="form-control" value="{{$p['tanggal_pemeriksaan']}}" disabled>
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="" disabled="">
+                        <input type="text" class="form-control" value="{{$p['p4']}}" disabled>
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="" disabled="">
+                        <input type="text" class="form-control" value="{{$p['p7']}}" disabled>
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="" disabled="">
+                        <input type="text" class="form-control" value="{{$p['g4']}}" disabled>
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="" disabled="">
+                        <input type="text" class="form-control" value="{{$p['g8']}}" disabled>
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="" disabled="">
+                        <input type="text" class="form-control" value="{{$p['g14']}}" disabled>
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="" disabled="">
+                        <input type="text" class="form-control" value="{{$p['p4'] + $p['p7'] + $p['g4'] + $p['g8'] + $p['g14']}}" disabled>
                       </td>
                     </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>

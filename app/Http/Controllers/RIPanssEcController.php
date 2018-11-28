@@ -49,7 +49,6 @@ class RIPanssEcController extends Controller
         $this->data['tanggal'] = $pasien->tanggal;
         $this->data['p4'] = $pasien->p4;
         $this->data['p7'] = $pasien->p7;
-        $this->data['g7'] = $pasien->g7;
         $this->data['g8'] = $pasien->g8;
         $this->data['g14'] = $pasien->g14;
         $this->data['g4'] = $pasien->g4;
@@ -59,7 +58,20 @@ class RIPanssEcController extends Controller
 
     public function get_ri_panss_ec_read()
     {
-        $this->get_ri_panss_ec_data();
+        // $this->get_ri_panss_ec_data();
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RIPanssEc::where('id_regis', $id_pasien)->get();
+        $this->data['pasien'] = array();
+        foreach ($pasien as $key => $value) {
+            $this->data['pasien'][$key] = array();
+            $this->data['pasien'][$key]['id_data'] = $value->id;
+            $this->data['pasien'][$key]['p4'] = $value->p4;
+            $this->data['pasien'][$key]['p7'] = $value->p7;
+            $this->data['pasien'][$key]['g8'] = $value->g8;
+            $this->data['pasien'][$key]['g14'] = $value->g14;
+            $this->data['pasien'][$key]['g4'] = $value->g4;
+            $this->data['pasien'][$key]['tanggal_pemeriksaan'] = $value->tanggal_pemeriksaan;
+        }
         return view('page.ri.panss_ec_read', $this->data);
     }
 
