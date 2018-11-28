@@ -130,7 +130,7 @@ header('Content-Type: application/pdf');
       <td class="box-top">{{$dxk_3}}</td>
       <td class="box-top">3. Klien mengetahui cara-cara melakukan perawatan diri</td>
       <td class="box-top">
-        3.1. Dalam ... kali interaksi klien menyebutkan frekuensi menjaga perawatan diri:<br>
+        3.1. Dalam {{$t3}} kali interaksi klien menyebutkan frekuensi menjaga perawatan diri:<br>
         <ul>
           <li>Frekuensi mandi</li>
           <li>Frekuensi gosok gigi</li>
@@ -139,7 +139,7 @@ header('Content-Type: application/pdf');
           <li>Frekuensi berhias</li>
           <li>Frekuensi gunting kuku</li>
         </ul>
-        3.2. Dalam ... kali interaksi klien menjelaskan<br>
+        3.2. Dalam {{$t3b}} kali interaksi klien menjelaskan<br>
         cara menjaga perawatan diri:<br>
         <ul>
           <li>Cara mandi</li>
@@ -174,12 +174,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
     <tr>
-      <td class="box-top"></td>
-      <td class="box-top"></td>
-      <td class="box-top"></td>
+      <td class="box-top">{{$tanggal_4}}</td>
+      <td class="box-top">{{$nodx_4}}</td>
+      <td class="box-top">{{$dxk_4}}</td>
       <td class="box-top">4. Klien dapat melaksanakan perawatan diri dengan bantuan perawat</td>
       <td class="box-top">
-        4. Dalam ... kali interaksi klien mempraktekkan perawatan diri dengan dibantu oleh perawat:<br>
+        4. Dalam {{$k4}} kali interaksi klien mempraktekkan perawatan diri dengan dibantu oleh perawat:<br>
         <ul>
           <li>Mandi</li>
           <li>Gosok gigi</li>
@@ -203,12 +203,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
     <tr>
-      <td class="box-top"></td>
-      <td class="box-top"></td>
-      <td class="box-top"></td>
+      <td class="box-top">{{$tanggal_5}}</td>
+      <td class="box-top">{{$nodx_5}}</td>
+      <td class="box-top">{{$dxk_5}}</td>
       <td class="box-top">5. Klien dapat melaksanakan perawatan diri secara mandiri</td>
       <td class="box-top">
-        5. Dalam ... kali interaksi klien melaksanakan praktek perawatan diri secara mandiri:<br>
+        5. Dalam {{$k5}} kali interaksi klien melaksanakan praktek perawatan diri secara mandiri:<br>
         <ul>
           <li>Mandi 2 X sehari</li>
           <li>Gosok gigi sehabis makan</li>
@@ -232,14 +232,14 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
     <tr>
-      <td class="box-top"></td>
-      <td class="box-top"></td>
-      <td class="box-top"></td>
+      <td class="box-top">{{$tanggal_6}}</td>
+      <td class="box-top">{{$nodx_6}}</td>
+      <td class="box-top">{{$dxk_6}}</td>
       <td class="box-top">6. Klien mendapatkan dukungan keluarga untuk meningkatkan perawatan diri</td>
       <td class="box-top">
-        6.1. Dalam ... kali interaksi keluarga menjelaskan cara-cara membantu klien dalam memenuhi kebutuhan perawatan dirinya<br>
+        6.1. Dalam {{$k6}} kali interaksi keluarga menjelaskan cara-cara membantu klien dalam memenuhi kebutuhan perawatan dirinya<br>
         <br>
-        6.2. Dalam ... kali interaksi keluarga menyiapkan sarana perawatan diri klien: sabun mandi, pasta gigi, sikat gigi, shampoo, handuk, pakaian bersih, dan alat berhias<br>
+        6.2. Dalam {{$k6b}} kali interaksi keluarga menyiapkan sarana perawatan diri klien: sabun mandi, pasta gigi, sikat gigi, shampoo, handuk, pakaian bersih, dan alat berhias<br>
         <br>
         6.3. Keluarga mempraktekkan perawatan diri pada klien
       </td>
@@ -270,19 +270,19 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
     <tr>
-      <td class="box-top"></td>
-      <td class="box-top"></td>
-      <td class="box-top"></td>
+      <td class="box-top">{{$tanggal_7}}</td>
+      <td class="box-top">{{$nodx_7}}</td>
+      <td class="box-top">{{$dxk_7}}</td>
       <td class="box-top">7. Klien mendapat dukungan keluarga.</td>
       <td class="box-top">
-        7.1. Setelah ... X interaksi keluarga dapat menjelaskan tentang:<br>
+        7.1. Setelah {{$k7}} X interaksi keluarga dapat menjelaskan tentang:<br>
         <ul>
           <li>Pengertian waham</li>
           <li>Tanda dan gejala waham</li>
           <li>Penyebab dan akibat waham</li>
           <li>Cara merawat klien waham</li>
         </ul>
-        7.2. Setelah ... X interaksi keluarga dapat mempraktekkan cara merawat klien waham.
+        7.2. Setelah {{$k7b}} X interaksi keluarga dapat mempraktekkan cara merawat klien waham.
       </td>
       <td class="box-top">
         7.1. Diskusikan pentingnya peran serta keluarga sebagai pendukung untuk mengatasi waham.<br>
@@ -300,19 +300,19 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
     <tr>
-      <td class="box-top"></td>
-      <td class="box-top"></td>
-      <td class="box-top"></td>
+      <td class="box-top">{{$tanggal_8}}</td>
+      <td class="box-top">{{$nodx_8}}</td>
+      <td class="box-top">{{$dxk_8}}</td>
       <td class="box-top">8. Klien dapat memanfaatkan obat dengan baik</td>
       <td class="box-top">
-        8.1. Setelah ... X interaksi klien menyebutkan:<br>
+        8.1. Setelah {{$k8}} X interaksi klien menyebutkan:<br>
         <ul>
           <li>Manfaat minum obat</li>
           <li>Kerugian tidak minum obat</li>
           <li>Nama, warna, dosis, efek terapi dan efek samping obat</li>
         </ul>
-        8.2. Setelah ... X interaksi klien mendemonstrasikan penggunaan obat dengan benar<br>
-        8.3. Setelah ... X interaksi klien menyebutkan akibat berhenti minum obat tanpa konsultasi dokter
+        8.2. Setelah {{$k8b}} X interaksi klien mendemonstrasikan penggunaan obat dengan benar<br>
+        8.3. Setelah {{$k8c}} X interaksi klien menyebutkan akibat berhenti minum obat tanpa konsultasi dokter
       </td>
       <td class="box-top">
         8.1. Diskusikan dengan klien tentang manfaat dan kerugian tidak minum obat, nama, warna, dosis, cara, efek terapi dan efek samping penggunaan obat

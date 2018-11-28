@@ -20,7 +20,7 @@ header('Content-Type: application/pdf');
           Tanggal Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : 00:00
+          : {{$tanggal_pengkajian}}
         </td>                
       </tr>      
       <tr>
@@ -28,7 +28,7 @@ header('Content-Type: application/pdf');
           Jam Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : 00:00
+          : {{$jam_pengkajian}}
         </td>                
       </tr>
       <tr>
@@ -36,7 +36,7 @@ header('Content-Type: application/pdf');
           Ruangan
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : -
+          : {{$ruangan}}
         </td>                
       </tr>
       <tr>
@@ -44,7 +44,7 @@ header('Content-Type: application/pdf');
           Diagnosa Medis
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : -
+          : {{$diagnosa_medis}}
         </td>                
       </tr>
     </tbody>
@@ -68,22 +68,22 @@ header('Content-Type: application/pdf');
   <tbody>
     <tr>
       <td class="box-top"><br></td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top"></td>
+      <td class="box-top"></td>
+      <td class="box-top"></td>
+      <td class="box-top"></td>
+      <td class="box-top"></td>
     </tr>
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_1}}</td>
+      <td class="box-top">{{$nodx_1}}</td>
       <td class="box-top">Risiko Bunuh diri</td>
       <td class="box-top">
-        TUM: ...<br>
+        TUM: {{$t1}}<br>
         TUK 1: Klien dapat membina hubungan saling percaya
       </td>
       <td class="box-top">
-        1. Setelah ... X interaksi klien menunjukkan tanda-tanda percaya kepada perawat:
+        1. Setelah {{$k1}} X interaksi klien menunjukkan tanda-tanda percaya kepada perawat:
         <br>
         <ul>
           <li>Ekspresi wajah bersahabat.</li>
@@ -112,12 +112,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_2}}</td>
+      <td class="box-top">{{$nodx_2}}</td>
+      <td class="box-top">{{$dxk_2}}</td>
       <td class="box-top">TUK 2: Klien dapat dilindungi dari tindakan yang mengancam atau mencoba bunuh diri</td>
       <td class="box-top">
-          2. Setelah ... X interaksi klien dapat dilindungi sampai tidak ada keinginan bunuh diri<br>
+          2. Setelah {{$k2}} X interaksi klien dapat dilindungi sampai tidak ada keinginan bunuh diri<br>
           <ul>
             <li>Ada kontak mata</li>
             <li>Bersedia menceritakan perasaan</li>
@@ -134,12 +134,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_3}}</td>
+      <td class="box-top">{{$nodx_3}}</td>
+      <td class="box-top">{{$dxk_3}}</td>
       <td class="box-top">TUK 3: Klien dapat meningkatkan harga diri</td>
       <td class="box-top">
-          3. Setelah ... X interaksi klien menyebutkan:<br>
+          3. Setelah {{$k3}} X interaksi klien menyebutkan:<br>
           <ul>
             <li>Aspek positif dari kemampuan yang dimiliki klien.</li>
             <li>Aspek positif keluarga.</li>
@@ -157,12 +157,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_4}}</td>
+      <td class="box-top">{{$nodx_4}}</td>
+      <td class="box-top">{{$dxk_4}}</td>
       <td class="box-top">TUK 4: Klien dapat meningkatkan kemampuan koping dalam penyelesaian masalah</td>
       <td class="box-top">
-          4. Setelah ... X interaksi klien menyebutkan:<br>
+          4. Setelah {{$k4}} X interaksi klien menyebutkan:<br>
           <ul>
             <li>Koping konstruktif yang dapat digunkan untuk menyelesaikan masalah</li>
             <li>Efektifitas penggunaan koping</li>
@@ -177,12 +177,12 @@ header('Content-Type: application/pdf');
       </td>
     </tr>
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_5}}</td>
+      <td class="box-top">{{$nodx_5}}</td>
+      <td class="box-top">{{$dxk_5}}</td>
       <td class="box-top">TUK 5: Klien dapat merencanakan masa depan</td>
       <td class="box-top">
-        5. Setelah ... X interaksi klien menyebutkan:<br>
+        5. Setelah {{$k5}} X interaksi klien menyebutkan:<br>
         <ul>
           <li>Rencana masa depan yang sesuai kemampuan</li>
         </ul>

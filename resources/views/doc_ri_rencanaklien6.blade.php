@@ -20,7 +20,7 @@ header('Content-Type: application/pdf');
           Tanggal Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : 00:00
+          : {{$tanggal_pengkajian}}
         </td>                
       </tr>      
       <tr>
@@ -28,7 +28,7 @@ header('Content-Type: application/pdf');
           Jam Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : 00:00
+          : {{$jam_pengkajian}}
         </td>                
       </tr>
       <tr>
@@ -36,7 +36,7 @@ header('Content-Type: application/pdf');
           Ruangan
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : -
+          : {{$ruangan}}
         </td>                
       </tr>
       <tr>
@@ -44,7 +44,7 @@ header('Content-Type: application/pdf');
           Diagnosa Medis
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : -
+          : {{$diagnosa_medis}}
         </td>                
       </tr>
     </tbody>
@@ -68,27 +68,27 @@ header('Content-Type: application/pdf');
   <tbody>
     <tr>
       <td class="box-top"><br></td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top"></td>
+      <td class="box-top"></td>
+      <td class="box-top"></td>
+      <td class="box-top"></td>
+      <td class="box-top"></td>
     </tr>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_1}}</td>
+      <td class="box-top">{{$nodx_1}}</td>
       <td class="box-top">
-        ... b.d<br>
+        {{$dxk_1}} b.d<br>
         halusinasi(lihat/dengar/ penghidu/raba/kecap)
       </td>
       <td class="box-top">
-        TUM: ...<br>
+        TUM: {{$t1}}<br>
         TUK 1:<br>
         Klien dapat membina hubungan saling percaya
       </td>
       <td class="box-top">
-        1. Setelah ... X interaksi klien menunjukkan tanda-tanda percaya kepada perawat:
+        1. Setelah {{$k1}} X interaksi klien menunjukkan tanda-tanda percaya kepada perawat:
         <br>
         <ul>
           <li>Ekspresi wajah bersahabat.</li>
@@ -118,15 +118,15 @@ header('Content-Type: application/pdf');
     </tr>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_2}}</td>
+      <td class="box-top">{{$nodx_2}}</td>
+      <td class="box-top">{{$dxk_2}}</td>
       <td class="box-top">
         TUK 2:<br>
         Klien dapat mengenal halusinasinya
       </td>
       <td class="box-top">
-        2. Setelah ... X interaksi klien menyebutkan:<br>
+        2. Setelah {{$k2}} X interaksi klien menyebutkan:<br>
         <ul>
           <li>Isi</li>
           <li>Waktu</li>
@@ -153,12 +153,12 @@ header('Content-Type: application/pdf');
     </tr>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_2b}}</td>
+      <td class="box-top">{{$nodx_2b}}</td>
+      <td class="box-top">{{$dxk_2b}}</td>
+      <td class="box-top"></td>
       <td class="box-top">
-        2. Setelah ... X interaksi klien menyatakan perasaan dan responnya saat mengalami halusinasi<br>
+        2. Setelah {{$k2b}} X interaksi klien menyatakan perasaan dan responnya saat mengalami halusinasi<br>
         <ul>
           <li>Marah</li>
           <li>Takut</li>
@@ -176,19 +176,19 @@ header('Content-Type: application/pdf');
     </tr>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_3}}</td>
+      <td class="box-top">{{$nodx_3}}</td>
+      <td class="box-top">{{$dxk_3}}</td>
       <td class="box-top">
         TUK 3:<br>
         Klien dapat mengontrol halusinasinya
       </td>
       <td class="box-top">
-        3.1. Setelah ... X interaksi klien menyebutkan tindakan yang biasanya dilakukan untuk mengendalikan halusinasinya<br>
-        3.2. Setelah ... X interkasi klien menyebutkan cara baru mengontrol halusinasi<br>
-        3.3. Setelah ... X interaksi klien dapat memilih dan memperagakan cara mengatasi halusinasi (dengar/lihat/penghidu/raba/kecap)
-        3.4. Setelah ... X interkasi klien melaksanakan cara yang telah dipilih untuk mengendalikan halusinasinya<br>
-        3.5. Setelah ... X pertemuan klien mengikuti terapi aktivitas kelompok
+        3.1. Setelah {{$k3}} X interaksi klien menyebutkan tindakan yang biasanya dilakukan untuk mengendalikan halusinasinya<br>
+        3.2. Setelah {{$k3b}} X interkasi klien menyebutkan cara baru mengontrol halusinasi<br>
+        3.3. Setelah {{$k3c}} X interaksi klien dapat memilih dan memperagakan cara mengatasi halusinasi (dengar/lihat/penghidu/raba/kecap)
+        3.4. Setelah {{$k3d}} X interkasi klien melaksanakan cara yang telah dipilih untuk mengendalikan halusinasinya<br>
+        3.5. Setelah {{$k3e}} X pertemuan klien mengikuti terapi aktivitas kelompok
       </td>
       <td class="box-top">
         3.1. Identifikasi bersama klien cara atau tindakan yang dilakukan jika terjadi halusinasi (tidur, marah, menyibukkan diri dll)<br>
@@ -212,16 +212,16 @@ header('Content-Type: application/pdf');
     </tr>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_4}}</td>
+      <td class="box-top">{{$nodx_4}}</td>
+      <td class="box-top">{{$dxk_4}}</td>
       <td class="box-top">
         TUK 4:<br>
         Klien dapat dukukngan dari keluarga dalam mengontrol halusinasinya
       </td>
       <td class="box-top">
-        4.1. Setelah ... X pertemuan keluarga, keluarga menyatakan setuju untuk mengikuti pertemuan dengan perawat
-        4.2. Setelah ... X Interkasi keluarga menyebutkan pengertian, tanda dan gejala, proses terjadinya halusinasi dan tindakan untuk mengendalikan halusinasi
+        4.1. Setelah {{$k4}} X pertemuan keluarga, keluarga menyatakan setuju untuk mengikuti pertemuan dengan perawat
+        4.2. Setelah {{$k4b}} X Interkasi keluarga menyebutkan pengertian, tanda dan gejala, proses terjadinya halusinasi dan tindakan untuk mengendalikan halusinasi
       </td>
       <td class="box-top">
         4.1. Buat kontrak dengan keluarga untuk pertemuan (waktu, tempat dan topik)<br>
@@ -239,22 +239,22 @@ header('Content-Type: application/pdf');
     </tr>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_5}}</td>
+      <td class="box-top">{{$nodx_5}}</td>
+      <td class="box-top">{{$dxk_5}}</td>
       <td class="box-top">
         TUK 5:<br>
         Klien dapat memanfaatkan obat dengan baik
       </td>
       <td class="box-top">
-        5.1. Setelah ... X interaksi klien menyebutkan:<br>
+        5.1. Setelah {{$k5}} X interaksi klien menyebutkan:<br>
         <ul>
           <li>Manfaat minum obat</li>
           <li>Kerugian tidak minum obat</li>
           <li>Nama, warna, dosis, efek terapi dan efek samping obat</li>
         </ul>
-        5.2. Stelah ... X interaksi klien mendemonstrasikan penggunaan obat dengan benar<br>
-        5.3. Setelah ... X interaksi klien menyebutkan akibat berhenti minum obat tanpa konsultasi dokter
+        5.2. Stelah {{$k5b}} X interaksi klien mendemonstrasikan penggunaan obat dengan benar<br>
+        5.3. Setelah {{$k5c}} X interaksi klien menyebutkan akibat berhenti minum obat tanpa konsultasi dokter
       </td>
       <td class="box-top">
         5.1. Diskusikan dengan klien tentang manfaat dan kerugian tidak minum obat, nama, warna, dosis, cara, efek terapi dan efek samping penggunaan obat<br>
