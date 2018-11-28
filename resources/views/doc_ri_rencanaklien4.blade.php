@@ -17,10 +17,10 @@ header('Content-Type: application/pdf');
     <tbody>
       <tr>
         <td class="contain" width="20%" style="padding:-0.2%">
-          Jam Pengkajian 
+          Tanggal Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : 00:00
+          : {{$tanggal_pengkajian}}
         </td>                
       </tr>      
       <tr>
@@ -28,7 +28,7 @@ header('Content-Type: application/pdf');
           Jam Pengkajian 
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : 00:00
+          : {{$jam_pengkajian}}
         </td>                
       </tr>
       <tr>
@@ -36,7 +36,7 @@ header('Content-Type: application/pdf');
           Ruangan
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : -
+          : {{$ruangan}}
         </td>                
       </tr>
       <tr>
@@ -44,7 +44,7 @@ header('Content-Type: application/pdf');
           Diagnosa Medis
         </td>    
         <td class="contain" style="padding:-0.2%">  
-          : -
+          : {{$diagnosa_medis}}
         </td>                
       </tr>
     </tbody>
@@ -68,16 +68,16 @@ header('Content-Type: application/pdf');
   <tbody>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">...<br>b.d. menarik diri</td>
+      <td class="box-top">{{$tanggal_1}}</td>
+      <td class="box-top">{{$nodx_1}}</td>
+      <td class="box-top">{{$dxk_1}}<br>b.d. menarik diri</td>
       <td class="box-top">
-        TUM: ...<br>
+        TUM: {{$t1}}<br>
         TUK:<br>
         1. klien dapat membina hubungan saling percaya
       </td>
       <td class="box-top">
-        1. Setelah ... X interaksi klien menunjukkan tanda-tanda percaya kepada / terhadap perawat:<br>
+        1. Setelah {{$k1}} X interaksi klien menunjukkan tanda-tanda percaya kepada / terhadap perawat:<br>
         <ul>
           <li>Wajah cerah, tersenyum</li>
           <li>Mau berkenalan</li>
@@ -101,12 +101,12 @@ header('Content-Type: application/pdf');
     </tr>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_2}}</td>
+      <td class="box-top">{{$nodx_2}}</td>
+      <td class="box-top">{{$dxk_2}}</td>
       <td class="box-top">2. Klien mampu menyebutkan penyebab menarik diri</td>
       <td class="box-top">
-        2. Setelah ... X interaksi klien dapat menyebutkan minimal satu penyebab menarik diri dari:<br>
+        2. Setelah {{$k2}} X interaksi klien dapat menyebutkan minimal satu penyebab menarik diri dari:<br>
         <ul>
           <li>diri sendiri</li>
           <li>orang lain</li>
@@ -129,12 +129,12 @@ header('Content-Type: application/pdf');
     </tr>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_3}}</td>
+      <td class="box-top">{{$nodx_3}}</td>
+      <td class="box-top">{{$dxk_3}}</td>
       <td class="box-top">3. Klien mampu menyebutkan keuntungan berhubungan sosial dan kerugian menarik diri.</td>
       <td class="box-top">
-        3. Setelah ... X interaksi dengan klien dapat menyebutkan keuntungan berhubungan sosial, misalnya:<br>
+        3. Setelah {{$k3}} X interaksi dengan klien dapat menyebutkan keuntungan berhubungan sosial, misalnya:<br>
         <ul>
           <li>Banyak teman</li>
           <li>Tidak kesepian</li>
@@ -162,12 +162,12 @@ header('Content-Type: application/pdf');
     </tr>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_4}}</td>
+      <td class="box-top">{{$nodx_4}}</td>
+      <td class="box-top">{{$dxk_4}}</td>
       <td class="box-top">4. Klien dapat melaksanakan hubungan sosial secara bertahap.</td>
       <td class="box-top">
-        4. Setelah ... X interaksi klien dapat melakukan hubungan sosial secara bertahap dengan:<br>
+        4. Setelah {{$k4}} X interaksi klien dapat melakukan hubungan sosial secara bertahap dengan:<br>
         <ul>
           <li>Perawat</li>
           <li>Perawat lain</li>
@@ -191,12 +191,12 @@ header('Content-Type: application/pdf');
     </tr>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_5}}</td>
+      <td class="box-top">{{$nodx_5}}</td>
+      <td class="box-top">{{$dxk_5}}</td>
       <td class="box-top">5. Klien mampu menjelaskan perasaannya setelah berhubungan sosial.</td>
       <td class="box-top">
-        5. Setelah ... X interaksi klien dapat menjelaskan perasaannya setelah berhubungan sosial dengan:<br>
+        5. Setelah {{$k5}} X interaksi klien dapat menjelaskan perasaannya setelah berhubungan sosial dengan:<br>
         <ul>
           <li>Orang lain</li>
           <li>Kelompok</li>
@@ -213,19 +213,19 @@ header('Content-Type: application/pdf');
     </tr>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_6}}</td>
+      <td class="box-top">{{$nodx_6}}</td>
+      <td class="box-top">{{$dxk_6}}</td>
       <td class="box-top">6. Klien mendapat dukungan keluarga dalam memperluas hubungan sosial</td>
       <td class="box-top">
-        6.1. Setelah ... X pertemuan keluarga dapat menjelaskan tentang:<br>
+        6.1. Setelah {{$k6}} X pertemuan keluarga dapat menjelaskan tentang:<br>
         <ul>
           <li>Pengertian menarik diri</li>
           <li>Tanda dan gejala menarik diri</li>
           <li>Penyebab dan akibat menarik diri</li>
           <li>Cara merawat klien menarik diri</li>
         </ul>
-        6.2. Setelah ... X pertemuan keluarga dapat mempraktekkan cara merawat klien menarik diri.
+        6.2. Setelah {{$k6b}} X pertemuan keluarga dapat mempraktekkan cara merawat klien menarik diri.
       </td>
       <td class="box-top">
         6.1. Diskusikan pentingnya peran serta keluarga sebagai pendukung untuk mengatasi perilaku menarik diri.<br>
@@ -245,19 +245,19 @@ header('Content-Type: application/pdf');
     </tr>
 
     <tr>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
-      <td class="box-top">-</td>
+      <td class="box-top">{{$tanggal_7}}</td>
+      <td class="box-top">{{$nodx_7}}</td>
+      <td class="box-top">{{$dxk_7}}</td>
       <td class="box-top">7. Klien dapat memanfaatkan oabt dengan baik.</td>
       <td class="box-top">
-        7.1. Setelah ... X interaksi klien menyebutkan:<br>
+        7.1. Setelah {{$k7}} X interaksi klien menyebutkan:<br>
         <ul>
           <li>Manfaat minum obat</li>
           <li>Kerugian tidak minum obat</li>
           <li>Nama, warna, dosis, efek terapi dan efek samping obat</li>
         </ul>
-        7.2. Setelah ... X interaksi klien mendemonstrasikan penggunaan obat dengan benar<br>
-        7.3. Setelah ... X interaksi klien menyebutkan akibat berhenti minum obat tanpa konsultasi dokter
+        7.2. Setelah {{$k7b}} X interaksi klien mendemonstrasikan penggunaan obat dengan benar<br>
+        7.3. Setelah {{$k7c}} X interaksi klien menyebutkan akibat berhenti minum obat tanpa konsultasi dokter
       </td>
       <td class="box-top">
         7.1. Diskusikan dengan klien tentang manfaat dan kerugian tidak minum obat, nama, warna, dosis, cara, efek terapi dan efek samping penggunaan obat<br>

@@ -1046,4 +1046,523 @@ class RIRencanaKlienController extends Controller
 		$data->save();
 		return redirect('ri_rencana_klien_7_read');
     }
+
+    public function ri_rencanaklien1_pdf()
+    {
+
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Klien Dengan Perilaku Kekerasan';
+    	$this->get_ri_rencana_klien_1_data();
+
+        ob_clean();
+
+        header('Content-type: application/pdf');
+
+        $mpdf = new \Mpdf\Mpdf([
+        'mode' => 'utf-8', 
+        'format' => 'A4-L', 
+        'orientation' => 'L'
+        ]);
+
+        $view = View::make('doc_ri_rencanaklien1',$this->data);
+        $contents = $view->render();
+
+
+        $mpdf->SetHTMLHeader('
+
+            <table width="100%" >
+                <tbody>
+                        <tr>
+
+                            <td class= "doc_lheaderleft">
+                                <img class="relative" src="img/riau.png" height="6%" width="4%">
+                            </td>
+
+                            <td class="doc_lheadermid">
+                                <p style="font-size:120%;" ><b>Pemerintah Provinsi Riau</b></p>
+                                <br><p style="font-size:160%;" ><b>RUMAH SAKIT JIWA TAMPAN</b></p>
+                                <br><p style="font-size:90%;" >Jl. H. R. Soebrantas Km. 12,5 Pekanbaru Telp. (0761) 63240</p>
+                                <p style="font-size:90%;" >Fax. (0761) 63239 E-mail : rstampan@yahoo.com</p>
+                            </td>
+                            
+                            <td class="doc_lheaderright">
+                            <p>No. RM           </p><br>
+                            <p>Nama Pasien      </p><br>
+                            <p>Tanggal Lahir    </p><br>
+                            <p>Jenis Kelamin    </p><br>
+                            </td>    
+
+                            <td class="doc_lheaderright_ans">
+                            <p>:  123456</p><br>
+                            <p>:  Joko Pangestu</p><br>
+                            <p>:  13/08/1992</p><br>
+                            <p>:  L</p><br>
+                            </td>                       
+                        </tr>
+  
+                </tbody>
+            </table> <hr>' );
+
+        $mpdf->SetHTMLFooter('<hr>
+            <table width="100%" style="vertical-align: bottom; font-family: "arial", Times, serif; 
+                font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+                <tr>
+                    <td width="33%">{DATE j-m-Y}</td>
+                    <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+                    <td width="33%" style="text-align: right;">RM. 20.1.00.RI JULI 2015</td>
+                </tr>
+            </table>'); 
+
+        $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
+
+        $mpdf->AddPage('L','','','','',10,10,35,20,10,10);
+        //right,left
+        $mpdf->WriteHTML($stylesheet, 1);
+        $mpdf->WriteHTML($contents,2,true,false);
+
+        $mpdf->Output('ri_rencanaklien1.pdf',\Mpdf\Output\Destination::INLINE);
+    }
+
+    public function ri_rencanaklien2_pdf()
+    {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Klien Dengan Gangguan Konsep Diri : Harga Diri Rendah';
+    	$this->get_ri_rencana_klien_2_data();
+
+        ob_clean();
+
+        header('Content-type: application/pdf');
+
+        $mpdf = new \Mpdf\Mpdf([
+        'mode' => 'utf-8', 
+        'format' => 'A4-L', 
+        'orientation' => 'L'
+        ]);
+
+        $view = View::make('doc_ri_rencanaklien2',$this->data);
+        $contents = $view->render();
+
+
+        $mpdf->SetHTMLHeader('
+
+            <table width="100%" >
+                <tbody>
+                        <tr>
+
+                            <td class= "doc_lheaderleft">
+                                <img class="relative" src="img/riau.png" height="6%" width="4%">
+                            </td>
+
+                            <td class="doc_lheadermid">
+                                <p style="font-size:120%;" ><b>Pemerintah Provinsi Riau</b></p>
+                                <br><p style="font-size:160%;" ><b>RUMAH SAKIT JIWA TAMPAN</b></p>
+                                <br><p style="font-size:90%;" >Jl. H. R. Soebrantas Km. 12,5 Pekanbaru Telp. (0761) 63240</p>
+                                <p style="font-size:90%;" >Fax. (0761) 63239 E-mail : rstampan@yahoo.com</p>
+                            </td>
+                            
+                            <td class="doc_lheaderright">
+                            <p>No. RM           </p><br>
+                            <p>Nama Pasien      </p><br>
+                            <p>Tanggal Lahir    </p><br>
+                            <p>Jenis Kelamin    </p><br>
+                            </td>    
+
+                            <td class="doc_lheaderright_ans">
+                            <p>:  123456</p><br>
+                            <p>:  Joko Pangestu</p><br>
+                            <p>:  13/08/1992</p><br>
+                            <p>:  L</p><br>
+                            </td>                       
+                        </tr>
+  
+                </tbody>
+            </table> <hr>' );
+
+        $mpdf->SetHTMLFooter('<hr>
+            <table width="100%" style="vertical-align: bottom; font-family: "arial", Times, serif; 
+                font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+                <tr>
+                    <td width="33%">{DATE j-m-Y}</td>
+                    <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+                    <td width="33%" style="text-align: right;">RM. 20.2.00.RI JULI 2015</td>
+                </tr>
+            </table>'); 
+
+        $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
+
+        $mpdf->AddPage('L','','','','',10,10,35,20,10,10);
+        //right,left
+        $mpdf->WriteHTML($stylesheet, 1);
+        $mpdf->WriteHTML($contents,2,true,false);
+
+        $mpdf->Output('ri_rencanaklien2.pdf',\Mpdf\Output\Destination::INLINE);
+    }
+
+    public function ri_rencanaklien3_pdf()
+    {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Klien Dengan Pola Pikir : WAHAM';
+    	$this->get_ri_rencana_klien_3_data();
+
+        ob_clean();
+
+        header('Content-type: application/pdf');
+
+        $mpdf = new \Mpdf\Mpdf([
+        'mode' => 'utf-8', 
+        'format' => 'A4-L', 
+        'orientation' => 'L'
+        ]);
+
+        $view = View::make('doc_ri_rencanaklien3');
+        $contents = $view->render();
+
+
+        $mpdf->SetHTMLHeader('
+
+            <table width="100%" >
+                <tbody>
+                        <tr>
+
+                            <td class= "doc_lheaderleft">
+                                <img class="relative" src="img/riau.png" height="6%" width="4%">
+                            </td>
+
+                            <td class="doc_lheadermid">
+                                <p style="font-size:120%;" ><b>Pemerintah Provinsi Riau</b></p>
+                                <br><p style="font-size:160%;" ><b>RUMAH SAKIT JIWA TAMPAN</b></p>
+                                <br><p style="font-size:90%;" >Jl. H. R. Soebrantas Km. 12,5 Pekanbaru Telp. (0761) 63240</p>
+                                <p style="font-size:90%;" >Fax. (0761) 63239 E-mail : rstampan@yahoo.com</p>
+                            </td>
+                            
+                            <td class="doc_lheaderright">
+                            <p>No. RM           </p><br>
+                            <p>Nama Pasien      </p><br>
+                            <p>Tanggal Lahir    </p><br>
+                            <p>Jenis Kelamin    </p><br>
+                            </td>    
+
+                            <td class="doc_lheaderright_ans">
+                            <p>:  123456</p><br>
+                            <p>:  Joko Pangestu</p><br>
+                            <p>:  13/08/1992</p><br>
+                            <p>:  L</p><br>
+                            </td>                       
+                        </tr>
+  
+                </tbody>
+            </table> <hr>' );
+
+        $mpdf->SetHTMLFooter('<hr>
+            <table width="100%" style="vertical-align: bottom; font-family: "arial", Times, serif; 
+                font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+                <tr>
+                    <td width="33%">{DATE j-m-Y}</td>
+                    <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+                    <td width="33%" style="text-align: right;">RM. 20.3.00.RI JULI 2015</td>
+                </tr>
+            </table>'); 
+
+        $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
+
+        $mpdf->AddPage('L','','','','',10,10,35,20,10,10);
+        //right,left
+        $mpdf->WriteHTML($stylesheet, 1);
+        $mpdf->WriteHTML($contents,2,true,false);
+
+        $mpdf->Output('ri_rencanaklien3.pdf',\Mpdf\Output\Destination::INLINE);
+    }
+
+    public function ri_rencanaklien4_pdf()
+    {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Klien Dengan Menarik Diri';
+    	$this->get_ri_rencana_klien_4_data();
+
+        ob_clean();
+
+        header('Content-type: application/pdf');
+
+        $mpdf = new \Mpdf\Mpdf([
+        'mode' => 'utf-8', 
+        'format' => 'A4-L', 
+        'orientation' => 'L'
+        ]);
+
+        $view = View::make('doc_ri_rencanaklien4',$this->data);
+        $contents = $view->render();
+
+
+        $mpdf->SetHTMLHeader('
+
+            <table width="100%" >
+                <tbody>
+                        <tr>
+
+                            <td class= "doc_lheaderleft">
+                                <img class="relative" src="img/riau.png" height="6%" width="4%">
+                            </td>
+
+                            <td class="doc_lheadermid">
+                                <p style="font-size:120%;" ><b>Pemerintah Provinsi Riau</b></p>
+                                <br><p style="font-size:160%;" ><b>RUMAH SAKIT JIWA TAMPAN</b></p>
+                                <br><p style="font-size:90%;" >Jl. H. R. Soebrantas Km. 12,5 Pekanbaru Telp. (0761) 63240</p>
+                                <p style="font-size:90%;" >Fax. (0761) 63239 E-mail : rstampan@yahoo.com</p>
+                            </td>
+                            
+                            <td class="doc_lheaderright">
+                            <p>No. RM           </p><br>
+                            <p>Nama Pasien      </p><br>
+                            <p>Tanggal Lahir    </p><br>
+                            <p>Jenis Kelamin    </p><br>
+                            </td>    
+
+                            <td class="doc_lheaderright_ans">
+                            <p>:  123456</p><br>
+                            <p>:  Joko Pangestu</p><br>
+                            <p>:  13/08/1992</p><br>
+                            <p>:  L</p><br>
+                            </td>                       
+                        </tr>
+  
+                </tbody>
+            </table> <hr>' );
+
+        $mpdf->SetHTMLFooter('<hr>
+            <table width="100%" style="vertical-align: bottom; font-family: "arial", Times, serif; 
+                font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+                <tr>
+                    <td width="33%">{DATE j-m-Y}</td>
+                    <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+                    <td width="33%" style="text-align: right;">RM. 20.4.00.RI JULI 2015</td>
+                </tr>
+            </table>'); 
+
+        $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
+
+        $mpdf->AddPage('L','','','','',10,10,35,20,10,10);
+        //right,left
+        $mpdf->WriteHTML($stylesheet, 1);
+        $mpdf->WriteHTML($contents,2,true,false);
+
+        $mpdf->Output('ri_rencanaklien4.pdf',\Mpdf\Output\Destination::INLINE);
+    }
+
+    public function ri_rencanaklien5_pdf()
+    {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Klien Dengan Defisit Perawatan Diri';
+    	$this->get_ri_rencana_klien_5_data();
+
+        ob_clean();
+
+        header('Content-type: application/pdf');
+
+        $mpdf = new \Mpdf\Mpdf([
+        'mode' => 'utf-8', 
+        'format' => 'A4-L', 
+        'orientation' => 'L'
+        ]);
+
+        $view = View::make('doc_ri_rencanaklien5',$this->data);
+        $contents = $view->render();
+
+
+        $mpdf->SetHTMLHeader('
+
+            <table width="100%" >
+                <tbody>
+                        <tr>
+
+                            <td class= "doc_lheaderleft">
+                                <img class="relative" src="img/riau.png" height="6%" width="4%">
+                            </td>
+
+                            <td class="doc_lheadermid">
+                                <p style="font-size:120%;" ><b>Pemerintah Provinsi Riau</b></p>
+                                <br><p style="font-size:160%;" ><b>RUMAH SAKIT JIWA TAMPAN</b></p>
+                                <br><p style="font-size:90%;" >Jl. H. R. Soebrantas Km. 12,5 Pekanbaru Telp. (0761) 63240</p>
+                                <p style="font-size:90%;" >Fax. (0761) 63239 E-mail : rstampan@yahoo.com</p>
+                            </td>
+                            
+                            <td class="doc_lheaderright">
+                            <p>No. RM           </p><br>
+                            <p>Nama Pasien      </p><br>
+                            <p>Tanggal Lahir    </p><br>
+                            <p>Jenis Kelamin    </p><br>
+                            </td>    
+
+                            <td class="doc_lheaderright_ans">
+                            <p>:  123456</p><br>
+                            <p>:  Joko Pangestu</p><br>
+                            <p>:  13/08/1992</p><br>
+                            <p>:  L</p><br>
+                            </td>                       
+                        </tr>
+  
+                </tbody>
+            </table> <hr>' );
+
+        $mpdf->SetHTMLFooter('<hr>
+            <table width="100%" style="vertical-align: bottom; font-family: "arial", Times, serif; 
+                font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+                <tr>
+                    <td width="33%">{DATE j-m-Y}</td>
+                    <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+                    <td width="33%" style="text-align: right;">RM. 20.5.00.RI JULI 2015</td>
+                </tr>
+            </table>'); 
+
+        $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
+
+        $mpdf->AddPage('L','','','','',10,10,35,20,10,10);
+        //right,left
+        $mpdf->WriteHTML($stylesheet, 1);
+        $mpdf->WriteHTML($contents,2,true,false);
+
+        $mpdf->Output('ri_rencanaklien5.pdf',\Mpdf\Output\Destination::INLINE);
+    }
+
+    public function ri_rencanaklien6_pdf()
+    {
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Klien Dengan Gangguan Persepsi Sensori : Halusinasi';
+    	$this->get_ri_rencana_klien_6_data();
+
+        ob_clean();
+
+        header('Content-type: application/pdf');
+
+        $mpdf = new \Mpdf\Mpdf([
+        'mode' => 'utf-8', 
+        'format' => 'A4-L', 
+        'orientation' => 'L'
+        ]);
+
+        $view = View::make('doc_ri_rencanaklien6',$this->data);
+        $contents = $view->render();
+
+
+        $mpdf->SetHTMLHeader('
+
+            <table width="100%" >
+                <tbody>
+                        <tr>
+
+                            <td class= "doc_lheaderleft">
+                                <img class="relative" src="img/riau.png" height="6%" width="4%">
+                            </td>
+
+                            <td class="doc_lheadermid">
+                                <p style="font-size:120%;" ><b>Pemerintah Provinsi Riau</b></p>
+                                <br><p style="font-size:160%;" ><b>RUMAH SAKIT JIWA TAMPAN</b></p>
+                                <br><p style="font-size:90%;" >Jl. H. R. Soebrantas Km. 12,5 Pekanbaru Telp. (0761) 63240</p>
+                                <p style="font-size:90%;" >Fax. (0761) 63239 E-mail : rstampan@yahoo.com</p>
+                            </td>
+                            
+                            <td class="doc_lheaderright">
+                            <p>No. RM           </p><br>
+                            <p>Nama Pasien      </p><br>
+                            <p>Tanggal Lahir    </p><br>
+                            <p>Jenis Kelamin    </p><br>
+                            </td>    
+
+                            <td class="doc_lheaderright_ans">
+                            <p>:  123456</p><br>
+                            <p>:  Joko Pangestu</p><br>
+                            <p>:  13/08/1992</p><br>
+                            <p>:  L</p><br>
+                            </td>                       
+                        </tr>
+  
+                </tbody>
+            </table> <hr>' );
+
+        $mpdf->SetHTMLFooter('<hr>
+            <table width="100%" style="vertical-align: bottom; font-family: "arial", Times, serif; 
+                font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+                <tr>
+                    <td width="33%">{DATE j-m-Y}</td>
+                    <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+                    <td width="33%" style="text-align: right;">RM. 20.6.00.RI JULI 2015</td>
+                </tr>
+            </table>'); 
+
+        $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
+
+        $mpdf->AddPage('L','','','','',10,10,35,20,10,10);
+        //right,left
+        $mpdf->WriteHTML($stylesheet, 1);
+        $mpdf->WriteHTML($contents,2,true,false);
+
+        $mpdf->Output('ri_rencanaklien6.pdf',\Mpdf\Output\Destination::INLINE);
+    }
+
+    public function ri_rencanaklien7_pdf()
+    {	
+    	$this->data['title'] = 'Rencana Tindakan Keperawatan Klien Dengan Risiko Bunuh Diri';
+    	$this->get_ri_rencana_klien_7_data();
+
+        ob_clean();
+
+        header('Content-type: application/pdf');
+
+        $mpdf = new \Mpdf\Mpdf([
+        'mode' => 'utf-8', 
+        'format' => 'A4-L', 
+        'orientation' => 'L'
+        ]);
+
+        $view = View::make('doc_ri_rencanaklien7',$this->data);
+        $contents = $view->render();
+
+
+        $mpdf->SetHTMLHeader('
+
+            <table width="100%" >
+                <tbody>
+                        <tr>
+
+                            <td class= "doc_lheaderleft">
+                                <img class="relative" src="img/riau.png" height="6%" width="4%">
+                            </td>
+
+                            <td class="doc_lheadermid">
+                                <p style="font-size:120%;" ><b>Pemerintah Provinsi Riau</b></p>
+                                <br><p style="font-size:160%;" ><b>RUMAH SAKIT JIWA TAMPAN</b></p>
+                                <br><p style="font-size:90%;" >Jl. H. R. Soebrantas Km. 12,5 Pekanbaru Telp. (0761) 63240</p>
+                                <p style="font-size:90%;" >Fax. (0761) 63239 E-mail : rstampan@yahoo.com</p>
+                            </td>
+                            
+                            <td class="doc_lheaderright">
+                            <p>No. RM           </p><br>
+                            <p>Nama Pasien      </p><br>
+                            <p>Tanggal Lahir    </p><br>
+                            <p>Jenis Kelamin    </p><br>
+                            </td>    
+
+                            <td class="doc_lheaderright_ans">
+                            <p>:  123456</p><br>
+                            <p>:  Joko Pangestu</p><br>
+                            <p>:  13/08/1992</p><br>
+                            <p>:  L</p><br>
+                            </td>                       
+                        </tr>
+  
+                </tbody>
+            </table> <hr>' );
+
+        $mpdf->SetHTMLFooter('<hr>
+            <table width="100%" style="vertical-align: bottom; font-family: "arial", Times, serif; 
+                font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+                <tr>
+                    <td width="33%">{DATE j-m-Y}</td>
+                    <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+                    <td width="33%" style="text-align: right;">RM. 20.7.00.RI JULI 2015</td>
+                </tr>
+            </table>'); 
+
+        $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
+
+        $mpdf->AddPage('L','','','','',10,10,35,20,10,10);
+        //right,left
+        $mpdf->WriteHTML($stylesheet, 1);
+        $mpdf->WriteHTML($contents,2,true,false);
+
+        $mpdf->Output('ri_rencanaklien7.pdf',\Mpdf\Output\Destination::INLINE);
+    }
 }
