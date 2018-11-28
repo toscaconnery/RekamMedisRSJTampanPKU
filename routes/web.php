@@ -351,6 +351,13 @@ Route::get('/ri_evaluasi_keperawatan_read', 'RIEvaluasiKeperawatanController@get
 Route::get('/ri_evaluasi_keperawatan_edit', 'RIEvaluasiKeperawatanController@get_ri_evaluasi_keperawatan_edit');
 Route::post('/ri_evaluasi_keperawatan_edit', 'RIEvaluasiKeperawatanController@post_ri_evaluasi_keperawatan_edit');
 
+//dokumen evaluasi evaluasi
+Route::get('/ri_evaluasi_pdf', 'RIEvaluasiKeperawatanController@ri_evaluasi_pdf');
+
+Route::get('/doc_ri_evaluasi', function () {
+    return view('/doc_ri_evaluasi');
+});
+
 Route::get('/ri_monitoring_observasi', 'RIMonitoringObservasiController@get_ri_monitoring_observasi');
 Route::post('/ri_monitoring_observasi', 'RIMonitoringObservasiController@post_ri_monitoring_observasi');
 Route::get('/ri_monitoring_observasi_read', 'RIMonitoringObservasiController@get_ri_monitoring_observasi_read');
@@ -675,6 +682,13 @@ Route::get('/ri_asuhan_gizi_read', 'RIAsuhanGiziController@get_ri_asuhan_gizi_re
 Route::get('/ri_asuhan_gizi_edit', 'RIAsuhanGiziController@get_ri_asuhan_gizi_edit');
 Route::post('/ri_asuhan_gizi_edit', 'RIAsuhanGiziController@post_ri_asuhan_gizi_edit');
 Route::get('/ri_asuhan_gizi_list_konsultasi', 'RIAsuhanGiziController@get_ri_asuhan_gizi_list_konsultasi');
+
+//dokumen asuhan gizi
+Route::get('/ri_gizi_pdf', 'RIAsuhanGiziController@ri_gizi_pdf');
+
+Route::get('/doc_ri_gizi', function () {
+    return view('/doc_ri_gizi');
+});
 
 Route::get('/ri_rencana_keperawatan', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan');
 Route::get('/ri_rencana_keperawatan_1', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_1');
@@ -1160,23 +1174,13 @@ Route::get('/doc_ri_tindak', function () {
     return view('/doc_ri_tindak');
 });
 
-//dokumen evaluasi evaluasi
-Route::get('/pdf_ri_evaluasi', 'Pdf_ri_Controller@pdf_ri_evaluasi');
-
-Route::get('/doc_ri_evaluasi', function () {
-    return view('/doc_ri_evaluasi');
-});
 
 
 
 
 
-//dokumen asuhan gizi
-Route::get('/pdf_ri_gizi', 'Pdf_ri_Controller@pdf_ri_gizi');
 
-Route::get('/doc_ri_gizi', function () {
-    return view('/doc_ri_gizi');
-});
+
 
 //dokumen ri asesmen
 Route::get('/pdf_ri_asesmen', 'Pdf_ri_Controller@pdf_ri_asesmen');

@@ -27,7 +27,7 @@ header('Content-Type: application/pdf');
                   Umur
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$umur}}
                 </td>                
               </tr>
               <tr>
@@ -35,7 +35,7 @@ header('Content-Type: application/pdf');
                   Etnik/Agama
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$etnik_agama}}
                 </td>                
               </tr>
               <tr>
@@ -43,7 +43,7 @@ header('Content-Type: application/pdf');
                   Jenis Kelamin
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$jenis_kelamin}}
                 </td>                
               </tr>
               <tr>
@@ -51,7 +51,7 @@ header('Content-Type: application/pdf');
                   Kemampuan Baca
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$kemampuan_baca}}
                 </td>                
               </tr>
               <tr>
@@ -59,7 +59,7 @@ header('Content-Type: application/pdf');
                   Pekerjaan
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$pekerjaan}}
                 </td>                
               </tr>
               <tr>
@@ -67,7 +67,7 @@ header('Content-Type: application/pdf');
                   Peran dalam keluarga
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$peran_dalam_keluarga}}
                 </td>                
               </tr>
             </tbody>
@@ -83,7 +83,7 @@ header('Content-Type: application/pdf');
                   Keterbatasan Fisik
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$keterbatasan_fisik}}
                 </td>                
               </tr>
               <tr>
@@ -91,7 +91,7 @@ header('Content-Type: application/pdf');
                   Mobilitas
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$mobilitas}}
                 </td>                
               </tr>
               <tr>
@@ -99,7 +99,7 @@ header('Content-Type: application/pdf');
                   Perokok
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$perokok}}
                 </td>                
               </tr>
               <tr>
@@ -107,7 +107,7 @@ header('Content-Type: application/pdf');
                   Riwayat Medis/Kesehatan Pasien/Keluarga
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$riwayat}}
                 </td>                
               </tr>
               <tr>
@@ -115,7 +115,7 @@ header('Content-Type: application/pdf');
                   Riwayat Sosial Ekonomi
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$riwayat_sosial_ekonomi}}
                 </td>                
               </tr>
               <tr>
@@ -123,7 +123,7 @@ header('Content-Type: application/pdf');
                   Riwayat Diagnosa Dokter
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$diagnosa_dokter}}
                 </td>                
               </tr>
             </tbody>
@@ -144,7 +144,7 @@ header('Content-Type: application/pdf');
                   Alergi makanan Makanan
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$alergi_makanan}}
                 </td>                
               </tr>
               <tr>
@@ -152,7 +152,7 @@ header('Content-Type: application/pdf');
                   Ketidaksukaan Makanan 
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$ketidaksukaan_makanan}}
                 </td>                
               </tr>
             </tbody>
@@ -168,7 +168,7 @@ header('Content-Type: application/pdf');
                   Pengalaman diit/kenseling sebelumnya
                 </td>    
                 <td class="konten_l_answer">  
-                  : ya, ...
+                  : {{$konseling_sebelumnya}}, {{$keterangan_konseling}}
                 </td>                
               </tr>
             </tbody>
@@ -188,7 +188,7 @@ header('Content-Type: application/pdf');
                   BB saat ini
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$bb_saat_ini}}
                 </td>                
               </tr>
               <tr>
@@ -196,7 +196,7 @@ header('Content-Type: application/pdf');
                   PB/TB 
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$pbtb}}
                 </td>                
               </tr>
               <tr>
@@ -204,7 +204,7 @@ header('Content-Type: application/pdf');
                   IMT
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$imt}}
                 </td>                
               </tr>
               <tr>
@@ -212,7 +212,7 @@ header('Content-Type: application/pdf');
                   Status Gizi
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$status_gizi}}
                 </td>                
               </tr>
               <tr>
@@ -220,7 +220,7 @@ header('Content-Type: application/pdf');
                   Riwayat Penurunan BB
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  :
                 </td>                
               </tr>
               <tr>
@@ -228,7 +228,7 @@ header('Content-Type: application/pdf');
                   BB biasanya
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$bb_biasanya}}
                 </td>                
               </tr>
               <tr>
@@ -236,7 +236,7 @@ header('Content-Type: application/pdf');
                   Penurunan BB
                 </td>    
                 <td class="konten_l_answer">  
-                  : % , mgg/bln
+                  : {{$bb_biasanya}} % , mgg/bln
                 </td>                
               </tr>
               <tr>
@@ -244,7 +244,7 @@ header('Content-Type: application/pdf');
                   Pengukuran lainnya
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$pengukuran_lainnya}}
                 </td>                
               </tr>
             </tbody>
@@ -252,79 +252,7 @@ header('Content-Type: application/pdf');
         </div>
 
       </div>
-      <div class="column"> 
-        <div style="padding-left:10px;">  
-           <table style="font-size: 70%;" >
-            <tbody>
-              <tr>
-                <td class="konten_l_question">
-                  BB saat ini
-                </td>    
-                <td class="konten_l_answer">  
-                  : -
-                </td>                
-              </tr>
-              <tr>
-                <td class="konten_l_question">
-                  PB/TB 
-                </td>    
-                <td class="konten_l_answer">  
-                  : -
-                </td>                
-              </tr>
-              <tr>
-                <td class="konten_l_question">
-                  IMT
-                </td>    
-                <td class="konten_l_answer">  
-                  : -
-                </td>                
-              </tr>
-              <tr>
-                <td class="konten_l_question">
-                  Status Gizi
-                </td>    
-                <td class="konten_l_answer">  
-                  : -
-                </td>                
-              </tr>
-              <tr>
-                <td class="konten_l_question">
-                  Riwayat Penurunan BB
-                </td>    
-                <td class="konten_l_answer">  
-                  : -
-                </td>                
-              </tr>
-              <tr>
-                <td class="konten_l_question">
-                  BB biasanya
-                </td>    
-                <td class="konten_l_answer">  
-                  : -
-                </td>                
-              </tr>
-              <tr>
-                <td class="konten_l_question">
-                  Penurunan BB
-                </td>    
-                <td class="konten_l_answer">  
-                  : % , mgg/bln
-                </td>                
-              </tr>
-              <tr>
-                <td class="konten_l_question">
-                  Pengukuran lainnya
-                </td>    
-                <td class="konten_l_answer">  
-                  : -
-                </td>                
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        
-      </div>
+      
     </div>
 
     <h4 style="font-size:70%;padding-left:5px;margin-bottom:4%" >BIOKIMIA TERKAIT GIZI</h4>
@@ -333,7 +261,7 @@ header('Content-Type: application/pdf');
         <tbody>
           <tr>
             <td class="konten_l_question" colspan="2">
-              lala la aal lala la aal lala la aal lala la aal lala la aal
+              {{$biokimia_terkait}}
             </td>                 
           </tr>
         </tbody>
@@ -351,7 +279,7 @@ header('Content-Type: application/pdf');
                   Atropi Otot Lengan
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk1}}
                 </td>                
               </tr>
               <tr>
@@ -359,7 +287,7 @@ header('Content-Type: application/pdf');
                   Hilang Lemak Subkutan
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk2}}
                 </td>                
               </tr>
               <tr>
@@ -367,7 +295,7 @@ header('Content-Type: application/pdf');
                   Odema
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk3}}3
                 </td>                
               </tr>
               <tr>
@@ -375,7 +303,7 @@ header('Content-Type: application/pdf');
                   Nafsu Makan
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk4}}
                 </td>                
               </tr>
               <tr>
@@ -383,7 +311,7 @@ header('Content-Type: application/pdf');
                   Mual
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk5}}
                 </td>                
               </tr>
               <tr>
@@ -391,7 +319,7 @@ header('Content-Type: application/pdf');
                   Muntah
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk6}}
                 </td>                
               </tr>
               <tr>
@@ -399,7 +327,7 @@ header('Content-Type: application/pdf');
                   Kembung
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk7}}
                 </td>                
               </tr>
               <tr>
@@ -407,7 +335,7 @@ header('Content-Type: application/pdf');
                   Konstipasi
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk8}}
                 </td>                
               </tr>
               <tr>
@@ -415,7 +343,7 @@ header('Content-Type: application/pdf');
                   Diare
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk9}}
                 </td>                
               </tr>
               <tr>
@@ -429,10 +357,18 @@ header('Content-Type: application/pdf');
             <tbody>
               <tr>
                 <td class="konten_l_question">
+                  Kulit
+                </td>    
+                <td class="konten_l_answer">  
+                  : {{$fk10}}
+                </td>                
+              </tr>
+              <tr>
+                <td class="konten_l_question">
                   Kepala dan Mata
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk11}}
                 </td>                
               </tr>
                <tr>
@@ -440,7 +376,7 @@ header('Content-Type: application/pdf');
                   Gigi Geligi
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk12}}
                 </td>                
               </tr>
                <tr>
@@ -448,7 +384,7 @@ header('Content-Type: application/pdf');
                   Gangguan Menelan
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk13}}
                 </td>                
               </tr>
                <tr>
@@ -456,7 +392,7 @@ header('Content-Type: application/pdf');
                   Gangguan Mengunyah
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk14}}
                 </td>                
               </tr>
                <tr>
@@ -464,7 +400,7 @@ header('Content-Type: application/pdf');
                   Gangguan Menghisap
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk15}}
                 </td>                
               </tr>
                <tr>
@@ -477,7 +413,7 @@ header('Content-Type: application/pdf');
                   &emsp;Nadi
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk16}}
                 </td>                
               </tr>
                <tr>
@@ -485,7 +421,7 @@ header('Content-Type: application/pdf');
                   &emsp;Respitori
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk17}}
                 </td>                
               </tr>
                <tr>
@@ -493,7 +429,7 @@ header('Content-Type: application/pdf');
                   &emsp;Suhu
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk18}}
                 </td>                
               </tr>
                <tr>
@@ -501,7 +437,7 @@ header('Content-Type: application/pdf');
                   Data Lain
                 </td>    
                 <td class="konten_l_answer">  
-                  : -
+                  : {{$fk19}}
                 </td>                
               </tr>
             </tbody>
@@ -518,7 +454,7 @@ header('Content-Type: application/pdf');
       <tbody>
         <tr>
           <td class="konten_l_question" colspan="2" style="padding-left:5px">
-            Isi
+            {{$diagnosa_gizi}}
           </td>                    
         </tr>
       </tbody>
@@ -532,7 +468,7 @@ header('Content-Type: application/pdf');
             Tujuan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$tujuan_intervensi}}
           </td>                
         </tr>
         <tr>
@@ -540,7 +476,7 @@ header('Content-Type: application/pdf');
             Target
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$target_intervensi}}
           </td>                
         </tr>
       </tbody>
@@ -551,7 +487,7 @@ header('Content-Type: application/pdf');
       <tbody>
         <tr>
           <td class="konten_l_question" colspan="2" style="padding-left:5px">
-            Isi
+            {{$rencana_monitoring_evaluasi}}
           </td>                    
         </tr>
       </tbody>
