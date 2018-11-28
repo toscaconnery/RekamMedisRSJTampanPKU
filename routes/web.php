@@ -669,6 +669,13 @@ Route::get('/doc_ri_rawat_napza', function () {
     return view('/doc_ri_rawat_napza');
 });
 
+Route::get('/ri_asuhan_gizi', 'RIAsuhanGiziController@get_ri_asuhan_gizi');
+Route::post('/ri_asuhan_gizi', 'RIAsuhanGiziController@post_ri_asuhan_gizi');
+Route::get('/ri_asuhan_gizi_read', 'RIAsuhanGiziController@get_ri_asuhan_gizi_read');
+Route::get('/ri_asuhan_gizi_edit', 'RIAsuhanGiziController@get_ri_asuhan_gizi_edit');
+Route::post('/ri_asuhan_gizi_edit', 'RIAsuhanGiziController@post_ri_asuhan_gizi_edit');
+Route::get('/ri_asuhan_gizi_list_konsultasi', 'RIAsuhanGiziController@get_ri_asuhan_gizi_list_konsultasi');
+
 Route::get('/ri_rencana_keperawatan', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan');
 Route::get('/ri_rencana_keperawatan_1', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_1');
 Route::get('/ri_rencana_keperawatan_2', 'RIRencanaKeperawatanController@get_ri_rencana_keperawatan_2');
@@ -822,9 +829,9 @@ Route::get('/igd_asesmen_darurat', function () {
 //     return view('rj_ikhtisar_hiv');
 // });
 
-Route::get('/ri_asuhan_gizi', function () {
-    return view('ri_asuhan_gizi');
-});
+// Route::get('/ri_asuhan_gizi', function () {
+//     return view('ri_asuhan_gizi');
+// });
 
 // Route::get('/ri_surat_spd', function () {
 //     return view('ri_surat_spd');
