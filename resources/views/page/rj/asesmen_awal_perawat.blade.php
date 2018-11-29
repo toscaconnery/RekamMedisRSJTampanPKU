@@ -87,7 +87,7 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" value="1" name="hubungan_keluarga" checked>
+                        <input type="radio" value="1" name="hubungan_keluarga">
                         Baik
                       </label>
                     </div>
@@ -101,175 +101,269 @@
                 </div>
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">Status Psikososial</label>
-                  <div class="col-lg-10">
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox1" value="1" name="status_psikososial1"> Baik
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox2" value="2" name="status_psikososial2"> Cemas
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="3" name="status_psikososial3"> Takut
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="4" name="status_psikososial4"> Marah
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="5" name="status_psikososial5"> Kecendrungan bunuh diri dilaporkan ke
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="6" name="status_psikososial6"> Lain-lain
-                    </label>
+                  <div class="col-lg-10" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="1" name="status_psikososial1"> Baik
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="2" name="status_psikososial2"> Cemas
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="3" name="status_psikososial3"> Takut
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="4" name="status_psikososial4"> Marah
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="5" name="status_psikososial5"> Kecendrungan bunuh diri
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="6" name="status_psikososial6"> Lain-lain
+                      </label>
+                    </div>
                   </div>
                 </div>
                 
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">Konsep Diri</label>
-                  <div class="col-lg-10">
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox1" value="1" name="konsep_diri1"> Gangguan citra tubuh
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox2" value="2" name="konsep_diri2"> Gangguan identitas
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="3" name="konsep_diri3"> Harga diri rendah
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="4" name="konsep_diri4"> Gangguan peran
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="5" name="konsep_diri5"> Tidak terkaji
-                    </label>
+                  <div class="col-lg-10" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="1" name="konsep_diri1"> Gangguan citra tubuh
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="2" name="konsep_diri2"> Gangguan identitas
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="3" name="konsep_diri3"> Harga diri rendah
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="4" name="konsep_diri4"> Gangguan peran
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="5" name="konsep_diri5"> Tidak terkaji
+                      </label>
+                    </div>                    
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">Persepsi</label>
-                  <div class="col-lg-10">
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox1" value="1" name="persepsi1"> Ilusi
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox2" value="2" name="persepsi2"> Halusinasi dengar
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="3" name="persepsi3"> Halusinasi lihat
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="4" name="persepsi4"> Halusinasi raba
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="5" name="persepsi5"> Halusinasi kecap
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="6" name="persepsi6"> Halusinasi hidu
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="7" name="persepsi7"> Tidak terkaji
-                    </label>
+                  <div class="col-lg-10" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="1" name="persepsi1"> Ilusi
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="2" name="persepsi2"> Halusinasi dengar
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="3" name="persepsi3"> Halusinasi lihat
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="4" name="persepsi4"> Halusinasi raba
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="5" name="persepsi5"> Halusinasi kecap
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="6" name="persepsi6"> Halusinasi hidu
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="7" name="persepsi7"> Tidak terkaji
+                      </label>
+                    </div>
+                    
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">Aktifitas Motorik</label>
-                  <div class="col-lg-10">
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox1" value="1" name="motorik1"> Lesu
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox2" value="2" name="motorik2"> Tegang
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="3" name="motorik3"> Gelisah
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="4" name="motorik4"> TIK  
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="5" name="motorik5"> Grimasi  
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="6" name="motorik6"> Halusinasi hidu
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="7" name="motorik7"> Tremor
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="8" name="motorik8"> Konsulsif
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="9" name="motorik9"> Tidak ada Masalah
-                    </label>
+                  <div class="col-lg-10" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="1" name="motorik1"> Lesu
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="2" name="motorik2"> Tegang
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="3" name="motorik3"> Gelisah
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="4" name="motorik4"> TIK  
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="5" name="motorik5"> Grimasi  
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="6" name="motorik6"> Halusinasi hidu
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="7" name="motorik7"> Tremor
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="8" name="motorik8"> Konsulsif
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="9" name="motorik9"> Tidak ada Masalah
+                      </label>
+                    </div>                    
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">Penampilan</label>
-                  <div class="col-lg-10">
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox1" value="1" name="penampilan1"> Rapi
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox2" value="2" name="penampilan2"> Tidak rapi
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="3" name="penampilan3"> Penggunaan tidak sesuai
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" value="4" name="penampilan4"> Cara berpakaian tidak seperti biasa
-                    </label>
+                  <div class="col-lg-10" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="1" name="penampilan1"> Rapi
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="2" name="penampilan2"> Tidak rapi
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="3" name="penampilan3"> Penggunaan tidak sesuai
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="4" name="penampilan4"> Cara berpakaian tidak seperti biasa
+                      </label>
+                    </div>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">Isi Pikir</label>
-                  <div class="col-lg-10">
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox1" name="pikir1"> Obsesi
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox2" name="pikir2"> Phobia
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir3"> Hipokondria
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir4"> Depersonalisasi  
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir5"> Ide terkait 
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir6"> Pikiran magis
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir7"> Waham agama
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir8"> Waham somatik
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir9"> Waham besar
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir10"> Waham curiga
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir11"> Waham nihilistik
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir12"> Sisip pikir
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir13"> Siar pikir
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir14"> Kontrol pikir
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox3" name="pikir15"> Tidak terkaji
-                    </label>
+                  <div class="col-lg-10" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" name="pikir1"> Obsesi
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" name="pikir2"> Phobia
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir3"> Hipokondria
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir4"> Depersonalisasi  
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir5"> Ide terkait 
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir6"> Pikiran magis
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir7"> Waham agama
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir8"> Waham somatik
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir9"> Waham besar
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir10"> Waham curiga
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir11"> Waham nihilistik
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir12"> Sisip pikir
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir13"> Siar pikir
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir14"> Kontrol pikir
+                      </label>
+                    </div>
+                    <div class="col-lg-2">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" name="pikir15"> Tidak terkaji
+                      </label>
+                    </div>
+                    
                   </div>
                 </div>
 
@@ -305,7 +399,7 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" id="status_fungsional_1" value="Mandiri" name="status_fungsional" checked>
+                        <input type="radio" id="status_fungsional_1" value="Mandiri" name="status_fungsional">
                         Mandiri
                       </label>
                     </div>
@@ -385,7 +479,7 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="must_1" id="must_1_1" value="0" checked>
+                        <input type="radio" name="must_1" id="must_1_1" value="0">
                         Tidak ada penurunan berat badan
                       </label>
                     </div>
@@ -409,7 +503,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="must_2" value="0" checked>
+                        <input type="radio" name="must_2" value="0">
                         Tidak 
                       </label>
                     </div>
@@ -425,7 +519,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="must_3" id="must_3_2" value="False" checked>
+                        <input type="radio" name="must_3" id="must_3_2" value="False">
                         Tidak 
                       </label>
                     </div>
@@ -445,7 +539,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="sk_1" value="0" checked>
+                        <input type="radio" name="sk_1" value="0">
                         Tidak 
                       </label>
                     </div>
@@ -461,13 +555,13 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="sk_2" id="optionsRadios1" value="0" checked>
+                        <input type="radio" name="sk_2" value="0">
                         Tidak 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="sk_2" id="optionsRadios1" value="1">
+                        <input type="radio" name="sk_2" value="1">
                         Ya 
                       </label>
                     </div>
@@ -477,27 +571,17 @@
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">Apakah terdapat salah satu dari kondisi berikut?</label>
                   <div class="col-lg-6">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="sk_3_checkbox[]" id="sk_3_check_1">
-                        Diare ≥ 5 kali/hari dan atau muntah ? 3 kali/hari dalam seminggu terakhir
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="sk_3_checkbox[]" id="sk_3_check_2">
-                        Asupan makanan berkurang selama 1 minggu terakhir
-                      </label>
-                    </div>
+                    <li>Diare ≥ 5 kali/hari dan atau muntah ? 3 kali/hari dalam seminggu terakhir</li>
+                    <li>Asupan makanan berkurang selama 1 minggu terakhir</li>
                     <div class="radio">
                       <label>
-                        <input type="radio" id="sk_3_1" name="sk_3" value="0" checked readonly="">
+                        <input type="radio" name="sk_3" value="0">
                         Tidak 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" id="sk_3_2" name="sk_3" value="1" readonly="">
+                        <input type="radio" name="sk_3" value="1">
                         Ya 
                       </label>
                     </div>
@@ -509,7 +593,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="sk_4" value="0" checked>
+                        <input type="radio" name="sk_4" value="0">
                         Tidak 
                       </label>
                     </div>
@@ -640,7 +724,7 @@
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pemberitahuan" id="pemberitahuan_2" value="0" checked>
+                        <input type="radio" name="pemberitahuan" id="pemberitahuan_2" value="0">
                         Tidak 
                       </label>
                     </div>
@@ -648,8 +732,8 @@
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pukul</label>
-                  <div class="col-sm-1">
-                    <input type="text" class="form-control" id="waktu_pemberitahuan" name="waktu_pemberitahuan" disabled="">
+                  <div class="col-sm-2">
+                    <input type="time" class="form-control" id="waktu_pemberitahuan" name="waktu_pemberitahuan" disabled="">
                   </div>
                 </div>
               </div>
@@ -768,8 +852,8 @@
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Diberitahukan ke dokter pukul</label>
-                  <div class="col-sm-1">
-                    <input type="text" class="form-control" name="waktu_pemberitahuan">
+                  <div class="col-sm-2">
+                    <input type="time" class="form-control" name="waktu_pemberitahuan">
                   </div>
                 </div>
               </div>
@@ -786,19 +870,19 @@
                   <div class="col-lg-4">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="cc" id="optionsRadios1" value="Baik" checked>
+                        <input type="radio" name="cc" value="Baik">
                         HUMPTY DUMPTY (Anak-anak) 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="cc" id="optionsRadios1" value="Tidak Baik" checked>
+                        <input type="radio" name="cc" value="Tidak Baik">
                         MORSE (Dewasa) 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="cc" id="optionsRadios1" value="Tidak Baik" checked>
+                        <input type="radio" name="cc" value="Tidak Baik">
                         EDMUNSON (Jiwa) 
                       </label>
                     </div>
@@ -1347,24 +1431,6 @@
             $('#list_diagnosis_khusus').hide();
           }
         });
-      });
-    </script>
-
-    <script type="text/javascript">
-      $(document).ready( function() {
-        $('input[type=checkbox][name="sk_3_checkbox[]"]').change(function() {
-          var atLeastOneIsChecked = $('input[name="sk_3_checkbox[]"]:checked').length > 0;
-          if(atLeastOneIsChecked == true) {
-            $('#sk_3_2').prop('checked', true);
-              // $('#sk_3_hidden').hide();
-              // $('#sk_3_2').after('<input type="hidden" id="sk_3_hidden" name="sk_3" value="1"></input>');
-            }
-            else if(atLeastOneIsChecked == false) {
-              $('#sk_3_1').prop('checked', true);
-              // $('#sk_3_hidden').hide();
-              // $('#sk_3_2').after('<input type="hidden" id="sk_3_hidden" name="sk_3" value="0"></input>');
-            }
-          });
       });
     </script>
 

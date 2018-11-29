@@ -50,6 +50,9 @@ class RIRencanaNapzaController extends Controller
     	if(isset($request->pola_tidur_7)) {
     		$pola_tidur .= '7-';
     	}
+        if(isset($request->pola_tidur_8)) {
+            $pola_tidur .= '8-';
+        }
     	if(strlen($pola_tidur) > 0) {
     		$pola_tidur = substr($pola_tidur, 0, -1);
     	}
@@ -219,6 +222,9 @@ class RIRencanaNapzaController extends Controller
     	if(isset($request->pola_tidur_7)) {
     		$pola_tidur .= '7-';
     	}
+        if(isset($request->pola_tidur_8)) {
+            $pola_tidur .= '8-';
+        }
     	if(strlen($pola_tidur) > 0) {
     		$pola_tidur = substr($pola_tidur, 0, -1);
     	}

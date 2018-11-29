@@ -157,6 +157,12 @@
                         7. Tata ruangan nyaman (suhu, cahaya, suara)
                       </label>
                     </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" disabled name="pola_tidur_8" {{isset($pola_tidur[8]) ? 'checked' : ''}}>
+                        8. Tata ruangan nyaman (suhu, cahaya, suara)
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group">

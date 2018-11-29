@@ -361,12 +361,7 @@ class RJAsesmenAwalController extends Controller
     {
 
     	$asesmen_keperawatan = new RJAsesmenKeperawatan;
-        if(Session::has('id_pasien')) {
-            $id_pasien = Session::get('id_pasien');
-        }
-        else {
-            $id_pasien = 1;
-        }
+        $id_pasien = Session::get('id_pasien');
     	$asesmen_keperawatan->id_regis = $id_pasien;
     	$asesmen_keperawatan->id_user = 1;
     	$asesmen_keperawatan->alasan_kunjungan = $request->alasan_kunjungan;
