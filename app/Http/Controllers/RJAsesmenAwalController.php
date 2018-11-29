@@ -710,7 +710,7 @@ class RJAsesmenAwalController extends Controller
         }
         if(isset($request->hilang5)) {
             $hilang .= "5-";
-            $asesmen_awal_perawat->nyeri_hilang_input_text = $request->nyeri_hilang_input_text;
+            $asesmen_keperawatan->nyeri_hilang_input_text = $request->nyeri_hilang_input_text;
         }
         if(strlen($hilang) > 0) {
             $hilang = substr($hilang, 0, -1);
@@ -886,7 +886,7 @@ class RJAsesmenAwalController extends Controller
         $daftar_dokumen->save();
 
 
-        return redirect('index');
+        return redirect('rj_asesmen_awal_perawat_read');
     }
 
 
@@ -1246,35 +1246,213 @@ class RJAsesmenAwalController extends Controller
         return view('page.rj.asesmen_awal_perawat_edit', $this->data);
     }
 
-    public function get_rj_asesmen_awal_perawat_read_x()
+    public function post_rj_asesmen_awal_perawat_edit(Request $request)
     {
 
-        $pasien = RJAsesmenKeperawatan::where('id', 1)->first();
+        $id_pasien = Session::get('id_pasien');
+        $asesmen_keperawatan = RJAsesmenKeperawatan::where('id_regis', $id_pasien)->first();
+        $asesmen_keperawatan->id_user = Auth::user()->id;
+        $asesmen_keperawatan->alasan_kunjungan = $request->alasan_kunjungan;
+        $asesmen_keperawatan->hubungan_keluarga = $request->hubungan_keluarga;
         
-        $this->data['id_regis'] = $pasien->id_regis;
-
-        $this->data['id_user'] = $pasien->id_user;
-        $this->data['alasan_kunjungan'] = $pasien->alasan_kunjungan;
-        $this->data['hubungan_keluarga'] = $pasien->hubungan_keluarga;
-        $this->data['status_psikososial'] = $pasien->status_psikososial;
-        $this->data['konsep_diri'] = $pasien->konsep_diri;
-        $this->data['persepsi'] = $pasien->persepsi;
-        $this->data['motorik'] = $pasien->motorik;
-        $this->data['penampilan'] = $pasien->penampilan;
-        $this->data['pikir'] = $pasien->pikir;
-        $this->data['perasaan'] = $pasien->perasaan;
-        $this->data['status_fungsional'] = $pasien->status_fungsional;
-        
-        if(!is_null($pasien->perlu_bantuan)) {
-            $this->data['perlu_bantuan'] = $pasien->perlu_bantuan;
+        $asesmen_keperawatan->status_psikososial = "";
+        if(isset($request->status_psikososial1)) {
+            $asesmen_keperawatan->status_psikososial .= "1-";
         }
-
-        if(!is_null($pasien->waktu_laporan)) {
-            $this->data['waktu_laporan'] = $pasien->waktu_laporan;
+        if(isset($request->status_psikososial2)) {
+            $asesmen_keperawatan->status_psikososial .= "2-";
         }
+        if(isset($request->status_psikososial3)) {
+            $asesmen_keperawatan->status_psikososial .= "3-";
+        }
+        if(isset($request->status_psikososial4)) {
+            $asesmen_keperawatan->status_psikososial .= "4-";
+        }
+        if(isset($request->status_psikososial5)) {
+            $asesmen_keperawatan->status_psikososial .= "5-";
+        }
+        if(isset($request->status_psikososial6)) {
+            $asesmen_keperawatan->status_psikososial .= "6-";
+        }
+        if(isset($request->status_psikososial7)) {
+            $asesmen_keperawatan->status_psikososial .= "7-";
+        }
+        $asesmen_keperawatan->status_psikososial = substr($asesmen_keperawatan->status_psikososial, 0, -1);
+        $asesmen_keperawatan->status_psikologis_lain = $request->status_psikologis_lain;
 
-        $this->data['status_fungsional'] = $pasien->status_fungsional;
-        $this->data['waktu_laporan'] = $pasien->waktu_laporan;
+
+        $asesmen_keperawatan->konsep_diri = "";
+        if(isset($request->konsep_diri1)) {
+            $asesmen_keperawatan->konsep_diri .= "1-";
+        }
+        if(isset($request->konsep_diri2)) {
+            $asesmen_keperawatan->konsep_diri .= "2-";
+        }
+        if(isset($request->konsep_diri3)) {
+            $asesmen_keperawatan->konsep_diri .= "3-";
+        }
+        if(isset($request->konsep_diri4)) {
+            $asesmen_keperawatan->konsep_diri .= "4-";
+        }
+        if(isset($request->konsep_diri5)) {
+            $asesmen_keperawatan->konsep_diri .= "5-";
+        }
+        $asesmen_keperawatan->konsep_diri = substr($asesmen_keperawatan->konsep_diri, 0, -1);
+
+
+        $asesmen_keperawatan->persepsi = "";
+        if(isset($request->persepsi1)) {
+            $asesmen_keperawatan->persepsi .= "1-";
+        }
+        if(isset($request->persepsi2)) {
+            $asesmen_keperawatan->persepsi .= "2-";
+        }
+        if(isset($request->persepsi3)) {
+            $asesmen_keperawatan->persepsi .= "3-";
+        }
+        if(isset($request->persepsi4)) {
+            $asesmen_keperawatan->persepsi .= "4-";
+        }
+        if(isset($request->persepsi5)) {
+            $asesmen_keperawatan->persepsi .= "5-";
+        }
+        if(isset($request->persepsi6)) {
+            $asesmen_keperawatan->persepsi .= "6-";
+        }
+        if(isset($request->persepsi7)) {
+            $asesmen_keperawatan->persepsi .= "7-";
+        }
+        $asesmen_keperawatan->persepsi = substr($asesmen_keperawatan->persepsi, 0, -1);
+
+        $asesmen_keperawatan->motorik = "";
+        if(isset($request->motorik1)) {
+            $asesmen_keperawatan->motorik .= "1-";
+        }
+        if(isset($request->motorik2)) {
+            $asesmen_keperawatan->motorik .= "2-";
+        }
+        if(isset($request->motorik3)) {
+            $asesmen_keperawatan->motorik .= "3-";
+        }
+        if(isset($request->motorik4)) {
+            $asesmen_keperawatan->motorik .= "4-";
+        }
+        if(isset($request->motorik5)) {
+            $asesmen_keperawatan->motorik .= "5-";
+        }
+        if(isset($request->motorik6)) {
+            $asesmen_keperawatan->motorik .= "6-";
+        }
+        if(isset($request->motorik7)) {
+            $asesmen_keperawatan->motorik .= "7-";
+        }
+        if(isset($request->motorik8)) {
+            $asesmen_keperawatan->motorik .= "8-";
+        }
+        if(isset($request->motorik9)) {
+            $asesmen_keperawatan->motorik .= "9-";
+        }
+        $asesmen_keperawatan->motorik = substr($asesmen_keperawatan->motorik, 0, -1);
+
+        $asesmen_keperawatan->penampilan = "";
+        if(isset($request->penampilan1)) {
+            $asesmen_keperawatan->penampilan .= "1-";
+        }
+        if(isset($request->penampilan2)) {
+            $asesmen_keperawatan->penampilan .= "2-";
+        }
+        if(isset($request->penampilan3)) {
+            $asesmen_keperawatan->penampilan .= "3-";
+        }
+        if(isset($request->penampilan4)) {
+            $asesmen_keperawatan->penampilan .= "4-";
+        }
+        $asesmen_keperawatan->penampilan = substr($asesmen_keperawatan->penampilan, 0, -1);
+
+
+        $asesmen_keperawatan->pikir = "";
+        if(isset($request->pikir1)) {
+            $asesmen_keperawatan->pikir .= "1-";
+        }
+        if(isset($request->pikir2)) {
+            $asesmen_keperawatan->pikir .= "2-";
+        }
+        if(isset($request->pikir3)) {
+            $asesmen_keperawatan->pikir .= "3-";
+        }
+        if(isset($request->pikir4)) {
+            $asesmen_keperawatan->pikir .= "4-";
+        }
+        if(isset($request->pikir5)) {
+            $asesmen_keperawatan->pikir .= "5-";
+        }
+        if(isset($request->pikir6)) {
+            $asesmen_keperawatan->pikir .= "6-";
+        }
+        if(isset($request->pikir7)) {
+            $asesmen_keperawatan->pikir .= "7-";
+        }
+        if(isset($request->pikir8)) {
+            $asesmen_keperawatan->pikir .= "8-";
+        }
+        if(isset($request->pikir9)) {
+            $asesmen_keperawatan->pikir .= "9-";
+        }
+        if(isset($request->pikir10)) {
+            $asesmen_keperawatan->pikir .= "10-";
+        }
+        if(isset($request->pikir11)) {
+            $asesmen_keperawatan->pikir .= "11-";
+        }
+        if(isset($request->pikir12)) {
+            $asesmen_keperawatan->pikir .= "12-";
+        }
+        if(isset($request->pikir13)) {
+            $asesmen_keperawatan->pikir .= "13-";
+        }
+        if(isset($request->pikir14)) {
+            $asesmen_keperawatan->pikir .= "14-";
+        }
+        if(isset($request->pikir15)) {
+            $asesmen_keperawatan->pikir .= "15-";
+        }
+        $asesmen_keperawatan->pikir = substr($asesmen_keperawatan->pikir, 0, -1);
+
+        $asesmen_keperawatan->perasaan = "";
+        if(isset($request->perasaan1)) {
+            $asesmen_keperawatan->perasaan .= "1-";
+        }
+        if(isset($request->perasaan2)) {
+            $asesmen_keperawatan->perasaan .= "2-";
+        }
+        if(isset($request->perasaan3)) {
+            $asesmen_keperawatan->perasaan .= "3-";
+        }
+        if(isset($request->perasaan4)) {
+            $asesmen_keperawatan->perasaan .= "4-";
+        }
+        if(isset($request->perasaan5)) {
+            $asesmen_keperawatan->perasaan .= "5-";
+        }
+        if(isset($request->perasaan6)) {
+            $asesmen_keperawatan->perasaan .= "6-";
+        }
+        if(isset($request->perasaan7)) {
+            $asesmen_keperawatan->perasaan .= "7-";
+        }
+        $asesmen_keperawatan->perasaan = substr($asesmen_keperawatan->perasaan, 0, -1);
+
+        $asesmen_keperawatan->status_fungsional = $request->status_fungsional;
+
+        if(isset($request->perlu_bantuan)) {
+            $asesmen_keperawatan->perlu_bantuan = $request->perlu_bantuan;
+        }
+        $asesmen_keperawatan->dilaporkan_ke = $request->dilaporkan_ke;
+        $asesmen_keperawatan->waktu_laporan = $request->waktu_laporan;
+
+        $asesmen_keperawatan->status_fungsional = $request->status_fungsional;
+        $asesmen_keperawatan->waktu_laporan = $request->waktu_laporan;
+        // $asesmen_keperawatan->save();
 
 
         //return redirect('index');
@@ -1282,47 +1460,112 @@ class RJAsesmenAwalController extends Controller
         // FISIK GIZI////////
         // FISIK GIZI////////
         // FISIK GIZI////////
-
-        $gizi = RJFisikGizi::where('id', 1)->first();
-        
-        $this->data['id_regis'] = $gizi->id_regis;
-        $this->data['td'] = $gizi->td;
-        $this->data['tb'] = $gizi->tb;
-        $this->data['nadi'] = $gizi->nadi;
-        $this->data['bb'] = $gizi->bb;
-        $this->data['pernafasan'] = $gizi->pernafasan;
-        $this->data['golongan_darah'] = $gizi->golongan_darah;
-        $this->data['suhu'] = $gizi->suhu;
-        $this->data['skor_must'] = $gizi->skor_must;
-        $this->data['must_1'] = $gizi->must_1;
-
-        if(!is_null($gizi->bb_berkurang)) {
-            $this->data['bb_berkurang'] = $gizi->bb_berkurang;
-            $this->data['skor_must'] = $gizi->skor_must;
+        // $fisik_gizi = new RJFisikGizi;
+        // $asesmen_keperawatan->id_regis = $id_pasien;
+        $asesmen_keperawatan->td = $request->td;
+        $asesmen_keperawatan->tb = $request->tb;
+        $asesmen_keperawatan->nadi = $request->nadi;
+        $asesmen_keperawatan->bb = $request->bb;
+        $asesmen_keperawatan->pernafasan = $request->pernafasan;
+        $asesmen_keperawatan->golongan_darah = $request->golongan_darah;
+        $asesmen_keperawatan->suhu = $request->suhu;
+        $asesmen_keperawatan->skor_must = $request->must_1 + $request->must_2;
+        $asesmen_keperawatan->must_1 = $request->must_1;
+        if(isset($request->must_1_input_bb_berkurang)) {
+            $asesmen_keperawatan->bb_berkurang = $request->must_1_input_bb_berkurang;
+            $asesmen_keperawatan->skor_must += $request->must_1_input_bb_berkurang;
         }
-
-        $this->data['must_2'] = $gizi->must_2;
-        
-        if($gizi->must_3 == True) {
-            $this->data['must_3'] = $gizi->must_3;
-            $this->data['dk'] = $gizi->dk;
-            $this->data['fisik_gizi'] = $gizi->fisik_gizi;
+        $asesmen_keperawatan->must_2 = $request->must_2;
+        /////
+        if($request->must_3 == 1) {
+            $asesmen_keperawatan->must_3 = 1;
+            $dk = "";
+            if(isset($diagnosis_khusus_1)) {
+                $dk .= "DM, ";
+            }
+            if(isset($diagnosis_khusus_2)) {
+                $dk .= "Kemoterapi, ";
+            }
+            if(isset($diagnosis_khusus_3)) {
+                $dk .= "Hemodialisa, ";
+            }
+            if(isset($diagnosis_khusus_4)) {
+                $dk .= "Geriatri, ";
+            }
+            if(isset($diagnosis_khusus_5)) {
+                $dk .= "Immunitas Menurun, ";
+            }
+            if(isset($diagnosis_khusus_6)) {
+                $dk .= "Lain-lain, ";
+            }
+            $dk = substr($dk, 0, -2);
+            $asesmen_keperawatan->diagnosis_khusus = $dk;
         }
         else {
-            $this->data['must_3'] = $gizi->must_3;
+            $asesmen_keperawatan->must_3 = 0;
+        }
+        $asesmen_keperawatan->sk_1 = $request->sk_1;
+        $asesmen_keperawatan->sk_2 = $request->sk_2;
+        $asesmen_keperawatan->sk_3 = $request->sk_3;
+        $asesmen_keperawatan->sk_4 = $request->sk_4;
+        $asesmen_keperawatan->skor_sk = $request->sk_1 + $request->sk_2 + $request->sk_3 + $request->sk_4;
+
+        $asesmen_keperawatan->penyakit_malnutrisi = "";
+        if(isset($request->penyakit_malnutrisi_1)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "1-";
+        }
+        if(isset($request->penyakit_malnutrisi_2)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "2-";
+        }
+        if(isset($request->penyakit_malnutrisi_3)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "3-";
+        }
+        if(isset($request->penyakit_malnutrisi_4)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "4-";
+        }
+        if(isset($request->penyakit_malnutrisi_5)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "5-";
+        }
+        if(isset($request->penyakit_malnutrisi_6)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "6-";
+        }
+        if(isset($request->penyakit_malnutrisi_7)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "7-";
+        }
+        if(isset($request->penyakit_malnutrisi_8)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "8-";
+        }
+        if(isset($request->penyakit_malnutrisi_9)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "9-";
+        }
+        if(isset($request->penyakit_malnutrisi_10)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "10-";
+        }
+        if(isset($request->penyakit_malnutrisi_11)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "11-";
+        }
+        if(isset($request->penyakit_malnutrisi_12)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "12-";
+        }
+        if(isset($request->penyakit_malnutrisi_13)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "13-";
+        }
+        if(isset($request->penyakit_malnutrisi_14)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "14-";
+        }
+        if(isset($request->penyakit_malnutrisi_15)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "15-";
+        }
+        if(isset($request->penyakit_malnutrisi_16)) {
+            $asesmen_keperawatan->penyakit_malnutrisi .= "16-";
+        }
+        if(!empty($asesmen_keperawatan->penyakit_malnutrisi)) {
+            $asesmen_keperawatan->penyakit_malnutrisi = substr($asesmen_keperawatan->penyakit_malnutrisi, 0, -1);
         }
 
-        $this->data['sk_1'] = $gizi->sk_1;
-        $this->data['sk_2'] = $gizi->sk_2;
-        $this->data['sk_3'] = $gizi->sk_3;
-        $this->data['sk_4'] = $gizi->sk_4;
-        $this->data['skor_sk'] = $gizi->skor_sk;
-
-        $this->data['penyakit_malnutrisi'] = $gizi->penyakit_malnutrisi;
-        $this->data['pemberitahuan'] = $gizi->pemberitahuan;
-        
-        if(!is_null($gizi->waktu_pemberitahuan)) {
-            $this->data['waktu_pemberitahuan'] = $gizi->waktu_pemberitahuan;
+        $asesmen_keperawatan->pemberitahuan_fg = $request->pemberitahuan_fg;
+        if(!empty($request->waktu_pemberitahuan)) {
+            $asesmen_keperawatan->waktu_pemberitahuan = $request->waktu_pemberitahuan;
         }
 
         //return redirect('index');
@@ -1331,106 +1574,207 @@ class RJAsesmenAwalController extends Controller
         // PENILAIAN TINGKAT NYERI  //////////////
         // PENILAIAN TINGKAT NYERI  //////////////
 
-        $nyeri = RJNyeri::where('id', 1)->first();
+        // $nyeri = new RJNyeri;
+        // $nyeri->id_regis = $id_pasien;
+        // $nyeri->jenis_form = 'awal';
+        $asesmen_keperawatan->tingkat = $request->tingkat;
+        $asesmen_keperawatan->skala = $request->skala;
+        $asesmen_keperawatan->lokasi = $request->lokasi;
+        $asesmen_keperawatan->lokasi = $request->lokasi;
+        $asesmen_keperawatan->durasi = $request->durasi;
+        $asesmen_keperawatan->frekuensi = $request->frekuensi;
+        $hilang = "";
+        if(isset($request->hilang1)) {
+            $hilang .= "1-";
+        }
+        if(isset($request->hilang2)) {
+            $hilang .= "2-";
+        }
+        if(isset($request->hilang3)) {
+            $hilang .= "3-";
+        }
+        if(isset($request->hilang4)) {
+            $hilang .= "4-";
+        }
+        if(isset($request->hilang5)) {
+            $hilang .= "5-";
+            $asesmen_keperawatan->nyeri_hilang_input_text = $request->nyeri_hilang_input_text;
+        }
+        if(strlen($hilang) > 0) {
+            $hilang = substr($hilang, 0, -1);
+        }
+        $asesmen_keperawatan->hilang = $hilang;
+        $asesmen_keperawatan->pemberitahuan_ny = $request->pemberitahuan_ny;
+        if($request->pemberitahuan_ny == '1') {
+            $asesmen_keperawatan->waktu_pemberitahuan_ny = $request->waktu_pemberitahuan_ny;
+        }
+        // $nyeri->save();
 
-        $this->data['id_regis'] = $nyeri->id_regis;        
-        
-        $this->data['jenis_form'] = $nyeri->jenis_form;
-        $this->data['tingkat'] = $nyeri->tingkat;
-        $this->data['skala'] = $nyeri->skala;
-        $this->data['lokasi'] = $nyeri->lokasi;
-        $this->data['durasi'] = $nyeri->durasi;
-        $this->data['frekuensi'] = $nyeri->frekuensi;
-        $this->data['hilang'] = $nyeri->hilang;
-        $this->data['pemberitahuan_nyeri'] = $nyeri->pemberitahuan;
-        
-        if(!is_null($nyeri->pemberitahuan)) {
-            $this->data['waktu_pemberitahuan_nyeri'] = $nyeri->waktu_pemberitahuan;
+
+        // HUMPTY DUMPTY /////////////
+        // HUMPTY DUMPTY /////////////
+        // HUMPTY DUMPTY /////////////
+        // HUMPTY DUMPTY /////////////
+
+        $asesmen_keperawatan->jenis_resiko_jatuh = $request->jenis_resiko_jatuh;
+        if($request->jenis_resiko_jatuh == 'humpty_dumpty')
+        {
+            // $asesmen_keperawatan = new HumptyDumpty;
+            // $asesmen_keperawatan->id_regis = $id_pasien;
+            // $asesmen_keperawatan->jenis_form = 'awal';
+            $asesmen_keperawatan->usia = $request->usia;
+            $asesmen_keperawatan->diagnosis_hd = $request->diagnosis_hd;
+            $asesmen_keperawatan->gangguan_kognitif = $request->gangguan_kognitif;
+            $asesmen_keperawatan->faktor_lingkungan = $request->faktor_lingkungan;
+            $asesmen_keperawatan->waktu_respon_obat = $request->waktu_respon_obat;
+            $asesmen_keperawatan->penggunaan_obat = $request->penggunaan_obat;
+            // $asesmen_keperawatan->save();
+            
+        }
+        elseif($request->jenis_resiko_jatuh == 'morse')
+        {
+            $asesmen_keperawatan->riwayat_jatuh_mrs = $request->riwayat_jatuh_mrs;
+            $asesmen_keperawatan->diagnosis_sekunder = $request->diagnosis_sekunder;
+            $asesmen_keperawatan->alat_bantu = $request->alat_bantu;
+            $asesmen_keperawatan->terpasang_infus = $request->terpasang_infus;
+            $asesmen_keperawatan->gaya_berjalan = $request->gaya_berjalan;
+            $asesmen_keperawatan->status_mental_mrs = $request->status_mental_mrs;
+        }
+        elseif($request->jenis_resiko_jatuh == 'edmunson')
+        {
+            $asesmen_keperawatan->status_mental_edm = $request->status_mental_edm;
+            $asesmen_keperawatan->diagnosis_edm = $request->diagnosis_edm;
+            $asesmen_keperawatan->eliminasi = $request->eliminasi;
+            $asesmen_keperawatan->pengobatan = $request->pengobatan;
+            $asesmen_keperawatan->diagnosa = $request->diagnosa;
+            $asesmen_keperawatan->ambulasi = $request->ambulasi;
+            $asesmen_keperawatan->nutrisi = $request->nutrisi;
+            $asesmen_keperawatan->riwayat_jatuh_edm = $request->riwayat_jatuh_edm;
         }
 
-        // HUMPTY DUMPTY /////////////
-        // HUMPTY DUMPTY /////////////
-        // HUMPTY DUMPTY /////////////
-        // HUMPTY DUMPTY /////////////
-
-        $humpty = HumptyDumpty::where('id', 1)->first();
-
-        $this->data['id_regis'] = $humpty->id_regis;
-        $this->data['jenis_form'] = $humpty->jenis_form;
-        $this->data['usia'] = $humpty->usia;
-        $this->data['diagnosis'] = $humpty->diagnosis;
-        $this->data['gangguan_kognitif'] = $humpty->gangguan_kognitif;
-        $this->data['faktor_lingkungan'] = $humpty->faktor_lingkungan;
-        $this->data['waktu_respon_obat'] = $humpty->waktu_respon_obat;
-        $this->data['penggunaan_obat'] = $humpty->penggunaan_obat;
         
-        // MORSE ////////////////////
-        // MORSE ////////////////////
-        // MORSE ////////////////////
-        // MORSE ////////////////////
+        // $diagnosa = new RJDiagnosaKeperawatan;
+        // $diagnosa->id_regis = $id_pasien;
+        $umum = "";
+        if(isset($request->umum_1)) {
+            $umum .= "1-";
+        }
+        if(isset($request->umum_2)) {
+            $umum .= "2-";
+        }
+        if(isset($request->umum_3)) {
+            $umum .= "3-";
+        }
+        if(isset($request->umum_4)) {
+            $umum .= "4-";
+        }
+        if(isset($request->umum_5)) {
+            $umum .= "5-";
+        }
+        if(isset($request->umum_6)) {
+            $umum .= "6-";
+        }
+        if(isset($request->umum_7)) {
+            $umum .= "7-";
+        }
+        if(isset($request->umum_8)) {
+            $umum .= "8-";
+        }
+        if(isset($request->umum_9)) {
+            $umum .= "9-";
+        }
+        if(isset($request->umum_10)) {
+            $umum .= "10-";
+        }
+        if(isset($request->umum_11)) {
+            $umum .= "11-";
+        }
+        if(isset($request->umum_12)) {
+            $umum .= "12-";
+        }
+        if(isset($request->umum_13)) {
+            $umum .= "13-";
+        }
+        if(isset($request->umum_14)) {
+            $umum .= "14-";
+        }
+        if(strlen($umum) >= 0) {
+            $umum = substr($umum, 0, -1);
+        }
+        $asesmen_keperawatan->umum = $umum;
 
-        $morse = Morse::where('id', 1)->first();
-
-        $this->data['id_regis'] = $morse->id_regis;
-
-        $this->data['jenis_form'] = $morse->jenis_form;
-        $this->data['riwayat_jatuh'] = $morse->riwayat_jatuh;
-        $this->data['diagnosis_sekunder'] = $morse->diagnosis_sekunder;
-        $this->data['alat_bantu'] = $morse->alat_bantu;
-        $this->data['terpasang_infus'] = $morse->terpasang_infus;
-        $this->data['gaya_berjalan'] = $morse->gaya_berjalan;
-        $this->data['status_mental'] = $morse->status_mental;
-
-        // EDMUNSON ///////////////
-        // EDMUNSON ///////////////
-        // EDMUNSON ///////////////
-        // EDMUNSON ///////////////
-
-        $edmunson = Edmunson::where('id', 1)->first();
-
-        $this->data['id_regis'] = $edmunson->id_regis;
-        $this->data['jenis_form'] = $edmunson->jenis_form;
-        $this->data['status_mental'] = $edmunson->status_mental;
-        $this->data['diagnosis'] = $edmunson->diagnosis;
-        $this->data['eliminasi'] = $edmunson->eliminasi;
-        $this->data['pengobatan'] = $edmunson->pengobatan;
-        $this->data['diagnosa'] = $edmunson->diagnosa;
-        $this->data['ambulasi'] = $edmunson->ambulasi;
-        $this->data['nutrisi'] = $edmunson->nutrisi;
-        $this->data['riwayat_jatuh'] = $edmunson->riwayat_jatuh;
-
-
-        // DIAGNOSA KEPERAWATAN ////////////
-        // DIAGNOSA KEPERAWATAN ////////////
-        // DIAGNOSA KEPERAWATAN ////////////
-        // DIAGNOSA KEPERAWATAN ////////////
-
-        $diagnosa = RJDiagnosaKeperawatan::where('id', 1)->first();
-
-        $this->data['id_regis'] = $diagnosa->id_regis;
-        $this->data['umum'] = $diagnosa->umum;
-        $this->data['umum_lainnya'] = $diagnosa->umum_lainnya;
-        $this->data['jiwa'] = $diagnosa->jiwa;
-        
-        if(!is_null($diagnosa->jiwa_lainnya)) {
-            $this->data['jiwa_lainnya'] = $diagnosa->jiwa_lainnya;
+        if(!empty($request->umum_lainnya)) {
+            $asesmen_keperawatan->umum_lainnya = $request->umum_lainnya;
         }
 
-        $this->data['obat_parental'] = $diagnosa->obat_parental;
-        $this->data['ekg'] = $diagnosa->ekg;
+        $jiwa = "";
+        if(isset($request->jiwa_1)) {
+            $jiwa .= "1-";
+        }
+        if(isset($request->jiwa_2)) {
+            $jiwa .= "2-";
+        }
+        if(isset($request->jiwa_3)) {
+            $jiwa .= "3-";
+        }
+        if(isset($request->jiwa_4)) {
+            $jiwa .= "4-";
+        }
+        if(isset($request->jiwa_5)) {
+            $jiwa .= "5-";
+        }
+        if(isset($request->jiwa_6)) {
+            $jiwa .= "6-";
+        }
+        if(isset($request->jiwa_7)) {
+            $jiwa .= "7-";
+        }
+        if(isset($request->jiwa_8)) {
+            $jiwa .= "8-";
+        }
+        if(isset($request->jiwa_9)) {
+            $jiwa .= "9-";
+        }
+        if(isset($request->jiwa_10)) {
+            $jiwa .= "10-";
+        }
+        if(isset($request->jiwa_11)) {
+            $jiwa .= "11-";
+        }
+        if(isset($request->jiwa_12)) {
+            $jiwa .= "12-";
+        }
+        if(!empty($jiwa)) {
+            $jiwa = substr($jiwa, 0, -1);
+        }
+        $asesmen_keperawatan->jiwa = $jiwa;
+
+        if(!empty($request->jiwa_lainnya)) {
+            $asesmen_keperawatan->jiwa_lainnya = $request->jiwa_lainnya;
+        }
+
+        $asesmen_keperawatan->obat_parental = $request->obat_parental;
+        $asesmen_keperawatan->ekg = $request->ekg;
+        // $diagnosa->save();
 
         // EVALUASI TINDAKAN /////////
         // EVALUASI TINDAKAN /////////
         // EVALUASI TINDAKAN /////////
         // EVALUASI TINDAKAN /////////
 
-        $eval = RJEvaluasiTindakan::where('id', 1)->first();
+        // $data = new RJEvaluasiTindakan;
+        // $asesmen_keperawatan->id_regis = $id_pasien;
+        $asesmen_keperawatan->implementasi = $request->implementasi;
+        $asesmen_keperawatan->evaluasi = $request->evaluasi;
+        // $data->save();
+        $asesmen_keperawatan->save();
 
-        $this->data['id_regis'] = $eval->id_regis;
-        $this->data['implementasi'] = $eval->implementasi;
-        $this->data['evaluasi'] = $eval->evaluasi;
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
+        $daftar_dokumen->rj_asesmen_awal_perawat = True;
+        $daftar_dokumen->save();
 
-        return view('page.rj.asesmen_awal_perawat_read', $this->data);
+
+        return redirect('rj_asesmen_awal_perawat_read');
     }
 
 }
