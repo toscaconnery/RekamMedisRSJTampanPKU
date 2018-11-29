@@ -14,6 +14,8 @@ class RIPenilaianEdmunson extends Model
 
     protected $fillable = [
         'id_regis',
+        'tanggal',
+        'waktu',
         'usia',
         'status_mental',
         'eliminasi',
