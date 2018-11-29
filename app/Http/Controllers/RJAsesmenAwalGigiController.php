@@ -103,6 +103,7 @@ class RJAsesmenAwalGigiController extends Controller
         }
 
         $data->save();
+        return redirect('rj_asesmen_awal_gigi_perawat_read');
     }
 
     public function get_rj_asesmen_awal_gigi_perawat_data()
@@ -235,6 +236,8 @@ class RJAsesmenAwalGigiController extends Controller
         }
 
         $data->save();
+
+        return redirect('rj_asesmen_awal_gigi_perawat_read');
     }
 
 
