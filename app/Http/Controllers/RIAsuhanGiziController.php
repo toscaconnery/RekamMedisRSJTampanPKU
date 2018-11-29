@@ -517,9 +517,135 @@ class RIAsuhanGiziController extends Controller
     	return view('page.ri.asuhan_gizi_list_konsultasi', $this->data);
     }
 
+    function pola($jumlah)
+    {
+    	if ($jumlah=='1') {
+    		return 'Lebih 1x Sehari';
+    	}
+    	else if ($jumlah=='2') {
+    		return '1x Sehari';
+    	}
+    	else if ($jumlah=='3') {
+    		return '3-6x Sehari';
+    	} 
+    	else if ($jumlah=='4') {
+    		return '1-2x Sehari';
+    	}
+    	else if ($jumlah=='5') {
+    		return 'Kurang 1x';
+    	}
+    	else
+    	{
+    		return 0;	
+    	}
+    }
+
+    function fklinis($fk)
+    {
+    	if ($fk=='1') {
+    		return 'Ada';
+    	}
+    	else
+    	{
+    		return 'Tidak';	
+    	}
+    }
+
     public function ri_gizi_pdf()
     {
     	$this->get_ri_asuhan_gizi_data();
+
+    	$this->data['jumlah_1'] = $this->pola($this->data['jumlah_1']);
+		$this->data['jumlah_2'] = $this->pola($this->data['jumlah_2']);
+		$this->data['jumlah_3'] = $this->pola($this->data['jumlah_3']);
+		$this->data['jumlah_4'] = $this->pola($this->data['jumlah_4']);
+		$this->data['jumlah_5'] = $this->pola($this->data['jumlah_5']);
+		$this->data['jumlah_6'] = $this->pola($this->data['jumlah_6']);
+		$this->data['jumlah_7'] = $this->pola($this->data['jumlah_7']);
+		$this->data['jumlah_8'] = $this->pola($this->data['jumlah_8']);
+		$this->data['jumlah_9'] = $this->pola($this->data['jumlah_9']);
+		$this->data['jumlah_10'] = $this->pola($this->data['jumlah_10']);
+
+		$this->data['jumlah_11'] = $this->pola($this->data['jumlah_11']);
+		$this->data['jumlah_12'] = $this->pola($this->data['jumlah_12']);
+		$this->data['jumlah_13'] = $this->pola($this->data['jumlah_13']);
+		$this->data['jumlah_14'] = $this->pola($this->data['jumlah_14']);
+		$this->data['jumlah_15'] = $this->pola($this->data['jumlah_15']);
+		$this->data['jumlah_16'] = $this->pola($this->data['jumlah_16']);
+		$this->data['jumlah_17'] = $this->pola($this->data['jumlah_17']);
+		$this->data['jumlah_18'] = $this->pola($this->data['jumlah_18']);
+		$this->data['jumlah_19'] = $this->pola($this->data['jumlah_19']);
+		$this->data['jumlah_20'] = $this->pola($this->data['jumlah_20']);
+
+		$this->data['jumlah_21'] = $this->pola($this->data['jumlah_21']);
+		$this->data['jumlah_22'] = $this->pola($this->data['jumlah_22']);
+		$this->data['jumlah_23'] = $this->pola($this->data['jumlah_23']);
+		$this->data['jumlah_24'] = $this->pola($this->data['jumlah_24']);
+		$this->data['jumlah_25'] = $this->pola($this->data['jumlah_25']);
+		$this->data['jumlah_26'] = $this->pola($this->data['jumlah_26']);
+		$this->data['jumlah_27'] = $this->pola($this->data['jumlah_27']);
+		$this->data['jumlah_28'] = $this->pola($this->data['jumlah_28']);
+		$this->data['jumlah_29'] = $this->pola($this->data['jumlah_29']);
+		$this->data['jumlah_30'] = $this->pola($this->data['jumlah_30']);
+
+		$this->data['jumlah_31'] = $this->pola($this->data['jumlah_31']);
+		$this->data['jumlah_32'] = $this->pola($this->data['jumlah_32']);
+		$this->data['jumlah_33'] = $this->pola($this->data['jumlah_33']);
+		$this->data['jumlah_34'] = $this->pola($this->data['jumlah_34']);
+		$this->data['jumlah_35'] = $this->pola($this->data['jumlah_35']);
+		$this->data['jumlah_36'] = $this->pola($this->data['jumlah_36']);
+		$this->data['jumlah_37'] = $this->pola($this->data['jumlah_37']);
+		$this->data['jumlah_38'] = $this->pola($this->data['jumlah_38']);
+		$this->data['jumlah_39'] = $this->pola($this->data['jumlah_39']);
+		$this->data['jumlah_40'] = $this->pola($this->data['jumlah_40']);
+
+		$this->data['jumlah_41'] = $this->pola($this->data['jumlah_41']);
+		$this->data['jumlah_42'] = $this->pola($this->data['jumlah_42']);
+		$this->data['jumlah_43'] = $this->pola($this->data['jumlah_43']);
+
+		if($this->data['kemampuan_baca'] == '1')
+		{
+			$this->data['kemampuan_baca'] = 'Bisa';
+		}
+		else
+		{
+			$this->data['kemampuan_baca'] = 'Tidak Bisa';
+		}
+
+		if($this->data['perokok'] == '0')
+		{
+			$this->data['perokok'] = 'Ya';
+		}
+		else if($this->data['perokok'] == '1')
+		{
+			$this->data['perokok'] = 'Tidak';
+		}
+		{
+			$this->data['perokok'] = 'Pasif';
+		}
+
+		if($this->data['konseling_sebelumnya'] == '1')
+		{
+			$this->data['konseling_sebelumnya'] = 'Ada';
+		}
+		else
+		{
+			$this->data['konseling_sebelumnya'] = 'Tidak';
+		}
+
+		$this->data['fk1'] = $this->fklinis($this->data['fk1']);
+		$this->data['fk2'] = $this->fklinis($this->data['fk2']);
+		$this->data['fk3'] = $this->fklinis($this->data['fk3']);
+		$this->data['fk4'] = $this->fklinis($this->data['fk4']);
+		$this->data['fk5'] = $this->fklinis($this->data['fk5']);
+		$this->data['fk6'] = $this->fklinis($this->data['fk6']);
+		$this->data['fk7'] = $this->fklinis($this->data['fk7']);
+		$this->data['fk8'] = $this->fklinis($this->data['fk8']);
+		$this->data['fk9'] = $this->fklinis($this->data['fk9']);
+		$this->data['fk13'] = $this->fklinis($this->data['fk13']);
+		$this->data['fk14'] = $this->fklinis($this->data['fk14']);
+		$this->data['fk15'] = $this->fklinis($this->data['fk15']);
+
 
         ob_clean();
 
