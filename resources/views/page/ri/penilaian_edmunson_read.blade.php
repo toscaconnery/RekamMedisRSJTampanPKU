@@ -68,11 +68,11 @@
                       <th style="width: 45%; text-align: center;vertical-align:middle;" colspan="15" ="3">Tanggal, Bulan, tahun</th>
                     </tr>
                     <tr>
-                      <th style="width: 9%; text-align: center;vertical-align:middle;" colspan="3">dd/mm/yyy</th>
-                      <th style="width: 9%; text-align: center;vertical-align:middle;" colspan="3">dd/mm/yyy</th>
-                      <th style="width: 9%; text-align: center;vertical-align:middle;" colspan="3">dd/mm/yyy</th>
-                      <th style="width: 9%; text-align: center;vertical-align:middle;" colspan="3">dd/mm/yyy</th>
-                      <th style="width: 9%; text-align: center;vertical-align:middle;" colspan="3">dd/mm/yyy</th>
+                      <th style="width: 9%; text-align: center;vertical-align:middle;" colspan="3">{{isset($list_tanggal[0]) ? date_format(date_create($list_tanggal[0]), "d/m/Y") : ''}}</th>
+                      <th style="width: 9%; text-align: center;vertical-align:middle;" colspan="3">{{isset($list_tanggal[1]) ? date_format(date_create($list_tanggal[1]), "d/m/Y") : ''}}</th>
+                      <th style="width: 9%; text-align: center;vertical-align:middle;" colspan="3">{{isset($list_tanggal[2]) ? date_format(date_create($list_tanggal[2]), "d/m/Y") : ''}}</th>
+                      <th style="width: 9%; text-align: center;vertical-align:middle;" colspan="3">{{isset($list_tanggal[3]) ? date_format(date_create($list_tanggal[3]), "d/m/Y") : ''}}</th>
+                      <th style="width: 9%; text-align: center;vertical-align:middle;" colspan="3">{{isset($list_tanggal[4]) ? date_format(date_create($list_tanggal[4]), "d/m/Y") : ''}}</th>
                     </tr>
                     <tr>
                       <th style="width: 3%; text-align: center;vertical-align:middle;">P</th>
@@ -161,49 +161,50 @@
                         8
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        {{-- {{dd($laporan[$list_tanggal[0]])}} --}}
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['usia'] < 50 ? 'checked' : '' : ''}}>
                       </td>
                     </tr>
 
@@ -215,103 +216,103 @@
                         10
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['usia'] >= 50 && $laporan[$list_tanggal[0]]['p']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['usia'] >= 50 && $laporan[$list_tanggal[0]]['s']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['usia'] >= 50 && $laporan[$list_tanggal[0]]['m']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['usia'] >= 50 && $laporan[$list_tanggal[0]]['p']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['usia'] >= 50 && $laporan[$list_tanggal[0]]['s']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['usia'] >= 50 && $laporan[$list_tanggal[0]]['m']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['usia'] >= 50 && $laporan[$list_tanggal[0]]['p']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['usia'] >= 50 && $laporan[$list_tanggal[0]]['s']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['usia'] >= 50 && $laporan[$list_tanggal[0]]['m']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['usia'] >= 50 && $laporan[$list_tanggal[0]]['p']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['usia'] >= 50 && $laporan[$list_tanggal[0]]['s']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['usia'] >= 50 && $laporan[$list_tanggal[0]]['m']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['usia'] >= 50 && $laporan[$list_tanggal[0]]['p']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['usia'] >= 50 && $laporan[$list_tanggal[0]]['s']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['usia'] >= 50 && $laporan[$list_tanggal[0]]['m']['usia'] <= 70 ? 'checked' : '' : ''}}>
                       </td>
                     </tr>
 
                     <tr>
                       <td style="vertical-align:middle">
-                        c. Lebih dari 80 tahun
+                        c. Lebih dari 70 tahun
                       </td>
                       <td style="text-align:center;">
-                        
+
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['usia'] > 70 ? 'checked' : '' : ''}}>
                       </td>
                     </tr>
 
@@ -377,49 +378,49 @@
                         4
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['status_mental'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                     </tr>
 
@@ -431,49 +432,49 @@
                         12
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['status_mental'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                     </tr>
 
@@ -485,49 +486,49 @@
                         13
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['status_mental'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                     </tr>
 
@@ -539,49 +540,49 @@
                         14
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['status_mental'] == 4 ? 'checked' : '' : ''}}>
                       </td>
                     </tr>
 
@@ -647,49 +648,49 @@
                         8
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['eliminasi'] == 1 ? 'checked' : '' : ''}}>
                       </td>
                     </tr>
 
@@ -701,49 +702,49 @@
                         12
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['eliminasi'] == 2 ? 'checked' : '' : ''}}>
                       </td>
                     </tr>
 
@@ -755,1590 +756,1590 @@
                         13
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                       <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
+                        <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['eliminasi'] == 3 ? 'checked' : '' : ''}}>
                       </td>
                     </tr>
 
                     <tr>
                       <td style="vertical-align:middle">
                        d. Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)
-                      </td>
-                      <td style="text-align:center;">
-                        12
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                     </td>
+                     <td style="text-align:center;">
+                      12
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['eliminasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        e. Inkontinesia tetapi mampu untuk mobilisasi
-                      </td>
-                      <td style="text-align:center;">
-                        12
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      e. Inkontinesia tetapi mampu untuk mobilisasi
+                    </td>
+                    <td style="text-align:center;">
+                      12
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['eliminasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        <b>PENGOBATAN</b>
-                      </td>
-                      <td style="text-align:center;">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      <b>PENGOBATAN</b>
+                    </td>
+                    <td style="text-align:center;">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        a. Tanpa obat-obatan
-                      </td>
-                      <td style="text-align:center;">
-                        10
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      a. Tanpa obat-obatan
+                    </td>
+                    <td style="text-align:center;">
+                      10
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['pengobatan'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        b. Obat-obatan jantung
-                      </td>
-                      <td style="text-align:center;">
-                        10
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      b. Obat-obatan jantung
+                    </td>
+                    <td style="text-align:center;">
+                      10
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['pengobatan'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        c. Obat-obat psikotropika (termasuk Benzodiazepine dan Antidepresan)
-                      </td>
-                      <td style="text-align:center;">
-                        8
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      c. Obat-obat psikotropika (termasuk Benzodiazepine dan Antidepresan)
+                    </td>
+                    <td style="text-align:center;">
+                      8
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['pengobatan'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        d. Mendapat tambahan obat-obatan dan/atau obat-obat PRN (psikiatri, antinyeri) yang diberikan dalam 24 jam terakhir
-                      </td>
-                      <td style="text-align:center;">
-                        12
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      d. Mendapat tambahan obat-obatan dan/atau obat-obat PRN (psikiatri, antinyeri) yang diberikan dalam 24 jam terakhir
+                    </td>
+                    <td style="text-align:center;">
+                      12
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['pengobatan'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:center">
-                        <b>DIAGNOSA</b>
-                      </td>
-                      <td style="text-align:center;">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:center">
+                      <b>DIAGNOSA</b>
+                    </td>
+                    <td style="text-align:center;">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        a. Bipolar/ Gangguan Schizoaffective
-                      </td>
-                      <td style="text-align:center;">
-                        10
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      a. Bipolar/ Gangguan Schizoaffective
+                    </td>
+                    <td style="text-align:center;">
+                      10
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['diagnosa'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        b. Penggunaan Obat-obatan terlarang/ketergantungan alkohol
-                      </td>
-                      <td style="text-align:center;">
-                        8
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      b. Penggunaan Obat-obatan terlarang/ketergantungan alkohol
+                    </td>
+                    <td style="text-align:center;">
+                      8
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['diagnosa'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        c. Gangguan Depresi Mayor
-                      </td>
-                      <td style="text-align:center;">
-                        10
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      c. Gangguan Depresi Mayor
+                    </td>
+                    <td style="text-align:center;">
+                      10
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['diagnosa'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        d. Dimensia/Delirium
-                      </td>
-                      <td style="text-align:center;">
-                        12
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      d. Dimensia/Delirium
+                    </td>
+                    <td style="text-align:center;">
+                      12
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['diagnosa'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        <b>AMBULASI /KESEIMBANGAN</b>
-                      </td>
-                      <td style="text-align:center;">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      <b>AMBULASI /KESEIMBANGAN</b>
+                    </td>
+                    <td style="text-align:center;">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        a. Mandiri/Keseimbangan Baik/Immobilisasi
-                      </td>
-                      <td style="text-align:center;">
-                        7
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      a. Mandiri/Keseimbangan Baik/Immobilisasi
+                    </td>
+                    <td style="text-align:center;">
+                      7
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['ambulasi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        b. Dengan Alat Bantu (Kursi roda, walker,dll)
-                      </td>
-                      <td style="text-align:center;">
-                        8
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      b. Dengan Alat Bantu (Kursi roda, walker,dll)
+                    </td>
+                    <td style="text-align:center;">
+                      8
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['ambulasi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        c. Vertigo/kelemahan
-                      </td>
-                      <td style="text-align:center;">
-                        10
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      c. Vertigo/kelemahan
+                    </td>
+                    <td style="text-align:center;">
+                      10
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['ambulasi'] == 3 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        d. Goyah/membutuhkan mantuan dan menyadari kemampuan
-                      </td>
-                      <td style="text-align:center;">
-                        8
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      d. Goyah/membutuhkan mantuan dan menyadari kemampuan
+                    </td>
+                    <td style="text-align:center;">
+                      8
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['ambulasi'] == 4 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        e. Goyah tapi lupa keterbatasan
-                      </td>
-                      <td style="text-align:center;">
-                        15
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      e. Goyah tapi lupa keterbatasan
+                    </td>
+                    <td style="text-align:center;">
+                      15
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['ambulasi'] == 5 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        <b>NUTRISI</b>
-                      </td>
-                      <td style="text-align:center;">
-                        
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      <b>NUTRISI</b>
+                    </td>
+                    <td style="text-align:center;">
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        a. Mengkonsumsi sedikit makanan atau minuman  dalam 24 jam terakhir
-                      </td>
-                      <td style="text-align:center;">
-                        12
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        b. Tidak ada kelainan dengan nafsu makan
-                      </td>
-                      <td style="text-align:center;">
-                        0
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      a. Mengkonsumsi sedikit makanan atau minuman  dalam 24 jam terakhir
+                    </td>
+                    <td style="text-align:center;">
+                      12
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['nutrisi'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        <b>GANGGUAN POLA TIDUR</b>
-                      </td>
-                      <td style="text-align:center;">
-                        
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      b. Tidak ada kelainan dengan nafsu makan
+                    </td>
+                    <td style="text-align:center;">
+                      0
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['nutrisi'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        a. Tidak ada gangguan tidur
-                      </td>
-                      <td style="text-align:center;">
-                        8
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      <b>GANGGUAN POLA TIDUR</b>
+                    </td>
+                    <td style="text-align:center;">
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        b. Gangguan pola tidur yang dilaporkan oleh pasien, keluarga atau petugas
-                      </td>
-                      <td style="text-align:center;">
-                        12
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        <b>RIWAYAT JATUH</b>
-                      </td>
-                      <td style="text-align:center;">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      a. Tidak ada gangguan tidur
+                    </td>
+                    <td style="text-align:center;">
+                      8
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['gangguan_pola_tidur'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        a. Tidak ada riwayat jatuh
-                      </td>
-                      <td style="text-align:center;">
-                        8
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      b. Gangguan pola tidur yang dilaporkan oleh pasien, keluarga atau petugas
+                    </td>
+                    <td style="text-align:center;">
+                      12
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['gangguan_pola_tidur'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle">
-                        b. Ada riwayat jatuh dalam 3 bulan terakhir
-                      </td>
-                      <td style="text-align:center;">
-                        12
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <input type="checkbox" class="form-control" name="">
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      <b>RIWAYAT JATUH</b>
+                    </td>
+                    <td style="text-align:center;">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <br>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="vertical-align:middle;text-align:right">
-                        <b>Total Skor</b>
-                      </td>
-                      <td style="text-align:center;">
-                        
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                      <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                       <td style="text-align:center;vertical-align:center">
-                        <br>
-                      </td>
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      a. Tidak ada riwayat jatuh
+                    </td>
+                    <td style="text-align:center;">
+                      8
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['riwayat_jatuh'] == 1 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td style="text-align:center;" colspan="2">
-                        <b>Tidak Beresiko: Skor < 90</b>
-                      </td>
-                      <td style="text-align:center;" colspan="15">
-                        <b>Beresiko: Skor > 90</b>
-                      </td>
-                      
-                    </tr>
+                  <tr>
+                    <td style="vertical-align:middle">
+                      b. Ada riwayat jatuh dalam 3 bulan terakhir
+                    </td>
+                    <td style="text-align:center;">
+                      12
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      <input type="checkbox" class="form-control" {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['riwayat_jatuh'] == 2 ? 'checked' : '' : ''}}>
+                    </td>
+                  </tr>
 
-                  </tbody>
-                </table>
-              </div>
-            </section>
+                  <tr>
+                    <td style="vertical-align:middle;text-align:right">
+                      <b>Total Skor</b>
+                    </td>
+                    <td style="text-align:center;">
 
-            <div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['s']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['m']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['p']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['s']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[1]) ? $laporan[$list_tanggal[1]]['m']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['p']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['s']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[2]) ? $laporan[$list_tanggal[2]]['m']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['p']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['s']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[3]) ? $laporan[$list_tanggal[3]]['m']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['p']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['s']['total'] : ''}}<br>
+                    </td>
+                    <td style="text-align:center;vertical-align:center">
+                      {{isset($list_tanggal[4]) ? $laporan[$list_tanggal[4]]['m']['total'] : ''}}<br>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align:center;" colspan="2">
+                      <b>Tidak Beresiko: Skor < 90</b>
+                    </td>
+                    <td style="text-align:center;" colspan="15">
+                      <b>Beresiko: Skor > 90</b>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+              </table>
             </div>
+          </section>
 
-          </form>
+          <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
 
-        </div>
+        </form>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    @include('layouts.tailscript')
-    
-  </body>
-  <html>
+  @include('layouts.tailscript')
+
+</body>
+<html>

@@ -8,6 +8,7 @@ use App\Models\ListDocument;
 use Session;
 use DateTime;
 use View;
+use Carbon\Carbon;
 
 class RIPenilaianEdmunsonController extends Controller
 {
@@ -23,9 +24,7 @@ class RIPenilaianEdmunsonController extends Controller
     }
 
     public function post_ri_penilaian_edmunson(Request $request)
-    {	/////////////////////////////////
-    	//note: usia belum diperhitungkan, usia juga masuk dalam perhitungan nilai total
-    	/////////////////////////////////
+    {	
     	$data = new RIPenilaianEdmunson;
         $id_pasien = Session::get('id_pasien');
     	$data->id_regis = $id_pasien;
@@ -38,13 +37,22 @@ class RIPenilaianEdmunsonController extends Controller
         $data->gangguan_pola_tidur = $request->gangguan_pola_tidur;
         $data->riwayat_jatuh = $request->riwayat_jatuh;
 
+        $temp = $request->tanggal;
+        $dd = substr($request->tanggal, 0, -8);
+        $mm = substr($request->tanggal, 3, -5);
+        $yy = substr($request->tanggal, 6);
+        $tanggal_pengecekan = $yy.'-'.$mm.'-'.$dd;
+        // dd($dd, $mm, $yy, $tanggal_pengecekan);
+        $data->tanggal = $tanggal_pengecekan;
+        $data->waktu = $request->waktu;
+
         $total = 0;
         //tanggal lahir
         $tanggal_lahir = Session::get('tanggal_lahir');
-        $tanggal = substr($tanggal_lahir, 0, -8);
+        $tanggall = substr($tanggal_lahir, 0, -8);
         $bulan = substr($tanggal_lahir, 3, -5);
         $tahun = substr($tanggal_lahir, 6);
-        $born = new DateTime($tahun.'-'.$bulan.'-'.$tanggal);
+        $born = new DateTime($tahun.'-'.$bulan.'-'.$tanggall);
         $today = new DateTime();
         $usia = $born->diff($today)->y;
     	$data->usia = $usia;
@@ -189,7 +197,30 @@ class RIPenilaianEdmunsonController extends Controller
 
     public function get_ri_penilaian_edmunson_read()
     {
-        $this->get_ri_penilaian_edmunson_data();
+        // $this->get_ri_penilaian_edmunson_data();
+        $today = Carbon::today();
+        $id_pasien = Session::get('id_pasien');
+        $this->data['laporan'] = array();
+        $this->data['list_tanggal'] = array();
+        $data = RIPenilaianEdmunson::where('id_regis', $id_pasien)->where('tanggal', '>', $today->subDays(5))->orderBy('tanggal', 'ASC')->get();
+        foreach ($data as $key => $value) {
+            if(!isset($this->data['laporan'][$value->tanggal])) {
+                $this->data['laporan'][$value->tanggal] = array();
+                array_push($this->data['list_tanggal'], $value->tanggal);
+            }
+            $this->data['laporan'][$value->tanggal][$value->waktu] = array();
+            $this->data['laporan'][$value->tanggal][$value->waktu]['usia'] = $value->usia;
+            $this->data['laporan'][$value->tanggal][$value->waktu]['status_mental'] = $value->status_mental;
+            $this->data['laporan'][$value->tanggal][$value->waktu]['eliminasi'] = $value->eliminasi;
+            $this->data['laporan'][$value->tanggal][$value->waktu]['pengobatan'] = $value->pengobatan;
+            $this->data['laporan'][$value->tanggal][$value->waktu]['diagnosa'] = $value->diagnosa;
+            $this->data['laporan'][$value->tanggal][$value->waktu]['ambulasi'] = $value->ambulasi;
+            $this->data['laporan'][$value->tanggal][$value->waktu]['nutrisi'] = $value->nutrisi;
+            $this->data['laporan'][$value->tanggal][$value->waktu]['gangguan_pola_tidur'] = $value->gangguan_pola_tidur;
+            $this->data['laporan'][$value->tanggal][$value->waktu]['riwayat_jatuh'] = $value->riwayat_jatuh;
+            $this->data['laporan'][$value->tanggal][$value->waktu]['total'] = $value->total;
+        }
+        // dd($data, $this->data, $this->data['list_tanggal']);
         return view('page.ri.penilaian_edmunson_read', $this->data);
     }
 
