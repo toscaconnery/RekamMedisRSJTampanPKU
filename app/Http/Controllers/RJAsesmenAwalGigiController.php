@@ -10,6 +10,7 @@ use App\Models\Edmunson;
 use App\Models\RJDataMedik;
 use Session;
 use App\Models\RJAsesmenGigiKeperawatan;
+use App\Models\RJAsesmenGigiDokter;
 
 class RJAsesmenAwalGigiController extends Controller
 {
@@ -243,47 +244,128 @@ class RJAsesmenAwalGigiController extends Controller
 
     public function post_rj_asesmen_awal_gigi_dokter(Request $request)
     {
-        $data = new RJDataMedik;
+        $id_pasien = Session::get('id_pasien');
+        $data = new RJAsesmenGigiDokter;
         $data->id_regis = $id_pasien;
+        $data->pekerjaan = $request->pekerjaan;
+        $data->alamat = $request->alamat;
+        $data->no_telp = $request->no_telp;
         $data->golongan_darah = $request->golongan_darah;
         $data->tekanan_darah_top = $request->tekanan_darah_top;
         $data->tekanan_darah_bottom = $request->tekanan_darah_bottom;
-         if($request->tekanan_jantung == 'true') {
-            $data->ket_tekanan_jantung = $request->ket_tekanan_jantung;
-         }
-        if($request->diabetes == 'true') {
-            $data->ket_diabetes = $request->ket_diabetes;
-        }
-        if($request->hepatitis == 'true') {
-            $data->ket_hepatitis = $request->ket_hepatitis;
-        }
-        if($request->penyakit_lainnya == 'true') {
-            $data->ket_penyakit_lainnya = $request->ket_penyakit_lainnya;
-        }
-        if($request->alergi_obat == 'true') {
-            $data->ket_alergi_obat = $request->ket_alergi_obat;
-        }
-        if($request->alergi_makanan == 'true') {
-            $data->ket_alergi_makanan = $request->ket_alergi_makanan;
-        }
+        $data->tekanan_jantung = $request->tekanan_jantung;
+        $data->ket_tekanan_jantung = $request->ket_tekanan_jantung;
+        $data->diabetes = $request->diabetes;
+        $data->ket_diabetes = $request->ket_diabetes;
+        $data->hepatitis = $request->hepatitis;
+        $data->ket_hepatitis = $request->ket_hepatitis;
+        $data->penyakit_lainnya = $request->penyakit_lainnya;
+        $data->ket_penyakit_lainnya = $request->ket_penyakit_lainnya;
+        $data->alergi_obat = $request->alergi_obat;
+        $data->ket_alergi_obat = $request->ket_alergi_obat;
+        $data->alergi_makanan = $request->alergi_makanan;
+        $data->ket_alergi_makanan = $request->ket_alergi_makanan;
         $data->oklusi = $request->oklusi;
         $data->torus_palatinus = $request->torus_palatinus;
         $data->torus_mandibularis = $request->torus_mandibularis;
         $data->palatum = $request->palatum;
-        if($request->supernumerary_teeth == 'true') {
-            $data->ket_supernumerary_teeth = $request->ket_supernumerary_teeth;
-        }
-        if($request->diastema == 'true') {
-            $data->ket_diastema = $request->ket_diastema;
-        }
-        if($request->anomali == 'true') {
-            $data->ket_anomali = $request->ket_anomali;
-        }
+        $data->supernumerary_teeth = $request->supernumerary_teeth;
+        $data->ket_supernumerary_teeth = $request->ket_supernumerary_teeth;
+        $data->diastema = $request->diastema;
+        $data->ket_diastema = $request->ket_diastema;
+        $data->anomali = $request->anomali;
+        $data->ket_anomali = $request->ket_anomali;
         $data->lain = $request->lain;
         $data->keterangan = $request->keterangan;
         $data->save();
-        return redirect('index');
+        // return redirect('index');
+    }
 
+    public function get_rj_asesmen_awal_gigi_dokter_data()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RJAsesmenGigiDokter::where('id_regis', $id_pasien)->first();
+        $this->data['pekerjaan'] = $pasien->pekerjaan;
+        $this->data['alamat'] = $pasien->alamat;
+        $this->data['no_telp'] = $pasien->no_telp;
+        $this->data['golongan_darah'] = $pasien->golongan_darah;
+        $this->data['tekanan_darah_top'] = $pasien->tekanan_darah_top;
+        $this->data['tekanan_darah_bottom'] = $pasien->tekanan_darah_bottom;
+        $this->data['tekanan_jantung'] = $pasien->tekanan_jantung;
+        $this->data['ket_tekanan_jantung'] = $pasien->ket_tekanan_jantung;
+        $this->data['diabetes'] = $pasien->diabetes;
+        $this->data['ket_diabetes'] = $pasien->ket_diabetes;
+        $this->data['hepatitis'] = $pasien->hepatitis;
+        $this->data['ket_hepatitis'] = $pasien->ket_hepatitis;
+        $this->data['penyakit_lainnya'] = $pasien->penyakit_lainnya;
+        $this->data['ket_penyakit_lainnya'] = $pasien->ket_penyakit_lainnya;
+        $this->data['alergi_obat'] = $pasien->alergi_obat;
+        $this->data['ket_alergi_obat'] = $pasien->ket_alergi_obat;
+        $this->data['alergi_makanan'] = $pasien->alergi_makanan;
+        $this->data['ket_alergi_makanan'] = $pasien->ket_alergi_makanan;
+        $this->data['oklusi'] = $pasien->oklusi;
+        $this->data['torus_palatinus'] = $pasien->torus_palatinus;
+        $this->data['torus_mandibularis'] = $pasien->torus_mandibularis;
+        $this->data['palatum'] = $pasien->palatum;
+        $this->data['supernumerary_teeth'] = $pasien->supernumerary_teeth;
+        $this->data['ket_supernumerary_teeth'] = $pasien->ket_supernumerary_teeth;
+        $this->data['diastema'] = $pasien->diastema;
+        $this->data['ket_diastema'] = $pasien->ket_diastema;
+        $this->data['anomali'] = $pasien->anomali;
+        $this->data['ket_anomali'] = $pasien->ket_anomali;
+        $this->data['lain'] = $pasien->lain;
+        $this->data['keterangan'] = $pasien->keterangan;
+    }
+
+    public function get_rj_asesmen_awal_gigi_dokter_read()
+    {
+        $this->get_rj_asesmen_awal_gigi_dokter_data();
+        return view('page.rj.asesmen_awal_gigi_dokter_read', $this->data);
+    }
+
+    public function get_rj_asesmen_awal_gigi_dokter_edit()
+    {
+        $this->get_rj_asesmen_awal_gigi_dokter_data();
+        return view('page.rj.asesmen_awal_gigi_dokter_edit', $this->data);
+    }
+
+    public function post_rj_asesmen_awal_gigi_dokter_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RJAsesmenGigiDokter::where('id_regis', $id_pasien)->first();
+        $data->id_regis = $id_pasien;
+        $data->pekerjaan = $request->pekerjaan;
+        $data->alamat = $request->alamat;
+        $data->no_telp = $request->no_telp;
+        $data->golongan_darah = $request->golongan_darah;
+        $data->tekanan_darah_top = $request->tekanan_darah_top;
+        $data->tekanan_darah_bottom = $request->tekanan_darah_bottom;
+        $data->tekanan_jantung = $request->tekanan_jantung;
+        $data->ket_tekanan_jantung = $request->ket_tekanan_jantung;
+        $data->diabetes = $request->diabetes;
+        $data->ket_diabetes = $request->ket_diabetes;
+        $data->hepatitis = $request->hepatitis;
+        $data->ket_hepatitis = $request->ket_hepatitis;
+        $data->penyakit_lainnya = $request->penyakit_lainnya;
+        $data->ket_penyakit_lainnya = $request->ket_penyakit_lainnya;
+        $data->alergi_obat = $request->alergi_obat;
+        $data->ket_alergi_obat = $request->ket_alergi_obat;
+        $data->alergi_makanan = $request->alergi_makanan;
+        $data->ket_alergi_makanan = $request->ket_alergi_makanan;
+        $data->oklusi = $request->oklusi;
+        $data->torus_palatinus = $request->torus_palatinus;
+        $data->torus_mandibularis = $request->torus_mandibularis;
+        $data->palatum = $request->palatum;
+        $data->supernumerary_teeth = $request->supernumerary_teeth;
+        $data->ket_supernumerary_teeth = $request->ket_supernumerary_teeth;
+        $data->diastema = $request->diastema;
+        $data->ket_diastema = $request->ket_diastema;
+        $data->anomali = $request->anomali;
+        $data->ket_anomali = $request->ket_anomali;
+        $data->lain = $request->lain;
+        $data->keterangan = $request->keterangan;
+        $data->save();
+        // return redirect('index');
     }
 
     // public function get_rj_asesmen_awal_gigi_perawat_read2()
@@ -345,59 +427,59 @@ class RJAsesmenAwalGigiController extends Controller
     //     return view('page.rj.asesmen_awal_gigi_perawat_read', $this->data);
     // }
 
-    public function get_rj_asesmen_awal_gigi_dokter_read()
-    {
-        $Pasien = RJDataMedik::where('id', 1)->first();
+    // public function get_rj_asesmen_awal_gigi_dokter_read()
+    // {
+    //     $Pasien = RJDataMedik::where('id', 1)->first();
         
-        $this->data['id_regis'] = $pasien->id_regis;
-        $this->data['golongan_darah'] = $pasien->golongan_darah;
-        $this->data['tekanan_darah_top'] = $pasien->tekanan_darah_top;
-        $this->data['tekanan_darah_bottom'] = $pasien->tekanan_darah_bottom;
+    //     $this->data['id_regis'] = $pasien->id_regis;
+    //     $this->data['golongan_darah'] = $pasien->golongan_darah;
+    //     $this->data['tekanan_darah_top'] = $pasien->tekanan_darah_top;
+    //     $this->data['tekanan_darah_bottom'] = $pasien->tekanan_darah_bottom;
         
-        if( $pasien->tekanan_jantung == True) {
-            $this->data['tekanan_jantung'] = $pasien->tekanan_jantung;
-        }
+    //     if( $pasien->tekanan_jantung == True) {
+    //         $this->data['tekanan_jantung'] = $pasien->tekanan_jantung;
+    //     }
 
-        if( $pasien->diabetes == True) {
-            $this->data['diabetes'] = $pasien->diabetes;
-        }
+    //     if( $pasien->diabetes == True) {
+    //         $this->data['diabetes'] = $pasien->diabetes;
+    //     }
 
-        if( $pasien->hepatitis == True) {
-            $this->data['hepatitis'] = $pasien->hepatitis;
-        }
+    //     if( $pasien->hepatitis == True) {
+    //         $this->data['hepatitis'] = $pasien->hepatitis;
+    //     }
 
-        if( $pasien->penyakit_lainnya == True) {
-            $this->data['penyakit_lainnya'] = $pasien->penyakit_lainnya;
-        }
+    //     if( $pasien->penyakit_lainnya == True) {
+    //         $this->data['penyakit_lainnya'] = $pasien->penyakit_lainnya;
+    //     }
 
-        if( $pasien->alergi_obat == True) {
-            $this->data['alergi_obat'] = $pasien->alergi_obat;
-        }
+    //     if( $pasien->alergi_obat == True) {
+    //         $this->data['alergi_obat'] = $pasien->alergi_obat;
+    //     }
 
-        if( $pasien->alergi_makanan == True) {
-            $this->data['alergi_makanan'] = $pasien->alergi_makanan;
-        }
+    //     if( $pasien->alergi_makanan == True) {
+    //         $this->data['alergi_makanan'] = $pasien->alergi_makanan;
+    //     }
 
-        $this->data['oklusi'] = $pasien->oklusi;
-        $this->data['torus_palatinus'] = $pasien->torus_palatinus;
-        $this->data['torus_mandibularis'] = $pasien->torus_mandibularis;
-        $this->data['palatum'] = $pasien->palatum;
+    //     $this->data['oklusi'] = $pasien->oklusi;
+    //     $this->data['torus_palatinus'] = $pasien->torus_palatinus;
+    //     $this->data['torus_mandibularis'] = $pasien->torus_mandibularis;
+    //     $this->data['palatum'] = $pasien->palatum;
 
-        if( $pasien->supernumerary_teeth == True) {
-            $this->data['supernumerary_teeth'] = $pasien->supernumerary_teeth;
-        }
+    //     if( $pasien->supernumerary_teeth == True) {
+    //         $this->data['supernumerary_teeth'] = $pasien->supernumerary_teeth;
+    //     }
 
-        if( $pasien->diastema == True) {
-            $this->data['diastema'] = $pasien->diastema;
-        }
+    //     if( $pasien->diastema == True) {
+    //         $this->data['diastema'] = $pasien->diastema;
+    //     }
 
-        if( $pasien->anomali == True) {
-            $this->data['anomali'] = $pasien->anomali;
-        }
+    //     if( $pasien->anomali == True) {
+    //         $this->data['anomali'] = $pasien->anomali;
+    //     }
 
-        $this->data['lain'] = $pasien->lain;
-        $this->data['keterangan'] = $pasien->keterangan;
+    //     $this->data['lain'] = $pasien->lain;
+    //     $this->data['keterangan'] = $pasien->keterangan;
 
-        return view('page.rj_asesmen_awal_gigi_dokter_read', $this->data);
-    }
+    //     return view('page.rj_asesmen_awal_gigi_dokter_read', $this->data);
+    // }
 }
