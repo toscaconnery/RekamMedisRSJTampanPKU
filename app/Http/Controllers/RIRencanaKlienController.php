@@ -13,6 +13,7 @@ use App\Models\RIRencanaKlien6;
 use App\Models\RIRencanaKlien7;
 use Session;
 use Auth;
+use View;
 
 class RIRencanaKlienController extends Controller
 {

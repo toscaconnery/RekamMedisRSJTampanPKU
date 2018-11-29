@@ -23,17 +23,17 @@ header('Content-Type: application/pdf');
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td class="box-c">-</td>
-      <td class="box-c">-</td>
+    @foreach($pasien as $p)
+    <tr id="form_{{$p['id_data']}}">
+      <td class="box-c">{{$p['tanggal']}}<br>{{$p['jam']}}</td>
+      <td class="box-c">{{$p['implementasi']}}</td>
       <td class="box">
-        <b>S - </b> isi
-        <br><b>O -</b> isi
-        <br><b>A -</b> isi
-        <br><b>P -</b> isi
-        <br>-
+        {{$p['evaluasi']}}
       </td>
-      <td class="box-c">-</td>
+      <td class="box-c" style="vertical-align:bottom"><br><br><br>{{$p['nama_user']}}</td>
+    </tr>
+    @endforeach
+
   </tbody>
 </table>
 
