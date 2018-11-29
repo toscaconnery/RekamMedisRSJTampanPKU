@@ -102,13 +102,13 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="riwayat_napza" value="false" checked>
+                        <input type="radio" name="riwayat_napza" value="0">
                         Tidak ada
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="riwayat_napza" value="true">
+                        <input type="radio" name="riwayat_napza" value="1">
                         Ada
                       </label>
                     </div>
@@ -249,13 +249,13 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="riwayat_operasi" value="false" checked>
+                        <input type="radio" name="riwayat_operasi" value="0">
                         Tidak
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="riwayat_operasi" value="true">
+                        <input type="radio" name="riwayat_operasi" value="1">
                         Ya
                       </label>
                     </div>
@@ -278,13 +278,13 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="riwayat_tranfusi" value="false" checked>
+                        <input type="radio" name="riwayat_tranfusi" value="0">
                         Tidak
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="riwayat_tranfusi" value="true" checked>
+                        <input type="radio" name="riwayat_tranfusi" value="1">
                         Ya
                       </label>
                     </div>
@@ -295,13 +295,13 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="reaksi_tranfusi" value="false" checked>
+                        <input type="radio" name="reaksi_tranfusi" value="0">
                         Tidak
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="reaksi_tranfusi" value="true">
+                        <input type="radio" name="reaksi_tranfusi" value="1">
                         Ya
                       </label>
                     </div>
@@ -352,25 +352,25 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr id="obat_1">
                     <td>1</td>
-                    <td><input type="text" class="form-control" name="nama_obat"></td>
-                    <td><input type="text" class="form-control" name="dibawa"></td>
-                    <td><input type="text" class="form-control" name="jumlah"></td>
-                    <td><input type="text" class="form-control" name="tidak_dibawa"></td>
-                    <td><input type="text" class="form-control" name="keterangan"></td>
+                    <td><input type="text" class="form-control" name="nama_obat_1"></td>
+                    <td><input type="text" class="form-control" name="dibawa_1"></td>
+                    <td><input type="text" class="form-control" name="jumlah_1"></td>
+                    <td><input type="text" class="form-control" name="tidak_dibawa_1"></td>
+                    <td><input type="text" class="form-control" name="keterangan_1"></td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                        <div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_1'"><i class="icon_close_alt2"></i></button></div>
                       </div>
                     </td>
                   </tr>
-                  <tr>
+                  <tr id="last_row_obat">
+                    <input type="hidden" name="jumlah_form_obat" id="jumlah_form_obat" value="1">
                     <td>#</td>
                     <td colspan="6">
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i> Tambah</a>
-                        <button class="btn btn-success" type="submit"><i class="icon_check_alt2"></i> Simpan</button>
+                        <button class="btn btn-primary" type="button" id="tambah_form"><i class="icon_plus_alt2"></i> Tambah</button>
                       </div>
                     </td>
                   </tr>
@@ -444,7 +444,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kesadaran</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="kesadaran">
+                    <input type="text" class="form-control" name="kesadaran_psikiatri">
                   </div>
                 </div>
                 <div class="form-group">
@@ -612,43 +612,43 @@
                   <div class="col-lg-3">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p4" value="1">
+                        <input type="radio" name="gaduh_gelisah" value="1">
                         Tidak ada - definisi tidak dipenuhi
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p4" value="2">
+                        <input type="radio" name="gaduh_gelisah" value="2">
                         Minimal – patologis diragukan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p4" value="3">
+                        <input type="radio" name="gaduh_gelisah" value="3">
                         Ringan – sedikit agitatif, waspada berlebihan, atau sedikit mudah terangsang selama wawancara, tanpa episode yang jelas dari gaduh gelisah atau labilitas alam perasaan yang mecolok. Pembicaraan mungkin sedikit mendesah
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p4" value="4">
+                        <input type="radio" name="gaduh_gelisah" value="4">
                         Sedang – agitasi atau mudah terangsang yang jelas, ledakan-ledakan episodik
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p4" value="5">
+                        <input type="radio" name="gaduh_gelisah" value="5">
                         Agak berat – hiperaktivitas yang bermakna, sering terjadi ledakan-leadakan atau aktivitas mototrik, sulit untuk tetap duduk
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p4" value="6">
+                        <input type="radio" name="gaduh_gelisah" value="6">
                         Berat – gaduh gelisah yang mencolok mempengaruhi fungsi sehari-hari seperti makan  dan tidur
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p4" value="7">
+                        <input type="radio" name="gaduh_gelisah" value="7">
                         Sangat berat – gaduh gelisah yang mencolok, mempengaruhi kegiatan makan dan tidur, serta jelas tidak memungkinkan interaksi interpersonal. Percepatan dan pembicaraan dan aktivitas motorik dapat menimbulkan inkoherensi dan kelelahan
                       </label>
                     </div>
@@ -657,43 +657,43 @@
                   <div class="col-lg-3">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g8" value="1">
+                        <input type="radio" name="ketidakoperatifan" value="1">
                         Tidak ada - definisi tidak dipenuhi
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g8" value="2">
+                        <input type="radio" name="ketidakoperatifan" value="2">
                         Minimal – patologis diragukan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g8" value="3">
+                        <input type="radio" name="ketidakoperatifan" value="3">
                         Ringan – patuh tapi disertai sikap marah tidak sabar atau sarkasme, mungkin ada penolakan yang tidak mengganggu terhadap penyelidikan yang sensitif selama wawancara
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g8" value="4">
+                        <input type="radio" name="ketidakoperatifan" value="4">
                         Sedang – kadang-kadang terdapat penolakan langsung untuk patuh, memproyeksikan hostilitas, defensif atau bersifat negatif tetapi biasanya masih dapat diatasi
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g8" value="5">
+                        <input type="radio" name="ketidakoperatifan" value="5">
                         Agak berat – seringkali tidak patuh, jelas defensif atau iritabilitas terhadap pewawancara dan mungkin tidak bersedia menghadapi banyak pertanyaan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g8" value="6">
+                        <input type="radio" name="ketidakoperatifan" value="6">
                         Berat – sangat tidak kooperatif, negativistik dan suka membangkang. Menolak untuk patuh, tidak mau memulai atau mengikuti wawancara sepenuhnya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g8" value="7">
+                        <input type="radio" name="ketidakoperatifan" value="7">
                         Sangat berat – resistensi aktif, menolak untuk ikut dalam aktivitas sosial apapun, mengurus kebersihan diri, bercakap-cakap dengan keluarga atau staf dan bahkan untuk berpartisipasi dalam wawancara singkat
                       </label>
                     </div>
@@ -706,43 +706,43 @@
                   <div class="col-lg-3">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p7" value="1">
+                        <input type="radio" name="permusuhan" value="1">
                         Tidak ada - definisi tidak dipenuhi
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p7" value="2">
+                        <input type="radio" name="permusuhan" value="2">
                         Minimal – patologis diragukan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p7" value="3">
+                        <input type="radio" name="permusuhan" value="3">
                         Ringan – melampiaskan kemarahan secara tidak langsung atau ditahan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p7" value="4">
+                        <input type="radio" name="permusuhan" value="4">
                         Sedang – sikap bermusuhan yang nyata
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p7" value="5">
+                        <input type="radio" name="permusuhan" value="5">
                         Agak berat – pasien sangat mudah marah dan kadang-kadang memaki dengan kata-kata kasar atau mengancam
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p7" value="6">
+                        <input type="radio" name="permusuhan" value="6">
                         Berat – tidak kooperatif dan mencaci maki dengan kasar atau mengancam, dapat beringas dan merusak tetapi tidak menyerang orang lain secara fisik
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="p7" value="7">
+                        <input type="radio" name="permusuhan" value="7">
                         Sangat berat – kemarahan yang hebat berakibat sangat tidak kooperatif, menghalangi interaksi, atau secara episodik melakukan penyerangan fisik terhadap orang lain
                       </label>
                     </div>
@@ -751,43 +751,43 @@
                   <div class="col-lg-3">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g14" value="1">
+                        <input type="radio" name="pengendalian_impuls" value="1">
                         Tidak ada - definisi tidak dipenuhi
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g14" value="2">
+                        <input type="radio" name="pengendalian_impuls" value="2">
                         Minimal – patologis diragukan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g14" value="3">
+                        <input type="radio" name="pengendalian_impuls" value="3">
                         Ringan – cenderung mudah marah dan frustasi bila menghadapi stres atau pemuasannya ditolak tetapi jarang bertindak impulsif
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g14" value="4">
+                        <input type="radio" name="pengendalian_impuls" value="4">
                         Sedang – dengan provokasi yang minimal, pasien menjadi marah dan mencaci maki. Mungkin sekali-kali mengancam, merusak atau terdapat satu atau dua episode yang melibatkan konfrontasi fisik atau perselisihan ringan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g14" value="5">
+                        <input type="radio" name="pengendalian_impuls" value="5">
                         Agak berat – memperlihatkan episode impulsif yang berulang, termasuk mencaci maki, merusak harta benda atau ancaman fisik. Mungkin ada satu atau dua episode yang melibatkan serangn serius
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g14" value="6">
+                        <input type="radio" name="pengendalian_impuls" value="6">
                         Berat – agresif secara impulsif, mengancam, menuntut dan merusak, tanpa pertimbangan terhadap konsekuensinya. Menunjukkan perilaku menyerang
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g14" value="7">
+                        <input type="radio" name="pengendalian_impuls" value="7">
                         Sangat berat – memperlihatkan serangan kebrutalan dan berbahaya
                       </label>
                     </div>
@@ -799,43 +799,43 @@
                   <div class="col-lg-3">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g4" value="1">
+                        <input type="radio" name="ketegangan" value="1">
                         Tidak ada - definisi tidak dipenuhi
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g4" value="2">
+                        <input type="radio" name="ketegangan" value="2">
                         Minimal – patologis diragukan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g4" value="3">
+                        <input type="radio" name="ketegangan" value="3">
                         Ringan – postur dan gerakan-gerakan menunjukkan kekhawatiran ringan, ketidaktenangan yang sekali-kali, perubahan posisi, atau tremor tangan yang halus dan cepat
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g4" value="4">
+                        <input type="radio" name="ketegangan" value="4">
                         Sedang – nyata-nyata gelisah seperti perilaku tidak tenang, tremor tangan yang nyata, keringat berlebihan, atau manerisme karena gugup
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g4" value="5">
+                        <input type="radio" name="ketegangan" value="5">
                         Agak berat – ketegangan yang berat, manifestasi seperti gemetar karena gugup, keringat sangat berlebihan dan ketidaktenangan, perilaku selama wawancara tidak terpengaruh secara bermakna
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g4" value="6">
+                        <input type="radio" name="ketegangan" value="6">
                         Berat – Ketegangan berat, taraf interaksi terganggu. Misalnya terus-menerus bergerak, tidak dapat tetap duduk, hiperventilasi
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="g4" value="7">
+                        <input type="radio" name="ketegangan" value="7">
                         Sangat berat – ketegangan sangat mencolok, tanda panik atau percepatan gerakan motorik kaar, ketidak mampuan tetap duduk > 1 menit yang menyebabkan percakapan tidak mungkin diteruskan
                       </label>
                     </div>
@@ -852,7 +852,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Pemeriksaan</label>
                   <div class="col-sm-8">
-                    <input type="text" id="dp1" size="16" class="form-control" name="tanggal_pemeriksaan">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pemeriksaan">
                   </div>
                 </div>
                 <div class="form-group">
@@ -925,7 +925,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jam</label>
                   <div class="col-sm-1">
-                    <input type="text" class="form-control" name="jam">
+                    <input type="time" class="form-control" name="jam">
                   </div>
                 </div>
                 <div class="form-group">
@@ -983,13 +983,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="perlu_dikontrol" value="false">
+                        <input type="radio" name="perlu_dikontrol" value="0">
                         Tidak perlu kontrol
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="perlu_dikontrol" value="true">
+                        <input type="radio" name="perlu_dikontrol" value="1">
                         Perlu Kontrol
                       </label>
                     </div>
@@ -998,7 +998,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Perlu kontrol pada tanggal</label>
                   <div class="col-sm-2">
-                    <input type="text" id="dp2" size="16" class="form-control" name="tanggal_kontrol">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_kontrol">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1019,25 +1019,25 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="alasan_menolak" value="Masalah biaya">
+                        <input type="radio" name="alasan_menolak" value="1">
                         Masalah biaya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="alasan_menolak" value="Masalah lokasi rumah">
+                        <input type="radio" name="alasan_menolak" value="2">
                         Masalah lokasi rumah
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="alasan_menolak" value="Kondisi pasien">
+                        <input type="radio" name="alasan_menolak" value="3">
                         Kondisi pasien
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="alasan_menolak" value="Lainnya">
+                        <input type="radio" name="alasan_menolak" value="4">
                         Lainnya
                       </label>
                     </div>
@@ -1060,19 +1060,19 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="alasan_dirujuk" value="tempat penuh">
+                        <input type="radio" name="alasan_dirujuk" value="1">
                         Tempat Penuh
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="alasan_dirujuk" value="Perlu fasilitas lebih">
+                        <input type="radio" name="alasan_dirujuk" value="2">
                         Perlu Fasilitas Lebih
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="alasan_dirujuk" value="Permintaan pasien/keluarga">
+                        <input type="radio" name="alasan_dirujuk" value="3">
                         Permintaan Pasien/Keluarga
                       </label>
                     </div>
@@ -1146,6 +1146,29 @@
     </section>
 
     @include('layouts.tailscript')
+
+    {{-- menambah row inputan --}}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#tambah_form').click(function() {
+        var a = document.getElementById('jumlah_form_obat').value;
+        a = parseInt(a) + 1;
+        $('#last_row_obat').before('<tr id="obat_'+a+'"> <td>'+a+'</td> <td><input type="text" class="form-control" name="nama_obat_'+a+'"></td> <td><input type="text" class="form-control" name="dibawa_'+a+'"></td> <td><input type="text" class="form-control" name="jumlah_'+a+'"></td> <td><input type="text" class="form-control" name="tidak_dibawa_'+a+'"></td> <td><input type="text" class="form-control" name="keterangan_'+a+'"></td> <td> <div class="btn-group"> <div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div> </div> </td> </tr>');
+        document.getElementById('jumlah_form_obat').value = a;
+      });
+    });
+  </script>
+
+  {{-- menghapus row --}}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(document).on('click', '.tombol_hapus', function() {
+        var x = $(this).attr('id');
+        var nomor = x.substring(13)
+        $('#obat_'+nomor).remove();
+      });
+    });
+  </script>
 
   </body>
   <html>
