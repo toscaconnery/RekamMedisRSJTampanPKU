@@ -90,6 +90,8 @@ Route::post('/rj_asesmen_awal_perawat_edit', 'RJAsesmenAwalController@post_rj_as
 Route::get('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@get_rj_asesmen_awal_dokter');
 Route::post('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@post_rj_asesmen_awal_dokter');
 Route::get('/rj_asesmen_awal_dokter_read', 'RJAsesmenAwalController@get_rj_asesmen_awal_dokter_read');
+Route::get('/rj_asesmen_awal_dokter_edit', 'RJAsesmenAwalController@get_rj_asesmen_awal_dokter_edit');
+Route::post('/rj_asesmen_awal_dokter_edit', 'RJAsesmenAwalController@post_rj_asesmen_awal_dokter_edit');
 //dokumen asesmen awal pasien rawat jalan
 Route::get('/rj_asesmen_pdf', 'RJAsesmenAwalController@rj_asesmen_pdf');
 Route::get('/doc_rj_asesmen', function () {

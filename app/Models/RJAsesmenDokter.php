@@ -91,6 +91,7 @@ class RJAsesmenDokter extends Model
 		'ruangan',
 		'indikasi_rawat_inap',
 		'alasan_menolak',
+		'alasan_lainnya',
 		'dirujuk_ke',
 		'alasan_dirujuk',
 		'kesadaran',

@@ -106,6 +106,7 @@ class CreateRjAsesmenDokterTable extends Migration
             $table->string('ruangan')->nulable();
             $table->string('indikasi_rawat_inap')->nullable();
             $table->string('alasan_menolak',1)->nullable();
+            $table->string('alasan_lainnya')->nullable();
             $table->string('dirujuk_ke')->nulable();
             $table->string('alasan_dirujuk',1)->nulable();
             $table->string('kesadaran')->nulable();
