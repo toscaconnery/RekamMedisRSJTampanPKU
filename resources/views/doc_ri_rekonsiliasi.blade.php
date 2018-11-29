@@ -164,7 +164,7 @@ header('Content-Type: application/pdf');
   </tbody>
   <thead>
     <tr>
-      <th class="default" colspan="11" style="text-align:left;padding-left:0.5%;" bgcolor="#C0C0C0">OBAT NON RESEP (contoh : produk OTC, herbal, dll</th>
+      <th class="default" colspan="11" style="text-align:left;padding-left:0.5%;" bgcolor="#C0C0C0">OBAT NON RESEP (contoh : produk OTC, herbal, dll)</th>
     </tr>
     <tr>
       <th class="default" style="width:3%;">No</th>
