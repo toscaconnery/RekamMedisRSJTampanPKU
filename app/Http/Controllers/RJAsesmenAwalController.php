@@ -1260,17 +1260,12 @@ class RJAsesmenAwalController extends Controller
         $asesmen_keperawatan->jenis_resiko_jatuh = $request->jenis_resiko_jatuh;
         if($request->jenis_resiko_jatuh == 'humpty_dumpty')
         {
-            // $asesmen_keperawatan = new HumptyDumpty;
-            // $asesmen_keperawatan->id_regis = $id_pasien;
-            // $asesmen_keperawatan->jenis_form = 'awal';
             $asesmen_keperawatan->usia = $request->usia;
             $asesmen_keperawatan->diagnosis_hd = $request->diagnosis_hd;
             $asesmen_keperawatan->gangguan_kognitif = $request->gangguan_kognitif;
             $asesmen_keperawatan->faktor_lingkungan = $request->faktor_lingkungan;
             $asesmen_keperawatan->waktu_respon_obat = $request->waktu_respon_obat;
-            $asesmen_keperawatan->penggunaan_obat = $request->penggunaan_obat;
-            // $asesmen_keperawatan->save();
-            
+            $asesmen_keperawatan->penggunaan_obat = $request->penggunaan_obat;            
         }
         elseif($request->jenis_resiko_jatuh == 'morse')
         {

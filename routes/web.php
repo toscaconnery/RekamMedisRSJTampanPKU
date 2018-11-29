@@ -101,9 +101,14 @@ Route::get('/doc_rj_asesmen', function () {
 Route::get('/rj_asesmen_awal_gigi_perawat', 'RJAsesmenAwalGigiController@get_rj_asesmen_awal_gigi_perawat');
 Route::post('/rj_asesmen_awal_gigi_perawat', 'RJAsesmenAwalGigiController@post_rj_asesmen_awal_gigi_perawat');
 Route::get('/rj_asesmen_awal_gigi_perawat_read', 'RJAsesmenAwalGigiController@get_rj_asesmen_awal_gigi_perawat_read');
+Route::get('/rj_asesmen_awal_gigi_perawat_edit', 'RJAsesmenAwalGigiController@get_rj_asesmen_awal_gigi_perawat_edit');
+Route::post('/rj_asesmen_awal_gigi_perawat_edit', 'RJAsesmenAwalGigiController@post_rj_asesmen_awal_gigi_perawat_edit');
+
 Route::get('/rj_asesmen_awal_gigi_dokter', 'RJAsesmenAwalGigiController@get_rj_asesmen_awal_gigi_dokter');
 Route::post('/rj_asesmen_awal_gigi_dokter', 'RJAsesmenAwalGigiController@post_rj_asesmen_awal_gigi_dokter');
 Route::get('/rj_asesmen_awal_gigi_dokter_read', 'RJAsesmenAwalGigiController@get_rj_asesmen_awal_gigi_dokter_read');
+Route::get('/rj_asesmen_awal_gigi_dokter_edit', 'RJAsesmenAwalGigiController@get_rj_asesmen_awal_gigi_dokter_edit');
+Route::post('/rj_asesmen_awal_gigi_dokter_edit', 'RJAsesmenAwalGigiController@post_rj_asesmen_awal_gigi_dokter_edit');
 //dokumen asesmen awal pasien gigi
 Route::get('/rj_gigi_pdf', 'RJAsesmenAwalGigiController@rj_gigi_pdf');
 Route::get('/doc_rj_gigi', function () {
