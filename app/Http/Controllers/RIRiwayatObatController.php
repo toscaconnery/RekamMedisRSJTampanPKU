@@ -90,4 +90,9 @@ class RIRiwayatObatController extends Controller
         $daftar_dokumen->save();
 		return redirect('daftar_dokumen');
 	}
+
+    public function get_ri_riwayat_obat_read()
+    {
+        return view('page.ri.riwayat_obat_read', $this->data);
+    }
 }

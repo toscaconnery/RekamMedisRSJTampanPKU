@@ -534,9 +534,9 @@ Route::post('/ri_panss_ec_edit', 'RIPanssEcController@post_ri_panss_ec_edit');
 // Route::post('/ri_penilaian_panss', 'RIPenilaianPanssController@post_ri_penilaian_panss');
 // Route::get('/ri_penilaian_panss_read', 'RIPenilaianPanssController@get_ri_penilaian_panss_read');
 //dokumen penilaian panss
-Route::get('/pdf_ri_nilaipanss', 'Pdf_ri_Controller@pdf_ri_nilaipanss');
-Route::get('/doc_ri_nilaipanss', function () {
-    return view('/doc_ri_nilaipanss');
+Route::get('/ri_panssec_pdf', 'RIPanssEcController@ri_panssec_pdf');
+Route::get('/doc_ri_panssec', function () {
+    return view('/doc_ri_panssec');
 });
 
 Route::get('/ri_lembar_konsultasi', 'RILembarKonsultasiController@get_ri_lembar_konsultasi');
