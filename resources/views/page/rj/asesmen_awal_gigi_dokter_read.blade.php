@@ -177,17 +177,16 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="hepatitis"  value="1" {{$hepatitis}}>
+                        <input type="radio" disabled name="hepatitis"  value="1" {{$hepatitis == 1 ? 'checked' : ''}}>
                         Ada
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="hepatitis"  value="0" {{$hepatitis}}>
+                        <input type="radio" disabled name="hepatitis"  value="0" {{$hepatitis == 0 ? 'checked' : ''}}>
                         Tidak ada
                       </label>
                     </div>
-
                   </div>
                   <div class="form-group">
                     <label class="col-sm-1 control-label">Sebutkan</label>
@@ -202,17 +201,16 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="penyakit_lainnya"  value="1" value="{{$penyakit_lainnya}}">
+                        <input type="radio" disabled name="penyakit_lainnya"  value="1" {{$penyakit_lainnya == 1 ? 'checked' : ''}}>
                         Ada
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="penyakit_lainnya"  value="0" value="{{$penyakit_lainnya}}">
+                        <input type="radio" disabled name="penyakit_lainnya"  value="0" {{$penyakit_lainnya == 0 ? 'checked' : ''}}>
                         Tidak ada
                       </label>
                     </div>
-
                   </div>
                   <div class="form-group">
                     <label class="col-sm-1 control-label">Sebutkan</label>

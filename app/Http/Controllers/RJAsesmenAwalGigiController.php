@@ -11,6 +11,7 @@ use App\Models\RJDataMedik;
 use Session;
 use App\Models\RJAsesmenGigiKeperawatan;
 use App\Models\RJAsesmenGigiDokter;
+use View;
 
 class RJAsesmenAwalGigiController extends Controller
 {
@@ -482,4 +483,422 @@ class RJAsesmenAwalGigiController extends Controller
 
     //     return view('page.rj_asesmen_awal_gigi_dokter_read', $this->data);
     // }
+
+    function adatidak($isi)
+    {
+        if($isi=='1')
+        {
+            return "Ada";
+        }
+        else {
+            return 'Tidak Ada';
+        }
+    }
+
+    function convert()
+    {
+        $this->get_rj_asesmen_awal_gigi_perawat_data();
+        $this->get_rj_asesmen_awal_gigi_dokter_data();
+
+        $this->data['tekanan_jantung'] = $this->adatidak($this->data['tekanan_jantung']);
+        $this->data['$diabetes'] = $this->adatidak($this->data['diabetes']);
+        $this->data['hepatitis'] = $this->adatidak($this->data['hepatitis']);
+        $this->data['penyakit_lainnya'] = $this->adatidak($this->data['penyakit_lainnya']);
+        $this->data['alergi_obat'] = $this->adatidak($this->data['alergi_obat']);
+        $this->data['alergi_makanan'] = $this->adatidak($this->data['alergi_makanan']);
+        $this->data['supernumerary_teeth'] = $this->adatidak($this->data['supernumerary_teeth']);
+        $this->data['diastema'] = $this->adatidak($this->data['diastema']);
+        $this->data['anomali'] = $this->adatidak($this->data['anomali']);
+        $this->data['tekanan_jantung'] = $this->adatidak($this->data['tekanan_jantung']);
+
+        if($this->data['oklusi']=='1')
+        {
+            $this->data['oklusi'] = 'Normal bite';
+        }
+        elseif ($this->data['oklusi']=='2') {
+            $this->data['$klusi'] = 'Cross bite'; 
+        }
+        else {
+            $this->data['oklusi'] = 'Deep bite';
+        }
+
+        if($this->data['torus_palatinus']=='1')
+        {
+            $this->data['torus_palatinus'] = 'Tidak ada';
+        }
+        elseif ($this->data['torus_palatinus']=='2') {
+            $this->data['torus_palatinus'] = 'Kecil'; 
+        }
+        elseif ($this->data['torus_palatinus']=='3') {
+            $this->data['torus_palatinus'] = 'Sedang'; 
+        }
+        elseif ($this->data['$torus_palatinus']=='4') {
+            $this->data['torus_palatinus'] = 'Besar'; 
+        }
+        else {
+            $this->data['$torus_palatinus'] = 'Multiple';
+        }
+
+        if($this->data['torus_mandibularis']=='1')
+        {
+            $this->data['torus_mandibularis'] = 'Tidak ada';
+        }
+        elseif ($this->data['$torus_mandibularis']=='2') {
+            $this->data['torus_mandibularis'] = 'Kecil'; 
+        }
+        elseif ($this->data['$torus_mandibularis']=='3') {
+            $this->data['torus_mandibularis'] = 'Sedang'; 
+        }
+        elseif ($this->data['$torus_mandibularis']=='4') {
+            $this->data['torus_mandibularis'] = 'Besar'; 
+        }
+        else {
+            $this->data['torus_mandibularis'] = 'Multiple';
+        }
+
+        if($this->data['palatum']=='1')
+        {
+            $this->data['palatum'] = 'Dalam';
+        }
+        elseif ($this->data['palatum']=='2') {
+            $this->data['palatum'] = 'Sedang'; 
+        }
+        else {
+            $this->data['palatum'] = 'Rendah';
+        }
+
+        if($this->data['tingkat']=='1')
+        {
+            $this->data['tingkat'] = 'Tidak ada nyeri';
+        }
+        elseif ($this->data['tingkat']=='2') {
+            $this->data['tingkat'] = 'Nyeri Kronis'; 
+        }
+        else {
+            $this->data['tingkat'] = 'Nyeri Akut';
+        }
+
+        if($this->data['pemberitahuan']=='1')
+        {
+            $this->data['pemberitahuan'] = 'Ya';
+        }
+        else {
+            $this->data['pemberitahuan'] = 'Nyeri Akut';
+        }
+
+
+
+
+
+
+        if($this->data['usia']=='1')
+        {
+            $this->data['usia'] = '(Skor: 4) Dibawah 3 tahun';
+        }
+        elseif ($this->data['usia']=='2') {
+            $this->data['usia'] = '(Skor: 3) 3 – 7 tahun'; 
+        }
+        elseif ($this->data['usia']=='3') {
+            $this->data['usia'] = '(Skor: 2) 7 – 13 tahun'; 
+        }
+        else {
+            $this->data['usia'] = '(Skor: 1) > 13 tahun';
+        }
+
+        if($this->data['diagnosis_hd']=='1')
+        {
+            $this->data['diagnosis_hd'] = '(Skor: 4) Kelainan Neurologi';
+        }
+        elseif ($this->data['diagnosis_hd']=='2') {
+            $this->data['diagnosis_hd'] = '(Skor: 3) Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)'; 
+        }
+        elseif ($this->data['diagnosis_hd']=='3') {
+            $this->data['diagnosis_hd'] = '(Skor: 2) Kelainan psikis / prilaku'; 
+        }
+        else {
+            $this->data['diagnosis_hd'] = '(Skor: 1) Diagnosis lain';
+        }
+
+        if($this->data['gangguan_kognitif']=='1')
+        {
+            $this->data['gangguan_kognitif'] = '(Skor: 3) Tidak sadar terhadap keterbatasan (gangguan kesadaran, retardasi mental';
+        }
+        elseif ($this->data['gangguan_kognitif']=='2') {
+            $this->data['gangguan_kognitif'] = '(Skor: 2) Lupa keterbatasan (anak yang hiperaktif)'; 
+        }
+        else {
+            $this->data['gangguan_kognitif'] = '(Skor: 1) Mengetahui kemampuan diri';
+        }
+
+        if($this->data['faktor_lingkungan']=='1')
+        {
+            $this->data['faktor_lingkungan'] = '(Skor: 4) Riwayat jatuh dari tempat tidur saat bayi';
+        }
+        elseif ($this->data['faktor_lingkungan']=='2') {
+            $this->data['faktor_lingkungan'] = '(Skor: 3) Pasien menggunakan alat bantu atau box meubel'; 
+        }
+        elseif ($this->data['faktor_lingkungan']=='3') {
+            $this->data['faktor_lingkungan'] = '(Skor: 2) Pasien berada di tempat tidur'; 
+        }
+        else {
+            $this->data['faktor_lingkungan'] = '(Skor: 1) Di luar ruang rawat';
+        }
+
+        if($this->data['waktu_respon_obat']=='1')
+        {
+            $this->data['waktu_respon_obat'] = '(Skor: 3) Dalam 24 Jam';
+        }
+        elseif ($this->data['waktu_respon_obat']=='2') {
+            $this->data['waktu_respon_obat'] = '(Skor: 2) Dalam 48 Jam'; 
+        }
+        else {
+            $this->data['waktu_respon_obat'] = '(Skor: 1) > 48 Jam';
+        }
+
+        if($this->data['penggunaan_obat']=='1')
+        {
+            $this->data['penggunaan_obat'] = '(Skor: 3) Bermacam-macam obat yang digunakan : obat sedatif (kecuali pasien ICU yang menggunakan sedasi dan paralisis), Hiptonik Barbitural, Fonotiazin, Antidepresan, Laksansia / Diuretikan, Narkotik';
+        }
+        elseif ($this->data['penggunaan_obat']=='2') {
+            $this->data['penggunaan_obat'] = '(Skor: 2) Salah satu Pengobatan di atas'; 
+        }
+        else {
+            $this->data['penggunaan_obat'] = '(Skor: 1) Pengobatan lain';
+        }
+
+        if($this->data['riwayat_jatuh_mrs']=='1')
+        {
+            $this->data['riwayat_jatuh_mrs'] = '(Skor: 25) Ya';
+        }
+        else {
+            $this->data['riwayat_jatuh_mrs'] = '(Skor: 0) Tidak';
+        }
+
+        if($this->data['diagnosis_sekunder']=='1')
+        {
+            $this->data['diagnosis_sekunder'] = '(Skor: 15) Ya';
+        }
+        else {
+            $this->data['diagnosis_sekunder'] = '(Skor: 0) Tidak';
+        }
+
+        if($this->data['alat_bantu']=='1')
+        {
+            $this->data['alat_bantu'] = '(Skor: 30) Perabot';
+        }
+        elseif ($this->data['alat_bantu']=='2') {
+            $this->data['alat_bantu'] = '(Skor: 15) Tongkat/Alat Penopang'; 
+        }
+        else {
+            $this->data['alat_bantu'] = '(Skor: 0) Tidak ada/Kursi Roda/Perawat/Tirah Baring';
+        }
+
+        if($this->data['terpasang_infus']=='1')
+        {
+            $this->data['terpasang_infus'] = '(Skor: 20) Ya';
+        }
+        else {
+            $this->data['terpasang_infus'] = '(Skor: 0) Tidak';
+        }
+
+        if($this->data['gaya_berjalan']=='1')
+        {
+            $this->data['gaya_berjalan'] = '(Skor: 20) Terganggu';
+        }
+        elseif ($this->data['gaya_berjalan']=='2') {
+            $this->data['gaya_berjalan'] = '(Skor: 10) Lemah'; 
+        }
+        else {
+            $this->data['gaya_berjalan'] = '(Skor: 0) Normal/Tirah Baring/Imobilisasi';
+        }
+
+        if($this->data['status_mental_mrs']=='1')
+        {
+            $this->data['status_mental_mrs'] = '(Skor: 15) Sering lupa akan keterbatasan yang dimiliki';
+        }
+        else {
+            $this->data['status_mental_mrs'] = '(Skor: 0) Orientasi baik terhadap kemampuan diri sendiri';
+        }
+
+        if($this->data['status_mental_edm']=='1')
+        {
+            $this->data['status_mental_edm'] = '(Skor: 4) Kesadaran baik/orientasi baik setiap saat';
+        }
+        elseif ($this->data['status_mental_edm']=='2') {
+            $this->data['status_mental_edm'] = '(Skor: 12) Agitasi/Ansietas'; 
+        }
+        elseif ($this->data['status_mental_edm']=='3') {
+            $this->data['status_mental_edm'] = '(Skor: 13) Kadang-kadang bingung'; 
+        }
+        else {
+            $this->data['status_mental_edm'] = '(Skor: 14) Bingung/Disorientasi';
+        }
+
+        if($this->data['diagnosis_edm']=='1')
+        {
+            $this->data['diagnosis_edm'] = '(Skor: ) Kelainan Neurologi';
+        }
+        elseif ($this->data['diagnosis_edm']=='2') {
+            $this->data['diagnosis_edm'] = '(Skor: ) Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)'; 
+        }
+        elseif ($this->data['diagnosis_edm']=='3') {
+            $this->data['diagnosis_edm'] = '(Skor: ) Kelainan psikis / prilaku'; 
+        }
+        else {
+            $this->data['diagnosis_edm'] = '(Skor: ) Diagnosis lain';
+        }
+
+        if($this->data['eliminasi']=='1')
+        {
+            $this->data['eliminasi'] = '(Skor: 8) Mandiri dan mampi mengontrol BAB/BAK';
+        }
+        elseif ($this->data['eliminasi']=='2') {
+            $this->data['eliminasi'] = '(Skor: 12) Dower Catheter/Colostomy'; 
+        }
+        elseif ($this->data['eliminasi']=='3') {
+            $this->data['eliminasi'] = '(Skor: 10) Eliminasi dengan bantuan'; 
+        }
+        elseif ($this->data['eliminasi']=='4') {
+            $this->data['eliminasi'] = '(Skor: 12) Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)'; 
+        }
+        else {
+            $this->data['eliminasi'] = '(Skor: 12) Inkontinesia tetapi mampu untuk mobilisasi';
+        }
+
+        if($this->data['pengobatan']=='1')
+        {
+            $this->data['pengobatan'] = '(Skor: 10) Tanpa obat-obatan';
+        }
+        elseif ($this->data['pengobatan']=='2') {
+            $this->data['pengobatan'] = '(Skor: 10) Obat-obatan jantung'; 
+        }
+        elseif ($this->data['pengobatan']=='3') {
+            $this->data['pengobatan'] = '(Skor: 8) Obat-obat psikotropika (termasuk Benzodiazepine dan Antidepresan)'; 
+        }
+        else {
+            $this->data['pengobatan'] = '(Skor: 12) Mendapat tambahan obat-obatan dan/atau obat-obat PRN (psikiatri, antinyeri) yang diberikan dalam 24 jam terakhir';
+        }
+
+        if($this->data['diagnosa']=='1')
+        {
+            $this->data['diagnosa'] = '(Skor: 10) Bipolar/ Gangguan Schizoaffective';
+        }
+        elseif ($this->data['diagnosa']=='2') {
+            $this->data['diagnosa'] = '(Skor: 8) Penggunaan Obat-obatan terlarang/ketergantungan alkohol'; 
+        }
+        elseif ($this->data['diagnosa']=='3') {
+            $this->data['diagnosa'] = '(Skor: 10) Gangguan Depresi Mayor'; 
+        }
+        else {
+            $this->data['diagnosa'] = '(Skor: 12) Dimensia/ Delirium';
+        }
+
+        if($this->data['ambulasi']=='1')
+        {
+            $this->data['ambulasi'] = '(Skor: 8) Mandiri/Keseimbangan Baik/Immobilisasi';
+        }
+        elseif ($this->data['ambulasi']=='2') {
+            $this->data['ambulasi'] = '(Skor: 8) Dengan Alat Bantu (Kursi roda, walker,dll)'; 
+        }
+        elseif ($this->data['ambulasi']=='3') {
+            $this->data['ambulasi'] = '(Skor: 10) Vertigo/kelemahan'; 
+        }
+        elseif ($this->data['ambulasi']=='4') {
+            $this->data['ambulasi'] = '(Skor: 8) Goyah/membutuhkan mantuan dan menyadari kemampuan'; 
+        }
+        else {
+            $this->data['ambulasi'] = '(Skor: 15) Goyah tapi lupa keterbatasan';
+        }
+
+        if($this->data['nutrisi']=='1')
+        {
+            $this->data['nutrisi'] = '(Skor: 12) Mengkonsumsi sedikit makanan atau minuman  dalam 24 jam terakhir';
+        }
+        else{
+            $this->data['nutrisi'] = '(Skor: 0) Tidak ada kelainan dengan nafsu makan'; 
+        }
+
+        if($this->data['riwayat_jatuh_edm']=='1')
+        {
+            $this->data['riwayat_jatuh_edm'] = '(Skor: 8) Tidak ada riwayat jatuh';
+        }
+        else {
+            $this->data['riwayat_jatuh_edm'] = '(Skor: 12) Ada riwayat jatuh dalam 3 bulan terakhir';
+        }
+
+    }
+    public function rj_gigi_pdf()
+    {
+        
+        $this->convert();
+
+        ob_clean();
+
+
+        header('Content-type: application/pdf');
+
+        $mpdf = new \Mpdf\Mpdf([
+        'mode' => 'utf-8', 
+        'format' => 'A4-P', 
+        'orientation' => 'P'
+        ]);
+
+        $view = View::make('doc_rj_gigi',$this->data);
+        $contents = $view->render();
+
+
+        $mpdf->SetHTMLHeader('
+
+            <table width="100%" >
+                <tbody>
+                        <tr>
+
+                            <td class= "doc_headerleft">
+                                <img class="relative" src="img/riau.png" height="9%" width="7%">
+                            </td>
+
+                            <td class="doc_headermid">
+                                <p style="font-size:120%;" ><b>Pemerintah Provinsi Riau</b></p>
+                                <br><p style="font-size:160%;" ><b>RUMAH SAKIT JIWA TAMPAN</b></p>
+                                <br><p style="font-size:90%;" >Jl. H. R. Soebrantas Km. 12,5 Pekanbaru Telp. (0761) 63240</p>
+                                <p style="font-size:90%;" >Fax. (0761) 63239 E-mail : rstampan@yahoo.com</p>
+                            </td>
+                            
+                            <td class="doc_headerright">
+                            <p>No. RM           </p><br>
+                            <p>Nama Pasien      </p><br>
+                            <p>Tanggal Lahir    </p><br>
+                            <p>Jenis Kelamin    </p><br>
+                            </td>    
+
+                            <td class="doc_headerright_ans">
+                            <p>:  123456</p><br>
+                            <p>:  Joko Pangestu</p><br>
+                            <p>:  13/08/1992</p><br>
+                            <p>:  L</p><br>
+                            </td>                       
+                        </tr>
+  
+                </tbody>
+            </table> <hr>' );
+
+        $mpdf->SetHTMLFooter('<hr>
+            <table width="100%" style="vertical-align: bottom; font-family: "arial", Times, serif; 
+                font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+                <tr>
+                    <td width="33%">{DATE j-m-Y}</td>
+                    <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+                    <td width="33%" style="text-align: right;">RM. 02.00.RJ JULI 2015</td>
+                </tr>
+            </table>'); 
+
+        $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
+
+        $mpdf->AddPage('P','','','','',10,10,35,20,10,10);
+        //right,left
+        $mpdf->WriteHTML($stylesheet, 1);
+        $mpdf->WriteHTML($contents,2,true,false);
+
+        $mpdf->Output('rj_asesmen_gigi.pdf',\Mpdf\Output\Destination::INLINE);
+    }
 }
