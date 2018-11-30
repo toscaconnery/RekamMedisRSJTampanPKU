@@ -2304,6 +2304,9 @@ class RJAsesmenAwalController extends Controller
 
     public function rj_asesmen_pdf()
     {
+        $this->get_rj_asesmen_awal_dokter_data();
+        $this->get_rj_asesmen_awal_perawat_data();
+
         ob_clean();
 
         header('Content-type: application/pdf');
@@ -2314,7 +2317,7 @@ class RJAsesmenAwalController extends Controller
         'orientation' => 'P'
         ]);
 
-        $view = View::make('doc_rj_asesmen');
+        $view = View::make('doc_rj_asesmen',$this->data);
         $contents = $view->render();
 
 
