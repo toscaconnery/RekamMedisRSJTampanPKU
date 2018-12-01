@@ -210,11 +210,19 @@ Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKemban
 Route::get('/rj_asesmen_awal_tumbuh_kembang_dokter_read', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter_read');
 Route::get('/rj_asesmen_awal_tumbuh_kembang_dokter_edit', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter_edit');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter_edit', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_dokter_edit');
+
+Route::get('/rj_asesmen_awal_tumbuh_kembang_psikiatri', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikiatri');
+Route::post('/rj_asesmen_awal_tumbuh_kembang_psikiatri', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_psikiatri');
+Route::get('/rj_asesmen_awal_tumbuh_kembang_psikiatri_read', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikiatri_read');
+Route::get('/rj_asesmen_awal_tumbuh_kembang_psikiatri_edit', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikiatri_edit');
+Route::post('/rj_asesmen_awal_tumbuh_kembang_psikiatri_edit', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_psikiatri_edit');
+
 //dokumen informasi tumbuh kembang
 Route::get('/rj_tumbuhkembang_pdf', 'RJAsesmenAwalTumbuhKembangController@rj_tumbuhkembang_pdf');
 Route::get('/doc_rj_tumbuhkembang', function () {
     return view('/doc_rj_tumbuhkembang');
 });
+
 
 Route::get('/rj_resume', 'RJResumeController@get_rj_resume');
 Route::post('/rj_resume', 'RJResumeController@post_rj_resume');

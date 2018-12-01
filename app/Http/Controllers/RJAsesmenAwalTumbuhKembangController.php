@@ -17,6 +17,7 @@ use App\Models\RJTumbuhKembangRiwayatSosialisasi;
 use App\Models\RJTumbuhKembangRiwayatPsikiatrik;
 use App\Models\RJTumbuhKembangPemeriksaanStatusMental;
 use App\Models\RJTumbuhKembangLainnya;
+use App\Models\RJTumbuhKembangPsikiatri;
 use Session;
 use View;
 
@@ -965,6 +966,118 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     {
         $this->get_rj_asesmen_awal_tumbuh_kembang_dokter_read();
         return view('page.rj.tumbuh_kembang_dokter_edit', $this->data);
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_psikiatri()
+    {
+        return view('page.rj.tumbuh_kembang_psikiatri', $this->data);
+    }
+
+    public function post_rj_asesmen_awal_tumbuh_kembang_psikiatri(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = new RJTumbuhKembangPsikiatri;
+        $data->id_regis = $id_pasien;
+        $data->f1 = $request->f1;
+        $data->f2 = $request->f2;
+        $data->f3 = $request->f3;
+        $data->f4 = $request->f4;
+        $data->f5 = $request->f5;
+        $data->f6 = $request->f6;
+        $data->f7 = $request->f7;
+        $data->t1 = $request->t1;
+        $data->r1 = $request->r1;
+        $data->t2 = $request->t2;
+        $data->r2 = $request->r2;
+        $data->t3 = $request->t3;
+        $data->r3 = $request->r3;
+        $data->t4 = $request->t4;
+        $data->r4 = $request->r4;
+        $data->t5 = $request->t5;
+        $data->r5 = $request->r5;
+        $data->t6 = $request->t6;
+        $data->r6 = $request->r6;
+        $data->t7 = $request->t7;
+        $data->r7 = $request->r7;
+        $data->t8 = $request->t8;
+        $data->r8 = $request->r8;
+        $data->tanggal = $request->tanggal;
+        $data->save();
+        return redirect('rj_asesmen_awal_tumbuh_kembang_psikiatri_read');
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_psikiatri_data()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RJTumbuhKembangPsikiatri::where('id_regis', $id_pasien)->first();
+        $this->data['f1'] = $pasien->f1;
+        $this->data['f2'] = $pasien->f2;
+        $this->data['f3'] = $pasien->f3;
+        $this->data['f4'] = $pasien->f4;
+        $this->data['f5'] = $pasien->f5;
+        $this->data['f6'] = $pasien->f6;
+        $this->data['f7'] = $pasien->f7;
+        $this->data['t1'] = $pasien->t1;
+        $this->data['r1'] = $pasien->r1;
+        $this->data['t2'] = $pasien->t2;
+        $this->data['r2'] = $pasien->r2;
+        $this->data['t3'] = $pasien->t3;
+        $this->data['r3'] = $pasien->r3;
+        $this->data['t4'] = $pasien->t4;
+        $this->data['r4'] = $pasien->r4;
+        $this->data['t5'] = $pasien->t5;
+        $this->data['r5'] = $pasien->r5;
+        $this->data['t6'] = $pasien->t6;
+        $this->data['r6'] = $pasien->r6;
+        $this->data['t7'] = $pasien->t7;
+        $this->data['r7'] = $pasien->r7;
+        $this->data['t8'] = $pasien->t8;
+        $this->data['r8'] = $pasien->r8;
+        $this->data['tanggal'] = $pasien->tanggal;
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_psikiatri_read()
+    {
+        $this->get_rj_asesmen_awal_tumbuh_kembang_psikiatri_data();
+        return view('page.rj.tumbuh_kembang_psikiatri_read', $this->data);
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_psikiatri_edit()
+    {
+        $this->get_rj_asesmen_awal_tumbuh_kembang_psikiatri_data();
+        return view('page.rj.tumbuh_kembang_psikiatri_edit', $this->data);
+    }
+
+    public function post_rj_asesmen_awal_tumbuh_kembang_psikiatri_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RJTumbuhKembangPsikiatri::where('id_regis', $id_pasien)->first();
+        $data->f1 = $request->f1;
+        $data->f2 = $request->f2;
+        $data->f3 = $request->f3;
+        $data->f4 = $request->f4;
+        $data->f5 = $request->f5;
+        $data->f6 = $request->f6;
+        $data->f7 = $request->f7;
+        $data->t1 = $request->t1;
+        $data->r1 = $request->r1;
+        $data->t2 = $request->t2;
+        $data->r2 = $request->r2;
+        $data->t3 = $request->t3;
+        $data->r3 = $request->r3;
+        $data->t4 = $request->t4;
+        $data->r4 = $request->r4;
+        $data->t5 = $request->t5;
+        $data->r5 = $request->r5;
+        $data->t6 = $request->t6;
+        $data->r6 = $request->r6;
+        $data->t7 = $request->t7;
+        $data->r7 = $request->r7;
+        $data->t8 = $request->t8;
+        $data->r8 = $request->r8;
+        $data->tanggal = $request->tanggal;
+        $data->save();
+        return redirect('rj_asesmen_awal_tumbuh_kembang_psikiatri_read');
     }
 
     public function rj_tumbuhkembang_pdf()

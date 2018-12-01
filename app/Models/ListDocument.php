@@ -27,6 +27,7 @@ class ListDocument extends Model
         'rj_perkembangan_pasien',
         'rj_asesmen_awal_tumbuh_kembang_psikolog',
         'rj_asesmen_awal_tumbuh_kembang_dokter',
+        'rj_asesmen_awal_tumbuh_kembang_psikiatri',
         'rj_resume',
         'igd_triase',
         'igd_asesmen_awal_rawat_darurat_perawat',

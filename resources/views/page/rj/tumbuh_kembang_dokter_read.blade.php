@@ -161,15 +161,18 @@
                 </div>
                 Proses Pikir (Thought Process)
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Bentuk dan Arus Pikir (Steam and Form of Thought) </label>
-                  <div class="col-sm-8">
-                    <textarea readonly class="form-control required" name="bentuk_arus_pikir" rows="6" style="resize: none;">{{$bentuk_arus_pikir}}</textarea>
+                  <div>
+                    <label class="col-sm-2 control-label">Bentuk dan Arus Pikir (Steam and Form of Thought) </label>
+                    <div class="col-sm-8">
+                      <textarea readonly class="form-control required" name="bentuk_arus_pikir" rows="6" style="resize: none;">{{$bentuk_arus_pikir}}</textarea>
+                    </div>
                   </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Isi Pikir (Content of Thought)</label>
-                  <div class="col-sm-8">
-                    <textarea readonly class="form-control required" name="isi_pikir" rows="6" style="resize: none;">{{$isi_pikir}}</textarea>
+                  <div style="float: left; min-height: 1em;" class="col-sm-12"></div>
+                  <div style="float: left; padding: 0" class="col-sm-12">
+                    <label class="col-sm-2 control-label">Isi Pikir (Content of Thought)</label>
+                    <div class="col-sm-8">
+                      <textarea readonly class="form-control required" name="isi_pikir" rows="6" style="resize: none;">{{$isi_pikir}}</textarea>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group">
@@ -301,7 +304,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Prognosis</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="prognosis" value="{{$prognosis}}">
+                    <textarea class="form-control required" name="prognosis" rows="6" style="resize: none;" readonly>{{$prognosis}}</textarea>
                   </div>
                 </div>
               </div>
@@ -315,13 +318,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Untuk Pasien</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="treatment_pasien" value="{{$treatment_pasien}}">
+                    <textarea class="form-control required" name="treatment_pasien" rows="6" style="resize: none;" readonly>{{$treatment_pasien}}</textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Untuk Keluarga</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="treatment_keluarga" value="{{$treatment_keluarga}}">
+                    <textarea class="form-control required" name="treatment_keluarga" rows="6" style="resize: none;" readonly>{{$treatment_keluarga}}</textarea>
                   </div>
                 </div>
               </div>

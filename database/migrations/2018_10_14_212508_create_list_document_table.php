@@ -29,6 +29,7 @@ class CreateListDocumentTable extends Migration
             $table->boolean('rj_perkembangan_pasien')->default(False);
             $table->boolean('rj_asesmen_awal_tumbuh_kembang_psikolog')->default(False);
             $table->boolean('rj_asesmen_awal_tumbuh_kembang_dokter')->default(False);
+            $table->boolean('rj_asesmen_awal_tumbuh_kembang_psikiatri')->default(False);
             $table->boolean('rj_resume')->default(False);
             $table->boolean('igd_triase')->default(False);
             $table->boolean('igd_asesmen_awal_rawat_darurat_perawat')->default(False);
