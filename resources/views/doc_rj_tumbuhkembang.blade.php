@@ -24,7 +24,7 @@ header('Content-Type: application/pdf');
             Nama Lengkap
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$nama_anak}}
           </td>                
         </tr>
         <tr>
@@ -32,7 +32,7 @@ header('Content-Type: application/pdf');
             Tempat/Tgl.Lahir
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$tempat_lahir_anak}}/{{$tanggal_lahir_anak}}
           </td>                
         </tr>
         <tr>
@@ -40,7 +40,7 @@ header('Content-Type: application/pdf');
             Jenis Kelamin
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$jenis_kelamin_anak}}
           </td>                
         </tr>
         <tr>
@@ -48,7 +48,7 @@ header('Content-Type: application/pdf');
             Agama
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$agama_anak}}
           </td>                
         </tr>
         <tr>
@@ -56,7 +56,7 @@ header('Content-Type: application/pdf');
             Sekolah/Kelas
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$sekolah_anak}}/{{$kelas_anak}}
           </td>                
         </tr>
         <tr>
@@ -64,7 +64,7 @@ header('Content-Type: application/pdf');
             Alamat Sekolah/Terapi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$alamat_sekolah_anak}}
           </td>                
         </tr>
         <tr>
@@ -72,7 +72,7 @@ header('Content-Type: application/pdf');
             Suku Bangsa
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$suku_bangsa_anak}}
           </td>                
         </tr>
         <tr>
@@ -80,7 +80,7 @@ header('Content-Type: application/pdf');
             Bahasa Sehari-hari
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$bahasa_anak}}
           </td>                
         </tr>
         <tr>
@@ -88,7 +88,7 @@ header('Content-Type: application/pdf');
             Alamat Lengkap
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$alamat_lengkap_anak}}
           </td>                
         </tr>
         <tr>
@@ -96,7 +96,7 @@ header('Content-Type: application/pdf');
             Telp
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$no_telp_anak}}
           </td>                
         </tr>
         <tr>
@@ -104,7 +104,7 @@ header('Content-Type: application/pdf');
             Anak tinggal dengan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$tinggal_dengan}} <?php if($tinggal_dengan) echo ','.$tinggal_dengan_lainnya.'' ?>
           </td>                
         </tr>
       </tbody>
@@ -123,7 +123,7 @@ header('Content-Type: application/pdf');
             Nama Lengkap
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$nama_ayah}}
           </td>                
         </tr>
         <tr>
@@ -131,7 +131,7 @@ header('Content-Type: application/pdf');
             Tempat/Tgl.Lahir
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$tempat_lahir_ayah}}/{{$tanggal_lahir_ayah}}
           </td>                
         </tr>
         <tr>
@@ -139,7 +139,7 @@ header('Content-Type: application/pdf');
             Agama
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$agama_ayah}}
           </td>                
         </tr>
         <tr>
@@ -147,7 +147,7 @@ header('Content-Type: application/pdf');
             Pendidikan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$pendidikan_ayah}}
           </td>                
         </tr>
         <tr>
@@ -155,7 +155,7 @@ header('Content-Type: application/pdf');
             Pekerjaan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$pekerjaan_ayah}}
           </td>                
         </tr>
         <tr>
@@ -163,7 +163,7 @@ header('Content-Type: application/pdf');
             Alamat Pekerjaan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$alamat_pekerjaan_ayah}}
           </td>                
         </tr>
         <tr>
@@ -171,7 +171,7 @@ header('Content-Type: application/pdf');
             Perkawinan ke
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$perkawinan_ke_ayah}}
           </td>                
         </tr>
         <tr>
@@ -179,7 +179,7 @@ header('Content-Type: application/pdf');
             Lama Perkawinan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$lama_perkawinan_ayah}}
           </td>                
         </tr>
         <tr>
@@ -187,7 +187,7 @@ header('Content-Type: application/pdf');
             Status
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$status_ayah}} <?php if($status_ayah) echo ','.$status_ayah_lainnya.'' ?>
           </td>                
         </tr>
       </tbody>
@@ -201,7 +201,7 @@ header('Content-Type: application/pdf');
             Nama Lengkap
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$nama_ibu}}
           </td>                
         </tr>
         <tr>
@@ -209,7 +209,7 @@ header('Content-Type: application/pdf');
             Tempat/Tgl.Lahir
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$tempat_lahir_ibu}}/{{$tanggal_lahir_ibu}}
           </td>                
         </tr>
         <tr>
@@ -217,7 +217,7 @@ header('Content-Type: application/pdf');
             Agama
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$agama_ibu}}
           </td>                
         </tr>
         <tr>
@@ -225,7 +225,7 @@ header('Content-Type: application/pdf');
             Pendidikan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$pendidikan_ibu}}
           </td>                
         </tr>
         <tr>
@@ -233,7 +233,7 @@ header('Content-Type: application/pdf');
             Pekerjaan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$pekerjaan_ibu}}
           </td>                
         </tr>
         <tr>
@@ -241,7 +241,7 @@ header('Content-Type: application/pdf');
             Alamat Pekerjaan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$alamat_pekerjaan_ibu}}
           </td>                
         </tr>
         <tr>
@@ -249,7 +249,7 @@ header('Content-Type: application/pdf');
             Perkawinan ke
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$perkawinan_ke_ibu}}
           </td>                
         </tr>
         <tr>
@@ -257,7 +257,7 @@ header('Content-Type: application/pdf');
             Lama Perkawinan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$lama_perkawinan_ibu}}
           </td>                
         </tr>
         <tr>
@@ -265,7 +265,7 @@ header('Content-Type: application/pdf');
             Status
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : $status_ibu <?php if($status_ayah) echo ','.$status_ibu_lainnya.'' ?>
           </td>                
         </tr>
       </tbody>
@@ -291,48 +291,22 @@ header('Content-Type: application/pdf');
           </thead>
 
           <tbody>
+            @foreach($saudara as $s)
             <tr>
               <td class="kolom">
-                -
+                {{$s['umur']}}
               </td>
               <td class="kolom">
-                -
+                {{$s['jenis_kelamin']}}
               </td> 
               <td class="kolom">
-                -
+                {{$s['pendidikan']}}
               </td> 
               <td class="kolom">
-                -
+                {{$s['pekerjaan']}}
               </td>   
             </tr>
-            <tr>
-              <td class="kolom">
-                -
-              </td>
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td>    
-            </tr>
-            <tr>
-              <td class="kolom">
-                -
-              </td>
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td> 
-            </tr>
+            @endforeach
           </tbody>
       </table>
     </div>
@@ -350,48 +324,21 @@ header('Content-Type: application/pdf');
           </thead>
 
           <tbody>
-            <tr>
-              <td class="kolom">
-                7 tahun
-              </td>
-              <td class="kolom">
-                Perempuan
-              </td> 
-              <td class="kolom">
-                SD
-              </td> 
-              <td class="kolom">
-                -
-              </td>   
-            </tr>
-            <tr>
-              <td class="kolom">
-                -
-              </td>
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td>    
-            </tr>
-            <tr>
-              <td class="kolom">
-                -
-              </td>
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td> 
-            </tr>
+            @foreach($saudara_tiri as $st)
+              <tr>
+                <td class="kolom">
+                  {{$st['umur_tiri']}}
+                </td>
+                <td class="kolom">
+                  {{$st['jenis_kelamin_tiri']}}
+                </td> 
+                <td class="kolom">
+                  {{$st['pendidikan_tiri']}}
+                </td> 
+                <td class="kolom">
+                  {{$st['pekerjaan_tiri']}}
+              </tr>
+              @endforeach
           </tbody>
       </table>
     </div>
@@ -415,48 +362,22 @@ header('Content-Type: application/pdf');
           </thead>
 
           <tbody>
+            @foreach($serumah as $r)
             <tr>
               <td class="kolom">
-                -
+                {{$r['umur']}}
               </td>
               <td class="kolom">
-                -
+                {{$r['jenis_kelamin']}}
               </td> 
               <td class="kolom">
-                -
+                {{$r['pendidikan']}}
               </td> 
               <td class="kolom">
-                -
+                {{$r['pekerjaan']}}
               </td>   
             </tr>
-            <tr>
-              <td class="kolom">
-                -
-              </td>
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td>    
-            </tr>
-            <tr>
-              <td class="kolom">
-                -
-              </td>
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td> 
-            </tr>
+            @endforeach
           </tbody>
       </table>
     </div>
@@ -470,87 +391,88 @@ header('Content-Type: application/pdf');
     <p class="list"><b>A. Riwayat Kehamilan :</b></p>  
 
     <p>1. Bagaimana keadaan kandungan ibu pada awal kehamilan ?</p>
-    <p>Isi</p>
+    <p>{{$keadaan_awal_kandungan}}</p>
 
     <p>2. Selama mengandung ibu pernah menderita penyakit ?</p>
-    <p>Isi</p>
+    <p>{{$penyakit_selama_mengandung}}</p>
 
     <p>3. Perasaan-perasaan ibu selama mengandung (khusus) ?</p>
-    <p>Isi</p>
+    <p>{{$perasaan_selama_mengandung}}</p>
 
     <p>4. Apakah ibu suka minum obat-obatan selama mengandung ?</p>
-    <p>Isi</p>
+    <p>{{$suka_obat_obatan}}</p>
 
     <p>5. Apakah obat-obatan tersebut diminum berdasarkan anjuran dokter ?</p>
-    <p>Isi</p>
+    <p>{{$berdasarkan_anjuran}}</p>
 
     <p>6. Apakah ibu pernah jatuh, mengalami kecelakaan selama masa kehamilan ?</p>
-    <p>Isi</p>
+    <p>{{$pernah_jatuh_kecelakaan}}</p>
 
-    <p>Pada usia kandungan berapa bulan : ...</p>
+    <?php if($pernah_jatuh_kecelakaan == 'Ya') echo '<p>Pada usia kandungan berapa bulan : '.$usia_jatuh_kecelakaan.'</p>' ?>
+    
 
     <p>7. Selama mengandung, apakah ibu suka merokok/minum-minuman yang mengandung alkohol ?</p>
-    <p>Isi</p>
+    <p>$suka_merokok</p>
 
     <p>8. Apakah ibu pernah mengalami keguguran ?</p>
-    <p>Isi</p>
+    <p>{{$pernah_keguguran}}</p>
 
-    <p>Berapa kali : ...</p>
+    <?php if($pernah_keguguran == 'Ya') echo '<p>Berapa kali : '.$jumlah_keguguran.'</p>' ?>
+   
 
     <p>9. Usia ibu saat mengandung kasus (Tahun)</p>
-    <p>Isi</p>
+    <p>{{$usia_ketika_kasus}}</p>
 
     <p>10. Pada saat mengandung kasus, ibu</p>
-    <p>Isi</p>
+    <p>$bekerja_ketika_kasus</p>
 
 
     <p class="list"><b>B. Riwayat Persalinan :</b></p>  
     <p class="list"><b>a. NATAL :</b></p>
      
     <p>1. Proses kelahiran</p>
-    <p>Isi</p>
+    <p>{{$proses_kelahiran}}</p>
 
     <p>2. Apakah dibantu dengan alat ?</p>
-    <p>Isi</p>
-    <p>Alat berupa : ...</p>
+    <p>{{$dibantu_alat}}</p>
+    <?php if($dibantu_alat == 'Ya') echo '<p>Alat berupa : '.$alat_bantu.'</p>' ?>
 
     <p>3. Apakah mengalami keguguran ?</p>
-    <p>Isi</p>
-    <p>Kalau ya berupa : ...</p>
-    <p>Isi</p>
+    <p>{{$mengalami_keguguran}}</p>
+    <?php if($mengalami_keguguran == 'Ya') echo '<p>Ya, berupa : '.$keterangan_keguguran.'</p>' ?>
 
-    <p>4. Anak lahir : ...</p>
+    <p>4. Anak lahir : {{$kondisi_lahir}}</p>
 
-    <p>5. Anak lahir ditolong oleh : </p>
+    <p>5. Anak lahir ditolong oleh : {{$dibantu_oleh}}<?php if() echo ','.$dibantu_oleh_lainnya.''?></p>
 
     <p>6. Ukuran Bayi Saat Lahir</p>
-    <p>Berat Bayi : ...</p>
-    <p>Panjang bayi : ...</p>
+    <p>Berat Bayi : {{$berat_bayi}}</p>
+    <p>Panjang bayi : {{$panjang_bayi}}</p>
 
 
     <p class="list"><b>b. PASCA NATAL :</b></p>
      
     <p>1. Berapa lama anak diberi asi ?</p>
-    <p>Isi</p>
+    <p>{{$lama_asi}}</p>
 
     <p>2. Bagaimana pola makan anak ?</p>
-    <p>Isi</p>
+    <p>{{$pola_makan}}</p>
 
     <p>3. Bagaimana pola tidur anak ?</p>
-    <p>Isi</p>
+    <p>{{$pola_tidur}}</p>
 
     <p>4. Bagaimana toilt training anak ?</p>
-    <p>Isi</p>
+    <p>{{$training}}</p>
 
     <p>5. Bagaimana kemampuan motorik anak ?</p>
-    <p>Isi</p>
+    <p>{{$motorik}}</p>
 
-    <p>6. Anak berjalan pada usia : </p>
+    <p>6. Anak berjalan pada usia : {{$usia_berjalan}}</p>
 
-    <p>7. Anak berbicara pada usia : </p>
+    <p>7. Anak berbicara pada usia : {{$usia_berbicara}}</p>
 
     <p>8. Apakah anak mempunyai hambatan dalam berbicara ?</p>
-    <p>Isi</p>
+    <p>{{$hambatan_berbicara}}</p>
 
     <p>9. Penyakit yang pernah diderita anak :</p>
     <div class="panel-body">
@@ -565,62 +487,36 @@ header('Content-Type: application/pdf');
           </thead>
 
           <tbody>
+            @foreach($penyakit_anak as $p)
             <tr>
               <td class="kolom">
-                -
+                {{$p['penyakit']}}
               </td>
               <td class="kolom">
-                -
+                {{$p['tahun']}}
               </td> 
               <td class="kolom">
-                -
+                {{$p['lamanya']}}
               </td> 
               <td class="kolom">
-                -
+                {{$p['keterangan']}}
               </td>   
             </tr>
-            <tr>
-              <td class="kolom">
-                -
-              </td>
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td>    
-            </tr>
-            <tr>
-              <td class="kolom">
-                -
-              </td>
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td> 
-            </tr>
+            @endforeach
           </tbody>
       </table>
     </div>
 
     <p>10. Obat-obatan yang masih diminum</p>
-    <p>Isi</p>
+    <p>{{$obat_masih_diminum}}</p>
 
     <p>11. Dalam sehari-hari anak lebih banyak berada dalam perawatan/pengasuhan</p>
-    <p>Isi</p>
+    <p>{{$diasuh}}</p>
 
-    <p>Selama berapa lama : </p>
+    <p>Selama berapa lama : {{$lama_pengasuhan}}</p>
 
     <p>12. Masalah khusus dalam masa perawatan/pengasuhan</p>
-    <p>Isi</p>
+    <p>{{$masalah_khusus}}</p>
 
   </div>
 
@@ -639,39 +535,19 @@ header('Content-Type: application/pdf');
           </thead>
 
           <tbody>
+            @foreach($sekolah as $c)
             <tr>
               <td class="kolom">
-                -
+                {{$c['jenis_sekolah']}}
               </td>
               <td class="kolom">
-                -
+                {{$c['umur']}}
               </td> 
               <td class="kolom">
-                -
+                {{$c['keterangan_tinggal']}}
               </td>   
             </tr>
-            <tr>
-              <td class="kolom">
-                -
-              </td>
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td>    
-            </tr>
-            <tr>
-              <td class="kolom">
-                -
-              </td>
-              <td class="kolom">
-                -
-              </td> 
-              <td class="kolom">
-                -
-              </td>  
-            </tr>
+            @endforeach
           </tbody>
       </table>
     </div>
@@ -679,46 +555,49 @@ header('Content-Type: application/pdf');
     <p>2. Adaptasi awal belajar di sekolah</p>
 
     <p>Sikap</p>
-    <p>Isi</p>
+    <p>{{$sikap}}</p>
+
+    <p>Keterampilan motorik awal</p>
+    <p>{{$keterampilan_motorik_awal}}</p>
 
     <p>3. Hasil belajar anak </p>
-    <p>Isi</p>
+    <p>{{$hasil_belajar_anak}}</p>
 
     <p>4. Pelajaran yang disenangi</p>
-    <p>Isi</p>
+    <p>{{$pelajaran_disenangi}}</p>
 
     <p>5. Anak mengalami kesukaran dalam mata pelajaran</p>
-    <p>Isi</p>
+    <p>{{$pelajaran_sulit}}</p>
 
     <p>6. Keluhan anak dalam mata pelajaran yang dianggapnya sulit</p>
-    <p>Isi</p>
+    <p>{{$keluhan_di_pelajaran_sulit}}</p>
 
     <p>7. Apakah anak mempunyai tempat belajar sendiri ?</p>
-    <p>Isi</p>
+    <p>{{$tempat_belajar_sendiri}}</p>
 
     <p>8. Kapan biasanya anak belajar ?</p>
-    <p>Isi</p>
+    <p>{{$waktu_biasa_belajar}}</p>
 
     <p>9. Apakah anak dibantu dalam belajar ?</p>
-    <p>Isi</p>
+    <p>{{$dibantu_belajar}}</p>
 
     <p>10. Siapa yang membantu anak dalam belajar ?</p>
-    <p>Isi</p>
+    <p>{{$dibantu_belajar_oleh}}, {{$dibantu_belajar_oleh_lainnya}}</p>
 
     <p>11. Keluhan anak dalam mata pelajaran yang dianggapnya sulit</p>
     <p>Isi</p>
 
     <p>12. Sikap anak dalam mengikuti kegiatan kelas tersebut di atas</p>
-    <p>Isi</p>
+    <p>{{$sikap_di_kegiatan}}</p>
 
     <p>13. Apakah anak mengikuti kegiatan tambahan dalam bentuk les privat ?</p>
-    <p>Isi</p>
+    <p>{{$les}}</p>
 
     <p>14. Jika mengikuti dalam pelajaran apa saja ?</p>
-    <p>Isi</p>
+    <p>{{$pelajaran_les}}</p>
 
     <p>15. Siapa yang memberi pelajaran tambahan tersebut ?</p>
-    <p>Isi</p>
+    <p>{{$pengajar}}</p>
 
   </div>
 
@@ -727,10 +606,10 @@ header('Content-Type: application/pdf');
   <div style="font-size: 85%;">  
 
     <p>1. Di sekolah :</p>
-    <p>Isi</p>
+    <p>{{$sosialisasi_di_sekolah}}</p>
 
     <p>2. Di dalam keluarga :</p>
-    <p>Isi</p> 
+    <p>{{$sosialisasi_di_keluarga}}</p> 
   </div>
 
   <div style="font-size: 85%;">  
@@ -740,10 +619,10 @@ header('Content-Type: application/pdf');
           <tbody>
             <tr>
               <td class="default3" style="text-align:center;vertical-align:top;height:70px">
-                Tgl, ...
+                Tgl, [tanggal]
               </td>
               <td class="default3" style="text-align:center;vertical-align:top;height:70px">
-                Nama Psikolog
+                Nama Psikolog<br>[nama psikolog]
               </td>
               <td class="default3" style="text-align:center;vertical-align:top;height:70px">
                 Tanda Tangan
@@ -760,84 +639,84 @@ header('Content-Type: application/pdf');
   <hr class="limit">
   <div style="font-size: 85%;">  
     <p>A. Keluhan utama (chief Complaint)</p>
-    <p>Isi</p>
+    <p>{{$keluhan_utama}}</p>
 
     <p>B. Riwayat Gangguan Sekarang (History of Present Illness)</p>
-    <p>Isi</p>
+    <p>{{$riwayat_gangguan_sekarang}}</p>
 
     <p>C. Riwayat Gangguan Sebelumnya (History of Previous Illness)</p>
-    <p>Isi</p>
+    <p>{{$riwayat_gangguan_sebelumnya}}</p>
 
     <p>D. Riwayat Pribadi (Personal History)</p>
-    <p>Isi</p>
+    <p>{{$riwayat_pribadi}}</p>
 
     <p>E. Riwayat Pra-Natal dan Perinatal ( Personal and Pernnatal History)</p>
-    <p>Isi</p>
+    <p>{{$riwayat_pranatal_perinatal}}</p>
 
     <p>F. Riwayat Masa Bayi/Masa  Kanak Awal(Early Childhood) (0 – 3 tahun)</p>
-    <p>Isi</p>
+    <p>{{$early_childhood}}</p>
 
     <p>G. Riwayat Masa Kanak Pertengahan (Middle Childhood) (3 – 11 tahun)</p>
-    <p>Isi</p>
+    <p>{{$middle_childhood}}</p>
 
     <p>H. Riwayat Masa Kanak Akhir (Late Childhood) (11 – 18 tahun)</p>
-    <p>Isi</p>
+    <p>{{$late_childhood}}</p>
 
     <p>I. Riwayat Keluarga (Family History)</p>
-    <p>Isi</p>
+    <p>{{$riwayat_keluarga}}</p>
 
     <p>J. Riwayat Situasi Sosial Sekarang (Current Social Situation)</p>
-    <p>Isi</p>
+    <p>{{$riwayat_sosial_sekarang}}</p>
 
     <p>K. Persepsi Pasien tentang dirinya (Patient Perception about Himself)</p>
-    <p>Isi</p>
+    <p>{{$persepsi_sendiri}}</p>
   </div>
 
   <h4>II. PEMERIKSAAN STATUS MENTAL (Mental State Examination)</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
     <p>A. Deskripsi Umum (General Description)</p>
-    <p>Isi</p>
+    <p>{{$deskripsi_umum}}</p>
 
     <p>B. Interaksi Orang tua – anak (Parent-child Interaction)</p>
-    <p>Isi</p>
+    <p>{{$interaksi_ortu_anak}}</p>
 
     <p>C. Orientasi dan Persepsi (Orientation and Perception)</p>
-    <p>Isi</p>
+    <p>{{$orientasi_persepsi}}</p>
 
     <p>D. Mood, Afek, Ekspresi Afektif dan Empati (Mood, Affect, Affective, Expression, and Empathy)</p>
-    <p>Isi</p>
+    <p>{{$mood}}</p>
 
     <p>E. Proses Pikir (Thought Process)</p>
     <p> &emsp;Bentuk dan Arus Pikir (Steam and Form of Thought)</p>
-    <p> &emsp;Isi</p>
+    <p> &emsp;{{$bentuk_arus_pikir}}</p>
 
     <p> &emsp;Isi Pikir (Content of Thought)</p>
-    <p> &emsp;Isi</p>
+    <p> &emsp;{{$isi_pikir}}</p>
 
     <p>F. Fantasi (Fantasy)</p>
-    <p>Isi</p>
+    <p>{{$fantasi}}</p>
 
     <p>G. Kemampuan Menilai Realitas dan Tilikan ( Reality Testing Ability and Insight)</p>
-    <p>Isi</p>
+    <p>{{$kemampuan}}</p>
   </div>
 
   <h4>III. PEMERIKSAAN DIAGNOSTIK LANJUTAN (Further Diagnostic Investigation)</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>Isi</p>
+    <p>{{$diagnostik_lanjutan}}</p>
   </div>
 
   <h4>IV. RINGKASAN HASIL PEMERIKSAAN (Summary of Positive Findings)</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>Isi</p>
+    <p>{{$hasil_pemeriksaan}}</p>
   </div>
 
   <h4>V. FORMULASI DIAGNOSTIK (Diagnostik Formulation)</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>Isi</p>
+    <p>{{$formulasi_diagnostik}}</p>
   </div>
 
   <h4>VI. EVALUASI MULTIAKSIAL (Multiaksial Evaluation)</h4>
@@ -850,7 +729,7 @@ header('Content-Type: application/pdf');
              &emsp;Aksis I
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{aksis1}}
           </td>                
         </tr>
         <tr>
@@ -858,7 +737,7 @@ header('Content-Type: application/pdf');
              &emsp;Aksis II
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{aksis2}}
           </td>                
         </tr>
         <tr>
@@ -866,7 +745,7 @@ header('Content-Type: application/pdf');
              &emsp;Aksis III
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{aksis3}}
           </td>                
         </tr>
         <tr>
@@ -874,7 +753,7 @@ header('Content-Type: application/pdf');
              &emsp;Aksis IV
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{aksis4}}
           </td>                
         </tr>
         <tr>
@@ -882,7 +761,7 @@ header('Content-Type: application/pdf');
              &emsp;Aksis V
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{aksis5}}
           </td>                
         </tr>
       </tbody>
@@ -899,7 +778,7 @@ header('Content-Type: application/pdf');
             &emsp;1. Organobiologik
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{masalah_organobiologik}}
           </td>                
         </tr>
         <tr>
@@ -907,7 +786,7 @@ header('Content-Type: application/pdf');
             &emsp;2. Psikologik
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{masalah_psikologik}}
           </td>                
         </tr>
         <tr>
@@ -915,7 +794,7 @@ header('Content-Type: application/pdf');
             &emsp;3. Sosial
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{masalah_sosial}}
           </td>                
         </tr>
       </tbody>
@@ -925,16 +804,16 @@ header('Content-Type: application/pdf');
   <h4>VIII. PROGNOSIS (Prognosis)</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>Isi</p>
+    <p>{{$prognosis}}</p>
   </div>
 
   <h4>IX. PENATALASANAAN (Treatment Plan)</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
     <p> &emsp;1. Untuk Pasien :</p>
-    <p> &emsp;Isi</p>
+    <p> &emsp;{{$treatment_pasien}}</p>
     <p> &emsp;2. Untuk Keluarga :</p>
-    <p> &emsp;Isi</p>
+    <p> &emsp;{{$treatment_keluarga}}</p>
 
   </div>
 
@@ -945,13 +824,16 @@ header('Content-Type: application/pdf');
           <tbody>
             <tr>
               <td class="default3" style="text-align:center;vertical-align:top;height:70px">
-                Tgl, ...
+                Tgl, [tanggal]
               </td>
               <td class="default3" style="text-align:center;vertical-align:top;height:70px">
-                Nama Dokter
+                Nama Dokter<br>[]
               </td>
               <td class="default3" style="text-align:center;vertical-align:top;height:70px">
                 Tanda Tangan
+                <br>
+                <br>
+                <br>
               </td>  
             </tr>
           </tbody>

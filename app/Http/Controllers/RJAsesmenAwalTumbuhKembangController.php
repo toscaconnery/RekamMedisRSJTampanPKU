@@ -1082,6 +1082,8 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
 
     public function rj_tumbuhkembang_pdf()
     {
+        $this->get_rj_asesmen_awal_tumbuh_kembang_dokter_data();
+        $this->get_rj_asesmen_awal_tumbuh_kembang_psikolog_data();
         ob_clean();
 
         header('Content-type: application/pdf');
@@ -1092,7 +1094,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
         'orientation' => 'P'
         ]);
 
-        $view = View::make('doc_rj_tumbuhkembang');
+        $view = View::make('doc_rj_tumbuhkembang',$this->data);
         $contents = $view->render();
 
 
