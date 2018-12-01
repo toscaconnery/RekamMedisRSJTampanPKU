@@ -1487,25 +1487,25 @@ header('Content-Type: application/pdf');
     <div class="row">
       <div class="column">
         <p><b>P4. GADUH GELISAH</b></p>
-        <p><b>Nilai : 4</b></p>
+        <p><b>Nilai : {{$pe1}}</b></p>
         <p>{{$gaduh_gelisah}}</p>
 
         <p><b>P7. PERMUSUHAN</b></p>
-        <p><b>Nilai : 3</b></p>
+        <p><b>Nilai : {{$pe3}}</b></p>
         <p>{{$permusuhan}}</p>
 
         <p><b>G4. KETEGANGAN</b></p>
-        <p><b>Nilai : 2</b></p>
+        <p><b>Nilai : {{$pe5}}</b></p>
         <p>{{$ketegangan}}</p>
 
       </div>
       <div class="column">
         <p><b>G8. KETIDAKOPERATIFAN</b></p>
-        <p><b>Nilai : 2</b></p>
+        <p><b>Nilai : {{$pe2}}</b></p>
         <p>{{$ketidakoperatifan}}</p>
 
         <p><b>G14. PENGENDALIAN IMPULS</b></p>
-        <p><b>Nilai : 7</b></p>
+        <p><b>Nilai : {{$pe4}}</b></p>
         <p>{{$pengendalian_impuls}}</p>
       </div>
     </div> 
@@ -1563,7 +1563,7 @@ header('Content-Type: application/pdf');
             P4
           </td>    
           <td class="konten_s_answer">  
-            : [skor p4]
+            : {{$pe1}}
           </td>                
         </tr>
         <tr>
@@ -1571,7 +1571,7 @@ header('Content-Type: application/pdf');
             P7
           </td>    
           <td class="konten_s_answer">  
-            : [skor p7]
+            : {{$pe3}}
           </td>                
         </tr>
         <tr>
@@ -1579,7 +1579,7 @@ header('Content-Type: application/pdf');
             G4
           </td>    
           <td class="konten_s_answer">  
-            : [skor g4]
+            : {{$pe5}}
           </td>                
         </tr>
         <tr>
@@ -1587,7 +1587,7 @@ header('Content-Type: application/pdf');
             G8
           </td>    
           <td class="konten_s_answer">  
-            : [skor g8]
+            : {{$pe2}}
           </td>                
         </tr>
         <tr>
@@ -1595,14 +1595,17 @@ header('Content-Type: application/pdf');
             G14
           </td>    
           <td class="konten_s_answer">  
-            : [skor g14]
+            : {{$pe4}}
           </td>                
         </tr>
       </tbody>
     </table>
 
-    <p><b>Total Score : </b>18 </p>
-    <p>Hasil Penilaian < 20 indikasi masuk maintenens rehabilitasi</p>
+    <p><b>Total Score : </b><?php echo $pe1+$pe2+$pe3+$pe4+$pe5 ?> </p>
+    <p><?php 
+    if($pe1+$pe2+$pe3+$pe4+$pe5 > 20) echo "Indikasi masuk ruang intensif"; 
+    if ($pe1+$pe2+$pe3+$pe4+$pe5 <= 20) echo "Indikasi masuk mentenens rehabilitasi";
+    ?></p>
 
     <table>
       <tbody>
