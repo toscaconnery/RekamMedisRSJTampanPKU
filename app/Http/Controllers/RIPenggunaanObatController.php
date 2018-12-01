@@ -61,8 +61,9 @@ class RIPenggunaanObatController extends Controller
     	return redirect('daftar_dokumen');
     }
 
-    public function get_ri_penggunaan_obat()
+    public function get_ri_penggunaan_obat_read()
     {
+        /*
         $pasien = RIPenggunaanObat::where('id', 1)->first();
         
         $this->data['id_regis'] = $pasien->id_regis;
@@ -91,7 +92,7 @@ class RIPenggunaanObatController extends Controller
             $this->data['waktu_penggunaan_4'] = $pasien->waktu_penggunaan_4;
         }
 
-        $this->data['keterangan'] = $pasien->keterangan;
+        $this->data['keterangan'] = $pasien->keterangan;*/
 
         return view('page.ri.penggunaan_obat_read', $this->data);
     }

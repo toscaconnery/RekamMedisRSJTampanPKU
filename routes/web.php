@@ -211,6 +211,7 @@ Route::get('/rj_asesmen_awal_tumbuh_kembang_dokter_read', 'RJAsesmenAwalTumbuhKe
 Route::get('/rj_asesmen_awal_tumbuh_kembang_dokter_edit', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter_edit');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter_edit', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_dokter_edit');
 //dokumen informasi tumbuh kembang
+
 Route::get('/rj_tumbuhkembang_pdf', 'RJAsesmenAwalTumbuhKembangController@rj_tumbuhkembang_pdf');
 Route::get('/doc_rj_tumbuhkembang', function () {
     return view('/doc_rj_tumbuhkembang');

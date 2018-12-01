@@ -237,31 +237,31 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Aksis I</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="aksis1" value="aksis1">
+                    <input type="text" disabled class="form-control required" name="aksis1" value="{{aksis1}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Aksis II</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="aksis2" value="aksis2">
+                    <input type="text" disabled class="form-control required" name="aksis2" value="{{aksis2}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Aksis III</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="aksis3" value="aksis3">
+                    <input type="text" disabled class="form-control required" name="aksis3" value="{{aksis3}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Aksis IV</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="aksis4" value="aksis4">
+                    <input type="text" disabled class="form-control required" name="aksis4" value="{{aksis4}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Aksis V</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="aksis5" value="aksis5">
+                    <input type="text" disabled class="form-control required" name="aksis5" value="{{aksis5}}">
                   </div>
                 </div>
               </div>
@@ -275,19 +275,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Organobiologik </label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="masalah_organobiologik" value="masalah_organobiologik">
+                    <input type="text" disabled class="form-control required" name="masalah_organobiologik" value="{{masalah_organobiologik}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Psikologik</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="masalah_psikologik" value="masalah_psikologik">
+                    <input type="text" disabled class="form-control required" name="masalah_psikologik" value="{{masalah_psikologik}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sosial</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="masalah_sosial" value="masalah_sosial">
+                    <input type="text" disabled class="form-control required" name="masalah_sosial" value="{{masalah_sosial}}">
                   </div>
                 </div>
               </div>
