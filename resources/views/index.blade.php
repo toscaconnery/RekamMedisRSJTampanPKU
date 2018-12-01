@@ -35,6 +35,33 @@
   <link href="{{url('')}}/admin_bootstrap/css/style-responsive.css" rel="stylesheet" />
   <link href="{{url('')}}/admin_bootstrap/css/xcharts.min.css" rel=" stylesheet">
   <link href="{{url('')}}/admin_bootstrap/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+  
+
+  
+  <link rel="stylesheet" type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+  <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
+
+   <scriptscript src="//code.jquery.com/jquery-1.12.3.js"></script>
+  <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script
+      src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+  <link rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+
+ <script>
+  $(document).ready(function() {
+    $('#daftar_pasien').DataTable();
+} );
+ </script>
 
 </head>
 
@@ -61,141 +88,31 @@
               <header class="panel-heading">
                 Daftar Pasien
               </header>
-
-              <table class="table table-striped table-advance table-hover">
+              
+              <table class="table" id="daftar_pasien">
+                <thead>
+                    <tr>
+                        <th><i class="icon_profile"></i> Nama Pasien</th>
+                        <th><i class="icon_calendar"></i> Tanggal Lahir</th>
+                        <th><i class="icon_pin_alt"></i> Alamat</th>
+                        <th><i class="icon_cogs"></i> Action</th>
+                    </tr>
+                </thead>
                 <tbody>
-                  <tr>
-                    <th><i class="icon_profile"></i> Nama Pasien</th>
-                    <th><i class="icon_calendar"></i> Tanggal Lahir</th>
-                    <th><i class="icon_pin_alt"></i> Alamat</th>
-                    <th><i class="icon_cogs"></i> Action</th>
-                  </tr>
-                  {{-- @foreach($pasien_server_2 as $p)
-                    <tr>
-                      <td>{{$p->nama}}</td>
-                      <td>{{$p->tanggal_lahir}}</td>
-                      <td>{{$p->alamat}}</td>
-                      <td>
-                        <div class="btn-group">
-                          <a class="btn btn-primary" href="{{url('')}}/put_selected_patient_id/{{$p->id}}"><i class="icon_plus_alt2"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                  @endforeach --}}
                   @foreach($pasien as $p)
-                    <tr>
-                      <td>{{$p->nama_pasien}}</td>
-                      <td>{{$p->tanggal_lahir}}</td>
-                      <td>{{$p->alamat}}</td>
-                      <td>
-                        <div class="btn-group">
-                          <a class="btn btn-primary" href="{{url('')}}/put_selected_patient_id/{{$p->no_rm}}"><i class="icon_plus_alt2"></i></a>
-                        </div>
-                      </td>
-                    </tr>
-                  @endforeach
-                  {{-- <tr>
-                    <td>Angeline Mcclain</td>
-                    <td>2004-07-06</td>
-                    <td>P</td>
+                  <tr>
+                    <td>{{$p->nama_pasien}}</td>
+                    <td>{{$p->tanggal_lahir}}</td>
+                    <td>{{$p->alamat}}</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary" href="{{url('')}}/put_selected_patient_id/{{$p->no_rm}}"><i class="icon_plus_alt2"></i></a>
                       </div>
                     </td>
                   </tr>
-                  <tr>
-                    <td>Sung Carlson</td>
-                    <td>2011-01-10</td>
-                    <td>L</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Bryon Osborne</td>
-                    <td>2006-10-29</td>
-                    <td>L</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Dalia Marquez</td>
-                    <td>2011-12-15</td>
-                    <td>P</td>                    
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Selina Fitzgerald</td>
-                    <td>2003-01-06</td>
-                    <td>P</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Abraham Avery</td>
-                    <td>2006-07-14</td>
-                    <td>L</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Caren Mcdowell</td>
-                    <td>2002-03-29</td>
-                    <td>P</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Owen Bingham</td>
-                    <td>2013-04-06</td>
-                    <td>L</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Ahmed Dean</td>
-                    <td>2008-03-19</td>
-                    <td>L</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Mario Norris</td>
-                    <td>2010-02-08</td>
-                    <td>L</td>
-                    <td>
-                      <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/identifikasi"><i class="icon_plus_alt2"></i></a>
-                      </div>
-                    </td>
-                  </tr> --}}
+                @endforeach
                 </tbody>
-              </table>
+            </table>
               <div class="text-right">
                 {{-- <div class="credits">
                     
@@ -215,9 +132,7 @@
 
            
   <!-- javascripts -->
-  <script src="{{url('')}}/admin_bootstrap/js/jquery.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.10.4.min.js"></script>
-  <script src="{{url('')}}/admin_bootstrap/js/jquery-1.8.3.min.js"></script>
+
   <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
   <!-- bootstrap -->
   <script src="{{url('')}}/admin_bootstrap/js/bootstrap.min.js"></script>
@@ -255,7 +170,7 @@
     <script src="{{url('')}}/admin_bootstrap/js/sparklines.js"></script>
     <script src="{{url('')}}/admin_bootstrap/js/charts.js"></script>
     <script src="{{url('')}}/admin_bootstrap/js/jquery.slimscroll.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <script src="{{url('')}}/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="{{url('')}}/sweetalert2/dist/sweetalert2.min.js"></script>
 

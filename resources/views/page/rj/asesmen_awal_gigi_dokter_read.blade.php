@@ -41,7 +41,8 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_perawat"><i class="icon_plus_alt2"></i></a>
+                      <a class="btn btn-primary" href="{{url('')}}/rj_gigi_pdf">PDF</a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_asesmen_awal_perawat"><i class="icon_plus_alt2"></i></a>
                       <a class="btn btn-success" href="{{url('')}}/view_rj_asesmen_awal_perawat"><i class="icon_check_alt2"></i></a>
                     </div>
                   </td>
@@ -177,17 +178,16 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="hepatitis"  value="1" {{$hepatitis}}>
+                        <input type="radio" disabled name="hepatitis"  value="1" {{$hepatitis == 1 ? 'checked' : ''}}>
                         Ada
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="hepatitis"  value="0" {{$hepatitis}}>
+                        <input type="radio" disabled name="hepatitis"  value="0" {{$hepatitis == 0 ? 'checked' : ''}}>
                         Tidak ada
                       </label>
                     </div>
-
                   </div>
                   <div class="form-group">
                     <label class="col-sm-1 control-label">Sebutkan</label>
@@ -202,17 +202,16 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="penyakit_lainnya"  value="1" value="{{$penyakit_lainnya}}">
+                        <input type="radio" disabled name="penyakit_lainnya"  value="1" {{$penyakit_lainnya == 1 ? 'checked' : ''}}>
                         Ada
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="penyakit_lainnya"  value="0" value="{{$penyakit_lainnya}}">
+                        <input type="radio" disabled name="penyakit_lainnya"  value="0" {{$penyakit_lainnya == 0 ? 'checked' : ''}}>
                         Tidak ada
                       </label>
                     </div>
-
                   </div>
                   <div class="form-group">
                     <label class="col-sm-1 control-label">Sebutkan</label>
