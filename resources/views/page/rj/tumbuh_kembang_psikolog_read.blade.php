@@ -81,7 +81,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jenis Kelamin</label>
                   <div class="col-sm-8">
-                    <select class="form-control required" name="jenis_kelamin_anak">
+                    <select disabled class="form-control required" name="jenis_kelamin_anak">
                       <option value=""></option>
                       <option value="Laki-laki" {{$jenis_kelamin_anak == 'Laki-laki' ? 'selected' : ''}}>Laki-laki</option>
                       <option value="Perempuan" {{$jenis_kelamin_anak == 'Perempuan' ? 'selected' : ''}}>Perempuan</option>
@@ -367,7 +367,7 @@
                 Data Saudara Kandung
               </header>
               <div class="panel-body">
-                <input type="hidden" name="jumlah_form_saudara" id="jumlah_form_saudara" value="1">
+                <input type="hidden" name="jumlah_form_saudara" id="jumlah_form_saudara" value="0">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -383,7 +383,7 @@
                     <tr>
                       <td><input type="text" disabled class="form-control required" value="{{$s['umur']}}" name="umur_{{$s['id_data']}}"></td>
                       <td>
-                        <select name="jenis_kelamin_{{$s['id_data']}}" class="form-control required">
+                        <select disabled name="jenis_kelamin_{{$s['id_data']}}" class="form-control required">
                           <option value=""></option>
                           <option {{$s['jenis_kelamin'] == 'Laki-laki' ? 'selected' : ''}} value="Laki-laki">Laki-laki</option>
                           <option {{$s['jenis_kelamin'] == 'Perempuan' ? 'selected' : ''}} value="Perempuan">Perempuan</option>
@@ -395,14 +395,6 @@
                       </td>
                     </tr>
                     @endforeach
-                    <tr id="last_row">
-                      <input type="hidden" name="previous_saudara" value="{{$previous_saudara}}">
-                      <td colspan="9">
-                        <div class="btn-group">
-                          <button class="btn btn-primary" type="button" id="tambah_form"><i class="icon_plus_alt2"></i> Tambah</button>
-                        </div>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
                 
@@ -414,7 +406,7 @@
                 Data Saudara Tiri
               </header>
               <div class="panel-body">
-                <input type="hidden" name="jumlah_form_saudara_tiri" id="jumlah_form_saudara_tiri" value="1">
+                <input type="hidden" name="jumlah_form_saudara_tiri" id="jumlah_form_saudara_tiri" value="0">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -430,7 +422,7 @@
                     <tr>
                       <td><input type="text" disabled class="form-control required" value="{{$st['umur_tiri']}}" name="umur_tiri_{{$st['id_data']}}"></td>
                       <td>
-                        <select name="jenis_kelamin_tiri_{{$st['id_data']}}" class="form-control required">
+                        <select disabled name="jenis_kelamin_tiri_{{$st['id_data']}}" class="form-control required">
                           <option value=""></option>
                           <option {{$st['jenis_kelamin_tiri'] == 'Laki-laki' ? 'selected' : ''}} value="Laki-laki">Laki-laki</option>
                           <option {{$st['jenis_kelamin_tiri'] == 'Perempuan' ? 'selected' : ''}} value="Perempuan">Perempuan</option>
@@ -442,13 +434,6 @@
                       </td>
                     </tr>
                     @endforeach
-                    <tr id="last_row_tiri">
-                      <td colspan="9">
-                        <div class="btn-group">
-                          <button class="btn btn-primary" type="button" id="tambah_form_tiri"><i class="icon_plus_alt2"></i> Tambah</button>
-                        </div>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -459,7 +444,7 @@
                 Data Orang-orang lain yang serumah
               </header>
               <div class="panel-body">
-                <input type="hidden" name="jumlah_form_serumah" id="jumlah_form_serumah" value="1">
+                <input type="hidden" name="jumlah_form_serumah" id="jumlah_form_serumah" value="0">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -475,10 +460,10 @@
                     <tr>
                       <td><input type="text" disabled class="form-control required" value="{{$r['umur']}}" name="umur_serumah_{{$r['id_data']}}"></td>
                       <td>
-                        <select name="jenis_kelamin_serumah_{{$r['id_data']}}" class="form-control required">
+                        <select disabled name="jenis_kelamin_serumah_{{$r['id_data']}}" class="form-control required">
                           <option value=""></option>
-                          <option {{$r['jenis_kelamin'] == 'Laki-laki' ? 'checked' : ''}} value="Laki-laki">Laki-laki</option>
-                          <option {{$r['jenis_kelamin'] == 'Perempuan' ? 'checked' : ''}} value="Perempuan">Perempuan</option>
+                          <option {{$r['jenis_kelamin'] == 'Laki-laki' ? 'selected' : ''}} value="Laki-laki">Laki-laki</option>
+                          <option {{$r['jenis_kelamin'] == 'Perempuan' ? 'selected' : ''}} value="Perempuan">Perempuan</option>
                         </select>
                       </td>
                       <td><input type="text" disabled class="form-control required" value="{{$r['pendidikan']}}" name="pendidikan_serumah_{{$r['id_data']}}"></td>
@@ -487,14 +472,6 @@
                       </td>
                     </tr>
                     @endforeach
-                    <tr id="last_row_serumah">
-                      <input type="hidden" name="previous_serumah">
-                      <td colspan="9">
-                        <div class="btn-group">
-                          <button class="btn btn-primary" type="button" id="tambah_form_serumah"><i class="icon_plus_alt2"></i> Tambah</button>
-                        </div>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -569,7 +546,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pada usia kandungan berapa bulan</label>
                   <div class="col-sm-8">
-                    <input type="number" class="form-control required" name="usia_jatuh_kecelakaan" value="{{$usia_jatuh_kecelakaan}}">
+                    <input type="number" disabled class="form-control required" name="usia_jatuh_kecelakaan" value="{{$usia_jatuh_kecelakaan}}">
                   </div>
                 </div>
 
@@ -612,14 +589,14 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Berapa kali</label>
                   <div class="col-sm-8">
-                    <input type="number" class="form-control required" name="jumlah_keguguran" value="{{$jumlah_keguguran}}">
+                    <input type="number" disabled class="form-control required" name="jumlah_keguguran" value="{{$jumlah_keguguran}}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Usia ibu saat mengandung kasus (Tahun)</label>
                   <div class="col-sm-8">
-                    <input type="number" class="form-control required" name="usia_ketika_kasus" value="{{$usia_ketika_kasus}}"> 
+                    <input type="number" disabled class="form-control required" name="usia_ketika_kasus" value="{{$usia_ketika_kasus}}"> 
                   </div>
                 </div>
 
@@ -833,13 +810,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Anak berjalan pada usia ?</label>
                   <div class="col-sm-8">
-                    <input type="number" class="form-control required" name="usia_berjalan" value="{{$usia_berjalan}}">
+                    <input type="number" disabled class="form-control required" name="usia_berjalan" value="{{$usia_berjalan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Anak berbicara pada usia ?</label>
                   <div class="col-sm-8">
-                    <input type="number" class="form-control required" name="usia_berbicara" value="{{$usia_berbicara}}">
+                    <input type="number" disabled class="form-control required" name="usia_berbicara" value="{{$usia_berbicara}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -849,7 +826,7 @@
                   </div>
                 </div>
                 <label class="col-sm-2 control-label">Penyakit yang pernah diderita anak:</label>
-                <input type="hidden" name="jumlah_form_penyakit_anak" id="jumlah_form_penyakit_anak" value="1">
+                <input type="hidden" name="jumlah_form_penyakit_anak" id="jumlah_form_penyakit_anak" value="0">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -864,21 +841,13 @@
                     @foreach($penyakit_anak as $p)
                     <tr>
                       <td><input type="text" disabled class="form-control" value="{{$p['penyakit']}}" name="penyakit_{{$p['id_data']}}"></td>
-                      <td><input type="number" class="form-control" value="{{$p['tahun']}}" name="tahun_{{$p['id_data']}}"></td>
+                      <td><input type="number" disabled class="form-control" value="{{$p['tahun']}}" name="tahun_{{$p['id_data']}}"></td>
                       <td><input type="text" disabled class="form-control" value="{{$p['lamanya']}}" name="lamanya_{{$p['id_data']}}"></td>
                       <td><input type="text" disabled class="form-control" value="{{$p['keterangan']}}" name="keterangan_{{$p['id_data']}}"></td>
                       <td>
                       </td>
                     </tr>
                     @endforeach
-                    <tr id="last_row_penyakit_anak">
-                      <input type="hidden" name="previous_penyakit" value="{{$previous_penyakit}}">
-                      <td colspan="9">
-                        <div class="btn-group">
-                          <button class="btn btn-primary" type="button" id="tambah_form_penyakit_anak"><i class="icon_plus_alt2"></i> Tambah</button>
-                        </div>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
                 <div class="form-group">
@@ -914,7 +883,7 @@
                 Riwayat Akademis
               </header>
               <div class="panel-body">
-                <input type="hidden" name="jumlah_form_riwayat_sekolah" id="jumlah_form_riwayat_sekolah" value="1">
+                <input type="hidden" name="jumlah_form_riwayat_sekolah" id="jumlah_form_riwayat_sekolah" value="0">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -925,20 +894,15 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach($sekolah as $c)
                     <tr>
-                      <td><input type="text" disabled class="form-control required" name="jenis_riwayat_sekolah_1"></td>
-                      <td><input type="number" class="form-control required" name="umur_riwayat_sekolah_1"></td>
-                      <td><input type="text" disabled class="form-control required" name="keterangan_riwayat_sekolah_1"></td>
+                      <td><input type="text" disabled class="form-control required" value="{{$c['jenis_sekolah']}}" name="jenis_riwayat_sekolah_{{$c['id_data']}}"></td>
+                      <td><input type="number" disabled class="form-control required" value="{{$c['umur']}}" name="umur_riwayat_sekolah_{{$c['id_data']}}"></td>
+                      <td><input type="text" disabled class="form-control required" value="{{$c['keterangan_tinggal']}}" name="keterangan_riwayat_sekolah_{{$c['id_data']}}"></td>
                       <td>
                       </td>
                     </tr>
-                    <tr id="last_row_riwayat_sekolah">
-                      <td colspan="9">
-                        <div class="btn-group">
-                          <button class="btn btn-primary" type="button" id="tambah_form_riwayat_sekolah"><i class="icon_plus_alt2"></i> Tambah</button>
-                        </div>
-                      </td>
-                    </tr>
+                    @endforeach
                   </tbody>
                 </table>
                 <div class="form-group">
@@ -1170,132 +1134,11 @@
                 </div>
               </div>
             </section>
-
-            <div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
           </form>
-
         </div>
       </div>
     </section>
 
     @include('layouts.tailscript')
-
-    {{-- menambah row inputan saudara kandung--}}
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#tambah_form').click(function() {
-          var a = document.getElementById('jumlah_form_saudara').value;
-          a = parseInt(a) + 1;
-          $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" disabled class="form-control required" name="umur_'+a+'"></td><td><select name="jenis_kelamin_'+a+'" class="form-control required"><option value=""></option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></td><td><input type="text" disabled class="form-control required" name="pendidikan_'+a+'"></td><td><input type="text" disabled class="form-control required" name="pekerjaan_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-          document.getElementById('jumlah_form_saudara').value = a;
-        });
-      });
-    </script>
-
-    {{-- menambah row inputan saudara tiri--}}
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#tambah_form_tiri').click(function() {
-          var a = document.getElementById('jumlah_form_saudara_tiri').value;
-          a = parseInt(a) + 1;
-          $('#last_row_tiri').before('<tr id="form_tiri_'+a+'"><td><input type="text" disabled class="form-control required" name="umur_tiri_'+a+'"></td><td><select name="jenis_kelamin_tiri_'+a+'" class="form-control required"><option value=""></option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></td><td><input type="text" disabled class="form-control required" name="pendidikan_tiri_'+a+'"></td><td><input type="text" disabled class="form-control required" name="pekerjaan_tiri_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_tiri" type="button" id="tombol_hapus_tiri_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-          document.getElementById('jumlah_form_saudara_tiri').value = a;
-        });
-      });
-    </script>
-
-    {{-- menambah row inputan serumah--}}
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#tambah_form_serumah').click(function() {
-          var a = document.getElementById('jumlah_form_serumah').value;
-          a = parseInt(a) + 1;
-          $('#last_row_serumah').before('<tr id="form_serumah_'+a+'"><td><input type="text" disabled class="form-control required" name="umur_serumah_'+a+'"></td><td><select name="jenis_kelamin_serumah_'+a+'" class="form-control required"><option value=""></option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></td><td><input type="text" disabled class="form-control required" name="pendidikan_serumah_'+a+'"></td><td><input type="text" disabled class="form-control required" name="pekerjaan_serumah_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_serumah" type="button" id="tombol_hapus_serumah_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-          document.getElementById('jumlah_form_saudara_serumah').value = a;
-        });
-      });
-    </script>
-
-    {{-- menambah row inputan penyakit anak--}}
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#tambah_form_penyakit_anak').click(function() {
-          var a = document.getElementById('jumlah_form_penyakit_anak').value;
-          a = parseInt(a) + 1;
-          $('#last_row_penyakit_anak').before('<tr id="form_penyakit_anak_'+a+'"><td><input type="text" disabled class="form-control" name="penyakit_'+a+'"></td><td><input type="number" class="form-control" name="tahun_'+a+'"></td><td><input type="text" disabled class="form-control" name="lamanya_'+a+'"></td><td><input type="text" disabled class="form-control" name="keterangan_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_penyakit_anak" type="button" id="tombol_hapus_penyakit_anak_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-          document.getElementById('jumlah_form_penyakit_anak').value = a;
-        });
-      });
-    </script>
-
-    {{-- menambah row riwayat_sekolah--}}
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#tambah_form_riwayat_sekolah').click(function() {
-          var a = document.getElementById('jumlah_form_riwayat_sekolah').value;
-          a = parseInt(a) + 1;
-          $('#last_row_riwayat_sekolah').before('<tr id="form_riwayat_sekolah_'+a+'"><td><input type="text" disabled class="form-control required" name="jenis_riwayat_sekolah_'+a+'"></td><td><input type="number" class="form-control required" name="umur_riwayat_sekolah_'+a+'"></td><td><input type="text" disabled class="form-control required" name="keterangan_riwayat_sekolah_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_riwayat_sekolah" type="button" id="tombol_hapus_riwayat_sekolah_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>')
-          document.getElementById('jumlah_form_riwayat_sekolah').value = a;
-        });
-      });
-    </script>
-
-    {{-- menghapus row saudara kandung--}}
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(document).on('click', '.tombol_hapus', function() {
-          var x = $(this).attr('id');
-          var nomor = x.substring(13)
-          $('#form_'+nomor).remove();
-        });
-      });
-    </script>
-
-    {{-- menghapus row saudara tiri--}}
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(document).on('click', '.tombol_hapus_tiri', function() {
-          var x = $(this).attr('id');
-          var nomor = x.substring(18)
-          $('#form_tiri_'+nomor).remove();
-        });
-      });
-    </script>
-
-    {{-- menghapus row saudara serumah--}}
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(document).on('click', '.tombol_hapus_serumah', function() {
-          var x = $(this).attr('id');
-          var nomor = x.substring(21)
-          $('#form_serumah_'+nomor).remove();
-        });
-      });
-    </script>
-
-    {{-- menghapus row penyakit anak--}}
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(document).on('click', '.tombol_hapus_penyakit_anak', function() {
-          var x = $(this).attr('id');
-          var nomor = x.substring(27)
-          $('#form_penyakit_anak_'+nomor).remove();
-        });
-      });
-    </script>
-
-    {{-- menghapus row riwayat sekolah--}}
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(document).on('click', '.tombol_hapus_riwayat_sekolah', function() {
-          var x = $(this).attr('id');
-          var nomor = x.substring(29)
-          $('#form_riwayat_sekolah_'+nomor).remove();
-        });
-      });
-    </script>
-
   </body>
   <html>
