@@ -27,5 +27,8 @@ class RJTumbuhKembangDataAnak extends Model
         'alamat_lengkap',
         'no_telp',
         'tinggal_dengan',
+        'tinggal_dengan_lainnya',
+        'tanggal',
+        'psikolog',
     ];
 }

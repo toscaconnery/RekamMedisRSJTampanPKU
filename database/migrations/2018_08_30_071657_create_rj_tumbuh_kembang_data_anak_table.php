@@ -29,6 +29,9 @@ class CreateRjTumbuhKembangDataAnakTable extends Migration
             $table->string('alamat_lengkap');
             $table->string('no_telp');
             $table->string('tinggal_dengan');
+            $table->string('tinggal_dengan_lainnya');
+            $table->string('tanggal',10);
+            $table->string('psikolog',10);
             $table->timestamps();
         });
     }

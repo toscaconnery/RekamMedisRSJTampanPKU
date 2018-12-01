@@ -487,7 +487,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_rawat_napza" id="content">
+                        <a href="{{url('')}}/ri_asesmen_awal_keperawatan_napza" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>

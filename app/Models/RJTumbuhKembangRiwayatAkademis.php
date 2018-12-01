@@ -23,6 +23,7 @@ class RJTumbuhKembangRiwayatAkademis extends Model
         'tempat_belajar_sendiri',
         'waktu_biasa_belajar',
         'dibantu_belajar',
+        'dibantu_belajar_oleh_lainnya',
         'dibantu_belajar_oleh',
         'sikap_di_kegiatan',
         'les',

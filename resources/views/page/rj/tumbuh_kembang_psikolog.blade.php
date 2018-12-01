@@ -75,7 +75,7 @@
                   </div>
                   <label class="col-sm-1 control-label">Tanggal Lahir</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control required" name="tanggal_lahir_anak">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container required" name="tanggal_lahir_anak">
                   </div>
                 </div>
                 <div class="form-group">
@@ -139,25 +139,25 @@
                   <div class="col-lg-10" class="required">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="tinggal_dengan" value="Ayah dan ibu">
+                        <input type="radio" name="tinggal_dengan" value="1">
                         Ayah dan ibu
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="tinggal_dengan" value="Ayah saja">
+                        <input type="radio" name="tinggal_dengan" value="2">
                         Ayah saja
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="tinggal_dengan" value="Ibu saja">
+                        <input type="radio" name="tinggal_dengan" value="3">
                         Ibu saja
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="tinggal_dengan" value="Lainnya">
+                        <input type="radio" name="tinggal_dengan" value="4">
                         Lainnya
                       </label>
                     </div>
@@ -190,7 +190,7 @@
                   </div>
                   <label class="col-sm-1 control-label">Tanggal Lahir</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control required" name="tanggal_lahir_ayah">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container required" name="tanggal_lahir_ayah">
                   </div>
                 </div>
                 <div class="form-group">
@@ -234,25 +234,25 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="status_ayah" value="Kawin">
+                        <input type="radio" name="status_ayah" value="1">
                         Kawin
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="status_ayah" value="Cerai">
+                        <input type="radio" name="status_ayah" value="2">
                         Cerai
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="status_ayah" value="Berpisah">
+                        <input type="radio" name="status_ayah" value="3">
                         Berpisah
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="status_ayah" value="Lainnya">
+                        <input type="radio" name="status_ayah" value="4">
                         Lainnya
                       </label>
                     </div>
@@ -285,7 +285,7 @@
                   </div>
                   <label class="col-sm-1 control-label">Tanggal Lahir</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control required" name="tanggal_lahir_ibu">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container required" name="tanggal_lahir_ibu">
                   </div>
                 </div>
                 <div class="form-group">
@@ -329,25 +329,25 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="status_ibu" value="Kawin">
+                        <input type="radio" name="status_ibu" value="1">
                         Kawin
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="status_ibu" value="Cerai">
+                        <input type="radio" name="status_ibu" value="2">
                         Cerai
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="status_ibu" value="Berpisah">
+                        <input type="radio" name="status_ibu" value="3">
                         Berpisah
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="status_ibu" value="Lainnya">
+                        <input type="radio" name="status_ibu" value="4">
                         Lainnya
                       </label>
                     </div>
@@ -528,13 +528,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="berdasarkan_anjuran" value="true">
+                        <input type="radio" name="berdasarkan_anjuran" value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="berdasarkan_anjuran" value="false">
+                        <input type="radio" name="berdasarkan_anjuran" value="2">
                         Tidak
                       </label>
                     </div>
@@ -546,13 +546,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pernah_jatuh_kecelakaan" value="true">
+                        <input type="radio" name="pernah_jatuh_kecelakaan" value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pernah_jatuh_kecelakaan" value="false">
+                        <input type="radio" name="pernah_jatuh_kecelakaan" value="2">
                         Tidak
                       </label>
                     </div>
@@ -570,13 +570,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="suka_merokok" value="true">
+                        <input type="radio" name="suka_merokok" value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="suka_merokok" value="false">
+                        <input type="radio" name="suka_merokok" value="2">
                         Tidak
                       </label>
                     </div>
@@ -588,13 +588,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pernah_keguguran" value="true">
+                        <input type="radio" name="pernah_keguguran" value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pernah_keguguran" value="false">
+                        <input type="radio" name="pernah_keguguran" value="2">
                         Tidak
                       </label>
                     </div>
@@ -620,13 +620,13 @@
                   <div class="col-lg-8">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="bekerja_ketika_kasus" value="true">
+                        <input type="radio" name="bekerja_ketika_kasus" value="1">
                         Bekerja
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="bekerja_ketika_kasus" value="false">
+                        <input type="radio" name="bekerja_ketika_kasus" value="2">
                         Tidak Bekerja
                       </label>
                     </div>
@@ -648,19 +648,19 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="proses_kelahiran" value="Biasa">
+                        <input type="radio" name="proses_kelahiran" value="1">
                         Biasa
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="proses_kelahiran" value="Lama">
+                        <input type="radio" name="proses_kelahiran" value="2">
                         Lama
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="proses_kelahiran" value="Sukar">
+                        <input type="radio" name="proses_kelahiran" value="3">
                         Sukar
                       </label>
                     </div>
@@ -672,13 +672,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_alat" value="true">
+                        <input type="radio" name="dibantu_alat" value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_alat" value="false">
+                        <input type="radio" name="dibantu_alat" value="2">
                         Tidak
                       </label>
                     </div>
@@ -696,13 +696,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="mengalami_keguguran" value="true">
+                        <input type="radio" name="mengalami_keguguran" value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="mengalami_keguguran" value="false">
+                        <input type="radio" name="mengalami_keguguran" value="2">
                         Tidak
                       </label>
                     </div>
@@ -720,19 +720,19 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="kondisi_lahir" value="Prematur">
+                        <input type="radio" name="kondisi_lahir" value="1">
                         Prematur
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="kondisi_lahir" value="Cukup bulan">
+                        <input type="radio" name="kondisi_lahir" value="2">
                         Cukup bulan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="kondisi_lahir" value="Lewat bulan">
+                        <input type="radio" name="kondisi_lahir" value="2">
                         Lewat bulan
                       </label>
                     </div>
@@ -744,19 +744,19 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_oleh" value="Dokter">
+                        <input type="radio" name="dibantu_oleh" value="1">
                         Dokter
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_oleh" value="Bidan">
+                        <input type="radio" name="dibantu_oleh" value="2">
                         Bidan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_oleh" value="Lainnya">
+                        <input type="radio" name="dibantu_oleh" value="3">
                         Lainnya
                       </label>
                     </div>
@@ -971,13 +971,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="tempat_belajar_sendiri" value="true">
+                        <input type="radio" name="tempat_belajar_sendiri" value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="tempat_belajar_sendiri" value="false">
+                        <input type="radio" name="tempat_belajar_sendiri" value="2">
                         Tidak
                       </label>
                     </div>
@@ -990,31 +990,31 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="waktu_biasa_belajar" value="Siang hari">
+                        <input type="radio" name="waktu_biasa_belajar" value="1">
                         Siang hari 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="waktu_biasa_belajar" value="Sepulang sekolah">
+                        <input type="radio" name="waktu_biasa_belajar" value="2">
                         Sepulang sekolah 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="waktu_biasa_belajar" value="Sore hari">
+                        <input type="radio" name="waktu_biasa_belajar" value="3">
                         Sore hari 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="waktu_biasa_belajar" value="Malam hari">
+                        <input type="radio" name="waktu_biasa_belajar" value="4">
                         Malam hari  
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="waktu_biasa_belajar" value="Tidak tentu">
+                        <input type="radio" name="waktu_biasa_belajar" value="5">
                         Tidak tentu 
                       </label>
                     </div>
@@ -1026,25 +1026,25 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_belajar" value="Selalu">
+                        <input type="radio" name="dibantu_belajar" value="1">
                         Selalu
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_belajar" value="Sering">
+                        <input type="radio" name="dibantu_belajar" value="2">
                         Sering
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_belajar" value="Kadang-kadang">
+                        <input type="radio" name="dibantu_belajar" value="3">
                         Kadang-kadang
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_belajar" value="Tidak pernah">
+                        <input type="radio" name="dibantu_belajar" value="4">
                         Tidak pernah
                       </label>
                     </div>
@@ -1056,25 +1056,25 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_belajar_oleh" value="Orang tua">
+                        <input type="radio" name="dibantu_belajar_oleh" value="1">
                         Orang tua
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_belajar_oleh" value="Kakak">
+                        <input type="radio" name="dibantu_belajar_oleh" value="2">
                         Kakak
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_belajar_oleh" value="Adik">
+                        <input type="radio" name="dibantu_belajar_oleh" value="3">
                         Adik
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dibantu_belajar_oleh" value="Lainnya">
+                        <input type="radio" name="dibantu_belajar_oleh" value="4">
                         Lainnya
                       </label>
                     </div>
@@ -1097,13 +1097,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="les" value="true">
+                        <input type="radio" name="les" value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="les" value="false">
+                        <input type="radio" name="les" value="2">
                         Tidak
                       </label>
                     </div>
@@ -1146,13 +1146,15 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" value="{{date('Y-m-d')}}" disabled="">
+                    <input type="text" class="form-control" value="{{date('d/m/Y')}}" disabled>
+                    <input type="hidden" class="form-control" value="{{date('d/m/Y')}}" name="tanggal">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Psikolog</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" value="[Nama Psikolog]" disabled="">
+                    <input type="text" class="form-control" value="{{Auth::user()->nama}}" disabled="">
+                    <input type="hidden" class="form-control" value="{{Auth::user()->nama}}" name="psikolog">
                   </div>
                 </div>
               </div>

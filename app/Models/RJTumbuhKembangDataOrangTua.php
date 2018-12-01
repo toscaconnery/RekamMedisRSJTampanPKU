@@ -24,6 +24,7 @@ class RJTumbuhKembangDataOrangTua extends Model
         'alamat_pekerjaan',
         'perkawinan_ke',
         'lama_perkawinan',
+        'status_lainnya',
         'status',
     ];
 }

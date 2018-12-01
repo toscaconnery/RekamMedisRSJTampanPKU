@@ -50,7 +50,7 @@
         </section>
       </div>
     </div>
-    <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_rawat_napza">
+    <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_asesmen_awal_keperawatan_napza">
       {{ csrf_field() }}
       <div class="row">
         <div class="col-lg-12">
@@ -61,8 +61,8 @@
             <div class="panel-body">
               <div class="form-group">
                 <label class="col-lg-2 control-label"> Tanggal Pengkajian</label>
-                <div class="col-sm-10">
-                  <input type="text" id="dp1" class="form-control" name="tanggal_pengkajian">
+                <div class="col-sm-2">
+                  <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_pengkajian">
                 </div>
               </div>
               <div class="form-group">
@@ -73,8 +73,8 @@
               </div>
               <div class="form-group">
                 <label class="col-lg-2 control-label"> Tanggal Dirawat</label>
-                <div class="col-sm-10">
-                  <input type="text" id="dp2" class="form-control" name="tanggal_dirawat">
+                <div class="col-sm-2">
+                  <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_dirawat">
                 </div>
               </div>
               <div class="form-group">

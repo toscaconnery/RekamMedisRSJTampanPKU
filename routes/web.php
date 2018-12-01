@@ -201,10 +201,15 @@ Route::get('/doc_rj_ikhtisarhiv', function () {
 
 Route::get('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikolog');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_psikolog', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_psikolog');
-Route::post('/rj_asesmen_awal_tumbuh_kembang_psikolog_read', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikolog_read');
+Route::get('/rj_asesmen_awal_tumbuh_kembang_psikolog_read', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikolog_read');
+Route::get('/rj_asesmen_awal_tumbuh_kembang_psikolog_edit', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikolog_edit');
+Route::post('/rj_asesmen_awal_tumbuh_kembang_psikolog_edit', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_psikolog_edit');
+
 Route::get('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_dokter');
-Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter_read', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter_read');
+Route::get('/rj_asesmen_awal_tumbuh_kembang_dokter_read', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter_read');
+Route::get('/rj_asesmen_awal_tumbuh_kembang_dokter_edit', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_dokter_edit');
+Route::post('/rj_asesmen_awal_tumbuh_kembang_dokter_edit', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_dokter_edit');
 //dokumen informasi tumbuh kembang
 Route::get('/rj_tumbuhkembang_pdf', 'RJAsesmenAwalTumbuhKembangController@rj_tumbuhkembang_pdf');
 Route::get('/doc_rj_tumbuhkembang', function () {
@@ -315,9 +320,11 @@ Route::get('/doc_ri_suicide', function () {
     return view('/doc_ri_suicide');
 });
 
-Route::get('/ri_rawat_napza', 'RIRawatNapzaController@get_ri_rawat_napza');
-Route::post('/ri_rawat_napza', 'RIRawatNapzaController@post_ri_rawat_napza');
-Route::get('/ri_rawat_napza_read', 'RIRawatNapzaController@get_ri_rawat_napza_read'); // new add
+Route::get('/ri_asesmen_awal_keperawatan_napza', 'RIRawatNapzaController@get_ri_rawat_napza');
+Route::post('/ri_asesmen_awal_keperawatan_napza', 'RIRawatNapzaController@post_ri_rawat_napza');
+Route::get('/ri_asesmen_awal_keperawatan_napza_read', 'RIRawatNapzaController@get_ri_rawat_napza_read');
+Route::get('/ri_asesmen_awal_keperawatan_napza_edit', 'RIRawatNapzaController@get_ri_rawat_napza_edit');
+Route::post('/ri_asesmen_awal_keperawatan_napza_edit', 'RIRawatNapzaController@post_ri_rawat_napza_edit');
 //dokumen asesmen napza
 Route::get('/ri_napza_pdf', 'RIRawatNapzaController@ri_napza_pdf');
 Route::get('/doc_ri_napza', function () {
