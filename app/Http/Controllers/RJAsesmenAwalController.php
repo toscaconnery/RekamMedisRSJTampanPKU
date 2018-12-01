@@ -271,6 +271,7 @@ class RJAsesmenAwalController extends Controller
         $this->data['perut'] = $pasien->perut;
         $this->data['anggota_gerak'] = $pasien->anggota_gerak;
         $this->data['penampilan'] = $pasien->penampilan;
+        $this->data['penampilanpsikiatri'] = $pasien->penampilan;
         $this->data['kesadaran_psikiatri'] = $pasien->kesadaran_psikiatri;
         $this->data['orientasi'] = $pasien->orientasi;
         $this->data['sikap'] = $pasien->sikap;
@@ -292,6 +293,7 @@ class RJAsesmenAwalController extends Controller
         $this->data['meningeal'] = $pasien->meningeal;
         $this->data['nervus'] = $pasien->nervus;
         $this->data['motorik'] = $pasien->motorik;
+        $this->data['motorikdokter'] = $pasien->motorik;
         $this->data['cerebellum'] = $pasien->cerebellum;
         $this->data['vegetatif'] = $pasien->vegetatif;
         $this->data['gaduh_gelisah'] = $pasien->gaduh_gelisah;

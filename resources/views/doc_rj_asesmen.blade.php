@@ -25,39 +25,39 @@ header('Content-Type: application/pdf');
     <p>Hubungan dengan anggota keluarga : {{$hubungan_keluarga}}</p>
     <p>Status Psikologis:</p>
     <ul>
-      <?php if(isset($status_psikososial[1]) echo 
+      <?php if(isset($status_psikososial[1])) echo 
         '<li>
           Baik
-        </li>'
+        </li>';
       ?>
-      <?php if(isset($status_psikososial[2]) echo 
+      <?php if(isset($status_psikososial[2])) echo 
         '<li>
           Cemas
         </li>'
       ?>
-      <?php if(isset($status_psikososial[3]) echo 
+      <?php if(isset($status_psikososial[3])) echo 
         '<li>
           Takut
         </li>'
       ?>
-      <?php if(isset($status_psikososial[4]) echo 
+      <?php if(isset($status_psikososial[4])) echo 
         '<li>
           Marah
         </li>'
       ?>
-      <?php if(isset($status_psikososial[5]) echo 
+      <?php if(isset($status_psikososial[5])) echo 
         '<li>
           Sedih
         </li>'
       ?>
-      <?php if(isset($status_psikososial[6]) echo 
+      <?php if(isset($status_psikososial[6])) echo 
         '<li>
-          Kecendrungan bunuh diri dilaporkan ke : '.{{$dilaporkan_ke}}.'
+          Kecendrungan bunuh diri dilaporkan ke : '.$dilaporkan_ke.'
         </li>'
       ?>
-      <?php if(isset($status_psikososial[7]) echo 
+      <?php if(isset($status_psikososial[7])) echo 
         '<li>
-          Lain-lain, '.{{$status_psikologis_lain}}.'
+          Lain-lain, '.$status_psikologis_lain.'
         </li>'
       ?>
     </ul>
@@ -333,7 +333,7 @@ header('Content-Type: application/pdf');
   <div style="font-size: 85%;">  
     <p> {{$status_fungsional}},
 
-    <?php if($status_fungsional=='Perlu Bantuan') echo ''.{{$perlu_bantuan}}.'. Ketergantungan total dilaporkan ke <b>dokter</b> pukul: '.{{$waktu_laporan}}.'' ?> </p>
+    <?php if($status_fungsional=='Perlu Bantuan') echo ''.$perlu_bantuan.'. Ketergantungan total dilaporkan ke <b>dokter</b> pukul: '.$waktu_laporan.'' ?> </p>
   </div>
 
   <h4>PEMERIKSAAN FISIK DAN SCREENING GIZI</h4>
@@ -907,7 +907,7 @@ header('Content-Type: application/pdf');
             Tanggal
           </td>    
           <td class="konten_s_answer">  
-            : 20/08/2018
+            : [tanggal]
           </td>                
         </tr>
         <tr>
@@ -915,7 +915,7 @@ header('Content-Type: application/pdf');
             Jam
           </td>    
           <td class="konten_s_answer">  
-            : 07:00:00
+            : [jam]
           </td>                
         </tr>
         <tr>
@@ -923,7 +923,7 @@ header('Content-Type: application/pdf');
             Nama Perawat
           </td>    
           <td class="konten_s_answer">  
-            : Riska
+            : [nama perawat]
           </td>                
         </tr>
       </tbody>
@@ -946,65 +946,119 @@ header('Content-Type: application/pdf');
   <h4>DATA MEDIS</h4><br>
   <div style="font-size: 85%;">  
 
-  <p>Wawancara dengan : Ani Ananta</p>
+  <p>Wawancara dengan : {{$pewawancara}}</p>
 
   <p><b>a. Keluhan Utama :</b></p>
-  <p>Sakit pada ...., merasakan ...........  ................... ................. ......... ......... ..... .. ....... ....... ....... ..</p>
+  <p>S{{$keluhan_utama}}</p>
 
-  <p><b>b. Riwayat Penyakit Sekarang :</b></p>
-  <p> - </p>
+  <p><b>b. Riwayat Penyakit Sekarang :</b> </p>
+  <p> {{$riwayat_penyakit_sekarang}} </p>
 
-  <p><b>c. Riwayat Penyakit Dahulu (gangguan kejiwaan) : </b>Tidak ada</p>
+  <p><b>c. Riwayat Penyakit Dahulu (gangguan kejiwaan) : </b>{{$riwayat_penyakit_dahulu}}</p>
   
-  <p><b>d. Riwayat NAPZA : </b>Ada</p>
-  <p>&emsp;&nbsp;<b>Lama Pemakaian : </b>1 Bulan</p>
+  <p><b>d. Riwayat NAPZA : </b>{{$riwayat_napza}}</p>
+  <p>&emsp;&nbsp;<b>Lama Pemakaian : </b>{{$lama_pemakaian}}</p>
   <p>&emsp;&nbsp;<b>Jenis Zat :</b></p>
-  <p>&emsp;&nbsp; - </p>
+  <p>&emsp;&nbsp; [jenis zat] </p>
   <p>&emsp;&nbsp;<b>Cara Pemakaian :</b></p>
-  <p>&emsp;&nbsp; - </p>
+  <p>&emsp;&nbsp; {{$cara_pemakaian}} </p>
   <p>&emsp;&nbsp;<b>Latar Belakang Pemakaian :</b></p>
-  <p>&emsp;&nbsp; - </p>
+  <p>&emsp;&nbsp; {{$latar_belakang_pemakaian}} </p>
 
   <p><b>e. Kepribadian Sebelum Sakit :</b></p>
-  <p> - </p>
+  <p> [kepribadian sebelu, sakit] </p>
   
   <p><b>f. Riwayat Pendidikan :</b></p>
-  <p> - </p>
+  <p> {{$riwayat_pendidikan}} </p>
   
   <p><b>g. Riwayat Pekerjaan :</b></p>
-  <p> - </p>
+  <p> {{$riwayat_pekerjaan}} </p>
   
-  <p><b>h. Riwayat Pendidikan :</b></p>
-  <p> - </p>
+  <p><b>h. Riwayat Perkawinan :</b></p>
+  <p> {{$riwayat_perkawinan}} </p>
   
  
   <p><b>i. Riwayat Penyakit Lainnya :</b></p>
   <ul>
-    <li>Hipertensi</li>
-    <li>Liver</li>
-    <li>Diabetes</li>
-    <li>Jantung</li>
+    <?php 
+      if(isset($riwayat_penyakit_lainnya[1])) echo 
+      '<li>
+        Hipertensi
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[2])) echo 
+      '<li>
+        Liver
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[3])) echo 
+      '<li>
+        Diabetes
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[4])) echo 
+      '<li>
+        Cancer
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[5])) echo 
+      '<li>
+        Jantung
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[6])) echo 
+      '<li>
+        TBC
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[7])) echo 
+      '<li>
+        Stroke
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[8])) echo 
+      '<li>
+        Glaukoma
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[9])) echo 
+      '<li>
+        Dialysis
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[10])) echo 
+      '<li>
+        STD
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[11])) echo 
+      '<li>
+        Asthma
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[12])) echo 
+      '<li>
+        Perdarahan
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[13])) echo 
+      '<li>
+        Kejang
+      </li>';
+      if(isset($riwayat_penyakit_lainnya[14])) echo 
+      '<li>
+        Lainnya
+      </li>';
+    ?>
   </ul>
 
-  <p><b>j. Riwayat Operasi : </b>Ya</p>
-  <p>&emsp;&nbsp;<b>Jenis : </b> - </p>
-  <p>&emsp;&nbsp;<b>Kapan : </b> - </p>
+  <p><b>j. Riwayat Operasi : </b>{{$riwayat_operasi}}</p>
+  <p>&emsp;&nbsp;<b>Jenis : </b> {{$jenis_operasi}} </p>
+  <p>&emsp;&nbsp;<b>Kapan : </b> {{$waktu_operasi}} </p>
  
-  <p><b>k. Riwayat Transfusi : </b>Ya</p>
+  <p><b>k. Riwayat Transfusi : </b>{{$riwayat_tranfusi}}</p>
 
-  <p>&emsp;&nbsp;<b>Reaksi Transfusi : </b>Ya</p>
+  <p>&emsp;&nbsp;<b>Reaksi Transfusi : </b>{{$reaksi_tranfusi}}</p>
 
   <p>&emsp;&nbsp;<b>Reaksi yang timbul :</b></p>
-  <p>&emsp;&nbsp; - </p>
+  <p>&emsp;&nbsp; {{$reaksi_timbul}} </p>
 
   <p><b>l. Riwayat Penyakit Dalam Keluarga :</b></p>
-  <p> - </p>
+  <p> {{$riwayat_penyakit_dalam_keluarga}} </p>
 
   <p><b>m. Riwayat Pengobatan :</b></p>
-  <p> - </p>
+  <p> {{$riwayat_pengobatan}} </p>
 
   <p><b>n. Riwayat Alergi :</b></p>
-  <p> - </p>
+  <p> {{$riwayat_alergi}} </p>
 
   </div>
 
@@ -1015,7 +1069,6 @@ header('Content-Type: application/pdf');
             <table class="tabel">
                 <thead>
                     <tr>   
-                        <th class="col1" data-field="name">No</th>
                         <th class="col2" data-field="name">NAMA OBAT</th>
                         <th class="col3" data-field="name">DIBAWA</th>
                         <th class="col4" data-field="name">JUMLAH</th>
@@ -1025,66 +1078,28 @@ header('Content-Type: application/pdf');
                 </thead>
 
                 <tbody>
-                  <tr>
-                    <td style="text-align: center;padding-left:0px;" class="kolom">
-                      1
+                  @php
+                    $idx = 1;
+                  @endphp
+                  @foreach($obat as $o)
+                  <tr id="obat_{{$o['id_data']}}">
+                    <td class="kolom">
+                      {{$o['nama_obat']}}
                     </td>
                     <td class="kolom">
-                      Obat
-                    </td>
-                    <td class="kolom">
-                      10
+                      {{$o['dibawa']}}
                     </td> 
                     <td class="kolom">
-                      Obat
+                      {{$o['jumlah']}}
                     </td> 
                     <td class="kolom">
-                      Obat
+                      {{$o['tidak_dibawa']}}
                     </td> 
                     <td class="kolom">
-                      Obat
+                      {{$o['keterangan']}}
                     </td>     
                   </tr>
-                  <tr>
-                    <td style="text-align: center;padding-left:0px;" class="kolom">
-                      2
-                    </td>
-                    <td class="kolom">
-                      Obat
-                    </td>
-                    <td class="kolom">
-                      10
-                    </td> 
-                    <td class="kolom">
-                      Obat
-                    </td> 
-                    <td class="kolom">
-                      Obat
-                    </td> 
-                    <td class="kolom">
-                      Obat
-                    </td>     
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;padding-left:0px;" class="kolom">
-                      3
-                    </td>
-                    <td class="kolom">
-                      Obat
-                    </td>
-                    <td class="kolom">
-                      10
-                    </td> 
-                    <td class="kolom">
-                      Obat
-                    </td> 
-                    <td class="kolom">
-                      Obat
-                    </td> 
-                    <td class="kolom">
-                      Obat
-                    </td>     
-                  </tr>
+                  @endforeach
                 </tbody>
             </table>
         </div>
@@ -1100,7 +1115,7 @@ header('Content-Type: application/pdf');
             1. Kepala
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$kepala}}
           </td>                
         </tr>
         <tr>
@@ -1108,7 +1123,7 @@ header('Content-Type: application/pdf');
             2. Leher
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$leher}}
           </td>                
         </tr>
         <tr>
@@ -1116,7 +1131,7 @@ header('Content-Type: application/pdf');
             3. Dada
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$dada}}
           </td>                
         </tr>
         <tr>
@@ -1124,7 +1139,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp; a. Jantung
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$jantung}}
           </td>                
         </tr>
         <tr>
@@ -1132,7 +1147,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp; b. Paru-paru
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$paru}}
           </td>                
         </tr>
         <tr>
@@ -1140,7 +1155,7 @@ header('Content-Type: application/pdf');
             4. Perut
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$perut}}
           </td>                
         </tr>
         <tr>
@@ -1148,7 +1163,7 @@ header('Content-Type: application/pdf');
             5. Anggota gerak
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$anggota_gerak}}
           </td>                
         </tr>
       </tbody>
@@ -1159,7 +1174,7 @@ header('Content-Type: application/pdf');
   <table style="font-size:85%;">
     <tr>
       <td class="box" style="padding:2%"><center><img src="img/body.jpg" alt="Smiley face" height="200" width="200"></center></td>
-      <td class="box" style="margin-left:5%;vertical-align:top;padding:5%;" width="75%">Sakit pada ... dan nyeri pada ...</td>
+      <td class="box" style="margin-left:5%;vertical-align:top;padding:5%;" width="75%"></td>
     </tr>
   </table>
 
@@ -1180,7 +1195,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;a. Penampilan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$penampilanpsikiatri}}
           </td>                
         </tr>
         <tr>
@@ -1188,7 +1203,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;b. Kesadaran
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$kesadaran_psikiatri}}
           </td>                
         </tr>
         <tr>
@@ -1196,7 +1211,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp; c. Orientasi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$orientasi}}
           </td>                
         </tr>
         <tr>
@@ -1204,7 +1219,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp; d. Sikap & Tingkah Laku
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$sikap}}
           </td>                
         </tr>
 
@@ -1220,7 +1235,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;a. Proses Pikir
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$proses_pikir}}
           </td>                
         </tr>
         <tr>
@@ -1228,7 +1243,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp;b. Bentuk Pikir
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$bentuk_pikir}}
           </td>                
         </tr>
         <tr>
@@ -1236,7 +1251,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp;c. Isi Pikir
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$isi_pikir}}
           </td>                
         </tr>
 
@@ -1253,7 +1268,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;a. Mood
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$mood}}
           </td>                
         </tr>
         <tr>
@@ -1261,7 +1276,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp;b. Afek
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$afek}}
           </td>                
         </tr>
 
@@ -1277,7 +1292,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;a. Halusinasi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$halusinasi}}
           </td>                
         </tr>
         <tr>
@@ -1285,7 +1300,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp;b. Ilusi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$ilusi}}
           </td>                
         </tr>
 
@@ -1301,7 +1316,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;a. Daya Konsentrasi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$konsentrasi}}
           </td>                
         </tr>
         <tr>
@@ -1309,7 +1324,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp;b. Daya Ingat
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$ingat}}
           </td>                
         </tr>
         <tr>
@@ -1317,7 +1332,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp;c. Pikiran Abstrak
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$abstrak}}
           </td>                
         </tr>
 
@@ -1326,7 +1341,7 @@ header('Content-Type: application/pdf');
             <b>6. Pengendalian Impuls</b> 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$impuls}}
           </td>                
         </tr>
 
@@ -1335,7 +1350,7 @@ header('Content-Type: application/pdf');
             <b>7. Daya Nilai</b>
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$nilai}}
           </td>                
         </tr>
 
@@ -1344,7 +1359,7 @@ header('Content-Type: application/pdf');
             <b>8. Tilikan/Insight</b> 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$tilikan}}
           </td>                
         </tr>
 
@@ -1353,7 +1368,7 @@ header('Content-Type: application/pdf');
             <b>9. Taraf dapat dipercaya</b>
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$dipercaya}}
           </td>                
         </tr>
       </tbody>
@@ -1365,23 +1380,23 @@ header('Content-Type: application/pdf');
     <p><b>1. Pemeriksaan Khusus</b></p>
 
     <p>&emsp;&nbsp;<b>a. Meningeal Signt</b></p>
-    <p>&emsp;&nbsp;- </p>
+    <p>&emsp;&nbsp;{{$meningeal}} </p>
 
     <p>&emsp;&nbsp;<b>b. Hasil Pemeriksaan Nervus Cranialis</b></p>
-    <p>&emsp;&nbsp; - </p>
+    <p>&emsp;&nbsp;{{$nervus}} </p>
 
 
     <p><b>2. Pemeriksaan Sistem Motorik</b></p>
-    <p> - </p>
+    <p> {{$motorikdokter}} </p>
 
     <p><b>3. Koordinasi Gait Keseimbangan (fungsi cerebellum)</b></p>
-    <p> - </p>
+    <p> {{$cerebellum}} </p>
 
     <p><b>4. Gerakan-Gerakan Abnormal</b></p>
-    <p> - </p>
+    <p> [gerakan abnormal] </p>
 
     <p><b>5. Vegetatif</b></p>
-    <p> - </p>
+    <p> {{$vegetatif}} </p>
 
   </div>
 
@@ -1473,25 +1488,25 @@ header('Content-Type: application/pdf');
       <div class="column">
         <p><b>P4. GADUH GELISAH</b></p>
         <p><b>Nilai : 4</b></p>
-        <p>Sedang - agitasi atau mudah terangsang yang jelas, ledakan-ledakan episodik</p>
+        <p>{{$gaduh_gelisah}}</p>
 
         <p><b>P7. PERMUSUHAN</b></p>
         <p><b>Nilai : 3</b></p>
-        <p>Ringan - melampiaskan kemarahan secara tidak langusng atau ditahan</p>
+        <p>{{$permusuhan}}</p>
 
         <p><b>G4. KETEGANGAN</b></p>
         <p><b>Nilai : 2</b></p>
-        <p>Minimal - patologis diragukan</p>
+        <p>{{$ketegangan}}</p>
 
       </div>
       <div class="column">
         <p><b>G8. KETIDAKOPERATIFAN</b></p>
         <p><b>Nilai : 2</b></p>
-        <p>Minimal - patologis diragukan</p>
+        <p>{{$ketidakoperatifan}}</p>
 
         <p><b>G14. PENGENDALIAN IMPULS</b></p>
         <p><b>Nilai : 7</b></p>
-        <p>Sangat berat - memperlihatkan serangan kebrutalan dan berbahaya</p>
+        <p>{{$pengendalian_impuls}}</p>
       </div>
     </div> 
 
@@ -1502,7 +1517,7 @@ header('Content-Type: application/pdf');
             Nama
           </td>    
           <td class="konten_s_answer">  
-            : Joko Pangestu
+            : [nama belum dapat diisi]
           </td>                
         </tr>
         <tr>
@@ -1510,7 +1525,7 @@ header('Content-Type: application/pdf');
             No.RM
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : [no rm belum dapat diisi]
           </td>                
         </tr>
         <tr>
@@ -1518,7 +1533,7 @@ header('Content-Type: application/pdf');
             Umur
           </td>    
           <td class="konten_s_answer">  
-            : 43
+            : [umur]
           </td>                
         </tr>
         <tr>
@@ -1526,7 +1541,7 @@ header('Content-Type: application/pdf');
             Bangsal
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$bangsal}}
           </td>                
         </tr>
         <tr>
@@ -1534,7 +1549,7 @@ header('Content-Type: application/pdf');
             Pemeriksaan Tanggal
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$tanggal_pemeriksaan}}
           </td>                
         </tr>
       </tbody>
@@ -1548,7 +1563,7 @@ header('Content-Type: application/pdf');
             P4
           </td>    
           <td class="konten_s_answer">  
-            : 4
+            : [skor p4]
           </td>                
         </tr>
         <tr>
@@ -1556,7 +1571,7 @@ header('Content-Type: application/pdf');
             P7
           </td>    
           <td class="konten_s_answer">  
-            : 3
+            : [skor p7]
           </td>                
         </tr>
         <tr>
@@ -1564,7 +1579,7 @@ header('Content-Type: application/pdf');
             G4
           </td>    
           <td class="konten_s_answer">  
-            : 2
+            : [skor g4]
           </td>                
         </tr>
         <tr>
@@ -1572,7 +1587,7 @@ header('Content-Type: application/pdf');
             G8
           </td>    
           <td class="konten_s_answer">  
-            : 2
+            : [skor g8]
           </td>                
         </tr>
         <tr>
@@ -1580,7 +1595,7 @@ header('Content-Type: application/pdf');
             G14
           </td>    
           <td class="konten_s_answer">  
-            : 7
+            : [skor g14]
           </td>                
         </tr>
       </tbody>
@@ -1596,7 +1611,7 @@ header('Content-Type: application/pdf');
             PANSS EC Skor
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$panss_ec}}
           </td>                
         </tr>
         <tr>
@@ -1604,8 +1619,8 @@ header('Content-Type: application/pdf');
             GAFF Skor
           </td>    
           <td class="konten_s_answer">  
-            : -
-          </td>                
+            : {{$gaff}}
+          </td>                 
         </tr>
       </tbody>
     </table>
@@ -1627,18 +1642,18 @@ header('Content-Type: application/pdf');
     <div class="row">
       <div class="column">
         <p><b>DIAGNOSIS PSIKIATRI</b></p>
-        <p>Axis 1 : - </p>
-        <p>Axis 2 : - </p>
-        <p>Axis 3 : - </p>
-        <p>Axis 4 : - </p>
-        <p>Axis 5 : - </p>
+        <p>Axis 1 : {{$axis1}} </p>
+        <p>Axis 2 : {{$axis2}} </p>
+        <p>Axis 3 : {{$axis3}} </p>
+        <p>Axis 4 : {{$axis4}} </p>
+        <p>Axis 5 : {{$axis5}} </p>
       </div>
       <div class="column">
         <p><b>DIAGNOSIS NON PSIKIATRI</b></p>
         <p>Diagnosis Utama :</p>
-        <p>.....................</p>
+        <p>{{$utama}}</p>
         <p>Diagnosis Sekunder :</p>
-        <p>.....................</p>
+        <p>{{$sekunder}}</p>
       </div>
     </div>
     <div class="panel-body">
@@ -1653,35 +1668,11 @@ header('Content-Type: application/pdf');
           <tbody>
             <tr>
               <td class="kolom">
-                14:00
+                {{$jam}}
               </td>
               <td class="kolom">
-                Tindakan ....
+                {{$tindakan_terapi}}
               </td>     
-            </tr>
-            <tr>
-              <td class="kolom">
-                14:30
-              </td>
-              <td class="kolom">
-                Tindakan ....
-              </td>    
-            </tr>
-            <tr>
-              <td class="kolom">
-                15:00
-              </td>
-              <td class="kolom">
-                Tindakan ....
-              </td>     
-            </tr>
-            <tr>
-              <td class="kolom">
-                16:00
-              </td>
-              <td class="kolom">
-                Tindakan ....
-              </td>   
             </tr>
           </tbody>
       </table>
@@ -1690,19 +1681,59 @@ header('Content-Type: application/pdf');
 
   <h4>DAFTAR MASALAH</h4>
   <div style="font-size: 85%;">  
-    <p>...................................</p>
+    <p>{{$daftar_masalah}}</p>
   </div>
 
   <h4>TINDAK LANJUT</h4>
   <div style="font-size: 85%;">  
-    <p>Pulang</p>
-    <p>Perlu Kontrol, tanggal 22/08/2018</p>
+    <?php
+      if($tindak_lanjut=='1'){
+        echo 'Pulang '.$perlu_dikontrol.','.$tanggal_kontrol.'';
+      }
+      elseif ($tindak_lanjut=='2') {
+        echo 'Dirawat di ruangan '.$ruangan.' <br> <b>Indikasi Rawat Inap: </b>{{$indikasi_rawat_inap}}';
+      }
+      elseif ($tindak_lanjut=='3') {
+        echo 'Menolak dirawat, karena '.$alasan_menolak.' '.$alasan_lainnya.'';
+      }
+      elseif ($tindak_lanjut=='4') {
+         echo 'Dirujuk ke '.$dirujuk_ke.'<br>Alasan di rujuk: '.$alasan_dirujuk.'';
+      }
+    ?>
   
   <p><b>KONDISI PASIEN SAAT KELUAR</b></p>
   <p>Kesadaran :</p>
   <ul>
-    <li>Compos Mentis</li>
-    <li>Apatis</li>
+    <?php 
+      if(isset($kesadaran[1])) echo 
+      '<li>
+        Compos Mentis
+      </li>';
+      if(isset($kesadaran[2])) echo 
+      '<li>
+        Apatis
+      </li>';
+      if(isset($kesadaran[3])) echo 
+      '<li>
+        Delirium
+      </li>';
+      if(isset($kesadaran[4])) echo 
+      '<li>
+        Sopor
+      </li>';
+      if(isset($kesadaran[5])) echo 
+      '<li>
+        Koma
+      </li>';
+      if(isset($kesadaran[6])) echo 
+      '<li>
+        GCS
+      </li>';
+      if(isset($kesadaran[7])) echo 
+      '<li>
+        Lain-lain, '.$kesadaran_lainnya.'
+      </li>';
+    ?>
   </ul>
   
   <p>Tanda-tanda vital : </p></div>
@@ -1713,7 +1744,7 @@ header('Content-Type: application/pdf');
             Tensi 
           </td>    
           <td class="konten_s_answer">  
-            : 90 mmHg
+            : {{$tensi}} mmHg
           </td>                
         </tr>
         <tr>
@@ -1721,7 +1752,7 @@ header('Content-Type: application/pdf');
             Nadi 
           </td>    
           <td class="konten_s_answer">  
-            : 10 x/mnt
+            : {{$nadi}} x/mnt
           </td>                
         </tr>
         <tr>
@@ -1729,7 +1760,7 @@ header('Content-Type: application/pdf');
             Pernafasan 
           </td>    
           <td class="konten_s_answer">  
-            : 12 x/mnt
+            : {{$pernafasan}} x/mnt
           </td>                
         </tr>
         <tr>
@@ -1737,7 +1768,7 @@ header('Content-Type: application/pdf');
             Suhu 
           </td>    
           <td class="konten_s_answer">  
-            : 36 C
+            : {{$suhu}} <sup>o</sup>C
           </td>                
         </tr>
       </tbody>
@@ -1752,7 +1783,7 @@ header('Content-Type: application/pdf');
             Tanggal
           </td>    
           <td class="konten_s_answer">  
-            : 20/08/2018
+            : [tanggal]
           </td>                
         </tr>
         <tr>
@@ -1760,15 +1791,15 @@ header('Content-Type: application/pdf');
             Jam
           </td>    
           <td class="konten_s_answer">  
-            : 07:00:00
+            : [jam]
           </td>                
         </tr>
         <tr>
           <td class="konten_s_question">
-            Nama Perawat
+            Nama Dokter
           </td>    
           <td class="konten_s_answer">  
-            : Riska
+            : [nama dokter]
           </td>                
         </tr>
       </tbody>
