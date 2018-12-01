@@ -61,7 +61,7 @@ class RIPenggunaanObatController extends Controller
     	return redirect('daftar_dokumen');
     }
 
-    public function get_ri_penggunaan_obat()
+    public function get_ri_penggunaan_obat_read()
     {
         $pasien = RIPenggunaanObat::where('id', 1)->first();
         
