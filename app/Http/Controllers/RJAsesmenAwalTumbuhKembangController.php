@@ -40,12 +40,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     {
     	//anak
     	$anak = new RJTumbuhKembangDataAnak;
-        if(Session::has('id_pasien')) {
-            $id_pasien = Session::get('id_pasien');
-        }
-        else {
-            $id_pasien = 1;
-        }
+        $id_pasien = Session::get('id_pasien');
     	$anak->id_regis = $id_pasien;
     	$anak->nama = $request->nama_anak;
     	$anak->tempat_lahir = $request->tempat_lahir_anak;
@@ -59,12 +54,10 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     	$anak->bahasa = $request->bahasa_anak;
     	$anak->alamat_lengkap = $request->alamat_lengkap_anak;
     	$anak->no_telp = $request->no_telp_anak;
-    	if($request->tinggal_dengan == "Lainnya") {
-    		$anak->tinggal_dengan = $request->tinggal_dengan_lainnya;
-    	}
-    	else {
-    		$anak->tinggal_dengan = $request->tinggal_dengan;
-    	}
+        $anak->tinggal_dengan = $request->tinggal_dengan;
+        $anak->tinggal_dengan_lainnya = $request->tinggal_dengan_lainnya;
+        $anak->tanggal = $request->tanggal;
+        $anak->psikolog = $request->psikolog;
     	$anak->save();
 
     	//ayah
@@ -80,12 +73,8 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     	$ayah->alamat_pekerjaan = $request->alamat_pekerjaan_ayah;
     	$ayah->perkawinan_ke = $request->perkawinan_ke_ayah;
     	$ayah->lama_perkawinan = $request->lama_perkawinan_ayah;
-    	if($request->status_ayah == "Lainnya") {
-    		$ayah->status = $request->status_ayah_lainnya;
-    	}
-    	else {
-    		$ayah->status = $request->status_ayah;
-    	}
+    	$ayah->status_lainnya = $request->status_ayah_lainnya;
+    	$ayah->status = $request->status_ayah;
     	$ayah->save();
 
     	//ibu
@@ -101,12 +90,8 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     	$ibu->alamat_pekerjaan = $request->alamat_pekerjaan_ibu;
     	$ibu->perkawinan_ke = $request->perkawinan_ke_ibu;
     	$ibu->lama_perkawinan = $request->lama_perkawinan_ibu;
-    	if($request->status_ayah == "Lainnya") {
-    		$ibu->status = $request->status_ibu_lainnya;
-    	}
-    	else {
-    		$ibu->status = $request->status_ibu;
-    	}
+    	$ibu->status = $request->status_ibu;
+        $ibu->status_lainnya = $request->status_ibu_lainnya;
     	$ibu->save();
 
     	//saudara kandung
@@ -172,63 +157,27 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     	$riwayat->penyakit_selama_mengandung = $request->penyakit_selama_mengandung;
     	$riwayat->perasaan_selama_mengandung = $request->perasaan_selama_mengandung;
     	$riwayat->suka_obat_obatan = $request->suka_obat_obatan;
-    	if($request->berdasarkan_anjuran == 'true') {
-    		$riwayat->berdasarkan_anjuran = True;
-    	}
-    	else {
-    		$riwayat->berdasarkan_anjuran = False;
-    	}
-    	if($request->pernah_jatuh_kecelakaan == 'true') {
-    		$riwayat->pernah_jatuh_kecelakaan = True;
-    		$riwayat->usia_jatuh_kecelakaan = $request->usia_jatuh_kecelakaan;
-    	}
-    	else {
-    		$riwayat->pernah_jatuh_kecelakaan = False;
-    	}
-    	if($request->suka_merokok == 'true') {
-    		$riwayat->suka_merokok = True;
-    	}
-    	else {
-    		$riwayat->suka_merokok = False;
-    	}
-    	if($request->pernah_keguguran == 'true') {
-    		$riwayat->pernah_keguguran = True;
-    		$riwayat->jumlah_keguguran = $request->jumlah_keguguran;
-    	}
-    	$riwayat->usia_ketika_kasus = $request->usia_ketika_kasus;
-    	if($request->bekerja_ketika_kasus == 'true') {
-    		$riwayat->bekerja_ketika_kasus = True;
-    	}
-    	else {
-    		$riwayat->bekerja_ketika_kasus = False;
-    	}
+    	$riwayat->berdasarkan_anjuran = $request->berdasarkan_anjuran;
+    	$riwayat->pernah_jatuh_kecelakaan = $request->pernah_jatuh_kecelakaan;
+    	$riwayat->usia_jatuh_kecelakaan = $request->usia_jatuh_kecelakaan;
+    	$riwayat->suka_merokok = $request->suka_merokok;
+    	$riwayat->pernah_keguguran = $request->pernah_keguguran;
+    	$riwayat->jumlah_keguguran = $request->jumlah_keguguran;
+        $riwayat->usia_ketika_kasus = $request->usia_ketika_kasus;
+    	$riwayat->bekerja_ketika_kasus = $request->bekerja_ketika_kasus;        
     	$riwayat->save();
 
     	//riwayat persalinan natal
     	$riwayat = new RJTumbuhKembangRiwayatPersalinanNatal;
     	$riwayat->id_regis = $id_pasien;
     	$riwayat->proses_kelahiran = $request->proses_kelahiran;
-    	if($request->dibantu_alat == 'true') {
-    		$riwayat->dibantu_alat = True;
-    		$riwayat->alat_bantu = $request->alat_bantu;
-    	}
-    	else {
-    		$riwayat->dibantu_alat = False;
-    	}
-    	if($request->mengalami_keguguran == 'true') {
-    		$riwayat->mengalami_keguguran = True;
-    		$riwayat->keterangan_keguguran = $request->keterangan_keguguran;
-    	}
-    	else {
-    		$riwayat->mengalami_keguguran = False;
-    	}
+    	$riwayat->dibantu_alat = $request->dibantu_alat;
+    	$riwayat->alat_bantu = $request->alat_bantu;
+		$riwayat->mengalami_keguguran = $request->mengalami_keguguran;
+		$riwayat->keterangan_keguguran = $request->keterangan_keguguran;
     	$riwayat->kondisi_lahir = $request->kondisi_lahir;
-    	if($request->dibantu_oleh == 'Lainnya') {
-    		$riwayat->dibantu_oleh = $request->dibantu_oleh_lainnya;
-    	}
-    	else {
-    		$riwayat->dibantu_oleh = $request->dibantu_oleh;
-    	}
+    	$riwayat->dibantu_oleh_lainnya = $request->dibantu_oleh_lainnya;
+    	$riwayat->dibantu_oleh = $request->dibantu_oleh;
     	$riwayat->berat_bayi = $request->berat_bayi;
     	$riwayat->panjang_bayi = $request->panjang_bayi;
     	$riwayat->save();
@@ -272,33 +221,19 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     	//riwayat akademis
     	$riwayat = new RJTumbuhKembangRiwayatAkademis;
     	$riwayat->id_regis = $id_pasien;
-    	$riwayat->sikap = 1;
+    	$riwayat->sikap = $request->sikap;
     	$riwayat->keterampilan_motorik_awal = $request->keterampilan_motorik_awal;
     	$riwayat->hasil_belajar_anak = $request->hasil_belajar_anak;
     	$riwayat->pelajaran_disenangi = $request->pelajaran_disenangi;
     	$riwayat->pelajaran_sulit = $request->pelajaran_sulit;
     	$riwayat->keluhan_di_pelajaran_sulit = $request->keluhan_di_pelajaran_sulit;
-    	if($request->tempat_belajar_sendiri == 'true') {
-    		$riwayat->tempat_belajar_sendiri = True;
-    	}
-    	else {
-    		$riwayat->tempat_belajar_sendiri = False;
-    	}
+    	$riwayat->tempat_belajar_sendiri = $request->tempat_belajar_sendiri;
     	$riwayat->waktu_biasa_belajar = $request->waktu_biasa_belajar;
     	$riwayat->dibantu_belajar = $request->dibantu_belajar;
-    	if($request->dibantu_belajar_oleh == 'Lainnya') {
-    		$riwayat->dibantu_belajar_oleh = $request->dibantu_belajar_oleh_lainnya;
-    	}
-    	else {
-    		$riwayat->dibantu_belajar_oleh = $request->dibantu_belajar_oleh;
-    	}
+    	$riwayat->dibantu_belajar_oleh_lainnya = $request->dibantu_belajar_oleh_lainnya;
+    	$riwayat->dibantu_belajar_oleh = $request->dibantu_belajar_oleh;
     	$riwayat->sikap_di_kegiatan = $request->sikap_di_kegiatan;
-    	if($request->les == 'true') {
-    		$riwayat->les = True;
-    	}
-    	else {
-    		$riwayat->les = False;
-    	}
+    	$riwayat->les = $request->les;
     	$riwayat->pelajaran_les = $request->pelajaran_les;
     	$riwayat->pengajar = $request->pengajar;
     	$riwayat->save();
@@ -329,7 +264,543 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     	return back();
     }
 
+    public function get_rj_asesmen_awal_tumbuh_kembang_psikolog_data()
+    {
+        //anak
+        $id_pasien = Session::get('id_pasien');
+        $anak = RJTumbuhKembangDataAnak::where('id_regis', $id_pasien)->first();
+    
+        $this->data['nama_anak'] = $anak->nama;
+        $this->data['tempat_lahir_anak'] = $anak->tempat_lahir;
+        $this->data['tanggal_lahir_anak'] = $anak->tanggal_lahir;
+        $this->data['jenis_kelamin_anak'] = $anak->jenis_kelamin;
+        $this->data['agama_anak'] = $anak->agama;
+        $this->data['sekolah_anak'] = $anak->sekolah;
+        $this->data['sekolah_anak']  = $anak->sekolah;
+        $this->data['kelas_anak'] = $anak->kelas;
+        $this->data['alamat_sekolah_anak'] = $anak->alamat_sekolah;
+        $this->data['suku_bangsa_anak'] = $anak->suku_bangsa;
+        $this->data['bahasa_anak'] = $anak->bahasa;
+        $this->data['alamat_lengkap_anak'] = $anak->alamat_lengkap;
+        $this->data['no_telp_anak'] = $anak->no_telp;
+        $this->data['tinggal_dengan_lainnya'] = $anak->tinggal_dengan_lainnya;
+        $this->data['tinggal_dengan'] = $anak->tinggal_dengan;
+        $this->data['tanggal'] = $anak->tanggal;
+        $this->data['psikolog'] = $anak->psikolog;
+
+        //ayah
+        $ayah = RJTumbuhKembangDataOrangTua::where('id_regis', $id_pasien)->where('sebagai', 'ayah')->first();
+        $this->data['nama_ayah'] =  $ayah->nama;
+        $this->data['tempat_lahir_ayah'] = $ayah->tempat_lahir;
+        $this->data['tanggal_lahir_ayah'] = $ayah->tanggal_lahir;
+        $this->data['agama_ayah'] = $ayah->agama;
+        $this->data['pendidikan_ayah'] = $ayah->pendidikan;
+        $this->data['pekerjaan_ayah'] = $ayah->pekerjaan;
+        $this->data['alamat_pekerjaan_ayah'] = $ayah->alamat_pekerjaan;
+        $this->data['perkawinan_ke_ayah'] = $ayah->perkawinan_ke;
+        $this->data['lama_perkawinan_ayah'] = $ayah->lama_perkawinan;
+        $this->data['status_ayah_lainnya'] = $ayah->status_lainnya;
+        $this->data['status_ayah'] = $ayah->status;
+        
+        //ibu
+        $ibu = RJTumbuhKembangDataOrangTua::where('id_regis', $id_pasien)->where('sebagai', 'ibu')->first();
+        $this->data['nama_ibu'] =  $ibu->nama;
+        $this->data['tempat_lahir_ibu'] = $ibu->tempat_lahir;
+        $this->data['tanggal_lahir_ibu'] = $ibu->tanggal_lahir;
+        $this->data['agama_ibu'] = $ibu->agama;
+        $this->data['pendidikan_ibu'] = $ibu->pendidikan;
+        $this->data['pekerjaan_ibu'] = $ibu->pekerjaan;
+        $this->data['alamat_pekerjaan_ibu'] = $ibu->alamat_pekerjaan;
+        $this->data['perkawinan_ke_ibu'] = $ibu->perkawinan_ke;
+        $this->data['lama_perkawinan_ibu'] = $ibu->lama_perkawinan;
+        $this->data['status_ibu_lainnya'] = $ibu->status_lainnya;
+        $this->data['status_ibu'] = $ibu->status;
+
+        // //riwayat kehamilan
+        $riwayat = RJTumbuhKembangRiwayatKehamilan::where('id_regis', $id_pasien)->first();
+        $this->data['keadaan_awal_kandungan'] = $riwayat->keadaan_awal_kandungan;
+        $this->data['penyakit_selama_mengandung'] = $riwayat->penyakit_selama_mengandung;
+        $this->data['perasaan_selama_mengandung'] = $riwayat->perasaan_selama_mengandung;
+        $this->data['suka_obat_obatan'] = $riwayat->suka_obat_obatan;
+        $this->data['berdasarkan_anjuran'] = $riwayat->berdasarkan_anjuran;
+        $this->data['pernah_jatuh_kecelakaan'] = $riwayat->pernah_jatuh_kecelakaan;
+        $this->data['usia_jatuh_kecelakaan'] = $riwayat->usia_jatuh_kecelakaan;
+        $this->data['suka_merokok'] = $riwayat->suka_merokok;
+        $this->data['pernah_keguguran'] = $riwayat->pernah_keguguran;
+        $this->data['jumlah_keguguran'] = $riwayat->jumlah_keguguran;
+        $this->data['usia_ketika_kasus'] = $riwayat->usia_ketika_kasus;
+        $this->data['bekerja_ketika_kasus'] = $riwayat->bekerja_ketika_kasus;
+
+        //riwayat persalinan natal
+        $riwayat = RJTumbuhKembangRiwayatPersalinanNatal::where('id_regis', $id_pasien)->first();
+        $this->data['proses_kelahiran'] = $riwayat->proses_kelahiran;
+        $this->data['dibantu_alat'] = $riwayat->dibantu_alat;
+        $this->data['alat_bantu'] = $riwayat->alat_bantu;
+        $this->data['mengalami_keguguran'] = $riwayat->mengalami_keguguran;
+        $this->data['keterangan_keguguran'] = $riwayat->keterangan_keguguran;
+        $this->data['kondisi_lahir'] = $riwayat->kondisi_lahir;
+        $this->data['dibantu_oleh_lainnya'] = $riwayat->dibantu_oleh_lainnya;
+        $this->data['dibantu_oleh'] = $riwayat->dibantu_oleh;
+        $this->data['berat_bayi'] = $riwayat->berat_bayi;
+        $this->data['panjang_bayi'] = $riwayat->panjang_bayi;
+
+        //riwayat persalinan pasca natal
+        $riwayat = RJTumbuhKembangRiwayatPersalinanPascaNatal::where('id_regis', $id_pasien)->first();
+        $this->data['lama_asi'] = $riwayat->lama_asi;
+        $this->data['pola_makan'] = $riwayat->pola_makan;
+        $this->data['pola_tidur'] = $riwayat->pola_tidur;
+        $this->data['training'] = $riwayat->training;
+        $this->data['motorik'] = $riwayat->motorik;
+        $this->data['usia_berjalan'] = $riwayat->usia_berjalan;
+        $this->data['usia_berbicara'] = $riwayat->usia_berbicara;
+        $this->data['hambatan_berbicara'] = $riwayat->hambatan_berbicara;
+        $this->data['obat_masih_diminum'] = $riwayat->obat_masih_diminum;
+        $this->data['diasuh'] = $riwayat->diasuh;
+        $this->data['lama_pengasuhan'] = $riwayat->lama_pengasuhan;
+        $this->data['masalah_khusus'] = $riwayat->masalah_khusus;
+
+        //riwayat akademis
+        $riwayat = RJTumbuhKembangRiwayatAkademis::where('id_regis', $id_pasien)->first();
+        $this->data['sikap'] = $riwayat->sikap;
+        $this->data['keterampilan_motorik_awal'] = $riwayat->keterampilan_motorik_awal;
+        $this->data['hasil_belajar_anak'] = $riwayat->hasil_belajar_anak;
+        $this->data['pelajaran_disenangi'] = $riwayat->pelajaran_disenangi;
+        $this->data['pelajaran_sulit'] = $riwayat->pelajaran_sulit;
+        $this->data['keluhan_di_pelajaran_sulit'] = $riwayat->keluhan_di_pelajaran_sulit;
+        $this->data['tempat_belajar_sendiri'] = $riwayat->tempat_belajar_sendiri;
+        $this->data['waktu_biasa_belajar'] = $riwayat->waktu_biasa_belajar;
+        $this->data['dibantu_belajar'] = $riwayat->dibantu_belajar;
+        $this->data['dibantu_belajar_oleh_lainnya'] = $riwayat->dibantu_belajar_oleh_lainnya;
+        $this->data['dibantu_belajar_oleh'] = $riwayat->dibantu_belajar_oleh;
+        $this->data['sikap_di_kegiatan'] = $riwayat->sikap_di_kegiatan;
+        $this->data['les'] = $riwayat->les;
+        $this->data['pelajaran_les'] = $riwayat->pelajaran_les;
+        $this->data['pengajar'] = $riwayat->pengajar;
+
+        // riwayat sosialisasi
+        $sosialisasi = RJTumbuhKembangRiwayatSosialisasi::where('id_regis', $id_pasien)->first();
+        $this->data['sosialisasi_di_sekolah'] = $sosialisasi->sekolah;
+        $this->data['sosialisasi_di_keluarga'] = $sosialisasi->keluarga;
+
+
+        //saudara kandung dan tiri
+        $saudara = RJTumbuhKembangDataSaudara::where('id_regis', $id_pasien)->get();
+        $previous_saudara = '';
+        $previous_saudara_tiri = '';
+        $this->data['saudara'] = array();
+        $this->data['saudara_tiri'] = array();
+        foreach ($saudara as $key => $value) {
+            if($value->status == 'kandung') {
+                $this->data['saudara'][$key] = array();
+                $this->data['saudara'][$key]['id_data'] = $value->id;
+                $this->data['saudara'][$key]['umur'] = $value->umur;
+                $this->data['saudara'][$key]['jenis_kelamin'] = $value->jenis_kelamin;
+                $this->data['saudara'][$key]['pendidikan'] = $value->pendidikan;
+                $this->data['saudara'][$key]['pekerjaan'] = $value->pekerjaan;
+                $previous_saudara .= $value->id.'-';
+            }
+            elseif($value->status == 'tiri') {
+                $this->data['saudara_tiri'][$key] = array();
+                $this->data['saudara_tiri'][$key]['id_data'] = $value->id;
+                $this->data['saudara_tiri'][$key]['umur_tiri'] = $value->umur;
+                $this->data['saudara_tiri'][$key]['jenis_kelamin_tiri'] = $value->jenis_kelamin;
+                $this->data['saudara_tiri'][$key]['pendidikan_tiri'] = $value->pendidikan;
+                $this->data['saudara_tiri'][$key]['pekerjaan_tiri'] = $value->pekerjaan;
+                $previous_saudara_tiri .= $value->id.'-';
+            }
+        }
+        if(strlen($previous_saudara) > 0) {
+            $previous_saudara = substr($previous_saudara, 0, -1);
+        }
+        if(strlen($previous_saudara_tiri) > 0) {
+            $previous_saudara_tiri = substr($previous_saudara_tiri, 0, -1);
+        }
+        $this->data['previous_saudara'] = $previous_saudara;
+        $this->data['previous_saudara_tiri'] = $previous_saudara_tiri;
+
+
+        //orang serumah
+        $previous_serumah = '';
+        $serumah = RJTumbuhKembangDataSerumah::where('id_regis', $id_pasien)->get();
+        $this->data['serumah'] = array();
+        foreach ($serumah as $key => $value) {
+            $this->data['serumah'][$key] = array();
+            $this->data['serumah'][$key]['id_data'] = $value->id;
+            $this->data['serumah'][$key]['umur'] = $value->umur;
+            $this->data['serumah'][$key]['jenis_kelamin'] = $value->jenis_kelamin;
+            $this->data['serumah'][$key]['pendidikan'] = $value->pendidikan;
+            $this->data['serumah'][$key]['pekerjaan'] = $value->pekerjaan;
+            $previous_serumah .= $value->id.'-';
+        }
+        if(strlen($previous_serumah) > 0) {
+            $previous_serumah = substr($previous_serumah, 0, -1);
+        }
+        $this->data['previous_serumah'] = $previous_serumah;
+
+
+        //penyakit anak
+        $previous_penyakit = '';
+        $penyakit = RJTumbuhKembangPenyakitAnak::where('id_regis', $id_pasien)->get();
+        $this->data['penyakit_anak'] = array();
+        foreach ($penyakit as $key => $value) {
+            $this->data['penyakit_anak'][$key] = array();
+            $this->data['penyakit_anak'][$key]['id_data'] = $value->id;
+            $this->data['penyakit_anak'][$key]['penyakit'] = $value->penyakit;
+            $this->data['penyakit_anak'][$key]['tahun'] = $value->tahun;
+            $this->data['penyakit_anak'][$key]['lamanya'] = $value->lamanya;
+            $this->data['penyakit_anak'][$key]['keterangan'] = $value->keterangan;
+            $previous_penyakit .= $value->id.'-';
+        }
+        if(strlen($previous_penyakit) > 0) {
+            $previous_penyakit = substr($previous_penyakit, 0, -1);
+        }
+        $this->data['previous_penyakit'] = $previous_penyakit;
+
+
+        $previous_sekolah = '';
+        $sekolah = RJTumbuhKembangRiwayatSekolah::where('id_regis', $id_pasien)->get();
+        $this->data['sekolah'] = array();
+        foreach ($sekolah as $key => $value) {
+            $this->data['sekolah'][$key] = array();
+            $this->data['sekolah'][$key]['id_data'] = $value->id;
+            $this->data['sekolah'][$key]['jenis_sekolah'] = $value->jenis_sekolah;
+            $this->data['sekolah'][$key]['umur'] = $value->umur;
+            $this->data['sekolah'][$key]['keterangan_tinggal'] = $value->keterangan_tinggal;
+            $previous_sekolah .= $value->id.'-';
+        }
+        if(strlen($previous_sekolah) > 0) {
+            $previous_sekolah = substr($previous_sekolah, 0, -1);
+        }
+        $this->data['previous_sekolah'] = $previous_sekolah;
+
+    }
+
     public function get_rj_asesmen_awal_tumbuh_kembang_psikolog_read()
+    {
+        $this->get_rj_asesmen_awal_tumbuh_kembang_psikolog_data();
+        return view('page.rj.tumbuh_kembang_psikolog_read', $this->data);
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_psikolog_edit()
+    {
+        $this->get_rj_asesmen_awal_tumbuh_kembang_psikolog_data();
+        return view('page.rj.tumbuh_kembang_psikolog_edit', $this->data);
+    }
+
+    public function post_rj_asesmen_awal_tumbuh_kembang_psikolog_edit(Request $request)
+    {
+        //anak
+        $id_pasien = Session::get('id_pasien');
+        $anak = RJTumbuhKembangDataAnak::where('id_regis', $id_pasien)->first();
+        $anak->nama = $request->nama_anak;
+        $anak->tempat_lahir = $request->tempat_lahir_anak;
+        $anak->tanggal_lahir = $request->tanggal_lahir_anak;
+        $anak->jenis_kelamin = $request->jenis_kelamin_anak;
+        $anak->agama = $request->agama_anak;
+        $anak->sekolah = $request->sekolah_anak;
+        $anak->kelas = $request->kelas_anak;
+        $anak->alamat_sekolah = $request->alamat_sekolah_anak;
+        $anak->suku_bangsa = $request->suku_bangsa_anak;
+        $anak->bahasa = $request->bahasa_anak;
+        $anak->alamat_lengkap = $request->alamat_lengkap_anak;
+        $anak->no_telp = $request->no_telp_anak;
+        $anak->tinggal_dengan = $request->tinggal_dengan;
+        $anak->tinggal_dengan_lainnya = $request->tinggal_dengan_lainnya;
+        $anak->tanggal = $request->tanggal;
+        $anak->psikolog = $request->psikolog;
+        $anak->save();
+
+        //ayah
+        $ayah = RJTumbuhKembangDataOrangTua::where('id_regis', $id_pasien)->where('sebagai', 'ayah')->first();
+        $ayah->nama = $request->nama_ayah;
+        $ayah->tempat_lahir = $request->tempat_lahir_ayah;
+        $ayah->tanggal_lahir = $request->tanggal_lahir_ayah;
+        $ayah->agama = $request->agama_ayah;
+        $ayah->pendidikan = $request->pendidikan_ayah;
+        $ayah->pekerjaan = $request->pekerjaan_ayah;
+        $ayah->alamat_pekerjaan = $request->alamat_pekerjaan_ayah;
+        $ayah->perkawinan_ke = $request->perkawinan_ke_ayah;
+        $ayah->lama_perkawinan = $request->lama_perkawinan_ayah;
+        $ayah->status_lainnya = $request->status_ayah_lainnya;
+        $ayah->status = $request->status_ayah;
+        $ayah->save();
+
+        //ibu
+        $ibu =  RJTumbuhKembangDataOrangTua::where('id_regis', $id_pasien)->where('sebagai', 'ibu')->first();
+        $ibu->nama = $request->nama_ibu;
+        $ibu->tempat_lahir = $request->tempat_lahir_ibu;
+        $ibu->tanggal_lahir = $request->tanggal_lahir_ibu;
+        $ibu->agama = $request->agama_ibu;
+        $ibu->pendidikan = $request->pendidikan_ibu;
+        $ibu->pekerjaan = $request->pekerjaan_ibu;
+        $ibu->alamat_pekerjaan = $request->alamat_pekerjaan_ibu;
+        $ibu->perkawinan_ke = $request->perkawinan_ke_ibu;
+        $ibu->lama_perkawinan = $request->lama_perkawinan_ibu;
+        $ibu->status = $request->status_ibu;
+        $ibu->status_lainnya = $request->status_ibu_lainnya;
+        $ibu->save();
+
+        //saudara kandung
+        //old
+        $previous_saudara = $request->previous_saudara;
+        if(strlen($previous_saudara) > 0)
+        {
+            $previous_id_saudara = explode('-', $previous_saudara);
+            foreach ($previous_id_saudara as $key => $value) {
+                $str_umur = 'umur_'.$value;
+                $str_jenis_kelamin = 'jenis_kelamin_'.$value;
+                $str_pendidikan = 'pendidikan_'.$value;
+                $str_pekerjaan = 'pekerjaan_'.$value;
+                $data = RJTumbuhKembangDataSaudara::where('id', $value)->where('status', 'kandung')->first();
+                $data->umur = $request->$str_umur;
+                $data->jenis_kelamin = $request->$str_jenis_kelamin;
+                $data->pendidikan = $request->$str_pendidikan;
+                $data->pekerjaan = $request->$str_pekerjaan;
+                $data->save();
+            }
+        }
+
+        //new
+        $jumlah_form_saudara = $request->jumlah_form_saudara;
+        for($i = 1; $i <= $jumlah_form_saudara; $i++) {
+            $str_umur = 'umur_new_'.$i;
+            $str_jenis_kelamin = 'jenis_kelamin_new_'.$i;
+            $str_pendidikan = 'pendidikan_new_'.$i;
+            $str_pekerjaan = 'pekerjaan_new_'.$i;
+            if(!is_null($request->$str_umur)) {
+                $data = new RJTumbuhKembangDataSaudara;
+                $data->id_regis = $id_pasien;
+                $data->status = 'kandung';
+                $data->umur = $request->$str_umur;
+                $data->jenis_kelamin = $request->$str_jenis_kelamin;
+                $data->pendidikan = $request->$str_pendidikan;
+                $data->pekerjaan = $request->$str_pekerjaan;
+                $data->save();
+            }
+        }
+
+        //saudara tiri
+        //old
+        $previous_saudara_tiri = $request->previous_saudara_tiri;
+        if(strlen($previous_saudara_tiri) > 0)
+        {
+            $previous_id_saudara_tiri = explode('-', $previous_saudara_tiri);
+            foreach ($previous_id_saudara_tiri as $key => $value) {
+                $str_umur = 'umur_tiri_'.$value;
+                $str_jenis_kelamin = 'jenis_kelamin_tiri_'.$value;
+                $str_pendidikan = 'pendidikan_tiri_'.$value;
+                $str_pekerjaan = 'pekerjaan_tiri_'.$value;
+                $data = RJTumbuhKembangDataSaudara::where('id', $value)->where('status', 'tiri')->first();
+                $data->umur = $request->$str_umur;
+                $data->jenis_kelamin = $request->$str_jenis_kelamin;
+                $data->pendidikan = $request->$str_pendidikan;
+                $data->pekerjaan = $request->$str_pekerjaan;
+                $data->save();
+            }
+        }
+
+        //new
+        $jumlah_form_saudara_tiri = $request->jumlah_form_saudara_tiri;
+        for($i = 1; $i <= $jumlah_form_saudara_tiri; $i++) {
+            $str_umur = 'umur_tiri_new_'.$i;
+            $str_jenis_kelamin = 'jenis_kelamin_tiri_new_'.$i;
+            $str_pendidikan = 'pendidikan_tiri_new_'.$i;
+            $str_pekerjaan = 'pekerjaan_tiri_new_'.$i;
+            if(!is_null($request->$str_umur)) {
+                $data = new RJTumbuhKembangDataSaudara;
+                $data->id_regis = $id_pasien;
+                $data->status = 'tiri';
+                $data->umur = $request->$str_umur;
+                $data->jenis_kelamin = $request->$str_jenis_kelamin;
+                $data->pendidikan = $request->$str_pendidikan;
+                $data->pekerjaan = $request->$str_pekerjaan;
+                $data->save();
+            }
+        }
+
+        //orang serumah
+        //old
+        $previous_serumah = $request->previous_serumah;
+        if(strlen($previous_serumah) > 0)
+        {
+            $previous_id_serumah = explode('-', $previous_serumah);
+            foreach ($previous_id_serumah as $key => $value) {
+                $str_umur = 'umur_serumah_'.$value;
+                $str_jenis_kelamin = 'jenis_kelamin_serumah_'.$value;
+                $str_pendidikan = 'pendidikan_serumah_'.$value;
+                $str_pekerjaan = 'pekerjaan_serumah_'.$value;
+                $data = RJTumbuhKembangDataSerumah::where('id', $value)->first();
+                $data->umur = $request->$str_umur;
+                $data->jenis_kelamin = $request->$str_jenis_kelamin;
+                $data->pendidikan = $request->$str_pendidikan;
+                $data->pekerjaan = $request->$str_pekerjaan;
+                $data->save();
+            }
+        }
+
+        //new
+        $jumlah_form_serumah = $request->jumlah_form_serumah;
+        for($i = 1; $i <= $jumlah_form_serumah; $i++) {
+            $str_umur = 'umur_serumah_new_'.$i;
+            $str_jenis_kelamin = 'jenis_kelamin_serumah_new_'.$i;
+            $str_pendidikan = 'pendidikan_serumah_new_'.$i;
+            $str_pekerjaan = 'pekerjaan_serumah_new_'.$i;
+            if(!is_null($request->$str_umur)) {
+                $data = new RJTumbuhKembangDataSerumah;
+                $data->id_regis = $id_pasien;
+                $data->umur = $request->$str_umur;
+                $data->jenis_kelamin = $request->$str_jenis_kelamin;
+                $data->pendidikan = $request->$str_pendidikan;
+                $data->pekerjaan = $request->$str_pekerjaan;
+                $data->save();
+            }
+        }
+
+        // //riwayat kehamilan
+        $riwayat = RJTumbuhKembangRiwayatKehamilan::where('id_regis', $id_pasien)->first();
+        $riwayat->keadaan_awal_kandungan = $request->keadaan_awal_kandungan;
+        $riwayat->penyakit_selama_mengandung = $request->penyakit_selama_mengandung;
+        $riwayat->perasaan_selama_mengandung = $request->perasaan_selama_mengandung;
+        $riwayat->suka_obat_obatan = $request->suka_obat_obatan;
+        $riwayat->berdasarkan_anjuran = $request->berdasarkan_anjuran;
+        $riwayat->pernah_jatuh_kecelakaan = $request->pernah_jatuh_kecelakaan;
+        $riwayat->usia_jatuh_kecelakaan = $request->usia_jatuh_kecelakaan;
+        $riwayat->suka_merokok = $request->suka_merokok;
+        $riwayat->pernah_keguguran = $request->pernah_keguguran;
+        $riwayat->jumlah_keguguran = $request->jumlah_keguguran;
+        $riwayat->usia_ketika_kasus = $request->usia_ketika_kasus;
+        $riwayat->bekerja_ketika_kasus = $request->bekerja_ketika_kasus;        
+        $riwayat->save();
+
+        //riwayat persalinan natal
+        $riwayat = RJTumbuhKembangRiwayatPersalinanNatal::where('id_regis', $id_pasien)->first();
+        $riwayat->proses_kelahiran = $request->proses_kelahiran;
+        $riwayat->dibantu_alat = $request->dibantu_alat;
+        $riwayat->alat_bantu = $request->alat_bantu;
+        $riwayat->mengalami_keguguran = $request->mengalami_keguguran;
+        $riwayat->keterangan_keguguran = $request->keterangan_keguguran;
+        $riwayat->kondisi_lahir = $request->kondisi_lahir;
+        $riwayat->dibantu_oleh_lainnya = $request->dibantu_oleh_lainnya;
+        $riwayat->dibantu_oleh = $request->dibantu_oleh;
+        $riwayat->berat_bayi = $request->berat_bayi;
+        $riwayat->panjang_bayi = $request->panjang_bayi;
+        $riwayat->save();
+
+
+        //riwayat persalinan pasca natal
+        $riwayat = RJTumbuhKembangRiwayatPersalinanPascaNatal::where('id_regis', $id_pasien)->first();
+        $riwayat->lama_asi = $request->lama_asi;
+        $riwayat->pola_makan = $request->pola_makan;
+        $riwayat->pola_tidur = $request->pola_tidur;
+        $riwayat->training = $request->training;
+        $riwayat->motorik = $request->motorik;
+        $riwayat->usia_berjalan = $request->usia_berjalan;
+        $riwayat->usia_berbicara = $request->usia_berbicara;
+        $riwayat->hambatan_berbicara = $request->hambatan_berbicara;
+        $riwayat->obat_masih_diminum = $request->obat_masih_diminum;
+        $riwayat->diasuh = $request->diasuh;
+        $riwayat->lama_pengasuhan = $request->lama_pengasuhan;
+        $riwayat->masalah_khusus = $request->masalah_khusus;
+        $riwayat->save();
+
+        //penyakit anak
+        //old
+        $previous_penyakit = $request->previous_penyakit;
+        if(strlen($previous_penyakit) > 0) {
+            $previous_id_penyakit = explode('-', $previous_penyakit);
+            foreach ($previous_id_penyakit as $key => $value) {
+                $str_penyakit = 'penyakit_'.$value;
+                $str_tahun = 'tahun_'.$value;
+                $str_lamanya = 'lamanya_'.$value;
+                $str_keterangan = 'keterangan_'.$value;
+                $data = RJTumbuhKembangPenyakitAnak::where('id', $value)->first();
+                    $data->penyakit = $request->$str_penyakit;
+                    $data->tahun = $request->$str_tahun;
+                    $data->lamanya = $request->$str_lamanya;
+                    $data->keterangan = $request->$str_keterangan;
+                    $data->save();
+            }
+        }
+
+        //new
+        $jumlah_form_penyakit_anak = $request->jumlah_form_penyakit_anak;
+        for($i = 1; $i <= $jumlah_form_penyakit_anak; $i++) {
+            $str_penyakit = 'penyakit_new_'.$i;
+            $str_tahun = 'tahun_new_'.$i;
+            $str_lamanya = 'lamanya_new_'.$i;
+            $str_keterangan = 'keterangan_new_'.$i;
+            if(!is_null($request->$str_penyakit)) {
+                $data = new RJTumbuhKembangPenyakitAnak;
+                $data->id_regis = $id_pasien;
+                $data->penyakit = $request->$str_penyakit;
+                $data->tahun = $request->$str_tahun;
+                $data->lamanya = $request->$str_lamanya;
+                $data->keterangan = $request->$str_keterangan;
+                $data->save();
+            }
+        }
+
+        //riwayat akademis
+        $riwayat = RJTumbuhKembangRiwayatAkademis::where('id_regis', $id_pasien)->first();
+        $riwayat->sikap = $request->sikap;
+        $riwayat->keterampilan_motorik_awal = $request->keterampilan_motorik_awal;
+        $riwayat->hasil_belajar_anak = $request->hasil_belajar_anak;
+        $riwayat->pelajaran_disenangi = $request->pelajaran_disenangi;
+        $riwayat->pelajaran_sulit = $request->pelajaran_sulit;
+        $riwayat->keluhan_di_pelajaran_sulit = $request->keluhan_di_pelajaran_sulit;
+        $riwayat->tempat_belajar_sendiri = $request->tempat_belajar_sendiri;
+        $riwayat->waktu_biasa_belajar = $request->waktu_biasa_belajar;
+        $riwayat->dibantu_belajar = $request->dibantu_belajar;
+        $riwayat->dibantu_belajar_oleh_lainnya = $request->dibantu_belajar_oleh_lainnya;
+        $riwayat->dibantu_belajar_oleh = $request->dibantu_belajar_oleh;
+        $riwayat->sikap_di_kegiatan = $request->sikap_di_kegiatan;
+        $riwayat->les = $request->les;
+        $riwayat->pelajaran_les = $request->pelajaran_les;
+        $riwayat->pengajar = $request->pengajar;
+        $riwayat->save();
+
+        // riwayat sekolah
+        //old
+        $previous_sekolah = $request->previous_sekolah;
+        if(strlen($previous_sekolah) > 0) {
+            $previous_id_sekolah = explode('-', $previous_sekolah);
+            foreach ($previous_id_sekolah as $key => $value) {
+                $str_jenis_riwayat_sekolah = 'jenis_riwayat_sekolah_'.$value;
+                $str_umur_riwayat_sekolah = 'umur_riwayat_sekolah_'.$value;
+                $str_keterangan_riwayat_sekolah = 'keterangan_riwayat_sekolah_'.$value;
+                $data = RJTumbuhKembangRiwayatSekolah::where('id', $value)->first();
+                $data->jenis_sekolah = $request->$str_jenis_riwayat_sekolah;
+                $data->umur = $request->$str_umur_riwayat_sekolah;
+                $data->keterangan_tinggal = $request->$str_keterangan_riwayat_sekolah;
+                $data->save();
+            }
+        }
+
+        //new
+        $jumlah_form_riwayat_sekolah = $request->jumlah_form_riwayat_sekolah;
+        for($i = 1; $i <= $jumlah_form_riwayat_sekolah; $i++) {
+            $str_jenis_riwayat_sekolah = 'jenis_riwayat_sekolah_new_'.$i;
+            $str_umur_riwayat_sekolah = 'umur_riwayat_sekolah_new_'.$i;
+            $str_keterangan_riwayat_sekolah = 'keterangan_riwayat_sekolah_new_'.$i;
+            if(!is_null($request->$str_jenis_riwayat_sekolah)) {
+                $data = new RJTumbuhKembangRiwayatSekolah;
+                $data->id_regis = $id_pasien;
+                $data->jenis_sekolah = $request->$str_jenis_riwayat_sekolah;
+                $data->umur = $request->$str_umur_riwayat_sekolah;
+                $data->keterangan_tinggal = $request->$str_keterangan_riwayat_sekolah;
+                $data->save();
+            }
+        }
+
+        // riwayat sosialisasi
+        $sosialisasi = RJTumbuhKembangRiwayatSosialisasi::where('id_regis', $id_pasien)->first();
+        $sosialisasi->sekolah = $request->sosialisasi_di_sekolah;
+        $sosialisasi->keluarga = $request->sosialisasi_di_keluarga;
+        $sosialisasi->save();
+    }
+
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_psikolog_readx()
     {
         //anak
         $anak = RJTumbuhKembangDataAnak::where('id', 1)->first();

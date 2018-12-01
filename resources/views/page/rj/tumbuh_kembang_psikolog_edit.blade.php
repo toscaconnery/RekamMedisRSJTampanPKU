@@ -65,17 +65,17 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Lengkap</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="nama_anak" value="{{$nama_anak}}">
+                    <input type="text" class="form-control required" name="nama_anak" value="{{$nama_anak}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tempat Lahir</label>
                   <div class="col-sm-5">
-                    <input type="text" disabled class="form-control required" name="tempat_lahir_anak" value="{{$tempat_lahir_anak}}">
+                    <input type="text" class="form-control required" name="tempat_lahir_anak" value="{{$tempat_lahir_anak}}">
                   </div>
                   <label class="col-sm-1 control-label">Tanggal Lahir</label>
                   <div class="col-sm-2">
-                    <input type="text" disabled autocomplete="off" onkeydown="return false" class="form-control sandbox-container required" name="tanggal_lahir_anak" value="{{$tanggal_lahir_anak}}">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container required" name="tanggal_lahir_anak" value="{{$tanggal_lahir_anak}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -91,47 +91,47 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Agama</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="agama_anak" value="{{$agama_anak}}">
+                    <input type="text" class="form-control required" name="agama_anak" value="{{$agama_anak}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sekolah</label>
                   <div class="col-sm-5">
-                    <input type="text" disabled class="form-control required" name="sekolah_anak" value="{{$sekolah_anak}}">
+                    <input type="text" class="form-control required" name="sekolah_anak" value="{{$sekolah_anak}}">
                   </div>
                   <label class="col-sm-1 control-label">Kelas</label>
                   <div class="col-sm-2">
-                    <input type="text" disabled class="form-control required" name="kelas_anak" value="{{$kelas_anak}}">
+                    <input type="text" class="form-control required" name="kelas_anak" value="{{$kelas_anak}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat Sekolah/Terapi</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="alamat_sekolah_anak" value="{{$alamat_sekolah_anak}}">
+                    <input type="text" class="form-control required" name="alamat_sekolah_anak" value="{{$alamat_sekolah_anak}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Suku Bangsa</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="suku_bangsa_anak" value="{{$suku_bangsa_anak}}">
+                    <input type="text" class="form-control required" name="suku_bangsa_anak" value="{{$suku_bangsa_anak}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Bahasa Sehari-hari</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="bahasa_anak" value="{{$bahasa_anak}}">
+                    <input type="text" class="form-control required" name="bahasa_anak" value="{{$bahasa_anak}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat Lengkap</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="alamat_lengkap_anak" value="{{$alamat_lengkap_anak}}">
+                    <input type="text" class="form-control required" name="alamat_lengkap_anak" value="{{$alamat_lengkap_anak}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">No.Telp</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="no_telp_anak" value="{{$no_telp_anak}}">
+                    <input type="text" class="form-control required" name="no_telp_anak" value="{{$no_telp_anak}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -139,25 +139,25 @@
                   <div class="col-lg-10" class="required">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="tinggal_dengan" value="1" {{$tinggal_dengan == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="tinggal_dengan" value="1" {{$tinggal_dengan == 1 ? 'checked' : ''}}>
                         Ayah dan ibu
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="tinggal_dengan" value="2" {{$tinggal_dengan == 2 ? 'checked' : ''}}>
+                        <input type="radio" name="tinggal_dengan" value="2" {{$tinggal_dengan == 2 ? 'checked' : ''}}>
                         Ayah saja
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="tinggal_dengan" value="3" {{$tinggal_dengan == 3 ? 'checked' : ''}}>
+                        <input type="radio" name="tinggal_dengan" value="3" {{$tinggal_dengan == 3 ? 'checked' : ''}}>
                         Ibu saja
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="tinggal_dengan" value="4" {{$tinggal_dengan == 4 ? 'checked' : ''}}>
+                        <input type="radio" name="tinggal_dengan" value="4" {{$tinggal_dengan == 4 ? 'checked' : ''}}>
                         Lainnya
                       </label>
                     </div>
@@ -166,7 +166,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="tinggal_dengan_lainnya" value="{{$tinggal_dengan_lainnya}}">
+                    <input type="text" class="form-control" name="tinggal_dengan_lainnya" value="{{$tinggal_dengan_lainnya}}">
                   </div>
                 </div>
               </div>
@@ -180,53 +180,53 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Lengkap</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="nama_ayah" value="{{$nama_ayah}}">
+                    <input type="text" class="form-control required" name="nama_ayah" value="{{$nama_ayah}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tempat Lahir</label>
                   <div class="col-sm-5">
-                    <input type="text" disabled class="form-control required" name="tempat_lahir_ayah" value="{{$tempat_lahir_ayah}}">
+                    <input type="text" class="form-control required" name="tempat_lahir_ayah" value="{{$tempat_lahir_ayah}}">
                   </div>
                   <label class="col-sm-1 control-label">Tanggal Lahir</label>
                   <div class="col-sm-2">
-                    <input type="text" disabled autocomplete="off" onkeydown="return false" class="form-control sandbox-container required" name="tanggal_lahir_ayah" value="{{$tanggal_lahir_ayah}}">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container required" name="tanggal_lahir_ayah" value="{{$tanggal_lahir_ayah}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Agama</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="agama_ayah" value="{{$agama_ayah}}">
+                    <input type="text" class="form-control required" name="agama_ayah" value="{{$agama_ayah}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pendidikan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="pendidikan_ayah" value="{{$pendidikan_ayah}}">
+                    <input type="text" class="form-control required" name="pendidikan_ayah" value="{{$pendidikan_ayah}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pekerjaan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="pekerjaan_ayah" value="{{$pekerjaan_ayah}}">
+                    <input type="text" class="form-control required" name="pekerjaan_ayah" value="{{$pekerjaan_ayah}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat Pekerjaan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="alamat_pekerjaan_ayah" value="{{$alamat_pekerjaan_ayah}}">
+                    <input type="text" class="form-control required" name="alamat_pekerjaan_ayah" value="{{$alamat_pekerjaan_ayah}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Perkawinan ke</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="perkawinan_ke_ayah" value="{{$perkawinan_ke_ayah}}">
+                    <input type="text" class="form-control required" name="perkawinan_ke_ayah" value="{{$perkawinan_ke_ayah}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Lama Perkawinan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="lama_perkawinan_ayah" value="{{$lama_perkawinan_ayah}}">
+                    <input type="text" class="form-control required" name="lama_perkawinan_ayah" value="{{$lama_perkawinan_ayah}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -234,25 +234,25 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="status_ayah" value="1" {{$status_ayah == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="status_ayah" value="1" {{$status_ayah == 1 ? 'checked' : ''}}>
                         Kawin
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="status_ayah" value="2" {{$status_ayah == 2 ? 'checked' : ''}}>
+                        <input type="radio" name="status_ayah" value="2" {{$status_ayah == 2 ? 'checked' : ''}}>
                         Cerai
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="status_ayah" value="3" {{$status_ayah == 3 ? 'checked' : ''}}>
+                        <input type="radio" name="status_ayah" value="3" {{$status_ayah == 3 ? 'checked' : ''}}>
                         Berpisah
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="status_ayah" value="4" {{$status_ayah == 4 ? 'checked' : ''}}>
+                        <input type="radio" name="status_ayah" value="4" {{$status_ayah == 4 ? 'checked' : ''}}>
                         Lainnya
                       </label>
                     </div>
@@ -261,7 +261,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="status_ayah_lainnya" value="{{$status_ayah_lainnya}}">
+                    <input type="text" class="form-control" name="status_ayah_lainnya" value="{{$status_ayah_lainnya}}">
                   </div>
                 </div>
               </div>
@@ -275,53 +275,53 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Lengkap</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="nama_ibu" value="{{$nama_ibu}}">
+                    <input type="text" class="form-control required" name="nama_ibu" value="{{$nama_ibu}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tempat Lahir</label>
                   <div class="col-sm-5">
-                    <input type="text" disabled class="form-control required" name="tempat_lahir_ibu" value="{{$tempat_lahir_ibu}}">
+                    <input type="text" class="form-control required" name="tempat_lahir_ibu" value="{{$tempat_lahir_ibu}}">
                   </div>
                   <label class="col-sm-1 control-label">Tanggal Lahir</label>
                   <div class="col-sm-2">
-                    <input type="text" disabled autocomplete="off" onkeydown="return false" class="form-control sandbox-container required" name="tanggal_lahir_ibu" value="{{$tanggal_lahir_ibu}}">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container required" name="tanggal_lahir_ibu" value="{{$tanggal_lahir_ibu}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Agama</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="agama_ibu" value="{{$agama_ibu}}">
+                    <input type="text" class="form-control required" name="agama_ibu" value="{{$agama_ibu}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pendidikan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="pendidikan_ibu" value="{{$pendidikan_ibu}}">
+                    <input type="text" class="form-control required" name="pendidikan_ibu" value="{{$pendidikan_ibu}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pekerjaan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="pekerjaan_ibu" value="{{$pekerjaan_ibu}}">
+                    <input type="text" class="form-control required" name="pekerjaan_ibu" value="{{$pekerjaan_ibu}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat Pekerjaan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="alamat_pekerjaan_ibu" value="{{$alamat_pekerjaan_ibu}}">
+                    <input type="text" class="form-control required" name="alamat_pekerjaan_ibu" value="{{$alamat_pekerjaan_ibu}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Perkawinan ke</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="perkawinan_ke_ibu" value="{{$perkawinan_ke_ibu}}">
+                    <input type="text" class="form-control required" name="perkawinan_ke_ibu" value="{{$perkawinan_ke_ibu}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Lama Perkawinan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="lama_perkawinan_ibu" value="{{$lama_perkawinan_ibu}}">
+                    <input type="text" class="form-control required" name="lama_perkawinan_ibu" value="{{$lama_perkawinan_ibu}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -329,25 +329,25 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="status_ibu" value="1" {{$status_ibu == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="status_ibu" value="1" {{$status_ibu == 1 ? 'checked' : ''}}>
                         Kawin
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="status_ibu" value="2" {{$status_ibu == 2 ? 'checked' : ''}}>
+                        <input type="radio" name="status_ibu" value="2" {{$status_ibu == 2 ? 'checked' : ''}}>
                         Cerai
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="status_ibu" value="3" {{$status_ibu == 3 ? 'checked' : ''}}>
+                        <input type="radio" name="status_ibu" value="3" {{$status_ibu == 3 ? 'checked' : ''}}>
                         Berpisah
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="status_ibu" value="4" {{$status_ibu == 4 ? 'checked' : ''}}>
+                        <input type="radio" name="status_ibu" value="4" {{$status_ibu == 4 ? 'checked' : ''}}>
                         Lainnya
                       </label>
                     </div>
@@ -356,7 +356,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="status_ibu_lainnya" value="{{$status_ibu_lainnya}}">
+                    <input type="text" class="form-control" name="status_ibu_lainnya" value="{{$status_ibu_lainnya}}">
                   </div>
                 </div>
               </div>
@@ -367,7 +367,7 @@
                 Data Saudara Kandung
               </header>
               <div class="panel-body">
-                <input type="hidden" name="jumlah_form_saudara" id="jumlah_form_saudara" value="1">
+                <input type="hidden" name="jumlah_form_saudara" id="jumlah_form_saudara" value="0">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -381,7 +381,7 @@
                   <tbody>
                     @foreach($saudara as $s)
                     <tr>
-                      <td><input type="text" disabled class="form-control required" value="{{$s['umur']}}" name="umur_{{$s['id_data']}}"></td>
+                      <td><input type="text" class="form-control required" value="{{$s['umur']}}" name="umur_{{$s['id_data']}}"></td>
                       <td>
                         <select name="jenis_kelamin_{{$s['id_data']}}" class="form-control required">
                           <option value=""></option>
@@ -389,8 +389,8 @@
                           <option {{$s['jenis_kelamin'] == 'Perempuan' ? 'selected' : ''}} value="Perempuan">Perempuan</option>
                         </select>
                       </td>
-                      <td><input type="text" disabled class="form-control required" value="{{$s['pendidikan']}}" name="pendidikan_{{$s['id_data']}}"></td>
-                      <td><input type="text" disabled class="form-control required" value="{{$s['pekerjaan']}}" name="pekerjaan_{{$s['id_data']}}"></td>
+                      <td><input type="text" class="form-control required" value="{{$s['pendidikan']}}" name="pendidikan_{{$s['id_data']}}"></td>
+                      <td><input type="text" class="form-control required" value="{{$s['pekerjaan']}}" name="pekerjaan_{{$s['id_data']}}"></td>
                       <td>
                       </td>
                     </tr>
@@ -414,7 +414,7 @@
                 Data Saudara Tiri
               </header>
               <div class="panel-body">
-                <input type="hidden" name="jumlah_form_saudara_tiri" id="jumlah_form_saudara_tiri" value="1">
+                <input type="hidden" name="jumlah_form_saudara_tiri" id="jumlah_form_saudara_tiri" value="0">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -428,7 +428,7 @@
                   <tbody>
                     @foreach($saudara_tiri as $st)
                     <tr>
-                      <td><input type="text" disabled class="form-control required" value="{{$st['umur_tiri']}}" name="umur_tiri_{{$st['id_data']}}"></td>
+                      <td><input type="text" class="form-control required" value="{{$st['umur_tiri']}}" name="umur_tiri_{{$st['id_data']}}"></td>
                       <td>
                         <select name="jenis_kelamin_tiri_{{$st['id_data']}}" class="form-control required">
                           <option value=""></option>
@@ -436,13 +436,14 @@
                           <option {{$st['jenis_kelamin_tiri'] == 'Perempuan' ? 'selected' : ''}} value="Perempuan">Perempuan</option>
                         </select>
                       </td>
-                      <td><input type="text" disabled class="form-control required" value="{{$st['pendidikan_tiri']}}" name="pendidikan_tiri_{{$st['id_data']}}"></td>
-                      <td><input type="text" disabled class="form-control required" value="{{$st['pekerjaan_tiri']}}" name="pekerjaan_tiri_{{$st['id_data']}}"></td>
+                      <td><input type="text" class="form-control required" value="{{$st['pendidikan_tiri']}}" name="pendidikan_tiri_{{$st['id_data']}}"></td>
+                      <td><input type="text" class="form-control required" value="{{$st['pekerjaan_tiri']}}" name="pekerjaan_tiri_{{$st['id_data']}}"></td>
                       <td>
                       </td>
                     </tr>
                     @endforeach
                     <tr id="last_row_tiri">
+                      <input type="hidden" name="previous_saudara_tiri" value="{{$previous_saudara_tiri}}">
                       <td colspan="9">
                         <div class="btn-group">
                           <button class="btn btn-primary" type="button" id="tambah_form_tiri"><i class="icon_plus_alt2"></i> Tambah</button>
@@ -459,7 +460,7 @@
                 Data Orang-orang lain yang serumah
               </header>
               <div class="panel-body">
-                <input type="hidden" name="jumlah_form_serumah" id="jumlah_form_serumah" value="1">
+                <input type="hidden" name="jumlah_form_serumah" id="jumlah_form_serumah" value="0">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -473,22 +474,22 @@
                   <tbody>
                     @foreach($serumah as $r)
                     <tr>
-                      <td><input type="text" disabled class="form-control required" value="{{$r['umur']}}" name="umur_serumah_{{$r['id_data']}}"></td>
+                      <td><input type="text" class="form-control required" value="{{$r['umur']}}" name="umur_serumah_{{$r['id_data']}}"></td>
                       <td>
                         <select name="jenis_kelamin_serumah_{{$r['id_data']}}" class="form-control required">
                           <option value=""></option>
-                          <option {{$r['jenis_kelamin'] == 'Laki-laki' ? 'checked' : ''}} value="Laki-laki">Laki-laki</option>
-                          <option {{$r['jenis_kelamin'] == 'Perempuan' ? 'checked' : ''}} value="Perempuan">Perempuan</option>
+                          <option {{$r['jenis_kelamin'] == 'Laki-laki' ? 'selected' : ''}} value="Laki-laki">Laki-laki</option>
+                          <option {{$r['jenis_kelamin'] == 'Perempuan' ? 'selected' : ''}} value="Perempuan">Perempuan</option>
                         </select>
                       </td>
-                      <td><input type="text" disabled class="form-control required" value="{{$r['pendidikan']}}" name="pendidikan_serumah_{{$r['id_data']}}"></td>
-                      <td><input type="text" disabled class="form-control required" value="{{$r['pekerjaan']}}" name="pekerjaan_serumah_{{$r['id_data']}}"></td>
+                      <td><input type="text" class="form-control required" value="{{$r['pendidikan']}}" name="pendidikan_serumah_{{$r['id_data']}}"></td>
+                      <td><input type="text" class="form-control required" value="{{$r['pekerjaan']}}" name="pekerjaan_serumah_{{$r['id_data']}}"></td>
                       <td>
                       </td>
                     </tr>
                     @endforeach
                     <tr id="last_row_serumah">
-                      <input type="hidden" name="previous_serumah">
+                      <input type="hidden" name="previous_serumah" value="{{$previous_serumah}}">
                       <td colspan="9">
                         <div class="btn-group">
                           <button class="btn btn-primary" type="button" id="tambah_form_serumah"><i class="icon_plus_alt2"></i> Tambah</button>
@@ -509,25 +510,25 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Bagaimana keadaan kandungan ibu pada awal kehamilan?</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="keadaan_awal_kandungan" value="{{$keadaan_awal_kandungan}}">
+                    <input type="text" class="form-control required" name="keadaan_awal_kandungan" value="{{$keadaan_awal_kandungan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Selama mengandung ibu pernah menderita penyakit?</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="penyakit_selama_mengandung" value="{{$penyakit_selama_mengandung}}">
+                    <input type="text" class="form-control required" name="penyakit_selama_mengandung" value="{{$penyakit_selama_mengandung}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Perasaan-perasaan ibu selama mengandung (khusus)?</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="perasaan_selama_mengandung" value="{{$perasaan_selama_mengandung}}">
+                    <input type="text" class="form-control required" name="perasaan_selama_mengandung" value="{{$perasaan_selama_mengandung}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Apakah ibu suka minum obat-obatan selama mengandung?</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="suka_obat_obatan" value="{{$suka_obat_obatan}}">
+                    <input type="text" class="form-control required" name="suka_obat_obatan" value="{{$suka_obat_obatan}}">
                   </div>
                 </div>
 
@@ -536,13 +537,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="berdasarkan_anjuran" value="1" {{$berdasarkan_anjuran == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="berdasarkan_anjuran" value="1" {{$berdasarkan_anjuran == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="berdasarkan_anjuran" value="2" {{$berdasarkan_anjuran == 2 ? 'checked' : ''}}>
+                        <input type="radio" name="berdasarkan_anjuran" value="2" {{$berdasarkan_anjuran == 2 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -554,13 +555,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="pernah_jatuh_kecelakaan" value="1" {{$pernah_jatuh_kecelakaan == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="pernah_jatuh_kecelakaan" value="1" {{$pernah_jatuh_kecelakaan == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="pernah_jatuh_kecelakaan" value="2" {{$pernah_jatuh_kecelakaan == 2 ? 'checked' : ''}}>
+                        <input type="radio" name="pernah_jatuh_kecelakaan" value="2" {{$pernah_jatuh_kecelakaan == 2 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -578,13 +579,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="suka_merokok" {{$suka_merokok == 1 ? 'checked' : ''}} value="1">
+                        <input type="radio" name="suka_merokok" {{$suka_merokok == 1 ? 'checked' : ''}} value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="suka_merokok" {{$suka_merokok == 2 ? 'checked' : ''}} value="2">
+                        <input type="radio" name="suka_merokok" {{$suka_merokok == 2 ? 'checked' : ''}} value="2">
                         Tidak
                       </label>
                     </div>
@@ -596,13 +597,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="pernah_keguguran" {{$pernah_keguguran == 1 ? 'checked' : ''}} value="1">
+                        <input type="radio" name="pernah_keguguran" {{$pernah_keguguran == 1 ? 'checked' : ''}} value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="pernah_keguguran" {{$pernah_keguguran == 2 ? 'checked' : ''}} value="2">
+                        <input type="radio" name="pernah_keguguran" {{$pernah_keguguran == 2 ? 'checked' : ''}} value="2">
                         Tidak
                       </label>
                     </div>
@@ -628,13 +629,13 @@
                   <div class="col-lg-8">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="bekerja_ketika_kasus" {{$bekerja_ketika_kasus == 1 ? 'checked' : ''}} value="1">
+                        <input type="radio" name="bekerja_ketika_kasus" {{$bekerja_ketika_kasus == 1 ? 'checked' : ''}} value="1">
                         Bekerja
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="bekerja_ketika_kasus" {{$bekerja_ketika_kasus == 2 ? 'checked' : ''}} value="2">
+                        <input type="radio" name="bekerja_ketika_kasus" {{$bekerja_ketika_kasus == 2 ? 'checked' : ''}} value="2">
                         Tidak Bekerja
                       </label>
                     </div>
@@ -656,19 +657,19 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="proses_kelahiran" {{$proses_kelahiran == 1 ? 'checked' : ''}} value="1">
+                        <input type="radio" name="proses_kelahiran" {{$proses_kelahiran == 1 ? 'checked' : ''}} value="1">
                         Biasa
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="proses_kelahiran" {{$proses_kelahiran == 2 ? 'checked' : ''}} value="2">
+                        <input type="radio" name="proses_kelahiran" {{$proses_kelahiran == 2 ? 'checked' : ''}} value="2">
                         Lama
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="proses_kelahiran" {{$proses_kelahiran == 3 ? 'checked' : ''}} value="3">
+                        <input type="radio" name="proses_kelahiran" {{$proses_kelahiran == 3 ? 'checked' : ''}} value="3">
                         Sukar
                       </label>
                     </div>
@@ -680,13 +681,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_alat" value="1" {{$dibantu_alat == 1 ? 'checked' : ''}}>
+                        <input type="radio" name="dibantu_alat" value="1" {{$dibantu_alat == 1 ? 'checked' : ''}}>
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_alat" value="2" {{$dibantu_alat == 2 ? 'checked' : ''}}>
+                        <input type="radio" name="dibantu_alat" value="2" {{$dibantu_alat == 2 ? 'checked' : ''}}>
                         Tidak
                       </label>
                     </div>
@@ -695,7 +696,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alat berupa</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="alat_bantu" value="{{$alat_bantu}}">
+                    <input type="text" class="form-control required" name="alat_bantu" value="{{$alat_bantu}}">
                   </div>
                 </div>
 
@@ -704,13 +705,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="mengalami_keguguran" {{$mengalami_keguguran == 1 ? 'checked' : ''}} value="1">
+                        <input type="radio" name="mengalami_keguguran" {{$mengalami_keguguran == 1 ? 'checked' : ''}} value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="mengalami_keguguran" {{$mengalami_keguguran == 2 ? 'checked' : ''}} value="2">
+                        <input type="radio" name="mengalami_keguguran" {{$mengalami_keguguran == 2 ? 'checked' : ''}} value="2">
                         Tidak
                       </label>
                     </div>
@@ -719,7 +720,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kalau ya berupa apa</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="keterangan_keguguran" value="{{$keterangan_keguguran}}">
+                    <input type="text" class="form-control" name="keterangan_keguguran" value="{{$keterangan_keguguran}}">
                   </div>
                 </div>
 
@@ -728,19 +729,19 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="kondisi_lahir" {{$kondisi_lahir == 1 ? 'checked' : ''}} value="1">
+                        <input type="radio" name="kondisi_lahir" {{$kondisi_lahir == 1 ? 'checked' : ''}} value="1">
                         Prematur
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="kondisi_lahir" {{$kondisi_lahir == 2 ? 'checked' : ''}} value="2">
+                        <input type="radio" name="kondisi_lahir" {{$kondisi_lahir == 2 ? 'checked' : ''}} value="2">
                         Cukup bulan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="kondisi_lahir" {{$kondisi_lahir == 3 ? 'checked' : ''}} value="3">
+                        <input type="radio" name="kondisi_lahir" {{$kondisi_lahir == 3 ? 'checked' : ''}} value="3">
                         Lewat bulan
                       </label>
                     </div>
@@ -752,19 +753,19 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_oleh" {{$dibantu_oleh == 1 ? 'checked' : ''}} value="1">
+                        <input type="radio" name="dibantu_oleh" {{$dibantu_oleh == 1 ? 'checked' : ''}} value="1">
                         Dokter
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_oleh" {{$dibantu_oleh == 2 ? 'checked' : ''}} value="2">
+                        <input type="radio" name="dibantu_oleh" {{$dibantu_oleh == 2 ? 'checked' : ''}} value="2">
                         Bidan
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_oleh" {{$dibantu_oleh == 3 ? 'checked' : ''}} value="3">
+                        <input type="radio" name="dibantu_oleh" {{$dibantu_oleh == 3 ? 'checked' : ''}} value="3">
                         Lainnya
                       </label>
                     </div>
@@ -774,20 +775,20 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="dibantu_oleh_lainnya" value="{{$dibantu_oleh_lainnya}}">
+                    <input type="text" class="form-control" name="dibantu_oleh_lainnya" value="{{$dibantu_oleh_lainnya}}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Berat Bayi</label>
                   <div class="col-sm-2">
-                    <input type="text" disabled class="form-control required" name="berat_bayi" value="{{$berat_bayi}}">
+                    <input type="text" class="form-control required" name="berat_bayi" value="{{$berat_bayi}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Panjang bayi</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="panjang_bayi" value="{{$panjang_bayi}}">
+                    <input type="text" class="form-control required" name="panjang_bayi" value="{{$panjang_bayi}}">
                   </div>
                 </div>
               </div>
@@ -803,31 +804,31 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Berapa lama anak diberi asi ?</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="lama_asi" value="{{$lama_asi}}">
+                    <input type="text" class="form-control required" name="lama_asi" value="{{$lama_asi}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Bagaimana pola makan anak ?</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="pola_makan" value="{{$pola_makan}}">
+                    <input type="text" class="form-control required" name="pola_makan" value="{{$pola_makan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Bagaimana pola tidur anak ?</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="pola_tidur" value="{{$pola_tidur}}">
+                    <input type="text" class="form-control required" name="pola_tidur" value="{{$pola_tidur}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Bagaimana toilt training anak ?</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="training" value="{{$training}}">
+                    <input type="text" class="form-control required" name="training" value="{{$training}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Bagaimana kemampuan motorik anak ?</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="motorik" value="{{$motorik}}">
+                    <input type="text" class="form-control required" name="motorik" value="{{$motorik}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -845,11 +846,11 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Apakah anak mempunyai hambatan dalam berbicara ?</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="hambatan_berbicara" value="{{$hambatan_berbicara}}">
+                    <input type="text" class="form-control" name="hambatan_berbicara" value="{{$hambatan_berbicara}}">
                   </div>
                 </div>
                 <label class="col-sm-2 control-label">Penyakit yang pernah diderita anak:</label>
-                <input type="hidden" name="jumlah_form_penyakit_anak" id="jumlah_form_penyakit_anak" value="1">
+                <input type="hidden" name="jumlah_form_penyakit_anak" id="jumlah_form_penyakit_anak" value="0">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -863,10 +864,10 @@
                   <tbody>
                     @foreach($penyakit_anak as $p)
                     <tr>
-                      <td><input type="text" disabled class="form-control" value="{{$p['penyakit']}}" name="penyakit_{{$p['id_data']}}"></td>
+                      <td><input type="text" class="form-control" value="{{$p['penyakit']}}" name="penyakit_{{$p['id_data']}}"></td>
                       <td><input type="number" class="form-control" value="{{$p['tahun']}}" name="tahun_{{$p['id_data']}}"></td>
-                      <td><input type="text" disabled class="form-control" value="{{$p['lamanya']}}" name="lamanya_{{$p['id_data']}}"></td>
-                      <td><input type="text" disabled class="form-control" value="{{$p['keterangan']}}" name="keterangan_{{$p['id_data']}}"></td>
+                      <td><input type="text" class="form-control" value="{{$p['lamanya']}}" name="lamanya_{{$p['id_data']}}"></td>
+                      <td><input type="text" class="form-control" value="{{$p['keterangan']}}" name="keterangan_{{$p['id_data']}}"></td>
                       <td>
                       </td>
                     </tr>
@@ -884,25 +885,25 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Obat-obatan yang masih diminum </label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="obat_masih_diminum" value="{{$obat_masih_diminum}}">
+                    <input type="text" class="form-control" name="obat_masih_diminum" value="{{$obat_masih_diminum}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Dalam sehari-hari anak lebih banyak berada dalam perawatan/pengasuhan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="diasuh" value="{{$diasuh}}">
+                    <input type="text" class="form-control required" name="diasuh" value="{{$diasuh}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Selama berapa lama</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="lama_pengasuhan" value="{{$lama_pengasuhan}}">
+                    <input type="text" class="form-control required" name="lama_pengasuhan" value="{{$lama_pengasuhan}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Masalah khusus dalam masa perawatan/pengasuhan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="masalah_khusus" value="{{$masalah_khusus}}">
+                    <input type="text" class="form-control" name="masalah_khusus" value="{{$masalah_khusus}}">
                   </div>
                 </div>
               </div>
@@ -914,7 +915,7 @@
                 Riwayat Akademis
               </header>
               <div class="panel-body">
-                <input type="hidden" name="jumlah_form_riwayat_sekolah" id="jumlah_form_riwayat_sekolah" value="1">
+                <input type="hidden" name="jumlah_form_riwayat_sekolah" id="jumlah_form_riwayat_sekolah" value="0">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
@@ -925,14 +926,17 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach($sekolah as $c)
                     <tr>
-                      <td><input type="text" disabled class="form-control required" name="jenis_riwayat_sekolah_1"></td>
-                      <td><input type="number" class="form-control required" name="umur_riwayat_sekolah_1"></td>
-                      <td><input type="text" disabled class="form-control required" name="keterangan_riwayat_sekolah_1"></td>
+                      <td><input type="text" class="form-control required" value="{{$c['jenis_sekolah']}}" name="jenis_riwayat_sekolah_{{$c['id_data']}}"></td>
+                      <td><input type="number" class="form-control required" value="{{$c['umur']}}" name="umur_riwayat_sekolah_{{$c['id_data']}}"></td>
+                      <td><input type="text" class="form-control required" value="{{$c['keterangan_tinggal']}}" name="keterangan_riwayat_sekolah_{{$c['id_data']}}"></td>
                       <td>
                       </td>
                     </tr>
+                    @endforeach
                     <tr id="last_row_riwayat_sekolah">
+                      <input type="hidden" name="previous_sekolah" value="{{$previous_sekolah}}">
                       <td colspan="9">
                         <div class="btn-group">
                           <button class="btn btn-primary" type="button" id="tambah_form_riwayat_sekolah"><i class="icon_plus_alt2"></i> Tambah</button>
@@ -944,37 +948,37 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sikap</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="sikap" value="{{$sikap}}">
+                    <input type="text" class="form-control required" name="sikap" value="{{$sikap}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Keterampilan motorik awal </label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="keterampilan_motorik_awal" value="{{$keterampilan_motorik_awal}}">
+                    <input type="text" class="form-control required" name="keterampilan_motorik_awal" value="{{$keterampilan_motorik_awal}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Hasil belajar anak </label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="hasil_belajar_anak" value="{{$hasil_belajar_anak}}">
+                    <input type="text" class="form-control required" name="hasil_belajar_anak" value="{{$hasil_belajar_anak}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pelajaran yang disenangi</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="pelajaran_disenangi" value="{{$pelajaran_disenangi}}">
+                    <input type="text" class="form-control required" name="pelajaran_disenangi" value="{{$pelajaran_disenangi}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Anak mengalami kesukaran dalam mata pelajaran</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="pelajaran_sulit" value="{{$pelajaran_sulit}}">
+                    <input type="text" class="form-control required" name="pelajaran_sulit" value="{{$pelajaran_sulit}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Keluhan anak dalam mata pelajaran yang dianggapnya sulit</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="keluhan_di_pelajaran_sulit" value="{{$keluhan_di_pelajaran_sulit}}">
+                    <input type="text" class="form-control required" name="keluhan_di_pelajaran_sulit" value="{{$keluhan_di_pelajaran_sulit}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -982,13 +986,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="tempat_belajar_sendiri" {{$tempat_belajar_sendiri == 1 ? 'checked' : ''}} value="1">
+                        <input type="radio" name="tempat_belajar_sendiri" {{$tempat_belajar_sendiri == 1 ? 'checked' : ''}} value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="tempat_belajar_sendiri" {{$tempat_belajar_sendiri == 2 ? 'checked' : ''}} value="2">
+                        <input type="radio" name="tempat_belajar_sendiri" {{$tempat_belajar_sendiri == 2 ? 'checked' : ''}} value="2">
                         Tidak
                       </label>
                     </div>
@@ -1001,31 +1005,31 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="waktu_biasa_belajar" {{$waktu_biasa_belajar == 1 ? 'checked' : ''}} value="1">
+                        <input type="radio" name="waktu_biasa_belajar" {{$waktu_biasa_belajar == 1 ? 'checked' : ''}} value="1">
                         Siang hari 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="waktu_biasa_belajar" {{$waktu_biasa_belajar == 2 ? 'checked' : ''}} value="2">
+                        <input type="radio" name="waktu_biasa_belajar" {{$waktu_biasa_belajar == 2 ? 'checked' : ''}} value="2">
                         Sepulang sekolah 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="waktu_biasa_belajar" {{$waktu_biasa_belajar == 3 ? 'checked' : ''}} value="3">
+                        <input type="radio" name="waktu_biasa_belajar" {{$waktu_biasa_belajar == 3 ? 'checked' : ''}} value="3">
                         Sore hari 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="waktu_biasa_belajar" {{$waktu_biasa_belajar == 4 ? 'checked' : ''}} value="4">
+                        <input type="radio" name="waktu_biasa_belajar" {{$waktu_biasa_belajar == 4 ? 'checked' : ''}} value="4">
                         Malam hari  
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="waktu_biasa_belajar" {{$waktu_biasa_belajar == 5 ? 'checked' : ''}} value="5">
+                        <input type="radio" name="waktu_biasa_belajar" {{$waktu_biasa_belajar == 5 ? 'checked' : ''}} value="5">
                         Tidak tentu 
                       </label>
                     </div>
@@ -1037,25 +1041,25 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_belajar" {{$dibantu_belajar == 1 ? 'checked' : ''}} value="1">
+                        <input type="radio" name="dibantu_belajar" {{$dibantu_belajar == 1 ? 'checked' : ''}} value="1">
                         Selalu
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_belajar" {{$dibantu_belajar == 2 ? 'checked' : ''}} value="2">
+                        <input type="radio" name="dibantu_belajar" {{$dibantu_belajar == 2 ? 'checked' : ''}} value="2">
                         Sering
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_belajar" {{$dibantu_belajar == 3 ? 'checked' : ''}} value="3">
+                        <input type="radio" name="dibantu_belajar" {{$dibantu_belajar == 3 ? 'checked' : ''}} value="3">
                         Kadang-kadang
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_belajar" {{$dibantu_belajar == 4 ? 'checked' : ''}} value="4">
+                        <input type="radio" name="dibantu_belajar" {{$dibantu_belajar == 4 ? 'checked' : ''}} value="4">
                         Tidak pernah
                       </label>
                     </div>
@@ -1067,25 +1071,25 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_belajar_oleh" {{$dibantu_belajar_oleh == 1 ? 'checked' : ''}} value="1">
+                        <input type="radio" name="dibantu_belajar_oleh" {{$dibantu_belajar_oleh == 1 ? 'checked' : ''}} value="1">
                         Orang tua
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_belajar_oleh" {{$dibantu_belajar_oleh == 2 ? 'checked' : ''}} value="2">
+                        <input type="radio" name="dibantu_belajar_oleh" {{$dibantu_belajar_oleh == 2 ? 'checked' : ''}} value="2">
                         Kakak
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_belajar_oleh" {{$dibantu_belajar_oleh == 3 ? 'checked' : ''}} value="3">
+                        <input type="radio" name="dibantu_belajar_oleh" {{$dibantu_belajar_oleh == 3 ? 'checked' : ''}} value="3">
                         Adik
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="dibantu_belajar_oleh" {{$dibantu_belajar_oleh == 4 ? 'checked' : ''}} value="4">
+                        <input type="radio" name="dibantu_belajar_oleh" {{$dibantu_belajar_oleh == 4 ? 'checked' : ''}} value="4">
                         Lainnya
                       </label>
                     </div>
@@ -1094,13 +1098,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sebutkan</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="dibantu_belajar_oleh_lainnya" value="{{$dibantu_belajar_oleh_lainnya}}">
+                    <input type="text" class="form-control" name="dibantu_belajar_oleh_lainnya" value="{{$dibantu_belajar_oleh_lainnya}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Sikap anak dalam mengikuti kegiatan tersebut di atas</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control required" name="sikap_di_kegiatan" value="{{$sikap_di_kegiatan}}">
+                    <input type="text" class="form-control required" name="sikap_di_kegiatan" value="{{$sikap_di_kegiatan}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1108,13 +1112,13 @@
                   <div class="col-lg-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="les" {{$les == 1 ? 'checked' : ''}} value="1">
+                        <input type="radio" name="les" {{$les == 1 ? 'checked' : ''}} value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" disabled name="les" {{$les == 2 ? 'checked' : ''}} value="2">
+                        <input type="radio" name="les" {{$les == 2 ? 'checked' : ''}} value="2">
                         Tidak
                       </label>
                     </div>
@@ -1124,13 +1128,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jika mengikuti dalam pelajaran apa saja ?</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="pelajaran_les" value="{{$pelajaran_les}}">
+                    <input type="text" class="form-control" name="pelajaran_les" value="{{$pelajaran_les}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Siapa yang memberi pelajaran tambahan tersebut ?</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="pengajar" value="{{$pengajar}}">
+                    <input type="text" class="form-control" name="pengajar" value="{{$pengajar}}">
                   </div>
                 </div>
               </div>
@@ -1145,26 +1149,26 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Riwayat sosialisasi di Sekolah</label>
                   <div class="col-sm-8">
-                    <textarea readonly rows="5" name="sosialisasi_di_sekolah" class="col-sm-8 form-control" style="resize: vertical;">{{$sosialisasi_di_sekolah}}</textarea>
+                    <textarea rows="5" name="sosialisasi_di_sekolah" class="col-sm-8 form-control" style="resize: vertical;">{{$sosialisasi_di_sekolah}}</textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Riwayat sosialisasi di dalam keluarga</label>
                   <div class="col-sm-8">
-                    <textarea readonly rows="5" name="sosialisasi_di_keluarga" class="col-sm-8 form-control" style="resize: vertical;">{{$sosialisasi_di_keluarga}}</textarea>
+                    <textarea rows="5" name="sosialisasi_di_keluarga" class="col-sm-8 form-control" style="resize: vertical;">{{$sosialisasi_di_keluarga}}</textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" value="{{$tanggal}}" disabled>
+                    <input type="text" class="form-control" value="{{$tanggal}}" disabled>
                     <input type="hidden" class="form-control" value="{{$tanggal}}" name="tanggal">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Psikolog</label>
                   <div class="col-sm-8">
-                    <input type="text" disabled class="form-control" name="psikolog" value="{{$psikolog}}" disabled="">
+                    <input type="text" class="form-control" name="psikolog" value="{{$psikolog}}" disabled="">
                     <input type="hidden" class="form-control" name="psikolog" value="{{$psikolog}}">
                   </div>
                 </div>
@@ -1188,7 +1192,7 @@
         $('#tambah_form').click(function() {
           var a = document.getElementById('jumlah_form_saudara').value;
           a = parseInt(a) + 1;
-          $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" disabled class="form-control required" name="umur_'+a+'"></td><td><select name="jenis_kelamin_'+a+'" class="form-control required"><option value=""></option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></td><td><input type="text" disabled class="form-control required" name="pendidikan_'+a+'"></td><td><input type="text" disabled class="form-control required" name="pekerjaan_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+          $('#last_row').before('<tr id="form_new_'+a+'"><td><input required type="text" class="form-control required" name="umur_new_'+a+'"></td><td><select name="jenis_kelamin_new_'+a+'" class="form-control required"><option value=""></option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></td><td><input required type="text" class="form-control required" name="pendidikan_new_'+a+'"></td><td><input required type="text" class="form-control required" name="pekerjaan_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
           document.getElementById('jumlah_form_saudara').value = a;
         });
       });
@@ -1200,7 +1204,7 @@
         $('#tambah_form_tiri').click(function() {
           var a = document.getElementById('jumlah_form_saudara_tiri').value;
           a = parseInt(a) + 1;
-          $('#last_row_tiri').before('<tr id="form_tiri_'+a+'"><td><input type="text" disabled class="form-control required" name="umur_tiri_'+a+'"></td><td><select name="jenis_kelamin_tiri_'+a+'" class="form-control required"><option value=""></option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></td><td><input type="text" disabled class="form-control required" name="pendidikan_tiri_'+a+'"></td><td><input type="text" disabled class="form-control required" name="pekerjaan_tiri_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_tiri" type="button" id="tombol_hapus_tiri_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+          $('#last_row_tiri').before('<tr id="form_tiri_new_'+a+'"><td><input required type="text" class="form-control required" name="umur_tiri_new_'+a+'"></td><td><select name="jenis_kelamin_tiri_new_'+a+'" class="form-control required"><option value=""></option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></td><td><input required type="text" class="form-control required" name="pendidikan_tiri_new_'+a+'"></td><td><input required type="text" class="form-control required" name="pekerjaan_tiri_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_tiri" type="button" id="tombol_hapus_tiri_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
           document.getElementById('jumlah_form_saudara_tiri').value = a;
         });
       });
@@ -1212,8 +1216,8 @@
         $('#tambah_form_serumah').click(function() {
           var a = document.getElementById('jumlah_form_serumah').value;
           a = parseInt(a) + 1;
-          $('#last_row_serumah').before('<tr id="form_serumah_'+a+'"><td><input type="text" disabled class="form-control required" name="umur_serumah_'+a+'"></td><td><select name="jenis_kelamin_serumah_'+a+'" class="form-control required"><option value=""></option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></td><td><input type="text" disabled class="form-control required" name="pendidikan_serumah_'+a+'"></td><td><input type="text" disabled class="form-control required" name="pekerjaan_serumah_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_serumah" type="button" id="tombol_hapus_serumah_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-          document.getElementById('jumlah_form_saudara_serumah').value = a;
+          $('#last_row_serumah').before('<tr id="form_serumah_new_'+a+'"><td><input required type="text" class="form-control required" name="umur_serumah_new_'+a+'"></td><td><select name="jenis_kelamin_serumah_new_'+a+'" class="form-control required"><option value=""></option><option value="Laki-laki">Laki-laki</option><option value="Perempuan">Perempuan</option></select></td><td><input required type="text" class="form-control required" name="pendidikan_serumah_new_'+a+'"></td><td><input required type="text" class="form-control required" name="pekerjaan_serumah_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_serumah" type="button" id="tombol_hapus_serumah_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+          document.getElementById('jumlah_form_serumah').value = a;
         });
       });
     </script>
@@ -1224,7 +1228,7 @@
         $('#tambah_form_penyakit_anak').click(function() {
           var a = document.getElementById('jumlah_form_penyakit_anak').value;
           a = parseInt(a) + 1;
-          $('#last_row_penyakit_anak').before('<tr id="form_penyakit_anak_'+a+'"><td><input type="text" disabled class="form-control" name="penyakit_'+a+'"></td><td><input type="number" class="form-control" name="tahun_'+a+'"></td><td><input type="text" disabled class="form-control" name="lamanya_'+a+'"></td><td><input type="text" disabled class="form-control" name="keterangan_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_penyakit_anak" type="button" id="tombol_hapus_penyakit_anak_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+          $('#last_row_penyakit_anak').before('<tr id="form_penyakit_anak_new_'+a+'"><td><input required type="text" class="form-control" name="penyakit_new_'+a+'"></td><td><input required type="number" class="form-control" name="tahun_new_'+a+'"></td><td><input required type="text" class="form-control" name="lamanya_new_'+a+'"></td><td><input required type="text" class="form-control" name="keterangan_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_penyakit_anak" type="button" id="tombol_hapus_penyakit_anak_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
           document.getElementById('jumlah_form_penyakit_anak').value = a;
         });
       });
@@ -1236,7 +1240,7 @@
         $('#tambah_form_riwayat_sekolah').click(function() {
           var a = document.getElementById('jumlah_form_riwayat_sekolah').value;
           a = parseInt(a) + 1;
-          $('#last_row_riwayat_sekolah').before('<tr id="form_riwayat_sekolah_'+a+'"><td><input type="text" disabled class="form-control required" name="jenis_riwayat_sekolah_'+a+'"></td><td><input type="number" class="form-control required" name="umur_riwayat_sekolah_'+a+'"></td><td><input type="text" disabled class="form-control required" name="keterangan_riwayat_sekolah_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_riwayat_sekolah" type="button" id="tombol_hapus_riwayat_sekolah_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>')
+          $('#last_row_riwayat_sekolah').before('<tr id="form_riwayat_sekolah_new_'+a+'"><td><input required type="text" class="form-control required" name="jenis_riwayat_sekolah_new_'+a+'"></td><td><input required type="number" class="form-control required" name="umur_riwayat_sekolah_new_'+a+'"></td><td><input required type="text" class="form-control required" name="keterangan_riwayat_sekolah_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_riwayat_sekolah" type="button" id="tombol_hapus_riwayat_sekolah_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>')
           document.getElementById('jumlah_form_riwayat_sekolah').value = a;
         });
       });

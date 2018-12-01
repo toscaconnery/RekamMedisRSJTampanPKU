@@ -23,6 +23,7 @@ class CreateRjTumbuhKembangRiwayatPersalinanNatalTable extends Migration
             $table->string('keterangan_keguguran')->nullable();
             $table->string('kondisi_lahir');
             $table->string('dibantu_oleh');
+            $table->string('dibantu_oleh_lainnya');
             $table->string('berat_bayi');
             $table->string('panjang_bayi');
             $table->timestamps();

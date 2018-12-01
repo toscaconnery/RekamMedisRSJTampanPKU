@@ -26,6 +26,7 @@ class CreateRjTumbuhKembangDataOrangTuaTable extends Migration
             $table->string('alamat_pekerjaan');
             $table->string('perkawinan_ke');
             $table->string('lama_perkawinan');
+            $table->string('status_lainnya');
             $table->string('status');
             $table->timestamps();
         });

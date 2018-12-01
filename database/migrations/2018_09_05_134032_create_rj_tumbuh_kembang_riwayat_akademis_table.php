@@ -25,6 +25,7 @@ class CreateRjTumbuhKembangRiwayatAkademisTable extends Migration
             $table->boolean('tempat_belajar_sendiri');
             $table->string('waktu_biasa_belajar');
             $table->string('dibantu_belajar');
+            $table->string('dibantu_belajar_oleh_lainnya');
             $table->string('dibantu_belajar_oleh');
             $table->string('sikap_di_kegiatan');
             $table->boolean('les');
