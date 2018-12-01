@@ -66,37 +66,37 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Validasi Oleh</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="validasi_oleh" required>
+                    <input type="text" class="form-control" name="validasi_oleh">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Dr. Pengirim</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="dr_pengirim" required>
+                    <input type="text" class="form-control" name="dr_pengirim">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Bahan Diterima</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="bahan_diterima" required>
+                    <input type="text" class="form-control" name="bahan_diterima">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Ruangan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="ruangan" required>
+                    <input type="text" class="form-control" name="ruangan">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tgl. Hasil Dicetak</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_hasil_cetak" required>
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_hasil_cetak">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tgl. Permintaan</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_permintaan" required>
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_permintaan">
                   </div>
                 </div>
               </div>
@@ -146,13 +146,13 @@
                         </select>
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="h_hasil_1" required>
+                        <input type="text" class="form-control" name="h_hasil_1">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="h_status_1" required>
+                        <input type="text" class="form-control" name="h_status_1">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="h_normal_1" required>
+                        <input type="text" class="form-control" name="h_normal_1">
                       </td>
                     </tr>
                     <tr id="last_row_hematologi">
@@ -206,13 +206,13 @@
                         </select>
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="u_hasil_1" required>
+                        <input type="text" class="form-control" name="u_hasil_1">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="u_status_1" required>
+                        <input type="text" class="form-control" name="u_status_1">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="u_normal_1" required>
+                        <input type="text" class="form-control" name="u_normal_1">
                       </td>
                     </tr>
                     <tr id="last_row_urine">
@@ -257,13 +257,13 @@
                         </select>
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="f_hasil_1" required>
+                        <input type="text" class="form-control" name="f_hasil_1">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="f_status_1" required>
+                        <input type="text" class="form-control" name="f_status_1">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="f_normal_1" required>
+                        <input type="text" class="form-control" name="f_normal_1">
                       </td>
                     </tr>
                     <tr id="last_row_faeces">
@@ -322,13 +322,13 @@
                         </select>
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="k_hasil_1" required>
+                        <input type="text" class="form-control" name="k_hasil_1">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="k_status_1" required>
+                        <input type="text" class="form-control" name="k_status_1">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="k_normal_1" required>
+                        <input type="text" class="form-control" name="k_normal_1">
                       </td>
                     </tr>
                     <tr id="last_row_kimia">
@@ -382,13 +382,13 @@
                         </select>
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="s_hasil_1" required>
+                        <input type="text" class="form-control" name="s_hasil_1">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="s_status_1" required>
+                        <input type="text" class="form-control" name="s_status_1">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="s_normal_1" required>
+                        <input type="text" class="form-control" name="s_normal_1">
                       </td>
                     </tr>
                     <tr id="last_row_serologi">
@@ -432,13 +432,13 @@
                         </select>
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="n_hasil_1" required>
+                        <input type="text" class="form-control" name="n_hasil_1">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="n_status_1" required>
+                        <input type="text" class="form-control" name="n_status_1">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="n_normal_1" required>
+                        <input type="text" class="form-control" name="n_normal_1">
                       </td>
                     </tr>
                     <tr id="last_row_narkoba">
@@ -472,7 +472,7 @@
         $('#tambah_form_hematologi').click(function() {
           var a = document.getElementById('jumlah_form_hematologi').value;
           a = parseInt(a) + 1;
-          $('#last_row_hematologi').before('<tr id="hematologi_'+a+'"> <td style="text-align:center;"> <select class="form-control" name="h_pemeriksaan_'+a+'"> <option value="0">-</option> <option value="Heamoglobin">Heamoglobin</option> <option value="Leukosit">Leukosit</option> <option value="Hitung Jenis">Hitung Jenis</option> <option value="Basofil">Basofil</option> <option value="Eosinopil">Eosinopil</option> <option value="N.Batang">N.Batang</option> <option value="N.Segmen">N.Segmen</option> <option value="Limposit">Limposit</option> <option value="Monosit">Monosit</option> <option value="LED">LED</option> <option value="Erytrosit">Erytrosit</option> <option value="Hematokrit">Hematokrit</option> <option value="Trombosit">Trombosit</option> <option value="BT">BT</option> <option value="CT">CT</option> <option value="Gol Darah">Gol Darah</option> <option value="Malaria">Malaria</option> <option value="MCV">MCV</option> <option value="MCH">MCH</option> <option value="MCHC">MCHC</option> <option value="MDT">MDT</option> </select> </td> <td> <input type="text" class="form-control" name="h_hasil_'+a+'" required> </td> <td> <input type="text" class="form-control" name="h_status_'+a+'" required> </td> <td> <input type="text" class="form-control" name="h_normal_'+a+'" required> </td> </tr>');
+          $('#last_row_hematologi').before('<tr id="hematologi_'+a+'"> <td style="text-align:center;"> <select class="form-control" name="h_pemeriksaan_'+a+'"> <option value="0">-</option> <option value="Heamoglobin">Heamoglobin</option> <option value="Leukosit">Leukosit</option> <option value="Hitung Jenis">Hitung Jenis</option> <option value="Basofil">Basofil</option> <option value="Eosinopil">Eosinopil</option> <option value="N.Batang">N.Batang</option> <option value="N.Segmen">N.Segmen</option> <option value="Limposit">Limposit</option> <option value="Monosit">Monosit</option> <option value="LED">LED</option> <option value="Erytrosit">Erytrosit</option> <option value="Hematokrit">Hematokrit</option> <option value="Trombosit">Trombosit</option> <option value="BT">BT</option> <option value="CT">CT</option> <option value="Gol Darah">Gol Darah</option> <option value="Malaria">Malaria</option> <option value="MCV">MCV</option> <option value="MCH">MCH</option> <option value="MCHC">MCHC</option> <option value="MDT">MDT</option> </select> </td> <td> <input type="text" class="form-control" name="h_hasil_'+a+'"> </td> <td> <input type="text" class="form-control" name="h_status_'+a+'"> </td> <td> <input type="text" class="form-control" name="h_normal_'+a+'"> </td> </tr>');
           document.getElementById('jumlah_form_hematologi').value = a;
         });
       });
@@ -484,7 +484,7 @@
         $('#tambah_form_urine').click(function() {
           var a = document.getElementById('jumlah_form_urine').value;
           a = parseInt(a) + 1;
-          $('#last_row_urine').before('<tr id="urine_'+a+'"> <td style="text-align:center;"> <select class="form-control" name="u_pemeriksaan_'+a+'"> <option value="0">-</option> <option value="Warna">Warna</option> <option value="Kekeruhan">Kekeruhan</option> <option value="Ph">Ph</option> <option value="Berat Jenis">Berat Jenis</option> <option value="Reduksi">Reduksi</option> <option value="Protein">Protein</option> <option value="Bilirubin">Bilirubin</option> <option value="Urobilinogen">Urobilinogen</option> <option value="Keton">Keton</option> <option value="Sedimen">Sedimen</option> <option value="Kristal">Kristal</option> <option value="Entrosit">Entrosit</option> <option value="Leukosit">Leukosit</option> <option value="Epitel">Epitel</option> <option value="Plano Test">Plano Test</option> </select> </td> <td> <input type="text" class="form-control" name="u_hasil_'+a+'" required> </td> <td> <input type="text" class="form-control" name="u_status_'+a+'" required> </td> <td> <input type="text" class="form-control" name="u_normal_'+a+'" required> </td> </tr>');
+          $('#last_row_urine').before('<tr id="urine_'+a+'"> <td style="text-align:center;"> <select class="form-control" name="u_pemeriksaan_'+a+'"> <option value="0">-</option> <option value="Warna">Warna</option> <option value="Kekeruhan">Kekeruhan</option> <option value="Ph">Ph</option> <option value="Berat Jenis">Berat Jenis</option> <option value="Reduksi">Reduksi</option> <option value="Protein">Protein</option> <option value="Bilirubin">Bilirubin</option> <option value="Urobilinogen">Urobilinogen</option> <option value="Keton">Keton</option> <option value="Sedimen">Sedimen</option> <option value="Kristal">Kristal</option> <option value="Entrosit">Entrosit</option> <option value="Leukosit">Leukosit</option> <option value="Epitel">Epitel</option> <option value="Plano Test">Plano Test</option> </select> </td> <td> <input type="text" class="form-control" name="u_hasil_'+a+'"> </td> <td> <input type="text" class="form-control" name="u_status_'+a+'"> </td> <td> <input type="text" class="form-control" name="u_normal_'+a+'"> </td> </tr>');
           document.getElementById('jumlah_form_urine').value = a;
         });
       });
@@ -496,7 +496,7 @@
         $('#tambah_form_faeces').click(function() {
           var a = document.getElementById('jumlah_form_faeces').value;
           a = parseInt(a) + 1;
-          $('#last_row_faeces').before('<tr id="faeces_'+a+'"> <td style="text-align:center;"> <select class="form-control" name="f_pemeriksaan_'+a+'"> <option value="0">-</option> <option value="Warna">Warna</option> <option value="Konsistensi">Konsistensi</option> <option value="Lendir">Lendir</option> <option value="Darah/Blood">Darah/Blood</option> <option value="Amoeba">Amoeba</option> <option value="Lain-lain">Lain-lain</option> </select> </td> <td> <input type="text" class="form-control" name="f_hasil_'+a+'" required> </td> <td> <input type="text" class="form-control" name="f_status_'+a+'" required> </td> <td> <input type="text" class="form-control" name="f_normal_'+a+'" required> </td> </tr>');
+          $('#last_row_faeces').before('<tr id="faeces_'+a+'"> <td style="text-align:center;"> <select class="form-control" name="f_pemeriksaan_'+a+'"> <option value="0">-</option> <option value="Warna">Warna</option> <option value="Konsistensi">Konsistensi</option> <option value="Lendir">Lendir</option> <option value="Darah/Blood">Darah/Blood</option> <option value="Amoeba">Amoeba</option> <option value="Lain-lain">Lain-lain</option> </select> </td> <td> <input type="text" class="form-control" name="f_hasil_'+a+'"> </td> <td> <input type="text" class="form-control" name="f_status_'+a+'"> </td> <td> <input type="text" class="form-control" name="f_normal_'+a+'"> </td> </tr>');
           document.getElementById('jumlah_form_faeces').value = a;
         });
       });
@@ -508,7 +508,7 @@
         $('#tambah_form_kimia').click(function() {
           var a = document.getElementById('jumlah_form_kimia').value;
           a = parseInt(a) + 1;
-          $('#last_row_kimia').before('<tr id="kimia_'+a+'"> <td style="text-align:center;"> <select class="form-control" name="k_pemeriksaan_'+a+'"> <option value="0">-</option> <option value="Gula darah sewaktu">Gula darah sewaktu</option> <option value="Gula darah puasa">Gula darah puasa</option> <option value="Gula darah 2 jam PP">Gula darah 2 jam PP</option> <option value="ALP">ALP</option> <option value="Total Protein">Total Protein</option> <option value="Albumin">Albumin</option> <option value="Globulin">Globulin</option> <option value="Bilirubin Total">Bilirubin Total</option> <option value="Bilirubin Direk">Bilirubin Direk</option> <option value="Bilirubin Indirek">Bilirubin Indirek</option> <option value="Total Cholesterol">Total Cholesterol</option> <option value="HDL Cholesterol">HDL Cholesterol</option> <option value="LDL Cholesterol">LDL Cholesterol</option> <option value="Trygliserida">Trygliserida</option> <option value="SGOT">SGOT</option> <option value="SGPT">SGPT</option> <option value="GGT">GGT</option> <option value="Ureum">Ureum</option> <option value="Creatinim">Creatinim</option> <option value="Asam Urat">Asam Urat</option> </select> </td> <td> <input type="text" class="form-control" name="k_hasil_'+a+'" required> </td> <td> <input type="text" class="form-control" name="k_status_'+a+'" required> </td> <td> <input type="text" class="form-control" name="k_normal_'+a+'" required> </td> </tr>');
+          $('#last_row_kimia').before('<tr id="kimia_'+a+'"> <td style="text-align:center;"> <select class="form-control" name="k_pemeriksaan_'+a+'"> <option value="0">-</option> <option value="Gula darah sewaktu">Gula darah sewaktu</option> <option value="Gula darah puasa">Gula darah puasa</option> <option value="Gula darah 2 jam PP">Gula darah 2 jam PP</option> <option value="ALP">ALP</option> <option value="Total Protein">Total Protein</option> <option value="Albumin">Albumin</option> <option value="Globulin">Globulin</option> <option value="Bilirubin Total">Bilirubin Total</option> <option value="Bilirubin Direk">Bilirubin Direk</option> <option value="Bilirubin Indirek">Bilirubin Indirek</option> <option value="Total Cholesterol">Total Cholesterol</option> <option value="HDL Cholesterol">HDL Cholesterol</option> <option value="LDL Cholesterol">LDL Cholesterol</option> <option value="Trygliserida">Trygliserida</option> <option value="SGOT">SGOT</option> <option value="SGPT">SGPT</option> <option value="GGT">GGT</option> <option value="Ureum">Ureum</option> <option value="Creatinim">Creatinim</option> <option value="Asam Urat">Asam Urat</option> </select> </td> <td> <input type="text" class="form-control" name="k_hasil_'+a+'"> </td> <td> <input type="text" class="form-control" name="k_status_'+a+'"> </td> <td> <input type="text" class="form-control" name="k_normal_'+a+'"> </td> </tr>');
           document.getElementById('jumlah_form_kimia').value = a;
         });
       });
@@ -520,7 +520,7 @@
         $('#tambah_form_serologi').click(function() {
           var a = document.getElementById('jumlah_form_serologi').value;
           a = parseInt(a) + 1;
-          $('#last_row_serologi').before('<tr id="serologi_'+a+'"> <td style="text-align:center;"> <select class="form-control" name="s_pemeriksaan_'+a+'"> <option value="0">-</option> <option value="S. Typhosa O">S. Typhosa O</option> <option value="S. Typhosa H">S. Typhosa H</option> <option value="S. Paratyphosa AO">S. Paratyphosa AO</option> <option value="S. Paratyphosa AH">S. Paratyphosa AH</option> <option value="S. Paratyphosa BO">S. Paratyphosa BO</option> <option value="S. Paratyphosa BH">S. Paratyphosa BH</option> <option value="S. Paratyphosa CO">S. Paratyphosa CO</option> <option value="S. Paratyphosa CH">S. Paratyphosa CH</option> <option value="Anti HIV">Anti HIV</option> <option value="Hbs Ag">Hbs Ag</option> <option value="Anti Hbs Ag">Anti Hbs Ag</option> <option value="CRP">CRP</option> <option value="RF">RF</option> <option value="ASTO">ASTO</option> <option value="Dengue lgG/lg M">Dengue lgG/lg M</option> </select> </td> <td> <input type="text" class="form-control" name="s_hasil_'+a+'" required> </td> <td> <input type="text" class="form-control" name="s_status_'+a+'" required> </td> <td> <input type="text" class="form-control" name="s_normal_'+a+'" required> </td> </tr>');
+          $('#last_row_serologi').before('<tr id="serologi_'+a+'"> <td style="text-align:center;"> <select class="form-control" name="s_pemeriksaan_'+a+'"> <option value="0">-</option> <option value="S. Typhosa O">S. Typhosa O</option> <option value="S. Typhosa H">S. Typhosa H</option> <option value="S. Paratyphosa AO">S. Paratyphosa AO</option> <option value="S. Paratyphosa AH">S. Paratyphosa AH</option> <option value="S. Paratyphosa BO">S. Paratyphosa BO</option> <option value="S. Paratyphosa BH">S. Paratyphosa BH</option> <option value="S. Paratyphosa CO">S. Paratyphosa CO</option> <option value="S. Paratyphosa CH">S. Paratyphosa CH</option> <option value="Anti HIV">Anti HIV</option> <option value="Hbs Ag">Hbs Ag</option> <option value="Anti Hbs Ag">Anti Hbs Ag</option> <option value="CRP">CRP</option> <option value="RF">RF</option> <option value="ASTO">ASTO</option> <option value="Dengue lgG/lg M">Dengue lgG/lg M</option> </select> </td> <td> <input type="text" class="form-control" name="s_hasil_'+a+'"> </td> <td> <input type="text" class="form-control" name="s_status_'+a+'"> </td> <td> <input type="text" class="form-control" name="s_normal_'+a+'"> </td> </tr>');
           document.getElementById('jumlah_form_serologi').value = a;
         });
       });
@@ -532,7 +532,7 @@
         $('#tambah_form_narkoba').click(function() {
           var a = document.getElementById('jumlah_form_narkoba').value;
           a = parseInt(a) + 1;
-          $('#last_row_narkoba').before('<tr id="narkoba_'+a+'"> <td style="text-align:center;"> <select class="form-control" name="n_pemeriksaan_'+a+'"> <option value="0">-</option> <option value="Canabis">Canabis</option> <option value="Opiat">Opiat</option> <option value="Benzodiazepin">Benzodiazepin</option> <option value="M Ampetamin">M Ampetamin</option> <option value="Alkohol">Alkohol</option> </select> </td> <td> <input type="text" class="form-control" name="n_hasil_'+a+'" required> </td> <td> <input type="text" class="form-control" name="n_status_'+a+'" required> </td> <td> <input type="text" class="form-control" name="n_normal_'+a+'" required> </td> </tr>');
+          $('#last_row_narkoba').before('<tr id="narkoba_'+a+'"> <td style="text-align:center;"> <select class="form-control" name="n_pemeriksaan_'+a+'"> <option value="0">-</option> <option value="Canabis">Canabis</option> <option value="Opiat">Opiat</option> <option value="Benzodiazepin">Benzodiazepin</option> <option value="M Ampetamin">M Ampetamin</option> <option value="Alkohol">Alkohol</option> </select> </td> <td> <input type="text" class="form-control" name="n_hasil_'+a+'"> </td> <td> <input type="text" class="form-control" name="n_status_'+a+'"> </td> <td> <input type="text" class="form-control" name="n_normal_'+a+'"> </td> </tr>');
           document.getElementById('jumlah_form_narkoba').value = a;
         });
       });
