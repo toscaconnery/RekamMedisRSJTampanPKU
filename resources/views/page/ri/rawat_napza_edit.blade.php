@@ -1729,26 +1729,6 @@
                     </td>
                   </tr>
                   @endforeach
-                  {{-- <tr id="form_masalah_2">
-                    <td>
-                      <input type="text" class="form-control" name="text_masalah_keperawatan_2">
-                    </td>
-                  </tr>
-                  <tr id="form_masalah_3">
-                    <td>
-                      <input type="text" class="form-control" name="text_masalah_keperawatan_3">
-                    </td>
-                  </tr>
-                  <tr id="form_masalah_4">
-                    <td>
-                      <input type="text" class="form-control" name="text_masalah_keperawatan_4">
-                    </td>
-                  </tr>
-                  <tr id="form_masalah_5">
-                    <td>
-                      <input type="text" class="form-control" name="text_masalah_keperawatan_5">
-                    </td>
-                  </tr> --}}
                   <tr id="last_row_masalah">
                   <td colspan="9">
                     <div class="btn-group">
