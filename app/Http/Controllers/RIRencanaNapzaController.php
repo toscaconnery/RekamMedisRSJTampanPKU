@@ -147,7 +147,7 @@ class RIRencanaNapzaController extends Controller
         $daftar_dokumen->ri_rencana_napza = True;
         $daftar_dokumen->save();
 
-        return redirect('daftar_dokumen');
+        return redirect('ri_rencana_napza_read');
 
     }
 
@@ -314,7 +314,7 @@ class RIRencanaNapzaController extends Controller
     	}
     	$data->keluarga = $keluarga;
     	$data->save();
-    	return redirect('daftar_dokumen');
+    	return redirect('ri_rencana_napza_read');
     }
 
     public function ri_rawat_napza_pdf()

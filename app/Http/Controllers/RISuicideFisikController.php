@@ -22,12 +22,7 @@ class RISuicideFisikController extends Controller
     public function post_ri_suicide_fisik(Request $request)
     {
     	$data = new RISuicideFisik;
-        if(Session::has('id_pasien')) {
-            $id_pasien = Session::get('id_pasien');
-        }
-        else {
-            $id_pasien = 1;
-        }
+        $id_pasien = Session::get('id_pasien');
         $data->id_regis = $id_pasien;
         $data->s1 = $request->s1;
         $data->s2 = $request->s2;
@@ -66,16 +61,15 @@ class RISuicideFisikController extends Controller
         $data->p3 = $request->p3;
         $data->save();
 
-        return back();
+        return redirect('ri_suicide_fisik_read');
 
     }
 
-    public function get_ri_suicide_fisik_read()
+    public function get_ri_suicide_fisik_data()
     {
-       $pasien = RISuicideFisik::where('id', 1)->first();
-        
-        $this->data['id_regis'] = $pasien->id_regis;
-        
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RISuicideFisik::where('id_regis', $id_pasien)->first();
+                
         $this->data['s1'] = $pasien->s1;
         $this->data['s2'] = $pasien->s2;
         $this->data['s3'] = $pasien->s3;
@@ -115,9 +109,166 @@ class RISuicideFisikController extends Controller
         $this->data['p1'] = $pasien->p1;
         $this->data['p2'] = $pasien->p2;
         $this->data['p3'] = $pasien->p3;
-        
-        return view('page.ri.suicide_fisik_read', $this->data);
 
+        //perhitungan total
+        $suicide_risk_total = 0;
+        if($pasien->s1 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s2 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s3 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s4 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s5 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s6 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s7 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s8 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s9 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s10 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s11 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s12 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s13 == 1) {
+            $suicide_risk_total += 1;
+        }
+        if($pasien->s14 == 1) {
+            $suicide_risk_total += 1;
+        }
+
+        $violence_risk_total = 0;
+        if($pasien->s15 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s16 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s17 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s18 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s19 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s20 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s21 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s22 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s23 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s24 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s25 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s26 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s27 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s28 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s29 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s30 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s31 == 1) {
+            $violence_risk_total += 1;
+        }
+        if($pasien->s32 == 1) {
+            $violence_risk_total += 1;
+        }
+        $this->data['suicide_risk_total'] = $suicide_risk_total;
+        $this->data['violence_risk_total'] = $violence_risk_total;
+    }
+
+    public function get_ri_suicide_fisik_read()
+    {
+        $this->get_ri_suicide_fisik_data();
+        return view('page.ri.suicide_fisik_read', $this->data);
+    }
+
+    public function get_ri_suicide_fisik_edit()
+    {
+        $this->get_ri_suicide_fisik_data();
+        return view('page.ri.suicide_fisik_edit', $this->data);
+    }
+
+    public function post_ri_suicide_fisik_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RISuicideFisik::where('id_regis', $id_pasien)->first();
+        $data->id_regis = $id_pasien;
+        $data->s1 = $request->s1;
+        $data->s2 = $request->s2;
+        $data->s3 = $request->s3;
+        $data->s4 = $request->s4;
+        $data->s5 = $request->s5;
+        $data->s6 = $request->s6;
+        $data->s7 = $request->s7;
+        $data->s8 = $request->s8;
+        $data->s9 = $request->s9;
+        $data->s10 = $request->s10;
+        $data->s11 = $request->s11;
+        $data->s12 = $request->s12;
+        $data->s13 = $request->s13;
+        $data->s14 = $request->s14;
+        $data->s15 = $request->s15;
+        $data->s16 = $request->s16;
+        $data->s17 = $request->s17;
+        $data->s18 = $request->s18;
+        $data->s19 = $request->s19;
+        $data->s20 = $request->s20;
+        $data->s21 = $request->s21;
+        $data->s22 = $request->s22;
+        $data->s23 = $request->s23;
+        $data->s24 = $request->s24;
+        $data->s25 = $request->s25;
+        $data->s26 = $request->s26;
+        $data->s27 = $request->s27;
+        $data->s28 = $request->s28;
+        $data->s29 = $request->s29;
+        $data->s30 = $request->s30;
+        $data->s31 = $request->s31;
+        $data->s32 = $request->s32;
+        $data->p1 = $request->p1;
+        $data->p2 = $request->p2;
+        $data->p3 = $request->p3;
+        $data->save();
+
+        return redirect('ri_suicide_fisik_read');
     }
 
     public function answer($answer)

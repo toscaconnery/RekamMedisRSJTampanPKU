@@ -314,7 +314,9 @@ Route::get('/doc_ri_dpjpcase', function () {
 
 Route::get('/ri_suicide_fisik', 'RISuicideFisikController@get_ri_suicide_fisik');
 Route::post('/ri_suicide_fisik', 'RISuicideFisikController@post_ri_suicide_fisik');
-Route::get('/ri_suicide_fisik_read', 'RISuicideFisikController@get_ri_suicide_fisik_read'); // new add
+Route::get('/ri_suicide_fisik_read', 'RISuicideFisikController@get_ri_suicide_fisik_read');
+Route::get('/ri_suicide_fisik_edit', 'RISuicideFisikController@get_ri_suicide_fisik_edit');
+Route::post('/ri_suicide_fisik_edit', 'RISuicideFisikController@post_ri_suicide_fisik_edit');
 //dokumen ri suicide
 Route::get('/ri_suicide_pdf', 'RISuicideFisikController@ri_suicide_pdf');
 Route::get('/doc_ri_suicide', function () {
@@ -909,9 +911,9 @@ Route::get('/ri_surat_persetujuan', function () {
 // Route::get('/rj_identifikasi_stresor', function () {
 //     return view('rj_identifikasi_stresor');
 // });
-// Route::get('/rj_tumbuh_kembang', function () {
-//     return view('rj_tumbuh_kembang');
-// });
+Route::get('/rj_tumbuh_kembang', function () {
+    return view('rj_tumbuh_kembang');
+});
 // Route::get('/rj_resume_rawat', function () {
 //     return view('rj_resume_rawat');
 // });

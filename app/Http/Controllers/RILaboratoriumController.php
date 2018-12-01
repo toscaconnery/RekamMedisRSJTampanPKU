@@ -51,13 +51,15 @@ class RILaboratoriumController extends Controller
     		$str_hasil = 'h_hasil_'.$i;
     		$str_status = 'h_status_'.$i;
     		$str_normal = 'h_normal_'.$i;
-    		$data = new RILaboratoriumHematologi;
-    		$data->id_regis = $id_pasien;
-    		$data->pemeriksaan = $request->$str_pemeriksaan;
-    		$data->hasil = $request->$str_hasil;
-    		$data->status = $request->$str_status;
-    		$data->normal = $request->$str_normal;
-    		$data->save();
+            if(!empty($request->$str_pemeriksaan)) {
+        		$data = new RILaboratoriumHematologi;
+        		$data->id_regis = $id_pasien;
+        		$data->pemeriksaan = $request->$str_pemeriksaan;
+        		$data->hasil = $request->$str_hasil;
+        		$data->status = $request->$str_status;
+        		$data->normal = $request->$str_normal;
+        		$data->save();
+            }
     	}
 
     	//urine
@@ -67,13 +69,15 @@ class RILaboratoriumController extends Controller
     		$str_hasil = 'u_hasil_'.$i;
     		$str_status = 'u_status_'.$i;
     		$str_normal = 'u_normal_'.$i;
-    		$data = new RILaboratoriumUrine;
-    		$data->id_regis = $id_pasien;
-    		$data->pemeriksaan = $request->$str_pemeriksaan;
-    		$data->hasil = $request->$str_hasil;
-    		$data->status = $request->$str_status;
-    		$data->normal = $request->$str_normal;
-    		$data->save();
+            if(!empty($request->$str_pemeriksaan)) {
+    		    $data = new RILaboratoriumUrine;
+        		$data->id_regis = $id_pasien;
+        		$data->pemeriksaan = $request->$str_pemeriksaan;
+        		$data->hasil = $request->$str_hasil;
+        		$data->status = $request->$str_status;
+        		$data->normal = $request->$str_normal;
+        		$data->save();
+            }
     	}
 
     	//faeces rutin
@@ -83,13 +87,15 @@ class RILaboratoriumController extends Controller
             $str_hasil = 'f_hasil_'.$i;
             $str_status = 'f_status_'.$i;
             $str_normal = 'f_normal_'.$i;
-            $data = new RILaboratoriumFaecesRutin;
-            $data->id_regis = $id_pasien;
-            $data->pemeriksaan = $request->$str_pemeriksaan;
-            $data->hasil = $request->$str_hasil;
-            $data->status = $request->$str_status;
-            $data->normal = $request->$str_normal;
-            $data->save();
+            if(!empty($request->$str_pemeriksaan)) {
+                $data = new RILaboratoriumFaecesRutin;
+                $data->id_regis = $id_pasien;
+                $data->pemeriksaan = $request->$str_pemeriksaan;
+                $data->hasil = $request->$str_hasil;
+                $data->status = $request->$str_status;
+                $data->normal = $request->$str_normal;
+                $data->save();
+            }
         }
 
     	//kimia darah
@@ -99,13 +105,15 @@ class RILaboratoriumController extends Controller
             $str_hasil = 'k_hasil_'.$i;
             $str_status = 'k_status_'.$i;
             $str_normal = 'k_normal_'.$i;
-            $data = new RILaboratoriumKimiaDarah;
-            $data->id_regis = $id_pasien;
-            $data->pemeriksaan = $request->$str_pemeriksaan;
-            $data->hasil = $request->$str_hasil;
-            $data->status = $request->$str_status;
-            $data->normal = $request->$str_normal;
-            $data->save();
+            if(!empty($request->$str_pemeriksaan)) {
+                $data = new RILaboratoriumKimiaDarah;
+                $data->id_regis = $id_pasien;
+                $data->pemeriksaan = $request->$str_pemeriksaan;
+                $data->hasil = $request->$str_hasil;
+                $data->status = $request->$str_status;
+                $data->normal = $request->$str_normal;
+                $data->save();
+            }
         }
 
     	//serologi
@@ -115,13 +123,15 @@ class RILaboratoriumController extends Controller
             $str_hasil = 's_hasil_'.$i;
             $str_status = 's_status_'.$i;
             $str_normal = 's_normal_'.$i;
-            $data = new RILaboratoriumSerologi;
-            $data->id_regis = $id_pasien;
-            $data->pemeriksaan = $request->$str_pemeriksaan;
-            $data->hasil = $request->$str_hasil;
-            $data->status = $request->$str_status;
-            $data->normal = $request->$str_normal;
-            $data->save();
+            if(!empty($$request->$str_pemeriksaan)) {
+                $data = new RILaboratoriumSerologi;
+                $data->id_regis = $id_pasien;
+                $data->pemeriksaan = $request->$str_pemeriksaan;
+                $data->hasil = $request->$str_hasil;
+                $data->status = $request->$str_status;
+                $data->normal = $request->$str_normal;
+                $data->save();
+            }
         }
 
     	//narkoba
@@ -131,13 +141,15 @@ class RILaboratoriumController extends Controller
             $str_hasil = 'n_hasil_'.$i;
             $str_status = 'n_status_'.$i;
             $str_normal = 'n_normal_'.$i;
-            $data = new RILaboratoriumNarkoba;
-            $data->id_regis = $id_pasien;
-            $data->pemeriksaan = $request->$str_pemeriksaan;
-            $data->hasil = $request->$str_hasil;
-            $data->status = $request->$str_status;
-            $data->normal = $request->$str_normal;
-            $data->save();
+            if(!empty($request->$str_pemeriksaan)) {
+                $data = new RILaboratoriumNarkoba;
+                $data->id_regis = $id_pasien;
+                $data->pemeriksaan = $request->$str_pemeriksaan;
+                $data->hasil = $request->$str_hasil;
+                $data->status = $request->$str_status;
+                $data->normal = $request->$str_normal;
+                $data->save();
+            }
         }
 
     	return redirect('daftar_dokumen');
@@ -292,19 +304,21 @@ class RILaboratoriumController extends Controller
 		$data->save();
 
 		//hematologi old
-		$list_hematologi = explode('-', $request->previous_hematologi);
-		foreach ($list_hematologi as $key => $value) {
-			$data = RILaboratoriumHematologi::where('id', $value)->first();
-			$str_pemeriksaan = 'h_pemeriksaan_'.$value;
-    		$str_hasil = 'h_hasil_'.$value;
-    		$str_status = 'h_status_'.$value;
-    		$str_normal = 'h_normal_'.$value;
-    		$data->pemeriksaan = $request->$str_pemeriksaan;
-    		$data->hasil = $request->$str_hasil;
-    		$data->status = $request->$str_status;
-    		$data->normal = $request->$str_normal;
-    		$data->save();
-		}
+        if(strlen($request->previous_hematologi) > 0) {
+    		$list_hematologi = explode('-', $request->previous_hematologi);
+    		foreach ($list_hematologi as $key => $value) {
+    			$data = RILaboratoriumHematologi::where('id', $value)->first();
+    			$str_pemeriksaan = 'h_pemeriksaan_'.$value;
+        		$str_hasil = 'h_hasil_'.$value;
+        		$str_status = 'h_status_'.$value;
+        		$str_normal = 'h_normal_'.$value;
+        		$data->pemeriksaan = $request->$str_pemeriksaan;
+        		$data->hasil = $request->$str_hasil;
+        		$data->status = $request->$str_status;
+        		$data->normal = $request->$str_normal;
+        		$data->save();
+    		}
+        }
 
     	//hematologi new
     	$jumlah_hematologi = $request->jumlah_form_hematologi;
@@ -323,19 +337,21 @@ class RILaboratoriumController extends Controller
     	}
 
     	//urine old
-    	$list_urine = explode('-', $request->previous_urine);
-    	foreach ($list_urine as $key => $value) {
-    		$data = RILaboratoriumUrine::where('id', $value)->first();
-    		$str_pemeriksaan = 'u_pemeriksaan_'.$value;
-    		$str_hasil = 'u_hasil_'.$value;
-    		$str_status = 'u_status_'.$value;
-    		$str_normal = 'u_normal_'.$value;
-    		$data->pemeriksaan = $request->$str_pemeriksaan;
-    		$data->hasil = $request->$str_hasil;
-    		$data->status = $request->$str_status;
-    		$data->normal = $request->$str_normal;
-    		$data->save();
-    	}
+        if(strlen($request->previous_urine) > 0) {
+        	$list_urine = explode('-', $request->previous_urine);
+        	foreach ($list_urine as $key => $value) {
+        		$data = RILaboratoriumUrine::where('id', $value)->first();
+        		$str_pemeriksaan = 'u_pemeriksaan_'.$value;
+        		$str_hasil = 'u_hasil_'.$value;
+        		$str_status = 'u_status_'.$value;
+        		$str_normal = 'u_normal_'.$value;
+        		$data->pemeriksaan = $request->$str_pemeriksaan;
+        		$data->hasil = $request->$str_hasil;
+        		$data->status = $request->$str_status;
+        		$data->normal = $request->$str_normal;
+        		$data->save();
+        	}
+        }
 
     	//urine new
     	$jumlah_urine = $request->jumlah_form_urine;
@@ -354,19 +370,21 @@ class RILaboratoriumController extends Controller
     	}
 
     	//faeces rutin old
-    	$list_faeces = explode('-', $request->previous_faeces);
-    	foreach ($list_faeces as $key => $value) {
-    		$data = RILaboratoriumFaecesRutin::where('id', $value)->first();
-    		$str_pemeriksaan = 'f_pemeriksaan_'.$value;
-    		$str_hasil = 'f_hasil_'.$value;
-    		$str_status = 'f_status_'.$value;
-    		$str_normal = 'f_normal_'.$value;
-    		$data->pemeriksaan = $request->$str_pemeriksaan;
-    		$data->hasil = $request->$str_hasil;
-    		$data->status = $request->$str_status;
-    		$data->normal = $request->$str_normal;
-    		$data->save();
-    	}
+        if(strlen($request->previous_faeces) > 0) {
+        	$list_faeces = explode('-', $request->previous_faeces);
+        	foreach ($list_faeces as $key => $value) {
+        		$data = RILaboratoriumFaecesRutin::where('id', $value)->first();
+        		$str_pemeriksaan = 'f_pemeriksaan_'.$value;
+        		$str_hasil = 'f_hasil_'.$value;
+        		$str_status = 'f_status_'.$value;
+        		$str_normal = 'f_normal_'.$value;
+        		$data->pemeriksaan = $request->$str_pemeriksaan;
+        		$data->hasil = $request->$str_hasil;
+        		$data->status = $request->$str_status;
+        		$data->normal = $request->$str_normal;
+        		$data->save();
+        	}
+        }
 
     	//faeces rutin new
     	$jumlah_faeces = $request->jumlah_form_faeces;
@@ -385,18 +403,20 @@ class RILaboratoriumController extends Controller
         }
 
         //kimia darah old
-        $list_kimia = explode('-', $request->previous_kimia);
-        foreach ($list_kimia as $key => $value) {
-        	$data = RILaboratoriumKimiaDarah::where('id', $value)->first();
-    		$str_pemeriksaan = 'k_pemeriksaan_'.$value;
-    		$str_hasil = 'k_hasil_'.$value;
-    		$str_status = 'k_status_'.$value;
-    		$str_normal = 'k_normal_'.$value;
-    		$data->pemeriksaan = $request->$str_pemeriksaan;
-    		$data->hasil = $request->$str_hasil;
-    		$data->status = $request->$str_status;
-    		$data->normal = $request->$str_normal;
-    		$data->save();
+        if(strlen($request->previous_kimia) > 0) {
+            $list_kimia = explode('-', $request->previous_kimia);
+            foreach ($list_kimia as $key => $value) {
+            	$data = RILaboratoriumKimiaDarah::where('id', $value)->first();
+        		$str_pemeriksaan = 'k_pemeriksaan_'.$value;
+        		$str_hasil = 'k_hasil_'.$value;
+        		$str_status = 'k_status_'.$value;
+        		$str_normal = 'k_normal_'.$value;
+        		$data->pemeriksaan = $request->$str_pemeriksaan;
+        		$data->hasil = $request->$str_hasil;
+        		$data->status = $request->$str_status;
+        		$data->normal = $request->$str_normal;
+        		$data->save();
+            }
         }
 
     	//kimia darah new
@@ -416,18 +436,20 @@ class RILaboratoriumController extends Controller
         }
 
     	//serologi old
-        $list_serologi = explode('-', $request->previous_serologi);
-        foreach ($list_serologi as $key => $value) {
-        	$data = RILaboratoriumSerologi::where('id', $value)->first();
-    		$str_pemeriksaan = 's_pemeriksaan_'.$value;
-    		$str_hasil = 's_hasil_'.$value;
-    		$str_status = 's_status_'.$value;
-    		$str_normal = 's_normal_'.$value;
-    		$data->pemeriksaan = $request->$str_pemeriksaan;
-    		$data->hasil = $request->$str_hasil;
-    		$data->status = $request->$str_status;
-    		$data->normal = $request->$str_normal;
-    		$data->save();
+        if(strlen($request->previous_serologi) > 0) {
+            $list_serologi = explode('-', $request->previous_serologi);
+            foreach ($list_serologi as $key => $value) {
+            	$data = RILaboratoriumSerologi::where('id', $value)->first();
+        		$str_pemeriksaan = 's_pemeriksaan_'.$value;
+        		$str_hasil = 's_hasil_'.$value;
+        		$str_status = 's_status_'.$value;
+        		$str_normal = 's_normal_'.$value;
+        		$data->pemeriksaan = $request->$str_pemeriksaan;
+        		$data->hasil = $request->$str_hasil;
+        		$data->status = $request->$str_status;
+        		$data->normal = $request->$str_normal;
+        		$data->save();
+            }
         }
 
     	//serologi new
@@ -447,18 +469,20 @@ class RILaboratoriumController extends Controller
         }
 
     	//narkoba old
-        $list_narkoba = explode('-', $request->previous_narkoba);
-        foreach ($list_narkoba as $key => $value) {
-        	$data = RILaboratoriumNarkoba::where('id', $value)->first();
-    		$str_pemeriksaan = 'n_pemeriksaan_'.$value;
-    		$str_hasil = 'n_hasil_'.$value;
-    		$str_status = 'n_status_'.$value;
-    		$str_normal = 'n_normal_'.$value;
-    		$data->pemeriksaan = $request->$str_pemeriksaan;
-    		$data->hasil = $request->$str_hasil;
-    		$data->status = $request->$str_status;
-    		$data->normal = $request->$str_normal;
-    		$data->save();
+        if(strlen($request->previous_narkoba) > 0) {
+            $list_narkoba = explode('-', $request->previous_narkoba);
+            foreach ($list_narkoba as $key => $value) {
+            	$data = RILaboratoriumNarkoba::where('id', $value)->first();
+        		$str_pemeriksaan = 'n_pemeriksaan_'.$value;
+        		$str_hasil = 'n_hasil_'.$value;
+        		$str_status = 'n_status_'.$value;
+        		$str_normal = 'n_normal_'.$value;
+        		$data->pemeriksaan = $request->$str_pemeriksaan;
+        		$data->hasil = $request->$str_hasil;
+        		$data->status = $request->$str_status;
+        		$data->normal = $request->$str_normal;
+        		$data->save();
+            }
         }
 
     	//narkoba new
