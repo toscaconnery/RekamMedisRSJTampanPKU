@@ -41,7 +41,7 @@ class ListDocument extends Model
         'ri_hak_kewajiban',
         'ri_asesmen',
         'ri_suicide_fisik',
-        'ri_rawat_napza',
+        'ri_asesmen_awal_keperawatan_napza',
         'ri_penilaian_edmunson',
         'ri_risiko_nyeri',
         'ri_catatan_perkembangan',

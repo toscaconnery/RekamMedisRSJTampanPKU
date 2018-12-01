@@ -57,7 +57,7 @@
           <li><a class="" href="{{url('')}}/ri_hak_kewajiban">Hak Kewajiban Pasien</a></li>
           <li><a class="" href="{{url('')}}/ri_asesmen">Asesmen Rawat Inap</a></li>
           <li><a class="" href="{{url('')}}/ri_suicide_fisik">Suicide Kekerasan Fisik</a></li>
-          <li><a class="" href="{{url('')}}/ri_rawat_napza">Keperawatan NAPZA</a></li>
+          <li><a class="" href="{{url('')}}/ri_asesmen_awal_keperawatan_napza">Keperawatan NAPZA</a></li>
           <li><a class="" href="{{url('')}}/ri_penilaian_edmunson">Penilaian Edmunson</a></li>
           <li><a class="" href="{{url('')}}/ri_risiko_nyeri">Penilaian Risiko Nyeri</a></li>
           <li><a class="" href="{{url('')}}/ri_catatan_perkembangan">Catatan Perkembangan</a></li>

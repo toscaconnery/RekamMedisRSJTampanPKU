@@ -43,7 +43,7 @@ class CreateListDocumentTable extends Migration
             $table->boolean('ri_hak_kewajiban')->default(False);
             $table->boolean('ri_asesmen')->default(False);
             $table->boolean('ri_suicide_fisik')->default(False);
-            $table->boolean('ri_rawat_napza')->default(False);
+            $table->boolean('ri_asesmen_awal_keperawatan_napza')->default(False);
             $table->boolean('ri_penilaian_edmunson')->default(False);
             $table->boolean('ri_risiko_nyeri')->default(False);
             $table->boolean('ri_catatan_perkembangan')->default(False);

@@ -320,9 +320,11 @@ Route::get('/doc_ri_suicide', function () {
     return view('/doc_ri_suicide');
 });
 
-Route::get('/ri_rawat_napza', 'RIRawatNapzaController@get_ri_rawat_napza');
-Route::post('/ri_rawat_napza', 'RIRawatNapzaController@post_ri_rawat_napza');
-Route::get('/ri_rawat_napza_read', 'RIRawatNapzaController@get_ri_rawat_napza_read'); // new add
+Route::get('/ri_asesmen_awal_keperawatan_napza', 'RIRawatNapzaController@get_ri_rawat_napza');
+Route::post('/ri_asesmen_awal_keperawatan_napza', 'RIRawatNapzaController@post_ri_rawat_napza');
+Route::get('/ri_asesmen_awal_keperawatan_napza_read', 'RIRawatNapzaController@get_ri_rawat_napza_read');
+Route::get('/ri_asesmen_awal_keperawatan_napza_edit', 'RIRawatNapzaController@get_ri_rawat_napza_edit');
+Route::post('/ri_asesmen_awal_keperawatan_napza_edit', 'RIRawatNapzaController@post_ri_rawat_napza_edit');
 //dokumen asesmen napza
 Route::get('/ri_napza_pdf', 'RIRawatNapzaController@ri_napza_pdf');
 Route::get('/doc_ri_napza', function () {
