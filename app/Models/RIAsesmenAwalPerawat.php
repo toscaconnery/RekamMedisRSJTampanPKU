@@ -186,5 +186,6 @@ class RIAsesmenAwalPerawat extends Model
 		'ambulasi',
 		'nutrisi',
 		'riwayat_jatuh_edm',
+		'obat',
     ];
 }

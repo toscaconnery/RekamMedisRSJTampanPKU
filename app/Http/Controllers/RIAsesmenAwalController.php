@@ -21,8 +21,14 @@ class RIAsesmenAwalController extends Controller
 
     public function post_ri_asesmen_awal_perawat(Request $request)
     {
+    	$jenis_form = $request->jenis_form;
     	$id_pasien = Session::get('id_pasien');
-    	$data = new RIAsesmenAwalPerawat;
+    	if($jenis_form == 'create') {
+	    	$data = new RIAsesmenAwalPerawat;
+    	}
+    	else {
+	    	$data = RIAsesmenAwalPerawat::where('id_regis', $id_pasien)->first();
+    	}
     	$data->id_regis = $id_pasien;
     	$data->tanggal_diperiksa = $request->tanggal_diperiksa;
 		$data->jam_diperiksa = $request->jam_diperiksa;
@@ -874,6 +880,22 @@ class RIAsesmenAwalController extends Controller
             $data->riwayat_jatuh_edm = $request->riwayat_jatuh_edm;
         }
 
+        //obat
+        $obat = '';
+        $jumlah_form = $request->jumlah_form;
+        for ($i=1; $i <= $jumlah_form ; $i++) { 
+        	$str_nama_obat = 'nama_obat_'.$i;
+        	$str_dosis_obat = 'dosis_obat_'.$i;
+        	$str_terakhir_obat = 'terakhir_obat_'.$i;
+        	if(!empty($request->$str_nama_obat)) {
+        		$obat .= $request->$str_nama_obat.'@&$*#'.$request->$str_dosis_obat.'@&$*#'.$request->$str_terakhir_obat.'^&$*#';
+        	}
+        }
+        if(strlen($obat) > 0) {
+        	$obat = substr($obat, 0, -5);
+        }
+        $data->obat = $obat;
+
     	$data->save();
     }
 
@@ -1040,7 +1062,7 @@ class RIAsesmenAwalController extends Controller
 		}
 		$this->data['faruspikir_ket'] = $pasien->faruspikir_ket;
 		$fmemori = explode('-', $pasien->fmemori);
-		$this->data['fmemori'] = $pasien->fmemori;
+		$this->data['fmemori'] = array();
 		foreach ($fmemori as $key => $value) {
 			$this->data['fmemori'][$value] = True;
 		}
@@ -1150,6 +1172,18 @@ class RIAsesmenAwalController extends Controller
         $this->data['ambulasi'] = $pasien->ambulasi;
         $this->data['nutrisi'] = $pasien->nutrisi;
         $this->data['riwayat_jatuh_edm'] = $pasien->riwayat_jatuh_edm;
+
+
+        $this->data['obat'] = array();
+        $row_obat  = explode('^&$*#', $pasien->obat);
+        foreach ($row_obat as $key => $value) {
+        	$data_obat = explode('@&$*#', $value);
+        	$this->data['obat'][$key] = array();
+        	$this->data['obat'][$key]['nama_obat'] = $data_obat[0];
+        	$this->data['obat'][$key]['dosis_obat'] = $data_obat[1];
+        	$this->data['obat'][$key]['terakhir_obat'] = $data_obat[2];
+
+        }
     }
 
     public function get_ri_asesmen_awal_perawat_read()

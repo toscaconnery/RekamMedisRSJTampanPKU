@@ -194,7 +194,10 @@ class CreateRiAsesmenAwalPerawatTable extends Migration
             $table->string('ambulasi',1)->nullable();
             $table->string('nutrisi',1)->nullable();
             $table->string('riwayat_jatuh_edm',1)->nullable();
-            
+
+            //obat
+            $table->string('obat',1000)->nullable();
+
             $table->timestamps();
         });
     }

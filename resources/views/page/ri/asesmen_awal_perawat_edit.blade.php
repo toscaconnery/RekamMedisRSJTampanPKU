@@ -55,8 +55,9 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_asesmen_awal_perawat_edit">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_asesmen_awal_perawat">
             {{csrf_field()}}
+            <input type="hidden" name="jenis_form" value="update">
             <section class="panel">
               <header class="panel-heading"></header>
               <div class="panel-body">
@@ -2459,26 +2460,41 @@
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama Obat</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Dosis</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Kapan terakhir kali diberikan</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th rowspan="2" style="width: 32%; text-align: center;">Nama Obat</th>
+                      <th rowspan="2" style="width: 32%; text-align: center;">Dosis</th>
+                      <th rowspan="2" style="width: 32%; text-align: center;">Kapan terakhir kali diberikan</th>
+                      <th rowspan="2" style="width: 4%; text-align: center;">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @php
+                      $idx = 0;
+                    @endphp
+                    @foreach($obat as $o)
+                    @php
+                      $idx += 1;
+                    @endphp
+                    <tr id="form_{{$idx}}">
+                      <td><input type="text" class="form-control" name="nama_obat_{{$idx}}" value="{{$o['nama_obat']}}"></td>
+                      <td><input type="text" class="form-control" name="dosis_obat_{{$idx}}" value="{{$o['dosis_obat']}}"></td>
+                      <td><input type="text" class="form-control" name="terakhir_obat_{{$idx}}" value="{{$o['terakhir_obat']}}"></td>
+                      <td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_{{$idx}}"><i class="icon_close_alt2"></i></button></div></td>
+                    </tr>
+                    @endforeach
+                    <tr id="last_row">
+                      <input type="hidden" name="jumlah_form" id="jumlah_form" value="{{$idx}}">
+                      <td colspan="4">
+                        <div class="btn-group">
+                          <button class="btn btn-primary" type="button" id="tambah_form"><i class="icon_plus_alt2"></i> Tambah</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <input type="hidden" name="jumlah_form" id="jumlah_form" value="1">
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Resume</label>
@@ -2746,6 +2762,29 @@
         }
       });
     </script>
+
+    {{-- menambah row inputan --}}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#tambah_form').click(function() {
+        var a = document.getElementById('jumlah_form').value;
+        a = parseInt(a) + 1;
+        $('#last_row').before('<tr id="form_'+a+'"> <td><input type="text" class="form-control" name="nama_obat_'+a+'" required></td> <td><input type="text" class="form-control" name="dosis_obat_'+a+'" required></td> <td><input type="text" class="form-control" name="terakhir_obat_'+a+'" required></td> <td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td> </tr>');
+        document.getElementById('jumlah_form').value = a;
+      });
+    });
+  </script>
+
+  {{-- menghapus row --}}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(document).on('click', '.tombol_hapus', function() {
+        var x = $(this).attr('id');
+        var nomor = x.substring(13)
+        $('#form_'+nomor).remove();
+      });
+    });
+  </script>
 
   </body>
 
