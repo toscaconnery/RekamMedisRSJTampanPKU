@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIAsesmenAwalPerawat;
+use App\Models\RIAsesmenAwalDokter;
 use App\Models\ListDocument;
 use Session;
 
@@ -1199,10 +1200,10 @@ class RIAsesmenAwalController extends Controller
     	return view('page.ri.asesmen_awal_perawat_edit', $this->data);
     }
 
-    public function post_ri_asesmen_awal_perawat_edit(Request $request)
-    {
-    	dd('posting edit perawat');
-    }
+    // public function post_ri_asesmen_awal_perawat_edit(Request $request)
+    // {
+    // 	dd('posting edit perawat');
+    // }
 
     public function get_ri_asesmen_awal_dokter()
     {
@@ -1211,6 +1212,65 @@ class RIAsesmenAwalController extends Controller
 
     public function post_ri_asesmen_awal_dokter(Request $request)
     {
+    	$id_pasien = Session::get('id_pasien');
+    	$data = new RIAsesmenAwalDokter;
+    	$data->id_regis = $id_pasien;
+    	$data->tanggal_diperiksa = $request->tanggal_diperiksa;
+		$data->jam_diperiksa = $request->jam_diperiksa;
+		$data->anamnesa = $request->anamnesa;
+		$data->anamnesa1 = $request->anamnesa1;
+		$data->anamnesa2 = $request->anamnesa2;
+		$data->anamnesa3 = $request->anamnesa3;
+		$data->anamnesa4 = $request->anamnesa4;
+		$data->anamnesa5 = $request->anamnesa5;
+		$data->anamnesa6 = $request->anamnesa6;
+		$data->anamnesa7 = $request->anamnesa7;
+		$data->anamnesa8 = $request->anamnesa8;
+		$data->psikiatri1 = $request->psikiatri1;
+		$data->psikiatri2 = $request->psikiatri2;
+		$data->psikiatri3 = $request->psikiatri3;
+		$data->psikiatri4 = $request->psikiatri4;
+		$data->psikiatri5 = $request->psikiatri5;
+		$data->psikiatri6 = $request->psikiatri6;
+		$data->psikiatri7 = $request->psikiatri7;
+		$data->psikiatri8 = $request->psikiatri8;
+		$data->psikiatri9 = $request->psikiatri9;
+		$data->psikiatri10 = $request->psikiatri10;
+		$data->psikiatri11 = $request->psikiatri11;
+		$data->psikiatri12 = $request->psikiatri12;
+		$data->psikiatri13 = $request->psikiatri13;
+		$data->psikiatri14 = $request->psikiatri14;
+		$data->psikiatri15 = $request->psikiatri15;
+		$data->psikiatri16 = $request->psikiatri16;
+		$data->psikiatri17 = $request->psikiatri17;
+		$data->psikiatri18 = $request->psikiatri18;
+		$data->psikiatri19 = $request->psikiatri19;
+		$data->penunjang1 = $request->penunjang1;
+		$data->penunjang2 = $request->penunjang2;
+		$data->penunjang3 = $request->penunjang3;
+		$data->penunjang4 = $request->penunjang4;
+		$data->penilaian1 = $request->penilaian1;
+		$data->penilaian2 = $request->penilaian2;
+		$data->diagnosis1 = $request->diagnosis1;
+		$data->diagnosis2 = $request->diagnosis2;
+		$data->diagnosis3 = $request->diagnosis3;
+		$data->diagnosis4 = $request->diagnosis4;
+		$data->diagnosis5 = $request->diagnosis5;
+		$data->rencana1 = $request->rencana1;
+		$data->rencana2 = $request->rencana2;
+		$data->rencana3 = $request->rencana3;
+		$data->instruksi1 = $request->instruksi1;
+		$data->Instruksi2 = $request->Instruksi2;
+		$data->Instruksi3 = $request->Instruksi3;
+		$data->instruksi4 = $request->instruksi4;
+		$data->instruksi5 = $request->instruksi5;
+		$data->instruksi6 = $request->instruksi6;
+		$data->instruksi7 = $request->instruksi7;
+		$data->instruksi8 = $request->instruksi8;
+		$data->tanggal = $request->tanggal;
+		$data->jam = $request->jam;
+		$data->nama_dokter = $request->nama_dokter;
+		$data->save();
     	dd('posting_dokter');
     }
 

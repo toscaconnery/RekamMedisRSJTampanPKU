@@ -85,7 +85,7 @@ Route::get('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@get_rj_asesmen_a
 Route::post('/rj_asesmen_awal_perawat', 'RJAsesmenAwalController@post_rj_asesmen_awal_perawat');
 Route::get('/rj_asesmen_awal_perawat_read', 'RJAsesmenAwalController@get_rj_asesmen_awal_perawat_read');
 Route::get('/rj_asesmen_awal_perawat_edit', 'RJAsesmenAwalController@get_rj_asesmen_awal_perawat_edit');
-// Route::post('/rj_asesmen_awal_perawat_edit', 'RJAsesmenAwalController@post_rj_asesmen_awal_perawat_edit');   //no need
+Route::post('/rj_asesmen_awal_perawat_edit', 'RJAsesmenAwalController@post_rj_asesmen_awal_perawat_edit');
 
 Route::get('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@get_rj_asesmen_awal_dokter');
 Route::post('/rj_asesmen_awal_dokter', 'RJAsesmenAwalController@post_rj_asesmen_awal_dokter');
@@ -907,7 +907,7 @@ Route::get('/ri_asesmen_awal_perawat', 'RIAsesmenAwalController@get_ri_asesmen_a
 Route::post('/ri_asesmen_awal_perawat', 'RIAsesmenAwalController@post_ri_asesmen_awal_perawat');
 Route::get('/ri_asesmen_awal_perawat_read', 'RIAsesmenAwalController@get_ri_asesmen_awal_perawat_read');
 Route::get('/ri_asesmen_awal_perawat_edit', 'RIAsesmenAwalController@get_ri_asesmen_awal_perawat_edit');
-Route::post('/ri_asesmen_awal_perawat_edit', 'RIAsesmenAwalController@post_ri_asesmen_awal_perawat_edit');
+// Route::post('/ri_asesmen_awal_perawat_edit', 'RIAsesmenAwalController@post_ri_asesmen_awal_perawat_edit');    //no need
 
 Route::get('/ri_asesmen_awal_dokter', 'RIAsesmenAwalController@get_ri_asesmen_awal_dokter');
 Route::post('/ri_asesmen_awal_dokter', 'RIAsesmenAwalController@post_ri_asesmen_awal_dokter');
