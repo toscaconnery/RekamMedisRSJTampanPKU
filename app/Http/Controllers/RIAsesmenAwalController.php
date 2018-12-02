@@ -1213,7 +1213,13 @@ class RIAsesmenAwalController extends Controller
     public function post_ri_asesmen_awal_dokter(Request $request)
     {
     	$id_pasien = Session::get('id_pasien');
-    	$data = new RIAsesmenAwalDokter;
+    	$jenis_form = $request->jenis_form;
+    	if($jenis_form == 'create') {
+    		$data = new RIAsesmenAwalDokter;
+    	}
+    	elseif($jenis_form == 'update') {
+    		$data = RIAsesmenAwalDokter::where('id_regis', $id_pasien)->first();
+    	}
     	$data->id_regis = $id_pasien;
     	$data->tanggal_diperiksa = $request->tanggal_diperiksa;
 		$data->jam_diperiksa = $request->jam_diperiksa;
@@ -1271,12 +1277,69 @@ class RIAsesmenAwalController extends Controller
 		$data->jam = $request->jam;
 		$data->nama_dokter = $request->nama_dokter;
 		$data->save();
-    	dd('posting_dokter');
+    	
+    	return redirect('ri_asesmen_awal_dokter_read');
     }
 
     public function get_ri_asesmen_awal_dokter_data()
     {
-    	//
+    	$id_pasien = Session::get('id_pasien');
+    	$pasien = RIAsesmenAwalDokter::where('id_regis', $id_pasien)->first();
+    	$this->data['tanggal_diperiksa'] = $pasien->tanggal_diperiksa;
+		$this->data['jam_diperiksa'] = $pasien->jam_diperiksa;
+		$this->data['anamnesa'] = $pasien->anamnesa;
+		$this->data['anamnesa1'] = $pasien->anamnesa1;
+		$this->data['anamnesa2'] = $pasien->anamnesa2;
+		$this->data['anamnesa3'] = $pasien->anamnesa3;
+		$this->data['anamnesa4'] = $pasien->anamnesa4;
+		$this->data['anamnesa5'] = $pasien->anamnesa5;
+		$this->data['anamnesa6'] = $pasien->anamnesa6;
+		$this->data['anamnesa7'] = $pasien->anamnesa7;
+		$this->data['anamnesa8'] = $pasien->anamnesa8;
+		$this->data['psikiatri1'] = $pasien->psikiatri1;
+		$this->data['psikiatri2'] = $pasien->psikiatri2;
+		$this->data['psikiatri3'] = $pasien->psikiatri3;
+		$this->data['psikiatri4'] = $pasien->psikiatri4;
+		$this->data['psikiatri5'] = $pasien->psikiatri5;
+		$this->data['psikiatri6'] = $pasien->psikiatri6;
+		$this->data['psikiatri7'] = $pasien->psikiatri7;
+		$this->data['psikiatri8'] = $pasien->psikiatri8;
+		$this->data['psikiatri9'] = $pasien->psikiatri9;
+		$this->data['psikiatri10'] = $pasien->psikiatri10;
+		$this->data['psikiatri11'] = $pasien->psikiatri11;
+		$this->data['psikiatri12'] = $pasien->psikiatri12;
+		$this->data['psikiatri13'] = $pasien->psikiatri13;
+		$this->data['psikiatri14'] = $pasien->psikiatri14;
+		$this->data['psikiatri15'] = $pasien->psikiatri15;
+		$this->data['psikiatri16'] = $pasien->psikiatri16;
+		$this->data['psikiatri17'] = $pasien->psikiatri17;
+		$this->data['psikiatri18'] = $pasien->psikiatri18;
+		$this->data['psikiatri19'] = $pasien->psikiatri19;
+		$this->data['penunjang1'] = $pasien->penunjang1;
+		$this->data['penunjang2'] = $pasien->penunjang2;
+		$this->data['penunjang3'] = $pasien->penunjang3;
+		$this->data['penunjang4'] = $pasien->penunjang4;
+		$this->data['penilaian1'] = $pasien->penilaian1;
+		$this->data['penilaian2'] = $pasien->penilaian2;
+		$this->data['diagnosis1'] = $pasien->diagnosis1;
+		$this->data['diagnosis2'] = $pasien->diagnosis2;
+		$this->data['diagnosis3'] = $pasien->diagnosis3;
+		$this->data['diagnosis4'] = $pasien->diagnosis4;
+		$this->data['diagnosis5'] = $pasien->diagnosis5;
+		$this->data['rencana1'] = $pasien->rencana1;
+		$this->data['rencana2'] = $pasien->rencana2;
+		$this->data['rencana3'] = $pasien->rencana3;
+		$this->data['instruksi1'] = $pasien->instruksi1;
+		$this->data['Instruksi2'] = $pasien->Instruksi2;
+		$this->data['Instruksi3'] = $pasien->Instruksi3;
+		$this->data['instruksi4'] = $pasien->instruksi4;
+		$this->data['instruksi5'] = $pasien->instruksi5;
+		$this->data['instruksi6'] = $pasien->instruksi6;
+		$this->data['instruksi7'] = $pasien->instruksi7;
+		$this->data['instruksi8'] = $pasien->instruksi8;
+		$this->data['tanggal'] = $pasien->tanggal;
+		$this->data['jam'] = $pasien->jam;
+		$this->data['nama_dokter'] = $pasien->nama_dokter;
     }
 
     public function get_ri_asesmen_awal_dokter_read()
@@ -1291,9 +1354,9 @@ class RIAsesmenAwalController extends Controller
     	return view('page.ri.asesmen_awal_dokter_edit', $this->data);
     }
 
-    public function post_ri_asesmen_awal_dokter_edit(Request $request)
-    {
-    	dd('posting edit dokter');
-    }
+    // public function post_ri_asesmen_awal_dokter_edit(Request $request)
+    // {
+    // 	dd('posting edit dokter');
+    // }
 
 }
