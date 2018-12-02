@@ -18,6 +18,7 @@ use App\Models\RJTumbuhKembangRiwayatPsikiatrik;
 use App\Models\RJTumbuhKembangPemeriksaanStatusMental;
 use App\Models\RJTumbuhKembangLainnya;
 use App\Models\RJTumbuhKembangPsikiatri;
+use App\Models\RJTumbuhKembangKlinik;
 use Session;
 use View;
 
@@ -1078,6 +1079,50 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
         $data->tanggal = $request->tanggal;
         $data->save();
         return redirect('rj_asesmen_awal_tumbuh_kembang_psikiatri_read');
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_klinik()
+    {
+        return view('page.rj.tumbuh_kembang_klinik', $this->data);
+    }
+
+    public function post_rj_asesmen_awal_tumbuh_kembang_klinik(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = new RJTumbuhKembangKlinik;
+        $data->id_regis = $id_pasien;
+        $data->hasil = $request->hasil;
+        $data->save();
+        return redirect('rj_asesmen_awal_tumbuh_kembang_klinik_read');
+
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_klinik_data()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RJTumbuhKembangKlinik::where('id_regis', $id_pasien)->first();
+        $this->data['hasil'] = $data->hasil;
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_klinik_read()
+    {
+        $this->get_rj_asesmen_awal_tumbuh_kembang_klinik_data();
+        return view('page.rj.tumbuh_kembang_klinik_read', $this->data);
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_klinik_edit()
+    {
+        $this->get_rj_asesmen_awal_tumbuh_kembang_klinik_data();
+        return view('page.rj.tumbuh_kembang_klinik_edit', $this->data);
+    }
+
+    public function post_rj_asesmen_awal_tumbuh_kembang_klinik_edit(Request $request) 
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RJTumbuhKembangKlinik::where('id_regis', $id_pasien)->first();
+        $data->hasil = $request->hasil;
+        $data->save();
+        return redirect('rj_asesmen_awal_tumbuh_kembang_klinik_read');
     }
 
     public function rj_tumbuhkembang_pdf()

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRjAsesmenTumbuhKembangPsikologTable extends Migration
+class CreateRjTumbuhKembangKlinikTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateRjAsesmenTumbuhKembangPsikologTable extends Migration
      */
     public function up()
     {
-        Schema::create('rj_asesmen_tumbuh_kembang_psikolog', function (Blueprint $table) {
+        Schema::create('rj_tumbuh_kembang_klinik', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_regis')->reference('id_pasien')->on('identifikasi')->nullable();
+            $table->string('hasil')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateRjAsesmenTumbuhKembangPsikologTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rj_asesmen_tumbuh_kembang_psikolog');
+        Schema::dropIfExists('rj_tumbuh_kembang_klinik');
     }
 }

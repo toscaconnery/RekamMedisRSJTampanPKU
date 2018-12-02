@@ -56,8 +56,7 @@
     <div class="row">
       <div class="col-lg-12">
 
-        <form class="form-horizontal" method="post" action="rj_asesmen_awal_tumbuh_kembang_klinik">
-          {{ csrf_field() }}
+        <form class="form-horizontal">
           <section class="panel">
             <header class="panel-heading">
               Klinik Tumbuh – Kembang dan Edukasi Terpadu Lembar Gabungan Hasil Evaluasi Terapi
@@ -66,16 +65,11 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Isian</label>
                 <div class="col-sm-8">
-                  <textarea class="form-control" rows="20" name="hasil"></textarea>
+                  <textarea class="form-control" rows="20" name="hasil" readonly>{{$hasil}}</textarea>
                 </div>
               </div>
             </div>
           </section>
-
-          <div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-
         </form>
 
       </div>
