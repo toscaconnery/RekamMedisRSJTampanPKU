@@ -69,6 +69,20 @@ class RIRisikoNyeriController extends Controller
         'orientation' => 'P'
         ]);
 
+        if($this->data['waktu'] == 'P' || $this->data['waktu'] == 'p' )
+        {
+            $this->data['waktu'] = 'Pagi';
+        }
+        else if($this->data['waktu'] == 'S' || $this->data['waktu'] == 's' )
+        {
+            $this->data['waktu'] = 'Siang';
+        }
+        else
+        {
+            $this->data['waktu'] = 'Malam';
+        }
+
+
         $view = View::make('doc_ri_nyeri',$this->data);
         $contents = $view->render();
 

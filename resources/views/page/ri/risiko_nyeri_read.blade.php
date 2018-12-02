@@ -55,49 +55,35 @@
           <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_risiko_nyeri">
             {{ csrf_field() }}
             <section class="panel">
-              <header class="panel-heading">
-                Penilaian Resiko Nyeri
-              </header>
-              <div class="panel-body">
-                <div class="form-group"></div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Tanggal</label>
-                  <div class="col-sm-2">
-                    <input type="text" id="dp1" class="form-control" name="tanggal"  disabled="" value="{{$tanggal}}">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="control-label col-lg-2" for="inputSuccess">Waktu</label>
-                  <div class="col-lg-2">
-                    <select class="form-control m-bot15" name="waktu">
-                      <option value="p" disabled {{$waktu == 'p' ? 'selected' : ''}}>Pagi</option>
-                      <option value="s" disabled {{$waktu == 's' ? 'selected' : ''}}>Siang</option>
-                      <option value="m" disabled {{$waktu == 'm' ? 'selected' : ''}}>Malam</option>
-                    </select>
-                  </div> 
-                </div>
-                <div class="form-group">
-                  <label class="control-label col-lg-2" for="inputSuccess">Skala Nyeri</label>
-                  <div class="col-lg-2">
-                    <select class="form-control m-bot15" name="skala">
-                      <option value="1" disabled {{$skala == '1' ? 'selected' : ''}}>1</option>
-                      <option value="2" disabled {{$skala == '2' ? 'selected' : ''}}>2</option>
-                      <option value="3" disabled {{$skala == '3' ? 'selected' : ''}}>3</option>
-                      <option value="4" disabled {{$skala == '4' ? 'selected' : ''}}>4</option>
-                      <option value="5" disabled {{$skala == '5' ? 'selected' : ''}}>5</option>
-                      <option value="6" disabled {{$skala == '6' ? 'selected' : ''}}>6</option>
-                      <option value="7" disabled {{$skala == '7' ? 'selected' : ''}}>7</option>
-                      <option value="8" disabled {{$skala == '8' ? 'selected' : ''}}>8</option>
-                      <option value="9" disabled {{$skala == '9' ? 'selected' : ''}}>9</option>
-                      <option value="10" disabled {{$skala == '10' ? 'selected' : ''}}>10</option>
-                    </select>
-                  </div> 
-                </div>
-              </div>
+              <table class="table table-bordered">
+
+                  <thead>
+                    <tr>
+                      <th style="width: 30%; text-align: center;vertical-align:middle;">Tanggal, Bulan, Tahun</th>
+                      <th style="width: 30%; text-align: center;vertical-align:middle;">Waktu</th>
+                      <th style="width: 30%; text-align: center;vertical-align:middle;">Skala Nyeri</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Action</a></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td style="width: 33.3%; text-align: center;vertical-align:middle;">
+                        {{ $tanggal }}
+                      </td>
+                      <td style="width: 33.3%; text-align: center;vertical-align:middle;">
+                        {{ $waktu }}
+                      </td>
+                      <td style="width: 33.3%; text-align: center;vertical-align:middle;"> 
+                       {{ $skala }}
+                      </td>
+                      <td>
+                        <a href=""><button type="button" class="btn btn-primary">Edit</button></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
             </section>
-            <div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
           </form>
         </div>
       </div>

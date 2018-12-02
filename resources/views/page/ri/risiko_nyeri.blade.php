@@ -71,9 +71,9 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Waktu</label>
                   <div class="col-lg-2">
                     <select class="form-control m-bot15" name="waktu">
-                      <option value="p">Pagi</option>
-                      <option value="s">Siang</option>
-                      <option value="m">Malam</option>
+                      <option value="P">Pagi</option>
+                      <option value="S">Siang</option>
+                      <option value="M">Malam</option>
                     </select>
                   </div> 
                 </div>
