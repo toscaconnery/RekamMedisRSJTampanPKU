@@ -56,8 +56,7 @@
     <div class="row">
       <div class="col-lg-12">
 
-        <form class="form-horizontal" method="post" action="rj_asesmen_awal_tumbuh_kembang_fisioterapi">
-          {{ csrf_field() }}
+        <form class="form-horizontal">
           <section class="panel">
             <header class="panel-heading">
               Lembar Pemeriksaan Fisioterapi
@@ -67,25 +66,25 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Diagnosis Medis</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f1" class="form-control">
+                  <input type="text" disabled name="f1" value="{{$f1}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Catatan Klinis</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f2" class="form-control">
+                  <input type="text" disabled name="f2" value="{{$f2}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Terapi Umum (General Treatment)</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f3" class="form-control">
+                  <input type="text" disabled name="f3" value="{{$f3}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Rujukan Fisioterapi dari dokter</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f4" class="form-control">
+                  <input type="text" disabled name="f4" value="{{$f4}}" class="form-control">
                 </div>
               </div>
 
@@ -93,43 +92,43 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Keluhan Utama</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f5" class="form-control">
+                  <input type="text" disabled name="f5" value="{{$f5}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Keluhan Penyerta</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f6" class="form-control">
+                  <input type="text" disabled name="f6" value="{{$f6}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Riwayat Penyakit Sekarang</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f7" class="form-control">
+                  <input type="text" disabled name="f7" value="{{$f7}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Rujukan Fisioterapi dari dokter</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f8" class="form-control">
+                  <input type="text" disabled name="f8" value="{{$f8}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Riwayat Penyakit Dahulu</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f9" class="form-control">
+                  <input type="text" disabled name="f9" value="{{$f9}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Riwayat Pribadi</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f10" class="form-control">
+                  <input type="text" disabled name="f10" value="{{$f10}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Riwayat Keluarga</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f11" class="form-control">
+                  <input type="text" disabled name="f11" value="{{$f11}}" class="form-control">
                 </div>
               </div>
 
@@ -137,31 +136,31 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Kesadaran</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f12" class="form-control">
+                  <input type="text" disabled name="f12" value="{{$f12}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Tekanan Darah</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f13" class="form-control">
+                  <input type="text" disabled name="f13" value="{{$f13}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Denyut Nadi</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f14" class="form-control">
+                  <input type="text" disabled name="f14" value="{{$f14}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Pernafasan</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f15" class="form-control">
+                  <input type="text" disabled name="f15" value="{{$f15}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Temperatur</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f16" class="form-control">
+                  <input type="text" disabled name="f16" value="{{$f16}}" class="form-control">
                 </div>
               </div>
 
@@ -169,81 +168,77 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label">Inspeksi Umum</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f17" class="form-control">
+                  <input type="text" disabled name="f17" value="{{$f17}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Inspeksi Khusus</label>
                 <div class="col-sm-8">
-                  <input type="text" name="f18" class="form-control">
+                  <input type="text" disabled name="f18" value="{{$f18}}" class="form-control">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Pemeriksaan Fungsi Gerak Dasar </label>
                 <div class="col-sm-8">
-                  <textarea class="form-control" rows="6" style="resize: vertical;" name="f19"></textarea>
+                  <textarea readonly class="form-control" rows="6" style="resize: vertical;" name="f19">{{$f19}}</textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Tes Khusus </label>
                 <div class="col-sm-8">
-                  <textarea class="form-control" rows="6" style="resize: vertical;" name="f20"></textarea>
+                  <textarea readonly class="form-control" rows="6" style="resize: vertical;" name="f20">{{$f20}}</textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Informasi Lain </label>
                 <div class="col-sm-8">
-                  <textarea class="form-control" rows="6" style="resize: vertical;" name="f21"></textarea>
+                  <textarea readonly class="form-control" rows="6" style="resize: vertical;" name="f21">{{$f21}}</textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Pengukuran</label>
                 <div class="col-sm-8">
-                  <textarea class="form-control" rows="6" style="resize: vertical;" name="f22"></textarea>
+                  <textarea readonly class="form-control" rows="6" style="resize: vertical;" name="f22">{{$f22}}</textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Problem Fisioterapi </label>
                 <div class="col-sm-8">
-                  <textarea class="form-control" rows="6" style="resize: vertical;" name="f23"></textarea>
+                  <textarea readonly class="form-control" rows="6" style="resize: vertical;" name="f23">{{$f23}}</textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Diagnosis Fisioterapi</label>
                 <div class="col-sm-8">
-                  <textarea class="form-control" rows="6" style="resize: vertical;" name="f24"></textarea>
+                  <textarea readonly class="form-control" rows="6" style="resize: vertical;" name="f24">{{$f24}}</textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Perencanaan Program Fisioterapi </label>
                 <div class="col-sm-8">
-                  <textarea class="form-control" rows="6" style="resize: vertical;" name="f25"></textarea>
+                  <textarea readonly class="form-control" rows="6" style="resize: vertical;" name="f25">{{$f25}}</textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Intervensi</label>
                 <div class="col-sm-8">
-                  <textarea class="form-control" rows="6" style="resize: vertical;" name="f26"></textarea>
+                  <textarea readonly class="form-control" rows="6" style="resize: vertical;" name="f26">{{$f26}}</textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Evaluasi</label>
                 <div class="col-sm-8">
-                  <textarea class="form-control" rows="6" style="resize: vertical;" name="f27"></textarea>
+                  <textarea readonly class="form-control" rows="6" style="resize: vertical;" name="f27">{{$f27}}</textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Tanggal</label>
                 <div class="col-sm-8">
-                  <textarea class="form-control" rows="6" style="resize: vertical;" name="f28"></textarea>
+                  <textarea readonly class="form-control" rows="6" style="resize: vertical;" name="f28">{{$f28}}</textarea>
                 </div>
               </div>
             </div>
           </section>
-
-          <div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
         </form>
 
       </div>
