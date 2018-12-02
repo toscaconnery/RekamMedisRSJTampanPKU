@@ -585,7 +585,7 @@ header('Content-Type: application/pdf');
     <p>{{$dibantu_belajar_oleh}}, {{$dibantu_belajar_oleh_lainnya}}</p>
 
     <p>11. Keluhan anak dalam mata pelajaran yang dianggapnya sulit</p>
-    <p>Isi</p>
+    <p>{{$keluhan_di_pelajaran_sulit}}</p>
 
     <p>12. Sikap anak dalam mengikuti kegiatan kelas tersebut di atas</p>
     <p>{{$sikap_di_kegiatan}}</p>
@@ -845,7 +845,7 @@ header('Content-Type: application/pdf');
 
   <h2 align="center">LAYANAN KONSULTASI PSIKIATRI KLINIK TUMBUH KEMBANG ANAK DAN REMAJA</h2><br>
   
-  <p>Alamat Pasien : - </p> 
+  <p>Alamat Pasien : {{$f1}} </p> 
   <hr class="limit">
   <div style="font-size: 85%;">  
      <table>
@@ -855,7 +855,7 @@ header('Content-Type: application/pdf');
             ANAMNESIS
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f2}}
           </td>                
         </tr>
         <tr>
@@ -863,7 +863,7 @@ header('Content-Type: application/pdf');
             PEMERIKSAAN FISIK
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f3}}
           </td>                
         </tr>
         <tr>
@@ -871,7 +871,7 @@ header('Content-Type: application/pdf');
             PEMERIKSAAN PSIKIATRIK
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f4}}
           </td>                
         </tr>
         <tr>
@@ -879,7 +879,7 @@ header('Content-Type: application/pdf');
             PEMERIKSAAN PENUNJANG
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f5}}
           </td>                
         </tr>
         <tr>
@@ -887,7 +887,7 @@ header('Content-Type: application/pdf');
             DIAGNOSIS MEDIS (ICD – 10)
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f6}}
           </td>                
         </tr>
         <tr>
@@ -895,7 +895,7 @@ header('Content-Type: application/pdf');
             TERAPI PSIKOFARMAKA
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f7}}
           </td>                
         </tr>
       </tbody>
@@ -910,10 +910,10 @@ header('Content-Type: application/pdf');
             1. Terapi Prilaku (Frekuensi)
           </td>    
           <td class="defaultnb" style="width:35%">  
-            : -
+            : {{$t1}}
           </td>      
           <td class="defaultnb" style="width:35%">  
-            Frekuensi : -    x/minggu
+            Frekuensi : {{$r1}} x/minggu
           </td>           
         </tr>
         <tr>
@@ -921,10 +921,10 @@ header('Content-Type: application/pdf');
             2. Sensori Integrasi
           </td>    
           <td class="defaultnb" style="width:35%">  
-            : -
+            : {{$t2}}
           </td>        
            <td class="defaultnb" style="width:35%">  
-            Frekuensi : -    x/minggu
+            Frekuensi : {{$r2}} x/minggu
           </td>              
         </tr>
         <tr>
@@ -932,10 +932,10 @@ header('Content-Type: application/pdf');
             3. Terapi Okupasi
           </td>    
           <td class="defaultnb" style="width:35%">  
-            : -
+            : {{$t3}}
           </td>      
            <td class="defaultnb" style="width:35%">  
-            Frekuensi : -    x/minggu
+            Frekuensi : {{$r3}} x/minggu
           </td>                
         </tr>
         <tr>
@@ -943,10 +943,10 @@ header('Content-Type: application/pdf');
             4. Sensori Integrasi 
           </td>    
           <td class="defaultnb" style="width:35%">  
-            : -
+            : {{$t4}}
           </td>    
            <td class="defaultnb" style="width:35%">  
-            Frekuensi : -    x/minggu
+            Frekuensi : {{$r4}} x/minggu
           </td>                  
         </tr>
         <tr>
@@ -954,10 +954,10 @@ header('Content-Type: application/pdf');
             5. Terapi Wicara
           </td>    
           <td class="defaultnb" style="width:35%">  
-            : -
+            : {{$t5}}
           </td> 
            <td class="defaultnb" style="width:35%">  
-            Frekuensi : -    x/minggu
+            Frekuensi : {{$r5}} x/minggu
           </td>                     
         </tr>
         <tr>
@@ -965,10 +965,10 @@ header('Content-Type: application/pdf');
             6. Remedical Teaching
           </td>    
           <td class="defaultnb" style="width:35%">  
-            : -
+            : {{$t6}}
           </td>   
            <td class="defaultnb" style="width:35%">  
-            Frekuensi : -    x/minggu
+            Frekuensi : {{$r6}} x/minggu
           </td>                   
         </tr>
         <tr>
@@ -976,10 +976,10 @@ header('Content-Type: application/pdf');
             7. Play Therapy 
           </td>    
           <td class="defaultnb" style="width:35%">  
-            : -
+            : {{$t7}}
           </td>    
            <td class="defaultnb" style="width:35%">  
-            Frekuensi : -    x/minggu
+            Frekuensi : {{$r7}} x/minggu
           </td>                  
         </tr>
         <tr>
@@ -987,10 +987,10 @@ header('Content-Type: application/pdf');
             8. Story Telling
           </td>    
           <td class="defaultnb" style="width:35%">  
-            : -
+            : {{$t8}}
           </td>   
            <td class="defaultnb" style="width:35%">  
-            Frekuensi : -    x/minggu
+            Frekuensi : {{$r8}} x/minggu
           </td>                   
         </tr>
       </tbody>
@@ -1007,15 +1007,15 @@ header('Content-Type: application/pdf');
         <br>
         <br>
         <br>
-        <p style="text-align: center;">( ................)</p>
+        <p style="text-align: center;">([nama pasien])</p>
       </div>
       <div class="column">
-        <p style="text-align: center;">Pekanbaru, 28/12/2018</p>
+        <p style="text-align: center;">Pekanbaru, [tanggal]</p>
         <p style="text-align: center;">Psikiater</p>
         <br>
         <br>
         <br>
-        <p style="text-align: center;">( ................)</p>
+        <p style="text-align: center;">([Nama Psikiater])</p>
       </div>
     </div>
   </div>

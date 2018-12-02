@@ -39,9 +39,8 @@
                 <td>[Nama Pengisi]</td>
                 <td>
                   <div class="btn-group">
-                    <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                    <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                    <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                    <a class="btn btn-primary" href="{{url('')}}/ri_napza_pdf">PDF</a>
+                      <a class="btn btn-danger" href="#">EDIT</i></a>
                   </div>
                 </td>
               </tr>
@@ -826,7 +825,7 @@
                   <div class="checkbox">
                     <label>
                       <input type="checkbox" disabled name="keluhan_fisik_16" {{isset($keluhan_fisik[16]) ? 'checked' : ''}}>
-                      Pupip melebar
+                      Pupil melebar
                     </label>
                   </div>
                   <div class="checkbox">

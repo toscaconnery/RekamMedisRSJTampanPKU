@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\RIRawatNapza;
 use Session;
+use View;
 
 class RIRawatNapzaController extends Controller
 {
@@ -1672,5 +1673,169 @@ class RIRawatNapzaController extends Controller
         $data->save();
 
         return back();
+    }
+
+    function convert($stats)
+    {
+        if($this->data['f1'])
+        {
+            $this->data['f1'] = 'Pernah';
+        }
+        else 
+        {
+            $this->data['f1'] = 'Tidak';
+        }
+
+        if($this->data['f2'])
+        {
+            $this->data['f2'] = 'Pernah';
+        }
+        else 
+        {
+            $this->data['f2'] = 'Tidak';
+        }
+
+        if($this->data['f3'])
+        {
+            $this->data['f3'] = 'Ya';
+        }
+        else 
+        {
+           $this->data['f3'] = 'Tidak';
+        }
+
+        if($this->data['f4'])
+        {
+            $this->data['f4'] = 'Ya';
+        }
+        else 
+        {
+           $this->data['f4'] = 'Tidak';
+        }
+
+        if($this->data['f5']=='1')
+        {
+            $this->data['f5'] = 'Belum menikah ';
+        }
+        elseif ($this->data['f5']=='2') 
+        {
+           $this->data['f5'] = 'Menikah';
+        }
+        elseif ($this->data['f5']=='3') 
+        {
+           $this->data['f5'] = 'Cerai hidup';
+        }
+        elseif ($this->data['f5']=='4') 
+        {
+           $this->data['f5'] = 'Cerai meninggal';
+        }
+        elseif ($this->data['f5']=='5') 
+        {
+           $this->data['f5'] = 'Ditinggalkan pasangan hidup';
+        }
+        else 
+        {
+           $this->data['f5'] = 'Hidup bersama';
+        }
+
+        if($this->data['f6'])
+        {
+            $this->data['f6'] = 'Pernah';
+        }
+        else 
+        {
+           $this->data['f6'] = 'Tidak pernah';
+        }
+
+        if($this->data['f7']=='1')
+        {
+            $this->data['f7'] = 'Bekerja menetap';
+        }
+        elseif ($this->data['f7']=='2') 
+        {
+           $this->data['f7'] = 'Tidak bekerja';
+        }
+        elseif ($this->data['f7']=='3') 
+        {
+           $this->data['f7'] = 'Pindah-pindah pekerjaan';
+        }
+        else 
+        {
+           $this->data['f7'] = 'Diberhentikan/dipecat';
+        }
+    }
+
+
+    public function ri_napza_pdf()
+    {
+        $this->get_ri_rawat_napza_data();
+        $this->convert();
+
+        ob_clean();
+
+        header('Content-type: application/pdf');
+
+        $mpdf = new \Mpdf\Mpdf([
+        'mode' => 'utf-8', 
+        'format' => 'A4-L', 
+        'orientation' => 'P'
+        ]);
+
+        $view = View::make('doc_ri_napza',$this->data);
+        $contents = $view->render();
+
+
+        $mpdf->SetHTMLHeader('
+            <table width="100%" >
+                <tbody>
+                        <tr>
+
+                            <td class= "doc_headerleft">
+                                <img class="relative" src="img/riau.png" height="9%" width="7%">
+                            </td>
+
+                            <td class="doc_headermid">
+                                <p style="font-size:120%;" ><b>Pemerintah Provinsi Riau</b></p>
+                                <br><p style="font-size:160%;" ><b>RUMAH SAKIT JIWA TAMPAN</b></p>
+                                <br><p style="font-size:90%;" >Jl. H. R. Soebrantas Km. 12,5 Pekanbaru Telp. (0761) 63240</p>
+                                <p style="font-size:90%;" >Fax. (0761) 63239 E-mail : rstampan@yahoo.com</p>
+                            </td>
+                            
+                            <td class="doc_headerright">
+                            <p>No. RM           </p><br>
+                            <p>Nama Pasien      </p><br>
+                            <p>Tanggal Lahir    </p><br>
+                            <p>Jenis Kelamin    </p><br>
+                            </td>    
+
+                            <td class="doc_headerright_ans">
+                            <p>:  123456</p><br>
+                            <p>:  Joko Pangestu</p><br>
+                            <p>:  13/08/1992</p><br>
+                            <p>:  L</p><br>
+                            </td>                       
+                        </tr>
+  
+                </tbody>
+            </table> <hr>' );
+
+        $mpdf->SetHTMLFooter('<hr>
+            <table width="100%" style="vertical-align: bottom; font-family: "arial", Times, serif; 
+                font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+                <tr>
+                    <td width="33%">{DATE j-m-Y}</td>
+                    <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+                    <td width="33%" style="text-align: right;">RM. 15.00.RI JULI 2015</td>
+                </tr>
+            </table>'); 
+
+        $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
+
+        $mpdf->AddPage('P','','','','',10,10,35,20,10,10);
+        //right,left
+        $mpdf->WriteHTML($stylesheet, 1);
+        $mpdf->WriteHTML($contents,2,true,false);
+
+        $mpdf->Output('ri_napza.pdf',\Mpdf\Output\Destination::INLINE);
     }
 }
