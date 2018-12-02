@@ -902,6 +902,19 @@ Route::get('/doc_ri_rencanaklien7', function () {
     return view('/doc_ri_rencanaklien7');
 });
 
+
+Route::get('/ri_asesmen_awal_perawat', 'RIAsesmenAwalController@get_ri_asesmen_awal_perawat');
+Route::post('/ri_asesmen_awal_perawat', 'RIAsesmenAwalController@post_ri_asesmen_awal_perawat');
+Route::get('/ri_asesmen_awal_perawat_read', 'RIAsesmenAwalController@get_ri_asesmen_awal_perawat_read');
+Route::get('/ri_asesmen_awal_perawat_edit', 'RIAsesmenAwalController@get_ri_asesmen_awal_perawat_edit');
+Route::post('/ri_asesmen_awal_perawat_edit', 'RIAsesmenAwalController@post_ri_asesmen_awal_perawat_edit');
+
+Route::get('/ri_asesmen_awal_dokter', 'RIAsesmenAwalController@get_ri_asesmen_awal_dokter');
+Route::post('/ri_asesmen_awal_dokter', 'RIAsesmenAwalController@post_ri_asesmen_awal_dokter');
+Route::get('/ri_asesmen_awal_dokter_read', 'RIAsesmenAwalController@get_ri_asesmen_awal_dokter_read');
+Route::get('/ri_asesmen_awal_dokter_edit', 'RIAsesmenAwalController@get_ri_asesmen_awal_dokter_edit');
+Route::post('/ri_asesmen_awal_dokter_edit', 'RIAsesmenAwalController@post_ri_asesmen_awal_dokter_edit');
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
