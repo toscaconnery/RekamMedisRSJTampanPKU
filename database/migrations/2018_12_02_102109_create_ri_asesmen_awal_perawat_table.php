@@ -100,7 +100,7 @@ class CreateRiAsesmenAwalPerawatTable extends Migration
             $table->string('fhubungansosial3',150)->nullable();
             $table->string('fspiritual1',150)->nullable();
             $table->string('fspiritual2',150)->nullable();
-            $table->string('fpenampilan1',5)->nullable();
+            $table->string('fpenampilan',5)->nullable();
             $table->string('fpenampilan_ket',150)->nullable();
             $table->string('fpembicaraan',15)->nullable();
             $table->string('fpembicaraan_ket')->nullable();
