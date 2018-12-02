@@ -18,6 +18,8 @@ use App\Models\RJTumbuhKembangRiwayatPsikiatrik;
 use App\Models\RJTumbuhKembangPemeriksaanStatusMental;
 use App\Models\RJTumbuhKembangLainnya;
 use App\Models\RJTumbuhKembangPsikiatri;
+use App\Models\RJTumbuhKembangKlinik;
+use App\Models\RJTumbuhKembangFisioterapi;
 use Session;
 use View;
 
@@ -1078,6 +1080,174 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
         $data->tanggal = $request->tanggal;
         $data->save();
         return redirect('rj_asesmen_awal_tumbuh_kembang_psikiatri_read');
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_klinik()
+    {
+        return view('page.rj.tumbuh_kembang_klinik', $this->data);
+    }
+
+    public function post_rj_asesmen_awal_tumbuh_kembang_klinik(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = new RJTumbuhKembangKlinik;
+        $data->id_regis = $id_pasien;
+        $data->hasil = $request->hasil;
+        $data->save();
+        return redirect('rj_asesmen_awal_tumbuh_kembang_klinik_read');
+
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_klinik_data()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RJTumbuhKembangKlinik::where('id_regis', $id_pasien)->first();
+        $this->data['hasil'] = $data->hasil;
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_klinik_read()
+    {
+        $this->get_rj_asesmen_awal_tumbuh_kembang_klinik_data();
+        return view('page.rj.tumbuh_kembang_klinik_read', $this->data);
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_klinik_edit()
+    {
+        $this->get_rj_asesmen_awal_tumbuh_kembang_klinik_data();
+        return view('page.rj.tumbuh_kembang_klinik_edit', $this->data);
+    }
+
+    public function post_rj_asesmen_awal_tumbuh_kembang_klinik_edit(Request $request) 
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RJTumbuhKembangKlinik::where('id_regis', $id_pasien)->first();
+        $data->hasil = $request->hasil;
+        $data->save();
+        return redirect('rj_asesmen_awal_tumbuh_kembang_klinik_read');
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_fisioterapi()
+    {
+        return view('page.rj.tumbuh_kembang_fisioterapi', $this->data);
+    }
+
+    public function post_rj_asesmen_awal_tumbuh_kembang_fisioterapi(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = new RJTumbuhKembangFisioterapi;
+        $data->id_regis = $id_pasien;
+        $data->f1 = $request->f1;
+        $data->f2 = $request->f2;
+        $data->f3 = $request->f3;
+        $data->f4 = $request->f4;
+        $data->f5 = $request->f5;
+        $data->f6 = $request->f6;
+        $data->f7 = $request->f7;
+        $data->f8 = $request->f8;
+        $data->f9 = $request->f9;
+        $data->f10 = $request->f10;
+        $data->f11 = $request->f11;
+        $data->f12 = $request->f12;
+        $data->f13 = $request->f13;
+        $data->f14 = $request->f14;
+        $data->f15 = $request->f15;
+        $data->f16 = $request->f16;
+        $data->f17 = $request->f17;
+        $data->f18 = $request->f18;
+        $data->f19 = $request->f19;
+        $data->f20 = $request->f20;
+        $data->f21 = $request->f21;
+        $data->f22 = $request->f22;
+        $data->f23 = $request->f23;
+        $data->f24 = $request->f24;
+        $data->f25 = $request->f25;
+        $data->f26 = $request->f26;
+        $data->f27 = $request->f27;
+        $data->f28 = $request->f28;
+        $data->save();
+        return redirect('rj_asesmen_awal_tumbuh_kembang_fisioterapi_read');
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_fisioterapi_data()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RJTumbuhKembangFisioterapi::where('id_regis', $id_pasien)->first();
+        $this->data['f1'] = $pasien->f1;
+        $this->data['f2'] = $pasien->f2;
+        $this->data['f3'] = $pasien->f3;
+        $this->data['f4'] = $pasien->f4;
+        $this->data['f5'] = $pasien->f5;
+        $this->data['f6'] = $pasien->f6;
+        $this->data['f7'] = $pasien->f7;
+        $this->data['f8'] = $pasien->f8;
+        $this->data['f9'] = $pasien->f9;
+        $this->data['f10'] = $pasien->f10;
+        $this->data['f11'] = $pasien->f11;
+        $this->data['f12'] = $pasien->f12;
+        $this->data['f13'] = $pasien->f13;
+        $this->data['f14'] = $pasien->f14;
+        $this->data['f15'] = $pasien->f15;
+        $this->data['f16'] = $pasien->f16;
+        $this->data['f17'] = $pasien->f17;
+        $this->data['f18'] = $pasien->f18;
+        $this->data['f19'] = $pasien->f19;
+        $this->data['f20'] = $pasien->f20;
+        $this->data['f21'] = $pasien->f21;
+        $this->data['f22'] = $pasien->f22;
+        $this->data['f23'] = $pasien->f23;
+        $this->data['f24'] = $pasien->f24;
+        $this->data['f25'] = $pasien->f25;
+        $this->data['f26'] = $pasien->f26;
+        $this->data['f27'] = $pasien->f27;
+        $this->data['f28'] = $pasien->f28;
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_fisioterapi_read()
+    {
+        $this->get_rj_asesmen_awal_tumbuh_kembang_fisioterapi_data();
+        return view('page.rj.tumbuh_kembang_fisioterapi_read', $this->data);
+    }
+
+    public function get_rj_asesmen_awal_tumbuh_kembang_fisioterapi_edit()
+    {
+        $this->get_rj_asesmen_awal_tumbuh_kembang_fisioterapi_data();
+        return view('page.rj.tumbuh_kembang_fisioterapi_edit', $this->data);
+    }
+
+    public function post_rj_asesmen_awal_tumbuh_kembang_fisioterapi_edit(Request $request)
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data = RJTumbuhKembangFisioterapi::where('id_regis', $id_pasien)->first();
+        $data->f1 = $request->f1;
+        $data->f2 = $request->f2;
+        $data->f3 = $request->f3;
+        $data->f4 = $request->f4;
+        $data->f5 = $request->f5;
+        $data->f6 = $request->f6;
+        $data->f7 = $request->f7;
+        $data->f8 = $request->f8;
+        $data->f9 = $request->f9;
+        $data->f10 = $request->f10;
+        $data->f11 = $request->f11;
+        $data->f12 = $request->f12;
+        $data->f13 = $request->f13;
+        $data->f14 = $request->f14;
+        $data->f15 = $request->f15;
+        $data->f16 = $request->f16;
+        $data->f17 = $request->f17;
+        $data->f18 = $request->f18;
+        $data->f19 = $request->f19;
+        $data->f20 = $request->f20;
+        $data->f21 = $request->f21;
+        $data->f22 = $request->f22;
+        $data->f23 = $request->f23;
+        $data->f24 = $request->f24;
+        $data->f25 = $request->f25;
+        $data->f26 = $request->f26;
+        $data->f27 = $request->f27;
+        $data->f28 = $request->f28;
+        $data->save();
+        return redirect('rj_asesmen_awal_tumbuh_kembang_fisioterapi_read');
     }
 
     public function rj_tumbuhkembang_pdf()

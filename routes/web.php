@@ -217,6 +217,18 @@ Route::get('/rj_asesmen_awal_tumbuh_kembang_psikiatri_read', 'RJAsesmenAwalTumbu
 Route::get('/rj_asesmen_awal_tumbuh_kembang_psikiatri_edit', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_psikiatri_edit');
 Route::post('/rj_asesmen_awal_tumbuh_kembang_psikiatri_edit', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_psikiatri_edit');
 
+Route::get('/rj_asesmen_awal_tumbuh_kembang_klinik', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_klinik');
+Route::post('/rj_asesmen_awal_tumbuh_kembang_klinik', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_klinik');
+Route::get('/rj_asesmen_awal_tumbuh_kembang_klinik_read', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_klinik_read');
+Route::get('/rj_asesmen_awal_tumbuh_kembang_klinik_edit', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_klinik_edit');
+Route::post('/rj_asesmen_awal_tumbuh_kembang_klinik_edit', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_klinik_edit');
+
+Route::get('/rj_asesmen_awal_tumbuh_kembang_fisioterapi', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_fisioterapi');
+Route::post('/rj_asesmen_awal_tumbuh_kembang_fisioterapi', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_fisioterapi');
+Route::get('/rj_asesmen_awal_tumbuh_kembang_fisioterapi_read', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_fisioterapi_read');
+Route::get('/rj_asesmen_awal_tumbuh_kembang_fisioterapi_edit', 'RJAsesmenAwalTumbuhKembangController@get_rj_asesmen_awal_tumbuh_kembang_fisioterapi_edit');
+Route::post('/rj_asesmen_awal_tumbuh_kembang_fisioterapi_edit', 'RJAsesmenAwalTumbuhKembangController@post_rj_asesmen_awal_tumbuh_kembang_fisioterapi_edit');
+
 //dokumen informasi tumbuh kembang
 
 Route::get('/rj_tumbuhkembang_pdf', 'RJAsesmenAwalTumbuhKembangController@rj_tumbuhkembang_pdf');
@@ -889,6 +901,19 @@ Route::get('/ri_rencanaklien7_pdf', 'RIRencanaKlienController@ri_rencanaklien7_p
 Route::get('/doc_ri_rencanaklien7', function () {
     return view('/doc_ri_rencanaklien7');
 });
+
+
+Route::get('/ri_asesmen_awal_perawat', 'RIAsesmenAwalController@get_ri_asesmen_awal_perawat');
+Route::post('/ri_asesmen_awal_perawat', 'RIAsesmenAwalController@post_ri_asesmen_awal_perawat');
+Route::get('/ri_asesmen_awal_perawat_read', 'RIAsesmenAwalController@get_ri_asesmen_awal_perawat_read');
+Route::get('/ri_asesmen_awal_perawat_edit', 'RIAsesmenAwalController@get_ri_asesmen_awal_perawat_edit');
+Route::post('/ri_asesmen_awal_perawat_edit', 'RIAsesmenAwalController@post_ri_asesmen_awal_perawat_edit');
+
+Route::get('/ri_asesmen_awal_dokter', 'RIAsesmenAwalController@get_ri_asesmen_awal_dokter');
+Route::post('/ri_asesmen_awal_dokter', 'RIAsesmenAwalController@post_ri_asesmen_awal_dokter');
+Route::get('/ri_asesmen_awal_dokter_read', 'RIAsesmenAwalController@get_ri_asesmen_awal_dokter_read');
+Route::get('/ri_asesmen_awal_dokter_edit', 'RIAsesmenAwalController@get_ri_asesmen_awal_dokter_edit');
+Route::post('/ri_asesmen_awal_dokter_edit', 'RIAsesmenAwalController@post_ri_asesmen_awal_dokter_edit');
 
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
