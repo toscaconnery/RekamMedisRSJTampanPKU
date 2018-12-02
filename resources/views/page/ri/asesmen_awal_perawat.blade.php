@@ -56,20 +56,20 @@
       <div class="row">
         <div class="col-lg-12">
           <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_asesmen_awal_perawat">
-
+            {{csrf_field()}}
             <section class="panel">
               <header class="panel-heading"></header>
               <div class="panel-body">
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Diperiksa</label>
-                  <div class="col-sm-8">
+                  <div class="col-sm-2">
                     <input type="text" autocomplete="off" onkeydown="return false" name="tanggal_diperiksa" class="form-control sandbox-container">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jam</label>
-                  <div class="col-sm-8">
-                    <input type="text" name="jam_diperiksa" class="form-control">
+                  <div class="col-sm-2">
+                    <input type="time" name="jam_diperiksa" class="form-control">
                   </div>
                 </div>                
               </div>
@@ -2414,14 +2414,14 @@
               <div class="panel-body">
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="tanggal">
+                  <div class="col-sm-2">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control" name="tanggal">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Jam</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="jam">
+                  <div class="col-sm-2">
+                    <input type="time" class="form-control" name="jam">
                   </div>
                 </div>
 
