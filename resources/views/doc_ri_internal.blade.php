@@ -299,40 +299,14 @@ header('Content-Type: application/pdf');
             </tr>
             <tr>
               <td class="konten_question">
-                1. {{$obat_injeksi}}
+                {{$obat_injeksi}}
               </td>               
-            </tr>
-            <tr>
-              <td class="konten_question">
-                2.
-              </td>               
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="column" style="line-height:0px;">
-        <table style="font-size: 60%;">
-          <tbody>
-            <tr>
-              <td class="konten_question">
-              <br>
-              </td>    
-            </tr>
-            <tr>
-              <td class="konten_question">
-               3.
-              </td>    
-            </tr>
-            <tr>
-              <td class="konten_question">
-                4.
-              </td>         
             </tr>
           </tbody>
         </table>
       </div>
     </div>
+    <br>
 
     <div class="row">
       <div class="column" style="line-height:0px;">
@@ -345,41 +319,15 @@ header('Content-Type: application/pdf');
             </tr>
             <tr>
               <td class="konten_question">
-                1. {{$obat_oral}}
+                {{$obat_oral}}
               </td>               
-            </tr>
-            <tr>
-              <td class="konten_question">
-                2. 
-              </td>               
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="column" style="line-height:0px;">
-        <table style="font-size: 60%;">
-          <tbody>
-            <tr>
-              <td class="konten_question">
-              <br>
-              </td>    
-            </tr>
-            <tr>
-              <td class="konten_question">
-               3.
-              </td>    
-            </tr>
-            <tr>
-              <td class="konten_question">
-                4.
-              </td>         
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-
+    <br>
+    
     <div class="row">
       <div class="column" style="line-height:0px;">
         <table style="font-size: 60%;">
@@ -418,7 +366,7 @@ header('Content-Type: application/pdf');
             Kategori pasien transfer
           </td>    
           <td class="konten_answer">  
-            : {{$kategori}}
+            : Level {{$kategori}}
           </td>                
         </tr>
       </tbody>

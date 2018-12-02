@@ -1254,6 +1254,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
     {
         $this->get_rj_asesmen_awal_tumbuh_kembang_dokter_data();
         $this->get_rj_asesmen_awal_tumbuh_kembang_psikolog_data();
+        $this->get_rj_asesmen_awal_tumbuh_kembang_psikiatri_data();
         ob_clean();
 
         header('Content-type: application/pdf');
