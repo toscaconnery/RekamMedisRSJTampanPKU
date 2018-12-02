@@ -895,8 +895,9 @@ class RIAsesmenAwalController extends Controller
         	$obat = substr($obat, 0, -5);
         }
         $data->obat = $obat;
-
     	$data->save();
+
+    	return redirect('ri_asesmen_awal_perawat_read');
     }
 
     public function get_ri_asesmen_awal_perawat_data()
