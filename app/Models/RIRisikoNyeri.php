@@ -14,8 +14,9 @@ class RIRisikoNyeri extends Model
 
     protected $fillable = [
         'id_regis',
-        'waktu',
-        'skala',
+        'skala_p',
+        'skala_s',
+        'skala_m',
         'tanggal',
     ];
 }

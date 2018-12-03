@@ -22,32 +22,72 @@ class RIRisikoNyeriController extends Controller
 	public function post_ri_risiko_nyeri(Request $request)
 	{
 		$data = new RIRisikoNyeri;
-		if(Session::has('id_pasien')) {
-            $id_pasien = Session::get('id_pasien');
-        }
-        else {
-            $id_pasien = 1;
-        }
+        $id_pasien = Session::get('id_pasien');
 		$data->id_regis = $id_pasien;
 		$data->tanggal = $request->tanggal;
-		$data->waktu = $request->waktu;
-		$data->skala = $request->skala;
+        $data->skala_p = $request->skala_p;
+        $data->skala_s = $request->skala_s;
+		$data->skala_m = $request->skala_m;
 		$data->save();
-		
-		return back();
+		return redirect('ri_risiko_nyeri_read');
 	}
 
 	public function get_ri_risiko_nyeri_read()
 	{
-		$pasien = RIRisikoNyeri::where('id', 1)->first();
-        
-        $this->data['id_regis'] = $pasien->id_regis;
-        $this->data['tanggal'] = $pasien->tanggal;
-        $this->data['waktu'] = $pasien->waktu;
-        $this->data['skala'] = $pasien->skala;
-
+        $id_pasien = Session::get('id_pasien');
+		$pasien = RIRisikoNyeri::where('id_regis', $id_pasien)->orderBy('tanggal', 'desc')->get();
+        $this->data['pasien'] = array();
+        foreach ($pasien as $key => $value) {
+            if(!isset($this->data['pasien'][$value->tanggal])) {
+                $this->data['pasien'][$value->tanggal] = array();
+                $this->data['pasien'][$value->tanggal]['p'] = NULL;
+                $this->data['pasien'][$value->tanggal]['s'] = NULL;
+                $this->data['pasien'][$value->tanggal]['m'] = NULL;
+            }
+            $this->data['pasien'][$value->tanggal]['p'] = $value->skala_p;
+            $this->data['pasien'][$value->tanggal]['s'] = $value->skala_s;
+            $this->data['pasien'][$value->tanggal]['m'] = $value->skala_m;
+            $this->data['pasien'][$value->tanggal]['id'] = $value->id;
+        }
         return view('page.ri.risiko_nyeri_read', $this->data);
 	}
+
+
+    public function get_ri_risiko_nyeri_edit($id)
+    {
+        $pasien = RIRisikoNyeri::where('id', $id)->first();
+        //memastikan hanya bisa mengedit pasien yang tepat ketika session habis
+        if($pasien->id_regis == Session::get('id_pasien')) {
+            $this->data['skala_p'] = $pasien->skala_p;
+            $this->data['skala_s'] = $pasien->skala_s;
+            $this->data['skala_m'] = $pasien->skala_m;
+            $this->data['tanggal'] = $pasien->tanggal;
+            $this->data['id_data'] = $pasien->id;
+            return view('page.ri.risiko_nyeri_edit', $this->data);
+        }
+        else {
+            //data tidak ditemukan, kemungkinan karena session habis ketika browser melakukan refresh
+            return redirect('risiko_nyeri_read');
+        }
+    }
+
+    public function post_ri_risiko_nyeri_edit(Request $request, $id)
+    {
+        $pasien = RIRisikoNyeri::where('id', $id)->first();
+        //memastikan hanya bisa mengedit pasien yang tepat ketika session habis
+        if($pasien->id_regis == Session::get('id_pasien')) {
+            $pasien->skala_p = $request->skala_p;
+            $pasien->skala_s = $request->skala_s;
+            $pasien->skala_m = $request->skala_m;
+            $pasien->tanggal = $request->tanggal;
+            $pasien->save();
+            return redirect('ri_risiko_nyeri_read');
+        }
+        else {
+            //data tidak ditemukan, kemungkinan karena session habis ketika browser melakukan refresh
+            return redirect('ri_risiko_nyeri_read');
+        }
+    }
 
 	public function ri_nyeri_pdf()
     {
