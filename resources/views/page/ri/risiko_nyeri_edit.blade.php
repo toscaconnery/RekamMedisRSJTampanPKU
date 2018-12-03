@@ -53,7 +53,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_risiko_nyeri">
+          <form class="form-horizontal form-validate" method="post" id="register_form" action="{{url('ri_risiko_nyeri_edit')}}/{{$id_data}}">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
@@ -64,7 +64,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal" value="{{$tanggal}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -76,16 +76,16 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Skala Nyeri</label>
                   <div class="col-lg-2">
                     <select class="form-control m-bot15" name="skala_p">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
+                      <option {{$skala_p == 1 ? 'selected' : ''}} value="1">1</option>
+                      <option {{$skala_p == 2 ? 'selected' : ''}} value="2">2</option>
+                      <option {{$skala_p == 3 ? 'selected' : ''}} value="3">3</option>
+                      <option {{$skala_p == 4 ? 'selected' : ''}} value="4">4</option>
+                      <option {{$skala_p == 5 ? 'selected' : ''}} value="5">5</option>
+                      <option {{$skala_p == 6 ? 'selected' : ''}} value="6">6</option>
+                      <option {{$skala_p == 7 ? 'selected' : ''}} value="7">7</option>
+                      <option {{$skala_p == 8 ? 'selected' : ''}} value="8">8</option>
+                      <option {{$skala_p == 9 ? 'selected' : ''}} value="9">9</option>
+                      <option {{$skala_p == 10 ? 'selected' : ''}} value="10">10</option>
                     </select>
                   </div> 
                 </div>
@@ -98,16 +98,16 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Skala Nyeri</label>
                   <div class="col-lg-2">
                     <select class="form-control m-bot15" name="skala_s">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
+                      <option {{$skala_s == 1 ? 'selected' : ''}} value="1">1</option>
+                      <option {{$skala_s == 2 ? 'selected' : ''}} value="2">2</option>
+                      <option {{$skala_s == 3 ? 'selected' : ''}} value="3">3</option>
+                      <option {{$skala_s == 4 ? 'selected' : ''}} value="4">4</option>
+                      <option {{$skala_s == 5 ? 'selected' : ''}} value="5">5</option>
+                      <option {{$skala_s == 6 ? 'selected' : ''}} value="6">6</option>
+                      <option {{$skala_s == 7 ? 'selected' : ''}} value="7">7</option>
+                      <option {{$skala_s == 8 ? 'selected' : ''}} value="8">8</option>
+                      <option {{$skala_s == 9 ? 'selected' : ''}} value="9">9</option>
+                      <option {{$skala_s == 10 ? 'selected' : ''}} value="10">10</option>
                     </select>
                   </div> 
                 </div>
@@ -120,16 +120,16 @@
                   <label class="control-label col-lg-2" for="inputSuccess">Skala Nyeri</label>
                   <div class="col-lg-2">
                     <select class="form-control m-bot15" name="skala_m">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
+                      <option {{$skala_m == 1 ? 'selected' : ''}} value="1">1</option>
+                      <option {{$skala_m == 2 ? 'selected' : ''}} value="2">2</option>
+                      <option {{$skala_m == 3 ? 'selected' : ''}} value="3">3</option>
+                      <option {{$skala_m == 4 ? 'selected' : ''}} value="4">4</option>
+                      <option {{$skala_m == 5 ? 'selected' : ''}} value="5">5</option>
+                      <option {{$skala_m == 6 ? 'selected' : ''}} value="6">6</option>
+                      <option {{$skala_m == 7 ? 'selected' : ''}} value="7">7</option>
+                      <option {{$skala_m == 8 ? 'selected' : ''}} value="8">8</option>
+                      <option {{$skala_m == 9 ? 'selected' : ''}} value="9">9</option>
+                      <option {{$skala_m == 10 ? 'selected' : ''}} value="10">10</option>
                     </select>
                   </div> 
                 </div>

@@ -67,20 +67,38 @@
                   </thead>
 
                   <tbody>
-                    <tr>
-                      <td style="width: 33.3%; text-align: center;vertical-align:middle;">
-                        {{ $tanggal }}
-                      </td>
-                      <td style="width: 33.3%; text-align: center;vertical-align:middle;">
-                        {{ $waktu }}
-                      </td>
-                      <td style="width: 33.3%; text-align: center;vertical-align:middle;"> 
-                       {{ $skala }}
-                      </td>
-                      <td>
-                        <a href=""><button type="button" class="btn btn-primary">Edit</button></a>
-                      </td>
-                    </tr>
+                    @foreach($pasien as $key => $value)
+                      <tr>
+                        <td style="width: 33.3%; text-align: center;vertical-align:middle;" rowspan="3">
+                          {{ $key }}
+                        </td>
+                        <td style="width: 33.3%; text-align: center;vertical-align:middle;">
+                          P
+                        </td>
+                        <td style="width: 33.3%; text-align: center;vertical-align:middle;"> 
+                         {{ $value['p'] }}
+                        </td>
+                        <td rowspan="3" style="vertical-align: middle;">
+                          <a href="{{url('ri_risiko_nyeri_edit')}}/{{$value['id']}}"><button type="button" class="btn btn-primary">Edit</button></a>
+                        </td>
+                      </tr>
+                      <tr style="background-color: #fafafa">
+                        <td style="width: 33.3%; text-align: center;vertical-align:middle;">
+                          S
+                        </td>
+                        <td style="width: 33.3%; text-align: center;vertical-align:middle;"> 
+                         {{ $value['s'] }}
+                        </td>
+                      </tr>
+                      <tr style="background-color: #f4f5f7">
+                        <td style="width: 33.3%; text-align: center;vertical-align:middle;">
+                          M
+                        </td>
+                        <td style="width: 33.3%; text-align: center;vertical-align:middle;"> 
+                          {{ $value['m'] }}
+                        </td>
+                      </tr>
+                    @endforeach
                   </tbody>
                 </table>
             </section>

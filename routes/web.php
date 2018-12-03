@@ -365,7 +365,9 @@ Route::get('/doc_ri_edmunson', function () {
 
 Route::get('/ri_risiko_nyeri', 'RIRisikoNyeriController@get_ri_risiko_nyeri');
 Route::post('/ri_risiko_nyeri', 'RIRisikoNyeriController@post_ri_risiko_nyeri');
-Route::get('/ri_risiko_nyeri_read', 'RIRisikoNyeriController@get_ri_risiko_nyeri_read'); // new add
+Route::get('/ri_risiko_nyeri_read', 'RIRisikoNyeriController@get_ri_risiko_nyeri_read');
+Route::get('/ri_risiko_nyeri_edit/{id}', 'RIRisikoNyeriController@get_ri_risiko_nyeri_edit');
+Route::post('/ri_risiko_nyeri_edit/{id}', 'RIRisikoNyeriController@post_ri_risiko_nyeri_edit');
 //dokumen penilaian nyeri
 Route::get('/ri_nyeri_pdf', 'RIRisikoNyeriController@ri_nyeri_pdf');
 Route::get('/doc_ri_nyeri', function () {
@@ -1159,9 +1161,9 @@ Route::get('/ri_rencanaklien7', function () {
 //     return view('ri_rencana_pemulangan');
 // });
 
-Route::get('/ri_asesmen', function () {
-    return view('ri_asesmen');
-});
+// Route::get('/ri_asesmen', function () {
+//     return view('ri_asesmen');
+// });
 
 // Route::get('/ri_edukasi', function () {
 //     return view('ri_edukasi');
