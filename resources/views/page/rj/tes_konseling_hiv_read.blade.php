@@ -261,7 +261,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-lg-2 control-label">Kelompok Risiko<br><small>(pilih saru yang paling dominan)</small></label>
+                  <label class="col-lg-2 control-label">Kelompok Risiko<br><small>(pilih satu yang paling dominan)</small></label>
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>

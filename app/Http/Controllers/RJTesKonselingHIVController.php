@@ -620,10 +620,403 @@ class RJTesKonselingHIVController extends Controller
         return redirect('daftar_dokumen');
     }
 
+    function yatidak($stats)
+    {
+        if($stats=='1')
+        {
+            return 'Ya';
+        }
+        else
+        {
+            return 'Tidak';
+        }
+    }
+
+    function convert()
+    {
+        $this->data['pt']  = $this->yatidak($this->data['pt']);
+        $this->data['pp']  = $this->yatidak($this->data['pp']);
+        $this->data['wbp']  = $this->yatidak($this->data['wbp']);
+        $this->data['kaj']  = $this->yatidak($this->data['kaj']);
+        $this->data['an']  = $this->yatidak($this->data['an']);
+        $this->data['per']  = $this->yatidak($this->data['per']);
+        $this->data['trf']  = $this->yatidak($this->data['trf']);
+        $this->data['trm']  = $this->yatidak($this->data['trm']);
+        $this->data['jd']  = $this->yatidak($this->data['jd']);
+        $this->data['ksd']  = $this->yatidak($this->data['ksd']);
+        $this->data['tes_hiv']  = $this->yatidak($this->data['tes_hiv']);
+        $this->data['tes_hiv2']  = $this->yatidak($this->data['tes_hiv2']);
+        $this->data['kesediaan_tes_tipk']  = $this->yatidak($this->data['kesediaan_tes_tipk']);
+        $this->data['tha']  = $this->yatidak($this->data['tha']);
+        $this->data['ktb']  = $this->yatidak($this->data['ktb']);
+
+        if($this->data['spk'] == '0')
+        {
+            $this->data['spk'] = 'Kawin';
+        }
+        elseif$this->data['spk'] == '1')
+        {
+            $this->data['spk'] = 'Belum Kawin ';
+        }
+        elseif$this->data['spk'] == '2')
+        {
+            $this->data['spk'] = 'Cerai Hidup';
+        }
+        else
+        {
+            $this->data['spk'] = 'Cerai Mati';
+        }
+
+        if($this->data['skh'] == '0')
+        {
+            $this->data['skh'] = 'Trisemester I';
+        }
+        elseif$this->data['skh'] == '1')
+        {
+            $this->data['skh'] = 'Trisemester II';
+        }
+        elseif$this->data['skh'] == '2')
+        {
+            $this->data['skh'] = 'Trisemester III';
+        }
+        elseif$this->data['skh'] == '3')
+        {
+            $this->data['skh'] = 'Tidak Hamil';
+        }
+        else
+        {
+            $this->data['skh'] = 'Tidak Tahu';
+        }
+
+        if($this->data['pen'] == '0')
+        {
+            $this->data['pen'] = 'Tidak pernah sekolah';
+        }
+        elseif$this->data['pen'] == '1')
+        {
+            $this->data['pen'] = 'SD/sederajatnya';
+        }
+        elseif$this->data['pen'] == '2')
+        {
+            $this->data['pen'] = 'SMP/sederajatnya';
+        }
+        elseif$this->data['pen'] == '3')
+        {
+            $this->data['pen'] = 'SMA/sedereajatnya';
+        }
+        else
+        {
+            $this->data['pen'] = 'Akademi/Perguruan Tinggi/Sederajatnya';
+        }
+
+        if($this->data['pek'] == '0')
+        {
+            $this->data['pek'] = 'Tidak Bekerja';
+        }
+        elseif($this->data['pek'] == '0')
+        {
+            $this->data['pek'] = 'Tidak Bekerja';
+        }
+        else
+        {
+            $this->data['pek'] = 'Bekerja';
+        }
+
+        if($this->data['kr'] == '0')
+        {
+            $this->data['kr'] = 'PS';
+        }
+        elseif($this->data['kr'] == '1')
+        {
+            $this->data['kr'] = 'Pelanggan PS';
+        }
+        elseif($this->data['kr'] == '2')
+        {
+            $this->data['kr'] = 'Waria';
+        }
+        elseif($this->data['kr'] == '3')
+        {
+            $this->data['kr'] = 'Pasangan Risti';
+        }
+        elseif($this->data['kr'] == '4')
+        {
+            $this->data['kr'] = 'Penasun';
+        }
+        elseif($this->data['kr'] == '5')
+        {
+            $this->data['kr'] = 'Lainnya';
+        }
+        else
+        {
+            $this->data['kr'] = 'Gay/ LSL';
+        }
+
+        if($this->data['ktr'] == '0')
+        {
+            $this->data['ktr'] = 'Langsung';
+        }
+        else
+        {
+            $this->data['ktr'] = 'Tidak Langsung';
+        }
+
+        if($this->data['sk'] == '0')
+        {
+            $this->data['sk'] = 'Datang Sendiri';
+        }
+        else
+        {
+            $this->data['sk'] = 'Dirujuk';
+        }
+
+        if($this->data['sr'] == '0')
+        {
+            $this->data['sr'] = 'Tempat Kerja';
+        }
+        elseif ($this->data['sr'] == '1')
+        {
+            $this->data['sr'] = 'Kader';
+        }
+        elseif ($this->data['sr'] == '2')
+        {
+            $this->data['sr'] = 'Klp Dukungan';
+        }
+        elseif ($this->data['sr'] == '3')
+        {
+            $this->data['sr'] = 'LSM';
+        }
+        elseif ($this->data['sr'] == '4')
+        {
+            $this->data['sr'] = 'Pasangan';
+        }
+        else
+        {
+            $this->data['sr'] = 'Lain-lain';
+        }
+
+        if($this->data['ha'] == '0')
+        {
+            $this->data['ha'] = 'Ya';
+        }
+        elseif($this->data['ha'] == '1')
+        {
+            $this->data['ha'] = 'Tidak';
+        }
+        else
+        {
+            $this->data['ha'] = 'Tidak Tahu';
+        }
+
+        if($this->data['sp'] == '0')
+        {
+            $this->data['sp'] = 'HIV (+)';
+        }
+        elseif($this->data['sp'] == '1')
+        {
+            $this->data['sp'] = 'HIV (-)';
+        }
+        else
+        {
+            $this->data['sp'] = 'Tidak Diketahui';
+        }
+
+        if($this->data['skl'] == '0')
+        {
+            $this->data['skl'] = 'Baru';
+        }
+        else
+        {
+            $this->data['skl'] = 'Lama';
+        }
+
+        if($this->data['alasan_tes'] == '1')
+        {
+            $this->data['alasan_tes'] = 'Ingin tahu saja';
+        }
+        elseif($this->data['alasan_tes'] == '2')
+        {
+            $this->data['alasan_tes'] = 'Merasa beresiko';
+        }
+        elseif($this->data['alasan_tes'] == '3')
+        {
+            $this->data['alasan_tes'] = 'Mumpung gratis';
+        }
+        elseif($this->data['alasan_tes'] == '4')
+        {
+            $this->data['alasan_tes'] = 'Tes ulang (window period)';
+        }
+        elseif($this->data['alasan_tes'] == '5')
+        {
+            $this->data['alasan_tes'] = 'Untuk bekerja';
+        }
+        elseif($this->data['alasan_tes'] == '6')
+        {
+            $this->data['alasan_tes'] = 'Lainnya ...';
+        }
+        elseif($this->data['alasan_tes'] == '7')
+        {
+            $this->data['alasan_tes'] = 'Ada gejala tertentu';
+        }
+        else
+        {
+            $this->data['alasan_tes'] = 'Akan menikah ...';
+        }
+
+        if($this->data['dmn'] == '0')
+        {
+            $this->data['dmn'] = 'Brosur';
+        }
+        elseif($this->data['dmn'] == '1')
+        {
+            $this->data['dmn'] = 'Koran';
+        }
+        elseif($this->data['dmn'] == '2')
+        {
+            $this->data['dmn'] = 'TV';
+        }
+        elseif($this->data['dmn'] == '3')
+        {
+            $this->data['dmn'] = 'Petugas Kesehatan';
+        }
+        elseif($this->data['dmn'] == '4')
+        {
+            $this->data['dmn'] = 'Teman';
+        }
+        elseif($this->data['dmn'] == '5')
+        {
+            $this->data['dmn'] = 'Petugas Outreach';
+        }
+        elseif($this->data['dmn'] == '6')
+        {
+            $this->data['dmn'] = 'Poster';
+        }
+        elseif($this->data['dmn'] == '7')
+        {
+            $this->data['dmn'] = 'Lay Konselor';
+        }
+        else
+        {
+            $this->data['dmn'] = 'Lainnya '.$dmn_lainnya.' ';
+        }
+
+        if($this->data['ht_hiv'] == '0')
+        {
+            $this->data['ht_hiv'] = 'Non Reaktif';
+        }
+        elseif($this->data['ht_hiv'] == '1')
+        {
+            $this->data['ht_hiv'] = 'Reaktif';
+        }
+        else
+        {
+            $this->data['ht_hiv2'] = 'Tidak tahu';
+        }
+
+        if($this->data['ht_hiv2'] == '0')
+        {
+            $this->data['ht_hiv2'] = 'Non Reaktif';
+        }
+        elseif($this->data['ht_hiv2'] == '1')
+        {
+            $this->data['ht_hiv2'] = 'Reaktif';
+        }
+        else
+        {
+            $this->data['ht_hiv2'] = 'Tidak tahu';
+        }
+
+        if($this->data['jt'] == '0')
+        {
+            $this->data['jt'] = 'Rapid Test';
+        }
+        else
+        {
+            $this->data['jt'] = 'ELISA';
+        }
+
+        if($this->data['r1'] == '0')
+        {
+            $this->data['r1'] = 'Non Reaktif';
+        }
+        else
+        {
+            $this->data['r1'] = 'Reaktif';
+        }
+
+        if($this->data['r2'] == '0')
+        {
+            $this->data['r2'] = 'Non Reaktif';
+        }
+        else
+        {
+            $this->data['r2'] = 'Reaktif';
+        }
+
+        if($this->data['r3'] == '0')
+        {
+            $this->data['r3'] = 'Non Reaktif';
+        }
+        else
+        {
+            $this->data['r3'] = 'Reaktif';
+        }
+
+        if($this->data['kes'] == '0')
+        {
+            $this->data['kes'] = 'Non Reaktif';
+        }
+        elseif($this->data['kes'] == '1')
+        {
+            $this->data['kes'] = 'Reaktif';
+        }
+        else
+        {
+            $this->data['kes'] = 'Indeterminate';
+        }
+
+        if($this->data['shp'] == '0')
+        {
+            $this->data['shp'] = 'HIV (-)';
+        }
+        elseif($this->data['shp'] == '1')
+        {
+            $this->data['shp'] = 'HIV (+)';
+        }
+        else
+        {
+            $this->data['shp'] = 'Tidak Tahu';
+        }
+
+        if($this->data['sl'] == '0')
+        {
+            $this->data['sl'] = 'Rumah Sakit';
+        }
+        elseif($this->data['sl'] == '1')
+        {
+            $this->data['sl'] = 'Puskesmas';
+        }
+        else
+        {
+            $this->data['sl'] = 'Klinik';
+        }
+
+        if($this->data['jpe'] == '0')
+        {
+            $this->data['jpe'] = 'Layanan Menetap';
+        }
+        else
+        {
+            $this->data['jpe'] = 'Layanan Bergerak';
+        }
+
+        
+    }
+
     public function rj_konselinghiv_pdf()
     {
 
         $this->get_tes_konseling_hiv_data();
+        $this->convert();
         ob_clean();
 
         header('Content-type: application/pdf');
