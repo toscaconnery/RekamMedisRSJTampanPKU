@@ -104,7 +104,7 @@ header('Content-Type: application/pdf');
             Anak tinggal dengan
           </td>    
           <td class="konten_s_answer">  
-            : {{$tinggal_dengan}} <?php if($tinggal_dengan) echo ','.$tinggal_dengan_lainnya.'' ?>
+            : {{$tinggal_dengan}} <?php if($tinggal_dengan == 'Lainnya') echo ','.$tinggal_dengan_lainnya.'' ?>
           </td>                
         </tr>
       </tbody>
@@ -187,7 +187,7 @@ header('Content-Type: application/pdf');
             Status
           </td>    
           <td class="konten_s_answer">  
-            : {{$status_ayah}} <?php if($status_ayah) echo ','.$status_ayah_lainnya.'' ?>
+            : {{$status_ayah}} <?php if($status_ayah=='Lainnya') echo ','.$status_ayah_lainnya.'' ?>
           </td>                
         </tr>
       </tbody>
@@ -265,7 +265,7 @@ header('Content-Type: application/pdf');
             Status
           </td>    
           <td class="konten_s_answer">  
-            : $status_ibu <?php if($status_ayah) echo ','.$status_ibu_lainnya.'' ?>
+            : {{$status_ibu}} <?php if($status_ayah=='Lainnya') echo ','.$status_ibu_lainnya.'' ?>
           </td>                
         </tr>
       </tbody>
@@ -443,7 +443,7 @@ header('Content-Type: application/pdf');
 
     <p>4. Anak lahir : {{$kondisi_lahir}}</p>
 
-    <p>5. Anak lahir ditolong oleh : {{$dibantu_oleh}}<?php if() echo ','.$dibantu_oleh_lainnya.''?></p>
+    <p>5. Anak lahir ditolong oleh : {{$dibantu_oleh}}<?php if($dibantu_oleh=='Lainnya') echo ','.$dibantu_oleh_lainnya.''?></p>
 
     <p>6. Ukuran Bayi Saat Lahir</p>
     <p>Berat Bayi : {{$berat_bayi}}</p>
@@ -582,7 +582,7 @@ header('Content-Type: application/pdf');
     <p>{{$dibantu_belajar}}</p>
 
     <p>10. Siapa yang membantu anak dalam belajar ?</p>
-    <p>{{$dibantu_belajar_oleh}}, {{$dibantu_belajar_oleh_lainnya}}</p>
+    <p>{{$dibantu_belajar_oleh}}, <?php if($dibantu_belajar_oleh=='Lainnya') echo ','.$dibantu_belajar_oleh_lainnya.''?></p>
 
     <p>11. Keluhan anak dalam mata pelajaran yang dianggapnya sulit</p>
     <p>{{$keluhan_di_pelajaran_sulit}}</p>

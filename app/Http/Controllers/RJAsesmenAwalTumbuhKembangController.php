@@ -1250,11 +1250,243 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
         return redirect('rj_asesmen_awal_tumbuh_kembang_fisioterapi_read');
     }
 
+    function yatidak($stats)
+    {
+        if($stats=='1')
+        {
+            return 'Ya';
+        }
+        else
+        {
+            return 'Tidak';
+        }
+    }
+
+    function convert()
+    {   
+        $this->data['berdasarkan_anjuran']  = $this->yatidak($this->data['berdasarkan_anjuran']);
+        $this->data['pernah_jatuh_kecelakaan']  = $this->yatidak($this->data['pernah_jatuh_kecelakaan']);
+        $this->data['suka_merokok']  = $this->yatidak($this->data['suka_merokok']);
+        $this->data['pernah_keguguran']  = $this->yatidak($this->data['pernah_keguguran']);
+        $this->data['dibantu_alat']  = $this->yatidak($this->data['dibantu_alat']);
+        $this->data['mengalami_keguguran']  = $this->yatidak($this->data['mengalami_keguguran']);
+        $this->data['tempat_belajar_sendiri']  = $this->yatidak($this->data['tempat_belajar_sendiri']);
+        $this->data['les']  = $this->yatidak($this->data['les']);
+
+        if$this->data['bekerja_ketika_kasus'] == '1')
+        {
+            $this->data['bekerja_ketika_kasus'] = 'Bekerja';
+        }
+        else
+        {
+            $this->data['bekerja_ketika_kasus'] = 'Tidak Bekerja';
+        }
+
+        if( $this->data['tinggal_dengan'] == '1')
+        {
+           $this->data['tinggal_dengan'] = 'Ayah dan ibu' ;
+        }
+        elseif ( $this->data['tinggal_dengan'] == '2') 
+        {
+           $this->data['tinggal_dengan'] = 'Ayah saja' ; 
+        }
+        elseif ( $this->data['tinggal_dengan'] == '3') 
+        {
+           $this->data['tinggal_dengan'] = 'Ibu saja' ; 
+        }
+        else
+        {
+           $this->data['tinggal_dengan'] = 'Lainnya' ;  
+        }
+
+        if( $this->data['status_ayah'] == '1')
+        {
+           $this->data['status_ayah'] = 'Kawin' ;
+        }
+        elseif ( $this->data['status_ayah'] == '2') 
+        {
+           $this->data['status_ayah'] = 'Cerai' ; 
+        }
+        elseif ( $this->data['status_ayah'] == '3') 
+        {
+           $this->data['status_ayah'] = 'Berpisah' ; 
+        }
+        else
+        {
+           $this->data['status_ayah'] = 'Lainnya' ;  
+        }
+
+        if( $this->data['status_ibu'] == '1')
+        {
+           $this->data['status_ibu'] = 'Kawin' ;
+        }
+        elseif ( $this->data['status_ibu'] == '2') 
+        {
+           $this->data['status_ibu'] = 'Cerai' ; 
+        }
+        elseif ( $this->data['status_ibu'] == '3') 
+        {
+           $this->data['status_ibu'] = 'Berpisah' ; 
+        }
+        else
+        {
+           $this->data['status_ibu'] = 'Lainnya' ;  
+        }  
+
+        if( $this->data['proses_kelahiran'] == '1')
+        {
+           $this->data['proses_kelahiran'] = 'Biasa' ;
+        }
+        elseif ( $this->data['proses_kelahiran'] == '2') 
+        {
+           $this->data['proses_kelahiran'] = 'Lama' ; 
+        }
+        else
+        {
+           $this->data['proses_kelahiran'] = 'Sukar' ;  
+        }
+
+        if( $this->data['kondisi_lahir'] == '1')
+        {
+           $this->data['kondisi_lahir'] = 'Prematur' ;
+        }
+        elseif ( $this->data['kondisi_lahir'] == '2') 
+        {
+           $this->data['kondisi_lahir'] = 'Cukup bulan' ; 
+        }
+        else
+        {
+           $this->data['kondisi_lahir'] = 'Lewat bulan' ;  
+        }
+
+        if( $this->data['dibantu_oleh'] == '1')
+        {
+           $this->data['dibantu_oleh'] = 'Dokter' ;
+        }
+        elseif ( $this->data['dibantu_oleh'] == '2') 
+        {
+           $this->data['dibantu_oleh'] = 'Bidan' ; 
+        }
+        else
+        {
+           $this->data['dibantu_oleh'] = 'Lainnya' ;  
+        }
+
+        if( $this->data['waktu_biasa_belajar'] == '1')
+        {
+           $this->data['waktu_biasa_belajar'] = 'Siang hari' ;
+        }
+        elseif ( $this->data['waktu_biasa_belajar'] == '2') 
+        {
+           $this->data['waktu_biasa_belajar'] = 'Sepulang sekolah' ; 
+        }
+        elseif ( $this->data['waktu_biasa_belajar'] == '3') 
+        {
+           $this->data['waktu_biasa_belajar'] = 'Sore hari' ; 
+        }
+        elseif ( $this->data['waktu_biasa_belajar'] == '4') 
+        {
+           $this->data['waktu_biasa_belajar'] = 'Malam hari' ; 
+        }
+        else
+        {
+           $this->data['waktu_biasa_belajar'] = 'Tidak tentu' ;  
+        }
+
+        if( $this->data['dibantu_belajar'] == '1')
+        {
+           $this->data['dibantu_belajar'] = 'Selalu' ;
+        }
+        elseif ( $this->data['dibantu_belajar'] == '2') 
+        {
+           $this->data['dibantu_belajar'] = 'Sering' ; 
+        }
+        elseif ( $this->data['dibantu_belajar'] == '3') 
+        {
+           $this->data['dibantu_belajar'] = 'Kadang-kadang' ; 
+        }
+        else
+        {
+           $this->data['dibantu_belajar'] = 'Tidak pernah' ;  
+        }
+
+        if( $this->data['dibantu_belajar_oleh'] == '1')
+        {
+           $this->data['dibantu_belajar_oleh'] = 'Orang tua' ;
+        }
+        elseif ( $this->data['dibantu_belajar_oleh'] == '2') 
+        {
+           $this->data['dibantu_belajar_oleh'] = 'Kakak' ; 
+        }
+        elseif ( $this->data['dibantu_belajar_oleh'] == '3') 
+        {
+           $this->data['dibantu_belajar_oleh'] = 'Adik' ; 
+        }
+        else
+        {
+           $this->data['dibantu_belajar_oleh'] = 'Lainnya' ;  
+        }
+
+        if( $this->data[''] == '')
+        {
+           $this->data[''] = '' ;
+        }
+        elseif ( $this->data[''] == '') 
+        {
+           $this->data[''] = '' ; 
+        }
+        else
+        {
+           $this->data[''] = '' ;  
+        }
+
+        if( $this->data[''] == '')
+        {
+           $this->data[''] = '' ;
+        }
+        elseif ( $this->data[''] == '') 
+        {
+           $this->data[''] = '' ; 
+        }
+        else
+        {
+           $this->data[''] = '' ;  
+        }
+
+        if( $this->data[''] == '')
+        {
+           $this->data[''] = '' ;
+        }
+        elseif ( $this->data[''] == '') 
+        {
+           $this->data[''] = '' ; 
+        }
+        else
+        {
+           $this->data[''] = '' ;  
+        }
+
+        if( $this->data[''] == '')
+        {
+           $this->data[''] = '' ;
+        }
+        elseif ( $this->data[''] == '') 
+        {
+           $this->data[''] = '' ; 
+        }
+        else
+        {
+           $this->data[''] = '' ;  
+        }
+    }
+
     public function rj_tumbuhkembang_pdf()
     {
         $this->get_rj_asesmen_awal_tumbuh_kembang_dokter_data();
         $this->get_rj_asesmen_awal_tumbuh_kembang_psikolog_data();
         $this->get_rj_asesmen_awal_tumbuh_kembang_psikiatri_data();
+        $this->convert();
+
         ob_clean();
 
         header('Content-type: application/pdf');
