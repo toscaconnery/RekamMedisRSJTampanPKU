@@ -14,8 +14,8 @@ header('Content-Type: application/pdf');
 
   <h2 align="center">ASESMEN AWAL PASIEN RAWAT INAP</h2><br>
   
-  <p><b>Tanggal diperiksa:</b> {{$tanggal_diperiksa}}</p>
-  <p><b>Jam diperiksa:</b> {{$jam_diperiksa}}</p>
+  <p><b>Tanggal Diperiksa:</b> {{$tanggal_diperiksa}}</p>
+  <p><b>Jam Diperiksa:</b> {{$jam_diperiksa}}</p>
 
   <h4>DATA PASIEN</h4>
   <div style="font-size: 85%;">  
@@ -101,40 +101,20 @@ header('Content-Type: application/pdf');
     </table>
     <div class="row">
       <div class="column">
-        <p><b>Barang berharga :</b> - </p>
+        <p><b>Barang berharga :</b></p>
         <ul>
           <?php 
-            if(isset($macam_kasus[1])) echo 
+            if(isset($barang[1])) echo 
             '<li>
-              Keinginan sendiri
+              Perhiasan
             </li>';
-            if(isset($macam_kasus[2])) echo 
+            if(isset($barang[2])) echo 
             '<li>
-              Paksaan Orang Tua
+              Pakaian
             </li>';
-            if(isset($macam_kasus[3])) echo 
+            if(isset($barang[3])) echo 
             '<li>
-              Rujukan Praktek Dokter
-            </li>';
-            if(isset($macam_kasus[4])) echo 
-            '<li>
-              Rujukan Instansi Lain
-            </li>';
-            if(isset($macam_kasus[5])) echo 
-            '<li>
-              Kiriman Kepolisian
-            </li>';
-            if(isset($macam_kasus[6])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
-            </li>';
-            if(isset($macam_kasus[7])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
-            </li>';
-            if(isset($macam_kasus[8])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
+              Lainnya, .'.$deskripsi_barang_berharga.'
             </li>';
           ?>
         </ul> 
@@ -143,37 +123,13 @@ header('Content-Type: application/pdf');
         <p><b>Tindakan : </b></p>
         <ul>
           <?php 
-            if(isset($macam_kasus[1])) echo 
+            if(isset($tindak[1])) echo 
             '<li>
-              Keinginan sendiri
+              Kumpulkan dan Simpan
             </li>';
-            if(isset($macam_kasus[2])) echo 
+            if(isset($tindak[2])) echo 
             '<li>
-              Paksaan Orang Tua
-            </li>';
-            if(isset($macam_kasus[3])) echo 
-            '<li>
-              Rujukan Praktek Dokter
-            </li>';
-            if(isset($macam_kasus[4])) echo 
-            '<li>
-              Rujukan Instansi Lain
-            </li>';
-            if(isset($macam_kasus[5])) echo 
-            '<li>
-              Kiriman Kepolisian
-            </li>';
-            if(isset($macam_kasus[6])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
-            </li>';
-            if(isset($macam_kasus[7])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
-            </li>';
-            if(isset($macam_kasus[8])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
+              Lainnya, '.$tindakan_barang.'
             </li>';
           ?>
         </ul>
@@ -183,37 +139,25 @@ header('Content-Type: application/pdf');
     <p><b> Alat bantu yang digunakan : </b></p>
     <ul>
           <?php 
-            if(isset($macam_kasus[1])) echo 
+            if(isset($alat[1])) echo 
             '<li>
-              Keinginan sendiri
+              Kacamata
             </li>';
-            if(isset($macam_kasus[2])) echo 
+            if(isset($alat[2])) echo 
             '<li>
-              Paksaan Orang Tua
+              Lensa Kontak
             </li>';
-            if(isset($macam_kasus[3])) echo 
+            if(isset($alat[3])) echo 
             '<li>
-              Rujukan Praktek Dokter
+              Gigi Palsu
             </li>';
-            if(isset($macam_kasus[4])) echo 
+            if(isset($alat[4])) echo 
             '<li>
-              Rujukan Instansi Lain
+              Alat Bantu Dengar
             </li>';
-            if(isset($macam_kasus[5])) echo 
+            if(isset($alat[5])) echo 
             '<li>
-              Kiriman Kepolisian
-            </li>';
-            if(isset($macam_kasus[6])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
-            </li>';
-            if(isset($macam_kasus[7])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
-            </li>';
-            if(isset($macam_kasus[8])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
+              Lainnya, '.$alat_bantu_lainnya.'
             </li>';
           ?>
         </ul>
@@ -223,41 +167,73 @@ header('Content-Type: application/pdf');
   <div style="font-size: 85%;">  
     <p><b>1. Riwayat Pasien (Penyakit utama/operasi/cedera mayor) : </b></p>
     <ul>
-          <?php 
-            if(isset($macam_kasus[1])) echo 
-            '<li>
-              Keinginan sendiri
-            </li>';
-            if(isset($macam_kasus[2])) echo 
-            '<li>
-              Paksaan Orang Tua
-            </li>';
-            if(isset($macam_kasus[3])) echo 
-            '<li>
-              Rujukan Praktek Dokter
-            </li>';
-            if(isset($macam_kasus[4])) echo 
-            '<li>
-              Rujukan Instansi Lain
-            </li>';
-            if(isset($macam_kasus[5])) echo 
-            '<li>
-              Kiriman Kepolisian
-            </li>';
-            if(isset($macam_kasus[6])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
-            </li>';
-            if(isset($macam_kasus[7])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
-            </li>';
-            if(isset($macam_kasus[8])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
-            </li>';
-          ?>
-        </ul>
+      <?php 
+        if(isset($friwayatpasien1[1])) echo 
+        '<li>
+          Hipertensi
+        </li>';
+        if(isset($friwayatpasien1[2])) echo 
+        '<li>
+          PPOK
+        </li>';
+        if(isset($friwayatpasien1[3])) echo 
+        '<li>
+          Diabetes
+        </li>';
+        if(isset($friwayatpasien1[4])) echo 
+        '<li>
+          Kanker
+        </li>';
+        if(isset($friwayatpasien1[5])) echo 
+        '<li>
+          Infark Miokard
+        </li>';
+        if(isset($friwayatpasien1[6])) echo 
+        '<li>
+          Asma
+        </li>';
+        if(isset($friwayatpasien1[7])) echo 
+        '<li>
+          Hepatitis
+        </li>';
+        if(isset($friwayatpasien1[8])) echo 
+        '<li>
+          Kejang
+        </li>';
+        if(isset($friwayatpasien1[9])) echo 
+        '<li>
+          Stroke
+        </li>';
+        if(isset($friwayatpasien1[10])) echo 
+        '<li>
+          TB
+        </li>';
+        if(isset($friwayatpasien1[11])) echo 
+        '<li>
+          Ulkus
+        </li>';
+        if(isset($friwayatpasien1[12])) echo 
+        '<li>
+          Penyakit Paru Lainnya
+        </li>';
+        if(isset($friwayatpasien1[13])) echo 
+        '<li>
+          Gangguan Jiwa
+        </li>';
+        if(isset($friwayatpasien1[14])) echo 
+        '<li>
+          Jantung
+        </li>';
+        if(isset($friwayatpasien1[15])) echo 
+        '<li>
+          Penyakit Ginjal
+        </li>';
+        if(isset($friwayatpasien1[16])) echo 
+        '<li>
+          Lainnya, '.$friwayatpasien2.'
+        </li>';
+      ?>
+    </ul>
     
     <p><b>deskripsi : </b></p>
     <p>{{$friwayatpasien2}}</p>
@@ -292,56 +268,165 @@ header('Content-Type: application/pdf');
       </tbody>
     </table>
 
-    <p><b>Trauma : </b>Aniaya fisik </p>
-    <ul>
-      <li>Usia :{{$friwayatpasien13}} </li>
-      <li>Pelaku : </li>
-      <li>Korban : </li>
-      <li>Saksi : </li>
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th class="minimalist" style="text-align:left;width:36;">Trauma</th>
+          <th class="minimalist" style="text-align:center;width:16%;">Usia</th>
+          <th class="minimalist" style="text-align:center;width:16%;">Pelaku</th>
+          <th class="minimalist" style="text-align:center;width:16%;">Korban</th>
+          <th class="minimalist" style="text-align:center;width:16%;">Saksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="minimalist" style="text-align:left">
+            Aniaya fisik
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien13}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien14}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien15}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien16}}
+          </td>
+        </tr>  
+        <tr>
+          <td class="minimalist" style="text-align:left">
+            Aniaya seksual
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien17}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien18}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien19}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien20}}
+          </td>
+        </tr>   
+        <tr>
+          <td class="minimalist" style="text-align:left">
+            Penolakan
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien21}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien22}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien23}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien24}}
+          </td>
+        </tr>   
+        <tr>
+          <td class="minimalist" style="text-align:left">
+            Kekerasan dalam keluarga
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien25}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien26}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien27}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien28}}
+          </td>
+        </tr>   
+        <tr>
+          <td class="minimalist" style="text-align:left">
+            Tindakan kriminal
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien29}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien30}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien31}}
+          </td>
+          <td class="minimalist" style="text-align:center">
+            {{$friwayatpasien32}}
+          </td>
+        </tr>    
+      </tbody>
+    </table>
     
-    <br>
-
     <p><b>Penjelasan : </b></p>
-    <p>Penjelasannya adalah ...</p>
+    <p>{{$friwayatpasien33}}</p>
 
     <p><b>2. Riwayat Keluarga : </b></p>
     <ul>
-          <?php 
-            if(isset($macam_kasus[1])) echo 
-            '<li>
-              Keinginan sendiri
-            </li>';
-            if(isset($macam_kasus[2])) echo 
-            '<li>
-              Paksaan Orang Tua
-            </li>';
-            if(isset($macam_kasus[3])) echo 
-            '<li>
-              Rujukan Praktek Dokter
-            </li>';
-            if(isset($macam_kasus[4])) echo 
-            '<li>
-              Rujukan Instansi Lain
-            </li>';
-            if(isset($macam_kasus[5])) echo 
-            '<li>
-              Kiriman Kepolisian
-            </li>';
-            if(isset($macam_kasus[6])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
-            </li>';
-            if(isset($macam_kasus[7])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
-            </li>';
-            if(isset($macam_kasus[8])) echo 
-            '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
-            </li>';
-          ?>
-        </ul>
+      <?php 
+        if(isset($friwayatkeluarga[1])) echo 
+        '<li>
+          Penyakit Jantung
+        </li>';
+        if(isset($friwayatkeluarga[2])) echo 
+        '<li>
+          Hipertensi
+        </li>';
+        if(isset($friwayatkeluarga[3])) echo 
+        '<li>
+          Stroke
+        </li>';
+        if(isset($friwayatkeluarga[4])) echo 
+        '<li>
+          Asma
+        </li>';
+        if(isset($friwayatkeluarga[5])) echo 
+        '<li>
+          Kanker
+        </li>';
+        if(isset($friwayatkeluarga[6])) echo 
+        '<li>
+          Ginjal
+        </li>';
+        if(isset($friwayatkeluarga[7])) echo 
+        '<li>
+          Gangguan Jiwa
+        </li>';
+        if(isset($friwayatkeluarga[8])) echo 
+        '<li>
+          Kejang
+        </li>';
+        if(isset($friwayatkeluarga[9])) echo 
+        '<li>
+          TB
+        </li>';
+        if(isset($friwayatkeluarga[10])) echo 
+        '<li>
+          Diabetes
+        </li>';
+        if(isset($friwayatkeluarga[11])) echo 
+        '<li>
+          Anastesi
+        </li>';
+        if(isset($friwayatkeluarga[14])) echo 
+        '<li>
+          Gangguan Hematologi
+        </li>';
+        if(isset($friwayatkeluarga[15])) echo 
+        '<li>
+          Lainnya
+        </li>';
+      ?>
+    </ul>
 
     <p><b>Genogram : </b></p>
     <br>
@@ -370,7 +455,7 @@ header('Content-Type: application/pdf');
             Keluarga
           </td>    
           <td class="konten_s_answer">  
-            : Ada, tidak serumah 
+            : {{$friwayatpsikososial2}} <?php if($friwayatpsikososial2=='Ada') echo ','.$friwayatpsikososial3.'' ; ?>
           </td>                
         </tr>
         <tr>
@@ -378,7 +463,7 @@ header('Content-Type: application/pdf');
             Tempat tinggal
           </td>    
           <td class="konten_s_answer">  
-            : Rumah
+            : {{$friwayatpsikososial4}} <?php if($friwayatpsikososial4=='2') echo ','.$friwayatpsikososial5.'' ; ?>
           </td>                
         </tr>
         <tr>
@@ -386,7 +471,7 @@ header('Content-Type: application/pdf');
             Pekerjaan
           </td>    
           <td class="konten_s_answer">  
-            : Paruh waktu
+            : {{$friwayatpsikososial6}} <?php if($friwayatpsikososial6=='3') echo ','.$friwayatpsikososial7.'' ; ?>
           </td>                
         </tr>
         <tr>
@@ -394,15 +479,15 @@ header('Content-Type: application/pdf');
             Aktivitas
           </td>    
           <td class="konten_s_answer">  
-            : Mandiri
+            : {{friwayatpsikososial8}}
           </td>                
         </tr>
         <tr>
           <td class="konten_s_question">
-            Curiga Penganiayaan/ Penelantaran 
+            Curiga Penganiayaan/Penelantaran 
           </td>    
           <td class="konten_s_answer">  
-            : Ya
+            : {{friwayatpsikososial9}}
           </td>                
         </tr>
       </tbody>
@@ -411,37 +496,25 @@ header('Content-Type: application/pdf');
     <p><b>Status Emosional :</b></p>
     <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if($friwayatpsikososial10) echo 
         '<li>
-          Keinginan sendiri
+          Kooperatif
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if($friwayatpsikososial10) echo 
         '<li>
-          Paksaan Orang Tua
+          Ansietas
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if($friwayatpsikososial10) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Cemas
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if($friwayatpsikososial10) echo 
         '<li>
-          Rujukan Instansi Lain
+          Ingin mengakhiri hidup
         </li>';
-        if(isset($macam_kasus[5])) echo 
+        if($friwayatpsikososial10) echo 
         '<li>
-          Kiriman Kepolisian
-        </li>';
-        if(isset($macam_kasus[6])) echo 
-        '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
-        </li>';
-        if(isset($macam_kasus[7])) echo 
-        '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
-        </li>';
-        if(isset($macam_kasus[8])) echo 
-        '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Depresi
         </li>';
       ?>
     </ul>
@@ -450,14 +523,6 @@ header('Content-Type: application/pdf');
 
     <table>
       <tbody>
-        <tr>
-          <td class="konten_s_question">
-           Nama
-          </td>    
-          <td class="konten_s_answer">  
-            : Ani Ananta 
-          </td>                
-        </tr>
         <tr>
           <td class="konten_s_question">
             Hubungan
@@ -583,56 +648,56 @@ header('Content-Type: application/pdf');
     <p><b>8. Penampilan : </b></p>
     <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fpenampilan[1])) echo 
         '<li>
-          Keinginan sendiri
+          Tidak rapi
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fpenampilan[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Penggunaan pakaian tidak sesuai
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($fpenampilan[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Cara berpakaian tidak seperti biasanya
         </li>';
       ?>
     </ul>
-    <p>Penjelasan : ...</p>
+    <p>Penjelasan : {{$fpenampilan_ket}}</p>
 
     <p><b>9. Pembicaraan : </b></p>
     <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fpembicaraan8[1])) echo 
         '<li>
-          Keinginan sendiri
+          Cepat
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fpembicaraan8[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Keras
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($fpembicaraan8[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Gagap
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($fpembicaraan8[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Inkoheren
         </li>';
-        if(isset($macam_kasus[5])) echo 
+        if(isset($fpembicaraan8[5])) echo 
         '<li>
-          Kiriman Kepolisian
+          Apatis
         </li>';
-        if(isset($macam_kasus[6])) echo 
+        if(isset($fpembicaraan8[6])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Lambat
         </li>';
-        if(isset($macam_kasus[7])) echo 
+        if(isset($fpembicaraan8[7])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Membisu
         </li>';
-        if(isset($macam_kasus[8])) echo 
+        if(isset($fpembicaraan8[8])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Tidak mampu memulai bicara
         </li>';
       ?>
     </ul>
@@ -641,317 +706,317 @@ header('Content-Type: application/pdf');
     <p><b>10. Aktivitas Motorik : </b></p>
     <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($faktivitasmotorik[1])) echo 
         '<li>
-          Keinginan sendiri
+          Lesu
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($faktivitasmotorik[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Tegang
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($faktivitasmotorik[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Gelisah
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($faktivitasmotorik[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Tik
         </li>';
-        if(isset($macam_kasus[5])) echo 
+        if(isset($faktivitasmotorik[5])) echo 
         '<li>
-          Kiriman Kepolisian
+          Agitas
         </li>';
-        if(isset($macam_kasus[6])) echo 
+        if(isset($faktivitasmotorik[6])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Grimasen
         </li>';
-        if(isset($macam_kasus[7])) echo 
+        if(isset($faktivitasmotorik[7])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Tremor
         </li>';
-        if(isset($macam_kasus[8])) echo 
+        if(isset($faktivitasmotorik[8])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Kompulsif
         </li>';
-        if(isset($macam_kasus[8])) echo 
+        if(isset($faktivitasmotorik[9])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Restrain
         </li>';
       ?>
     </ul>
-    <p>Penjelasan : ...</p>
+    <p>Penjelasan : {{$faktivitasmotorik_ket}}</p>
 
     <p><b>11. Alam Perasaan : </b></p>
     <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($falamperasaan[1])) echo 
         '<li>
-          Keinginan sendiri
+          Sedih
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($falamperasaan[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Ketakutan
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($falamperasaan[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Putus Asa 
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($falamperasaan[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Khawatir
         </li>';
-        if(isset($macam_kasus[5])) echo 
+        if(isset($falamperasaan[5])) echo 
         '<li>
-          Kiriman Kepolisian
+          Gembira berlebihan
         </li>';
-        if(isset($macam_kasus[6])) echo 
+        if(isset($falamperasaan[6])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Isyarat percobaan bunuh diri
         </li>';
       ?>
-    <p>Penjelasan : ...</p>
+    <p>Penjelasan : {{$falamperasaan_ket}}</p>
 
     <p><b>12. Afek : </b></p>
     <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fafek[1])) echo 
         '<li>
-          Keinginan sendiri
+          Datar
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fafek[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Tumpul
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($fafek[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Labil
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($fafek[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Tidak sesuai
         </li>';
       ?>
-    <p>Penjelasan : ...</p>
+    <p>Penjelasan : {{$fafek_ket}}</p>
 
     <p><b>13. Interaksi selama wawancara : </b></p>
     <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($finteraksi[1])) echo 
         '<li>
-          Keinginan sendiri
+          Bermusuhan
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($finteraksi[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Tidak kooperatif
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($finteraksi[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Mudah tersinggung
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($finteraksi[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Kontak mata kurang
         </li>';
-        if(isset($macam_kasus[5])) echo 
+        if(isset($finteraksi[5])) echo 
         '<li>
-          Kiriman Kepolisian
+          Defensif
         </li>';
-        if(isset($macam_kasus[6])) echo 
+        if(isset($finteraksi[6])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Curiga
         </li>';
       ?>
-    <p>Penjelasan : ...</p>
+    <p>Penjelasan : {{$finteraksi_ket}}</p>
 
     <p><b>14. Persepsi : </b></p>
     <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fpersepsi[1])) echo 
         '<li>
-          Keinginan sendiri
+          Ilusi
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fpersepsi[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Halusinasi dengar
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($fpersepsi[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Halusinasi lihat
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($fpersepsi[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Halusinasi raba
         </li>';
-        if(isset($macam_kasus[5])) echo 
+        if(isset($fpersepsi[5])) echo 
         '<li>
-          Kiriman Kepolisian
+          Halusinasi kecap
         </li>';
-        if(isset($macam_kasus[6])) echo 
+        if(isset($fpersepsi[6])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Halusinasi hidu
         </li>';
       ?>
-    <p>Penjelasan : ...</p>
+    <p>Penjelasan : {{$fpersepsi_ket}}</p>
 
     <p><b>15. Isi Pikir : </b></p>
     <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fisikpikir[1])) echo 
         '<li>
-          Keinginan sendiri
+          Obsesi
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fisikpikir[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Phobia
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($fisikpikir[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Hipokondria
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($fisikpikir[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Depersonalisasi
         </li>';
-        if(isset($macam_kasus[5])) echo 
+        if(isset($fisikpikir[5])) echo 
         '<li>
-          Kiriman Kepolisian
+          Ide terkait
         </li>';
-        if(isset($macam_kasus[6])) echo 
+        if(isset($fisikpikir[6])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Pikiran magis
         </li>';
-        if(isset($macam_kasus[7])) echo 
+        if(isset($fisikpikir[7])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Waham agama
         </li>';
-        if(isset($macam_kasus[8])) echo 
+        if(isset($fisikpikir[8])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Waham somatik
         </li>';
-        if(isset($macam_kasus[9])) echo 
+        if(isset($fisikpikir[9])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Waham besar
         </li>';
-        if(isset($macam_kasus[10])) echo 
+        if(isset($fisikpikir[10])) echo 
         '<li>
-          Keinginan sendiri
+          Waham curiga
         </li>';
-        if(isset($macam_kasus[11])) echo 
+        if(isset($fisikpikir[11])) echo 
         '<li>
-          Paksaan Orang Tua
+          Waham nihilistik
         </li>';
-        if(isset($macam_kasus[12])) echo 
+        if(isset($fisikpikir[12])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Sisip pikir
         </li>';
-        if(isset($macam_kasus[13])) echo 
+        if(isset($fisikpikir[13])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Siap pikir
         </li>';
-        if(isset($macam_kasus[14])) echo 
+        if(isset($fisikpikir[14])) echo 
         '<li>
-          Kiriman Kepolisian
+          Kontrol 
         </li>';
       ?>
-    <p>Penjelasan : ...</p>
+    <p>Penjelasan : {{$fisikpikir_ket}}</p>
 
     <p><b>16. Arus Pikir : </b></p>
     <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($faruspikir6[1])) echo 
         '<li>
-          Keinginan sendiri
+          Sirkumstansial
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($faruspikir6[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Tangensial
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($faruspikir6[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Kehilangan asosiasi
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($faruspikir6[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Flight of idea
         </li>';
-        if(isset($macam_kasus[5])) echo 
+        if(isset($faruspikir6[5])) echo 
         '<li>
-          Kiriman Kepolisian
+          Block
         </li>';
-        if(isset($macam_kasus[6])) echo 
+        if(isset($faruspikir6[6])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Perseverasi
         </li>';
       ?>
     </ul>
-    <p>Penjelasan : ...</p>
+    <p>Penjelasan : {{$faruspikir_ket}}</p>
 
     <p><b>17. Memori : </b></p>
     <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fmemori[1])) echo 
         '<li>
-          Keinginan sendiri
+          Ggn daya ingat jangka panjang
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fmemori[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Ggn daya ingat jangka pendek
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($fmemori[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Ggn daya ingat saat ini
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($fmemori[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Konfabulasi
         </li>';
       ?>
     </ul>
-    <p>Penjelasan : ...</p>
+    <p>Penjelasan : {{$fmemori_ket}}</p>
 
     <p><b>18. Tingkat konsentrasi dan berhitung : </b></p>
     <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fkonsentrasi[1])) echo 
         '<li>
-          Keinginan sendiri
+          Mudah teralih
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fkonsentrasi[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Tidak mampu berkonsentrasi
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($fkonsentrasi[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Tidak mampu berhitung sederhana
         </li>';
       ?>
     </ul>
-    <p>Penjelasan : ...</p>
+    <p>Penjelasan : {{$fkonsentrasi_ket}}</p>
 
     <p><b>19. Kemampuan Penilaian : </b></p>
     <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fkemampuanpenilaian[1])) echo 
         '<li>
-          Keinginan sendiri
+           Gangguan ringan
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fkemampuanpenilaian[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Gangguan bermakna
         </li>';
       ?>
     </ul>
-    <p>Penjelasan : ...</p>
+    <p>Penjelasan : {{$fkemampuanpenilaian_ket}}</p>
 
     <p><b>20. Daya tilik diri (insight) : </b></p>
     <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fdaya[1])) echo 
         '<li>
-          Keinginan sendiri
+          Mengingkari sakit yang diderita
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fdaya[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Menyalahkan hal di luar dirinya
         </li>';
       ?>
     </ul>
-    <p>Penjelasan : ...</p>
+    <p>Penjelasan : {{$fdaya_ket}}</p>
 
   </div>
 
@@ -959,41 +1024,49 @@ header('Content-Type: application/pdf');
   <div style="font-size: 85%;">  
     <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fpengajaran[1])) echo 
         '<li>
-          Keinginan sendiri
+          Proses Penyakit dan Tindakan medis
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fpengajaran[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Terapi/Obat
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($fpengajaran[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Penanganan Nyeri
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($fpengajaran[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Penggunaan Alat Medis
         </li>';
-        if(isset($macam_kasus[5])) echo 
+        if(isset($fpengajaran[5])) echo 
         '<li>
-          Kiriman Kepolisian
+          Nutrisi
         </li>';
-        if(isset($macam_kasus[6])) echo 
+        if(isset($fpengajaran[6])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Rehab Medik
         </li>';
-        if(isset($macam_kasus[7])) echo 
+        if(isset($fpengajaran[7])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Rehabilitasi Mental
         </li>';
-        if(isset($macam_kasus[8])) echo 
+        if(isset($fpengajaran[8])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Perawatan Penyakitnya
         </li>';
-        if(isset($macam_kasus[8])) echo 
+        if(isset($fpengajaran[9])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Aspek psikologis terkait penyakitnya
+        </li>';
+        if(isset($fpengajaran[10])) echo 
+        '<li>
+          Follow up dan minta pertolongan
+        </li>';
+        if(isset($fpengajaran[11])) echo 
+        '<li>
+          Lain-lain,...
         </li>';
       ?>
     </ul>
@@ -1004,89 +1077,89 @@ header('Content-Type: application/pdf');
 
     <p><b>bahasa Sehari-hari : </b>{{$fkomunikasi4}}</p>
 
-    <p>Perlu Penterjemah : Tidak </p>
+    <p>Perlu Penterjemah : {{$fkomunikasi7}} </p>
 
-    <p>Bahasa Isyarat : Tidak</p>
+    <p>Bahasa Isyarat : {{$fkomunikasi9}}</p>
 
     <p><b>Hambatan Edukasi : </b></p>
     <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fkomunikasi10[1])) echo 
         '<li>
-          Keinginan sendiri
+          Bahasa
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fkomunikasi10[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Pendengaran
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($fkomunikasi10[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Hilang memori
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($fkomunikasi10[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Motivasi buruk
         </li>';
-        if(isset($macam_kasus[5])) echo 
+        if(isset($fkomunikasi10[5])) echo 
         '<li>
-          Kiriman Kepolisian
+          Masalah penglihatan
         </li>';
-        if(isset($macam_kasus[6])) echo 
+        if(isset($fkomunikasi10[6])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Tidak ditemukan hambatan belajar
         </li>';
-        if(isset($macam_kasus[7])) echo 
+        if(isset($fkomunikasi10[7])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Cemas
         </li>';
-        if(isset($macam_kasus[8])) echo 
+        if(isset($fkomunikasi10[8])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Emosi
         </li>';
-        if(isset($macam_kasus[8])) echo 
+        if(isset($fkomunikasi10[9])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Kesulitan Bicara
+        </li>';
+        if(isset($fkomunikasi10[10])) echo 
+        '<li>
+          Tidak ada partisipasi dari caregiver
+        </li>';
+        if(isset($fkomunikasi10[11])) echo 
+        '<li>
+          Secara fisiologi tidak mampu belajar
+        </li>';
+        if(isset($fkomunikasi10[12])) echo 
+        '<li>
+          Kognitif
         </li>';
       ?>
     </ul>
     <p><b>Cara Edukasi yang disukai : </b></p>
     <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fkomunikasi11[1])) echo 
         '<li>
-          Keinginan sendiri
+          Menulis
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fkomunikasi11[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Audio- Visual/Gambar
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($fkomunikasi11[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Diskusi
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($fkomunikasi11[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Membaca
         </li>';
-        if(isset($macam_kasus[5])) echo 
+        if(isset($fkomunikasi11[5])) echo 
         '<li>
-          Kiriman Kepolisian
+          Mendengar
         </li>';
-        if(isset($macam_kasus[6])) echo 
+        if(isset($fkomunikasi11[6])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
-        </li>';
-        if(isset($macam_kasus[7])) echo 
-        '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
-        </li>';
-        if(isset($macam_kasus[8])) echo 
-        '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
-        </li>';
-        if(isset($macam_kasus[8])) echo 
-        '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Demonstrasi
         </li>';
       ?>
     </ul>
@@ -1106,86 +1179,209 @@ header('Content-Type: application/pdf');
 
   <h4>PENILAIAN RISIKO JATUH</h4>
   <div style="font-size: 85%;">  
-    <p><b>Edmunson (Jiwa) </b></p>
-    <table>
-    <tbody>
-      <tr>
-        <td class="konten_s_question">
-          Usia <b>(Skor: 8)</b>
-        </td>    
-        <td class="konten_s_answer">  
-          : Kurang dari 50 tahun
-        </td>                
-      </tr>
-      <tr>
-        <td class="konten_s_question">
-          Status Mental <b>(Skor: 12)</b>
-        </td>    
-        <td class="konten_s_answer">  
-          : Agitasi/ansietas
-        </td>                
-      </tr>
-      <tr>
-        <td class="konten_s_question">
-          Eliminasi <b>(Skor: 10)</b>
-        </td>    
-        <td class="konten_s_answer">  
-          : Eliminasi dengan bantuan
-        </td>                
-      </tr>
-      <tr>
-        <td class="konten_s_question">
-          Pengobatan <b>(Skor: 10)</b>
-        </td>    
-        <td class="konten_s_answer">  
-          : Tanpa obat-obatan
-        </td>                
-      </tr>
-      <tr>
-        <td class="konten_s_question">
-          Diagnosa <b>(Skor: 12)</b>
-        </td>    
-        <td class="konten_s_answer">  
-          : Dimensia/Delirium
-        </td>                
-      </tr>
-      <tr>
-        <td class="konten_s_question">
-          Ambulasi <b>(Skor: 10)</b>
-        </td>    
-        <td class="konten_s_answer">  
-          : Vertigo/kelemahan
-        </td>                
-      </tr>
-      <tr>
-        <td class="konten_s_question">
-          Nutrisi <b>(Skor: 0)</b>
-        </td>    
-        <td class="konten_s_answer">  
-          : Tidak ada kelainan dengan nafsu makan
-        </td>                
-      </tr>
-      <tr>
-        <td class="konten_s_question">
-          Gangguan pola tidur <b>(Skor: 8)</b>
-        </td>    
-        <td class="konten_s_answer">  
-          : Tidak ada gangguan pola tidur
-        </td>                
-      </tr>
-      <tr>
-        <td class="konten_s_question">
-          Riwayat Jatuh <b>(Skor: 8)</b>
-        </td>    
-        <td class="konten_s_answer">  
-          : Tidak ada riwayat jatuh
-        </td>                
-      </tr>
-    </tbody>
-  </table>
-  <p>Total Skor : 78</p>
+    <?php if($jenis_resiko_jatuh == 'humpty_dumpty')
+    echo 
+      '<p><b>HUMPTY DUMPTY (Anak-anak) </b></p>
+        <table>
+        <tbody>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Usia <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$usia.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Jenis Kelamin <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : Laki-laki
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Diagnosis <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$diagnosis_hd.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Gangguan Kognitif <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$gangguan_kognitif.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Faktor Lingkungan <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$faktor_lingkungan.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Respon terhadap Operasi/<br>Obat Penenang/Efek Anastesi <b></b>
+            </td>    
+            <td class="konten_s_answer">  
+              : '.$waktu_respon_obat.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question">
+              Penggunaan Obat <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$penggunaan_obat.'
+            </td>                
+          </tr>
+        </tbody>
+      </table>';
+    ?>
+    <?php if($jenis_resiko_jatuh == 'morse')
+    echo 
+      '<p><b>MORSE (Dewasa) </b></p>
+        <table>
+        <tbody>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Riwayat Jatuh<b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$riwayat_jatuh_mrs.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Diagnosis Sekunder <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$diagnosis_sekunder.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Alat Bantu <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$alat_bantu.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Terpasang Infus <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$terpasang_infus.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Gaya Berjalan <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$gaya_berjalan.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Status Mental <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$status_mental_mrs.'
+            </td>                
+          </tr>
+        </tbody>
+      </table>';
+    ?>
+    <?php if($jenis_resiko_jatuh == 'edmunson')
+    echo 
+      '<p><b>EDMUNSON (Jiwa) </b></p>
+        <table>
+        <tbody>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Usia <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : [Usia]
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Status Mental <b></b>
+            </td>    
+            <td class="konten_s_answer">  
+              : '.$status_mental_edm.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Eliminasi <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$eliminasi.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Pengobatan <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$pengobatan.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Diagnosis <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$diagnosis_edm.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Ambulasi/Keseimbangan <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$ambulasi.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Nutrisi <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$nutrisi.'
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question">
+              Gangguan pola tidur <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : [Gangguan Pola Tidur]
+            </td>                
+          </tr>
+          <tr>
+            <td class="konten_s_question" style="line-height:15px">
+              Riwayat Jatuh <b></b>
+            </td>    
+            <td class="konten_s_answer" style="line-height:15px">  
+              : '.$riwayat_jatuh_edm.'
+            </td>                
+          </tr>
+        </tbody>
+      </table>';
+    ?>
+  <p>Total Skor : [total skor]</p>
 
-  <p><b>Tidak Beresiko : Skor < 90</b></p>
+  <?php if(1) echo '<p><b>Tidak Beresiko : Skor < 90</b></p>
     <ol>
       <li>Orientasi pasien pada lingkungan kamar/bangsal</li>
       <li>Pastikan rem tempat tidur terkunci</li>
@@ -1198,7 +1394,18 @@ header('Content-Type: application/pdf');
       <li>Tempatkan meja pasien dengan baik agar tidak menghalangi</li>
       <li>Tempatkan pasien sesuai dengan tinggi badannya</li>
     </ol>
-  </div>
+  </div>'; else echo '
+  <p><b> Beresiko : Skor > 90</b></p>
+    <ol>
+      <li>Lakukan tindakan sesuai skor (>90)</li>
+      <li>Pasang penanda risiko jatuh pada pintu kamar bagian atas/brankard</li>
+      <li>Awasi atau bantu sebagian ADL pasien</li>
+      <li>Cepat menanggapi keluhan pasien</li>
+      <li>Review kembali obat-obatan yang beresiko</li>
+      <li>Beritahu pasien agar mobilisasi secara bertahap : duduk perlahan-lahan sebelum berdiri</li>
+      <li>Libatkan pasien secara aktif</li>
+    </ol>
+  </div>' ?>
 
   <h4>PENILAIAN TINGKAT NYERI</h4>
   <br>
@@ -1221,58 +1428,42 @@ header('Content-Type: application/pdf');
 
       <p><b>Sifat Nyeri :</b> {{fnyeri6}}</p>
 
-      <p><b>Kualitas Nyeri :</b> {{fnyeri7}}</p>
+      <p><b>Kualitas Nyeri :</b> {{fnyeri7}} <?php  if ($fnyeri7=='Lainnya') echo ','.$fnyeri8.''?> </p>
 
-      <p><b>Faktor Pemberat :</b></p>
-      <ul>
-        <li>Cahaya</li>
-        <li>Gerakan</li>
-      </ul>
+      <p><b>Faktor Pemberat :</b> {{$fnyeri9}} <?php  if ($fnyeri9=='Lainnya') echo ','.$fnyeri10.''?> </p>
 
-      <p><b>Faktor Peringan :</b></p>
-      <ul>
-        <li>Makan</li>
-        <li>Sungi</li>
-      </ul>
+      <p><b>Faktor Peringan :</b> {{$fnyeri11}} <?php  if ($fnyeri11=='Lainnya') echo ','.$fnyeri12.''?> </p>
 
       <p><b>Efek Nyeri :</b></p>
       <ul>
       <?php 
-        if(isset($macam_kasus[1])) echo 
+        if(isset($fnyeri13[1])) echo 
         '<li>
-          Keinginan sendiri
+          Mual Muntah
         </li>';
-        if(isset($macam_kasus[2])) echo 
+        if(isset($fnyeri13[2])) echo 
         '<li>
-          Paksaan Orang Tua
+          Emosi
         </li>';
-        if(isset($macam_kasus[3])) echo 
+        if(isset($fnyeri13[3])) echo 
         '<li>
-          Rujukan Praktek Dokter
+          Tidur
         </li>';
-        if(isset($macam_kasus[4])) echo 
+        if(isset($fnyeri13[4])) echo 
         '<li>
-          Rujukan Instansi Lain
+          Hubungan dengan orang lain
         </li>';
-        if(isset($macam_kasus[5])) echo 
+        if(isset($fnyeri13[5])) echo 
         '<li>
-          Kiriman Kepolisian
+          Nafsu Makan
         </li>';
-        if(isset($macam_kasus[6])) echo 
+        if(isset($fnyeri13[6])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Aktivitas
         </li>';
-        if(isset($macam_kasus[7])) echo 
+        if(isset($fnyeri13[7])) echo 
         '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
-        </li>';
-        if(isset($macam_kasus[8])) echo 
-        '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
-        </li>';
-        if(isset($macam_kasus[8])) echo 
-        '<li>
-          Lain-lain, '.$alasan_masuk_lainnya.'
+          Lainnya, '.$fnyeri14.'
         </li>';
       ?>
     </ul>
@@ -1331,39 +1522,59 @@ header('Content-Type: application/pdf');
           <?php 
             if(isset($macam_kasus[1])) echo 
             '<li>
-              Keinginan sendiri
+              Aktual/ Resiko bersihan jalan nafas tidak efektif
             </li>';
             if(isset($macam_kasus[2])) echo 
             '<li>
-              Paksaan Orang Tua
+              Aktual/ Resiko aspirasi
             </li>';
             if(isset($macam_kasus[3])) echo 
             '<li>
-              Rujukan Praktek Dokter
+              Aktual/ Resiko pola nafas tidak efektif
             </li>';
             if(isset($macam_kasus[4])) echo 
             '<li>
-              Rujukan Instansi Lain
+              Aktual/ Resiko gangguan pertukaran gas
             </li>';
             if(isset($macam_kasus[5])) echo 
             '<li>
-              Kiriman Kepolisian
+              Aktual/ penurunan curah jantung
             </li>';
             if(isset($macam_kasus[6])) echo 
             '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
+              Aktual/ Resiko gangguan perfusi jaringan celebral/perifer
             </li>';
             if(isset($macam_kasus[7])) echo 
             '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
+              Aktual/ Resiko gangguan keseimbangan cairan
             </li>';
             if(isset($macam_kasus[8])) echo 
             '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
+              Aktual/ Resiko gangguan keseimbangan kontinuitas jaringan
             </li>';
-            if(isset($macam_kasus[8])) echo 
+            if(isset($macam_kasus[9])) echo 
             '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
+              Aktual/ Resiko infeksi
+            </li>';
+            if(isset($macam_kasus[10])) echo 
+            '<li>
+              Resiko cedera / jatuh
+            </li>';
+            if(isset($macam_kasus[11])) echo 
+            '<li>
+              Hypertermi
+            </li>';
+            if(isset($macam_kasus[12])) echo 
+            '<li>
+              Nyeri
+            </li>';
+            if(isset($macam_kasus[13])) echo 
+            '<li>
+              Gangguan kebutuhan nutrisi
+            </li>';
+            if(isset($macam_kasus[14])) echo 
+            '<li>
+              Lainnya, '.$fdiagnosaumum_ket.'
             </li>';
           ?>
         </ul>
@@ -1374,39 +1585,51 @@ header('Content-Type: application/pdf');
           <?php 
             if(isset($macam_kasus[1])) echo 
             '<li>
-              Keinginan sendiri
+              Gangguan persepsi sensori : halusinasi
             </li>';
             if(isset($macam_kasus[2])) echo 
             '<li>
-              Paksaan Orang Tua
+              Perilaku kekerasan
             </li>';
             if(isset($macam_kasus[3])) echo 
             '<li>
-              Rujukan Praktek Dokter
+              Isolasi sosial
             </li>';
             if(isset($macam_kasus[4])) echo 
             '<li>
-              Rujukan Instansi Lain
+              Gangguan konsep diri
             </li>';
             if(isset($macam_kasus[5])) echo 
             '<li>
-              Kiriman Kepolisian
+              Resiko bunuh diri
             </li>';
             if(isset($macam_kasus[6])) echo 
             '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
+              Intoleransi aktifitas
             </li>';
             if(isset($macam_kasus[7])) echo 
             '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
+              Waham
             </li>';
             if(isset($macam_kasus[8])) echo 
             '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
+              Defisit perawatan diri
             </li>';
-            if(isset($macam_kasus[8])) echo 
+            if(isset($macam_kasus[9])) echo 
             '<li>
-              Lain-lain, '.$alasan_masuk_lainnya.'
+              Kerusakan komunitas verbal
+            </li>';
+            if(isset($macam_kasus[10])) echo 
+            '<li>
+              Koping individu tidak efektif
+            </li>';
+            if(isset($macam_kasus[11])) echo 
+            '<li>
+              Aktual/Resiko Cemas/Takut
+            </li>';
+            if(isset($macam_kasus[12])) echo 
+            '<li>
+              Lainnya, '.$fdiagnosajiwa_ket.'
             </li>';
           ?>
     </ul>

@@ -1674,7 +1674,7 @@ class RIAsesmenAwalController extends Controller
     	{
     		$this->data['fnyeri7'] = 'Intermiten ';
     	}
-    	else if($this->data['fnyeri7'] == '86')
+    	else if($this->data['fnyeri7'] == '7')
     	{
     		$this->data['fnyeri7'] = 'Tertekan ';
     	}
@@ -1725,24 +1725,241 @@ class RIAsesmenAwalController extends Controller
     		$this->data['fnyeri11'] = 'Lainnya';
     	}
 
+    	//resiko jatuh
+        if($this->data['usia']=='1')
+        {
+            $this->data['usia'] = '(Skor: 4) Dibawah 3 tahun';
+        }
+        elseif ($this->data['usia']=='2') {
+            $this->data['usia'] = '(Skor: 3) 3 – 7 tahun'; 
+        }
+        elseif ($this->data['usia']=='3') {
+            $this->data['usia'] = '(Skor: 2) 7 – 13 tahun'; 
+        }
+        else {
+            $this->data['usia'] = '(Skor: 1) > 13 tahun';
+        }
 
-    	if($this->data['instruksi1'] == '1')
-    	{
-    		$this->data['instruksi1'] = '';
-    	}
-    	else
-    	{
-    		$this->data['instruksi1'] = '';
-    	}
+        if($this->data['diagnosis_hd']=='1')
+        {
+            $this->data['diagnosis_hd'] = '(Skor: 4) Kelainan Neurologi';
+        }
+        elseif ($this->data['diagnosis_hd']=='2') {
+            $this->data['diagnosis_hd'] = '(Skor: 3) Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)'; 
+        }
+        elseif ($this->data['diagnosis_hd']=='3') {
+            $this->data['diagnosis_hd'] = '(Skor: 2) Kelainan psikis / prilaku'; 
+        }
+        else {
+            $this->data['diagnosis_hd'] = '(Skor: 1) Diagnosis lain';
+        }
 
-    	if($this->data['instruksi1'] == '1')
-    	{
-    		$this->data['instruksi1'] = '';
-    	}
-    	else
-    	{
-    		$this->data['instruksi1'] = '';
-    	}
+        if($this->data['gangguan_kognitif']=='1')
+        {
+            $this->data['gangguan_kognitif'] = '(Skor: 3) Tidak sadar terhadap keterbatasan (gangguan kesadaran, retardasi mental';
+        }
+        elseif ($this->data['gangguan_kognitif']=='2') {
+            $this->data['gangguan_kognitif'] = '(Skor: 2) Lupa keterbatasan (anak yang hiperaktif)'; 
+        }
+        else {
+            $this->data['gangguan_kognitif'] = '(Skor: 1) Mengetahui kemampuan diri';
+        }
+
+        if($this->data['faktor_lingkungan']=='1')
+        {
+            $this->data['faktor_lingkungan'] = '(Skor: 4) Riwayat jatuh dari tempat tidur saat bayi';
+        }
+        elseif ($this->data['faktor_lingkungan']=='2') {
+            $this->data['faktor_lingkungan'] = '(Skor: 3) Pasien menggunakan alat bantu atau box meubel'; 
+        }
+        elseif ($this->data['faktor_lingkungan']=='3') {
+            $this->data['faktor_lingkungan'] = '(Skor: 2) Pasien berada di tempat tidur'; 
+        }
+        else {
+            $this->data['faktor_lingkungan'] = '(Skor: 1) Di luar ruang rawat';
+        }
+
+        if($this->data['waktu_respon_obat']=='1')
+        {
+            $this->data['waktu_respon_obat'] = '(Skor: 3) Dalam 24 Jam';
+        }
+        elseif ($this->data['waktu_respon_obat']=='2') {
+            $this->data['waktu_respon_obat'] = '(Skor: 2) Dalam 48 Jam'; 
+        }
+        else {
+            $this->data['waktu_respon_obat'] = '(Skor: 1) > 48 Jam';
+        }
+
+        if($this->data['penggunaan_obat']=='1')
+        {
+            $this->data['penggunaan_obat'] = '(Skor: 3) Bermacam-macam obat yang digunakan : obat sedatif (kecuali pasien ICU yang menggunakan sedasi dan paralisis), Hiptonik Barbitural, Fonotiazin, Antidepresan, Laksansia / Diuretikan, Narkotik';
+        }
+        elseif ($this->data['penggunaan_obat']=='2') {
+            $this->data['penggunaan_obat'] = '(Skor: 2) Salah satu Pengobatan di atas'; 
+        }
+        else {
+            $this->data['penggunaan_obat'] = '(Skor: 1) Pengobatan lain';
+        }
+
+        if($this->data['riwayat_jatuh_mrs']=='1')
+        {
+            $this->data['riwayat_jatuh_mrs'] = '(Skor: 25) Ya';
+        }
+        else {
+            $this->data['riwayat_jatuh_mrs'] = '(Skor: 0) Tidak';
+        }
+
+        if($this->data['diagnosis_sekunder']=='1')
+        {
+            $this->data['diagnosis_sekunder'] = '(Skor: 15) Ya';
+        }
+        else {
+            $this->data['diagnosis_sekunder'] = '(Skor: 0) Tidak';
+        }
+
+        if($this->data['alat_bantu']=='1')
+        {
+            $this->data['alat_bantu'] = '(Skor: 30) Perabot';
+        }
+        elseif ($this->data['alat_bantu']=='2') {
+            $this->data['alat_bantu'] = '(Skor: 15) Tongkat/Alat Penopang'; 
+        }
+        else {
+            $this->data['alat_bantu'] = '(Skor: 0) Tidak ada/Kursi Roda/Perawat/Tirah Baring';
+        }
+
+        if($this->data['terpasang_infus']=='1')
+        {
+            $this->data['terpasang_infus'] = '(Skor: 20) Ya';
+        }
+        else {
+            $this->data['terpasang_infus'] = '(Skor: 0) Tidak';
+        }
+
+        if($this->data['gaya_berjalan']=='1')
+        {
+            $this->data['gaya_berjalan'] = '(Skor: 20) Terganggu';
+        }
+        elseif ($this->data['gaya_berjalan']=='2') {
+            $this->data['gaya_berjalan'] = '(Skor: 10) Lemah'; 
+        }
+        else {
+            $this->data['gaya_berjalan'] = '(Skor: 0) Normal/Tirah Baring/Imobilisasi';
+        }
+
+        if($this->data['status_mental_mrs']=='1')
+        {
+            $this->data['status_mental_mrs'] = '(Skor: 15) Sering lupa akan keterbatasan yang dimiliki';
+        }
+        else {
+            $this->data['status_mental_mrs'] = '(Skor: 0) Orientasi baik terhadap kemampuan diri sendiri';
+        }
+
+        if($this->data['status_mental_edm']=='1')
+        {
+            $this->data['status_mental_edm'] = '(Skor: 4) Kesadaran baik/orientasi baik setiap saat';
+        }
+        elseif ($this->data['status_mental_edm']=='2') {
+            $this->data['status_mental_edm'] = '(Skor: 12) Agitasi/Ansietas'; 
+        }
+        elseif ($this->data['status_mental_edm']=='3') {
+            $this->data['status_mental_edm'] = '(Skor: 13) Kadang-kadang bingung'; 
+        }
+        else {
+            $this->data['status_mental_edm'] = '(Skor: 14) Bingung/Disorientasi';
+        }
+
+        if($this->data['diagnosis_edm']=='1')
+        {
+            $this->data['diagnosis_edm'] = '(Skor: ) Kelainan Neurologi';
+        }
+        elseif ($this->data['diagnosis_edm']=='2') {
+            $this->data['diagnosis_edm'] = '(Skor: ) Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)'; 
+        }
+        elseif ($this->data['diagnosis_edm']=='3') {
+            $this->data['diagnosis_edm'] = '(Skor: ) Kelainan psikis / prilaku'; 
+        }
+        else {
+            $this->data['diagnosis_edm'] = '(Skor: ) Diagnosis lain';
+        }
+
+        if($this->data['eliminasi']=='1')
+        {
+            $this->data['eliminasi'] = '(Skor: 8) Mandiri dan mampi mengontrol BAB/BAK';
+        }
+        elseif ($this->data['eliminasi']=='2') {
+            $this->data['eliminasi'] = '(Skor: 12) Dower Catheter/Colostomy'; 
+        }
+        elseif ($this->data['eliminasi']=='3') {
+            $this->data['eliminasi'] = '(Skor: 10) Eliminasi dengan bantuan'; 
+        }
+        elseif ($this->data['eliminasi']=='4') {
+            $this->data['eliminasi'] = '(Skor: 12) Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)'; 
+        }
+        else {
+            $this->data['eliminasi'] = '(Skor: 12) Inkontinesia tetapi mampu untuk mobilisasi';
+        }
+
+        if($this->data['pengobatan']=='1')
+        {
+            $this->data['pengobatan'] = '(Skor: 10) Tanpa obat-obatan';
+        }
+        elseif ($this->data['pengobatan']=='2') {
+            $this->data['pengobatan'] = '(Skor: 10) Obat-obatan jantung'; 
+        }
+        elseif ($this->data['pengobatan']=='3') {
+            $this->data['pengobatan'] = '(Skor: 8) Obat-obat psikotropika (termasuk Benzodiazepine dan Antidepresan)'; 
+        }
+        else {
+            $this->data['pengobatan'] = '(Skor: 12) Mendapat tambahan obat-obatan dan/atau obat-obat PRN (psikiatri, antinyeri) yang diberikan dalam 24 jam terakhir';
+        }
+
+        if($this->data['diagnosa']=='1')
+        {
+            $this->data['diagnosa'] = '(Skor: 10) Bipolar/ Gangguan Schizoaffective';
+        }
+        elseif ($this->data['diagnosa']=='2') {
+            $this->data['diagnosa'] = '(Skor: 8) Penggunaan Obat-obatan terlarang/ketergantungan alkohol'; 
+        }
+        elseif ($this->data['diagnosa']=='3') {
+            $this->data['diagnosa'] = '(Skor: 10) Gangguan Depresi Mayor'; 
+        }
+        else {
+            $this->data['diagnosa'] = '(Skor: 12) Dimensia/ Delirium';
+        }
+
+        if($this->data['ambulasi']=='1')
+        {
+            $this->data['ambulasi'] = '(Skor: 8) Mandiri/Keseimbangan Baik/Immobilisasi';
+        }
+        elseif ($this->data['ambulasi']=='2') {
+            $this->data['ambulasi'] = '(Skor: 8) Dengan Alat Bantu (Kursi roda, walker,dll)'; 
+        }
+        elseif ($this->data['ambulasi']=='3') {
+            $this->data['ambulasi'] = '(Skor: 10) Vertigo/kelemahan'; 
+        }
+        elseif ($this->data['ambulasi']=='4') {
+            $this->data['ambulasi'] = '(Skor: 8) Goyah/membutuhkan mantuan dan menyadari kemampuan'; 
+        }
+        else {
+            $this->data['ambulasi'] = '(Skor: 15) Goyah tapi lupa keterbatasan';
+        }
+
+        if($this->data['nutrisi']=='1')
+        {
+            $this->data['nutrisi'] = '(Skor: 12) Mengkonsumsi sedikit makanan atau minuman  dalam 24 jam terakhir';
+        }
+        else{
+            $this->data['nutrisi'] = '(Skor: 0) Tidak ada kelainan dengan nafsu makan'; 
+        }
+
+        if($this->data['riwayat_jatuh_edm']=='1')
+        {
+            $this->data['riwayat_jatuh_edm'] = '(Skor: 8) Tidak ada riwayat jatuh';
+        }
+        else {
+            $this->data['riwayat_jatuh_edm'] = '(Skor: 12) Ada riwayat jatuh dalam 3 bulan terakhir';
+        }
     }
 
     public function ri_asesmen_pdf()
@@ -1760,7 +1977,7 @@ class RIAsesmenAwalController extends Controller
         'orientation' => 'P'
         ]);
 
-        $view = View::make('doc_ri_asesmen',$this->load);
+        $view = View::make('doc_ri_asesmen',$this->data);
         $contents = $view->render();
 
 
