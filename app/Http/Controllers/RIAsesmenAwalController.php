@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RIAsesmenAwalPerawat;
+use App\Models\RIAsesmenAwalDokter;
 use App\Models\ListDocument;
 use Session;
 
@@ -21,8 +22,14 @@ class RIAsesmenAwalController extends Controller
 
     public function post_ri_asesmen_awal_perawat(Request $request)
     {
+    	$jenis_form = $request->jenis_form;
     	$id_pasien = Session::get('id_pasien');
-    	$data = new RIAsesmenAwalPerawat;
+    	if($jenis_form == 'create') {
+	    	$data = new RIAsesmenAwalPerawat;
+    	}
+    	else {
+	    	$data = RIAsesmenAwalPerawat::where('id_regis', $id_pasien)->first();
+    	}
     	$data->id_regis = $id_pasien;
     	$data->tanggal_diperiksa = $request->tanggal_diperiksa;
 		$data->jam_diperiksa = $request->jam_diperiksa;
@@ -237,7 +244,7 @@ class RIAsesmenAwalController extends Controller
 		if(strlen($friwayatkeluarga) > 0) {
 			$friwayatkeluarga  = substr($friwayatkeluarga, 0, -1);
 		}
-		$data->friwayatkeluarga = $request->friwayatkeluarga;
+		$data->friwayatkeluarga = $friwayatkeluarga;
 		$data->friwayatpsikososial1 = $request->friwayatpsikososial1;
 		$data->friwayatpsikososial2 = $request->friwayatpsikososial2;
 		$data->friwayatpsikososial3 = $request->friwayatpsikososial3;
@@ -393,16 +400,16 @@ class RIAsesmenAwalController extends Controller
 		$data->falamperasaan = $falamperasaan;
 		$data->falamperasaan_ket = $request->falamperasaan_ket;
 		$fafek = '';
-		if(isset($fafek1)) {
+		if(isset($request->fafek1)) {
 			$fafek .= '1-';
 		}
-		if(isset($fafek2)) {
+		if(isset($request->fafek2)) {
 			$fafek .= '2-';
 		}
-		if(isset($fafek3)) {
+		if(isset($request->fafek3)) {
 			$fafek .= '3-';
 		}
-		if(isset($fafek4)) {
+		if(isset($request->fafek4)) {
 			$fafek .= '4-';
 		}
 		if(strlen($fafek) > 0) {
@@ -411,22 +418,22 @@ class RIAsesmenAwalController extends Controller
 		$data->fafek = $fafek;
 		$data->fafek_ket = $request->fafek_ket;
 		$finteraksi = '';
-		if(isset($finteraksi1)) {
+		if(isset($request->finteraksi1)) {
 			$finteraksi .= '1-'; 
 		}
-		if(isset($finteraksi2)) {
+		if(isset($request->finteraksi2)) {
 			$finteraksi .= '2-'; 
 		}
-		if(isset($finteraksi3)) {
+		if(isset($request->finteraksi3)) {
 			$finteraksi .= '3-'; 
 		}
-		if(isset($finteraksi4)) {
+		if(isset($request->finteraksi4)) {
 			$finteraksi .= '4-'; 
 		}
-		if(isset($finteraksi5)) {
+		if(isset($request->finteraksi5)) {
 			$finteraksi .= '5-'; 
 		}
-		if(isset($finteraksi6)) {
+		if(isset($request->finteraksi6)) {
 			$finteraksi .= '6-'; 
 		}
 		if(strlen($finteraksi) > 0) {
@@ -510,22 +517,22 @@ class RIAsesmenAwalController extends Controller
 		$data->fisikpikir = $fisikpikir;
 		$data->fisikpikir_ket = $request->fisikpikir_ket;
 		$faruspikir = '';
-		if(isset($faruspikir1)) {
+		if(isset($request->faruspikir1)) {
 			$faruspikir .= '1-';
 		}
-		if(isset($faruspikir2)) {
+		if(isset($request->faruspikir2)) {
 			$faruspikir .= '2-';
 		}
-		if(isset($faruspikir3)) {
+		if(isset($request->faruspikir3)) {
 			$faruspikir .= '3-';
 		}
-		if(isset($faruspikir4)) {
+		if(isset($request->faruspikir4)) {
 			$faruspikir .= '4-';
 		}
-		if(isset($faruspikir5)) {
+		if(isset($request->faruspikir5)) {
 			$faruspikir .= '5-';
 		}
-		if(isset($faruspikir6)) {
+		if(isset($request->faruspikir6)) {
 			$faruspikir .= '6-';
 		}
 		if(strlen($faruspikir) > 0) {
@@ -708,7 +715,6 @@ class RIAsesmenAwalController extends Controller
 		$data->fgizi2 = $request->fgizi2;
 		$data->fresikojatuh1 = $request->fresikojatuh1;
 		$data->fresikojatuh2 = $request->fresikojatuh2;
-		$data->jenis_resiko_jatuh = $request->jenis_resiko_jatuh;
 		$data->fnyeri1 = $request->fnyeri1;
 		$data->fnyeri2 = $request->fnyeri2;
 		$data->fnyeri3 = $request->fnyeri3;
@@ -749,46 +755,46 @@ class RIAsesmenAwalController extends Controller
 		$data->fnyeri13 = $fnyeri13;
 		$data->fnyeri14 = $request->fnyeri14;
 		$fdiagnosaumum = '';
-		if(isset($fdiagnosaumum1)) {
+		if(isset($request->fdiagnosaumum1)) {
 			$fdiagnosaumum .= '1-';
 		}
-		if(isset($fdiagnosaumum2)) {
+		if(isset($request->fdiagnosaumum2)) {
 			$fdiagnosaumum .= '2-';
 		}
-		if(isset($fdiagnosaumum3)) {
+		if(isset($request->fdiagnosaumum3)) {
 			$fdiagnosaumum .= '3-';
 		}
-		if(isset($fdiagnosaumum4)) {
+		if(isset($request->fdiagnosaumum4)) {
 			$fdiagnosaumum .= '4-';
 		}
-		if(isset($fdiagnosaumum5)) {
+		if(isset($request->fdiagnosaumum5)) {
 			$fdiagnosaumum .= '5-';
 		}
-		if(isset($fdiagnosaumum6)) {
+		if(isset($request->fdiagnosaumum6)) {
 			$fdiagnosaumum .= '6-';
 		}
-		if(isset($fdiagnosaumum7)) {
+		if(isset($request->fdiagnosaumum7)) {
 			$fdiagnosaumum .= '7-';
 		}
-		if(isset($fdiagnosaumum8)) {
+		if(isset($request->fdiagnosaumum8)) {
 			$fdiagnosaumum .= '8-';
 		}
-		if(isset($fdiagnosaumum9)) {
+		if(isset($request->fdiagnosaumum9)) {
 			$fdiagnosaumum .= '9-';
 		}
-		if(isset($fdiagnosaumum10)) {
+		if(isset($request->fdiagnosaumum10)) {
 			$fdiagnosaumum .= '10-';
 		}
-		if(isset($fdiagnosaumum11)) {
+		if(isset($request->fdiagnosaumum11)) {
 			$fdiagnosaumum .= '11-';
 		}
-		if(isset($fdiagnosaumum12)) {
+		if(isset($request->fdiagnosaumum12)) {
 			$fdiagnosaumum .= '12-';
 		}
-		if(isset($fdiagnosaumum13)) {
+		if(isset($request->fdiagnosaumum13)) {
 			$fdiagnosaumum .= '13-';
 		}
-		if(isset($fdiagnosaumum14)) {
+		if(isset($request->fdiagnosaumum14)) {
 			$fdiagnosaumum .= '14-';
 		}
 		if(strlen($fdiagnosaumum) > 0) {
@@ -841,12 +847,345 @@ class RIAsesmenAwalController extends Controller
 		$data->tanggal = $request->tanggal;
 		$data->jam = $request->jam;
 		$data->nama_perawat = $request->nama_perawat;
+		$data->resume = $request->resume;
+
+		$data->jenis_resiko_jatuh = $request->jenis_resiko_jatuh;
+        if($request->jenis_resiko_jatuh == 'humpty_dumpty')
+        {
+            $data->usia = $request->usia;
+            $data->diagnosis_hd = $request->diagnosis_hd;
+            $data->gangguan_kognitif = $request->gangguan_kognitif;
+            $data->faktor_lingkungan = $request->faktor_lingkungan;
+            $data->waktu_respon_obat = $request->waktu_respon_obat;
+            $data->penggunaan_obat = $request->penggunaan_obat;
+            
+        }
+        elseif($request->jenis_resiko_jatuh == 'morse')
+        {
+            $data->riwayat_jatuh_mrs = $request->riwayat_jatuh_mrs;
+            $data->diagnosis_sekunder = $request->diagnosis_sekunder;
+            $data->alat_bantu = $request->alat_bantu;
+            $data->terpasang_infus = $request->terpasang_infus;
+            $data->gaya_berjalan = $request->gaya_berjalan;
+            $data->status_mental_mrs = $request->status_mental_mrs;
+        }
+        elseif($request->jenis_resiko_jatuh == 'edmunson')
+        {
+            $data->status_mental_edm = $request->status_mental_edm;
+            $data->diagnosis_edm = $request->diagnosis_edm;
+            $data->eliminasi = $request->eliminasi;
+            $data->pengobatan = $request->pengobatan;
+            $data->diagnosa = $request->diagnosa;
+            $data->ambulasi = $request->ambulasi;
+            $data->nutrisi = $request->nutrisi;
+            $data->riwayat_jatuh_edm = $request->riwayat_jatuh_edm;
+        }
+
+        //obat
+        $obat = '';
+        $jumlah_form = $request->jumlah_form;
+        for ($i=1; $i <= $jumlah_form ; $i++) { 
+        	$str_nama_obat = 'nama_obat_'.$i;
+        	$str_dosis_obat = 'dosis_obat_'.$i;
+        	$str_terakhir_obat = 'terakhir_obat_'.$i;
+        	if(!empty($request->$str_nama_obat)) {
+        		$obat .= $request->$str_nama_obat.'@&$*#'.$request->$str_dosis_obat.'@&$*#'.$request->$str_terakhir_obat.'^&$*#';
+        	}
+        }
+        if(strlen($obat) > 0) {
+        	$obat = substr($obat, 0, -5);
+        }
+        $data->obat = $obat;
     	$data->save();
+
+    	return redirect('ri_asesmen_awal_perawat_read');
     }
 
     public function get_ri_asesmen_awal_perawat_data()
     {
-    	//
+    	$id_pasien = Session::get('id_pasien');
+    	$pasien = RIAsesmenAwalPerawat::where('id_regis', $id_pasien)->first();
+    	$this->data['tanggal_diperiksa'] = $pasien->tanggal_diperiksa;
+		$this->data['jam_diperiksa'] = $pasien->jam_diperiksa;
+		$this->data['nadi'] = $pasien->nadi;
+		$this->data['td'] = $pasien->td;
+		$this->data['napas'] = $pasien->napas;
+		$this->data['suhu'] = $pasien->suhu;
+		$this->data['tb'] = $pasien->tb;
+		$this->data['bb'] = $pasien->bb;
+		$this->data['kondisi'] = $pasien->kondisi;
+		$this->data['kondisi_ket'] = $pasien->kondisi_ket;
+		$this->data['asal'] = $pasien->asal;
+		$this->data['dokter_pemeriksa'] = $pasien->dokter_pemeriksa;
+		$this->data['dokter_keluarga'] = $pasien->dokter_keluarga;
+		$this->data['diagnosis_masuk'] = $pasien->diagnosis_masuk;
+		$this->data['dpjp'] = $pasien->dpjp;
+		$this->data['alergi'] = $pasien->alergi;
+		$this->data['jenis_reaksi'] = $pasien->jenis_reaksi;
+		$barang = explode('-', $pasien->barang);
+		$this->data['barang'] = array();
+		foreach ($barang as $key => $value) {
+			$this->data['barang'][$value] = True;
+		}
+		$this->data['deskripsi_barang_berharga'] = $pasien->deskripsi_barang_berharga;
+		$tindak = explode('-', $pasien->tindak);
+		$this->data['tindak'] = array();
+		foreach ($tindak as $key => $value) {
+			$this->data['tindak'][$value] = True;
+		}
+		$this->data['tindakan_barang'] = $pasien->tindakan_barang;
+		$alat = explode('-', $pasien->alat);
+		$this->data['alat'] = array();
+		foreach ($alat as $key => $value) {
+			$this->data['alat'][$value] = True;
+		}
+		$this->data['alat_bantu_lainnya'] = $pasien->alat_bantu_lainnya;
+		$friwayatpasien1 = explode('-', $pasien->friwayatpasien1);
+		$this->data['friwayatpasien1'] = array();
+		foreach ($friwayatpasien1 as $key => $value) {
+			$this->data['friwayatpasien1'][$value] = True;
+		}
+		$this->data['friwayatpasien2'] = $pasien->friwayatpasien2;
+		$this->data['friwayatpasien3'] = $pasien->friwayatpasien3;
+		$this->data['friwayatpasien4'] = $pasien->friwayatpasien4;
+		$this->data['friwayatpasien5'] = $pasien->friwayatpasien5;
+		$this->data['friwayatpasien6'] = $pasien->friwayatpasien6;
+		$this->data['friwayatpasien7'] = $pasien->friwayatpasien7;
+		$this->data['friwayatpasien8'] = $pasien->friwayatpasien8;
+		$this->data['friwayatpasien9'] = $pasien->friwayatpasien9;
+		$this->data['friwayatpasien10'] = $pasien->friwayatpasien10;
+		$this->data['friwayatpasien11'] = $pasien->friwayatpasien11;
+		$this->data['friwayatpasien12'] = $pasien->friwayatpasien12;
+		$this->data['friwayatpasien13'] = $pasien->friwayatpasien13;
+		$this->data['friwayatpasien14'] = $pasien->friwayatpasien14;
+		$this->data['friwayatpasien15'] = $pasien->friwayatpasien15;
+		$this->data['friwayatpasien16'] = $pasien->friwayatpasien16;
+		$this->data['friwayatpasien17'] = $pasien->friwayatpasien17;
+		$this->data['friwayatpasien18'] = $pasien->friwayatpasien18;
+		$this->data['friwayatpasien19'] = $pasien->friwayatpasien19;
+		$this->data['friwayatpasien20'] = $pasien->friwayatpasien20;
+		$this->data['friwayatpasien21'] = $pasien->friwayatpasien21;
+		$this->data['friwayatpasien22'] = $pasien->friwayatpasien22;
+		$this->data['friwayatpasien23'] = $pasien->friwayatpasien23;
+		$this->data['friwayatpasien24'] = $pasien->friwayatpasien24;
+		$this->data['friwayatpasien25'] = $pasien->friwayatpasien25;
+		$this->data['friwayatpasien26'] = $pasien->friwayatpasien26;
+		$this->data['friwayatpasien27'] = $pasien->friwayatpasien27;
+		$this->data['friwayatpasien28'] = $pasien->friwayatpasien28;
+		$this->data['friwayatpasien29'] = $pasien->friwayatpasien29;
+		$this->data['friwayatpasien30'] = $pasien->friwayatpasien30;
+		$this->data['friwayatpasien31'] = $pasien->friwayatpasien31;
+		$this->data['friwayatpasien32'] = $pasien->friwayatpasien32;
+		$this->data['friwayatpasien33'] = $pasien->friwayatpasien33;
+		$friwayatkeluarga = explode('-', $pasien->friwayatkeluarga);
+		$this->data['friwayatkeluarga'] = array();
+		foreach ($friwayatkeluarga as $key => $value) {
+			$this->data['friwayatkeluarga'][$value] = True;
+		}
+		$this->data['friwayatpsikososial1'] = $pasien->friwayatpsikososial1;
+		$this->data['friwayatpsikososial2'] = $pasien->friwayatpsikososial2;
+		$this->data['friwayatpsikososial3'] = $pasien->friwayatpsikososial3;
+		$this->data['friwayatpsikososial4'] = $pasien->friwayatpsikososial4;
+		$this->data['friwayatpsikososial5'] = $pasien->friwayatpsikososial5;
+		$this->data['friwayatpsikososial6'] = $pasien->friwayatpsikososial6;
+		$this->data['friwayatpsikososial7'] = $pasien->friwayatpsikososial7;
+		$this->data['friwayatpsikososial8'] = $pasien->friwayatpsikososial8;
+		$this->data['friwayatpsikososial9'] = $pasien->friwayatpsikososial9;
+		$this->data['friwayatpsikososial10'] = $pasien->friwayatpsikososial10;
+		$this->data['friwayatpsikososial11'] = $pasien->friwayatpsikososial11;
+		$this->data['friwayatpsikososial12'] = $pasien->friwayatpsikososial12;
+		$this->data['friwayatpsikososial13'] = $pasien->friwayatpsikososial13;
+		$this->data['friwayatpsikososial14'] = $pasien->friwayatpsikososial14;
+		$this->data['fkeluarga1'] = $pasien->fkeluarga1;
+		$this->data['fkeluarga2'] = $pasien->fkeluarga2;
+		$this->data['fkeluarga3'] = $pasien->fkeluarga3;
+		$this->data['fkonsepdiri1'] = $pasien->fkonsepdiri1;
+		$this->data['fkonsepdiri2'] = $pasien->fkonsepdiri2;
+		$this->data['fkonsepdiri3'] = $pasien->fkonsepdiri3;
+		$this->data['fkonsepdiri4'] = $pasien->fkonsepdiri4;
+		$this->data['fkonsepdiri5'] = $pasien->fkonsepdiri5;
+		$this->data['fhubungansosial1'] = $pasien->fhubungansosial1;
+		$this->data['fhubungansosial2'] = $pasien->fhubungansosial2;
+		$this->data['fhubungansosial3'] = $pasien->fhubungansosial3;
+		$this->data['fspiritual1'] = $pasien->fspiritual1;
+		$this->data['fspiritual2'] = $pasien->fspiritual2;
+		$fpenampilan = explode('-', $pasien->fpenampilan);
+		$this->data['fpenampilan'] = array();
+		foreach ($fpenampilan as $key => $value) {
+			$this->data['fpenampilan'][$value] = True;
+		}
+		$this->data['fpenampilan_ket'] = $pasien->fpenampilan_ket;
+		$fpembicaraan = explode('-', $pasien->fpembicaraan);
+		$this->data['fpembicaraan'] = array();
+		foreach ($fpembicaraan as $key => $value) {
+			$this->data['fpembicaraan'][$value] = True;
+		}
+		$this->data['fpembicaraan_ket'] = $pasien->fpembicaraan_ket;
+		$faktivitasmotorik = explode('-', $pasien->faktivitasmotorik);
+		$this->data['faktivitasmotorik'] = array();
+		foreach ($faktivitasmotorik as $key => $value) {
+			$this->data['faktivitasmotorik'][$value] = True;
+		}
+		$this->data['faktivitasmotorik_ket'] = $pasien->faktivitasmotorik_ket;
+		$falamperasaan = explode('-', $pasien->falamperasaan);
+		$this->data['falamperasaan'] = array();
+		foreach ($falamperasaan as $key => $value) {
+			$this->data['falamperasaan'][$value] = True;
+		}
+		$this->data['falamperasaan_ket'] = $pasien->falamperasaan_ket;
+		$fafek = explode('-', $pasien->fafek);
+		$this->data['fafek'] = array();
+		foreach ($fafek as $key => $value) {
+			$this->data['fafek'][$value] = True;
+		}
+		$this->data['fafek_ket'] = $pasien->fafek_ket;
+		$finteraksi = explode('-', $pasien->finteraksi);
+		$this->data['finteraksi'] = array();
+		foreach ($finteraksi as $key => $value) {
+			$this->data['finteraksi'][$value] = True;
+		}
+		$this->data['finteraksi_ket'] = $pasien->finteraksi_ket;
+		$fpersepsi = explode('-', $pasien->fpersepsi);
+		$this->data['fpersepsi'] = array();
+		foreach ($fpersepsi as $key => $value) {
+			$this->data['fpersepsi'][$value] = True;
+		}
+		$this->data['fpersepsi_ket'] = $pasien->fpersepsi_ket;
+		$fisikpikir = explode('-', $pasien->fisikpikir);
+		$this->data['fisikpikir'] = array();
+		foreach ($fisikpikir as $key => $value) {
+			$this->data['fisikpikir'][$value] = True;
+		}
+		$this->data['fisikpikir_ket'] = $pasien->fisikpikir_ket;
+		$faruspikir = explode('-', $pasien->faruspikir);
+		$this->data['faruspikir'] = array();
+		foreach ($faruspikir as $key => $value) {
+			$this->data['faruspikir'][$value] = True;
+		}
+		$this->data['faruspikir_ket'] = $pasien->faruspikir_ket;
+		$fmemori = explode('-', $pasien->fmemori);
+		$this->data['fmemori'] = array();
+		foreach ($fmemori as $key => $value) {
+			$this->data['fmemori'][$value] = True;
+		}
+		$this->data['fmemori_ket'] = $pasien->fmemori_ket;
+		$fkonsentrasi = explode('-', $pasien->fkonsentrasi);
+		$this->data['fkonsentrasi'] = array();
+		foreach ($fkonsentrasi as $key => $value) {
+			$this->data['fkonsentrasi'][$value] = True;
+		}
+		$this->data['fkonsentrasi_ket'] = $pasien->fkonsentrasi_ket;
+		$fkemampuanpenilaian = explode('-', $pasien->fkemampuanpenilaian);
+		$this->data['fkemampuanpenilaian'] = array();
+		foreach ($fkemampuanpenilaian as $key => $value) {
+			$this->data['fkemampuanpenilaian'][$value] = True;
+		}
+		$this->data['fkemampuanpenilaian_ket'] = $pasien->fkemampuanpenilaian_ket;
+		$fdaya = explode('-', $pasien->fdaya);
+		$this->data['fdaya'] = array();
+		foreach ($fdaya as $key => $value) {
+			$this->data['fdaya'][$value] = True;
+		}
+		$this->data['fdaya_ket'] = $pasien->fdaya_ket;
+		$fpengajaran = explode('-', $pasien->fpengajaran);
+		$this->data['fpengajaran'] = array();
+		foreach ($fpengajaran as $key => $value) {
+			$this->data['fpengajaran'][$value] = True;
+		}
+		$this->data['fkomunikasi1'] = $pasien->fkomunikasi1;
+		$this->data['fkomunikasi2'] = $pasien->fkomunikasi2;
+		$this->data['fkomunikasi3'] = $pasien->fkomunikasi3;
+		$this->data['fkomunikasi4'] = $pasien->fkomunikasi4;
+		$this->data['fkomunikasi5'] = $pasien->fkomunikasi5;
+		$this->data['fkomunikasi6'] = $pasien->fkomunikasi6;
+		$this->data['fkomunikasi7'] = $pasien->fkomunikasi7;
+		$this->data['fkomunikasi8'] = $pasien->fkomunikasi8;
+		$this->data['fkomunikasi9'] = $pasien->fkomunikasi9;
+		$fkomunikasi10 = explode('-', $pasien->fkomunikasi10);
+		$this->data['fkomunikasi10'] = array();
+		foreach ($fkomunikasi10 as $key => $value) {
+			$this->data['fkomunikasi10'][$value] = True;
+		}
+		$fkomunikasi11 = explode('-', $pasien->fkomunikasi11);
+		$this->data['fkomunikasi11'] = array();
+		foreach ($fkomunikasi11 as $key => $value) {
+			$this->data['fkomunikasi11'][$value] = True;
+		}
+		$this->data['fkomunikasi12'] = $pasien->fkomunikasi12;
+		$this->data['fkomunikasi13'] = $pasien->fkomunikasi13;
+		$this->data['fkomunikasi14'] = $pasien->fkomunikasi14;
+		$this->data['fgizi1'] = $pasien->fgizi1;
+		$this->data['fgizi2'] = $pasien->fgizi2;
+		$this->data['fresikojatuh1'] = $pasien->fresikojatuh1;
+		$this->data['fresikojatuh2'] = $pasien->fresikojatuh2;
+		$this->data['fnyeri1'] = $pasien->fnyeri1;
+		$this->data['fnyeri2'] = $pasien->fnyeri2;
+		$this->data['fnyeri3'] = $pasien->fnyeri3;
+		$this->data['fnyeri4'] = $pasien->fnyeri4;
+		$this->data['fnyeri5'] = $pasien->fnyeri5;
+		$this->data['fnyeri6'] = $pasien->fnyeri6;
+		$this->data['fnyeri7'] = $pasien->fnyeri7;
+		$this->data['fnyeri8'] = $pasien->fnyeri8;
+		$this->data['fnyeri9'] = $pasien->fnyeri9;
+		$this->data['fnyeri10'] = $pasien->fnyeri10;
+		$this->data['fnyeri11'] = $pasien->fnyeri11;
+		$this->data['fnyeri12'] = $pasien->fnyeri12;
+		$fnyeri13 = explode('-', $pasien->fnyeri13);
+		$this->data['fnyeri13'] = array();
+		foreach ($fnyeri13 as $key => $value) {
+			$this->data['fnyeri13'][$value] = True;
+		}
+		$this->data['fnyeri14'] = $pasien->fnyeri14;
+		$fdiagnosaumum = explode('-', $pasien->fdiagnosaumum);
+		$this->data['fdiagnosaumum'] = array();
+		foreach ($fdiagnosaumum as $key => $value) {
+			$this->data['fdiagnosaumum'][$value] = True;
+		}
+		$this->data['fdiagnosaumum_ket'] = $pasien->fdiagnosaumum_ket;
+		$fdiagnosajiwa = explode('-', $pasien->fdiagnosajiwa);
+		$this->data['fdiagnosajiwa'] = array();
+		foreach ($fdiagnosajiwa as $key => $value) {
+			$this->data['fdiagnosajiwa'][$value] = True;
+		}
+		$this->data['fdiagnosajiwa_ket'] = $pasien->fdiagnosajiwa_ket;
+		$this->data['tanggal'] = $pasien->tanggal;
+		$this->data['jam'] = $pasien->jam;
+		$this->data['nama_perawat'] = $pasien->nama_perawat;
+		$this->data['resume'] = $pasien->resume;
+
+		$this->data['jenis_resiko_jatuh'] = $pasien->jenis_resiko_jatuh;
+        $this->data['usia'] = $pasien->usia;
+        $this->data['diagnosis_hd'] = $pasien->diagnosis_hd;
+        $this->data['gangguan_kognitif'] = $pasien->gangguan_kognitif;
+        $this->data['faktor_lingkungan'] = $pasien->faktor_lingkungan;
+        $this->data['waktu_respon_obat'] = $pasien->waktu_respon_obat;
+        $this->data['penggunaan_obat'] = $pasien->penggunaan_obat;
+        $this->data['riwayat_jatuh_mrs'] = $pasien->riwayat_jatuh_mrs;
+        $this->data['diagnosis_sekunder'] = $pasien->diagnosis_sekunder;
+        $this->data['alat_bantu'] = $pasien->alat_bantu;
+        $this->data['terpasang_infus'] = $pasien->terpasang_infus;
+        $this->data['gaya_berjalan'] = $pasien->gaya_berjalan;
+        $this->data['status_mental_mrs'] = $pasien->status_mental_mrs;
+        $this->data['status_mental_edm'] = $pasien->status_mental_edm;
+        $this->data['diagnosis_edm'] = $pasien->diagnosis_edm;
+        $this->data['eliminasi'] = $pasien->eliminasi;
+        $this->data['pengobatan'] = $pasien->pengobatan;
+        $this->data['diagnosa'] = $pasien->diagnosa;
+        $this->data['ambulasi'] = $pasien->ambulasi;
+        $this->data['nutrisi'] = $pasien->nutrisi;
+        $this->data['riwayat_jatuh_edm'] = $pasien->riwayat_jatuh_edm;
+
+
+        $this->data['obat'] = array();
+        $row_obat  = explode('^&$*#', $pasien->obat);
+        foreach ($row_obat as $key => $value) {
+        	$data_obat = explode('@&$*#', $value);
+        	$this->data['obat'][$key] = array();
+        	$this->data['obat'][$key]['nama_obat'] = $data_obat[0];
+        	$this->data['obat'][$key]['dosis_obat'] = $data_obat[1];
+        	$this->data['obat'][$key]['terakhir_obat'] = $data_obat[2];
+
+        }
     }
 
     public function get_ri_asesmen_awal_perawat_read()
@@ -861,10 +1200,10 @@ class RIAsesmenAwalController extends Controller
     	return view('page.ri.asesmen_awal_perawat_edit', $this->data);
     }
 
-    public function post_ri_asesmen_awal_perawat_edit(Request $request)
-    {
-    	dd('posting edit perawat');
-    }
+    // public function post_ri_asesmen_awal_perawat_edit(Request $request)
+    // {
+    // 	dd('posting edit perawat');
+    // }
 
     public function get_ri_asesmen_awal_dokter()
     {
@@ -873,12 +1212,134 @@ class RIAsesmenAwalController extends Controller
 
     public function post_ri_asesmen_awal_dokter(Request $request)
     {
-    	dd('posting_dokter');
+    	$id_pasien = Session::get('id_pasien');
+    	$jenis_form = $request->jenis_form;
+    	if($jenis_form == 'create') {
+    		$data = new RIAsesmenAwalDokter;
+    	}
+    	elseif($jenis_form == 'update') {
+    		$data = RIAsesmenAwalDokter::where('id_regis', $id_pasien)->first();
+    	}
+    	$data->id_regis = $id_pasien;
+    	$data->tanggal_diperiksa = $request->tanggal_diperiksa;
+		$data->jam_diperiksa = $request->jam_diperiksa;
+		$data->anamnesa = $request->anamnesa;
+		$data->anamnesa1 = $request->anamnesa1;
+		$data->anamnesa2 = $request->anamnesa2;
+		$data->anamnesa3 = $request->anamnesa3;
+		$data->anamnesa4 = $request->anamnesa4;
+		$data->anamnesa5 = $request->anamnesa5;
+		$data->anamnesa6 = $request->anamnesa6;
+		$data->anamnesa7 = $request->anamnesa7;
+		$data->anamnesa8 = $request->anamnesa8;
+		$data->psikiatri1 = $request->psikiatri1;
+		$data->psikiatri2 = $request->psikiatri2;
+		$data->psikiatri3 = $request->psikiatri3;
+		$data->psikiatri4 = $request->psikiatri4;
+		$data->psikiatri5 = $request->psikiatri5;
+		$data->psikiatri6 = $request->psikiatri6;
+		$data->psikiatri7 = $request->psikiatri7;
+		$data->psikiatri8 = $request->psikiatri8;
+		$data->psikiatri9 = $request->psikiatri9;
+		$data->psikiatri10 = $request->psikiatri10;
+		$data->psikiatri11 = $request->psikiatri11;
+		$data->psikiatri12 = $request->psikiatri12;
+		$data->psikiatri13 = $request->psikiatri13;
+		$data->psikiatri14 = $request->psikiatri14;
+		$data->psikiatri15 = $request->psikiatri15;
+		$data->psikiatri16 = $request->psikiatri16;
+		$data->psikiatri17 = $request->psikiatri17;
+		$data->psikiatri18 = $request->psikiatri18;
+		$data->psikiatri19 = $request->psikiatri19;
+		$data->penunjang1 = $request->penunjang1;
+		$data->penunjang2 = $request->penunjang2;
+		$data->penunjang3 = $request->penunjang3;
+		$data->penunjang4 = $request->penunjang4;
+		$data->penilaian1 = $request->penilaian1;
+		$data->penilaian2 = $request->penilaian2;
+		$data->diagnosis1 = $request->diagnosis1;
+		$data->diagnosis2 = $request->diagnosis2;
+		$data->diagnosis3 = $request->diagnosis3;
+		$data->diagnosis4 = $request->diagnosis4;
+		$data->diagnosis5 = $request->diagnosis5;
+		$data->rencana1 = $request->rencana1;
+		$data->rencana2 = $request->rencana2;
+		$data->rencana3 = $request->rencana3;
+		$data->instruksi1 = $request->instruksi1;
+		$data->Instruksi2 = $request->Instruksi2;
+		$data->Instruksi3 = $request->Instruksi3;
+		$data->instruksi4 = $request->instruksi4;
+		$data->instruksi5 = $request->instruksi5;
+		$data->instruksi6 = $request->instruksi6;
+		$data->instruksi7 = $request->instruksi7;
+		$data->instruksi8 = $request->instruksi8;
+		$data->tanggal = $request->tanggal;
+		$data->jam = $request->jam;
+		$data->nama_dokter = $request->nama_dokter;
+		$data->save();
+    	
+    	return redirect('ri_asesmen_awal_dokter_read');
     }
 
     public function get_ri_asesmen_awal_dokter_data()
     {
-    	//
+    	$id_pasien = Session::get('id_pasien');
+    	$pasien = RIAsesmenAwalDokter::where('id_regis', $id_pasien)->first();
+    	$this->data['tanggal_diperiksa'] = $pasien->tanggal_diperiksa;
+		$this->data['jam_diperiksa'] = $pasien->jam_diperiksa;
+		$this->data['anamnesa'] = $pasien->anamnesa;
+		$this->data['anamnesa1'] = $pasien->anamnesa1;
+		$this->data['anamnesa2'] = $pasien->anamnesa2;
+		$this->data['anamnesa3'] = $pasien->anamnesa3;
+		$this->data['anamnesa4'] = $pasien->anamnesa4;
+		$this->data['anamnesa5'] = $pasien->anamnesa5;
+		$this->data['anamnesa6'] = $pasien->anamnesa6;
+		$this->data['anamnesa7'] = $pasien->anamnesa7;
+		$this->data['anamnesa8'] = $pasien->anamnesa8;
+		$this->data['psikiatri1'] = $pasien->psikiatri1;
+		$this->data['psikiatri2'] = $pasien->psikiatri2;
+		$this->data['psikiatri3'] = $pasien->psikiatri3;
+		$this->data['psikiatri4'] = $pasien->psikiatri4;
+		$this->data['psikiatri5'] = $pasien->psikiatri5;
+		$this->data['psikiatri6'] = $pasien->psikiatri6;
+		$this->data['psikiatri7'] = $pasien->psikiatri7;
+		$this->data['psikiatri8'] = $pasien->psikiatri8;
+		$this->data['psikiatri9'] = $pasien->psikiatri9;
+		$this->data['psikiatri10'] = $pasien->psikiatri10;
+		$this->data['psikiatri11'] = $pasien->psikiatri11;
+		$this->data['psikiatri12'] = $pasien->psikiatri12;
+		$this->data['psikiatri13'] = $pasien->psikiatri13;
+		$this->data['psikiatri14'] = $pasien->psikiatri14;
+		$this->data['psikiatri15'] = $pasien->psikiatri15;
+		$this->data['psikiatri16'] = $pasien->psikiatri16;
+		$this->data['psikiatri17'] = $pasien->psikiatri17;
+		$this->data['psikiatri18'] = $pasien->psikiatri18;
+		$this->data['psikiatri19'] = $pasien->psikiatri19;
+		$this->data['penunjang1'] = $pasien->penunjang1;
+		$this->data['penunjang2'] = $pasien->penunjang2;
+		$this->data['penunjang3'] = $pasien->penunjang3;
+		$this->data['penunjang4'] = $pasien->penunjang4;
+		$this->data['penilaian1'] = $pasien->penilaian1;
+		$this->data['penilaian2'] = $pasien->penilaian2;
+		$this->data['diagnosis1'] = $pasien->diagnosis1;
+		$this->data['diagnosis2'] = $pasien->diagnosis2;
+		$this->data['diagnosis3'] = $pasien->diagnosis3;
+		$this->data['diagnosis4'] = $pasien->diagnosis4;
+		$this->data['diagnosis5'] = $pasien->diagnosis5;
+		$this->data['rencana1'] = $pasien->rencana1;
+		$this->data['rencana2'] = $pasien->rencana2;
+		$this->data['rencana3'] = $pasien->rencana3;
+		$this->data['instruksi1'] = $pasien->instruksi1;
+		$this->data['Instruksi2'] = $pasien->Instruksi2;
+		$this->data['Instruksi3'] = $pasien->Instruksi3;
+		$this->data['instruksi4'] = $pasien->instruksi4;
+		$this->data['instruksi5'] = $pasien->instruksi5;
+		$this->data['instruksi6'] = $pasien->instruksi6;
+		$this->data['instruksi7'] = $pasien->instruksi7;
+		$this->data['instruksi8'] = $pasien->instruksi8;
+		$this->data['tanggal'] = $pasien->tanggal;
+		$this->data['jam'] = $pasien->jam;
+		$this->data['nama_dokter'] = $pasien->nama_dokter;
     }
 
     public function get_ri_asesmen_awal_dokter_read()
@@ -893,9 +1354,9 @@ class RIAsesmenAwalController extends Controller
     	return view('page.ri.asesmen_awal_dokter_edit', $this->data);
     }
 
-    public function post_ri_asesmen_awal_dokter_edit(Request $request)
-    {
-    	dd('posting edit dokter');
-    }
+    // public function post_ri_asesmen_awal_dokter_edit(Request $request)
+    // {
+    // 	dd('posting edit dokter');
+    // }
 
 }

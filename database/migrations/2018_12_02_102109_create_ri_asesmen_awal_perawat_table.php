@@ -167,6 +167,37 @@ class CreateRiAsesmenAwalPerawatTable extends Migration
             $table->string('tanggal',10)->nullable();
             $table->string('jam',8)->nullable();
             $table->string('nama_perawat',150)->nullable();
+            $table->string('resume',500)->nullable();
+
+            //humpty_dumpty
+            $table->string('usia',1)->nullable();
+            $table->string('diagnosis_hd',1)->nullable();
+            $table->string('gangguan_kognitif',1)->nullable();
+            $table->string('faktor_lingkungan',1)->nullable();
+            $table->string('waktu_respon_obat',1)->nullable();
+            $table->string('penggunaan_obat',1)->nullable();
+
+            //morse
+            $table->string('riwayat_jatuh_mrs',1)->nullable();
+            $table->string('diagnosis_sekunder',1)->nullable();
+            $table->string('alat_bantu',1)->nullable();
+            $table->string('terpasang_infus',1)->nullable();
+            $table->string('gaya_berjalan',1)->nullable();
+            $table->string('status_mental_mrs',1)->nullable();
+
+            //edmunson
+            $table->string('status_mental_edm',1)->nullable();
+            $table->string('diagnosis_edm',1)->nullable();
+            $table->string('eliminasi',1)->nullable();
+            $table->string('pengobatan',1)->nullable();
+            $table->string('diagnosa',1)->nullable();
+            $table->string('ambulasi',1)->nullable();
+            $table->string('nutrisi',1)->nullable();
+            $table->string('riwayat_jatuh_edm',1)->nullable();
+
+            //obat
+            $table->string('obat',1000)->nullable();
+
             $table->timestamps();
         });
     }
