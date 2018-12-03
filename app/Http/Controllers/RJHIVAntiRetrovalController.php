@@ -717,10 +717,124 @@ class RJHIVAntiRetrovalController extends Controller
         return redirect('daftar_dokumen');
     }
 
+    funtion convert()
+    {
+        if( $this->data['entry_point'] == '1')
+        {
+           $this->data['entry_point']  = 'KIA'; 
+        }
+        elseif( $this->data['entry_point'] == '2')
+        {
+            $this->data['entry_point'] = 'Rawat Jalan (TB, Anak, Penyakit Dalam, IMS, Lainnya ...)';
+        }
+        elseif( $this->data['entry_point'] == '3')
+        {
+            $this->data['entry_point'] = 'Rawat Inap';
+        }
+        elseif( $this->data['entry_point'] == '4')
+        {
+            $this->data['entry_point'] = 'Praktek Swasta';
+        }
+        elseif( $this->data['entry_point'] == '5')
+        {
+            $this->data['entry_point'] = 'Jangkauan (Penasun, WPS, LSL, ...)';
+        }
+        elseif( $this->data['entry_point'] == '6')
+        {
+            $this->data['entry_point'] = 'LSM';
+        }
+        elseif( $this->data['entry_point'] == '7')
+        {
+            $this->data['entry_point'] = 'Datang Sendiri';
+        }
+        else
+        {
+            $this->data['entry_point']  = 'Lainnya, uraikan ...';
+        }
+
+        if( $this->data['pendidikan'] == '0')
+        {
+           $this->data['pendidikan']  = '0 - Tidak Sekolah'; 
+        }
+        elseif( $this->data['pendidikan'] == '1')
+        {
+            $this->data['pendidikan'] = '1 - SD';
+        }
+        elseif( $this->data['pendidikan'] == '2')
+        {
+            $this->data['pendidikan'] = '2 - SMP';
+        }
+        elseif( $this->data['pendidikan'] == '3')
+        {
+            $this->data['pendidikan'] = '3 - SMA';
+        }
+        elseif( $this->data['pendidikan'] == '4')
+        {
+            $this->data['pendidikan'] = '4 - Akademi/PT';
+        }
+        else
+        {
+            $this->data['pendidikan']  = '';
+        }
+
+        if( $this->data[''] == '')
+        {
+           $this->data['']  = ''; 
+        }
+        elseif( $this->data[''] == '')
+        {
+            $this->data[''] = '';
+        }
+        else
+        {
+            $this->data['']  = '';
+        }
+
+         if( $this->data[''] == '')
+        {
+           $this->data['']  = ''; 
+        }
+        elseif( $this->data[''] == '')
+        {
+            $this->data[''] = '';
+        }
+        else
+        {
+            $this->data['']  = '';
+        }
+
+         if( $this->data[''] == '')
+        {
+           $this->data['']  = ''; 
+        }
+        elseif( $this->data[''] == '')
+        {
+            $this->data[''] = '';
+        }
+        else
+        {
+            $this->data['']  = '';
+        }
+
+         if( $this->data[''] == '')
+        {
+           $this->data['']  = ''; 
+        }
+        elseif( $this->data[''] == '')
+        {
+            $this->data[''] = '';
+        }
+        else
+        {
+            $this->data['']  = '';
+        }
+    }
+
     public function rj_ikhtisarhiv_pdf()
     {
         $this->get_rj_hiv_anti_retroval_data();
-        
+        $this->convert();
+
         ob_clean();
 
         header('Content-type: application/pdf');
