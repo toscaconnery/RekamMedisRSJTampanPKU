@@ -23,8 +23,8 @@ header('Content-Type: application/pdf');
     
     <div class="row" style="padding-top:-20px;padding-left:10px;">
         <div class="column">
-          <p class=""><b>NAMA</b><br>{{$nama}}</p>
-          
+          <p class=""><b>NAMA</b></p>
+          <p class="answer">{{$nama}}</p>
 
           <p class="question"><b>ALAMAT</b></p>
           <p class="answer">{{$alamat}}</p>
@@ -66,7 +66,7 @@ header('Content-Type: application/pdf');
         </div>
         <div class="colsize" style="width:28%">
           <p class="question"><b>STATUS PERKAWINAN</b></p>
-          <p class="answer">{{$spk}}</p>
+          <p class="answer">$spk</p>
         </div>
         <div class="colsize" style="width:28%">
           <p class="question"><b>TGL LAHIR</b></p>
