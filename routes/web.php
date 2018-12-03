@@ -557,6 +557,8 @@ Route::get('/doc_ri_cpo', function () {
 Route::get('/ri_riwayat_obat', 'RIRiwayatObatController@get_ri_riwayat_obat');
 Route::post('/ri_riwayat_obat', 'RIRiwayatObatController@post_ri_riwayat_obat');
 Route::get('/ri_riwayat_obat_read', 'RIRiwayatObatController@get_ri_riwayat_obat_read');
+Route::get('/ri_riwayat_obat_edit', 'RIRiwayatObatController@get_ri_riwayat_obat_edit');
+Route::post('/ri_riwayat_obat_edit', 'RIRiwayatObatController@post_ri_riwayat_obat_edit');
 //dokumen rekonsiliasi obat
 Route::get('/ri_rekonsiliasi_pdf', 'RIRiwayatObatController@ri_rekonsiliasi_pdf');
 Route::get('/doc_ri_rekonsiliasi', function () {
