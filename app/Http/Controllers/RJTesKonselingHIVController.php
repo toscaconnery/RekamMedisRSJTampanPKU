@@ -654,11 +654,11 @@ class RJTesKonselingHIVController extends Controller
         {
             $this->data['spk'] = 'Kawin';
         }
-        elseif$this->data['spk'] == '1')
+        elseif($this->data['spk'] == '1')
         {
             $this->data['spk'] = 'Belum Kawin ';
         }
-        elseif$this->data['spk'] == '2')
+        elseif($this->data['spk'] == '2')
         {
             $this->data['spk'] = 'Cerai Hidup';
         }
@@ -671,15 +671,15 @@ class RJTesKonselingHIVController extends Controller
         {
             $this->data['skh'] = 'Trisemester I';
         }
-        elseif$this->data['skh'] == '1')
+        elseif($this->data['skh'] == '1')
         {
             $this->data['skh'] = 'Trisemester II';
         }
-        elseif$this->data['skh'] == '2')
+        elseif($this->data['skh'] == '2')
         {
             $this->data['skh'] = 'Trisemester III';
         }
-        elseif$this->data['skh'] == '3')
+        elseif($this->data['skh'] == '3')
         {
             $this->data['skh'] = 'Tidak Hamil';
         }
@@ -692,15 +692,15 @@ class RJTesKonselingHIVController extends Controller
         {
             $this->data['pen'] = 'Tidak pernah sekolah';
         }
-        elseif$this->data['pen'] == '1')
+        elseif($this->data['pen'] == '1')
         {
             $this->data['pen'] = 'SD/sederajatnya';
         }
-        elseif$this->data['pen'] == '2')
+        elseif($this->data['pen'] == '2')
         {
             $this->data['pen'] = 'SMP/sederajatnya';
         }
-        elseif$this->data['pen'] == '3')
+        elseif($this->data['pen'] == '3')
         {
             $this->data['pen'] = 'SMA/sedereajatnya';
         }
@@ -896,7 +896,7 @@ class RJTesKonselingHIVController extends Controller
         }
         else
         {
-            $this->data['dmn'] = 'Lainnya '.$dmn_lainnya.' ';
+            $this->data['dmn'] = 'Lainnya '.$this->data['dmn_lainnya'].'';
         }
 
         if($this->data['ht_hiv'] == '0')
@@ -1009,7 +1009,14 @@ class RJTesKonselingHIVController extends Controller
             $this->data['jpe'] = 'Layanan Bergerak';
         }
 
-        
+        if($this->data['jenis_kelamin'] == 'L')
+        {
+            $this->data['jenis_kelamin'] = 'Laki-laki';
+        }
+        else
+        {
+            $this->data['jenis_kelamin'] = 'Perempuan';
+        }
     }
 
     public function rj_konselinghiv_pdf()
