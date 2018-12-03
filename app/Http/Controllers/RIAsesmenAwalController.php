@@ -7,6 +7,8 @@ use App\Models\RIAsesmenAwalPerawat;
 use App\Models\RIAsesmenAwalDokter;
 use App\Models\ListDocument;
 use Session;
+use View;
+
 
 class RIAsesmenAwalController extends Controller
 {
@@ -1358,5 +1360,462 @@ class RIAsesmenAwalController extends Controller
     // {
     // 	dd('posting edit dokter');
     // }
+
+    function yatidak($stats)
+    {
+    	if($stats == '1')
+    	{
+    		return 'Ya';
+    	}
+    	else
+    	{
+    		return 'Tidak';
+    	}
+    }
+
+    function convert()
+    {
+
+    	$this->data['kondisi'] = $this->yatidak($this->data['instruksi4']);
+
+    	if($this->data['kondisi'] == '0')
+    	{
+    		$this->data['kondisi'] = 'Mandiri';
+    	}
+    	else if($this->data['kondisi'] == '1')
+    	{
+    		$this->data['kondisi'] = 'Tempat Tidur';
+    	}
+    	else if($this->data['kondisi'] == '2')
+    	{
+    		$this->data['kondisi'] = 'Dipapah';
+    	}
+
+    	if($this->data['asal'] == '0')
+    	{
+    		$this->data['asal'] = 'Poliklinik';
+    	}
+    	else
+    	{
+    		$this->data['asal'] = 'IGD';
+    	}
+
+    	if($this->data['alergi'] == '0')
+    	{
+    		$this->data['alergi'] = 'Ada';
+    	}
+    	else
+    	{
+    		$this->data['alergi'] = 'Tidak Ada';
+    	}
+
+    	if($this->data['friwayatpasien11'] == '0')
+    	{
+    		$this->data['friwayatpasien11'] = 'Tidak';
+    	}
+    	else if($this->data['friwayatpasien11'] == '1')
+    	{
+    		$this->data['friwayatpasien11'] = 'Ya';
+    	}
+    	else
+    	{
+    		$this->data['friwayatpasien12'] = 'Menolak';
+    	}
+
+    	if($this->data['friwayatpasien12'] == '0')
+    	{
+    		$this->data['friwayatpasien12'] = 'Tidak';
+    	}
+    	else if($this->data['friwayatpasien12'] == '1')
+    	{
+    		$this->data['friwayatpasien12'] = 'Ya';
+    	}
+    	else
+    	{
+    		$this->data['friwayatpasien12'] = 'Menolak';
+    	}
+
+    	if($this->data['$friwayatpsikososial1'] == '1')
+    	{
+    		$this->data['$friwayatpsikososial1'] = 'Menikah';
+    	}
+    	else if($this->data['$friwayatpsikososial1'] == '2')
+    	{
+    		$this->data['$friwayatpsikososial1'] = 'Belum Menikah';
+    	}
+    	else
+    	{
+    		$this->data['$friwayatpsikososial1'] = 'Duda/Janda';
+    	}
+
+    	if($this->data['$friwayatpsikososial2'] == '1')
+    	{
+    		$this->data['$friwayatpsikososial2'] = 'Ada';
+    	}
+    	else
+    	{
+    		$this->data['$friwayatpsikososial2'] = 'Tidak Ada';
+    	}
+
+    	if($this->data['$friwayatpsikososial3'] == '1')
+    	{
+    		$this->data['$friwayatpsikososial3'] = 'Serumah';
+    	}
+    	else
+    	{
+    		$this->data['$friwayatpsikososial3'] = 'Tidak Serumah';
+    	}
+
+    	if($this->data['friwayatpsikososial4'] == '0')
+    	{
+    		$this->data['friwayatpsikososial4'] = 'Rumah';
+    	}
+    	else if($this->data['friwayatpsikososial4'] == '1')
+    	{
+    		$this->data['friwayatpsikososial4'] = 'Panti Asuhan';
+    	}
+
+    	if($this->data['friwayatpsikososial6'] == '0')
+    	{
+    		$this->data['friwayatpsikososial6'] = 'Purna Waktu';
+    	}
+    	else if($this->data['friwayatpsikososial6'] == '1')
+    	{
+    		$this->data['friwayatpsikososial6'] = 'Paruh Waktu';
+    	}
+    	else if($this->data['friwayatpsikososial6'] == '2')
+    	{
+    		$this->data['friwayatpsikososial6'] = 'Pensiun';
+    	}
+
+    	if($this->data['friwayatpsikososial8'] == '0')
+    	{
+    		$this->data['friwayatpsikososial8'] = 'Mandiri';
+    	}
+    	else if($this->data['friwayatpsikososial8'] == '1')
+    	{
+    		$this->data['friwayatpsikososial8'] = 'Tirah Baring';
+    	}
+    	else if($this->data['friwayatpsikososial8'] == '2')
+    	{
+    		$this->data['friwayatpsikososial8'] = 'Kursi Roda';
+    	}
+    	else
+    	{
+    		$this->data['friwayatpsikososial8'] = 'Tongkat';
+    	}
+
+    	if($this->data['friwayatpsikososial9'] == '1')
+    	{
+    		$this->data['friwayatpsikososial9'] = 'Ya';
+    	}
+    	else
+    	{
+    		$this->data['friwayatpsikososial9'] = 'Tidak';
+    	}
+
+    	if($this->data['fkeluarga3'] == '0')
+    	{
+    		$this->data['fkeluarga3'] = 'Pasien';
+    	}
+    	else if($this->data['fkeluarga3'] == '1')
+    	{
+    		$this->data['fkeluarga3'] = 'Keluarga';
+    	}
+    	else
+    	{
+    		$this->data['fkeluarga3'] = 'Lainnya';
+    	}
+
+    	if($this->data['fkomunikasi2'] == '0')
+    	{
+    		$this->data['fkomunikasi2'] = 'Normal';
+    	}
+    	else
+    	{
+    		$this->data['fkomunikasi2'] = 'Gangguan bicara';
+    	}
+
+    	if($this->data['fkomunikasi4'] == '0')
+    	{
+    		$this->data['fkomunikasi4'] = 'Indonesia';
+    	}
+    	else if($this->data['fkomunikasi4'] == '1')
+    	{
+    		$this->data['fkomunikasi4'] = 'Inggris';
+    	}
+    	else if($this->data['fkomunikasi4'] == '2')
+    	{
+    		$this->data['fkomunikasi4'] = 'Daerah';
+    	}
+    	else
+    	{
+    		$this->data['fkomunikasi4'] = 'Lain-lain';
+    	}
+
+    	if($this->data['fkomunikasi5'] == '1')
+    	{
+    		$this->data['fkomunikasi5'] = 'Aktif';
+    	}
+    	else
+    	{
+    		$this->data['fkomunikasi5'] = 'Pasif';
+    	}
+
+    	if($this->data['fkomunikasi7'] == '1')
+    	{
+    		$this->data['fkomunikasi7'] = 'Ya';
+    	}
+    	else
+    	{
+    		$this->data['fkomunikasi7'] = 'Tidak';
+    	}
+
+    	if($this->data['fkomunikasi9'] == '1')
+    	{
+    		$this->data['fkomunikasi9'] = 'Ya';
+    	}
+    	else
+    	{
+    		$this->data['fkomunikasi9'] = 'Tidak';
+    	}
+
+    	if($this->data['fkomunikasi12'] == '0')
+    	{
+    		$this->data['fkomunikasi12'] = 'TK';
+    	}
+    	else if($this->data['fkomunikasi12'] == '1')
+    	{
+    		$this->data['fkomunikasi12'] = 'SD';
+    	}
+    	else if($this->data['fkomunikasi12'] == '2')
+    	{
+    		$this->data['fkomunikasi12'] = 'SMP';
+    	}
+    	else if($this->data['fkomunikasi12'] == '3')
+    	{
+    		$this->data['fkomunikasi12'] = 'SMA';
+    	}
+    	else if($this->data['fkomunikasi12'] == '4')
+    	{
+    		$this->data['fkomunikasi12'] = 'Akademi';
+    	}
+    	else if($this->data['fkomunikasi12'] == '5')
+    	{
+    		$this->data['fkomunikasi12'] = 'Sarjana';
+    	}
+    	else
+    	{
+    		$this->data['fkomunikasi12'] = 'Lain-lain';
+    	}
+
+    	if($this->data['fkomunikasi13'] == '1')
+    	{
+    		$this->data['fkomunikasi13'] = 'Ya';
+    	}
+    	else
+    	{
+    		$this->data['fkomunikasi13'] = 'Tidak';
+    	}
+
+    	$this->data['fnyeri1'] = $this->yatidak($this->data['fnyeri1']);
+
+    	if($this->data['fnyeri3'] == '0')
+    	{
+    		$this->data['fnyeri3'] = 'Akut ';
+    	}
+    	else
+    	{
+    		$this->data['fnyeri3'] = 'Kronis ';
+    	}
+
+    	if($this->data['fnyeri6'] == '0')
+    	{
+    		$this->data['fnyeri6'] = 'Kejang ';
+    	}
+    	else if($this->data['fnyeri6'] == '1')
+    	{
+    		$this->data['fnyeri6'] = 'Konstan ';
+    	}
+    	else if($this->data['fnyeri6'] == '2')
+    	{
+    		$this->data['fnyeri6'] = 'Intermiten ';
+    	}
+    	else
+    	{
+    		$this->data['fnyeri6'] = 'Lain';
+    	}
+
+    	if($this->data['fnyeri7'] == '0')
+    	{
+    		$this->data['fnyeri7'] = 'Nyeri ';
+    	}
+    	else if($this->data['fnyeri7'] == '1')
+    	{
+    		$this->data['fnyeri7'] = 'Kram ';
+    	}
+    	else if($this->data['fnyeri7'] == '2')
+    	{
+    		$this->data['fnyeri7'] = 'Tumpul ';
+    	}
+    	else if($this->data['fnyeri7'] == '3')
+    	{
+    		$this->data['fnyeri7'] = 'Terbakat ';
+    	}
+    	else if($this->data['fnyeri7'] == '4')
+    	{
+    		$this->data['fnyeri7'] = 'Tajam ';
+    	}
+    	else if($this->data['fnyeri7'] == '5')
+    	{
+    		$this->data['fnyeri7'] = 'Nyeri Tembak ';
+    	}
+    	else if($this->data['fnyeri7'] == '6')
+    	{
+    		$this->data['fnyeri7'] = 'Intermiten ';
+    	}
+    	else if($this->data['fnyeri7'] == '86')
+    	{
+    		$this->data['fnyeri7'] = 'Tertekan ';
+    	}
+    	else
+    	{
+    		$this->data['fnyeri7'] = 'Lainnya';
+    	}
+
+    	if($this->data['fnyeri9'] == '0')
+    	{
+    		$this->data['fnyeri9'] = 'Cahaya ';
+    	}
+    	else if($this->data['fnyeri9'] == '1')
+    	{
+    		$this->data['fnyeri9'] = 'Gelap ';
+    	}
+    	else if($this->data['fnyeri9'] == '2')
+    	{
+    		$this->data['fnyeri9'] = 'Gerakan ';
+    	}
+    	else if($this->data['fnyeri9'] == '3')
+    	{
+    		$this->data['fnyeri9'] = 'Berbaring ';
+    	}
+    	else
+    	{
+    		$this->data['fnyeri9'] = 'Lainnya';
+    	}
+
+    	if($this->data['fnyeri11'] == '0')
+    	{
+    		$this->data['fnyeri11'] = 'Makan ';
+    	}
+    	else if($this->data['fnyeri11'] == '1')
+    	{
+    		$this->data['fnyeri11'] = 'Sungi ';
+    	}
+    	else if($this->data['fnyeri11'] == '2')
+    	{
+    		$this->data['fnyeri11'] = 'Dingin ';
+    	}
+    	else if($this->data['fnyeri11'] == '3')
+    	{
+    		$this->data['fnyeri11'] = 'Panas ';
+    	}
+    	else
+    	{
+    		$this->data['fnyeri11'] = 'Lainnya';
+    	}
+
+
+    	if($this->data['instruksi1'] == '1')
+    	{
+    		$this->data['instruksi1'] = '';
+    	}
+    	else
+    	{
+    		$this->data['instruksi1'] = '';
+    	}
+
+    	if($this->data['instruksi1'] == '1')
+    	{
+    		$this->data['instruksi1'] = '';
+    	}
+    	else
+    	{
+    		$this->data['instruksi1'] = '';
+    	}
+    }
+
+    public function ri_asesmen_pdf()
+    {
+    	$this->get_ri_asesmen_awal_perawat_data();
+    	$this->get_ri_asesmen_awal_dokter_data();
+    	$this->convert();
+        ob_clean();
+
+        header('Content-type: application/pdf');
+
+        $mpdf = new \Mpdf\Mpdf([
+        'mode' => 'utf-8', 
+        'format' => 'A4-L', 
+        'orientation' => 'P'
+        ]);
+
+        $view = View::make('doc_ri_asesmen',$this->load);
+        $contents = $view->render();
+
+
+        $mpdf->SetHTMLHeader('
+            <table width="100%" >
+                <tbody>
+                        <tr>
+
+                            <td class= "doc_headerleft">
+                                <img class="relative" src="img/riau.png" height="9%" width="7%">
+                            </td>
+
+                            <td class="doc_headermid">
+                                <p style="font-size:120%;" ><b>Pemerintah Provinsi Riau</b></p>
+                                <br><p style="font-size:160%;" ><b>RUMAH SAKIT JIWA TAMPAN</b></p>
+                                <br><p style="font-size:90%;" >Jl. H. R. Soebrantas Km. 12,5 Pekanbaru Telp. (0761) 63240</p>
+                                <p style="font-size:90%;" >Fax. (0761) 63239 E-mail : rstampan@yahoo.com</p>
+                            </td>
+                            
+                            <td class="doc_headerright">
+                            <p>No. RM           </p><br>
+                            <p>Nama Pasien      </p><br>
+                            <p>Tanggal Lahir    </p><br>
+                            <p>Jenis Kelamin    </p><br>
+                            </td>    
+
+                            <td class="doc_headerright_ans">
+                            <p>:  123456</p><br>
+                            <p>:  Joko Pangestu</p><br>
+                            <p>:  13/08/1992</p><br>
+                            <p>:  L</p><br>
+                            </td>                       
+                        </tr>
+  
+                </tbody>
+            </table> <hr>' );
+
+        $mpdf->SetHTMLFooter('<hr>
+            <table width="100%" style="vertical-align: bottom; font-family: "arial", Times, serif; 
+                font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+                <tr>
+                    <td width="33%">{DATE j-m-Y}</td>
+                    <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+                    <td width="33%" style="text-align: right;">RM. 13.01.RI JULI 2015</td>
+                </tr>
+            </table>'); 
+
+        $stylesheet = '<style>'.file_get_contents('css/pdf.css').'</style>';
+
+        $mpdf->AddPage('P','','','','',10,10,35,20,10,10);
+        //right,left
+        $mpdf->WriteHTML($stylesheet, 1);
+        $mpdf->WriteHTML($contents,2,true,false);
+
+        $mpdf->Output('ri_asesmen.pdf',\Mpdf\Output\Destination::INLINE);
+    }
 
 }

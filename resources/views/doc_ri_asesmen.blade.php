@@ -13,19 +13,22 @@ header('Content-Type: application/pdf');
 
 
   <h2 align="center">ASESMEN AWAL PASIEN RAWAT INAP</h2><br>
-   
+  
+  <p><b>Tanggal diperiksa:</b> {{$tanggal_diperiksa}}</p>
+  <p><b>Jam diperiksa:</b> {{$jam_diperiksa}}</p>
+
   <h4>DATA PASIEN</h4>
   <div style="font-size: 85%;">  
     <div class="row">
       <div class="column">
-        <p>Nadi : 99 x/mnt</p>
-        <p>TD : 99 mmHG</p>
-        <p>TB : 99 Cm</p>
+        <p>Nadi : {{$nadi}} x/mnt</p>
+        <p>TD : {{$td}} mmHG</p>
+        <p>TB : {{$tb}} cm</p>
       </div>
       <div class="column">
-        <p>BB : 99 Kg</p>
-        <p>Pernafasan : 99 x/mnt</p>
-        <p>Suhu : 99 C</p>
+        <p>BB : {{$bb}} Kg</p>
+        <p>Pernafasan : {{$napas}} x/mnt</p>
+        <p>Suhu : {{$suhu}} <sup>o</sup>C</p>
       </div>
     </div> 
      <table>
@@ -35,7 +38,7 @@ header('Content-Type: application/pdf');
             Kondisi saat masuk
           </td>    
           <td class="konten_s_answer">  
-            : Tempat Tidur
+            : {{$kondisi}} <?php if($kondisi=='3') echo 'Lainnya, '.$kondisi_ket.'' ?>
           </td>                
         </tr>
         <tr>
@@ -43,7 +46,7 @@ header('Content-Type: application/pdf');
             Asal Pasien 
           </td>    
           <td class="konten_s_answer">  
-            : IGD
+            : {{$asal}}
           </td>                
         </tr>
         <tr>
@@ -51,7 +54,7 @@ header('Content-Type: application/pdf');
             Dokter Pemeriksa
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$dokter_pemeriksa}}
           </td>                
         </tr>
         <tr>
@@ -59,7 +62,7 @@ header('Content-Type: application/pdf');
             Dokter Keluarga
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$dokter_keluarga}}
           </td>                
         </tr>
         <tr>
@@ -67,7 +70,7 @@ header('Content-Type: application/pdf');
             Diagnosis Masuk
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$diagnosis_masuk}}
           </td>                
         </tr>
         <tr>
@@ -75,7 +78,7 @@ header('Content-Type: application/pdf');
             DPJP
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$dpjp}}
           </td>                
         </tr>
         <tr>
@@ -83,7 +86,7 @@ header('Content-Type: application/pdf');
             Alergi Obat
           </td>    
           <td class="konten_s_answer">  
-            : Ada
+            : {{$alergi}}
           </td>                
         </tr>
         <tr>
@@ -91,7 +94,7 @@ header('Content-Type: application/pdf');
             Jenis Reaksi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$jenis_reaksi}}
           </td>                
         </tr>
       </tbody>
@@ -100,35 +103,164 @@ header('Content-Type: application/pdf');
       <div class="column">
         <p><b>Barang berharga :</b> - </p>
         <ul>
-          <li>Perhiasan</li>
-          <li>Pakaian</li>
-        </ul>
+          <?php 
+            if(isset($macam_kasus[1])) echo 
+            '<li>
+              Keinginan sendiri
+            </li>';
+            if(isset($macam_kasus[2])) echo 
+            '<li>
+              Paksaan Orang Tua
+            </li>';
+            if(isset($macam_kasus[3])) echo 
+            '<li>
+              Rujukan Praktek Dokter
+            </li>';
+            if(isset($macam_kasus[4])) echo 
+            '<li>
+              Rujukan Instansi Lain
+            </li>';
+            if(isset($macam_kasus[5])) echo 
+            '<li>
+              Kiriman Kepolisian
+            </li>';
+            if(isset($macam_kasus[6])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[7])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[8])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+          ?>
+        </ul> 
       </div>
       <div class="column">
         <p><b>Tindakan : </b></p>
         <ul>
-          <li>Kumpulkan dan disimpan</li>
+          <?php 
+            if(isset($macam_kasus[1])) echo 
+            '<li>
+              Keinginan sendiri
+            </li>';
+            if(isset($macam_kasus[2])) echo 
+            '<li>
+              Paksaan Orang Tua
+            </li>';
+            if(isset($macam_kasus[3])) echo 
+            '<li>
+              Rujukan Praktek Dokter
+            </li>';
+            if(isset($macam_kasus[4])) echo 
+            '<li>
+              Rujukan Instansi Lain
+            </li>';
+            if(isset($macam_kasus[5])) echo 
+            '<li>
+              Kiriman Kepolisian
+            </li>';
+            if(isset($macam_kasus[6])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[7])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[8])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+          ?>
         </ul>
       </div>
     </div> 
     
     <p><b> Alat bantu yang digunakan : </b></p>
     <ul>
-      <li>Kacamata</li>
-      <li>Lensa Kontak</li>
-    </ul>
+          <?php 
+            if(isset($macam_kasus[1])) echo 
+            '<li>
+              Keinginan sendiri
+            </li>';
+            if(isset($macam_kasus[2])) echo 
+            '<li>
+              Paksaan Orang Tua
+            </li>';
+            if(isset($macam_kasus[3])) echo 
+            '<li>
+              Rujukan Praktek Dokter
+            </li>';
+            if(isset($macam_kasus[4])) echo 
+            '<li>
+              Rujukan Instansi Lain
+            </li>';
+            if(isset($macam_kasus[5])) echo 
+            '<li>
+              Kiriman Kepolisian
+            </li>';
+            if(isset($macam_kasus[6])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[7])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[8])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+          ?>
+        </ul>
   </div>
   
   <h4>ASESMEN KEPERAWATAN</h4>
   <div style="font-size: 85%;">  
     <p><b>1. Riwayat Pasien (Penyakit utama/operasi/cedera mayor) : </b></p>
     <ul>
-      <li>Hipertensi</li>
-      <li>Stroke</li>
-    </ul>
+          <?php 
+            if(isset($macam_kasus[1])) echo 
+            '<li>
+              Keinginan sendiri
+            </li>';
+            if(isset($macam_kasus[2])) echo 
+            '<li>
+              Paksaan Orang Tua
+            </li>';
+            if(isset($macam_kasus[3])) echo 
+            '<li>
+              Rujukan Praktek Dokter
+            </li>';
+            if(isset($macam_kasus[4])) echo 
+            '<li>
+              Rujukan Instansi Lain
+            </li>';
+            if(isset($macam_kasus[5])) echo 
+            '<li>
+              Kiriman Kepolisian
+            </li>';
+            if(isset($macam_kasus[6])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[7])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[8])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+          ?>
+        </ul>
     
     <p><b>deskripsi : </b></p>
-    <p>deskrpsinya adalah ....</p>
+    <p>{{$friwayatpasien2}}</p>
 
     <table>
       <tbody>
@@ -137,7 +269,7 @@ header('Content-Type: application/pdf');
            Alkohol/Obat
           </td>    
           <td class="konten_s_answer">  
-            : Ya, Jenis : a, jumlah/hari : 2 
+            : <?php if($friwayatpasien3 == '0') echo 'Tidak'; else if($friwayatpasien3 == '1') echo 'Ya, Jenis : '.$friwayatpasien4.', jumlah/hari : '.$friwayatpasien5.''; if($friwayatpasien6=='1') 'echo berhenti'; ?> 
           </td>                
         </tr>
         <tr>
@@ -145,23 +277,24 @@ header('Content-Type: application/pdf');
             Merokok
           </td>    
           <td class="konten_s_answer">  
-            : Ya, Jenis : a, jumlah/hari : 2, berhenti 
+            : <?php if($friwayatpasien7 == '0') echo 'Tidak'; else if($friwayatpasien7 == '1') echo 'Ya, Jenis : '.$friwayatpasien8.', jumlah/hari : '.$friwayatpasien9.''; if($friwayatpasien10=='1') 'echo berhenti'; ?> 
           </td>                
         </tr>
         <tr>
           <td class="konten_s_question">
             Vaksinasi
-          </td>    
+          </td>  
           <td class="konten_s_answer">  
-            : Influenza dalam 12 bulan terakhir
-          </td>                
+            : Influenza dalam 12 bulan terakhir - {{$friwayatpasien11}}<br>
+            : Pneumonia dalam 5 tahun terakhir - {$friwayatpasien12}
+          </td>                     
         </tr>
       </tbody>
     </table>
 
     <p><b>Trauma : </b>Aniaya fisik </p>
     <ul>
-      <li>Usia : </li>
+      <li>Usia :{{$friwayatpasien13}} </li>
       <li>Pelaku : </li>
       <li>Korban : </li>
       <li>Saksi : </li>
@@ -174,9 +307,41 @@ header('Content-Type: application/pdf');
 
     <p><b>2. Riwayat Keluarga : </b></p>
     <ul>
-      <li>Hipertensi</li>
-      <li>Stroke</li>
-    </ul>
+          <?php 
+            if(isset($macam_kasus[1])) echo 
+            '<li>
+              Keinginan sendiri
+            </li>';
+            if(isset($macam_kasus[2])) echo 
+            '<li>
+              Paksaan Orang Tua
+            </li>';
+            if(isset($macam_kasus[3])) echo 
+            '<li>
+              Rujukan Praktek Dokter
+            </li>';
+            if(isset($macam_kasus[4])) echo 
+            '<li>
+              Rujukan Instansi Lain
+            </li>';
+            if(isset($macam_kasus[5])) echo 
+            '<li>
+              Kiriman Kepolisian
+            </li>';
+            if(isset($macam_kasus[6])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[7])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[8])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+          ?>
+        </ul>
 
     <p><b>Genogram : </b></p>
     <br>
@@ -197,7 +362,7 @@ header('Content-Type: application/pdf');
            Status Pernikahaan
           </td>    
           <td class="konten_s_answer">  
-            : Menikah 
+            : {{$friwayatpsikososial1}}
           </td>                
         </tr>
         <tr>
@@ -245,8 +410,40 @@ header('Content-Type: application/pdf');
 
     <p><b>Status Emosional :</b></p>
     <ul>
-      <li>Kooperatif</li>
-      <li>Ansietas</li>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[5])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[7])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+      ?>
     </ul>
 
     <p><b>4. Keluarga Terdekat : </b></p>
@@ -266,7 +463,7 @@ header('Content-Type: application/pdf');
             Hubungan
           </td>    
           <td class="konten_s_answer">  
-            : Ibu kandung
+            : {{$fkeluarga1}}
           </td>                
         </tr>
         <tr>
@@ -274,17 +471,13 @@ header('Content-Type: application/pdf');
             telepon
           </td>    
           <td class="konten_s_answer">  
-            : 0808080808
+            : {{$fkeluarga2}}
           </td>                
         </tr>
       </tbody>
     </table>
 
-    <p><b>Informasi didapat dari :</b></p>
-    <ul>
-      <li>Pasien</li>
-      <li>Keluarga</li>
-    </ul>
+    <p><b>Informasi didapat dari :</b> {{$fkeluarga3}}</p>
 
     <p><b>5. Konsep Diri : </b></p>
 
@@ -295,7 +488,7 @@ header('Content-Type: application/pdf');
            Citra Diri
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$fkonsepdiri1}}
           </td>                
         </tr>
         <tr>
@@ -303,7 +496,7 @@ header('Content-Type: application/pdf');
             Identitas Diri
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$fkonsepdiri2}}
           </td>                
         </tr>
         <tr>
@@ -311,7 +504,7 @@ header('Content-Type: application/pdf');
             Peran
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$fkonsepdiri3}}
           </td>                
         </tr>
          <tr>
@@ -319,7 +512,7 @@ header('Content-Type: application/pdf');
             Ideal diri
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$fkonsepdiri4}}
           </td>                
         </tr>
          <tr>
@@ -327,7 +520,7 @@ header('Content-Type: application/pdf');
             Harga Diri
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$fkonsepdiri5}}
           </td>                
         </tr>
       </tbody>
@@ -342,7 +535,7 @@ header('Content-Type: application/pdf');
            Orang yang berarti
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$fhubungansosial1}}
           </td>                
         </tr>
         <tr>
@@ -350,7 +543,7 @@ header('Content-Type: application/pdf');
             Peran serta dalam kegiatan kelompok/Masyarakat
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$fhubungansosial2}}
           </td>                
         </tr>
         <tr>
@@ -358,7 +551,7 @@ header('Content-Type: application/pdf');
             Hambatan dalam berhubungan dengan orang lain
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$fhubungansosial3}}
           </td>                
         </tr>
       </tbody>
@@ -373,7 +566,7 @@ header('Content-Type: application/pdf');
            Nilai dan Keyakinan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$fspiritual1}}
           </td>                
         </tr>
         <tr>
@@ -381,7 +574,7 @@ header('Content-Type: application/pdf');
             Kegiatan Ibadah
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$fspiritual2}}
           </td>                
         </tr>
       </tbody>
@@ -389,79 +582,374 @@ header('Content-Type: application/pdf');
 
     <p><b>8. Penampilan : </b></p>
     <ul>
-      <li> pilihan </li>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+      ?>
     </ul>
     <p>Penjelasan : ...</p>
 
     <p><b>9. Pembicaraan : </b></p>
     <ul>
-      <li> pilihan </li>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[5])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[7])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+      ?>
     </ul>
     <p>Penjelasan : ...</p>
 
     <p><b>10. Aktivitas Motorik : </b></p>
     <ul>
-      <li> pilihan </li>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[5])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[7])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+      ?>
     </ul>
     <p>Penjelasan : ...</p>
 
     <p><b>11. Alam Perasaan : </b></p>
-    <ul>
-      <li> pilihan </li>
-    </ul>
+    <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[5])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+      ?>
     <p>Penjelasan : ...</p>
 
     <p><b>12. Afek : </b></p>
-    <ul>
-      <li> pilihan </li>
-    </ul>
+    <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+      ?>
     <p>Penjelasan : ...</p>
 
     <p><b>13. Interaksi selama wawancara : </b></p>
-    <ul>
-      <li> pilihan </li>
-    </ul>
+    <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[5])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+      ?>
     <p>Penjelasan : ...</p>
 
     <p><b>14. Persepsi : </b></p>
-    <ul>
-      <li> pilihan </li>
-    </ul>
+    <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[5])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+      ?>
     <p>Penjelasan : ...</p>
 
     <p><b>15. Isi Pikir : </b></p>
-    <ul>
-      <li> pilihan </li>
-    </ul>
+    <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[5])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[7])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[9])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[10])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[11])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[12])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[13])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[14])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+      ?>
     <p>Penjelasan : ...</p>
 
     <p><b>16. Arus Pikir : </b></p>
     <ul>
-      <li> pilihan </li>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[5])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+      ?>
     </ul>
     <p>Penjelasan : ...</p>
 
     <p><b>17. Memori : </b></p>
     <ul>
-      <li> pilihan </li>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+      ?>
     </ul>
     <p>Penjelasan : ...</p>
 
     <p><b>18. Tingkat konsentrasi dan berhitung : </b></p>
     <ul>
-      <li> pilihan </li>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+      ?>
     </ul>
     <p>Penjelasan : ...</p>
 
     <p><b>19. Kemampuan Penilaian : </b></p>
     <ul>
-      <li> pilihan </li>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+      ?>
     </ul>
     <p>Penjelasan : ...</p>
 
     <p><b>20. Daya tilik diri (insight) : </b></p>
     <ul>
-      <li> pilihan </li>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+      ?>
     </ul>
     <p>Penjelasan : ...</p>
 
@@ -470,19 +958,51 @@ header('Content-Type: application/pdf');
   <h4>KEBUTUHAN KOMUNIKASI DAN PENGAJARAN</h4>
   <div style="font-size: 85%;">  
     <ul>
-      <li> Proses Penyakit dan Tindakan Medis </li>
-      <li> Nutrisi </li>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[5])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[7])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+      ?>
     </ul>
 
-    <p><b>keyakinan dan nilai-nilai pasien/keluarga tentang penyakitnya : </b> - </p>
+    <p><b>keyakinan dan nilai-nilai pasien/keluarga tentang penyakitnya : </b>{{$fkomunikasi1}} </p>
     
-    <p><b>Bicara : </b> Normal</p>
+    <p><b>Bicara : </b> {{$fkomunikasi2}}</p>
 
-    <p><b>bahasa Sehari-hari : </b></p>
-    <ul>
-      <li> Indonesia </li>
-      <li> Inggris </li>
-    </ul>
+    <p><b>bahasa Sehari-hari : </b>{{$fkomunikasi4}}</p>
 
     <p>Perlu Penterjemah : Tidak </p>
 
@@ -490,20 +1010,97 @@ header('Content-Type: application/pdf');
 
     <p><b>Hambatan Edukasi : </b></p>
     <ul>
-      <li> Bahasa </li>
-      <li> Emosi </li>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[5])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[7])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+      ?>
+    </ul>
+    <p><b>Cara Edukasi yang disukai : </b></p>
+    <ul>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[5])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[7])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+      ?>
     </ul>
 
-    <p>Tingkat Pendidikan : Sarjana</p>
+    <p>Tingkat Pendidikan : {{$fkomunikasi12}}</p>
 
-    <p>pasien bersedia menerima informasi : Ya</p>
+    <p>pasien bersedia menerima informasi : {{$fkomunikasi13}}</p>
 
   </div>
 
   <h4>SCREENING GIZI</h4>
   <div style="font-size:85%">
-    <p><b>TB : </b> 17 cm </p>
-    <p><b>BB : </b> 26 kg </p>
+    <p><b>TB : </b> {{$fgizi1}} cm </p>
+    <p><b>BB : </b> {{$fgizi2}} kg </p>
     <p><b>IMT : - , Normal</b> </p>
   </div>
 
@@ -610,39 +1207,21 @@ header('Content-Type: application/pdf');
 
   <div style="font-size: 85%;">  
 
-    <p>Nyeri : Ya</p>
+    <p>Nyeri : {{fnyeri1}}</p>
       <div class="row">
         <div class="column">
-          <p>Intensitas : 4</p>
-          <p>Jenis : Kronis</p>
+          <p>Intensitas : {{$fnyeri2}}</p>
+          <p>Jenis : {{fnyeri3}}</p>
         </div>
         <div class="column">
-          <p>Lokasi Nyeri : Tangan</p>
-          <p>Terjadinya Nyeri: 3</p>
+          <p>Lokasi Nyeri : {{$fnyeri4}}</p>
+          <p>Terjadinya Nyeri: {{$fnyeri5}}</p>
         </div>
       </div>
 
-      <div class="row">
-        <div class="column">
-          <p>Intensitas : 4</p>
-          <p>Jenis : Kronis</p>
-        </div>
-        <div class="column">
-          <p>Lokasi Nyeri : Tangan</p>
-          <p>Terjadinya Nyeri: 3</p>
-        </div>
-      </div>
+      <p><b>Sifat Nyeri :</b> {{fnyeri6}}</p>
 
-      <p><b>Sifat Nyeri :</b></p>
-      <ul>
-        <li> - </li>
-      </ul>
-
-      <p><b>Kualitas Nyeri :</b></p>
-      <ul>
-        <li>Nyeri</li>
-        <li>Keram</li>
-      </ul>
+      <p><b>Kualitas Nyeri :</b> {{fnyeri7}}</p>
 
       <p><b>Faktor Pemberat :</b></p>
       <ul>
@@ -658,9 +1237,45 @@ header('Content-Type: application/pdf');
 
       <p><b>Efek Nyeri :</b></p>
       <ul>
-        <li>Mual Muntah</li>
-        <li>Emosi</li>
-      </ul>
+      <?php 
+        if(isset($macam_kasus[1])) echo 
+        '<li>
+          Keinginan sendiri
+        </li>';
+        if(isset($macam_kasus[2])) echo 
+        '<li>
+          Paksaan Orang Tua
+        </li>';
+        if(isset($macam_kasus[3])) echo 
+        '<li>
+          Rujukan Praktek Dokter
+        </li>';
+        if(isset($macam_kasus[4])) echo 
+        '<li>
+          Rujukan Instansi Lain
+        </li>';
+        if(isset($macam_kasus[5])) echo 
+        '<li>
+          Kiriman Kepolisian
+        </li>';
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[7])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+      ?>
+    </ul>
 
       <p><b>Obat obatan di rumah (daftar obat, dosis dan frekuensi, kapan terakhir kali dikonsumsi) :</b></p>
       <table class="tabel">
@@ -673,44 +1288,35 @@ header('Content-Type: application/pdf');
         </thead>
 
         <tbody>
-          <tr>
+          @php
+            $idx = 0;
+          @endphp
+          @foreach($obat as $o)
+          @php
+            $idx += 1;
+          @endphp
+          <tr id="form_{{$idx}}">
             <td style="text-align: center;padding-left:0px;" class="default3">
-              -
+              {{$o['nama_obat']}}
             </td>
             <td class="default3">
-              -
+              {{$o['dosis_obat']}}
             </td>
             <td class="default3">
-              -
-            </td> 
+              {{$o['terakhir_obat']}}
+            </td>
           </tr>
-          <tr>
-            <td style="text-align: center;padding-left:0px;" class="default3">
-              -
+          @endforeach
+          <tr id="last_row">
+            <input type="hidden" name="jumlah_form" id="jumlah_form" value="{{$idx}}">
+            <td colspan="4">
             </td>
-            <td class="default3">
-              -
-            </td>
-            <td class="default3">
-              -
-            </td>     
-          </tr>
-          <tr>
-            <td style="text-align: center;padding-left:0px;" class="default3">
-              -
-            </td>
-            <td class="default3">
-              -
-            </td>
-            <td class="default3">
-              -
-            </td>    
           </tr>
         </tbody>
     </table>
 
     <p><b>Resume:</b></p>
-    <p>Isi Resume nya adalah ....</p>
+    <p>{{$resume}}</p>
 
   </div>
 
@@ -722,35 +1328,101 @@ header('Content-Type: application/pdf');
       <div class="column">
         <p><b>Diagnosa Keperawatan Umum :</b></p>
         <ul>
-          <li>Aktual/Resiko aspirasi</li>
-          <li>Aktual/Resiko gangguan pertukaran gas</li>
-          <li>Nyeri</li>
-          <li>Hypertermi</li>
+          <?php 
+            if(isset($macam_kasus[1])) echo 
+            '<li>
+              Keinginan sendiri
+            </li>';
+            if(isset($macam_kasus[2])) echo 
+            '<li>
+              Paksaan Orang Tua
+            </li>';
+            if(isset($macam_kasus[3])) echo 
+            '<li>
+              Rujukan Praktek Dokter
+            </li>';
+            if(isset($macam_kasus[4])) echo 
+            '<li>
+              Rujukan Instansi Lain
+            </li>';
+            if(isset($macam_kasus[5])) echo 
+            '<li>
+              Kiriman Kepolisian
+            </li>';
+            if(isset($macam_kasus[6])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[7])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[8])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[8])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+          ?>
         </ul>
       </div>
       <div class="column">
         <p><b>Diagnosa Keperawatan Jiwa :</b></p>
         <ul>
-          <li>Isolasi Sosial</li>
-          <li>Waham</li>
-        </ul>
+          <?php 
+            if(isset($macam_kasus[1])) echo 
+            '<li>
+              Keinginan sendiri
+            </li>';
+            if(isset($macam_kasus[2])) echo 
+            '<li>
+              Paksaan Orang Tua
+            </li>';
+            if(isset($macam_kasus[3])) echo 
+            '<li>
+              Rujukan Praktek Dokter
+            </li>';
+            if(isset($macam_kasus[4])) echo 
+            '<li>
+              Rujukan Instansi Lain
+            </li>';
+            if(isset($macam_kasus[5])) echo 
+            '<li>
+              Kiriman Kepolisian
+            </li>';
+            if(isset($macam_kasus[6])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[7])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[8])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+            if(isset($macam_kasus[8])) echo 
+            '<li>
+              Lain-lain, '.$alasan_masuk_lainnya.'
+            </li>';
+          ?>
+    </ul>
       </div>
     </div>
-    <p><b>Kolaborasi</b></p>
-    <p>Obat Parental :</p>
-    <ul>
-      <li>Obat 1</li>
-      <li>Obat 2</li>
-    </ul>
-    <p>EKG : Tidak ada</p>
   </div>
 
     <br>
     <br>
 
+
     <div class="row">
       <div class="column">
-        <p></p>
+        <p>Tanggal : {{$tanggal}}</p>
+        <p>Jam : {{$jam}}</p>
+        <p>Nama perawat : {{$nama_perawat}</p>
       </div>
       <div class="column">
         <p style="text-align: center;">Tanda Tangan</p>
@@ -762,15 +1434,8 @@ header('Content-Type: application/pdf');
   <h4>DATA MEDIS</h4><br>
   <div style="font-size: 85%;">  
 
-
-  <p><b>Keluhan Utama :</b></p>
-  <p>Sakit pada ...., merasakan ...........  ................... ................. ......... ......... ..... .. ....... ....... ....... ..</p>
-
-  <p><b>Riwayat Penyakit Sekarang :</b></p>
-  <p> - </p>
-
-  <p><b>Riwayat Penyakit Dahulu (gangguan kejiwaan) : </b></p>
-  <p>Tidak ada</p>
+  <p><b>Anamnesa :</b></p>
+  <p>{{$anamnesa}}</p>
 
   </div>
 
@@ -784,7 +1449,7 @@ header('Content-Type: application/pdf');
             1. Kepala
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$anamnesa1}}
           </td>                
         </tr>
         <tr>
@@ -792,7 +1457,7 @@ header('Content-Type: application/pdf');
             2. Leher
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$anamnesa2}}
           </td>                
         </tr>
         <tr>
@@ -800,7 +1465,7 @@ header('Content-Type: application/pdf');
             3. Dada
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$anamnesa3}}
           </td>                
         </tr>
         <tr>
@@ -808,7 +1473,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp; a. Jantung
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$anamnesa4}}
           </td>                
         </tr>
         <tr>
@@ -816,7 +1481,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp; b. Paru-paru
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$anamnesa5}}
           </td>                
         </tr>
         <tr>
@@ -824,7 +1489,7 @@ header('Content-Type: application/pdf');
             4. Perut
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$anamnesa6}}
           </td>                
         </tr>
         <tr>
@@ -832,9 +1497,18 @@ header('Content-Type: application/pdf');
             5. Anggota gerak
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$anamnesa7}}
           </td>                
         </tr>
+        <tr>
+          <td class="konten_s_question">
+            Status Lokalis
+          </td>    
+          <td class="konten_s_answer">  
+            : {{$anamnesa8}}
+          </td>                
+        </tr>
+
       </tbody>
     </table>
   </div>
@@ -856,7 +1530,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;a. Penampilan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri1}}
           </td>                
         </tr>
         <tr>
@@ -864,7 +1538,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;b. Kesadaran
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri2}}
           </td>                
         </tr>
         <tr>
@@ -872,7 +1546,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp; c. Orientasi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri3}}
           </td>                
         </tr>
         <tr>
@@ -880,7 +1554,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp; d. Sikap & Tingkah Laku
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri4}}
           </td>                
         </tr>
 
@@ -889,6 +1563,7 @@ header('Content-Type: application/pdf');
             <b>2. Gangguan Berpikir</b>
           </td>    
           <td class="konten_s_answer">  
+             : {{$psikiatri5}}
           </td>                
         </tr>
         <tr>
@@ -896,7 +1571,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;a. Proses Pikir
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri6}}
           </td>                
         </tr>
         <tr>
@@ -904,7 +1579,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp;b. Bentuk Pikir
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri7}}
           </td>                
         </tr>
         <tr>
@@ -912,7 +1587,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp;c. Isi Pikir
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri8}}
           </td>                
         </tr>
 
@@ -920,8 +1595,6 @@ header('Content-Type: application/pdf');
           <td class="konten_s_question">
             <b>3. Alam Perasaan</b>
           </td>    
-          <td class="konten_s_answer">  
-            
           </td>                
         </tr>
         <tr>
@@ -929,7 +1602,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;a. Mood
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri9}}
           </td>                
         </tr>
         <tr>
@@ -937,7 +1610,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp;b. Afek
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri10}}
           </td>                
         </tr>
 
@@ -953,7 +1626,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;a. Halusinasi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri11}}
           </td>                
         </tr>
         <tr>
@@ -961,7 +1634,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp;b. Ilusi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri12}}
           </td>                
         </tr>
 
@@ -977,7 +1650,7 @@ header('Content-Type: application/pdf');
             &emsp;&nbsp;a. Daya Konsentrasi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri13}}
           </td>                
         </tr>
         <tr>
@@ -985,7 +1658,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp;b. Daya Ingat
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri14}}
           </td>                
         </tr>
         <tr>
@@ -993,7 +1666,7 @@ header('Content-Type: application/pdf');
            &emsp;&nbsp;c. Pikiran Abstrak
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri15}}
           </td>                
         </tr>
 
@@ -1002,7 +1675,7 @@ header('Content-Type: application/pdf');
             <b>6. Pengendalian Impuls</b> 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri16}}
           </td>                
         </tr>
 
@@ -1011,7 +1684,7 @@ header('Content-Type: application/pdf');
             <b>7. Daya Nilai</b>
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri17}}
           </td>                
         </tr>
 
@@ -1020,7 +1693,7 @@ header('Content-Type: application/pdf');
             <b>8. Tilikan/Insight</b> 
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri18}}
           </td>                
         </tr>
 
@@ -1029,7 +1702,7 @@ header('Content-Type: application/pdf');
             <b>9. Taraf dapat dipercaya</b>
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$psikiatri19}}
           </td>                
         </tr>
       </tbody>
@@ -1046,7 +1719,7 @@ header('Content-Type: application/pdf');
            Laboratorium
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$penunjang1}}
           </td>                
         </tr>
         <tr>
@@ -1054,7 +1727,7 @@ header('Content-Type: application/pdf');
             EKG
           </td>    
           <td class="konten_s_answer">  
-            : - 
+            : {{$penunjang2}}
           </td>                
         </tr>
         <tr>
@@ -1062,7 +1735,7 @@ header('Content-Type: application/pdf');
             Radiologi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$penunjang3}}
           </td>                
         </tr>
         <tr>
@@ -1070,7 +1743,7 @@ header('Content-Type: application/pdf');
             Lainnya
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$penunjang4}}
           </td>                
         </tr>
       </tbody>
@@ -1087,7 +1760,7 @@ header('Content-Type: application/pdf');
             PANSS EC Skor
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$penilaian1}}
           </td>                
         </tr>
         <tr>
@@ -1095,7 +1768,7 @@ header('Content-Type: application/pdf');
             GAFF Skor
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$penilaian2}}
           </td>                
         </tr>
       </tbody>
@@ -1105,24 +1778,50 @@ header('Content-Type: application/pdf');
 
   <h4>DIAGNOSIS PSIKIATRI</h4>
   <div style="font-size: 85%;">
-    <p>Axis 1 : - </p>
-    <p>Axis 2 : - </p>
-    <p>Axis 3 : - </p>
-    <p>Axis 4 : - </p>
-    <p>Axis 5 : - </p>
+    <p>Axis 1 : {{$diagnosis1}} </p>
+    <p>Axis 2 : {{$diagnosis2}} </p>
+    <p>Axis 3 : {{$diagnosis3}} </p>
+    <p>Axis 4 : {{$diagnosis4}} </p>
+    <p>Axis 5 : {{$diagnosis5}} </p>
   </div>
 
   <h4>RENCANA TINDAKAN & TATA LAKSANA MEDIS</h4>
   <div style="font-size: 85%;">
-    <p>Psikofarmaka : - </p>
-    <p>Psikoterapi : - </p>
-    <p>Lainnya : - </p>
+    <p>Psikofarmaka : {{$rencana1}} </p>
+    <p>Psikoterapi : {{$rencana2}} </p>
+    <p>Lainnya : {{$rencana3}} </p>
   </div>
 
   <h4>INSTRUKSI</h4>
   <div style="font-size: 85%;">
-    <p>Boleh Pulang, jam keluar : 20:20 WIB, Tanggal : 12/12/2018</p>
-    <p>Kontrol Klinik, Klinik a tanggal 01/01/2019</p>
+    <p>{{$instruksi1}} 
+    <?php if($instruksi1=='0') 
+    {
+      echo 'Boleh Pulang, jam keluar : '.$Instruksi2.', Tanggal : '.$Instruksi3.' </p>';
+      if($instruksi4 == 'Ya')
+      {
+        echo '<p>Kontrol Klinik, Klinik '.$instruksi5.' tanggal '.$instruksi6.'</p>'
+      }
+      else
+      {
+        echo "<p>Kontrol Klinik, Tidak</p>";
+      }
+    }
+    else
+    {
+      if($instruksi7=='1')
+      {
+          echo 'Dirawat di ruang Intensif'
+      }
+      else
+      {
+          echo 'Dirawat di ruang '.$instruksi8.''
+      }
+    }
+     
+
+     ?>
+    
   </div>
 
 
@@ -1135,7 +1834,7 @@ header('Content-Type: application/pdf');
             Tanggal
           </td>    
           <td class="konten_s_answer">  
-            : 20/08/2018
+            : {{$tanggal}}
           </td>                
         </tr>
         <tr>
@@ -1143,7 +1842,7 @@ header('Content-Type: application/pdf');
             Jam
           </td>    
           <td class="konten_s_answer">  
-            : 07:00:00
+            : {{$jam}}
           </td>                
         </tr>
         <tr>
@@ -1151,7 +1850,7 @@ header('Content-Type: application/pdf');
             Nama Dokter
           </td>    
           <td class="konten_s_answer">  
-            : Riska
+            : {{$nama_dokter}}
           </td>                
         </tr>
       </tbody>

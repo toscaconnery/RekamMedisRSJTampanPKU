@@ -87,7 +87,7 @@
             </section>
 
             <section class="panel">
-              <header class="panel-heading">2. Anamnesa</header>
+              <header class="panel-heading">2. Pemeriksaan Fisik</header>
               <div class="panel-body">
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Kepala</label>
@@ -309,7 +309,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">GAF (Skor)</label>
+                  <label class="col-sm-2 control-label">GAFF (Skor)</label>
                   <div class="col-sm-8">
                     <input type="text" disabled name="penilaian2" value="{{$penilaian2}}" class="form-control">
                   </div>
