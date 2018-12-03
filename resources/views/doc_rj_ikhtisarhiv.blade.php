@@ -138,6 +138,42 @@ header('Content-Type: application/pdf');
           <tr>
             <td class="konten_l_question" colspan="2">
               <b>Faktor Risiko:</b>
+              <ul>
+                <?php 
+                  if(isset($macam_kasus[1])) echo 
+                  '<li>
+                    Keinginan sendiri
+                  </li>';
+                  if(isset($macam_kasus[2])) echo 
+                  '<li>
+                    Paksaan Orang Tua
+                  </li>';
+                  if(isset($macam_kasus[3])) echo 
+                  '<li>
+                    Rujukan Praktek Dokter
+                  </li>';
+                  if(isset($macam_kasus[4])) echo 
+                  '<li>
+                    Rujukan Instansi Lain
+                  </li>';
+                  if(isset($macam_kasus[5])) echo 
+                  '<li>
+                    Kiriman Kepolisian
+                  </li>';
+                  if(isset($macam_kasus[6])) echo 
+                  '<li>
+                    Lain-lain, '.$alasan_masuk_lainnya.'
+                  </li>';
+                  if(isset($macam_kasus[7])) echo 
+                  '<li>
+                    Lain-lain, '.$alasan_masuk_lainnya.'
+                  </li>';
+                  if(isset($macam_kasus[8])) echo 
+                  '<li>
+                    Lain-lain, '.$alasan_masuk_lainnya.'
+                  </li>';
+                ?>
+              </ul>
             </td>          
           </tr>
           <tr>
@@ -460,7 +496,21 @@ header('Content-Type: application/pdf');
           <td class="default" style="height:30px"> {{$sfu}} </td>
           <td class="default" style="height:30px"> {{$stad_klinis}} </td>
           <td class="default" style="height:30px"> {{$hkb}} </td>
-          <td class="default" style="height:30px"> [infeksi] {{$keterangan_infop}} </td>
+          <td class="default" style="height:30px"> 
+            <?php 
+              if(isset($infop[1])) echo ' K ';
+              if(isset($infop[2])) echo ' D ';
+              if(isset($infop[3])) echo ' Cr ';
+              if(isset($infop[4])) echo ' PCP ';
+              if(isset($infop[5])) echo ' CMV ';
+              if(isset($infop[6])) echo ' '.$keterangan_infop.' ';
+              if(isset($infop[7])) echo ' P ';
+              if(isset($infop[8])) echo ' Z ';
+              if(isset($infop[9])) echo ' S ';
+              if(isset($infop[10])) echo ' T ';
+              if(isset($infop[11])) echo ' H ';
+            ?>
+          </td>
           <td class="default" style="height:30px"> {{$obat_untuk_io}} </td>
           <td class="default" style="height:30px"> {{$stb}} </td>
           <td class="default" style="height:30px"> {{$ppk}} </td>
@@ -469,7 +519,26 @@ header('Content-Type: application/pdf');
           <td class="default" style="height:30px"> {{$obat_arv}} </td>
           <td class="default" style="height:30px"> [sisa obat] </td>
           <td class="default" style="height:30px"> {{$adr}} </td>
-          <td class="default" style="height:30px"> [efek] </td>
+          <td class="default" style="height:30px"> 
+          <?php 
+            if(isset($esart[1])) echo ' R ';
+            if(isset($esart[2])) echo ' Mua ';
+            if(isset($esart[3])) echo ' Mun ';
+            if(isset($esart[4])) echo ' D ';
+            if(isset($esart[5])) echo ' N ';
+            if(isset($esart[6])) echo ' Ikt ';
+            if(isset($esart[7])) echo ' An ';
+            if(isset($esart[8])) echo ' Ll ';
+            if(isset($esart[9])) echo ' Sk ';
+            if(isset($esart[10])) echo ' Dem ';
+            if(isset($esart[11])) echo ' Hip ';
+            if(isset($esart[12])) echo ' Dep ';
+            if(isset($esart[13])) echo ' P ';
+            if(isset($esart[14])) echo ' Lip ';
+            if(isset($esart[15])) echo ' Ngan ';
+            if(isset($esart[16])) echo ' ln ';
+          ?> 
+          </td>
           <td class="default" style="height:30px"> {{$jumlah_cd4}} </td>
           <td class="default" style="height:30px"> {{$hasil_lab}} </td>
           <td class="default" style="height:30px"> {{$dkr}} {{$jumlah_kondom}} </td>

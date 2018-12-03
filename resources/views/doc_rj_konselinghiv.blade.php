@@ -108,7 +108,7 @@ header('Content-Type: application/pdf');
 
     <div class="specialcase ">
       <p class=""><b>KELOMPOK RISIKO</b></p>
-      <p class="answer">PS Langsung</p>
+      <p class="answer">{{$kr}}, {{$ktr}}</p>
     </div>
 
     <hr style="height:2px;">
@@ -225,36 +225,8 @@ header('Content-Type: application/pdf');
                 {{$jd}}, {{$waktu_jd}}
             </td>  
             <td class="default2s" colspan="2">
-              <b>KESEDIAAN UNTUK TES : $ksd</b>
+              <b>KESEDIAAN UNTUK TES : {{$ksd}}</b>
             </td>            
-          </tr>
-
-
-
-          <tr>
-            <td class="default2q">
-                <b>PENYAKIT TERKAIT PASIEN</b>
-            </td>    
-            <td class="default2s" colspan="2">
-              <ul>
-                <li>TB</li>
-                <li>LGV</li>
-              </ul>
-            </td>   
-            <td class="default2s" colspan="2">
-              <ul>
-                <li>Herpes</li>
-                <li>Sifilis</li>
-              </ul>
-            </td>                
-          </tr>
-          <tr>
-            <td class="default2q">
-               <b>KESEDIAAN UNTUK TES</b>
-            </td>    
-            <td class="default2s" colspan="4">
-              {{$ksd}}
-            </td>                
           </tr>
            <tr>
             <td class="default2q">
@@ -317,15 +289,67 @@ header('Content-Type: application/pdf');
             </td>    
             <td class="default2s" colspan="2">
               <ul>
-                <li>TB</li>
-                <li>LGV</li>
-              </ul>
+                <?php 
+                  if(isset($ptp[1])) echo 
+                  '<li>
+                    TB
+                  </li>';
+                  if(isset($ptp[2])) echo 
+                  '<li>
+                    Dermatitis
+                  </li>';
+                  if(isset($ptp[3])) echo 
+                  '<li>
+                    Herpes
+                  </li>';
+                  if(isset($ptp[4])) echo 
+                  '<li>
+                    Sifilis
+                  </li>';
+                  if(isset($ptp[5])) echo 
+                  '<li>
+                    Hepatitis
+                  </li>';
+                  if(isset($ptp[6])) echo 
+                  '<li>
+                    Diare
+                  </li>';
+                ?>
+              </ul> 
             </td>   
             <td class="default2s" colspan="2">
               <ul>
-                <li>Herpes</li>
-                <li>Sifilis</li>
-              </ul>
+                <?php 
+                  if(isset($ptp[7])) echo 
+                  '<li>
+                    LGV
+                  </li>';
+                  if(isset($ptp[8])) echo 
+                  '<li>
+                    Toksopiasmosis
+                  </li>';
+                  if(isset($ptp[9])) echo 
+                  '<li>
+                    IMS lainnya ...
+                  </li>';
+                  if(isset($ptp[10])) echo 
+                  '<li>
+                    Kandidiasis oralesovagial
+                  </li>';
+                  if(isset($ptp[11])) echo 
+                  '<li>
+                    PCP
+                  </li>';
+                  if(isset($ptp[12])) echo 
+                  '<li>
+                    Wasting syndrome
+                  </li>';
+                  if(isset($ptp[13])) echo 
+                  '<li>
+                    Lainnya
+                  </li>';
+                ?>
+              </ul> 
             </td>                
           </tr>
           <tr>
@@ -423,7 +447,22 @@ header('Content-Type: application/pdf');
                <b>TINDAK LANJUT (TIPK)</b>
             </td>    
             <td class="default2s" colspan="2">
-              Rujuk PDP dan PPIA
+              <ul>
+                <?php 
+                  if(isset($tl_tipk[1])) echo 
+                  '<li>
+                    Rujuk Konseling ...
+                  </li>';
+                  if(isset($tl_tipk[2])) echo 
+                  '<li>
+                    Rujuk ke ...
+                  </li>';
+                  if(isset($tl_tipk[3])) echo 
+                  '<li>
+                    Rujuk ke PDP dan PPIA
+                  </li>';
+                ?>
+              </ul> 
             </td>                       
           </tr>
         </tbody>
@@ -484,9 +523,68 @@ header('Content-Type: application/pdf');
             </td>    
             <td class="default2s" colspan="3">
               <ul>
-                <li></li>
-                <li></li>
-              </ul>
+                <?php 
+                  if(isset($tl_kts[1])) echo 
+                  '<li>
+                    Tes Ulang
+                  </li>';
+                  if(isset($tl_kts[2])) echo 
+                  '<li>
+                    Rujuk ke PDP
+                  </li>';
+                  if(isset($tl_kts[3])) echo 
+                  '<li>
+                    Rujuk ke Layanan PTRM
+                  </li>';
+                  if(isset($tl_kts[4])) echo 
+                  '<li>
+                    Rujuk ke Layanan IMS
+                  </li>';
+                  if(isset($tl_kts[5])) echo 
+                  '<li>
+                    Rujuk ke PPIA
+                  </li>';
+                  if(isset($tl_kts[6])) echo 
+                  '<li>
+                    Rujuk ke Rehab
+                  </li>';
+                  if(isset($tl_kts[7])) echo 
+                  '<li>
+                    Rujuk ke Layanan LASS
+                  </li>';
+                  if(isset($tl_kts[8])) echo 
+                  '<li>
+                    Rujuk ke Layanan TB
+                  </li>';
+                  if(isset($tl_kts[9])) echo 
+                  '<li>
+                    Rujuk ke Profesional
+                  </li>';
+                  if(isset($tl_kts[10])) echo 
+                  '<li>
+                    Rujuk ke petugas pendukung
+                  </li>';
+                  if(isset($tl_kts[10])) {
+                    if(isset($rpp[1])) echo 
+                      '<li>
+                        - Komunitas
+                      </li>';
+                    if(isset($rpp[2])) echo 
+                      '<li>
+                        - LSM ...
+                      </li>';
+                    if(isset($rpp[3])) echo 
+                      '<li>
+                        - Kader
+                      </li>';
+                  }
+                  if(isset($tl_kts[11])) echo 
+                  '<li>
+                    Konseling, '.$ksl.'
+                  </li>';
+                ?>
+                
+              </ul> 
             </td>                
           </tr>
           <tr>

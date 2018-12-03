@@ -772,9 +772,316 @@ class RJHIVAntiRetrovalController extends Controller
         {
             $this->data['pendidikan'] = '4 - Akademi/PT';
         }
+
+        if( $this->data['pekerjaan'] == '0')
+        {
+           $this->data['pekerjaan']  = '0 - Tidak Bekerja'; 
+        }
         else
         {
-            $this->data['pendidikan']  = '';
+            $this->data['pekerjaan']  = '1 - Bekerja';
+        }
+
+         if( $this->data['status_pernikahan'] == '1')
+        {
+           $this->data['status_pernikahan']  = 'Menikah'; 
+        }
+        elseif( $this->data['status_pernikahan'] == '2')
+        {
+            $this->data['status_pernikahan'] = 'Belum Menikah';
+        }
+        else
+        {
+            $this->data['status_pernikahan']  = 'Janda/Duda';
+        }
+
+        if( $this->data['pernah_menerima_art'] == '1')
+        {
+           $this->data['pernah_menerima_art']  = 'Ya'; 
+        }
+        else
+        {
+            $this->data['pernah_menerima_art']  = 'Tidak';
+        }
+
+        if( $this->data['tempat_art_dulu'] == '1')
+        {
+           $this->data['tempat_art_dulu']  = 'RS Pem'; 
+        }
+        elseif( $this->data['tempat_art_dulu'] == '2')
+        {
+            $this->data['tempat_art_dulu'] = 'RS Swasta';
+        }
+        else
+        {
+            $this->data['tempat_art_dulu']  = 'PKM';
+        }
+
+        if( $this->data['status_fungsional_pkl_1'] == '1')
+        {
+           $this->data['status_fungsional_pkl_1']  = 'Kerja'; 
+        }
+        elseif( $this->data['status_fungsional_pkl_1'] == '2')
+        {
+            $this->data['status_fungsional_pkl_1'] = 'Ambulatori';
+        }
+        elseif( $this->data['status_fungsional_pkl_1'] == '3')
+        {
+            $this->data['status_fungsional_pkl_1'] = 'Baring';
+        }
+        else
+        {
+            $this->data['status_fungsional_pkl_1'] = '';
+        }
+
+        if( $this->data['status_fungsional_pkl_2'] == '1')
+        {
+           $this->data['status_fungsional_pkl_2']  = 'Kerja'; 
+        }
+        elseif( $this->data['status_fungsional_pkl_2'] == '2')
+        {
+            $this->data['status_fungsional_pkl_2'] = 'Ambulatori';
+        }
+        elseif( $this->data['status_fungsional_pkl_2'] == '3')
+        {
+            $this->data['status_fungsional_pkl_2'] = 'Baring';
+        }
+        else
+        {
+            $this->data['status_fungsional_pkl_2'] = '';
+        }
+
+        if( $this->data['status_fungsional_pkl_3'] == '1')
+        {
+           $this->data['status_fungsional_pkl_3']  = 'Kerja'; 
+        }
+        elseif( $this->data['status_fungsional_pkl_3'] == '2')
+        {
+            $this->data['status_fungsional_pkl_3'] = 'Ambulatori';
+        }
+        elseif( $this->data['status_fungsional_pkl_3'] == '3')
+        {
+            $this->data['status_fungsional_pkl_3'] = 'Baring';
+        }
+        else
+        {
+            $this->data['status_fungsional_pkl_3'] = '';
+        }
+
+        if( $this->data['status_fungsional_pkl_4'] == '1')
+        {
+           $this->data['status_fungsional_pkl_4']  = 'Kerja'; 
+        }
+        elseif( $this->data['status_fungsional_pkl_4'] == '2')
+        {
+            $this->data['status_fungsional_pkl_4'] = 'Ambulatori';
+        }
+        elseif( $this->data['status_fungsional_pkl_4'] == '3')
+        {
+            $this->data['status_fungsional_pkl_4'] = 'Baring';
+        }
+        else
+        {
+            $this->data['status_fungsional_pkl_4'] = '';
+        }
+
+        if( $this->data['status_fungsional_pkl_5'] == '1')
+        {
+           $this->data['status_fungsional_pkl_5']  = 'Kerja'; 
+        }
+        elseif( $this->data['status_fungsional_pkl_5'] == '2')
+        {
+            $this->data['status_fungsional_pkl_5'] = 'Ambulatori';
+        }
+        elseif( $this->data['status_fungsional_pkl_5'] == '3')
+        {
+            $this->data['status_fungsional_pkl_5'] = 'Baring';
+        }
+        else
+        {
+            $this->data['status_fungsional_pkl_5'] = '';
+        }
+
+        if( $this->data['status_fungsional_pkl_6'] == '1')
+        {
+           $this->data['status_fungsional_pkl_6']  = 'Kerja'; 
+        }
+        elseif( $this->data['status_fungsional_pkl_6'] == '2')
+        {
+            $this->data['status_fungsional_pkl_6'] = 'Ambulatori';
+        }
+        elseif( $this->data['status_fungsional_pkl_6'] == '3')
+        {
+            $this->data['status_fungsional_pkl_6'] = 'Baring';
+        }
+        else
+        {
+            $this->data['status_fungsional_pkl_6'] = '';
+        }
+
+        if( $this->data['ptb'] == '1')
+        {
+           $this->data['ptb']  = 'Kategori I'; 
+        }
+        elseif( $this->data['ptb'] == '2')
+        {
+            $this->data['ptb'] = 'Kategori II';
+        }
+        elseif( $this->data['ptb'] == '3')
+        {
+            $this->data['ptb'] = 'Kategori anak';
+        }
+        else
+        {
+            $this->data['ptb']  = 'OAT lini 2 (MDR)';
+        }
+
+        if( $this->data['ttb'] == '1')
+        {
+           $this->data['ttb']  = 'Baru'; 
+        }
+        elseif( $this->data['ttb'] == '2')
+        {
+            $this->data['ttb'] = 'Kambuh';
+        }
+        elseif( $this->data['ttb'] == '3')
+        {
+            $this->data['ttb'] = 'Default';
+        }
+        else
+        {
+            $this->data['ttb']  = 'Gagal';
+        }
+
+        if( $this->data['ii'] == '1')
+        {
+           $this->data['ii']  = 'Penasun'; 
+        }
+        elseif( $this->data['ii'] == '2')
+        {
+            $this->data['ii'] = 'WPS';
+        }
+        elseif( $this->data['ii'] == '3')
+        {
+            $this->data['ii'] = 'LSL';
+        }
+        elseif( $this->data['ii'] == '4')
+        {
+            $this->data['ii'] = 'Waria';
+        }
+        elseif( $this->data['ii'] == '5')
+        {
+            $this->data['ii'] = 'Pasien Ko-Infeksi TB-HIV';
+        }
+        elseif( $this->data['ii'] == '6')
+        {
+            $this->data['ii'] = 'Pasien Ko-Infeksi Hepatitis B-HIV';
+        }
+        elseif( $this->data['ii'] == '7')
+        {
+            $this->data['ii'] = 'ODHA dengan pasangan negatif';
+        }
+        else
+        {
+            $this->data['ii']  = 'Lainnya (CD4 < Stadium Klinis atau 4/Ibu hamil)';
+        }
+
+        if( $this->data['prm'] == '1')
+        {
+           $this->data['prm']  = 'Y'; 
+        }
+        else
+        {
+            $this->data['prm']  = 'T';
+        }
+
+        if( $this->data['drt'] == '1')
+        {
+           $this->data['drt']  = 'Y'; 
+        }
+        else
+        {
+            $this->data['drt']  = 'T';
+        }
+
+        if( $this->data['sfu'] == '0')
+        {
+           $this->data['sfu']  = '1'; 
+        }
+        elseif( $this->data['sfu'] == '1')
+        {
+            $this->data['sfu'] = '2';
+        }
+        else
+        {
+            $this->data['sfu']  = '3';
+        }
+
+        if( $this->data['hkb'] == '1')
+        {
+           $this->data['hkb']  = 'Y'; 
+        }
+        else
+        {
+            $this->data['hkb']  = 'T';
+        }
+
+        if( $this->data['ppk'] == '1')
+        {
+           $this->data['ppk']  = 'Y'; 
+        }
+        else
+        {
+            $this->data['ppk']  = 'T';
+        }
+
+        if( $this->data['inh'] == '1')
+        {
+           $this->data['inh']  = 'Y'; 
+        }
+        else
+        {
+            $this->data['inh']  = 'T';
+        }
+
+        if( $this->data['dkr'] == '1')
+        {
+           $this->data['dkr']  = 'Y'; 
+        }
+        elseif( $this->data['dkr'] == '2')
+        {
+           $this->data['dkr']  = 'TT'; 
+        }
+        else
+        {
+            $this->data['dkr']  = 'T';
+        }
+
+        if( $this->data['fll'] == '1')
+        {
+           $this->data['fll']  = 'M'; 
+        }
+        elseif( $this->data['fll'] == '2')
+        {
+            $this->data['fll'] = 'LFU';
+        }
+        else
+        {
+            $this->data['fll']  = 'RK';
+        }
+
+
+        if( $this->data[''] == '')
+        {
+           $this->data['']  = ''; 
+        }
+        elseif( $this->data[''] == '')
+        {
+            $this->data[''] = '';
+        }
+        else
+        {
+            $this->data['']  = '';
         }
 
         if( $this->data[''] == '')
@@ -790,7 +1097,7 @@ class RJHIVAntiRetrovalController extends Controller
             $this->data['']  = '';
         }
 
-         if( $this->data[''] == '')
+        if( $this->data[''] == '')
         {
            $this->data['']  = ''; 
         }
@@ -803,20 +1110,7 @@ class RJHIVAntiRetrovalController extends Controller
             $this->data['']  = '';
         }
 
-         if( $this->data[''] == '')
-        {
-           $this->data['']  = ''; 
-        }
-        elseif( $this->data[''] == '')
-        {
-            $this->data[''] = '';
-        }
-        else
-        {
-            $this->data['']  = '';
-        }
-
-         if( $this->data[''] == '')
+        if( $this->data[''] == '')
         {
            $this->data['']  = ''; 
         }
