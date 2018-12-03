@@ -61,27 +61,35 @@ header('Content-Type: application/pdf');
     <p class="list"><b>A. Alasan Masuk :</b> - </p>
     <ul>
       <?php 
-        if(isset($alasan_masuk[1])) echo 
+        if(isset($macam_kasus[1])) echo 
         '<li>
           Keinginan sendiri
         </li>';
-        if(isset($alasan_masuk[2])) echo 
+        if(isset($macam_kasus[2])) echo 
         '<li>
           Paksaan Orang Tua
         </li>';
-        if(isset($alasan_masuk[3])) echo 
+        if(isset($macam_kasus[3])) echo 
         '<li>
           Rujukan Praktek Dokter
         </li>';
-        if(isset($alasan_masuk[4])) echo 
+        if(isset($macam_kasus[4])) echo 
         '<li>
           Rujukan Instansi Lain
         </li>';
-        if(isset($alasan_masuk[5])) echo 
+        if(isset($macam_kasus[5])) echo 
         '<li>
           Kiriman Kepolisian
         </li>';
-        if(isset($alasan_masuk[6])) echo 
+        if(isset($macam_kasus[6])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[7])) echo 
+        '<li>
+          Lain-lain, '.$alasan_masuk_lainnya.'
+        </li>';
+        if(isset($macam_kasus[8])) echo 
         '<li>
           Lain-lain, '.$alasan_masuk_lainnya.'
         </li>';

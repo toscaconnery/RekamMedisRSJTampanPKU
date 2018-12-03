@@ -2047,10 +2047,502 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         return redirect('daftar_dokumen');
     }
 
+    function yesno($stats)
+    {
+        if($stats)
+        {
+            return 'Ya';
+        }
+        else
+        {
+            return 'Tidak';
+        }
+    }
+
+    function adatidak($stats)
+    {
+        if($stats)
+        {
+            return 'Ada';
+        }
+        else
+        {
+            return 'Tidak Ada';
+        }
+    }
+
+    function convert()
+    {
+
+        $this->data['riwayat_operasi'] = yesno($this->data['riwayat_operasi']);
+        $this->data['riwayat_tranfusi'] = yesno($this->data['riwayat_tranfusi']);
+        $this->data['reaksi_tranfusi'] = yesno($this->data['reaksi_tranfusi']);
+        $this->data['must_asupan'] = yesno($this->data['must_asupan']);
+        $this->data['must_diagnosis'] = yesno($this->data['must_diagnosis']);
+        $this->data['pendarahan'] = adatidak($this->data['pendarahan']);
+        $this->data['sk_2'] = yesno($this->data['sk_2']);
+        $this->data['sk_3'] = yesno($this->data['sk_3']);
+        $this->data['sk_4'] = yesno($this->data['sk_4']);
+        $this->data['nyeri_berpindah'] = yesno($this->data['nyeri_berpindah']);
+        $this->data['edema'] = yesno($this->data['edema']);
+
+        if($this->data['kontrol'])
+        {
+            $this->data['kontrol'] = 'Perlu Kontrol';
+        }
+        else
+        {
+            $this->data['kontrol'] = 'Tidak perlu kontrol';
+        }
+
+
+         if($this->data['visum'])
+        {
+            $this->data['visum'] = 'Dengan disertai VISUM ET REPERTUM PSIKIATRIKUM';
+        }
+        else
+        {
+            $this->data['visum'] = 'Tidak disertai VISUM ET REPERTUM PSIKIATRIKUM';
+        }
+
+        if($this->data['keluhan_nyeri'])
+        {
+            $this->data['keluhan_nyeri'] = 'Ada nyeri';
+        }
+        else
+        {
+            $this->data['keluhan_nyeri'] = 'Tidak ada nyeri';
+        }
+
+        if($this->data['tekanan_intrakanal'])
+        {
+            $this->data['tekanan_intrakanal'] = 'Ada keluhan :';
+        }
+        else
+        {
+            $this->data['tekanan_intrakanal'] = 'Tidak ada keluhan';
+        }
+
+        //resiko jatuh
+        if($this->data['humpty_1']=='1')
+        {
+            $this->data['humpty_1'] = '(Skor: 4) Dibawah 3 tahun';
+        }
+        elseif ($this->data['humpty_1']=='2') {
+            $this->data['humpty_1'] = '(Skor: 3) 3 – 7 tahun'; 
+        }
+        elseif ($this->data['humpty_1']=='3') {
+            $this->data['humpty_1'] = '(Skor: 2) 7 – 13 tahun'; 
+        }
+        else {
+            $this->data['humpty_1'] = '(Skor: 1) > 13 tahun';
+        }
+
+        if($this->data['humpty_2']=='1')
+        {
+            $this->data['humpty_2'] = '(Skor: 4) Kelainan Neurologi';
+        }
+        elseif ($this->data['humpty_2']=='2') {
+            $this->data['humpty_2'] = '(Skor: 3) Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)'; 
+        }
+        elseif ($this->data['humpty_2']=='3') {
+            $this->data['humpty_2'] = '(Skor: 2) Kelainan psikis / prilaku'; 
+        }
+        else {
+            $this->data['humpty_2'] = '(Skor: 1) Diagnosis lain';
+        }
+
+        if($this->data['humpty_3']=='1')
+        {
+            $this->data['humpty_3'] = '(Skor: 3) Tidak sadar terhadap keterbatasan (gangguan kesadaran, retardasi mental';
+        }
+        elseif ($this->data['humpty_3']=='2') {
+            $this->data['humpty_3'] = '(Skor: 2) Lupa keterbatasan (anak yang hiperaktif)'; 
+        }
+        else {
+            $this->data['humpty_3'] = '(Skor: 1) Mengetahui kemampuan diri';
+        }
+
+        if($this->data['humpty_4']=='1')
+        {
+            $this->data['humpty_4'] = '(Skor: 4) Riwayat jatuh dari tempat tidur saat bayi';
+        }
+        elseif ($this->data['humpty_4']=='2') {
+            $this->data['humpty_4'] = '(Skor: 3) Pasien menggunakan alat bantu atau box meubel'; 
+        }
+        elseif ($this->data['humpty_4']=='3') {
+            $this->data['humpty_4'] = '(Skor: 2) Pasien berada di tempat tidur'; 
+        }
+        else {
+            $this->data['humpty_4'] = '(Skor: 1) Di luar ruang rawat';
+        }
+
+        if($this->data['humpty_5']=='1')
+        {
+            $this->data['humpty_5'] = '(Skor: 3) Dalam 24 Jam';
+        }
+        elseif ($this->data['humpty_5']=='2') {
+            $this->data['humpty_5'] = '(Skor: 2) Dalam 48 Jam'; 
+        }
+        else {
+            $this->data['humpty_5'] = '(Skor: 1) > 48 Jam';
+        }
+
+        if($this->data['humpty_6']=='1')
+        {
+            $this->data['humpty_6'] = '(Skor: 3) Bermacam-macam obat yang digunakan : obat sedatif (kecuali pasien ICU yang menggunakan sedasi dan paralisis), Hiptonik Barbitural, Fonotiazin, Antidepresan, Laksansia / Diuretikan, Narkotik';
+        }
+        elseif ($this->data['humpty_6']=='2') {
+            $this->data['humpty_6'] = '(Skor: 2) Salah satu Pengobatan di atas'; 
+        }
+        else {
+            $this->data['humpty_6'] = '(Skor: 1) Pengobatan lain';
+        }
+
+        if($this->data['morse_1']=='1')
+        {
+            $this->data['morse_1'] = '(Skor: 25) Ya';
+        }
+        else {
+            $this->data['morse_1'] = '(Skor: 0) Tidak';
+        }
+
+        if($this->data['morse_2']=='1')
+        {
+            $this->data['morse_2'] = '(Skor: 15) Ya';
+        }
+        else {
+            $this->data['morse_2'] = '(Skor: 0) Tidak';
+        }
+
+        if($this->data['morse_3']=='1')
+        {
+            $this->data['morse_3'] = '(Skor: 30) Perabot';
+        }
+        elseif ($this->data['morse_3']=='2') {
+            $this->data['morse_3'] = '(Skor: 15) Tongkat/Alat Penopang'; 
+        }
+        else {
+            $this->data['morse_3'] = '(Skor: 0) Tidak ada/Kursi Roda/Perawat/Tirah Baring';
+        }
+
+        if($this->data['morse_4']=='1')
+        {
+            $this->data['morse_4'] = '(Skor: 20) Ya';
+        }
+        else {
+            $this->data['morse_4'] = '(Skor: 0) Tidak';
+        }
+
+        if($this->data['morse_5']=='1')
+        {
+            $this->data['morse_5'] = '(Skor: 20) Terganggu';
+        }
+        elseif ($this->data['morse_5']=='2') {
+            $this->data['morse_5'] = '(Skor: 10) Lemah'; 
+        }
+        else {
+            $this->data['morse_5'] = '(Skor: 0) Normal/Tirah Baring/Imobilisasi';
+        }
+
+        if($this->data['morse_6']=='1')
+        {
+            $this->data['morse_6'] = '(Skor: 15) Sering lupa akan keterbatasan yang dimiliki';
+        }
+        else {
+            $this->data['morse_6'] = '(Skor: 0) Orientasi baik terhadap kemampuan diri sendiri';
+        }
+
+        if($this->data['edmunson_1']=='1')
+        {
+            $this->data['edmunson_1'] = '(Skor: 4) Kesadaran baik/orientasi baik setiap saat';
+        }
+        elseif ($this->data['edmunson_1']=='2') {
+            $this->data['edmunson_1'] = '(Skor: 12) Agitasi/Ansietas'; 
+        }
+        elseif ($this->data['edmunson_1']=='3') {
+            $this->data['edmunson_1'] = '(Skor: 13) Kadang-kadang bingung'; 
+        }
+        else {
+            $this->data['edmunson_1'] = '(Skor: 14) Bingung/Disorientasi';
+        }
+
+        if($this->data['edmunson_2']=='1')
+        {
+            $this->data['edmunson_2'] = '(Skor: ) Kelainan Neurologi';
+        }
+        elseif ($this->data['edmunson_2']=='2') {
+            $this->data['edmunson_2'] = '(Skor: ) Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)'; 
+        }
+        elseif ($this->data['edmunson_2']=='3') {
+            $this->data['edmunson_2'] = '(Skor: ) Kelainan psikis / prilaku'; 
+        }
+        else {
+            $this->data['edmunson_2'] = '(Skor: ) Diagnosis lain';
+        }
+
+        if($this->data['edmunson_3']=='1')
+        {
+            $this->data['edmunson_3'] = '(Skor: 8) Mandiri dan mampi mengontrol BAB/BAK';
+        }
+        elseif ($this->data['edmunson_3']=='2') {
+            $this->data['edmunson_3'] = '(Skor: 12) Dower Catheter/Colostomy'; 
+        }
+        elseif ($this->data['edmunson_3']=='3') {
+            $this->data['edmunson_3'] = '(Skor: 10) Eliminasi dengan bantuan'; 
+        }
+        elseif ($this->data['edmunson_3']=='4') {
+            $this->data['edmunson_3'] = '(Skor: 12) Gangguan eliminasi (Inkontinensia/Nokturia/Frekwensi)'; 
+        }
+        else {
+            $this->data['edmunson_3'] = '(Skor: 12) Inkontinesia tetapi mampu untuk mobilisasi';
+        }
+
+        if($this->data['edmunson_4']=='1')
+        {
+            $this->data['edmunson_4'] = '(Skor: 10) Tanpa obat-obatan';
+        }
+        elseif ($this->data['edmunson_4']=='2') {
+            $this->data['edmunson_4'] = '(Skor: 10) Obat-obatan jantung'; 
+        }
+        elseif ($this->data['edmunson_4']=='3') {
+            $this->data['edmunson_4'] = '(Skor: 8) Obat-obat psikotropika (termasuk Benzodiazepine dan Antidepresan)'; 
+        }
+        else {
+            $this->data['edmunson_4'] = '(Skor: 12) Mendapat tambahan obat-obatan dan/atau obat-obat PRN (psikiatri, antinyeri) yang diberikan dalam 24 jam terakhir';
+        }
+
+        if($this->data['edmunson_5']=='1')
+        {
+            $this->data['edmunson_5'] = '(Skor: 10) Bipolar/ Gangguan Schizoaffective';
+        }
+        elseif ($this->data['edmunson_5']=='2') {
+            $this->data['edmunson_5'] = '(Skor: 8) Penggunaan Obat-obatan terlarang/ketergantungan alkohol'; 
+        }
+        elseif ($this->data['edmunson_5']=='3') {
+            $this->data['edmunson_5'] = '(Skor: 10) Gangguan Depresi Mayor'; 
+        }
+        else {
+            $this->data['edmunson_5'] = '(Skor: 12) Dimensia/ Delirium';
+        }
+
+        if($this->data['edmunson_6']=='1')
+        {
+            $this->data['edmunson_6'] = '(Skor: 8) Mandiri/Keseimbangan Baik/Immobilisasi';
+        }
+        elseif ($this->data['edmunson_6']=='2') {
+            $this->data['edmunson_6'] = '(Skor: 8) Dengan Alat Bantu (Kursi roda, walker,dll)'; 
+        }
+        elseif ($this->data['edmunson_6']=='3') {
+            $this->data['edmunson_6'] = '(Skor: 10) Vertigo/kelemahan'; 
+        }
+        elseif ($this->data['edmunson_6']=='4') {
+            $this->data['edmunson_6'] = '(Skor: 8) Goyah/membutuhkan mantuan dan menyadari kemampuan'; 
+        }
+        else {
+            $this->data['edmunson_6'] = '(Skor: 15) Goyah tapi lupa keterbatasan';
+        }
+
+        if($this->data['edmunson_7']=='1')
+        {
+            $this->data['edmunson_7'] = '(Skor: 12) Mengkonsumsi sedikit makanan atau minuman  dalam 24 jam terakhir';
+        }
+        else{
+            $this->data['edmunson_7'] = '(Skor: 0) Tidak ada kelainan dengan nafsu makan'; 
+        }
+
+        if($this->data['edmunson_8']=='1')
+        {
+            $this->data['edmunson_8'] = '(Skor: 8) Tidak ada riwayat jatuh';
+        }
+        else {
+            $this->data['edmunson_8'] = '(Skor: 12) Ada riwayat jatuh dalam 3 bulan terakhir';
+        }
+
+        //panss
+
+        if($this->data['p4']=='1')
+        {
+            $this->data['p4'] = 'Tidak ada - definisi tidak dipenuhi';
+            $this->data['pe1'] = 1;
+        }
+        elseif($this->data['p4']=='2')
+        {
+            $this->data['p4'] = 'Minimal – patologis diragukan';
+            $this->data['pe1'] = 2;
+        }
+        elseif($this->data['p4']=='3')
+        {
+            $this->data['p4'] = 'Ringan – sedikit agitatif, waspada berlebihan, atau sedikit mudah terangsang selama wawancara, tanpa episode yang jelas dari gaduh gelisah atau labilitas alam perasaan yang mecolok. Pembicaraan mungkin sedikit mendesah';
+            $this->data['pe1'] = 3;
+        }
+        elseif($this->data['p4']=='4')
+        {
+            $this->data['p4'] = 'Sedang – agitasi atau mudah terangsang yang jelas, ledakan-ledakan episodik';
+            $this->data['pe1'] = 4;
+        }
+        elseif($this->data['p4']=='5')
+        {
+            $this->data['p4'] = 'Agak berat – hiperaktivitas yang bermakna, sering terjadi ledakan-leadakan atau aktivitas mototrik, sulit untuk tetap duduk';
+            $this->data['pe1'] = 5;
+        }
+        elseif($this->data['p4']=='6')
+        {
+            $this->data['p4'] = 'Berat – gaduh gelisah yang mencolok mempengaruhi fungsi sehari-hari seperti makan  dan tidur';
+            $this->data['pe1'] = 6;
+        }
+        else {
+            $this->data['p4'] = 'Sangat berat – gaduh gelisah yang mencolok, mempengaruhi kegiatan makan dan tidur, serta jelas tidak memungkinkan interaksi interpersonal. Percepatan dan pembicaraan dan aktivitas motorik dapat menimbulkan inkoherensi dan kelelahan';
+            $this->data['pe1'] = 7;
+        }
+
+        if($this->data['g8']=='1')
+        {
+            $this->data['g8'] = 'Tidak ada - definisi tidak dipenuhi';
+            $this->data['pe2'] = 1;
+        }
+        elseif($this->data['g8']=='2')
+        {
+            $this->data['g8'] = 'Minimal – patologis diragukan';
+            $this->data['pe2'] = 2;
+        }
+        elseif($this->data['g8']=='3')
+        {
+            $this->data['g8'] = 'Ringan – patuh tapi disertai sikap marah tidak sabar atau sarkasme, mungkin ada penolakan yang tidak mengganggu terhadap penyelidikan yang sensitif selama wawancara';
+            $this->data['pe2'] = 3;
+        }
+        elseif($this->data['g8']=='4')
+        {
+            $this->data['g8'] = 'Sedang – kadang-kadang terdapat penolakan langsung untuk patuh, memproyeksikan hostilitas, defensif atau bersifat negatif tetapi biasanya masih dapat diatasi';
+            $this->data['pe2'] = 4;
+        }
+        elseif($this->data['g8']=='5')
+        {
+            $this->data['g8'] = 'Agak berat – seringkali tidak patuh, jelas defensif atau iritabilitas terhadap pewawancara dan mungkin tidak bersedia menghadapi banyak pertanyaan';
+            $this->data['pe2'] = 5;
+        }
+        elseif($this->data['g8']=='6')
+        {
+            $this->data['g8'] = 'Berat – sangat tidak kooperatif, negativistik dan suka membangkang. Menolak untuk patuh, tidak mau memulai atau mengikuti wawancara sepenuhnya';
+            $this->data['pe2'] = 6;
+        }
+        else {
+            $this->data['g8'] = 'Sangat berat – resistensi aktif, menolak untuk ikut dalam aktivitas sosial apapun, mengurus kebersihan diri, bercakap-cakap dengan keluarga atau staf dan bahkan untuk berpartisipasi dalam wawancara singkat';
+            $this->data['pe2'] = 7;
+        }
+
+        if($this->data['p7']=='1')
+        {
+            $this->data['p7'] = 'Tidak ada - definisi tidak dipenuhi';
+            $this->data['pe3'] = 1;
+        }
+        elseif($this->data['p7']=='2')
+        {
+            $this->data['p7'] = 'Minimal – patologis diragukan';
+            $this->data['pe3'] = 2;
+        }
+        elseif($this->data['p7']=='3')
+        {
+            $this->data['p7'] = 'Ringan – melampiaskan kemarahan secara tidak langsung atau ditahan';
+            $this->data['pe3'] = 3;
+        }
+        elseif($this->data['p7']=='4')
+        {
+            $this->data['p7'] = 'Sedang – sikap bermusuhan yang nyata';
+            $this->data['pe3'] = 4;
+        }
+        elseif($this->data['p7']=='5')
+        {
+            $this->data['p7'] = 'Agak berat – pasien sangat mudah marah dan kadang-kadang memaki dengan kata-kata kasar atau mengancam';
+            $this->data['pe3'] = 5;
+        }
+        elseif($this->data['p7']=='6')
+        {
+            $this->data['p7'] = 'Berat – tidak kooperatif dan mencaci maki dengan kasar atau mengancam, dapat beringas dan merusak tetapi tidak menyerang orang lain secara fisik';
+            $this->data['pe3'] = 6;
+        }
+        else {
+            $this->data['p7'] = 'Sangat berat – kemarahan yang hebat berakibat sangat tidak kooperatif, menghalangi interaksi, atau secara episodik melakukan penyerangan fisik terhadap orang lain';
+            $this->data['pe3'] = 7;
+        }
+
+        if($this->data['g14']=='1')
+        {
+            $this->data['g14'] = 'Tidak ada - definisi tidak dipenuhi';
+            $this->data['pe4'] = 1;
+        }
+        elseif($this->data['g14']=='2')
+        {
+            $this->data['g14'] = 'Minimal – patologis diragukan';
+            $this->data['pe4'] = 2;
+        }
+        elseif($this->data['g14']=='3')
+        {
+            $this->data['g14'] = 'Ringan – cenderung mudah marah dan frustasi bila menghadapi stres atau pemuasannya ditolak tetapi jarang bertindak impulsif';
+            $this->data['pe4'] = 3;
+        }
+        elseif($this->data['g14']=='4')
+        {
+            $this->data['g14'] = 'Sedang – dengan provokasi yang minimal, pasien menjadi marah dan mencaci maki. Mungkin sekali-kali mengancam, merusak atau terdapat satu atau dua episode yang melibatkan konfrontasi fisik atau perselisihan ringan';
+            $this->data['pe4'] = 4;
+        }
+        elseif($this->data['g14']=='5')
+        {
+            $this->data['g14'] = 'Agak berat – memperlihatkan episode impulsif yang berulang, termasuk mencaci maki, merusak harta benda atau ancaman fisik. Mungkin ada satu atau dua episode yang melibatkan serangn serius';
+            $this->data['pe4'] = 5;
+        }
+        elseif($this->data['g14']=='6')
+        {
+            $this->data['g14'] = 'Berat – agresif secara impulsif, mengancam, menuntut dan merusak, tanpa pertimbangan terhadap konsekuensinya. Menunjukkan perilaku menyerang';
+            $this->data['pe4'] = 6;
+        }
+        else {
+            $this->data['g14'] = 'Sangat berat – memperlihatkan serangan kebrutalan dan berbahaya';
+            $this->data['pe4'] = 7;
+        }
+
+        if($this->data['g4']=='1')
+        {
+            $this->data['g4'] = 'Tidak ada - definisi tidak dipenuhi';
+            $this->data['pe5'] = 1;
+        }
+        elseif($this->data['g4']=='2')
+        {
+            $this->data['g4'] = 'Minimal – patologis diragukan';
+            $this->data['pe5'] = 2;
+        }
+        elseif($this->data['g4']=='3')
+        {
+            $this->data['g4'] = 'Ringan – postur dan gerakan-gerakan menunjukkan kekhawatiran ringan, ketidaktenangan yang sekali-kali, perubahan posisi, atau tremor tangan yang halus dan cepat';
+            $this->data['pe5'] = 3;
+        }
+        elseif($this->data['g4']=='4')
+        {
+            $this->data['g4'] = 'Sedang – nyata-nyata gelisah seperti perilaku tidak tenang, tremor tangan yang nyata, keringat berlebihan, atau manerisme karena gugup';
+            $this->data['pe5'] = 4;
+        }
+        elseif($this->data['g4']=='5')
+        {
+            $this->data['g4'] = 'Agak berat – ketegangan yang berat, manifestasi seperti gemetar karena gugup, keringat sangat berlebihan dan ketidaktenangan, perilaku selama wawancara tidak terpengaruh secara bermakna';
+            $this->data['pe5'] = 5;
+        }
+        elseif($this->data['g4']=='6')
+        {
+            $this->data['g4'] = 'Berat – Ketegangan berat, taraf interaksi terganggu. Misalnya terus-menerus bergerak, tidak dapat tetap duduk, hiperventilasi';
+            $this->data['pe5'] = 6;
+        }
+        else {
+            $this->data['g4'] = 'Sangat berat – ketegangan sangat mencolok, tanda panik atau percepatan gerakan motorik kaar, ketidak mampuan tetap duduk > 1 menit yang menyebabkan percakapan tidak mungkin diteruskan';
+            $this->data['pe5'] = 7;
+        }
+    }
+
     public function igd_asesmen_pdf()
     {
         $this->get_igd_asesmen_awal_rawat_darurat_perawat_data();
         $this->get_igd_asesmen_awal_rawat_darurat_dokter_data();
+        
+        $this->convert()
         ob_clean();
 
         header('Content-type: application/pdf');

@@ -2555,7 +2555,10 @@ class RJAsesmenAwalController extends Controller
         }
 
         //panss ec
-        
+    
+        //$this->['totalp'] =  $this->data['pe1'] +  $this->data['pe5'] +  $this->data['pe5'] +  $this->data['pe5'] + $this->data['pe5'];
+        //other
+
         if($this->data['gaduh_gelisah']=='1')
         {
             $this->data['gaduh_gelisah'] = 'Tidak ada - definisi tidak dipenuhi';
@@ -2730,9 +2733,6 @@ class RJAsesmenAwalController extends Controller
             $this->data['ketegangan'] = 'Sangat berat – ketegangan sangat mencolok, tanda panik atau percepatan gerakan motorik kaar, ketidak mampuan tetap duduk > 1 menit yang menyebabkan percakapan tidak mungkin diteruskan';
             $this->data['pe5'] = 7;
         }
-
-        //$this->['totalp'] =  $this->data['pe1'] +  $this->data['pe5'] +  $this->data['pe5'] +  $this->data['pe5'] + $this->data['pe5'];
-        //other
 
         if($this->data['tingkat']=='1')
         {

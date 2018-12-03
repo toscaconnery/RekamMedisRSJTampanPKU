@@ -54,67 +54,67 @@ header('Content-Type: application/pdf');
         <td class="box-c">1</td>
         <td class="box">Diagnosis (WD/DD)</td>
         <td class="box">{{$jenis_informasi_1}}</td>
-        <td class="box-c">-</td>
+        <td class="box-c"><?php if($check_informasi_1) echo '<b>V</b>' ?></td>
       </tr>
       <tr>
         <td class="box-c">2</td>
         <td class="box">Dasar Diagnosis</td>
         <td class="box">{{$jenis_informasi_2}}</td>
-        <td class="box-c">-</td>
+        <td class="box-c"><?php if($check_informasi_2) echo '<b>V</b>' ?></td>
       </tr>
       <tr>
         <td class="box-c">3</td>
         <td class="box">Tindakan Kedokteran</td>
         <td class="box">{{$jenis_informasi_3}}</td>
-        <td class="box-c">-</td>
+        <td class="box-c"><?php if($check_informasi_3) echo '<b>V</b>' ?></td>
       </tr>
       <tr>
         <td class="box-c">4</td>
         <td class="box">Indikasi Tindakan</td>
         <td class="box">{{$jenis_informasi_4}}</td>
-        <td class="box-c">-</td>
+        <td class="box-c"><?php if($check_informasi_4) echo '<b>V</b>' ?></td>
       </tr>
       <tr>
         <td class="box-c">5</td>
         <td class="box">Tata Cara</td>
         <td class="box">{{$jenis_informasi_5}}</td>
-        <td class="box-c">-</td>
+        <td class="box-c"><?php if($check_informasi_5) echo '<b>V</b>' ?></td>
       </tr>
       <tr>
         <td class="box-c">6</td>
         <td class="box">Tujuan</td>
         <td class="box">{{$jenis_informasi_6}}</td>
-        <td class="box-c">-</td>
+        <td class="box-c"><?php if($check_informasi_6) echo '<b>V</b>' ?></td>
       </tr>
       <tr>
         <td class="box-c">7</td>
         <td class="box">Risiko</td>
         <td class="box">{{$jenis_informasi_7}}</td>
-        <td class="box-c">-</td>
+        <td class="box-c"><?php if($check_informasi_7) echo '<b>V</b>' ?></td>
       </tr>
       <tr>
         <td class="box-c">8</td>
         <td class="box">Komplikasi</td>
         <td class="box">{{$jenis_informasi_8}}</td>
-        <td class="box-c">-</td>
+        <td class="box-c"><?php if($check_informasi_8) echo '<b>V</b>' ?></td>
       </tr>
       <tr>
         <td class="box-c">9</td>
         <td class="box">Prognosis</td>
         <td class="box">{{$jenis_informasi_9}}</td>
-        <td class="box-c">-</td>
+        <td class="box-c"><?php if($check_informasi_9) echo '<b>V</b>' ?></td>
       </tr>
       <tr>
         <td class="box-c">10</td>
         <td class="box">Alternatif & Risiko</td>
         <td class="box">{{$jenis_informasi_10}}</td>
-        <td class="box-c">-</td>
+        <td class="box-c"><?php if($check_informasi_10) echo '<b>V</b>' ?></td>
       </tr>
       <tr>
         <td class="box"></td>
         <td class="box">Lain-lain</td>
         <td class="box">{{$jenis_informasi_11}}</td>
-        <td class="box-c">-</td>
+        <td class="box-c"><?php if($check_informasi_11) echo '<b>V</b>' ?></td>
       </tr>
        <tr>
         <td class="box-text" colspan="3">Dengan ini menyatakan bahwa saya telah menerangkan hal-hal di atas secara benar dan jelas dan memberikan kesempatan untuk bertanya dan/atau berdiskusi<br></td>

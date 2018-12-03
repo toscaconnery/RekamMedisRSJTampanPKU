@@ -293,7 +293,7 @@ header('Content-Type: application/pdf');
         </tbody>
       </table>';
     ?>
-  <p>Total Skor : [total skor]]</p>
+  <p>Total Skor : [total skor]</p>
 
   <?php if(1) echo '<p><b>Tidak Beresiko : Skor < 90</b></p>
     <ol>

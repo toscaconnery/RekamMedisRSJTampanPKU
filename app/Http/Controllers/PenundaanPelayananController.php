@@ -130,7 +130,7 @@ class PenundaanPelayananController extends Controller
 
     public function penundaan_pelayanan_pdf()
     {
-
+        $this->get_penundaan_pelayanan_data();
         $pasien = PenundaanPelayanan::where('id', 1)->first();
 
         $this->data['id_regis'] = 1;
