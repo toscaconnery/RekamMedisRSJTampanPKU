@@ -917,6 +917,13 @@ Route::get('/ri_asesmen_awal_dokter_read', 'RIAsesmenAwalController@get_ri_asesm
 Route::get('/ri_asesmen_awal_dokter_edit', 'RIAsesmenAwalController@get_ri_asesmen_awal_dokter_edit');
 Route::post('/ri_asesmen_awal_dokter_edit', 'RIAsesmenAwalController@post_ri_asesmen_awal_dokter_edit');
 
+//dokumen ri asesmen
+Route::get('/ri_asesmen_pdf', 'RIAsesmenAwalController@ri_asesmen_pdf');
+
+Route::get('/doc_ri_asesmen', function () {
+    return view('/doc_ri_asesmen');
+});
+
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
 //END  OF  DO  NOT  TOUCH!!!////
@@ -1217,11 +1224,6 @@ Route::get('/pdf_view', function () {
 
 
 
-
-
-
-
-
 //dokumen rencana tindak keperawatan
 Route::get('/pdf_ri_tindak', 'Pdf_ri_Controller@pdf_ri_tindak');
 
@@ -1237,12 +1239,7 @@ Route::get('/doc_ri_tindak', function () {
 
 
 
-//dokumen ri asesmen
-Route::get('/pdf_ri_asesmen', 'Pdf_ri_Controller@pdf_ri_asesmen');
 
-Route::get('/doc_ri_asesmen', function () {
-    return view('/doc_ri_asesmen');
-});
 
 
 

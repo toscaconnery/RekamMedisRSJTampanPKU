@@ -1160,6 +1160,11 @@ td.minimalist {
     border-bottom: 1px solid black;
 }
 
+th.minimalist {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
 td.box {
     padding-left: 5px;
     padding-right: 5px;

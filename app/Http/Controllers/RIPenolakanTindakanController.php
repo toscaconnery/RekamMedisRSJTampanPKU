@@ -291,6 +291,8 @@ class RIPenolakanTindakanController extends Controller
     public function ri_penolakan_tindakan_pdf()
     {
         $pasien = RIPenolakanTindakan::where('id', 1)->first();
+
+        $this->get_ri_penolakan_tindakan_data();
         
         $this->data['id_regis'] = $pasien->id_regis;
 
@@ -309,41 +311,6 @@ class RIPenolakanTindakanController extends Controller
         $this->data['jenis_informasi_9'] = $pasien->jenis_informasi_9;
         $this->data['jenis_informasi_10'] = $pasien->jenis_informasi_10;
         $this->data['jenis_informasi_11'] = $pasien->jenis_informasi_11;
-
-        if($pasien->check_informasi_1 == True){
-            $this->data['check_informasi_1'] = $pasien->check_informasi_1;
-        }
-        if($pasien->check_informasi_2 == True){
-            $this->data['check_informasi_2'] = $pasien->check_informasi_2;
-        }
-        if($pasien->check_informasi_3 == True){
-            $this->data['check_informasi_3'] = $pasien->check_informasi_3;
-        }
-        if($pasien->check_informasi_4 == True){
-            $this->data['check_informasi_4'] = $pasien->check_informasi_4;
-        }
-        if($pasien->check_informasi_5 == True){
-            $this->data['check_informasi_5'] = $pasien->check_informasi_5;
-        }
-        if($pasien->check_informasi_6 == True){
-            $this->data['check_informasi_6'] = $pasien->check_informasi_6;
-        }
-        if($pasien->check_informasi_7 == True){
-            $this->data['check_informasi_7'] = $pasien->check_informasi_7;
-        }
-        if($pasien->check_informasi_8 == True){
-            $this->data['check_informasi_8'] = $pasien->check_informasi_8;
-        }
-        if($pasien->check_informasi_9 == True){
-            $this->data['check_informasi_9'] = $pasien->check_informasi_9;
-        }
-        if($pasien->check_informasi_10 == True){
-            $this->data['check_informasi_10'] = $pasien->check_informasi_10;
-        }
-        if($pasien->check_informasi_11 == True){
-            $this->data['check_informasi_11'] = $pasien->check_informasi_11;
-        }
-
 
         $this->data['nama'] = $pasien->nama;
         $this->data['umur'] = $pasien->umur;

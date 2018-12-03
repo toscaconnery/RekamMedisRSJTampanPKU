@@ -104,7 +104,7 @@ header('Content-Type: application/pdf');
             Anak tinggal dengan
           </td>    
           <td class="konten_s_answer">  
-            : {{$tinggal_dengan}} <?php if($tinggal_dengan) echo ','.$tinggal_dengan_lainnya.'' ?>
+            : {{$tinggal_dengan}} <?php if($tinggal_dengan == 'Lainnya') echo ','.$tinggal_dengan_lainnya.'' ?>
           </td>                
         </tr>
       </tbody>
@@ -187,7 +187,7 @@ header('Content-Type: application/pdf');
             Status
           </td>    
           <td class="konten_s_answer">  
-            : {{$status_ayah}} <?php if($status_ayah) echo ','.$status_ayah_lainnya.'' ?>
+            : {{$status_ayah}} <?php if($status_ayah=='Lainnya') echo ','.$status_ayah_lainnya.'' ?>
           </td>                
         </tr>
       </tbody>
@@ -265,7 +265,7 @@ header('Content-Type: application/pdf');
             Status
           </td>    
           <td class="konten_s_answer">  
-            : $status_ibu <?php if($status_ayah) echo ','.$status_ibu_lainnya.'' ?>
+            : {{$status_ibu}} <?php if($status_ayah=='Lainnya') echo ','.$status_ibu_lainnya.'' ?>
           </td>                
         </tr>
       </tbody>
@@ -443,7 +443,7 @@ header('Content-Type: application/pdf');
 
     <p>4. Anak lahir : {{$kondisi_lahir}}</p>
 
-    <p>5. Anak lahir ditolong oleh : {{$dibantu_oleh}}<?php if() echo ','.$dibantu_oleh_lainnya.''?></p>
+    <p>5. Anak lahir ditolong oleh : {{$dibantu_oleh}}<?php if($dibantu_oleh=='Lainnya') echo ','.$dibantu_oleh_lainnya.''?></p>
 
     <p>6. Ukuran Bayi Saat Lahir</p>
     <p>Berat Bayi : {{$berat_bayi}}</p>
@@ -582,7 +582,7 @@ header('Content-Type: application/pdf');
     <p>{{$dibantu_belajar}}</p>
 
     <p>10. Siapa yang membantu anak dalam belajar ?</p>
-    <p>{{$dibantu_belajar_oleh}}, {{$dibantu_belajar_oleh_lainnya}}</p>
+    <p>{{$dibantu_belajar_oleh}}, <?php if($dibantu_belajar_oleh=='Lainnya') echo ','.$dibantu_belajar_oleh_lainnya.''?></p>
 
     <p>11. Keluhan anak dalam mata pelajaran yang dianggapnya sulit</p>
     <p>{{$keluhan_di_pelajaran_sulit}}</p>
@@ -1111,7 +1111,7 @@ header('Content-Type: application/pdf');
              &emsp;a. Diagnosis Medis
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f1}}
           </td>                
         </tr>
         <tr>
@@ -1119,7 +1119,7 @@ header('Content-Type: application/pdf');
              &emsp;b. Catatan Klinis
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f2}}
           </td>                
         </tr>
         <tr>
@@ -1127,7 +1127,7 @@ header('Content-Type: application/pdf');
              &emsp;c. Terapi Umum (General Treatment)
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f3}}
           </td>                
         </tr>
         <tr>
@@ -1135,7 +1135,7 @@ header('Content-Type: application/pdf');
              &emsp;d. Rujukan Fisioterapi dari dokter
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f4}}
           </td>                
         </tr>
         <tr>
@@ -1164,7 +1164,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;&emsp;a) Keluhan Utama
           </td>    
           <td class="konten_s_answer">  
-              :-
+              : {{$f5}}
           </td>                
         </tr>
         <tr>
@@ -1172,7 +1172,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;&emsp;b) Keluhan Penyerta
           </td>    
           <td class="konten_s_answer">  
-              :-
+              : {{$f6}}
           </td>                
         </tr>
         <tr>
@@ -1180,7 +1180,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;&emsp;c) Riwayat Penyakit Sekarang
           </td>    
           <td class="konten_s_answer">  
-              :-
+              : {{$f7}}
           </td>                
         </tr>
         <tr>
@@ -1188,7 +1188,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;&emsp;d) Riwayat Penyakit Dahulu
           </td>    
           <td class="konten_s_answer">  
-              :-
+              : {{$f8}}
           </td>                
         </tr>
         <tr>
@@ -1196,7 +1196,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;&emsp;e) Riwayat Pribadi
           </td>    
           <td class="konten_s_answer">  
-              :-
+              : {{$f9}}
           </td>                
         </tr>
         <tr>
@@ -1204,7 +1204,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;&emsp;f) Riwayat Keluarga
           </td>    
           <td class="konten_s_answer">  
-              :-
+              : {{$f10}}
           </td>                
         </tr>
         <tr>
@@ -1212,7 +1212,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;2. Pemeriksaan Umum
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f11}}
           </td>                
         </tr>
         <tr>
@@ -1220,7 +1220,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;&emsp;a). Kesadaran
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f12}}
           </td>                
         </tr>
         <tr>
@@ -1228,7 +1228,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;&emsp;b). Tekanan Darah
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f13}}
           </td>                
         </tr>
         <tr>
@@ -1236,7 +1236,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;&emsp;c). Denyut Nadi
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f14}}
           </td>                
         </tr>
         <tr>
@@ -1244,7 +1244,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;&emsp;d). Pernafasan
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f15}}
           </td>                
         </tr>
         <tr>
@@ -1252,7 +1252,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;&emsp;e). Temperatur
           </td>    
           <td class="konten_s_answer">  
-            : -
+            : {{$f16}}
           </td>                
         </tr>
         <tr>
@@ -1275,7 +1275,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;1. Inspeksi Umum
           </td>    
           <td class="konten_s_answer">  
-          : -
+          : {{$f17}}
           </td>                
         </tr>
         <tr>
@@ -1283,7 +1283,7 @@ header('Content-Type: application/pdf');
              &emsp;&emsp;2. Inspeksi Khusus
           </td>    
           <td class="konten_s_answer">  
-          : -
+          : {{$f18}}
           </td>                
         </tr>
       </tbody>
@@ -1293,55 +1293,55 @@ header('Content-Type: application/pdf');
   <h4>B. Pemeriksaan Fungsi Gerak Dasar</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>isian</p>
+    <p>{{$f20}}</p>
   </div>
 
   <h4>C. Tes Khusus</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>isian</p>
+    <p>{{$f21}}</p>
   </div>
 
   <h4>D. Informasi Lain</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>isian</p>
+    <p>{{$f22}}</p>
   </div>
 
   <h4>E. Pengukuran</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>isian</p>
+    <p>{{$f23}}</p>
   </div>
 
   <h4>F. Problem Fisioterapi</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>isian</p>
+    <p>{{$f24}}</p>
   </div>
 
   <h4>G. Diagnosis Fisioterapi</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>isian</p>
+    <p>{{$f25}}</p>
   </div>
 
   <h4>H. Perencanaan Program Fisioterapi</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>isian</p>
+    <p>{{$f26}}</p>
   </div>
 
   <h4>I. Intervensi</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>isian</p>
+    <p>{{$f27}}</p>
   </div>
 
   <h4>J. Evaluasi</h4>
   <hr class="limit">
   <div style="font-size: 85%;">  
-    <p>isian</p>
+    <p>{{$f28}}</p>
   </div>
 
   <div style="font-size: 85%;">  
@@ -1351,13 +1351,16 @@ header('Content-Type: application/pdf');
           <tbody>
             <tr>
               <td class="default3" style="text-align:center;vertical-align:top;height:70px">
-                Tgl, ...
+                [Tanggal]
               </td>
               <td class="default3" style="text-align:center;vertical-align:top;height:70px">
-                Nama Psikolog
+                Nama Fisioterafis <br> [nama]
               </td>
               <td class="default3" style="text-align:center;vertical-align:top;height:70px">
                 Tanda Tangan
+                <br>
+                <br>
+                <br>
               </td>  
             </tr>
           </tbody>

@@ -1206,7 +1206,7 @@
                     <div class="checkbox-inline" style="margin-right: 3mm;">
                       <label>
                         <input disabled type="checkbox" name="muskuloskeletal_4" {{isset($muskuloskeletal[4]) ? 'checked' : ''}}>
-                        Penurunana tingkat kesadaran
+                        Penurunan tingkat kesadaran
                       </label>
                     </div>
                     <div class="checkbox-inline" style="margin-right: 3mm;">

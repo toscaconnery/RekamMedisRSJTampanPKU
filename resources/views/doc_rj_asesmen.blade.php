@@ -730,7 +730,7 @@ header('Content-Type: application/pdf');
         </tbody>
       </table>';
     ?>
-  <p>Total Skor : [total skor]]</p>
+  <p>Total Skor : [total skor]</p>
 
   <?php if(1) echo '<p><b>Tidak Beresiko : Skor < 90</b></p>
     <ol>
@@ -1487,25 +1487,25 @@ header('Content-Type: application/pdf');
     <div class="row">
       <div class="column">
         <p><b>P4. GADUH GELISAH</b></p>
-        <p><b>Nilai : {{$pe1}}</b></p>
+        <p><b>Nilai : </b>{{$pe1}}</p>
         <p>{{$gaduh_gelisah}}</p>
 
         <p><b>P7. PERMUSUHAN</b></p>
-        <p><b>Nilai : {{$pe3}}</b></p>
+        <p><b>Nilai : </b>{{$pe3}}</p>
         <p>{{$permusuhan}}</p>
 
         <p><b>G4. KETEGANGAN</b></p>
-        <p><b>Nilai : {{$pe5}}</b></p>
+        <p><b>Nilai : </b>{{$pe5}}</p>
         <p>{{$ketegangan}}</p>
 
       </div>
       <div class="column">
         <p><b>G8. KETIDAKOPERATIFAN</b></p>
-        <p><b>Nilai : {{$pe2}}</b></p>
+        <p><b>Nilai : </b>{{$pe2}}</p>
         <p>{{$ketidakoperatifan}}</p>
 
         <p><b>G14. PENGENDALIAN IMPULS</b></p>
-        <p><b>Nilai : {{$pe4}}</b></p>
+        <p><b>Nilai : </b>{{$pe4}}</p>
         <p>{{$pengendalian_impuls}}</p>
       </div>
     </div> 

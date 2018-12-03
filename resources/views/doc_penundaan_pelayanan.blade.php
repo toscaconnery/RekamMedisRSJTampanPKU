@@ -70,8 +70,32 @@ header('Content-Type: application/pdf');
 
   <p style="font-size:85%;">Dengan ini menyatakan bahwa saya telah menerima informasi terhadap penundaan pelayanan dan pengobatan dikarenakan:</p>
   <ul style="font-size:85%;">
-    <li>Dokter berhalangan datang</li>
-    <li>Kerusakan Alat</li>
+    <?php 
+      if(isset($dokter_berhalangan)) echo 
+      '<li>
+        Dokter berhalangan datang
+      </li>';
+      if(isset($kerusakan_alat)) echo 
+      '<li>
+        Kerusakan alat
+      </li>';
+      if(isset($pemberian_obat_farmasi)) echo 
+      '<li>
+        Pemberian obat di farmasi
+      </li>';
+      if(isset($hasil_pemeriksaan_radiologi)) echo 
+      '<li>
+        Hasil pemeriksaan radiologi
+      </li>';
+      if(isset($hasil_pemeriksaan_laboratorium)) echo 
+      '<li>
+        Hasil pemeriksaan laboratorium
+      </li>';
+      if(isset($sebab_lainnya)) echo 
+      '<li>
+        Lain-lain, '.$sebab_lainnya.'
+      </li>';
+    ?>
   </ul> 
 
   <br>
