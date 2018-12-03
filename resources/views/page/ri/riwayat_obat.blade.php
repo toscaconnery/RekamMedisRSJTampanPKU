@@ -91,7 +91,197 @@
           </div>
         </div>
 
-        
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading">OBAT RESEP
+              </header>
+              <div class="panel-body">
+                <table class="table table-bordered">
+
+                  <thead>
+                    <tr>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Nama Generik</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Nama Dagang</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Regimen</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Sumber Obat</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Tgl Mulai</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Tgl Stop</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Obat Tersisa</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Status Obat<br>Saat Admisi</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Status Obat<br>Saat Pulang</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Catatan</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                      <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                      <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading">OBAT NON RESEP (contoh : produk OTC, herbal, dll)
+              </header>
+              <div class="panel-body">
+                <table class="table table-bordered">
+
+                  <thead>
+                    <tr>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Nama Generik</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Nama Dagang</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Regimen</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Sumber Obat</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Tgl Mulai</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Tgl Stop</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Obat Tersisa</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Status Obat<br>Saat Admisi</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Status Obat<br>Saat Pulang</th>
+                      <th style="width: 10%; text-align: center;vertical-align:middle;">Catatan</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                      <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                      <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                       <td style="text-align:center;vertival-align:middle;">
+                        <br>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </div>
 
         <div class="row">
           <div class="col-lg-12">
@@ -167,6 +357,8 @@
             </section>
           </div>
         </div>
+
+        
         <div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
