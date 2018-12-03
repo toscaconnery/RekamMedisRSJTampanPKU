@@ -356,7 +356,10 @@ Route::get('/doc_ri_napza', function () {
 
 Route::get('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson');
 Route::post('/ri_penilaian_edmunson', 'RIPenilaianEdmunsonController@post_ri_penilaian_edmunson');
-Route::get('/ri_penilaian_edmunson_read', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson_read'); // new add
+Route::get('/ri_penilaian_edmunson_read', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson_read');
+Route::get('/ri_penilaian_edmunson_edit', 'RIPenilaianEdmunsonController@get_ri_penilaian_edmunson_edit');
+Route::post('/ri_penilaian_edmunson_edit', 'RIPenilaianEdmunsonController@post_ri_penilaian_edmunson_edit');
+
 //dokumen penilaian edmunson
 Route::get('/ri_edmunson_pdf', 'RIPenilaianEdmunsonController@ri_edmunson_pdf');
 Route::get('/doc_ri_edmunson', function () {
@@ -376,7 +379,9 @@ Route::get('/doc_ri_nyeri', function () {
 
 Route::get('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan');
 Route::post('/ri_catatan_perkembangan', 'RIPerkembanganPasienController@post_ri_catatan_perkembangan');
-Route::get('/ri_catatan_perkembangan_read', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan_read'); // new add
+Route::get('/ri_catatan_perkembangan_read', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan_read');
+Route::get('/ri_catatan_perkembangan_edit', 'RIPerkembanganPasienController@get_ri_catatan_perkembangan_edit');
+Route::post('/ri_catatan_perkembangan_edit', 'RIPerkembanganPasienController@post_ri_catatan_perkembangan_edit');
 //dokumen catatan perkembangan
 Route::get('/ri_catatan_perkembangan_pdf', 'RIPerkembanganPasienController@ri_catatan_perkembangan_pdf');
 Route::get('/doc_ri_catatan_perkembangan', function () {
@@ -594,6 +599,8 @@ Route::get('/doc_ri_konsultasi', function () {
 Route::get('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan');
 Route::post('/ri_rencana_pemulangan', 'RIRencanaPemulanganController@post_ri_rencana_pemulangan');
 Route::get('/ri_rencana_pemulangan_read', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan_read');
+Route::get('/ri_rencana_pemulangan_edit', 'RIRencanaPemulanganController@get_ri_rencana_pemulangan_edit');
+Route::post('/ri_rencana_pemulangan_edit', 'RIRencanaPemulanganController@post_ri_rencana_pemulangan_edit');
 //dokumen rencana pemulangan
 Route::get('/ri_pemulangan_pdf', 'RIRencanaPemulanganController@ri_pemulangan_pdf');
 Route::get('/doc_ri_pemulangan', function () {
