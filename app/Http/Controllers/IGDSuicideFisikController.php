@@ -126,7 +126,110 @@ class IGDSuicideFisikController extends Controller
         $this->data['suicide_protective_factor'] = $pasien->suicide_protective_factor;
         $this->data['violence_protective_factor'] = $pasien->violence_protective_factor;
         $this->data['other_risk'] = $pasien->other_risk;
-        
+
+        $suicide_score = 0;
+        if($pasien->a1 == 1) {
+            $suicide_score += 1;
+        }
+        if($pasien->a2 == 1) {
+            $suicide_score += 1;
+        }
+        if($pasien->a3 == 1) {
+            $suicide_score += 1;
+        }
+        if($pasien->a4 == 1) {
+            $suicide_score += 1;
+        }
+        if($pasien->a5 == 1) {
+            $suicide_score += 1;
+        }
+        if($pasien->a6 == 1) {
+            $suicide_score += 1;
+        }
+        if($pasien->a7 == 1) {
+            $suicide_score += 1;
+        }
+
+        if($pasien->b1 == 1) {
+            $suicide_score += 1;
+        }
+        if($pasien->b2 == 1) {
+            $suicide_score += 1;
+        }
+        if($pasien->b3 == 1) {
+            $suicide_score += 1;
+        }
+        if($pasien->b4 == 1) {
+            $suicide_score += 1;
+        }
+        if($pasien->b5 == 1) {
+            $suicide_score += 1;
+        }
+        if($pasien->b6 == 1) {
+            $suicide_score += 1;
+        }
+        if($pasien->b7 == 1) {
+            $suicide_score += 1;
+        }
+        $this->data['suicide_score'] = $suicide_score;
+
+        $violence_score = 0;
+        if($pasien->c1 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->c2 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->c3 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->c4 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->c5 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->c6 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->c7 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->c8 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->c9 == 1) {
+            $violence_score += 1;
+        }
+
+        if($pasien->d1 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->d2 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->d3 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->d4 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->d5 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->d6 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->d7 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->d8 == 1) {
+            $violence_score += 1;
+        }
+        if($pasien->d9 == 1) {
+            $violence_score += 1;
+        }
+        $this->data['violence_score'] = $violence_score;
     }
 
     public function get_igd_suicide_fisik_read()
@@ -249,6 +352,7 @@ class IGDSuicideFisikController extends Controller
         $this->data['d7'] = $this->answer($pasien->d7);
         $this->data['d8'] = $this->answer($pasien->d8);
         $this->data['d9'] = $this->answer($pasien->d9);
+
 
         $this->data['suicide_protective_factor'] = $pasien->suicide_protective_factor;
         $this->data['violence_protective_factor'] = $pasien->violence_protective_factor;

@@ -427,19 +427,19 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label"> LEVEL OF SUICIDE RISK RISK <span style="font-style: italic;">(Total Score)</span></label>
                   <div class="col-sm-1">
-                    <input type="text" style="width: 3em;" class="form-control" readonly>
+                    <input type="text" style="width: 3em;" class="form-control" readonly value="{{$suicide_score}}">
                   </div>
                   <div class="checkbox-inline">
                     <label style="margin-right: 4em;">
-                      <input type="checkbox" name="suicide_level_1" disabled id="suicide_level" disabled>
+                      <input type="checkbox" name="suicide_level_1" disabled id="suicide_level" disabled {{$suicide_score < 7 ? 'checked' : ''}}>
                       LOW ( &#x3c;7 )
                     </label>
                     <label style="margin-right: 4em;">
-                      <input type="checkbox" name="suicide_level_2" disabled id="suicide_level" disabled>
+                      <input type="checkbox" name="suicide_level_2" disabled id="suicide_level" disabled {{$suicide_score >= 7 && $suicide_score <= 14 ? 'checked' : ''}}>
                       MODERATE ( 7-14 )
                     </label>
                     <label style="margin-right: 4em;">
-                      <input type="checkbox" name="suicide_level_3" disabled id="suicide_level" disabled>
+                      <input type="checkbox" name="suicide_level_3" disabled id="suicide_level" disabled {{$suicide_score > 14 ? 'checked' : ''}}>
                       HIGH ( &#x3e;14 )
                     </label>
                   </div>
@@ -947,19 +947,19 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label"> LEVEL OF VIOLENCE RISK <span style="font-style: italic;">(Total Score)</span></label>
                   <div class="col-sm-1">
-                    <input type="text" style="width: 3em;" class="form-control" readonly>
+                    <input type="text" style="width: 3em;" class="form-control" readonly value="{{$violence_score}}">
                   </div>
                   <div class="checkbox-inline">
                     <label style="margin-right: 4em;">
-                      <input type="checkbox" name="violence_level_1" id="violence_level" disabled>
+                      <input type="checkbox" name="violence_level_1" id="violence_level" disabled {{$violence_score < 7 ? 'checked' : ''}}>
                       LOW ( &#x3c;7 )
                     </label>
                     <label style="margin-right: 4em;">
-                      <input type="checkbox" name="violence_level_2" id="violence_level" disabled>
+                      <input type="checkbox" name="violence_level_2" id="violence_level" disabled {{$violence_score >= 7 && $violence_score <= 14 ? 'checked' : ''}}> 
                       MODERATE ( 7-14 )
                     </label>
                     <label style="margin-right: 4em;">
-                      <input type="checkbox" name="violence_level_3" id="violence_level" disabled>
+                      <input type="checkbox" name="violence_level_3" id="violence_level" disabled {{$violence_score > 14 ? 'checked' : ''}}>
                       HIGH ( &#x3e;14 )
                     </label>
                   </div>

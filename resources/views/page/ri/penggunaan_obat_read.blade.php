@@ -268,10 +268,6 @@
                             <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h5][4] == 1 ? 'checked' : ''}}>
                           </td>
 
-
-                          
-
-
                           <td style="text-align: center;vertical-align:middle;">
                             <input type="text" class="form-control" value="{{$pvalue['jumlah']}}" disabled>
                           </td>
@@ -279,7 +275,7 @@
                             <input type="text" class="form-control" value="{{$pvalue['keterangan']}}" disabled>
                           </td>
                           <td style="text-align: center;vertical-align:middle;">
-                            <a href=""><button type="button" class="btn btn-primary">Edit</button></a>
+                            <a href="{{url('ri_penggunaan_obat')}}"><button type="button" class="btn btn-primary">Edit</button></a>
                           </td>
                         </tr>
                       @endforeach
