@@ -40,7 +40,7 @@
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-primary" href="{{url('')}}/igd_suicide_pdf">PDF</a>
-                      <a class="btn btn-danger" href="#">EDIT</i></a>
+                      <a class="btn btn-danger" href="{{url('')}}/igd_suicide_fisik_edit">EDIT</i></a>
                     </div>
                   </td>
                 </tr>

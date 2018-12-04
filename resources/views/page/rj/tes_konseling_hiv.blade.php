@@ -55,7 +55,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal form-validate" method="post" id="rj_tes_konseling_hiv">
+          <form class="form-horizontal form-validate" {{-- id="register_form" --}} method="post" id="rj_tes_konseling_hiv">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">Data Klien
@@ -64,31 +64,31 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Nama</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" name="nama">
+                    <input type="text" class="form-control" name="nama" value="{{Session::get('nama')}}" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Alamat</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" name="alamat">
+                    <input type="text" class="form-control" name="alamat" value="{{Session::get('alamat')}}" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Propinsi</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" name="propinsi">
+                    <input type="text" class="form-control" name="propinsi" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Kota/Kabupaten</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" name="kota_kabupaten">
+                    <input type="text" class="form-control" name="kota_kabupaten" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Nama Ibu Kandung</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" name="nama_ibu_kandung">
+                    <input type="text" class="form-control" name="nama_ibu_kandung" required>
                   </div>
                 </div>
               </div>
@@ -111,7 +111,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="spk" value="0">
+                        <input type="radio" name="spk" value="0" required="">
                         Kawin
                       </label>
                     </div>
@@ -139,8 +139,8 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tgl. Lahir</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" readonly="" name="tgl_lahir" value="[otomatis]">
-                    <input type="hidden" name="tgl_lahir" value="[otomatis]" disabled="disabled" />
+                    <input type="text" class="form-control" readonly="" name="tgl_lahir" value="{{Session::get('tanggal_lahir')}}">
+                    <input type="hidden" name="tgl_lahir" value="{{Session::get('tanggal_lahir')}}">
                   </div>
                 </div>
 
@@ -149,7 +149,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="skh" value="0">
+                        <input type="radio" name="skh" value="0" required="">
                         Trisemester I
                       </label>
                     </div>
@@ -208,7 +208,7 @@
                   <div class="col-lg-3">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pen" value="0">
+                        <input type="radio" name="pen" value="0" required="">
                         Tidak pernah sekolah
                       </label>
                     </div>
@@ -244,7 +244,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pek" value="0">
+                        <input type="radio" name="pek" value="0" required="">
                         Tidak Bekerja
                       </label>
                     </div>
@@ -260,7 +260,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Jenis Pekerjaan</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" name="jenis_pekerjaan">
+                    <input type="text" class="form-control" name="jenis_pekerjaan" required="">
                   </div>
                 </div>
 
@@ -269,7 +269,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="kr" value="0">
+                        <input type="radio" name="kr" value="0" required="">
                         PS
                       </label>
                     </div>
@@ -317,7 +317,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="ktr" value="0">
+                        <input type="radio" name="ktr" value="0" required="">
                         Langsung
                       </label>
                     </div>
@@ -342,7 +342,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="sk" value="0">
+                        <input type="radio" name="sk" value="0" required="">
                         Datang Sendiri
                       </label>
                     </div>
@@ -360,7 +360,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="sr" value="0">
+                        <input type="radio" name="sr" value="0" required="">
                         Tempat Kerja
                       </label>
                     </div>
@@ -410,7 +410,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pt" value="1">
+                        <input type="radio" name="pt" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -428,7 +428,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="pp" value="1">
+                        <input type="radio" name="pp" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -446,7 +446,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="ha" value="0">
+                        <input type="radio" name="ha" value="0" required="">
                         Ya
                       </label>
                     </div>
@@ -477,7 +477,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="sp" value="0">
+                        <input type="radio" name="sp" value="0" required="">
                         HIV (+)
                       </label>
                     </div>
@@ -499,7 +499,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tanggal Tes Terakhir Pasangan</label>
                   <div class="col-lg-2">
-                    <input type="text" autocomplete="off" class="form-control sandbox-container" name="tgl_tes_terakhir_pasangan">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_tes_terakhir_pasangan">
                   </div>
                 </div>
 
@@ -515,7 +515,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="wbp" value="1">
+                        <input type="radio" name="wbp" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -546,7 +546,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="skl" value="0">
+                        <input type="radio" name="skl" value="0" required="">
                         Baru
                       </label>
                     </div>
@@ -624,7 +624,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="dmn" value="0">
+                        <input type="radio" name="dmn" value="0" required="">
                         Brosur
                       </label>
                     </div>
@@ -691,7 +691,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="kaj" value="1">
+                        <input type="radio" name="kaj" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -713,7 +713,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="an" value="1">
+                        <input type="radio" name="an" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -735,7 +735,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>         
-                        <input type="radio" name="per" value="1">         
+                        <input type="radio" name="per" value="1" required="">         
                         Ya
                       </label>
                     </div>
@@ -757,7 +757,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="trf" value="1">
+                        <input type="radio" name="trf" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -779,7 +779,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="trm" value="1">
+                        <input type="radio" name="trm" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -815,7 +815,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jd" value="1">
+                        <input type="radio" name="jd" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -837,7 +837,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="ksd" value="1">
+                        <input type="radio" name="ksd" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -855,7 +855,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="tes_hiv" value="1">
+                        <input type="radio" name="tes_hiv" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -880,7 +880,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="ht_hiv" value="0">
+                        <input type="radio" name="ht_hiv" value="0" required="">
                         Non Reaktif
                       </label>
                     </div>
@@ -909,7 +909,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tanggal Pemberian Informasi</label>
                   <div class="col-lg-8">
-                    <input type="text" autocomplete="off" class="form-control sandbox-container" name="tgl_pemberian_informasi">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_pemberian_informasi">
                   </div>
                 </div>
 
@@ -918,7 +918,7 @@
                   <div class="col-lg-1">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="tes_hiv2" value="1">
+                        <input type="radio" name="tes_hiv2" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -944,7 +944,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="ht_hiv2" value="0">
+                        <input type="radio" name="ht_hiv2" value="0" required="">
                         Non Reaktif
                       </label>
                     </div>
@@ -1060,7 +1060,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="kesediaan_tes_tipk" value="1">
+                        <input type="radio" name="kesediaan_tes_tipk" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -1090,7 +1090,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jt" value="0">
+                        <input type="radio" name="jt" value="0" required="">
                         Rapid Test
                       </label>
                     </div>
@@ -1107,7 +1107,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="r1" value="0">
+                        <input type="radio" name="r1" value="0" required="">
                         Non Reaktif
                       </label>
                     </div>
@@ -1130,7 +1130,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="r2" value="0">
+                        <input type="radio" name="r2" value="0" required="">
                         Non Reaktif
                       </label>
                     </div>
@@ -1153,7 +1153,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="r3" value="0">
+                        <input type="radio" name="r3" value="0" required="">
                         Non Reaktif
                       </label>
                     </div>
@@ -1176,7 +1176,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="kes" value="0">
+                        <input type="radio" name="kes" value="0" required="">
                         Non Reaktif
                       </label>
                     </div>
@@ -1203,7 +1203,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tanggal Masuk PDP</label>
                   <div class="col-lg-8">
-                    <input type="text" autocomplete="off" class="form-control sandbox-container" name="tgl_masuk_pdp">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_masuk_pdp">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1241,7 +1241,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="shp" value="0">
+                        <input type="radio" name="shp" value="0" required="">
                         HIV (-)
                       </label>
                     </div>
@@ -1277,7 +1277,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="tha" value="1">
+                        <input type="radio" name="tha" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -1295,7 +1295,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="ktb" value="1">
+                        <input type="radio" name="ktb" value="1" required="">
                         Ya
                       </label>
                     </div>
@@ -1427,7 +1427,7 @@
                       <div class="col-lg-10">
                         <div class="radio">
                           <label>
-                            <input type="radio" name="ksl" value="0">
+                            <input type="radio" name="ksl" value="0" required="">
                             1. Pasangan
                           </label>
                         </div>
@@ -1471,7 +1471,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Nama Konselor<br>/Petugas Kesehatan</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" name="nama_konselor">
+                    <input type="text" class="form-control" name="nama_konselor" required="">
                   </div>
                 </div>
                 <div class="form-group">
@@ -1479,7 +1479,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="sl" value="0">
+                        <input type="radio" name="sl" value="0" required="">
                         Rumah Sakit
                       </label>
                     </div>
@@ -1502,7 +1502,7 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jpe" value="0">
+                        <input type="radio" name="jpe" value="0" required="">
                         Layanan Menetap
                       </label>
                     </div>

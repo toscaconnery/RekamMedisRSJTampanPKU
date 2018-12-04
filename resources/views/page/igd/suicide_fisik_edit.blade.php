@@ -432,15 +432,15 @@
                   </div>
                   <div class="checkbox-inline">
                     <label style="margin-right: 4em;">
-                      <input type="checkbox" name="suicide_level_1" id="suicide_level">
+                      <input type="checkbox" name="suicide_level_1" id="suicide_level" disabled>
                       LOW ( &#x3c;7 )
                     </label>
                     <label style="margin-right: 4em;">
-                      <input type="checkbox" name="suicide_level_2" id="suicide_level">
+                      <input type="checkbox" name="suicide_level_2" id="suicide_level" disabled>
                       MODERATE ( 7-14 )
                     </label>
                     <label style="margin-right: 4em;">
-                      <input type="checkbox" name="suicide_level_3" id="suicide_level">
+                      <input type="checkbox" name="suicide_level_3" id="suicide_level" disabled>
                       HIGH ( &#x3e;14 )
                     </label>
                   </div>
@@ -952,15 +952,15 @@
                   </div>
                   <div class="checkbox-inline">
                     <label style="margin-right: 4em;">
-                      <input type="checkbox" name="violence_level_1" id="violence_level">
+                      <input type="checkbox" name="violence_level_1" id="violence_level" disabled>
                       LOW ( &#x3c;7 )
                     </label>
                     <label style="margin-right: 4em;">
-                      <input type="checkbox" name="violence_level_2" id="violence_level">
+                      <input type="checkbox" name="violence_level_2" id="violence_level" disabled>
                       MODERATE ( 7-14 )
                     </label>
                     <label style="margin-right: 4em;">
-                      <input type="checkbox" name="violence_level_3" id="violence_level">
+                      <input type="checkbox" name="violence_level_3" id="violence_level" disabled>
                       HIGH ( &#x3e;14 )
                     </label>
                   </div>
