@@ -553,6 +553,8 @@ Route::get('/doc_ri_instruksi_resucitate', function () {
 Route::get('/ri_penggunaan_obat', 'RIPenggunaanObatController@get_ri_penggunaan_obat');
 Route::post('/ri_penggunaan_obat', 'RIPenggunaanObatController@post_ri_penggunaan_obat');
 Route::get('/ri_penggunaan_obat_read', 'RIPenggunaanObatController@get_ri_penggunaan_obat_read');
+Route::get('/ri_penggunaan_obat_edit', 'RIPenggunaanObatController@get_ri_penggunaan_obat_edit');
+Route::post('/ri_penggunaan_obat_edit', 'RIPenggunaanObatController@post_ri_penggunaan_obat_edit');
 //dokumen catatan penggunaan obat
 Route::get('/ri_cpo_pdf', 'RIPenggunaanObatController@ri_cpo_pdf');
 Route::get('/doc_ri_cpo', function () {
@@ -609,6 +611,9 @@ Route::get('/doc_ri_pemulangan', function () {
 
 Route::get('/ri_efek_samping', 'RIEfekSampingController@get_ri_efek_samping');
 Route::post('/ri_efek_samping', 'RIEfekSampingController@post_ri_efek_samping');
+Route::get('/ri_efek_samping_read', 'RIEfekSampingController@get_ri_efek_samping_read');
+Route::get('/ri_efek_samping_edit', 'RIEfekSampingController@get_ri_efek_samping_edit');
+Route::post('/ri_efek_samping_edit', 'RIEfekSampingController@post_ri_efek_samping_edit');
 //dokumen pelaporan efek samping
 Route::get('/ri_efek_pdf', 'RIEfekSampingController@ri_efek_pdf');
 Route::get('/doc_ri_efek', function () {

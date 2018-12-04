@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_efek_samping">
+      <form class="form-horizontal form-validate" method="post" id="register_form" action="ri_efek_samping_edit">
         {{ csrf_field() }}
 
         <div class="row">
@@ -66,28 +66,28 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label"> Suku</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="field1">
+                    <input type="text" class="form-control" name="field1" value="{{$field1}}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-lg-2 control-label"> Berat Badan</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="field2">
+                    <input type="text" class="form-control" name="field2" value="{{$field2}}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-lg-2 control-label"> Pekerjaan</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="field3">
+                    <input type="text" class="form-control" name="field3" value="{{$field3}}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-lg-2 control-label"> Penyakit Utama</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="field4">
+                    <input type="text" class="form-control" name="field4" value="{{$field4}}">
                   </div>
                 </div>
 
@@ -96,31 +96,31 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field5" value="1">
+                        <input type="radio" name="field5" {{$field5 == 1 ? 'checked' : ''}} value="1">
                         Sembuh 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field5" value="2">
+                        <input type="radio" name="field5" {{$field5 == 2 ? 'checked' : ''}} value="2">
                         Meninggal 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field5" value="3">
+                        <input type="radio" name="field5" {{$field5 == 3 ? 'checked' : ''}} value="3">
                         Sembuh dengan gejala sisa
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field5" value="4">
+                        <input type="radio" name="field5" {{$field5 == 4 ? 'checked' : ''}} value="4">
                         Belum sembuh 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field5" value="5">
+                        <input type="radio" name="field5" {{$field5 == 5 ? 'checked' : ''}} value="5">
                         Tidak tahu 
                       </label>
                     </div>
@@ -132,32 +132,32 @@
                   <div class="col-lg-4">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="field6_1">
+                        <input type="checkbox" name="field6_1" {{isset($field6[1]) ? 'checked' : ''}}>
                         Gangguan Ginjal
                       </label>
                     </div>
 
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="field6_2">
+                        <input type="checkbox" name="field6_2" {{isset($field6[2]) ? 'checked' : ''}}>
                         Gangguan Hati
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="field6_3">
+                        <input type="checkbox" name="field6_3" {{isset($field6[3]) ? 'checked' : ''}}>
                         Alergi
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="field6_4">
+                        <input type="checkbox" name="field6_4" {{isset($field6[4]) ? 'checked' : ''}}>
                         Kondisi medis lainnya
                       </label>
                     </div>
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="field6_5">
+                        <input type="checkbox" name="field6_5" {{isset($field6[5]) ? 'checked' : ''}}>
                         Faktor industri, pertanian, kimia, dll
                       </label>
                     </div>
@@ -178,13 +178,13 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Saat/Tanggal mulai terjadi</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="field7">
+                    <input type="text" class="form-control" name="field7" value="{{$field7}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Bentuk/Manifestasi E.S.O yang terjadi</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="field8">
+                    <input type="text" class="form-control" name="field8" value="{{$field8}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -192,31 +192,31 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field9" value="1">
+                        <input type="radio" name="field9" {{$field9 == 1 ? 'checked' : ''}} value="1">
                         Sembuh 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field9" value="2">
+                        <input type="radio" name="field9" {{$field9 == 2 ? 'checked' : ''}} value="2">
                         Meninggal 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field9" value="3">
+                        <input type="radio" name="field9" {{$field9 == 3 ? 'checked' : ''}} value="3">
                         Sembuh dengan gejala sisa
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field9" value="4">
+                        <input type="radio" name="field9" {{$field9 == 4 ? 'checked' : ''}} value="4">
                         Belum sembuh 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field9" value="5">
+                        <input type="radio" name="field9" {{$field9 == 5 ? 'checked' : ''}} value="5">
                         Tidak tahu 
                       </label>
                     </div>
@@ -226,21 +226,21 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="field10">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="field10" value="{{$field10}}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Reaksi E.S.O yang pernah di alami</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="field11">
+                    <input type="text" class="form-control" name="field11" value="{{$field11}}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tindakan yang telah dilakukan untuk mengatasi reaksi E.S.O</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="field12">
+                    <input type="text" class="form-control" name="field12" value="{{$field12}}">
                   </div>
                 </div>
 
@@ -249,19 +249,19 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field13" value="1">
+                        <input type="radio" name="field13" {{$field13 == 1 ? 'checked' : ''}} value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field13" value="2">
+                        <input type="radio" name="field13" {{$field13 == 2 ? 'checked' : ''}} value="2">
                         Tidak 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field13" value="3">
+                        <input type="radio" name="field13" {{$field13 == 3 ? 'checked' : ''}} value="3">
                         Tidak Tahu
                       </label>
                     </div>
@@ -273,19 +273,19 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field14" value="1">
+                        <input type="radio" name="field14" {{$field14 == 1 ? 'checked' : ''}} value="1">
                         Ya
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field14" value="2">
+                        <input type="radio" name="field14" {{$field14 == 2 ? 'checked' : ''}} value="2">
                         Tidak 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field14" value="3">
+                        <input type="radio" name="field14" {{$field14 == 3 ? 'checked' : ''}} value="3">
                         Tidak Tahu
                       </label>
                     </div>
@@ -324,34 +324,41 @@
                   </thead>
 
                   <tbody>
-                    
+                    @php
+                      $idx = 0;
+                    @endphp
+                    @foreach($obat as $o)
+                    @php
+                      $idx += 1;
+                    @endphp
                     <tr id="form_1">
                       <td style="text-align:center;">
-                        <input type="text" class="form-control" name="obat1_1" required>
+                        <input type="text" class="form-control" name="obat1_1" value="{{$o[0]}}" required>
                       </td>
                        <td style="text-align:center;">
-                        <input type="text" class="form-control" name="obat2_1" required>
+                        <input type="text" class="form-control" name="obat2_1" value="{{$o[1]}}" required>
                       </td>
                       <td style="text-align:center;">
-                        <input type="checkbox" class="form-control" name="obat3_1">
+                        <input type="checkbox" class="form-control" name="obat3_1" {{$o[2] == 1 ? 'checked' : ''}}>
                       </td>
                        <td style="text-align:center;">
-                        <input type="text" class="form-control" name="obat4_1" required>
+                        <input type="text" class="form-control" name="obat4_1" value="{{$o[3]}}" required>
                       </td>
                       <td style="text-align:center;">
-                        <input type="text" class="form-control" name="obat5_1" required>
+                        <input type="text" class="form-control" name="obat5_1" value="{{$o[4]}}" required>
                       </td>
                       <td style="text-align:center;">
-                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="obat6_1">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="obat6_1" value="{{$o[5]}}">
                       </td>
                       <td style="text-align:center;">
-                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="obat7_1">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="obat7_1" value="{{$o[6]}}">
                       </td>
                       <td style="text-align:center;">
-                        <input type="text" class="form-control" name="obat8_1" required>
+                        <input type="text" class="form-control" name="obat8_1" value="{{$o[7]}}" required>
                       </td>
                       <td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_1"><i class="icon_close_alt2"></i></button></div></td>
                     </tr>
+                    @endforeach
                     <tr id="last_row">
                       <input type="hidden" name="jumlah_form" id="jumlah_form" value="1">
                       <td colspan="8">
@@ -379,7 +386,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Nama</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="field15">
+                    <input type="text" class="form-control" name="field15" value="{{$field15}}">
                   </div>
                 </div>
 
@@ -388,19 +395,19 @@
                   <div class="col-lg-2">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field16" value="1">
+                        <input type="radio" name="field16" {{$field16 == 1 ? 'checked' : ''}} value="1">
                         Dokter
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field16" value="2">
+                        <input type="radio" name="field16" {{$field16 == 2 ? 'checked' : ''}} value="2">
                         Perawat 
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="field16" value="3">
+                        <input type="radio" name="field16" {{$field16 == 3 ? 'checked' : ''}} value="3">
                         Farmasis
                       </label>
                     </div>
@@ -410,14 +417,14 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Asal ruangan/poliklinik</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="field17">
+                    <input type="text" class="form-control" name="field17" value="{{$field17}}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="field18">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="field18" value="{{$field18}}">
                   </div>
                 </div>
               </div>
