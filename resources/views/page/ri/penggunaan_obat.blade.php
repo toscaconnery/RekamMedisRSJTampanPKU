@@ -64,25 +64,25 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> Ruang Bangsal</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="ruang_bangsal">
+                      <input type="text" class="form-control" name="ruang_bangsal" value="{{$ruang_bangsal}}">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> No. Reg.</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="no_reg">
+                      <input type="text" class="form-control" name="no_reg" value="{{$no_reg}}">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> Masuk Tanggal</label>
                     <div class="col-sm-6">
-                      <input type="date" class="form-control" name="tanggal_masuk">
+                      <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_masuk" value="{{$tanggal_masuk}}">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Keluar Tanggal</label>
                     <div class="col-sm-6">
-                      <input type="date" class="form-control" name="tanggal_keluar">
+                      <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_keluar" value="{{$tanggal_keluar}}">
                     </div>
                   </div>
                 </div>
@@ -96,28 +96,28 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> Diagnosis</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="diagnosis">
+                      <input type="text" class="form-control" name="diagnosis" value="{{$diagnosis}}">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> Dokter</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="dokter">
+                      <input type="text" class="form-control" name="dokter" value="{{$dokter}}">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> Riwayat Alergi</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="riwayat_alergi">
+                      <input type="text" class="form-control" name="riwayat_alergi" value="{{$riwayat_alergi}}">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> Konsumen</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="konsumen">
+                      <input type="text" class="form-control" name="konsumen" value="{{$konsumen}}">
                     </div>
                   </div>
                 </div>
@@ -142,13 +142,13 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label"> Jumlah obat</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="jumlah">
+                    <input type="text" class="form-control" name="jumlah" value="{{$jumlah}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-3 control-label"> Tanggal</label>
                   <div class="col-sm-2">
-                    <input type="date" class="form-control" name="tanggal_penggunaan">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_penggunaan">
                   </div>
                 </div>
                 <div class="form-group">
@@ -171,7 +171,13 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label"> Keterangan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan">
+                    <input type="text" class="form-control" name="keterangan" value="{{$keterangan}}">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label"> Perawat</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="perawat">
                   </div>
                 </div>
               </div>

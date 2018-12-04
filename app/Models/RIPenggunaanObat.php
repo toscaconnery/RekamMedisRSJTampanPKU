@@ -14,21 +14,13 @@ class RIPenggunaanObat extends Model
 
     protected $fillable = [
         'id_regis',
-        'ruang_bangsal',
-        'no_reg',
-        'tanggal_masuk',
-        'tanggal_keluar',
-        'diagnosis',
-        'dokter',
-        'riwayat_alergi',
-        'konsumen',
         'obat',
-        'jumlah',
         'tanggal_penggunaan',
+        'tanggal_query',
         'waktu_penggunaan_1',
         'waktu_penggunaan_2',
         'waktu_penggunaan_3',
         'waktu_penggunaan_4',
-        'keterangan',
+        'perawat',
     ];
 }

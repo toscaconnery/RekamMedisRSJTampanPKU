@@ -64,25 +64,25 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> Ruang Bangsal</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="ruang_bangsal" disabled="">
+                      <input type="text" class="form-control" name="ruang_bangsal" value="{{$ruang_bangsal}}" disabled="">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> No. Reg.</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="no_reg" disabled="">
+                      <input type="text" class="form-control" name="no_reg" value="{{$no_reg}}" disabled="">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> Masuk Tanggal</label>
                     <div class="col-sm-6">
-                      <input type="date" class="form-control" name="tanggal_masuk" disabled="">
+                      <input type="text" autocomplete="off" onkeydown="return false" class="form-control" name="tanggal_masuk" value="{{$tanggal_masuk}}" disabled="">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-4 control-label">Keluar Tanggal</label>
                     <div class="col-sm-6">
-                      <input type="date" class="form-control" name="tanggal_keluar" disabled="">
+                      <input type="text" autocomplete="off" onkeydown="return false" class="form-control" name="tanggal_keluar" value="{{$tanggal_keluar}}" disabled="">
                     </div>
                   </div>
                 </div>
@@ -96,28 +96,28 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> Diagnosis</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="diagnosis" disabled="">
+                      <input type="text" class="form-control" name="diagnosis" disabled="" value="{{$diagnosis}}">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> Dokter</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="dokter" disabled="">
+                      <input type="text" class="form-control" name="dokter" disabled="" value="{{$dokter}}">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> Riwayat Alergi</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="riwayat_alergi" disabled="">
+                      <input type="text" class="form-control" name="riwayat_alergi" disabled="" value="{{$riwayat_alergi}}">
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label class="col-sm-4 control-label"> Konsumen</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="konsumen" disabled="">
+                      <input type="text" class="form-control" name="konsumen" disabled="" value="{{$konsumen}}">
                     </div>
                   </div>
                 </div>
@@ -132,112 +132,172 @@
               <header class="panel-heading">
                 Catatan Penggunaan Obat
               </header>
-              <div class="panel-body">
-                <section class="panel">
-                  <header class="panel-heading">Penilaian PANSS EC
-                  </header>
-                  <div class="panel-body">
-                    <table class="table table-bordered">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th style="width: 10%; text-align: center;vertical-align:middle;" rowspan="2">Nama Obat,Dosis dan Kekuatan</th>
+                        <th style="width: 12%; text-align: center;vertical-align:middle;" colspan="4">{{$h0}}</th>
+                        <th style="width: 12%; text-align: center;vertical-align:middle;" colspan="4">{{$h1}}</th>
+                        <th style="width: 12%; text-align: center;vertical-align:middle;" colspan="4">{{$h2}}</th>
+                        <th style="width: 12%; text-align: center;vertical-align:middle;" colspan="4">{{$h3}}</th>
+                        <th style="width: 12%; text-align: center;vertical-align:middle;" colspan="4">{{$h4}}</th>
+                        <th style="width: 12%; text-align: center;vertical-align:middle;" colspan="4">{{$h5}}</th>
+                        <th style="width: 5%; text-align: center;vertical-align:middle;" rowspan="2">Jml Obat</th>
+                        <th style="width: 5%; text-align: center;vertical-align:middle;" rowspan="2">Ket</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;" rowspan="2">Act</a></th>
+                      </tr>
+                      <tr>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">P</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">Si</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">Sr</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">M</th>
+                        
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">P</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">Si</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">Sr</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">M</th>
+                        
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">P</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">Si</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">Sr</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">M</th>
+                        
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">P</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">Si</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">Sr</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">M</th>
 
-                      <thead>
-                        <tr>
-                          <th style="width: 35%; text-align: center;vertical-align:middle;" rowspan="2">Nama Obat,Dosis dan Kekuatan</th>
-                          <th style="width: 10%; text-align: center;vertical-align:middle;" rowspan="2">Tanggal</th>
-                          <th style="width: 40%; text-align: center;vertical-align:middle;" colspan="4">Waktu</th>
-                          <th style="width: 10%; text-align: center;vertical-align:middle;" rowspan="2">Mengetahui Perawat</th>
-                          <th style="width: 5%; text-align: center;vertical-align:middle;" rowspan="2">Action</a></th>
-                        </tr>
-                        <tr>
-                          <th style="width: 10%; text-align: center;vertical-align:middle;">Pagi</th>
-                          <th style="width: 10%; text-align: center;vertical-align:middle;">Siang</th>
-                          <th style="width: 10%; text-align: center;vertical-align:middle;">Sore</th>
-                          <th style="width: 10%; text-align: center;vertical-align:middle;">Malam</th>
-                        </tr>
-                      </thead>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">P</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">Si</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">Sr</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">M</th>
 
-                      <tbody>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">P</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">Si</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">Sr</th>
+                        <th style="width: 3%; text-align: center;vertical-align:middle;">M</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      @foreach($pasien as $pkey => $pvalue)
+                        {{-- {{dd($pvalue, $pkey)}} --}}
                         <tr>
                           <td style="text-align: center;vertical-align:middle;">
-                            <input type="text" class="form-control" value="Obat" disabled>
+                            <input type="text" class="form-control" value="{{$pkey}}" disabled>
+                          </td>
+
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h0][1] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h0][2] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h0][3] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h0][4] == 1 ? 'checked' : ''}}>
+                          </td>
+
+                          
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h1][1] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h1][2] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h1][3] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h1][4] == 1 ? 'checked' : ''}}>
+                          </td>
+                          
+
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h2][1] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h2][2] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h2][3] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h2][4] == 1 ? 'checked' : ''}}>
+                          </td>
+
+                          
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h3][1] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h3][2] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h3][3] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h3][4] == 1 ? 'checked' : ''}}>
+                          </td>
+
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h4][1] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h4][2] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h4][3] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h4][4] == 1 ? 'checked' : ''}}>
+                          </td>
+
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h5][1] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h5][2] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h5][3] == 1 ? 'checked' : ''}}>
+                          </td>
+                          <td style="text-align: center;vertical-align:middle; padding: 0px;">
+                            <input type="checkbox" style="height: 25px" disabled class="form-control" {{$pvalue[$h5][4] == 1 ? 'checked' : ''}}>
+                          </td>
+
+
+                          
+
+
+                          <td style="text-align: center;vertical-align:middle;">
+                            <input type="text" class="form-control" value="{{$pvalue['jumlah']}}" disabled>
                           </td>
                           <td style="text-align: center;vertical-align:middle;">
-                            <input type="Date" class="form-control" value="" disabled>
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="checkbox" disabled class="form-control">
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="checkbox" disabled class="form-control">
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="checkbox" disabled class="form-control">
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="checkbox" disabled class="form-control">
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="text" class="form-control" value="Nama Perawat" disabled>
+                            <input type="text" class="form-control" value="{{$pvalue['keterangan']}}" disabled>
                           </td>
                           <td style="text-align: center;vertical-align:middle;">
                             <a href=""><button type="button" class="btn btn-primary">Edit</button></a>
                           </td>
                         </tr>
-                        <tr>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="text" class="form-control" value="Obat" disabled>
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="Date" class="form-control" value="" disabled>
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="checkbox" disabled class="form-control">
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="checkbox" disabled class="form-control">
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="checkbox" disabled class="form-control">
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="checkbox" disabled class="form-control">
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="text" class="form-control" value="Nama Perawat" disabled>
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <a href=""><button type="button" class="btn btn-primary">Edit</button></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="text" class="form-control" value="Obat" disabled>
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="Date" class="form-control" value="" disabled>
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="checkbox" disabled class="form-control">
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="checkbox" disabled class="form-control">
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="checkbox" disabled class="form-control">
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="checkbox" disabled class="form-control">
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <input type="text" class="form-control" value="Nama Perawat" disabled>
-                          </td>
-                          <td style="text-align: center;vertical-align:middle;">
-                            <a href=""><button type="button" class="btn btn-primary">Edit</button></a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </section>
+                      @endforeach
+                      <tr>
+                        <td>Mengetahui Perawat</td>
+                        <td colspan="4">{{$perawat[$h0]}}</td>
+                        <td colspan="4">{{$perawat[$h1]}}</td>
+                        <td colspan="4">{{$perawat[$h2]}}</td>
+                        <td colspan="4">{{$perawat[$h3]}}</td>
+                        <td colspan="4">{{$perawat[$h4]}}</td>
+                        <td colspan="4">{{$perawat[$h5]}}</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
               </section>
             </div>
           </section>
