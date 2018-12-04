@@ -63,13 +63,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pendidikan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="pendidikan">
+                    <input type="text" class="form-control" name="pendidikan" value="{{Session::get('pendidikan')}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pekerjaan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="pekerjaan">
+                    <input type="text" class="form-control" name="pekerjaan" value="{{Session::get('pekerjaan')}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -98,7 +98,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="alamat">
+                    <input type="text" class="form-control" name="alamat" value="{{Session::get('alamat')}}">
                   </div>
                 </div>
               </div>

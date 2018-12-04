@@ -254,7 +254,7 @@ class RJTesKonselingHIVController extends Controller
         $daftar_dokumen->rj_tes_konseling_hiv = True;
         $daftar_dokumen->save();
 
-    	return back();
+    	return redirect('rj_tes_konseling_hiv_read');
     }
 
     public function get_tes_konseling_hiv_data()
@@ -617,7 +617,7 @@ class RJTesKonselingHIVController extends Controller
         $data->jpe = $request->jpe;
         $data->save();
         
-        return redirect('daftar_dokumen');
+        return redirect('rj_tes_konseling_hiv_read');
     }
 
     function yatidak($stats)

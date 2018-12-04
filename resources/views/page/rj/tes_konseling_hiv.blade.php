@@ -1427,7 +1427,7 @@
                       <div class="col-lg-10">
                         <div class="radio">
                           <label>
-                            <input type="radio" name="ksl" value="0" required="">
+                            <input type="radio" name="ksl" value="0">
                             1. Pasangan
                           </label>
                         </div>

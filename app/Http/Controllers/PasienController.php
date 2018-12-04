@@ -45,6 +45,8 @@ class PasienController extends Controller
         $request->session()->put('jenis_kelamin', $pasien->jenis_kelamin);
         $request->session()->put('tanggal_lahir', $pasien->tanggal_lahir);
         $request->session()->put('alamat', $rincian_pasien->alamat);
+        $request->session()->put('pekerjaan', $rincian_pasien->pekerjaan);
+        $request->session()->put('pendidikan', $rincian_pasien->pendidikan);
 
         //sweet alert
         $request->session()->put('pasien_terpilih', 'Pasien berhasil terpilih.');

@@ -95,7 +95,7 @@ class CreateRjTesKonselingHivTable extends Migration
             $table->string('tl_kts',23)->nullable();
             $table->string('rpp',5)->nullable();
             $table->string('rpp_lsm')->nullable();
-            $table->string('ksl',1);
+            $table->string('ksl',1)->nullable();
             $table->string('ksl_lainnya')->nullable();
             $table->string('nama_konselor');
             $table->string('sl',1);

@@ -717,7 +717,7 @@ class RJHIVAntiRetrovalController extends Controller
         return redirect('daftar_dokumen');
     }
 
-    funtion convert()
+    function convert()
     {
         if( $this->data['entry_point'] == '1')
         {

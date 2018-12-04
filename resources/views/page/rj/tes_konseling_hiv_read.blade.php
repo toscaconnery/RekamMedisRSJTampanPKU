@@ -42,7 +42,7 @@
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-primary" href="{{url('')}}/rj_konselinghiv_pdf">PDF</a>
-                      <a class="btn btn-success" href="#">EDIT</a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_tes_konseling_hiv_edit">EDIT</a>
                     </div>
                   </td>
                 </tr>
