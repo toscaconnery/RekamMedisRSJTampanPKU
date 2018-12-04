@@ -413,7 +413,7 @@
                 <div class="form-group">
                   <label class="col-sm-1 control-label"> Deskripsikan: </label>
                   <div class="col-sm-11">
-                    <textarea class="form-control" rows="6" style="resize: none;" name="suicide_protective_factor">{{$suicide_protective_factor}}></textarea>
+                    <textarea class="form-control" rows="6" style="resize: none;" name="suicide_protective_factor">{{$suicide_protective_factor}}</textarea>
                   </div>
                 </div>
               </div>
@@ -915,7 +915,7 @@
                 <div class="form-group">
                   <label class="col-sm-1 control-label"> Deskripsikan: </label>
                   <div class="col-sm-11">
-                    <textarea class="form-control" rows="6" style="resize: none;" name="violence_protective_factor">{{$violence_protective_factor}}></textarea>
+                    <textarea class="form-control" rows="6" style="resize: none;" name="violence_protective_factor">{{$violence_protective_factor}}</textarea>
                   </div>
                 </div>
               </div>
@@ -933,7 +933,7 @@
                 <div class="form-group">
                   <label class="col-sm-1 control-label"> Deskripsikan: </label>
                   <div class="col-sm-11">
-                    <textarea class="form-control" rows="6" style="resize: none;" name="other_risk">{{$other_risk}}></textarea>
+                    <textarea class="form-control" rows="6" style="resize: none;" name="other_risk">{{$other_risk}}</textarea>
                   </div>
                 </div>
               </div>

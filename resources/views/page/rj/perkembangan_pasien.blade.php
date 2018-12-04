@@ -57,7 +57,7 @@
         <div class="col-lg-12">
           <form class="form-horizontal" method="post" action="rj_perkembangan_pasien">
             {{ csrf_field() }}
-            <input type="hidden" name="jumlah_form" id="jumlah_form" value="4">
+            <input type="hidden" name="jumlah_form" id="jumlah_form" value="5">
             <section class="panel">
               <header class="panel-heading">
                 Hasil Pemeriksaan, Analisis, Rencana Penatalaksanaan Pasien 
@@ -80,11 +80,11 @@
                 <tbody>
                   <tr>
                     <td>
-                      <input type="text" class="form-control sandbox-container" name="tanggal_1" required>
+                      <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_1" required>
                       <input type="time" class="form-control" name="jam_1" required>
                     </td>
                     <td>
-                      <input type="text" class="form-control" name="profesi_1" readonly value="Profesi A">
+                      <input type="text" class="form-control" name="profesi_1" value="">
                     </td>
                     <td>
                       <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_1">S : </textarea>
@@ -94,11 +94,11 @@
                   </tr>
                   <tr>
                     <td>
-                      <input type="text" class="form-control sandbox-container" name="tanggal_2" required>
+                      <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_2" required>
                       <input type="time" class="form-control" name="jam_2" required>
                     </td>
                     <td>
-                      <input type="text" class="form-control" name="profesi_2" readonly value="Profesi A">
+                      <input type="text" class="form-control" name="profesi_2" value="">
                     </td>
                     <td>
                       <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_2">O : </textarea>
@@ -108,11 +108,11 @@
                   </tr>
                   <tr>
                     <td>
-                      <input type="text" class="form-control sandbox-container" name="tanggal_3" required>
+                      <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_3" required>
                       <input type="time" class="form-control" name="jam_3" required>
                     </td>
                     <td>
-                      <input type="text" class="form-control" name="profesi_3" readonly value="Profesi A">
+                      <input type="text" class="form-control" name="profesi_3" value="">
                     </td>
                     <td>
                       <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_3">A : </textarea>
@@ -122,16 +122,30 @@
                   </tr>
                   <tr>
                     <td>
-                      <input type="text" class="form-control sandbox-container" name="tanggal_4" required>
+                      <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_4" required>
                       <input type="time" class="form-control" name="jam_4" required>
                     </td>
                     <td>
-                      <input type="text" class="form-control" name="profesi_4" readonly value="Profesi A">
+                      <input type="text" class="form-control" name="profesi_4" value="">
                     </td>
                     <td>
                       <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_4">P : </textarea>
                     </td>
                     <td><input type="checkbox" class="form-control" name="ttd_4"></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_5" required>
+                      <input type="time" class="form-control" name="jam_5" required>
+                    </td>
+                    <td>
+                      <input type="text" class="form-control" name="profesi_5" value="">
+                    </td>
+                    <td>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_5">L : </textarea>
+                    </td>
+                    <td><input type="checkbox" class="form-control" name="ttd_5"></td>
                     <td></td>
                   </tr>
                   <tr id="last_row">
@@ -159,7 +173,7 @@
           var a = document.getElementById('jumlah_form').value;
           // alert('a');
           a = parseInt(a) + 1;
-          $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" class="form-control sandbox-container" name="tanggal_'+a+'" required><input type="time" class="form-control" name="jam_'+a+'" required></td><td><input type="text" class="form-control" name="profesi_'+a+'" readonly value="Profesi A"></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="ttd_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+          $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_'+a+'" required><input type="time" class="form-control" name="jam_'+a+'" required></td><td><input type="text" class="form-control" name="profesi_'+a+'" value=""></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="ttd_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
           document.getElementById('jumlah_form').value = a;
         });
       });

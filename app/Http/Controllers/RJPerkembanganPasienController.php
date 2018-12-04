@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RJPerkembanganPasien;
+use App\Models\ListDocument;
 use Session;
 use View;
 
@@ -45,7 +46,11 @@ class RJPerkembanganPasienController extends Controller
     			$data->save();
     		}
     	}
-    	return redirect('index');
+
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        $daftar_dokumen->rj_perkembangan_pasien = True;
+        $daftar_dokumen->save();
+    	return redirect('rj_perkembangan_pasien_read');
     }
 
     public function get_rj_perkembangan_pasien_data()
@@ -137,6 +142,7 @@ class RJPerkembanganPasienController extends Controller
                 $data->save();
             }
         }
+        return redirect('rj_perkembangan_pasien_read');
     }
 
     public function rj_catatan_perkembangan_pdf()

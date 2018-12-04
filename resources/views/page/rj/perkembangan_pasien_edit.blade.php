@@ -86,7 +86,7 @@
                       <input type="time" class="form-control" name="jam_{{$p['id_data']}}" required value="{{$p['jam']}}">
                     </td>
                     <td>
-                      <input type="text" class="form-control" name="profesi_{{$p['id_data']}}" readonly value="{{$p['profesi']}}">
+                      <input type="text" class="form-control" name="profesi_{{$p['id_data']}}" value="{{$p['profesi']}}">
                     </td>
                     <td>
                       <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_{{$p['id_data']}}">{{$p['keterangan']}}</textarea>
@@ -121,7 +121,7 @@
           var a = document.getElementById('jumlah_form_new').value;
           // alert('a');
           a = parseInt(a) + 1;
-          $('#last_row').before('<tr id="form_new_'+a+'"><td><input type="text" autocomplete="off" class="form-control sandbox-container" name="tanggal_new_'+a+'" required><input type="time" class="form-control" name="jam_new_'+a+'" required></td><td><input type="text" class="form-control" name="profesi_new_'+a+'" readonly value="Profesi A"></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_new_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="ttd_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+          $('#last_row').before('<tr id="form_new_'+a+'"><td><input type="text" autocomplete="off" class="form-control sandbox-container" name="tanggal_new_'+a+'" required><input type="time" class="form-control" name="jam_new_'+a+'" required></td><td><input type="text" class="form-control" name="profesi_new_'+a+'" value=""></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_new_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="ttd_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
           document.getElementById('jumlah_form_new').value = a;
         });
       });
