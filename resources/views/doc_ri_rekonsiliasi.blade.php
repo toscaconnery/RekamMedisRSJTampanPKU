@@ -15,15 +15,18 @@ header('Content-Type: application/pdf');
   <table>
     <tr>
       <td class="konten_question">Tanggal Masuk</td>
-      <td class="konten_answer">: -</td>
+      <td class="konten_answer">: {{$field1}}</td>
     </tr>
     <tr>
       <td class="konten_question">Nomor Farmasi</td>
-      <td class="konten_answer">: -</td>
+      <td class="konten_answer">: {{$field2}}</td>
     </tr>
     <tr>
       <td class="konten_question">Dokter Ruangan</td>
-      <td class="konten_answer">: -</td>
+      <td class="konten_answer">: {{$field3}}</td>
+    </tr>
+    <tr>
+      <td class="konten_question" colspan="2"><?php if(isset($macam_kasus[1])) echo 'Tidak terdapat alergi'; else echo 'Riwayat Alergi/intoleransi (spesifikasi')?></td>
     </tr>
   </table>
 </div>
@@ -37,9 +40,8 @@ header('Content-Type: application/pdf');
       <th class="default" colspan="11" style="text-align:left;padding-left:0.5%" bgcolor="#C0C0C0">OBAT RESEP</th>
     </tr>
     <tr>
-      <th class="default" style="width:3%;">No</th>
       <th class="default" style="width:10%;">Nama Generik</th>
-      <th class="default" style="width:10%;">Nama Dagang</th>
+      <th class="default" style="width:13%;">Nama Dagang</th>
       <th class="default" style="width:10%;">Regimen</th>
       <th class="default" style="width:10%;">Sumber Obat</th>
       <th class="default" style="width:10%;">Tgl. Mulai</th>
@@ -51,110 +53,26 @@ header('Content-Type: application/pdf');
     </tr>
   </thead>
   <tbody>
-     <tr>
-      <td class="default" style="text-align:center"> 1 </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
+    @php
+      $idx_resep = 0;
+    @endphp
+    @foreach($resep as $r)
+    @php
+      $idx_resep += 1;
+    @endphp
+    <tr id="form_resep_1">
+      <td class="default"> {{$r[0]}} </td>
+      <td class="default"> {{$r[1]}} </td>
+      <td class="default"> {{$r[2]}} </td>
+      <td class="default"> {{$r[3]}} </td>
+      <td class="default"> {{$r[4]}} </td>
+      <td class="default"> {{$r[5]}} </td>
+      <td class="default"> {{$r[6]}} </td>
+      <td class="default"> {{$r[7]}} </td>
+      <td class="default"> {{$r[8]}} </td>
+      <td class="default"> {{$r[9]}} </td>
     </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
+    @endforeach
   </tbody>
 </table>
 
@@ -167,9 +85,8 @@ header('Content-Type: application/pdf');
       <th class="default" colspan="11" style="text-align:left;padding-left:0.5%;" bgcolor="#C0C0C0">OBAT NON RESEP (contoh : produk OTC, herbal, dll)</th>
     </tr>
     <tr>
-      <th class="default" style="width:3%;">No</th>
       <th class="default" style="width:10%;">Nama Generik</th>
-      <th class="default" style="width:10%;">Nama Dagang</th>
+      <th class="default" style="width:13%;">Nama Dagang</th>
       <th class="default" style="width:10%;">Regimen</th>
       <th class="default" style="width:10%;">Sumber Obat</th>
       <th class="default" style="width:10%;">Tgl. Mulai</th>
@@ -181,110 +98,27 @@ header('Content-Type: application/pdf');
     </tr>
   </thead>
   <tbody>
-     <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
+    @php
+      $idx_nonresep = 0;
+    @endphp
+    @foreach($nonresep as $n)
+    <tr id="form_non_resep_1">
+      @php
+        $idx_nonresep += 1;
+      @endphp
+
+      <td class="default"> {{$n[0]}} </td>
+      <td class="default"> {{$n[1]}} </td>
+      <td class="default"> {{$n[2]}} </td>
+      <td class="default"> {{$n[3]}} </td>
+      <td class="default"> {{$n[4]}} </td>
+      <td class="default"> {{$n[5]}} </td>
+      <td class="default"> {{$n[6]}} </td>
+      <td class="default"> {{$n[7]}} </td>
+      <td class="default"> {{$n[8]}} </td>
+      <td class="default"> {{$n[9]}} </td>
     </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
-    <tr>
-      <td class="default" style="text-align:center"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-      <td class="default"> - </td>
-    </tr>
+    @endforeach
   </tbody>
   <thead>
     <tr>
@@ -294,9 +128,7 @@ header('Content-Type: application/pdf');
   </thead>
   <tbody>
     <tr>
-      <td class="default" colspan="4">Status Pasien di Medical Record</td>
-      <td class="default" colspan="3">Dokter: -</td>
-      <td class="default" rowspan="2">Tgl: -</td>
+      <td class="default" colspan="4">Status Pasien di Medical Record: {{$field5}}</td>
     </tr>
     <tr>
       <td class="default" colspan="4" style="border-bottom:0px">
@@ -306,10 +138,10 @@ header('Content-Type: application/pdf');
     </tr>
     <tr>
       <td class="default" colspan="2" style="border-top:0px;border-right:0px;">
-        Nama: -
+        Nama: {{$field6}}
       </td>
       <td class="default" colspan="2" style="border-top:0px;border-left:0px;">
-        No.Telp: -
+        No.Telp: {{$field7}}
       </td>
       <td class="default" colspan="5" rowspan="4" style="border:0px;padding-left:4%;vertical-align:top;padding-top:1%;">
         Keterangan;
@@ -324,15 +156,15 @@ header('Content-Type: application/pdf');
     </tr>
     <tr>
       <td class="default" colspan="2" style="border-top:0px;border-right:0px;">
-        Nama: -
+        Nama: {{$field8}}
       </td>
       <td class="default" colspan="2" style="border-top:0px;border-left:0px;">
-        No.Telp: -
+        No.Telp: {{$field9}}
       </td>
     </tr>
     <tr>
       <td class="default" colspan="4">
-        Lainnya ...
+        <?php if($field10) echo 'Lainnya, '.$field10.' '; ?> 
       </td>
     </tr>
   </tbody>

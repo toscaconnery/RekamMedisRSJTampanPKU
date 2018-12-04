@@ -25,7 +25,7 @@ header('Content-Type: application/pdf');
                 Suku
               </td>    
               <td class="konten_s_answer">  
-                : ....
+                : {{$field1}}
               </td>                
             </tr>
             <tr>
@@ -33,7 +33,7 @@ header('Content-Type: application/pdf');
                 Berat Badan
               </td>    
               <td class="konten_s_answer">  
-                : ....
+                : {{$field2}}
               </td>                
             </tr>
             <tr>
@@ -41,7 +41,7 @@ header('Content-Type: application/pdf');
                 Pekerjaan
               </td>    
               <td class="konten_s_answer">  
-                : ....
+                : {{$field3}}
               </td>                
             </tr>
           </tbody>
@@ -55,7 +55,7 @@ header('Content-Type: application/pdf');
                 Penyakit Utama
               </td>    
               <td class="konten_s_answer">  
-                : ....
+                : {{$field4}}
               </td>                
             </tr>
             <tr>
@@ -63,7 +63,7 @@ header('Content-Type: application/pdf');
                 Kesudahan
               </td>    
               <td class="konten_s_answer">  
-                : ....
+                : {{$field5}}
               </td>                
             </tr>
           </tbody>
@@ -72,9 +72,29 @@ header('Content-Type: application/pdf');
     </div>
     <p class="list">Penyakit/Kondisi lain yang menyertai:</p>
     <ul>
-      <li style="margin-left:-28px">Gangguan Ginjal</li>
-      <li style="margin-left:-28px">Gangguan Hati</li>
-    </ul>
+      <?php 
+        if(isset($field6[1])) echo 
+        '<li>
+          Gangguan Ginjal
+        </li>';
+        if(isset($field6[2])) echo 
+        '<li>
+          Gangguan Hati
+        </li>';
+        if(isset($field6[3])) echo 
+        '<li>
+          Alergi
+        </li>';
+        if(isset($field6[4])) echo 
+        '<li>
+          Kondisi medis lainnya
+        </li>';
+        if(isset($field6[5])) echo 
+        '<li>
+          Faktor industri, pertanian, kimia, dll
+        </li>';
+      ?>
+    </ul> 
   </div>
 
   <h4>REAKSI EFEK SAMPING OBAT (E.S.O)</h4>
@@ -82,19 +102,22 @@ header('Content-Type: application/pdf');
   <div style="font-size: 85%;">  
     <div class="row">
       <div class="column">
-        <p>Saat/Tgl mulai terjadi: ...</p>
+        <p>Saat/Tgl mulai terjadi: {{$field7}}</p>
         <p class="list">Bentuk/manisfestasi E.S.O yang terjadi:</p>
-        <p>Isi</p>
+        <p>{{$field8}}</p>
       </div>
       <div class="column">
-        <p>Kesudahan E.S.O: ...</p>
-        <p>Tanggal: ...</p>
-        <p class="list">Reaksi E.S.O yang pernah di alami: ...</p>
-        <p>Isi</p>
+        <p>Kesudahan E.S.O: {{$field9}}</p>
+        <p>Tanggal: {{$field10}}</p>
+        <p class="list">Reaksi E.S.O yang pernah di alami:</p>
+        <p>{{$field11}}</p>
       </div>
     </div>
-    <p class="list">Tindak yang telah dilakukan untuk mengatasi reaksi E.S.O:</p>
-    <p>Isi</p>
+    <p class="list">Tindakan yang telah dilakukan untuk mengatasi reaksi E.S.O:<br>{{$field12}}</p>
+
+    <p class="list">Apakah reaksi E.S.O hilang setelah obat dihentikan?: {{$field13}}</p>
+
+    <p class="list">Apakah reaksi E.S.O yang sama timbul sewaktu obat yang dicurigai digunakan kembali: {{$field14}}</p>
   </div>
 
   <h4>OBAT</h4>
@@ -117,15 +140,23 @@ header('Content-Type: application/pdf');
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td class="default">Isi </td>
-          <td class="default">Isi </td>
-          <td class="default">Isi </td>
-          <td class="default">Isi </td>
-          <td class="default">Isi </td>
-          <td class="default">Isi </td>
-          <td class="default">Isi </td>
+        @php
+          $idx = 0;
+        @endphp
+        @foreach($obat as $o)
+        @php
+          $idx += 1;
+        @endphp
+        <tr id="form_1">
+          <td class="default">{{$o[0]}}</td>
+          <td class="default">{{$o[1]}}</td>
+          <td class="default"> <?php if(isset($o[2]) == '1') echo '<b>V</b>'; ?></td>
+          <td class="default">{{$o[3]}}</td>
+          <td class="default">{{$o[4]}}</td>
+          <td class="default">{{$o[5]}}</td>
+          <td class="default">{{$o[6]}}</td>
         </tr>
+        @endforeach
       </tbody>
     </table>
   </div>
@@ -135,15 +166,15 @@ header('Content-Type: application/pdf');
   <div style="font-size: 85%;">  
     <div class="row">
       <div class="column">
-        <p>Nama : - </p>
-        <p>Profesi :</p>
-        <p>Asal Ruangan Poliklinik :</p>
+        <p>Nama : {{$field15}} </p>
+        <p>Profesi : $field16</p>
+        <p>Asal Ruangan Poliklinik : {{$field17}}</p>
       </div>
       <div class="column">
-        <p style="text-align: center;">Tanda Tangan</p>
+        <p style="text-align: center;">{{$field18}}<br>Tanda Tangan</p>
         <br>
         <br>
-        <p style="text-align: center;">(.............)</p>
+        <p style="text-align: center;">( {{$field15}} )</p>
       </div>
     </div>
   </div>
