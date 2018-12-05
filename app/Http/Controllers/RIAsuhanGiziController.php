@@ -197,7 +197,7 @@ class RIAsuhanGiziController extends Controller
 		$data->jam = $request->jam;
 		$data->nama_ahli_gizi = $request->nama_ahli_gizi;
 		$data->save();
-    	dd('posting');
+    	return redirect('ri_asuhan_gizi_read');
     }
 
     public function get_ri_asuhan_gizi_data()
@@ -509,7 +509,7 @@ class RIAsuhanGiziController extends Controller
 		$data->jam = $request->jam;
 		$data->nama_ahli_gizi = $request->nama_ahli_gizi;
 		$data->save();
-    	dd('posting edit');
+    	return redirect('ri_asuhan_gizi_read');
     }
 
     public function get_ri_asuhan_gizi_list_konsultasi()

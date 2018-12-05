@@ -138,7 +138,7 @@ class RJInformasiEdukasiController extends Controller
         $daftar_dokumen->rj_informasi_edukasi = True;
         $daftar_dokumen->save();
 
-    	return redirect('daftar_dokumen');
+    	return redirect('rj_informasi_edukasi_read');
     }
 
     public function get_rj_informasi_edukasi_data()
@@ -225,7 +225,7 @@ class RJInformasiEdukasiController extends Controller
     			$data->save();
     		}
     	}
-		return redirect('daftar_dokumen');    	
+		return redirect('rj_informasi_edukasi_read');    	
     }
 
     public function post_rj_informasi_edukasi_edit(Request $request)
@@ -339,7 +339,7 @@ class RJInformasiEdukasiController extends Controller
         $data->nama_keluarga = $request->nama_keluarga;
         $data->hubungan= $request->hubungan;
         $data->save();
-        return redirect('daftar_dokumen');
+        return redirect('rj_informasi_edukasi_read');
     }
 
     public function get_rj_informasi_edukasi_list_informasi_data()

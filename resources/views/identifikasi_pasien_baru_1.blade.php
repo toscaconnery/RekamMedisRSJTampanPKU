@@ -30,16 +30,6 @@
             Data Pasien
           </header>
           <div class="panel-body">
-            <div class="form-group">
-              <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-primary active">
-                  <input type="radio" name="options" id="pasien_baru"> Pasien Baru
-                </label>
-                <label class="btn btn-primary">
-                  <input type="radio" name="options" id="pasien_lama"> Pasien Lama
-                </label>
-              </div>
-            </div>
             <form class="form-horizontal" method="post" action="identifikasi_pasien_baru_2" id="form_pasien_baru">
               {{ csrf_field() }}
               <div class="form-group">

@@ -38,7 +38,7 @@ class RJIdentifikasiStresorController extends Controller
         $daftar_dokumen->rj_identifikasi_stresor = True;
         $daftar_dokumen->save();
 
-    	return redirect('daftar_dokumen');
+    	return redirect('rj_identifikasi_stresor_read');
     }
 
     public function get_rj_identifikasi_stresor_data()
@@ -82,7 +82,7 @@ class RJIdentifikasiStresorController extends Controller
         $data->simptom = $request->simptom;
         $data->cara_mengatasi = $request->cara_mengatasi;
         $data->save();
-        return redirect('daftar_dokumen');
+        return redirect('rj_identifikasi_stresor_read');
     }
 
     public function rj_stressor_pdf()
