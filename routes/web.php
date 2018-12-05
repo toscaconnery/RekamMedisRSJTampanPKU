@@ -737,7 +737,12 @@ Route::post('/ri_asuhan_gizi', 'RIAsuhanGiziController@post_ri_asuhan_gizi');
 Route::get('/ri_asuhan_gizi_read', 'RIAsuhanGiziController@get_ri_asuhan_gizi_read');
 Route::get('/ri_asuhan_gizi_edit', 'RIAsuhanGiziController@get_ri_asuhan_gizi_edit');
 Route::post('/ri_asuhan_gizi_edit', 'RIAsuhanGiziController@post_ri_asuhan_gizi_edit');
+
 Route::get('/ri_asuhan_gizi_list_konsultasi', 'RIAsuhanGiziController@get_ri_asuhan_gizi_list_konsultasi');
+Route::post('/ri_asuhan_gizi_list_konsultasi', 'RIAsuhanGiziController@post_ri_asuhan_gizi_list_konsultasi');
+Route::get('/ri_asuhan_gizi_list_konsultasi_read', 'RIAsuhanGiziController@get_ri_asuhan_gizi_list_konsultasi_read');
+Route::get('/ri_asuhan_gizi_list_konsultasi_edit', 'RIAsuhanGiziController@get_ri_asuhan_gizi_list_konsultasi_edit');
+Route::post('/ri_asuhan_gizi_list_konsultasi_edit', 'RIAsuhanGiziController@post_ri_asuhan_gizi_list_konsultasi_edit');
 
 //dokumen asuhan gizi
 Route::get('/ri_gizi_pdf', 'RIAsuhanGiziController@ri_gizi_pdf');

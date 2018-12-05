@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\RincianPasien;
 use App\Models\RIAsuhanGizi;
+use App\Models\RIAsuhanGiziListKonsultasi;
+use App\Models\ListDocument;
 use Session;
 use DateTime;
 use View;
@@ -197,6 +199,11 @@ class RIAsuhanGiziController extends Controller
 		$data->jam = $request->jam;
 		$data->nama_ahli_gizi = $request->nama_ahli_gizi;
 		$data->save();
+
+		$daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        $daftar_dokumen->ri_asuhan_gizi = True;
+        $daftar_dokumen->save();
+
     	return redirect('ri_asuhan_gizi_read');
     }
 
@@ -515,6 +522,112 @@ class RIAsuhanGiziController extends Controller
     public function get_ri_asuhan_gizi_list_konsultasi()
     {
     	return view('page.ri.asuhan_gizi_list_konsultasi', $this->data);
+    }
+
+    public function post_ri_asuhan_gizi_list_konsultasi(Request $request)
+    {
+    	$id_pasien = Session::get('id_pasien');
+    	$data = new RIAsuhanGiziListKonsultasi;
+    	$data->id_regis = $id_pasien;
+    	$data->field1 = $request->field1;
+		$data->field2 = $request->field2;
+		$data->field3 = $request->field3;
+		$data->field4 = $request->field4;
+		$data->field5 = $request->field5;
+		$jumlah_form = $request->jumlah_form;
+		$tabel = '';
+		for ($i=1; $i <= $jumlah_form; $i++) { 
+			$str_1 = 'tabel1_'.$i;
+			$str_2 = 'tabel2_'.$i;
+			$str_3 = 'tabel3_'.$i;
+			$str_4 = 'tabel4_'.$i;
+			$str_5 = 'tabel5_'.$i;
+			if(!empty($request->$str_1)) {
+				if(isset($request->$str_5)) {
+					$value5 = "1";
+				}
+				else {
+					$value5 = "0";
+				}
+				$tabel .= $request->$str_1."$*@^#".$request->$str_2."$*@^#".$request->$str_3."$*@^#".$request->$str_4."$*@^#".$value5."$*@&#";
+			}
+		}
+		if(strlen($tabel) > 0) {
+			$tabel = substr($tabel, 0, -5);
+		}
+		$data->tabel = $tabel;
+		$data->save();
+    	return redirect('ri_asuhan_gizi_list_konsultasi_read');
+    }
+
+    public function get_ri_asuhan_gizi_list_konsultasi_data()
+    {
+    	$id_pasien = Session::get('id_pasien');
+    	$data = RIAsuhanGiziListKonsultasi::where('id_regis', $id_pasien)->first();
+    	$this->data['field1'] = $data->field1;
+		$this->data['field2'] = $data->field2;
+		$this->data['field3'] = $data->field3;
+		$this->data['field4'] = $data->field4;
+		$this->data['field5'] = $data->field5;
+		$list_data = explode('$*@&#', $data->tabel);
+		$this->data['tabel'] = array();
+		foreach ($list_data as $key => $value) {
+			$this->data['tabel'][$key] = array();
+			$temp = explode('$*@^#', $value);
+			$this->data['tabel'][$key]['tabel1'] = $temp[0];
+			$this->data['tabel'][$key]['tabel2'] = $temp[1];
+			$this->data['tabel'][$key]['tabel3'] = $temp[2];
+			$this->data['tabel'][$key]['tabel4'] = $temp[3];
+			$this->data['tabel'][$key]['tabel5'] = $temp[4];
+		}
+    }
+
+    public function get_ri_asuhan_gizi_list_konsultasi_read()
+    {
+    	$this->get_ri_asuhan_gizi_list_konsultasi_data();
+    	return view('page.ri.asuhan_gizi_list_konsultasi_read', $this->data);
+    }
+
+	public function get_ri_asuhan_gizi_list_konsultasi_edit()
+    {
+    	$this->get_ri_asuhan_gizi_list_konsultasi_data();
+    	return view('page.ri.asuhan_gizi_list_konsultasi_edit', $this->data);
+    }
+
+    public function post_ri_asuhan_gizi_list_konsultasi_edit(Request $request)
+    {
+    	$id_pasien = Session::get('id_pasien');
+    	$data = RIAsuhanGiziListKonsultasi::where('id_regis', $id_pasien)->first();
+    	$data->id_regis = $id_pasien;
+    	$data->field1 = $request->field1;
+		$data->field2 = $request->field2;
+		$data->field3 = $request->field3;
+		$data->field4 = $request->field4;
+		$data->field5 = $request->field5;
+		$jumlah_form = $request->jumlah_form;
+		$tabel = '';
+		for ($i=1; $i <= $jumlah_form; $i++) { 
+			$str_1 = 'tabel1_'.$i;
+			$str_2 = 'tabel2_'.$i;
+			$str_3 = 'tabel3_'.$i;
+			$str_4 = 'tabel4_'.$i;
+			$str_5 = 'tabel5_'.$i;
+			if(!empty($request->$str_1)) {
+				if(isset($request->$str_5)) {
+					$value5 = "1";
+				}
+				else {
+					$value5 = "0";
+				}
+				$tabel .= $request->$str_1."$*@^#".$request->$str_2."$*@^#".$request->$str_3."$*@^#".$request->$str_4."$*@^#".$value5."$*@&#";
+			}
+		}
+		if(strlen($tabel) > 0) {
+			$tabel = substr($tabel, 0, -5);
+		}
+		$data->tabel = $tabel;
+		$data->save();
+    	return redirect('ri_asuhan_gizi_list_konsultasi_read');
     }
 
     function pola($jumlah)

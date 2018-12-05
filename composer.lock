@@ -2289,16 +2289,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.1.4",
+            "version": "v4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "a05426e27294bba7b0226ffc17dd01a3c6ef9777"
+                "reference": "db61258540350725f4beb6b84006e32398acd120"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a05426e27294bba7b0226ffc17dd01a3c6ef9777",
-                "reference": "a05426e27294bba7b0226ffc17dd01a3c6ef9777",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/db61258540350725f4beb6b84006e32398acd120",
+                "reference": "db61258540350725f4beb6b84006e32398acd120",
                 "shasum": ""
             },
             "require": {
@@ -2326,7 +2326,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -2360,7 +2360,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2018-08-02T09:24:26+00:00"
+            "time": "2018-11-25T12:50:42+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

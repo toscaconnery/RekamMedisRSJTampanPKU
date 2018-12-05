@@ -55,8 +55,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal" method="post" action="ri_asuhan_gizi_list_konsultasi">
-            {{csrf_field()}}
+          <form class="form-horizontal" method="post" action="ri_asuhan_gizi_list_konsultasi_edit">
             <section class="panel">
               <header class="panel-heading">
 
@@ -65,31 +64,31 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Pekerjaan</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="field1">
+                    <input type="text" disabled class="form-control" name="field1" value="{{$field1}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">DHT</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="field2">
+                    <input type="text" disabled class="form-control" name="field2" value="{{$field2}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">TB</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="field3">
+                    <input type="text" disabled class="form-control" name="field3" value="{{$field3}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">BB</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="field4">
+                    <input type="text" disabled class="form-control" name="field4" value="{{$field4}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">DMI</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="field5">
+                    <input type="text" disabled class="form-control" name="field5" value="{{$field5}}">
                   </div>
                 </div>
               </div>
@@ -111,40 +110,36 @@
                     </tr>
                   </thead>
                   <tbody>
-
-                    <tr id="form_1">
-                      <td style="text-align:center;"><input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tabel1_1" required></td>
+                    @php
+                      $idx = 0;
+                    @endphp
+                    @foreach($tabel as $key => $value)
+                    @php
+                      $idx += 1;
+                    @endphp
+                    <tr id="form_{{$idx}}">
+                      <td style="text-align:center;"><input type="text" disabled autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tabel1_{{$idx}}" required value="{{$value['tabel1']}}"></td>
                       <td>
-                        <input type="text" class="form-control" name="tabel2_1" required>
+                        <input type="text" disabled class="form-control" name="tabel2_{{$idx}}" required value="{{$value['tabel2']}}">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="tabel3_1" required>
+                        <input type="text" disabled class="form-control" name="tabel3_{{$idx}}" required value="{{$value['tabel3']}}">
                       </td>
                       <td>
-                        <input type="text" class="form-control" name="tabel4_1" required>
+                        <input type="text" disabled class="form-control" name="tabel4_{{$idx}}" required value="{{$value['tabel4']}}">
                       </td>
                       <td>
-                        <input type="checkbox" class="form-control" name="tabel5_1">
+                        <input type="checkbox" class="form-control" name="tabel5_{{$idx}}" {{$value['tabel5'] == "1" ? 'checked' : ''}} disabled>
                       </td>
-                      <td></td>
+                      <td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_{{$idx}}"><i class="icon_close_alt2"></i></button></div></td>
                     </tr>
-                    <tr id="last_row">
-                      <td colspan="9">
-                        <input type="hidden" name="jumlah_form" id="jumlah_form" value="1">
-                        <div class="btn-group">
-                          <button class="btn btn-primary" type="button" id="tambah_form"><i class="icon_plus_alt2"></i> Tambah</button>
-                        </div>
-                      </td>
-                    </tr>
+                    @endforeach
 
                   </tbody>
                 </table>
               </div>
             </section>
 
-            <div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
           </form>
         </div>
       </div>
@@ -152,28 +147,6 @@
 
     @include('layouts.tailscript')
 
-    {{-- menambah row inputan --}}
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#tambah_form').click(function() {
-        var a = document.getElementById('jumlah_form').value;
-        a = parseInt(a) + 1;
-        $('#last_row').before('<tr id="form_'+a+'"> <td style="text-align:center;"><input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tabel1_'+a+'" required></td> <td> <input type="text" class="form-control" name="tabel2_'+a+'" required> </td> <td> <input type="text" class="form-control" name="tabel3_'+a+'" required> </td> <td> <input type="text" class="form-control" name="tabel4_'+a+'" required> </td> <td> <input type="checkbox" class="form-control" name="tabel5_'+a+'"> </td> <td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td> </tr>');
-        document.getElementById('jumlah_form').value = a;
-      });
-    });
-  </script>
-
-  {{-- menghapus row --}}
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(document).on('click', '.tombol_hapus', function() {
-        var x = $(this).attr('id');
-        var nomor = x.substring(13)
-        $('#form_'+nomor).remove();
-      });
-    });
-  </script>
 
   </body>
 
