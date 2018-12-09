@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\RJHIVAntiRetroval;
+use App\Models\RJAntiretrovalFollowUp;
 use App\Models\ListDocument;
+use App\Models\RincianPasien;
 use Session;
 use View;
 
@@ -17,6 +19,12 @@ class RJHIVAntiRetrovalController extends Controller
 
     public function get_rj_hiv_anti_retroval()
     {
+        $id_pasien = Session::get('id_pasien');
+        $detail_pasien = RincianPasien::where('no_rm', $id_pasien)->first();
+        $this->data['nama_ibu'] = $detail_pasien->nama_ibu;
+        $this->data['pendidikan'] = $detail_pasien->pendidikan;
+        $this->data['pekerjaan'] = $detail_pasien->pekerjaan;
+        $this->data['no_telp'] = $detail_pasien->no_telp;
     	return view('page.rj.hiv_anti_retroval', $this->data);
     }
 
@@ -165,127 +173,197 @@ class RJHIVAntiRetrovalController extends Controller
         $data->tgl_mulai_terapi_tb = $request->tgl_mulai_terapi_tb;
         $data->tgl_selesai_terapi_tb = $request->tgl_selesai_terapi_tb;
         $data->ii = $request->ii;
-        $data->tgl_kunjungan_follow_up = $request->tgl_kunjungan_follow_up;
-        $data->rencana_tgl_kunjungan = $request->rencana_tgl_kunjungan;
-        $data->prm = $request->prm;
-        $data->drt = $request->drt;
-        $data->nama_klinik_sebelumnya = $request->nama_klinik_sebelumnya;
-        $data->bbf = $request->bbf;
-        $data->tbf = $request->tbf;
-        $data->sfu = $request->sfu;
-        $data->stad_klinis = $request->stad_klinis;
-        $data->hkb = $request->hkb;
-        $infop = '';
-        if(isset($request->infop_1)) {
-            $infop .= '1-';
-        }
-        if(isset($request->infop_2)) {
-            $infop .= '2-';
-        }
-        if(isset($request->infop_3)) {
-            $infop .= '3-';
-        }
-        if(isset($request->infop_4)) {
-            $infop .= '4-';
-        }
-        if(isset($request->infop_5)) {
-            $infop .= '5-';
-        }
-        if(isset($request->infop_6)) {
-            $infop .= '6-';
-        }
-        if(isset($request->infop_7)) {
-            $infop .= '7-';
-        }
-        if(isset($request->infop_8)) {
-            $infop .= '8-';
-        }
-        if(isset($request->infop_9)) {
-            $infop .= '9-';
-        }
-        if(isset($request->infop_10)) {
-            $infop .= '10-';
-        }
-        if(isset($request->infop_11)) {
-            $infop .= '11-';
-        }
-        if(strlen($infop) > 0) {
-            $infop = substr($infop, 0, -1);
-        }
-        $data->infop = $infop;
-        $data->keterangan_infop = $request->keterangan_infop;
-        $data->obat_untuk_io = $request->obat_untuk_io;
-        $data->stb = $request->stb;
-        $data->ppk = $request->ppk;
-        $data->inh = $request->inh;
-        $data->hkr = $request->hkr;
-        $data->obat_arv = $request->obat_arv;
-        $data->adr = $request->adr;
-        $esart = '';
-        if(isset($request->esart_1)) {
-            $esart .= '1-';
-        }
-        if(isset($request->esart_2)) {
-            $esart .= '2-';
-        }
-        if(isset($request->esart_3)) {
-            $esart .= '3-';
-        }
-        if(isset($request->esart_4)) {
-            $esart .= '4-';
-        }
-        if(isset($request->esart_5)) {
-            $esart .= '5-';
-        }
-        if(isset($request->esart_6)) {
-            $esart .= '6-';
-        }
-        if(isset($request->esart_7)) {
-            $esart .= '7-';
-        }
-        if(isset($request->esart_8)) {
-            $esart .= '8-';
-        }
-        if(isset($request->esart_9)) {
-            $esart .= '9-';
-        }
-        if(isset($request->esart_10)) {
-            $esart .= '10-';
-        }
-        if(isset($request->esart_11)) {
-            $esart .= '11-';
-        }
-        if(isset($request->esart_12)) {
-            $esart .= '12-';
-        }
-        if(isset($request->esart_13)) {
-            $esart .= '13-';
-        }
-        if(isset($request->esart_14)) {
-            $esart .= '14-';
-        }
-        if(isset($request->esart_15)) {
-            $esart .= '15-';
-        }
-        if(isset($request->esart_16)) {
-            $esart .= '16-';
-        }
-        if(strlen($esart) > 0) {
-            $esart = substr($esart, 0, -1);
-        }
-        $data->esart = $esart;
-        $data->keterangan_esart = $request->keterangan_esart;
-        $data->jumlah_cd4 = $request->jumlah_cd4;
-        $data->hasil_lab = $request->hasil_lab;
-        $data->dkr = $request->dkr;
-        $data->jumlah_kondom = $request->jumlah_kondom;
-        $data->rsmrs = $request->rsmrs;
-        $data->fll = $request->fll;
+
         $data->tgl_meninggal = $request->tgl_meninggal;
         $data->tgl_kunjungan_terakhir = $request->tgl_kunjungan_terakhir;
         $data->tgl_keluar = $request->tgl_keluar;
         $data->nama_klinik_baru = $request->nama_klinik_baru;
+
         $data->save();
+
+
+        ///////ikhtisar follow up art
+        $jumlah_form_follow_up = $request->jumlah_form_follow_up;
+        for ($i = 1; $i <= $jumlah_form_follow_up; $i++) {
+            $str_tgl_kunjungan_follow_up = 'tgl_kunjungan_follow_up_'.$i;
+            $str_rencana_tgl_kunjungan = 'rencana_tgl_kunjungan_'.$i;
+            $str_prm = 'prm_'.$i;
+            $str_drt = 'drt_'.$i;
+            $str_nama_klinik_sebelumnya = 'nama_klinik_sebelumnya_'.$i;
+            $str_bbf = 'bbf_'.$i;
+            $str_tbf = 'tbf_'.$i;
+            $str_sfu = 'sfu_'.$i;
+            $str_stad_klinis = 'stad_klinis_'.$i;
+            $str_hkb = 'hkb_'.$i;
+            $str_mkb = 'mkb_'.$i;
+            $str_infop_1 = 'infop_'.$i.'_1';
+            $str_infop_2 = 'infop_'.$i.'_2';
+            $str_infop_3 = 'infop_'.$i.'_3';
+            $str_infop_4 = 'infop_'.$i.'_4';
+            $str_infop_5 = 'infop_'.$i.'_5';
+            $str_infop_6 = 'infop_'.$i.'_6';
+            $str_infop_7 = 'infop_'.$i.'_7';
+            $str_infop_8 = 'infop_'.$i.'_8';
+            $str_infop_9 = 'infop_'.$i.'_9';
+            $str_infop_10 = 'infop_'.$i.'_10';
+            $str_infop_11 = 'infop_'.$i.'_11';
+            $str_keterangan_infop = 'keterangan_infop_'.$i;
+            $str_obat_untuk_io = 'obat_untuk_io_'.$i;
+            $str_stb = 'stb_'.$i;
+            $str_ppk = 'ppk_'.$i;
+            $str_inh = 'inh_'.$i;
+            $str_hkr = 'hkr_'.$i;
+            $str_obat_arv = 'obat_arv_'.$i;
+            $str_sisa_obat = 'sisa_obat_'.$i;
+            $str_adr = 'adr_'.$i;
+            $str_esart_1 = 'esart_'.$i.'_1';
+            $str_esart_2 = 'esart_'.$i.'_2';
+            $str_esart_3 = 'esart_'.$i.'_3';
+            $str_esart_4 = 'esart_'.$i.'_4';
+            $str_esart_5 = 'esart_'.$i.'_5';
+            $str_esart_6 = 'esart_'.$i.'_6';
+            $str_esart_7 = 'esart_'.$i.'_7';
+            $str_esart_8 = 'esart_'.$i.'_8';
+            $str_esart_9 = 'esart_'.$i.'_9';
+            $str_esart_10 = 'esart_'.$i.'_10';
+            $str_esart_11 = 'esart_'.$i.'_11';
+            $str_esart_12 = 'esart_'.$i.'_12';
+            $str_esart_13 = 'esart_'.$i.'_13';
+            $str_esart_14 = 'esart_'.$i.'_14';
+            $str_esart_15 = 'esart_'.$i.'_15';
+            $str_esart_16 = 'esart_'.$i.'_16';
+            $str_keterangan_esart = 'keterangan_esart_'.$i;
+            $str_jumlah_cd4 = 'jumlah_cd4_'.$i;
+            $str_hasil_lab = 'hasil_lab_'.$i;
+            $str_dkr = 'dkr_'.$i;
+            $str_jumlah_kondom = 'jumlah_kondom_'.$i;
+            $str_rsmrs = 'rsmrs_'.$i;
+            $str_fll = 'fll_'.$i;
+            //////
+            $data = new RJAntiretrovalFollowUp;
+            $data->id_regis = $id_pasien;
+            $data->tgl_kunjungan_follow_up = $request->$str_tgl_kunjungan_follow_up;
+            $data->rencana_tgl_kunjungan = $request->$str_rencana_tgl_kunjungan;
+            $data->prm = $request->$str_prm;
+            $data->drt = $request->$str_drt;
+            $data->nama_klinik_sebelumnya = $request->$str_nama_klinik_sebelumnya;
+            $data->bbf = $request->$str_bbf;
+            $data->tbf = $request->$str_tbf;
+            $data->sfu = $request->$str_sfu;
+            $data->stad_klinis = $request->$str_stad_klinis;
+            $data->hkb = $request->$str_hkb;
+            if(isset($request->$str_mkb)) {
+                $data->mkb = $request->$str_mkb;
+            }
+            $infop = '';
+            if(isset($request->$str_infop_1)) {
+                $infop .= '1-';
+            }
+            if(isset($request->$str_infop_2)) {
+                $infop .= '2-';
+            }
+            if(isset($request->$str_infop_3)) {
+                $infop .= '3-';
+            }
+            if(isset($request->$str_infop_4)) {
+                $infop .= '4-';
+            }
+            if(isset($request->$str_infop_5)) {
+                $infop .= '5-';
+            }
+            if(isset($request->$str_infop_6)) {
+                $infop .= '6-';
+            }
+            if(isset($request->$str_infop_7)) {
+                $infop .= '7-';
+            }
+            if(isset($request->$str_infop_8)) {
+                $infop .= '8-';
+            }
+            if(isset($request->$str_infop_9)) {
+                $infop .= '9-';
+            }
+            if(isset($request->$str_infop_10)) {
+                $infop .= '10-';
+            }
+            if(isset($request->$str_infop_11)) {
+                $infop .= '11-';
+            }
+            if(strlen($infop) > 0) {
+                $infop = substr($infop, 0, -1);
+            }
+            $data->infop = $infop;
+            $data->keterangan_infop = $request->$str_keterangan_infop;
+            $data->obat_untuk_io = $request->$str_obat_untuk_io;
+            $data->stb = $request->$str_stb;
+            $data->ppk = $request->$str_ppk;
+            $data->inh = $request->$str_inh;
+            $data->hkr = $request->$str_hkr;
+            $data->obat_arv = $request->$str_obat_arv;
+            $data->sisa_obat = $request->$str_sisa_obat;
+            $data->adr = $request->$str_adr;
+            $esart = '';
+            if(isset($request->$str_esart_1)) {
+                $esart .= '1-';
+            }
+            if(isset($request->$str_esart_2)) {
+                $esart .= '2-';
+            }
+            if(isset($request->$str_esart_3)) {
+                $esart .= '3-';
+            }
+            if(isset($request->$str_esart_4)) {
+                $esart .= '4-';
+            }
+            if(isset($request->$str_esart_5)) {
+                $esart .= '5-';
+            }
+            if(isset($request->$str_esart_6)) {
+                $esart .= '6-';
+            }
+            if(isset($request->$str_esart_7)) {
+                $esart .= '7-';
+            }
+            if(isset($request->$str_esart_8)) {
+                $esart .= '8-';
+            }
+            if(isset($request->$str_esart_9)) {
+                $esart .= '9-';
+            }
+            if(isset($request->$str_esart_10)) {
+                $esart .= '10-';
+            }
+            if(isset($request->$str_esart_11)) {
+                $esart .= '11-';
+            }
+            if(isset($request->$str_esart_12)) {
+                $esart .= '12-';
+            }
+            if(isset($request->$str_esart_13)) {
+                $esart .= '13-';
+            }
+            if(isset($request->$str_esart_14)) {
+                $esart .= '14-';
+            }
+            if(isset($request->$str_esart_15)) {
+                $esart .= '15-';
+            }
+            if(isset($request->$str_esart_16)) {
+                $esart .= '16-';
+            }
+            if(strlen($esart) > 0) {
+                $esart = substr($esart, 0, -1);
+            }
+            $data->esart = $esart;
+            $data->keterangan_esart = $request->$str_keterangan_esart;
+            $data->jumlah_cd4 = $request->$str_jumlah_cd4;
+            $data->hasil_lab = $request->$str_hasil_lab;
+            $data->dkr = $request->$str_dkr;
+            $data->jumlah_kondom = $request->$str_jumlah_kondom;
+            $data->rsmrs = $request->$str_rsmrs;
+            $data->fll = $request->$str_fll;
+            $data->save();
+        }
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
         $daftar_dokumen->rj_hiv_anti_retroval = True;

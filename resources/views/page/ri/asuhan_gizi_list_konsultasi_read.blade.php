@@ -106,7 +106,6 @@
                       <th style="width: 50%; text-align: center;vertical-align:middle;">Konsultasi Gizi/Pengamatan</th>
                       <th style="width: 20%; text-align: center;vertical-align:middle;">Nama</th>
                       <th style="width: 5%; text-align: center;vertical-align:middle;">Check</th>
-                      <th>Act</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -131,7 +130,6 @@
                       <td>
                         <input type="checkbox" class="form-control" name="tabel5_{{$idx}}" {{$value['tabel5'] == "1" ? 'checked' : ''}} disabled>
                       </td>
-                      <td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_{{$idx}}"><i class="icon_close_alt2"></i></button></div></td>
                     </tr>
                     @endforeach
 
