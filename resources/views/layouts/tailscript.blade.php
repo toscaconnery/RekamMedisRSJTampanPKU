@@ -3,7 +3,7 @@
 <script src="{{url('')}}/admin_bootstrap/js/bootstrap.min.js"></script>
 <!-- nice scroll -->
 <script src="{{url('')}}/admin_bootstrap/js/jquery.scrollTo.min.js"></script>
-<script src="{{url('')}}/admin_bootstrap/js/jquery.nicescroll.js" type="text/javascript"></script>
+{{-- <script src="{{url('')}}/admin_bootstrap/js/jquery.nicescroll.js" type="text/javascript"></script> --}}
 
 <!-- jquery ui -->
 <script src="{{url('')}}/admin_bootstrap/js/jquery-ui-1.9.2.custom.min.js"></script>
