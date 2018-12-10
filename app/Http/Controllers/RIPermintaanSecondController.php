@@ -12,6 +12,7 @@ class RIPermintaanSecondController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
     	$this->data['title'] = 'PERMINTAAN PENDAPAT LAIN (SECOND OPINION)';
     }
 

@@ -67,6 +67,7 @@ Route::group(['middleware' => 'loggedin'], function() {
 
     Route::get('/put_selected_patient_id/{id}', 'PasienController@put_selected_patient_id');
     Route::get('/check_selected_patient_id', 'PasienController@check_selected_patient_id');
+    Route::get('/lupakan_pasien', 'PasienController@lupakan_pasien');
     Route::get('/daftar_dokumen', 'DocumentController@index');
 
     Route::get('/penundaan_pelayanan', 'PenundaanPelayananController@get_penundaan_pelayanan');
@@ -303,15 +304,6 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/doc_igd_asesmen', function () {
         return view('doc_igd_asesmen');
     });
-
-
-
-
-
-
-
-
-
 
     Route::get('/ri_resume_medis', 'RIResumeMedisController@get_ri_resume_medis');
     Route::post('/ri_resume_medis', 'RIResumeMedisController@post_ri_resume_medis');

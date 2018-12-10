@@ -12,6 +12,7 @@ class RIDPJPCaseController extends Controller
 {
 	public function __construct()
     {
+        $this->middleware('haspatient');
         $this->data['title'] = 'DPJP dan Case Manager';
     }
 

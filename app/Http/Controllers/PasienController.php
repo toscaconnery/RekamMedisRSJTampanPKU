@@ -10,6 +10,7 @@ use App\Models\RincianPasien;
 use App\Models\PenanggungJawab;
 use App\Models\ListDocument;
 use PDO;
+use Session;
 
 class PasienController extends Controller
 {
@@ -59,6 +60,12 @@ class PasienController extends Controller
         // dd($request);
         $data = $request->session();
         dd($data);
+    }
+
+    public function lupakan_pasien()
+    {
+        Session::forget('id_pasien');
+        return redirect('/');
     }
 
     public function pendaftaran_pasien()

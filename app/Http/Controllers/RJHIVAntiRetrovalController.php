@@ -14,7 +14,8 @@ class RJHIVAntiRetrovalController extends Controller
 {
     public function __construct()
     {
-    	$this->data['title'] = '';
+        $this->middleware('haspatient');
+    	$this->data['title'] = 'Ikhtisar Perawatan HIV dan Terapi Antiretroval (ART)';
     }
 
     public function get_rj_hiv_anti_retroval()

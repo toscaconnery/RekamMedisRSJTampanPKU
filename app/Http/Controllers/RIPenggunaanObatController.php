@@ -15,6 +15,7 @@ class RIPenggunaanObatController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
     	$this->data['title'] = 'Catatan Penggunaan Obat (CPO)';
     }
 

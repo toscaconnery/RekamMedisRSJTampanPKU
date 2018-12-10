@@ -12,6 +12,7 @@ class RJLaporRehabilitasiController extends Controller
 {
 	public function __construct()
 	{
+        $this->middleware('haspatient');
 		$this->data['title'] = 'Asesmen Wajib Lapor Dan Rehabilitasi Medis';
 	}
 

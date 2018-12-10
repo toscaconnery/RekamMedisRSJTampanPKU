@@ -12,6 +12,7 @@ class RIDoNotResucitateController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
     	$this->data['title'] = 'Surat Pernyataan Jangan Dilakukan Resusitasi';
     }
 

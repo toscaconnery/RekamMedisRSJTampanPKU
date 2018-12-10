@@ -12,7 +12,8 @@ class RIPenolakanTindakanController extends Controller
 {
     public function __construct()
     {
-    	$this->data['title'] = 'PENOLAKAN TINDAKAN KEDOKTERAN';
+        $this->middleware('haspatient');
+    	$this->data['title'] = 'Penolakan Tindakan Kedokteran';
     }
 
     public function get_ri_penolakan_tindakan()

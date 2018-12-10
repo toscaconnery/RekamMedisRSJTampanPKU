@@ -1003,7 +1003,7 @@
                           <script src="{{url('')}}/sweetalert2/dist/sweetalert2.min.js"></script>
 
                           @if(Session::has('pasien_terpilih'))
-                          @include('sweetalert.pasienterpilih')
+                            @include('sweetalert.pasienterpilih')
                           @endif
                       </body>
 

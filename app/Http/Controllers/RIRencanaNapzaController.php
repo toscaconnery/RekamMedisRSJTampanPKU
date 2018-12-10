@@ -12,6 +12,7 @@ class RIRencanaNapzaController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
     	$this->data['title'] = 'Rencana Tindakan Keperawatan Napza';
     }
 

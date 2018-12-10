@@ -19,7 +19,7 @@ class RIRencanaKlienController extends Controller
 {
     public function __construct()
     {
-    	//
+    	$this->middleware('haspatient');
     }
 
     public function cek_list_dokumen_pasien()

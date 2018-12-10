@@ -12,6 +12,7 @@ class RIEvaluasiKeperawatanController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
     	$this->data['title'] = 'Evaluasi Keperawatan';
     }
 

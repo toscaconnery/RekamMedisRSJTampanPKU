@@ -12,6 +12,7 @@ class RITransferEksternalController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
     	$this->data['title'] = 'Transfer Pasien Eksternal Rumah Sakit';
     }
 

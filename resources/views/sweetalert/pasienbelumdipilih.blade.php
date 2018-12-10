@@ -1,12 +1,12 @@
 <script type="text/javascript">  
 	Swal({
 	  position: 'center',
-	  type: 'success',
-	  title: 'Pasien terpilih',
+	  type: 'error',
+	  title: 'Belum ada pasien yang dipilih',
 	  showConfirmButton: false,
-	  timer: 1500
+	  timer: 2000
 	})
 </script>
 @php
-	Session::forget('pasien_terpilih');
+	Session::forget('pasien_belum_dipilih');
 @endphp

@@ -13,7 +13,8 @@ class RIRencanaPemulanganController extends Controller
 {
     public function __construct()
     {
-    	$this->data['title'] = 'RENCANA PEMULANGAN PASIEN (DISCHARGE PLANNING)';
+        $this->middleware('haspatient');
+    	$this->data['title'] = 'Rencana Pemulangan Pasien (Discharge Planning)';
     }
 
     public function get_ri_rencana_pemulangan()

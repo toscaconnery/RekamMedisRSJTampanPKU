@@ -12,6 +12,7 @@ class RIPerkembanganPasienController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
         $this->data['title'] = 'Catatan Perkembangan Pasien Rawat Inap';
     }
 

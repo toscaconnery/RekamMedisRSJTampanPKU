@@ -12,6 +12,7 @@ class RIPulangPaksaController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
         $this->data['title'] = 'Surat Pernyataan Pulang Paksa';
     }
 

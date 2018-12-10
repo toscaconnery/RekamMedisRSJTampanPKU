@@ -12,6 +12,7 @@ class RIPersetujuanUmumController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
     	$this->data['title'] = 'PERSETUJUAN UMUM';
     }
 

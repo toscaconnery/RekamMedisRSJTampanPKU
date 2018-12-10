@@ -34,7 +34,7 @@
 			<div class="wrap-login100">
 				<div class="login100-form-title" style="background-image: url({{url('')}}/login_v15/images/bg-01.jpg);">
 					<span class="login100-form-title-1">
-						Sign In
+						Sign In Bro
 					</span>
 				</div>
 				<form method="POST" class="login100-form" action="{{ route('login') }}">
@@ -58,6 +58,11 @@
 						<button class="login100-form-btn" type="submit">
 							Login
 						</button>
+						<a href="{{url('register')}}" style="position: absolute; right: 90px;">
+							<button class="login100-form-btn" type="button">
+								Register
+							</button>
+						</a>
 					</div>
 				</form>
 			</div>

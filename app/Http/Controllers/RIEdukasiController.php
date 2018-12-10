@@ -12,6 +12,7 @@ class RIEdukasiController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
     	$this->data['title'] = 'Edukasi Pasien dan Keluarga';
     }
 
