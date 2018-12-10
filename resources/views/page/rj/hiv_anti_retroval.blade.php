@@ -1856,13 +1856,5 @@
         }
       });
     </script>
-
-    <script type="text/javascript">
-      $('input[type=text][name=tgl_kunjungan_follow_up]').blur(function() {
-        $('#collpasible').empty();
-        var text = 'Follow-up tanggal ' + $('#tgl_kunjungan_follow_up').val();
-        $('#collpasible').append(text);
-      });
-    </script>
 </body>
 <html>
