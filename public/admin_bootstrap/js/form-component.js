@@ -90,6 +90,7 @@ var Script = function() {
     $('#dp3').datepicker();
     $('#dpYears').datepicker();
     $('#dpMonths').datepicker();
+    $('.sandbox-container').datepicker();
 
 
     var startDate = new Date(2012, 1, 20);
@@ -147,7 +148,7 @@ var Script = function() {
 
   //daterange picker
 
-  $('#reservation').daterangepicker();
+  // $('#reservation').daterangepicker();
 
   $('#reportrange').daterangepicker({
       ranges: {

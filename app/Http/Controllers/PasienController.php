@@ -93,6 +93,7 @@ class PasienController extends Controller
 
     public function identifikasi_pasien_baru_2(Request $request)
     {
+        $this->data['title'] = 'Identifikasi Pasien Baru';
         $pasien = new Pasien;
         $pasien->nama_pasien = $request->nama_pasien;
         $pasien->tanggal_lahir = $request->tanggal_lahir;
