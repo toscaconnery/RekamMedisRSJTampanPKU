@@ -4,6 +4,8 @@
 <!-- nice scroll -->
 <script src="{{url('')}}/admin_bootstrap/js/jquery.scrollTo.min.js"></script>
 {{-- <script src="{{url('')}}/admin_bootstrap/js/jquery.nicescroll.js" type="text/javascript"></script> --}}
+<script src="{{url('')}}/admin_bootstrap/js/jquery.localscroll.js" type="text/javascript"></script>
+{{-- <script src="{{url('')}}/jquery/jquery331.min.js" type="text/javascript"></script> --}}
 {{-- <script src="{{url('')}}/testing/js/bootstrap-datepicker.min.js"></script> --}}
 
 <!-- jquery ui -->

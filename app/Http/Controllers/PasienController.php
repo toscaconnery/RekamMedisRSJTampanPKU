@@ -68,10 +68,10 @@ class PasienController extends Controller
         return redirect('/');
     }
 
-    public function pendaftaran_pasien()
-    {
-    	return view('pendaftaran_pasien');
-    }
+    // public function pendaftaran_pasien()
+    // {
+    // 	return view('pendaftaran_pasien');
+    // }
 
     public function store_pendaftaran_pasien(Request $request) 
     {
@@ -88,7 +88,7 @@ class PasienController extends Controller
 
     public function identifikasi_pasien_baru_1()
     {
-        return view('identifikasi_pasien_baru_1');
+        return view('page.pasien.identifikasi_pasien_baru_1');
     }
 
     public function identifikasi_pasien_baru_2(Request $request)
@@ -100,16 +100,22 @@ class PasienController extends Controller
         $pasien->jenis_kelamin = $request->jenis_kelamin;
         $pasien->save();
 
-        $saved_data = DB::table('pasien')->where('nama_pasien', $request->nama_pasien)
-                        ->where('tanggal_lahir', $request->tanggal_lahir)->first();
+        $this->data['no_rm'] = $pasien->no_rm;
+        $this->data['tanggal_pengisian'] = $pasien->created_at;
+        $this->data['nama_pasien'] = $pasien->nama_pasien;
+        $this->data['tanggal_lahir'] = $pasien->tanggal_lahir;
+        $this->data['jenis_kelamin'] = $pasien->jenis_kelamin;
 
-        $this->data['no_rm'] = $saved_data->no_rm;
-        $this->data['tanggal_pengisian'] = $saved_data->created_at;
-        $this->data['nama_pasien'] = $request->nama_pasien;
-        $this->data['tanggal_lahir'] = $request->tanggal_lahir;
-        $this->data['jenis_kelamin'] = $request->jenis_kelamin;
+        // $saved_data = DB::table('pasien')->where('nama_pasien', $request->nama_pasien)
+        //                 ->where('tanggal_lahir', $request->tanggal_lahir)->first();
 
-        return view('identifikasi_pasien_baru_2', $this->data);
+        // $this->data['no_rm'] = $saved_data->no_rm;
+        // $this->data['tanggal_pengisian'] = $saved_data->created_at;
+        // $this->data['nama_pasien'] = $request->nama_pasien;
+        // $this->data['tanggal_lahir'] = $request->tanggal_lahir;
+        // $this->data['jenis_kelamin'] = $request->jenis_kelamin;
+
+        return view('page.pasien.identifikasi_pasien_baru_2', $this->data);
     }
 
     public function identifikasi_pasien_baru_final(Request $request)
@@ -156,7 +162,58 @@ class PasienController extends Controller
             }
             $index++;
         }
-
         return redirect('index');
+    }
+    
+    public function identifikasi_pasien_data()
+    {
+        $this->middleware('haspatient');
+        $this->data['title'] = 'Identifikasi Pasien';
+        $id_pasien = Session::get('id_pasien');
+        $pasien = Pasien::where('no_rm', $id_pasien)->first();
+        $this->data['no_rm'] = $pasien->no_rm;
+        $this->data['nama_pasien'] = $pasien->nama_pasien;
+        $this->data['tanggal_lahir'] = $pasien->tanggal_lahir;
+        $this->data['jenis_kelamin'] = $pasien->jenis_kelamin;
+        $this->data['tanggal_pengisian'] = $pasien->created_at;
+
+        $rincian_pasien = RincianPasien::where('no_rm', $id_pasien)->first();
+        $this->data['no_telp'] = $rincian_pasien->no_telp;
+        $this->data['pernikahan'] = $rincian_pasien->pernikahan;
+        $this->data['agama'] = $rincian_pasien->agama;
+        $this->data['pendidikan'] = $rincian_pasien->pendidikan;
+        $this->data['pekerjaan'] = $rincian_pasien->pekerjaan;
+        $this->data['bahasa'] = $rincian_pasien->bahasa;
+        $this->data['nama_ayah'] = $rincian_pasien->nama_ayah;
+        $this->data['nama_ibu'] = $rincian_pasien->nama_ibu;
+        $this->data['budaya'] = $rincian_pasien->budaya;
+        $this->data['alamat'] = $rincian_pasien->alamat;
+        $this->data['rt'] = $rincian_pasien->rt;
+        $this->data['rw'] = $rincian_pasien->rw;
+        $this->data['perubahan_alamat'] = $rincian_pasien->perubahan_alamat;
+        $this->data['perubahan_rt'] = $rincian_pasien->perubahan_rt;
+        $this->data['perubahan_rw'] = $rincian_pasien->perubahan_rw;
+
+        $pj = PenanggungJawab::where('id_regis', $id_pasien)->get();
+        $this->data['pj'] = array();
+        foreach ($pj as $key => $value) {
+            $this->data['pj'][$key] = array();
+            $this->data['pj'][$key]['nama_pj'] = $value->nama;
+            $this->data['pj'][$key]['alamat_pj'] = $value->alamat;
+            $this->data['pj'][$key]['hubungan_pj'] = $value->hubungan;
+            $this->data['pj'][$key]['no_telp_pj'] = $value->no_telp;
+        }
+    }
+
+    public function identifikasi_pasien_read()
+    {
+        $this->identifikasi_pasien_data();
+        return view('page.pasien.identifikasi_pasien_read', $this->data);
+    }
+
+    public function identifikasi_pasien_edit()
+    {
+        $this->identifikasi_pasien_data();
+        return view('page.pasien.identifikasi_pasien_edit', $this->data);
     }
 }

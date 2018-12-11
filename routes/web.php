@@ -28,6 +28,8 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/identifikasi_pasien_baru_1', 'PasienController@identifikasi_pasien_baru_1');
     Route::post('/identifikasi_pasien_baru_2', 'PasienController@identifikasi_pasien_baru_2');
     Route::post('/identifikasi_pasien_baru_final', 'PasienController@identifikasi_pasien_baru_final');
+    Route::get('/identifikasi_pasien_read', 'PasienController@identifikasi_pasien_read');
+    Route::get('/identifikasi_pasien_edit', 'PasienController@identifikasi_pasien_edit');
     
     //dokumen identifikasi pasien
     Route::get('/identifikasi_pdf', 'PasienController@identifikasi_pdf');

@@ -34,7 +34,7 @@
 {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
 
 <script type="text/javascript">
-	$(function() {
+	jQuery(function() {
 		$('.sandbox-container').datepicker({
 			'format' : 'dd/mm/yyyy',
 			'autoclose' : true,
