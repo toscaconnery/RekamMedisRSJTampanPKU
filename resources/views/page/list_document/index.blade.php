@@ -90,7 +90,7 @@
                 <h3 class="tittle text-center"> Rawat Jalan</h3>
                 <div class="row mt-lg-5 mt-md-4 mt-4">
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_asesmen_awal_perawat" id="content">
+                        <a href="{{url('')}}/rj_asesmen_awal_perawat{{$dokumen->rj_asesmen_awal_perawat ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -104,7 +104,7 @@
                     </div>
 
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_asesmen_awal_dokter" id="content">
+                        <a href="{{url('')}}/rj_asesmen_awal_dokter{{$dokumen->rj_asesmen_awal_dokter ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -118,7 +118,7 @@
                     </div>
 
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_asesmen_awal_gigi_perawat" id="content">
+                        <a href="{{url('')}}/rj_asesmen_awal_gigi_perawat{{$dokumen->rj_asesmen_awal_gigi_perawat ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -132,7 +132,7 @@
                     </div>
 
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_asesmen_awal_gigi_dokter" id="content">
+                        <a href="{{url('')}}/rj_asesmen_awal_gigi_dokter{{$dokumen->rj_asesmen_awal_gigi_dokter ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -146,7 +146,7 @@
                     </div>
 
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_informasi_edukasi" id="content">
+                        <a href="{{url('')}}/rj_informasi_edukasi{{$dokumen->rj_informasi_edukasi ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -160,7 +160,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_lapor_rehabilitasi" id="content">
+                        <a href="{{url('')}}/rj_lapor_rehabilitasi{{$dokumen->rj_lapor_rehabilitasi ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -174,7 +174,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_identifikasi_stresor" id="content">
+                        <a href="{{url('')}}/rj_identifikasi_stresor{{$dokumen->rj_identifikasi_stresor ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -188,7 +188,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_tes_konseling_hiv" id="content">
+                        <a href="{{url('')}}/rj_tes_konseling_hiv{{$dokumen->rj_tes_konseling_hiv ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -202,7 +202,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_izin_vct_hiv" id="content">
+                        <a href="{{url('')}}/rj_izin_vct_hiv{{$dokumen->rj_izin_vct_hiv ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -216,7 +216,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_hiv_anti_retroval" id="content">
+                        <a href="{{url('')}}/rj_hiv_anti_retroval{{$dokumen->rj_hiv_anti_retroval ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -230,7 +230,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_perkembangan_pasien" id="content">
+                        <a href="{{url('')}}/rj_perkembangan_pasien{{$dokumen->rj_perkembangan_pasien ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -244,7 +244,7 @@
                     </div>
 
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikolog" id="content">
+                        <a href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikolog{{$dokumen->rj_asesmen_awal_tumbuh_kembang_psikolog ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -258,7 +258,7 @@
                     </div>
 
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_dokter" id="content">
+                        <a href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_dokter{{$dokumen->rj_asesmen_awal_tumbuh_kembang_dokter ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -272,7 +272,7 @@
                     </div>
 
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/rj_resume" id="content">
+                        <a href="{{url('')}}/rj_resume{{$dokumen->rj_resume ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -296,7 +296,7 @@
                 <h3 class="tittle text-center"> IGD</h3>
                 <div class="row mt-lg-5 mt-md-4 mt-4">
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/igd_triase" id="content">
+                        <a href="{{url('')}}/igd_triase{{$dokumen->igd_triase ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -310,7 +310,7 @@
                     </div>
 
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/igd_asesmen_awal_rawat_darurat_perawat" id="content">
+                        <a href="{{url('')}}/igd_asesmen_awal_rawat_darurat_perawat{{$dokumen->igd_asesmen_awal_rawat_darurat_perawat ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -324,7 +324,7 @@
                     </div>
 
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/igd_asesmen_awal_rawat_darurat_dokter" id="content">
+                        <a href="{{url('')}}/igd_asesmen_awal_rawat_darurat_dokter{{$dokumen->igd_asesmen_awal_rawat_darurat_dokter ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -338,7 +338,7 @@
                     </div>
 
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/igd_suicide_fisik" id="content">
+                        <a href="{{url('')}}/igd_suicide_fisik{{$dokumen->igd_suicide_fisik ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -352,7 +352,7 @@
                     </div>
 
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/igd_catatan_kemajuan" id="content">
+                        <a href="{{url('')}}/igd_catatan_kemajuan{{$dokumen->igd_catatan_kemajuan ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -366,7 +366,7 @@
                     </div>
 
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/igd_catatan_perkembangan" id="content">
+                        <a href="{{url('')}}/igd_catatan_perkembangan{{$dokumen->igd_catatan_perkembangan ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -389,7 +389,7 @@
                 <h3 class="tittle text-center"> Rawat Inap</h3>
                 <div class="row mt-lg-5 mt-md-4 mt-4">
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_surat_persetujuan" id="content">
+                        <a href="{{url('')}}/ri_surat_persetujuan{{$dokumen->ri_surat_persetujuan ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -403,7 +403,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_resume_medis" id="content">
+                        <a href="{{url('')}}/ri_resume_medis{{$dokumen->ri_resume_medis ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -417,7 +417,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_dpjp_case" id="content">
+                        <a href="{{url('')}}/ri_dpjp_case{{$dokumen->ri_dpjp_case ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -431,7 +431,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_persetujuan_umum" id="content">
+                        <a href="{{url('')}}/ri_persetujuan_umum{{$dokumen->ri_persetujuan_umum ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -445,7 +445,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_hak_kewajiban" id="content">
+                        <a href="{{url('')}}/ri_hak_kewajiban{{$dokumen->ri_hak_kewajiban ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -459,7 +459,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_asesmen" id="content">
+                        <a href="{{url('')}}/ri_asesmen{{$dokumen->ri_asesmen ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -473,7 +473,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_suicide_fisik" id="content">
+                        <a href="{{url('')}}/ri_suicide_fisik{{$dokumen->ri_suicide_fisik ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -487,7 +487,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_asesmen_awal_keperawatan_napza" id="content">
+                        <a href="{{url('')}}/ri_asesmen_awal_keperawatan_napza{{$dokumen->ri_asesmen_awal_keperawatan_napza ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -501,7 +501,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_penilaian_edmunson" id="content">
+                        <a href="{{url('')}}/ri_penilaian_edmunson{{$dokumen->ri_penilaian_edmunson ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -515,7 +515,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_risiko_nyeri" id="content">
+                        <a href="{{url('')}}/ri_risiko_nyeri{{$dokumen->ri_risiko_nyeri ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -529,7 +529,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_catatan_perkembangan" id="content">
+                        <a href="{{url('')}}/ri_catatan_perkembangan{{$dokumen->ri_catatan_perkembangan ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -543,7 +543,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_keperawatan_intensif" id="content">
+                        <a href="{{url('')}}/ri_keperawatan_intensif{{$dokumen->ri_keperawatan_intensif ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -557,7 +557,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_evaluasi_keperawatan" id="content">
+                        <a href="{{url('')}}/ri_evaluasi_keperawatan{{$dokumen->ri_evaluasi_keperawatan ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -571,7 +571,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_monitoring_observasi" id="content">
+                        <a href="{{url('')}}/ri_monitoring_observasi{{$dokumen->ri_monitoring_observasi ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -585,7 +585,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_laboratorium" id="content">
+                        <a href="{{url('')}}/ri_laboratorium{{$dokumen->ri_laboratorium ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -599,7 +599,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_penggunaan_obat" id="content">
+                        <a href="{{url('')}}/ri_penggunaan_obat{{$dokumen->ri_penggunaan_obat ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -613,7 +613,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_riwayat_obat" id="content">
+                        <a href="{{url('')}}/ri_riwayat_obat{{$dokumen->ri_riwayat_obat ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -627,7 +627,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_efek_samping" id="content">
+                        <a href="{{url('')}}/ri_efek_samping{{$dokumen->ri_efek_samping ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -641,7 +641,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_asuhan_gizi" id="content">
+                        <a href="{{url('')}}/ri_asuhan_gizi{{$dokumen->ri_asuhan_gizi ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -655,7 +655,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_edukasi" id="content">
+                        <a href="{{url('')}}/ri_edukasi{{$dokumen->ri_edukasi ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -669,7 +669,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_rencana_pemulangan" id="content">
+                        <a href="{{url('')}}/ri_rencana_pemulangan{{$dokumen->ri_rencana_pemulangan ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -683,7 +683,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_panss_ec" id="content">
+                        <a href="{{url('')}}/ri_panss_ec{{$dokumen->ri_panss_ec ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -697,7 +697,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_penilaian_panss" id="content">
+                        <a href="{{url('')}}/ri_penilaian_panss{{$dokumen->ri_penilaian_panss ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -711,7 +711,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_lembar_konsultasi" id="content">
+                        <a href="{{url('')}}/ri_lembar_konsultasi{{$dokumen->ri_lembar_konsultasi ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -725,7 +725,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_transfer_internal" id="content">
+                        <a href="{{url('')}}/ri_transfer_internal{{$dokumen->ri_transfer_internal ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -739,7 +739,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_transfer_eksternal" id="content">
+                        <a href="{{url('')}}/ri_transfer_eksternal{{$dokumen->ri_transfer_eksternal ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -753,7 +753,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_pemberian_informasi" id="content">
+                        <a href="{{url('')}}/ri_pemberian_informasi{{$dokumen->ri_pemberian_informasi ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -767,7 +767,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_pemeriksaan_psikologis" id="content">
+                        <a href="{{url('')}}/ri_pemeriksaan_psikologis{{$dokumen->ri_pemeriksaan_psikologis ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
@@ -781,7 +781,7 @@
                     </div>
                     
                     <div class="col-lg-3 about-in-w3ls text-center" style="margin-bottom: 2em;">
-                        <a href="{{url('')}}/ri_serah_terima" id="content">
+                        <a href="{{url('')}}/ri_serah_terima{{$dokumen->ri_serah_terima ? '_read' : ''}}" id="content">
                             <div class="card" style="background-color: #eaeff2; width: 16em; height: 16em; padding-top: 1em;">
                                 <div class="card-body">
                                     <i class="far fa-file-alt mb-3"></i>
