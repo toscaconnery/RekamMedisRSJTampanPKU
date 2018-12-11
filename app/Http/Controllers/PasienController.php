@@ -162,7 +162,7 @@ class PasienController extends Controller
             }
             $index++;
         }
-        return redirect('index');
+        return redirect('identifikasi_pasien_read');
     }
     
     public function identifikasi_pasien_data()
@@ -215,5 +215,47 @@ class PasienController extends Controller
     {
         $this->identifikasi_pasien_data();
         return view('page.pasien.identifikasi_pasien_edit', $this->data);
+    }
+
+    public function post_identifikasi_pasien_edit(Request $request)
+    {
+        // dd('masuk');
+        $this->middleware('haspatient');
+        $id_pasien = Session::get('id_pasien');
+        $rincian = RincianPasien::where('no_rm', $id_pasien)->first();
+        // $rincian->no_rm = $request->no_rm;
+        $rincian->no_telp = $request->no_telp;
+        $rincian->pernikahan = $request->pernikahan;
+        $rincian->agama = $request->agama;
+        $rincian->pendidikan = $request->pendidikan;
+        $rincian->pekerjaan = $request->pekerjaan;
+        $rincian->bahasa = $request->bahasa;
+        $rincian->nama_ayah = $request->nama_ayah;
+        $rincian->nama_ibu = $request->nama_ibu;
+        $rincian->budaya = $request->budaya;
+        $rincian->alamat = $request->alamat;
+        $rincian->rt = $request->rt;
+        $rincian->rw = $request->rw;
+        $rincian->perubahan_alamat = $request->perubahan_alamat;
+        $rincian->perubahan_rt = $request->perubahan_rt;
+        $rincian->perubahan_rw = $request->perubahan_rw;
+        $rincian->save();
+
+        PenanggungJawab::where('id_regis', $id_pasien)->delete();
+
+        $index = 0;
+        foreach($request->nama_pj as $nama) {
+            if(!empty($request->nama_pj[$index]) and !empty($request->alamat_pj[$index]) and !empty($request->hubungan_pj[$index]) and !empty($request->no_telp_pj[$index])) {
+                $pj = new PenanggungJawab;
+                $pj->id_regis = $id_pasien;
+                $pj->nama = $request->nama_pj[$index];
+                $pj->alamat = $request->alamat_pj[$index];
+                $pj->hubungan = $request->hubungan_pj[$index];
+                $pj->no_telp = $request->no_telp_pj[$index];
+                $pj->save();
+            }
+            $index++;
+        }
+        return redirect('identifikasi_pasien_read');
     }
 }

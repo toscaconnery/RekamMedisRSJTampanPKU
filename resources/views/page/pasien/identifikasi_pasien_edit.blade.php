@@ -68,7 +68,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal " method="post" action="identifikasi_pasien_baru_final_edit">
+          <form class="form-horizontal " method="post" action="identifikasi_pasien_edit">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
