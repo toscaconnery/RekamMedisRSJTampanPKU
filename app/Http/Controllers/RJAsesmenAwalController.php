@@ -230,6 +230,7 @@ class RJAsesmenAwalController extends Controller
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
         $daftar_dokumen->rj_asesmen_awal_dokter = True;
+        $daftar_dokumen->rj_asesmen_awal_dokter_petugas = Auth::user()->nama;
         $daftar_dokumen->save();
 
         return redirect('rj_asesmen_awal_dokter_read');
@@ -238,6 +239,12 @@ class RJAsesmenAwalController extends Controller
     public function get_rj_asesmen_awal_dokter_data()
     {
         $id_pasien = Session::get('id_pasien');
+
+        //list document
+        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
+        $this->data['nama_dokter'] = $list_document->rj_asesmen_awal_dokter_petugas;
+        $this->data['nama_perawat'] = $list_document->rj_asesmen_awal_perawat_petugas;
+        
         $pasien = RJAsesmenDokter::where('id_regis', $id_pasien)->first();
         $this->data['pewawancara'] = $pasien->pewawancara;
         $this->data['keluhan_utama'] = $pasien->keluhan_utama;
@@ -577,324 +584,13 @@ class RJAsesmenAwalController extends Controller
         return redirect('rj_asesmen_awal_dokter_read');
 
     }
-    
-    // public function post_rj_asesmen_awal_dokter2(Request $request)      //not used
-    // {
-    //     // DATA MEDIS //////////
-    //     // DATA MEDIS //////////
-    //     // DATA MEDIS //////////
-    //     // DATA MEDIS //////////
-
-    //     $data = new RJDataMedis;
-    //     $data->id_regis = $id_pasien;
-    //     $data->pewawancara = $request->pewawancara;
-    //     $data->keluhan_utama = $request->keluhan_utama;
-    //     if(!empty($request->riwayat_penyakit_sekarang)) {
-    //         $data->riwayat_penyakit_sekarang = $request->riwayat_penyakit_sekarang;
-    //     }
-    //     if(!empty($request->riwayat_penyakit_dahulu)) {
-    //         $data->riwayat_penyakit_dahulu = $request->riwayat_penyakit_dahulu;
-    //     }
-    //     if($request->riwayat_napza == 'true') {
-    //         $data->riwayat_napza = True;
-    //     }
-    //     else {
-    //         $data->riwayat_napza = False;
-    //     }
-    //     if(!empty($request->lama_pemakaian)) {
-    //         $data->lama_pemakaian = $request->lama_pemakaian;
-    //     }
-    //     if(!empty($request->cara_pemakaian)) {
-    //         $data->cara_pemakaian = $request->cara_pemakaian;
-    //     }
-    //     if(!empty($request->latar_belakang_pemakaian)) {
-    //         $data->latar_belakang_pemakaian = $request->latar_belakang_pemakaian;
-    //     }
-    //     $data->riwayat_pendidikan = $request->riwayat_pendidikan;
-    //     $data->riwayat_pekerjaan = $request->riwayat_pekerjaan;
-    //     $data->riwayat_perkawinan = $request->riwayat_perkawinan;
-    //     $riwayat = "";
-    //     if(isset($request->penyakit_1)) {
-    //         $riwayat .= "1-";
-    //     }
-    //     if(isset($request->penyakit_2)) {
-    //         $riwayat .= "2-";
-    //     }
-    //     if(isset($request->penyakit_3)) {
-    //         $riwayat .= "3-";
-    //     }
-    //     if(isset($request->penyakit_4)) {
-    //         $riwayat .= "4-";
-    //     }
-    //     if(isset($request->penyakit_5)) {
-    //         $riwayat .= "5-";
-    //     }
-    //     if(isset($request->penyakit_6)) {
-    //         $riwayat .= "6-";
-    //     }
-    //     if(isset($request->penyakit_7)) {
-    //         $riwayat .= "7-";
-    //     }
-    //     if(isset($request->penyakit_8)) {
-    //         $riwayat .= "8-";
-    //     }
-    //     if(isset($request->penyakit_9)) {
-    //         $riwayat .= "9-";
-    //     }
-    //     if(isset($request->penyakit_10)) {
-    //         $riwayat .= "10-";
-    //     }
-    //     if(isset($request->penyakit_11)) {
-    //         $riwayat .= "11-";
-    //     }
-    //     if(isset($request->penyakit_12)) {
-    //         $riwayat .= "12-";
-    //     }
-    //     if(isset($request->penyakit_13)) {
-    //         $riwayat .= "13-";
-    //     }
-    //     if(isset($request->penyakit_14)) {
-    //         $riwayat .= "14-";
-    //     }
-    //     if(!empty($riwayat)) {
-    //         $riwayat = substr($riwayat, 0, -1);
-    //         $data->riwayat_penyakit_lainnya = $riwayat;
-    //     }
-    //     $data->riwayat_operasi = $request->riwayat_operasi;
-        
-    //     if(!empty($request->jenis_operasi)) {
-    //         $data->jenis_operasi = $request->jenis_operasi;
-    //     }
-    //     if(!empty($request->waktu_operasi)) {
-    //         $data->waktu_operasi = $request->waktu_operasi;
-    //     }
-    //     if($request->riwayat_tranfusi == 'true') {
-    //         $data->riwayat_tranfusi = True;
-    //     }
-    //     else {
-    //         $data->riwayat_tranfusi = False;
-    //     }
-    //     if($request->reaksi_tranfusi == 'true') {
-    //         $data->reaksi_tranfusi = True;
-    //     }
-    //     else {
-    //         $data->reaksi_tranfusi = False;
-    //     }
-    //     if(!empty($request->reaksi_timbul)) {
-    //         $data->reaksi_timbul = $request->reaksi_timbul;
-    //     }
-    //     if(!empty($request->riwayat_penyakit_dalam_keluarga)) {
-    //         $data->riwayat_penyakit_dalam_keluarga = $request->riwayat_penyakit_dalam_keluarga;
-    //     }
-    //     if(!empty($request->riwayat_pengobatan)) {
-    //         $data->riwayat_pengobatan = $request->riwayat_pengobatan;
-    //     }
-    //     if(!empty($request->riwayat_alergi)) {
-    //         $data->riwayat_alergi = $request->riwayat_alergi;
-    //     }
-    //     $data->save();
-
-
-    //     // OBAT YANG DIMINUM SAAT INI //////////
-    //     // OBAT YANG DIMINUM SAAT INI //////////
-    //     // OBAT YANG DIMINUM SAAT INI //////////
-    //     // OBAT YANG DIMINUM SAAT INI //////////
-
-    //     $obat = new RJObatSaatIni;
-    //     $obat->id_regis = $id_pasien;
-    //     $obat->nama_obat = $request->nama_obat;
-    //     $obat->dibawa = $request->dibawa;
-    //     $obat->jumlah = $request->jumlah;
-    //     $obat->tidak_dibawa = $request->tidak_dibawa;
-    //     $obat->keterangan = $request->keterangan;
-    //     $obat->save();
-
-
-    //     // PEMERIKSAAN FISIK ///////////
-    //     // PEMERIKSAAN FISIK ///////////
-    //     // PEMERIKSAAN FISIK ///////////
-    //     // PEMERIKSAAN FISIK ///////////
-
-    //     // $pemeriksaan = new RJPemeriksaanFisik;
-    //     // $pemeriksaan->id_regis = $id_pasien;
-    //     $pemeriksaan->kepala = $request->kepala;
-    //     $pemeriksaan->leher = $request->leher;
-    //     $pemeriksaan->dada = $request->dada;
-    //     $pemeriksaan->jantung = $request->jantung;
-    //     $pemeriksaan->paru = $request->paru;
-    //     $pemeriksaan->perut = $request->perut;
-    //     $pemeriksaan->anggota_gerak = $request->anggota_gerak;
-    //     // $pemeriksaan->save();
-
-
-    //     // STATUS PSIKIATRI ///////////
-    //     // STATUS PSIKIATRI ///////////
-    //     // STATUS PSIKIATRI ///////////
-    //     // STATUS PSIKIATRI ///////////
-
-    //     // $status = new RJStatusPsikiatri;
-    //     // $status->id_regis = $id_pasien;
-    //     $status->penampilan = $request->penampilan;
-    //     $status->kesadaran = $request->kesadaran;
-    //     $status->orientasi = $request->orientasi;
-    //     $status->sikap = $request->sikap;
-    //     $status->keterangan = $request->keterangan;
-    //     $status->keterangan = $request->keterangan;
-    //     $status->proses_pikir = $request->proses_pikir;
-    //     $status->bentuk_pikir = $request->bentuk_pikir;
-    //     $status->isi_pikir = $request->isi_pikir;
-    //     $status->mood = $request->mood;
-    //     $status->afek = $request->afek;
-    //     $status->halusinasi = $request->halusinasi;
-    //     $status->ilusi = $request->ilusi;
-    //     $status->konsentrasi = $request->konsentrasi;
-    //     $status->ingat = $request->ingat;
-    //     $status->abstrak = $request->abstrak;
-    //     $status->impuls = $request->impuls;
-    //     $status->nilai = $request->nilai;
-    //     $status->tilikan = $request->tilikan;
-    //     $status->dipercaya = $request->dipercaya;
-    //     $status->save();
-
-
-    //     // STATUS NEUROLOGI ////////////
-    //     // STATUS NEUROLOGI ////////////
-    //     // STATUS NEUROLOGI ////////////
-    //     // STATUS NEUROLOGI ////////////
-
-    //     $status = new RJStatusNeurologi;
-    //     $status->id_regis = $id_pasien;
-    //     $status->meningeal = $request->meningeal;
-    //     $status->nervus = $request->nervus;
-    //     $status->motorik = $request->motorik;
-    //     $status->cerebellum = $request->cerebellum;
-    //     $status->vegetatif = $request->vegetatif;
-    //     $status->save();
-
-    //     // PEMERIKSAAN PENUNJANG ///////////
-    //     // PEMERIKSAAN PENUNJANG ///////////
-    //     // PEMERIKSAAN PENUNJANG ///////////
-    //     // PEMERIKSAAN PENUNJANG ///////////
-
-    //     // $pemeriksaan = new RJPemeriksaanPenunjang;
-    //     // $pemeriksaan->id_regis = 1;
-    //     // $pemeriksaan->jenis = $request->jenis;
-    //     // $pemeriksaan->jam_pemeriksaan = $request->jam_pemeriksaan;
-    //     // $pemeriksaan->jam_hasil = $request->jam_hasil;
-    //     // $pemeriksaan->keterangan = $request->keterangan;
-    //     // $pemeriksaan->laboratorium = $request->laboratorium;
-    //     // $pemeriksaan->radiologi = $request->radiologi;
-    //     // $pemeriksaan->ekg = $request->ekg;
-    //     // $pemeriksaan->lainnya = $request->lainnya;
-    //     // $pemeriksaan->save();
-
-        
-    //     // INSTRUMEN PENILAIAN ///////////////////
-    //     // INSTRUMEN PENILAIAN ///////////////////
-    //     // INSTRUMEN PENILAIAN ///////////////////
-    //     // INSTRUMEN PENILAIAN ///////////////////
-    //     $instrumen = new RJInstrumenPenilaian;
-    //     $instrumen->id_regis = $id_pasien;
-    //     $instrumen->gaduh_gelisah = $request->p4;
-    //     $instrumen->ketidakoperatifan = $request->g8;
-    //     $instrumen->permusuhan = $request->p7;
-    //     $instrumen->pengendalian_impuls = $request->g14;
-    //     $instrumen->ketegangan = $request->g4;
-    //     $instrumen->bangsal = $request->bangsal;
-    //     $instrumen->tanggal_pemeriksaan = $request->tanggal_pemeriksaan;
-    //     $instrumen->panss_ec = $request->panss_ec;
-    //     $instrumen->gaff = $request->gaff;
-    //     $instrumen->save();
-
-
-    //     // DIAGNOSIS TINDAKAN TERAPI /////////////
-    //     // DIAGNOSIS TINDAKAN TERAPI /////////////
-    //     // DIAGNOSIS TINDAKAN TERAPI /////////////
-    //     // DIAGNOSIS TINDAKAN TERAPI /////////////
-    //     $diagnosis = new RJDiagnosisTindakanTerapi;
-    //     $diagnosis->id_regis = $id_pasien;
-    //     $diagnosis->axis1 = $request->axis1;
-    //     $diagnosis->axis2 = $request->axis2;
-    //     $diagnosis->axis3 = $request->axis3;
-    //     $diagnosis->axis4 = $request->axis4;
-    //     $diagnosis->axis5 = $request->axis5;
-    //     $diagnosis->utama = $request->utama;
-    //     $diagnosis->sekunder = $request->sekunder;
-    //     $diagnosis->jam = $request->jam;
-    //     $diagnosis->tindakan_terapi = $request->tindakan_terapi;
-    //     $diagnosis->daftar_masalah = $request->daftar_masalah;
-    //     $diagnosis->save();
-        
-
-
-    //     // TINDAK LANJUT ///////////////////
-    //     // TINDAK LANJUT ///////////////////
-    //     // TINDAK LANJUT ///////////////////
-    //     // TINDAK LANJUT ///////////////////
-    //     $data = new RJTindakLanjut;
-    //     $data->tindak_lanjut = $request->tindak_lanjut;
-    //     $data->id_regis = $id_pasien;
-    //     if($request->perlu_dikontrol == 'true') {
-    //         $data->perlu_dikontrol = True;
-    //     }
-    //     else {
-    //         $data->perlu_dikontrol = False;
-    //     }
-    //     $data->tanggal_kontrol = $request->tanggal_kontrol;
-    //     $data->ruangan = $request->ruangan;
-    //     $data->indikasi_rawat_inap = $request->indikasi_rawat_inap;
-    //     if($request->alasan_menolak == "Lainnya"){
-    //         $data->alasan_menolak = $request->alasan_lainnya;
-    //     }
-    //     else {
-    //         $data->alasan_menolak = $request->alasan_menolak;
-    //     }
-    //     $data->dirujuk_ke = $request->dirujuk_ke;
-    //     $data->alasan_dirujuk = $request->alasan_dirujuk;
-    //     $kesadaran = "";
-    //     if(isset($request->kesadaran_1)) {
-    //         $kesadaran .= "1-";
-    //     }
-    //     if(isset($request->kesadaran_2)) {
-    //         $kesadaran .= "2-";
-    //     }
-    //     if(isset($request->kesadaran_3)) {
-    //         $kesadaran .= "3-";
-    //     }
-    //     if(isset($request->kesadaran_4)) {
-    //         $kesadaran .= "4-";
-    //     }
-    //     if(isset($request->kesadaran_5)) {
-    //         $kesadaran .= "5-";
-    //     }
-    //     if(isset($request->kesadaran_6)) {
-    //         $kesadaran .= "6-";
-    //     }
-    //     if(isset($request->kesadaran_7)) {
-    //         $kesadaran .= "7-";
-    //     }
-    //     $kesadaran = substr($kesadaran, 0, -1);
-    //     $data->kesadaran = $kesadaran;
-    //     $data->kesadaran_lainnya = $request->kesadaran_lainnya;
-    //     $data->tensi = $request->tensi;
-    //     $data->nadi = $request->nadi;
-    //     $data->pernafasan = $request->pernafasan;
-    //     $data->suhu = $request->suhu;
-
-    //     $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
-    //     $daftar_dokumen->rj_asesmen_awal_dokter = True;
-    //     $daftar_dokumen->save();
-
-    //     $data->save();
-
-    //     return redirect('index');
-    // }
 
     public function post_rj_asesmen_awal_perawat(Request $request)
     {
 
     	$asesmen_keperawatan = new RJAsesmenKeperawatan;
         $id_pasien = Session::get('id_pasien');
+
     	$asesmen_keperawatan->id_regis = $id_pasien;
     	$asesmen_keperawatan->id_user = Auth::user()->id;
     	$asesmen_keperawatan->alasan_kunjungan = $request->alasan_kunjungan;
@@ -1411,6 +1107,7 @@ class RJAsesmenAwalController extends Controller
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
         $daftar_dokumen->rj_asesmen_awal_perawat = True;
+        $daftar_dokumen->rj_asesmen_awal_perawat_petugas = Auth::user()->nama;
         $daftar_dokumen->save();
 
 
@@ -1640,6 +1337,11 @@ class RJAsesmenAwalController extends Controller
     public function get_rj_asesmen_awal_perawat_data()
     {
         $id_pasien = Session::get('id_pasien');
+
+        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
+        $this->data['nama_dokter'] = $list_document->rj_asesmen_awal_dokter_petugas;
+        $this->data['nama_perawat'] = $list_document->rj_asesmen_awal_perawat_petugas;
+
         $pasien = RJAsesmenKeperawatan::where('id_regis', $id_pasien)->first();
         $this->data['id_user'] = $pasien->id_user;
         $this->data['alasan_kunjungan'] = $pasien->alasan_kunjungan;
@@ -2283,24 +1985,11 @@ class RJAsesmenAwalController extends Controller
 
         $asesmen_keperawatan->obat_parental = $request->obat_parental;
         $asesmen_keperawatan->ekg = $request->ekg;
-        // $diagnosa->save();
 
         // EVALUASI TINDAKAN /////////
-        // EVALUASI TINDAKAN /////////
-        // EVALUASI TINDAKAN /////////
-        // EVALUASI TINDAKAN /////////
-
-        // $data = new RJEvaluasiTindakan;
-        // $asesmen_keperawatan->id_regis = $id_pasien;
         $asesmen_keperawatan->implementasi = $request->implementasi;
         $asesmen_keperawatan->evaluasi = $request->evaluasi;
-        // $data->save();
         $asesmen_keperawatan->save();
-
-        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
-        $daftar_dokumen->rj_asesmen_awal_perawat = True;
-        $daftar_dokumen->save();
-
 
         return redirect('rj_asesmen_awal_perawat_read');
     }

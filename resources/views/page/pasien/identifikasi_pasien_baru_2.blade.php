@@ -75,11 +75,11 @@
                 Status
               </header>
               <div class="panel-body">
-                <input type="hidden" name="no_rm" value="{{$no_rm}}">
+                <input type="hidden" name="no_rm" value="{{$no_rm}}" required="">
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">Pernikahan</label>
                   <div class="col-lg-3">
-                    <select class="form-control m-bot15" name="pernikahan">
+                    <select class="form-control m-bot15" name="pernikahan" required="">
                       <option value="Tidak Kawin">Tidak Kawin</option>
                       <option value="Kawin">Kawin</option>
                       <option value="Cerai Hidup">Cerai Hidup</option>
@@ -89,7 +89,7 @@
 
                   <label class="control-label col-lg-2" for="inputSuccess">Agama</label>
                   <div class="col-lg-3">
-                    <select class="form-control m-bot15" name="agama">
+                    <select class="form-control m-bot15" name="agama" required="">
                       <option value="Islam">Islam</option>
                       <option value="Kristen">Kristen</option>
                       <option value="Katholik">Katholik</option>
@@ -102,7 +102,7 @@
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">Pendidikan</label>
                   <div class="col-lg-3">
-                    <select class="form-control m-bot15" name="pendidikan">
+                    <select class="form-control m-bot15" name="pendidikan" required="">
                       <option value="Tidak Sekolah">Tidak Sekolah</option>
                       <option value="SD">SD</option>
                       <option value="SMP">SMP</option>
@@ -113,7 +113,7 @@
                   </div>
                   <label class="control-label col-lg-2" for="inputSuccess">Pekerjaan</label>
                   <div class="col-lg-3">
-                    <select class="form-control m-bot15" name="pekerjaan">
+                    <select class="form-control m-bot15" name="pekerjaan" required="">
                       <option value="Tidak Kerja">Tidak Kerja</option>
                       <option value="Buruh">Buruh</option>
                       <option value="Tani">Tani</option>
@@ -126,7 +126,7 @@
                 <div class="form-group">
                   <label class="control-label col-lg-2" for="inputSuccess">Bahasa Sehari-Hari</label>
                   <div class="col-lg-5">
-                    <select class="form-control m-bot15" name="bahasa">
+                    <select class="form-control m-bot15" name="bahasa" required="">
                       <option value="Indonesia">Indonesia</option>
                       <option value="Melayu">Melayu</option>
                       <option value="Jawa">Jawa</option>
@@ -139,39 +139,39 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Ayah</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="nama_ayah">
+                    <input type="text" class="form-control" name="nama_ayah" required="">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Ibu</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="nama_ibu">
+                    <input type="text" class="form-control" name="nama_ibu" required="">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Budaya/Suku</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="budaya">
+                    <input type="text" class="form-control" name="budaya" required="">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Alamat</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" name="alamat">
+                    <input type="text" class="form-control" name="alamat" required="">
                   </div>
                   <label class="col-sm-1 control-label">RT</label>
                   <div class="col-sm-1">
-                    <input type="text" class="form-control" name="rt">
+                    <input type="text" class="form-control" name="rt" required="">
                   </div>
                   <label class="col-sm-1 control-label">RW</label>
                   <div class="col-sm-1">
-                    <input type="text" class="form-control" name="rw">
+                    <input type="text" class="form-control" name="rw" required="">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">No.Telp</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="no_telp">
+                    <input type="text" class="form-control" name="no_telp" required="">
                   </div>
                 </div>
                 <div class="form-group">

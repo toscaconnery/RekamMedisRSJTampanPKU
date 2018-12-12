@@ -115,7 +115,6 @@ class CreateRjAsesmenDokterTable extends Migration
             $table->string('nadi')->nullable();
             $table->string('pernafasan')->nullable();
             $table->string('suhu')->nullable();
-
             $table->timestamps();
         });
     }

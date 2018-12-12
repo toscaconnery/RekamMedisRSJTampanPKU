@@ -162,22 +162,22 @@ class PasienController extends Controller
             }
             $index++;
         }
-        return redirect('identifikasi_pasien_read');
+        return redirect('identifikasi_pasien_read/'.$request->no_rm);
     }
     
-    public function identifikasi_pasien_data()
+    public function identifikasi_pasien_data($id)
     {
         $this->middleware('haspatient');
         $this->data['title'] = 'Identifikasi Pasien';
-        $id_pasien = Session::get('id_pasien');
-        $pasien = Pasien::where('no_rm', $id_pasien)->first();
+        
+        $pasien = Pasien::where('no_rm', $id)->first();
         $this->data['no_rm'] = $pasien->no_rm;
         $this->data['nama_pasien'] = $pasien->nama_pasien;
         $this->data['tanggal_lahir'] = $pasien->tanggal_lahir;
         $this->data['jenis_kelamin'] = $pasien->jenis_kelamin;
         $this->data['tanggal_pengisian'] = $pasien->created_at;
 
-        $rincian_pasien = RincianPasien::where('no_rm', $id_pasien)->first();
+        $rincian_pasien = RincianPasien::where('no_rm', $id)->first();
         $this->data['no_telp'] = $rincian_pasien->no_telp;
         $this->data['pernikahan'] = $rincian_pasien->pernikahan;
         $this->data['agama'] = $rincian_pasien->agama;
@@ -194,7 +194,7 @@ class PasienController extends Controller
         $this->data['perubahan_rt'] = $rincian_pasien->perubahan_rt;
         $this->data['perubahan_rw'] = $rincian_pasien->perubahan_rw;
 
-        $pj = PenanggungJawab::where('id_regis', $id_pasien)->get();
+        $pj = PenanggungJawab::where('id_regis', $id)->get();
         $this->data['pj'] = array();
         foreach ($pj as $key => $value) {
             $this->data['pj'][$key] = array();
@@ -205,14 +205,18 @@ class PasienController extends Controller
         }
     }
 
-    public function identifikasi_pasien_read()
+    public function identifikasi_pasien_read($id = null)
     {
-        $this->identifikasi_pasien_data();
+        if(!isset($id)) {
+            $id = Session::get('id_pasien');
+        }
+        $this->identifikasi_pasien_data($id);
         return view('page.pasien.identifikasi_pasien_read', $this->data);
     }
 
     public function identifikasi_pasien_edit()
     {
+        $id = Session::get('id_pasien');
         $this->identifikasi_pasien_data();
         return view('page.pasien.identifikasi_pasien_edit', $this->data);
     }

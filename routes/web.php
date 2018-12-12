@@ -28,7 +28,7 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/identifikasi_pasien_baru_1', 'PasienController@identifikasi_pasien_baru_1');
     Route::post('/identifikasi_pasien_baru_2', 'PasienController@identifikasi_pasien_baru_2');
     Route::post('/identifikasi_pasien_baru_final', 'PasienController@identifikasi_pasien_baru_final');
-    Route::get('/identifikasi_pasien_read', 'PasienController@identifikasi_pasien_read');
+    Route::get('/identifikasi_pasien_read/{id?}', 'PasienController@identifikasi_pasien_read');
     Route::get('/identifikasi_pasien_edit', 'PasienController@identifikasi_pasien_edit');
     Route::post('/identifikasi_pasien_edit', 'PasienController@post_identifikasi_pasien_edit');
     
@@ -41,26 +41,26 @@ Route::group(['middleware' => 'loggedin'], function() {
 
     // RAWAT JALAN========
     // ASESMEN AWAL
-    Route::get('/rj_asesmen_awal', 'RawatJalanController@asesmen_awal');    //will obsolete soon
-    Route::post('/fisik_gizi', 'RawatJalanController@store_fisik_gizi');
-    Route::post('/penilaian_tingkat_nyeri', 'RawatJalanController@store_penilaian_tingkat_nyeri');
-    Route::post('/humpty_dumpty', 'RawatJalanController@store_humpty_dumpty');
-    Route::post('/morse', 'RawatJalanController@store_morse');
-    Route::post('/edmunson', 'RawatJalanController@store_edmunson');
-    Route::post('/diagnosa_keperawatan', 'RawatJalanController@store_diagnosa_keperawatan');
-    Route::post('/evaluasi_tindakan_keperawatan', 'RawatJalanController@store_evaluasi_tindakan_keperawatan');
-    Route::post('/data_medis', 'RawatJalanController@store_data_medis');
-    Route::post('/obat_saat_ini', 'RawatJalanController@store_obat_saat_ini');
-    Route::post('/pemeriksaan_fisik', 'RawatJalanController@store_pemeriksaan_fisik');
-    Route::post('/status_psikiatri', 'RawatJalanController@store_status_psikiatri');
-    Route::post('/status_neurologi', 'RawatJalanController@store_status_neurologi');
-    Route::post('/pemeriksaan_penunjang', 'RawatJalanController@store_pemeriksaan_penunjang');
-    Route::post('/instrumen_penilaian', 'RawatJalanController@store_instrumen_penilaian');
-    Route::post('/diagnosis_tindakan_terapi', 'RawatJalanController@store_diagnosis_tindakan_terapi');
-    Route::post('/tindak_lanjut', 'RawatJalanController@store_tindak_lanjut');
+    // Route::get('/rj_asesmen_awal', 'RawatJalanController@asesmen_awal');    //will obsolete soon
+    // Route::post('/fisik_gizi', 'RawatJalanController@store_fisik_gizi');
+    // Route::post('/penilaian_tingkat_nyeri', 'RawatJalanController@store_penilaian_tingkat_nyeri');
+    // Route::post('/humpty_dumpty', 'RawatJalanController@store_humpty_dumpty');
+    // Route::post('/morse', 'RawatJalanController@store_morse');
+    // Route::post('/edmunson', 'RawatJalanController@store_edmunson');
+    // Route::post('/diagnosa_keperawatan', 'RawatJalanController@store_diagnosa_keperawatan');
+    // Route::post('/evaluasi_tindakan_keperawatan', 'RawatJalanController@store_evaluasi_tindakan_keperawatan');
+    // Route::post('/data_medis', 'RawatJalanController@store_data_medis');
+    // Route::post('/obat_saat_ini', 'RawatJalanController@store_obat_saat_ini');
+    // Route::post('/pemeriksaan_fisik', 'RawatJalanController@store_pemeriksaan_fisik');
+    // Route::post('/status_psikiatri', 'RawatJalanController@store_status_psikiatri');
+    // Route::post('/status_neurologi', 'RawatJalanController@store_status_neurologi');
+    // Route::post('/pemeriksaan_penunjang', 'RawatJalanController@store_pemeriksaan_penunjang');
+    // Route::post('/instrumen_penilaian', 'RawatJalanController@store_instrumen_penilaian');
+    // Route::post('/diagnosis_tindakan_terapi', 'RawatJalanController@store_diagnosis_tindakan_terapi');
+    // Route::post('/tindak_lanjut', 'RawatJalanController@store_tindak_lanjut');
 
     // ASESMEN GIGI
-    Route::get('/rj_asesmen_gigi', 'RawatJalanController@asesmen_gigi');
+    // Route::get('/rj_asesmen_gigi', 'RawatJalanController@asesmen_gigi');
 
     //FIX
     //DO  NOT  TOUCH!!!////
