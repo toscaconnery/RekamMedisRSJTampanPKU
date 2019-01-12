@@ -12,6 +12,7 @@ class RIEfekSampingController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
     	$this->data['title'] = 'PELAPORAN EFEK SAMPING OBAT KOMITE FARMASI DAN TERAPI';
     }
 

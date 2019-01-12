@@ -12,6 +12,7 @@ class RIPanssEcController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
     	$this->data['title'] = 'PANSS EC';
     }
 

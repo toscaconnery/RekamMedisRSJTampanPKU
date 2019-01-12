@@ -22,3 +22,24 @@
 <!-- Custom styles -->
 <link href="{{url('')}}/admin_bootstrap/css/style.css" rel="stylesheet">
 <link href="{{url('')}}/admin_bootstrap/css/style-responsive.css" rel="stylesheet" />
+
+{{-- <script src="{{url('')}}/testing/js/bootstrap-datepicker.min.js"></script> --}}
+
+{{-- datepicker --}}
+{{-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> --}}
+<script type="text/javascript" src="{{url('')}}/calendar/jquery.min.js"></script>
+<script type="text/javascript" src="{{url('')}}/calendar/datepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="{{url('')}}/calendar/datepicker.css">
+<link rel="stylesheet" href="{{url('')}}/calendar/bootstrap.min.css">
+{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
+
+<script type="text/javascript">
+	jQuery(function() {
+		$('.sandbox-container').datepicker({
+			'format' : 'dd/mm/yyyy',
+			'autoclose' : true,
+			'todayHighlight' : true,
+			'toggleActive': true
+		});
+	});
+</script>

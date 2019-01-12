@@ -27,6 +27,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
         $this->data['title'] = 'Asesmen Awal Pasien Tumbuh Kembang dan Edukasi Terpadu';
     }
 

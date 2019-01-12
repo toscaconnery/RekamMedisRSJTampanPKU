@@ -12,7 +12,8 @@ class RILembarKonsultasiController extends Controller
 {
     public function __construct()
     {
-    	$this->data['title'] = 'LEMBAR KONSULTASI';
+        $this->middleware('haspatient');
+    	$this->data['title'] = 'Lembar Konsultasi';
     }
 
     public function get_ri_lembar_konsultasi()

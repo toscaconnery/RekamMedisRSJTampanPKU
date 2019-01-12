@@ -14,6 +14,7 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
 {
 	public function __construct()
 	{
+        $this->middleware('haspatient');
 		$this->data['title'] = 'Asesmen Awal Pasien Rawat Darurat';
 	}
 

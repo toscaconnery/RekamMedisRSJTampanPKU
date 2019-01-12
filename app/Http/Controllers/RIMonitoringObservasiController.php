@@ -12,6 +12,7 @@ class RIMonitoringObservasiController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
     	$this->data['title'] = 'Monitoring dan Observasi Pasien Khusus';
     }
 

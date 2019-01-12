@@ -17,6 +17,7 @@ class RIPermintaanRohaniController extends Controller
 
     public function get_ri_permintaan_rohani()
     {
+        $this->middleware('haspatient');
     	return view('page.ri.permintaan_rohani', $this->data);
     }
 

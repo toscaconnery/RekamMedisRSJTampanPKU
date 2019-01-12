@@ -38,7 +38,7 @@
                 <tr>
                   <td>Diisi oleh Perawat</td>
                   <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$rj_asesmen_awal_perawat_petugas}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_pdf"><i class="icon_plus_alt2"></i></a>
@@ -50,7 +50,7 @@
                 <tr>
                   <td>Diisi oleh Dokter</td>
                   <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>rj_asesmen_awal_dokter_petugas</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_dokter"><i class="icon_plus_alt2"></i></a>

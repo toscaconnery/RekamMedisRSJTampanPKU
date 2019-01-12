@@ -8,6 +8,11 @@ use Session;
 
 class DocumentController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('haspatient');
+    }
+
     public function index(Request $request)
     {
     	if(Session::has('id_pasien')) {

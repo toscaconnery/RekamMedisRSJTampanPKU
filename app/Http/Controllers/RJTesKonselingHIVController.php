@@ -12,6 +12,7 @@ class RJTesKonselingHIVController extends Controller
 {
 	public function __construct()
 	{
+        $this->middleware('haspatient');
 		$this->data['title'] = "Tes & Konseling HIV";
 	}
 

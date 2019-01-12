@@ -12,7 +12,8 @@ class RIPersetujuanTindakanController extends Controller
 {
     public function __construct()
     {
-    	$this->data['title'] = 'PERSETUJUAN TINDAKAN KEDOKTERAN';
+        $this->middleware('haspatient');
+    	$this->data['title'] = 'Persetujuan Tindakan Kedokteran';
     }
 
     public function get_ri_persetujuan_tindakan()

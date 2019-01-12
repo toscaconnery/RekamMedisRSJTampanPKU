@@ -12,7 +12,8 @@ class RIInstruksiDoNotResucitateController extends Controller
 {
     public function __construct()
     {
-    	$this->data['title'] = 'INTRUKSI JANGAN DILAKUKAN RESUSITASI (DO NOT RESUCITATE)';
+        $this->middleware('haspatient');
+    	$this->data['title'] = 'Instruksi Jangan Dilakukan Resusitasi (Do Not Resucitate)';
     }
 
     public function get_ri_instruksi_do_not_resucitate()

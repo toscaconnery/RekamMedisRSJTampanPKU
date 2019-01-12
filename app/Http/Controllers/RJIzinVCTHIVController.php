@@ -12,6 +12,7 @@ class RJIzinVCTHIVController extends Controller
 {
 	public function __construct()
 	{
+        $this->middleware('haspatient');
 		$this->data['title'] = 'Transfer Pasien Internal Rumah Sakit';
 	}
 

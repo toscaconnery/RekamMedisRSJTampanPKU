@@ -11,6 +11,7 @@ class RISuicideFisikController extends Controller
 {
 	public function __construct()
     {
+        $this->middleware('haspatient');
         $this->data['title'] = 'ASESMEN SUICIDE DAN KEKERASAN FISIK RAWAT INAP';
     }
     

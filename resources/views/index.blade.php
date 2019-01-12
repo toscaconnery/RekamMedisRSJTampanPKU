@@ -178,6 +178,10 @@
       @include('sweetalert.error')
     @endif
 
+    @if(Session::has('pasien_belum_dipilih'))
+      @include('sweetalert.pasienbelumdipilih')
+    @endif
+
     
 </body>
 

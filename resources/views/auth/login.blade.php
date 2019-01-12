@@ -58,6 +58,11 @@
 						<button class="login100-form-btn" type="submit">
 							Login
 						</button>
+						<a href="{{url('register')}}" style="position: absolute; right: 90px;">
+							<button class="login100-form-btn" type="button">
+								Register
+							</button>
+						</a>
 					</div>
 				</form>
 			</div>

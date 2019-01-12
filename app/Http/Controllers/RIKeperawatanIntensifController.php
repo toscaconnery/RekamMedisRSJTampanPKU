@@ -17,6 +17,7 @@ class RIKeperawatanIntensifController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
     	return $this->data['title'] = 'Rencana Tindakan Keperawatan Intensif';
     }
 

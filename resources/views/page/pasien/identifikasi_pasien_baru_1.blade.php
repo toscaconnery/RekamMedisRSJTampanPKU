@@ -41,7 +41,7 @@
               <div class="form-group">
                 <label class="control-label col-lg-2" for="inputSuccess">Tanggal Lahir</label>
                 <div class="col-lg-5">
-                  <input type="string" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_lahir">
+                  <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_lahir">
                 </div>
               </div>
               <div class="form-group">

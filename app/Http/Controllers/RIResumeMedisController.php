@@ -12,6 +12,7 @@ class RIResumeMedisController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('haspatient');
         $this->data['title'] = 'Resume Rawat Inap';
     }
 

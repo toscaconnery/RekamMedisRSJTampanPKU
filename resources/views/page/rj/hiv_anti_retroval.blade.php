@@ -74,7 +74,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nama Ibu Kandung</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="nama_ibu_kandung">
+                    <input type="text" class="form-control" name="nama_ibu_kandung" value="{{$nama_ibu}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -86,7 +86,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">No. Telp. Pasien</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="no_telp">
+                    <input type="text" class="form-control" name="no_telp" value="{{$no_telp}}">
                   </div>
                 </div>
                 <div class="form-group">
@@ -164,11 +164,11 @@
                   <div class="col-lg-2">
                     <select class="form-control input-sm m-bot15" name="pendidikan">
                       <option disabled selected hidden>-</option>
-                      <option value="0">0 - Tidak Sekolah</option>
-                      <option value="1">1 - SD</option>
-                      <option value="2">2 - SMP</option>
-                      <option value="3">3 - SMA</option>
-                      <option value="4">4 - Akademi/PT</option>
+                      <option {{$pendidikan == 'Tidak Sekolah' ? 'selected' : ''}} value="0">0 - Tidak Sekolah</option>
+                      <option {{$pendidikan == 'SD' ? 'selected' : ''}} value="1">1 - SD</option>
+                      <option {{$pendidikan == 'SMP' ? 'selected' : ''}} value="2">2 - SMP</option>
+                      <option {{$pendidikan == 'SMA' ? 'selected' : ''}} value="3">3 - SMA</option>
+                      <option {{$pendidikan == 'Akademi' ? 'selected' : $pendidikan == 'Universitas' ? 'selected' : ''}} value="4">4 - Akademi/PT</option>
                     </select>
                   </div>
                 </div>
@@ -177,8 +177,8 @@
                   <div class="col-lg-2">
                     <select class="form-control input-sm m-bot15" name="pekerjaan">
                       <option disabled selected hidden>-</option>
-                      <option value="0">0 - Tidak Bekerja</option>
-                      <option value="1">1 - Bekerja</option>
+                      <option {{$pekerjaan == 'Tidak Kerja' ? 'selected' : ''}} value="0">0 - Tidak Bekerja</option>
+                      <option {{$pekerjaan != 'Tidak Kerja' ? 'selected' : ''}} value="1">1 - Bekerja</option>
                     </select>
                   </div>
                 </div>
@@ -647,7 +647,7 @@
                       <th colspan="7" style="text-align: center;">SUBSTITUSI dalam lini-1 SWITCH ke lini-2 STOP</th>
                     </tr>
                     <tr>
-                      <th style="width: 5%; text-align: center;">Tanggal</th>
+                      <th style="width: 10%; text-align: center;">Tanggal</th>
                       <th style="width: 15%; text-align: center;">Substitusi</th>
                       <th style="width: 15%; text-align: center;">Switch</th>
                       <th style="width: 15%; text-align: center;">Stop</th>
@@ -664,7 +664,7 @@
                         <input type="hidden" name="nama_panduan_orisinil_art_1" value="TDF+3TC+EFV">
                       </td>
                       <td>
-                        <input type="text" style="width:300%" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_art_1">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_art_1">
                       </td>
                       <td>
                         <select class="form-control" name="substitusi_art_1">
@@ -723,7 +723,7 @@
                         <input type="hidden" name="nama_panduan_orisinil_art_2" value="TDF+FTC+EFV">
                       </td>
                       <td>
-                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container"  name="tanggal_art_2">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_art_2">
                       </td>
                       <td>
                         <select class="form-control" name="substitusi_art_2">
@@ -1213,526 +1213,560 @@
                     </div>
                   </div>
                 </div>
-
               </div>
             </section>
 
+            <div class="panel-group m-bot20" id="accordion">
+              {{-- ////collapsible start//// --}}
+              <div class="panel panel-default" id="follow_up_1">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                      Follow Up 1
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Tanggal Kunjungan <small>(follow-up)</small></label>
+                      <div class="col-sm-8">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container tgl_kunjungan_follow_up" id="tgl_kunjungan_follow_up_1" name="tgl_kunjungan_follow_up_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Rencana Tanggal Kunjungan</label>
+                      <div class="col-sm-8">
+                        <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="rencana_tgl_kunjungan_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Pasien Rujuk Masuk</label>
+                      <div class="col-lg-2">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="prm_1" value="1">
+                            Ya
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="prm_1" value="0">
+                            Tidak
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Dengan ART</label>
+                      <div class="col-lg-2">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="drt_1" value="1">
+                            Ya
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="drt_1" value="0">
+                            Tidak
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Nama Klinik Sebelumnya</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="nama_klinik_sebelumnya_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">BB</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="bbf_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">TB untuk anak</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="tbf_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Status Fungsional</label>
+                      <div class="col-lg-2">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="sfu_1" value="0">
+                            1. Kerja
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="sfu_1" value="1">
+                            2. Ambulatori
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="sfu_1" value="2">
+                            3. Baring
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Stad Klinis</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="stad_klinis_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Hamil</label>
+                      <div class="col-lg-2">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" class="hkb" name="hkb_1" value="1">
+                            Ya
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" class="hkb" name="hkb_1" value="0">
+                            Tidak
+                          </label>
+                        </div>
+                      </div>
+                      <label class="col-sm-2 control-label">Metode KB</label>
+                      <div class="col-lg-4">
+                        <input type="text" class="form-control" class="mkb" id="mkb_1" name="mkb_1" disabled>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Infeksi Oportunistik</label>
+                      <div class="col-lg-4">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="infop_1_1">
+                            K - Kandidiasis
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="infop_1_2">
+                            D - Diare cryptosporidia
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="infop_1_3">
+                            Cr - Mining itis cryptococal
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="infop_1_4">
+                            PCP - Pneumocystis
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="infop_1_5">
+                            CMV - Cytomeg alovirus
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="infop_1_6">
+                            Lain-Lain
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="infop_1_7">
+                            P - Peniliciliosis
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="infop_1_8">
+                            Z - Herpes Zoster
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="infop_1_9">
+                            S - Herpessimpleks
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="infop_1_10">
+                            T - Toxoplasmosis
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="infop_1_11">
+                            H - Hepatitis
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Uraikan</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="keterangan_infop_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Obat untuk IO</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="obat_untuk_io_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Status TB</label>
+                      <div class="col-lg-9">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="stb_1" value="1">
+                            1. Tidak ada gejala/tanda
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="stb_1" value="2">
+                            2. Suspek TB (Rujuk ke klinik DOTS atau pemeriksaan sputum)
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="stb_1" value="3">
+                            3. Terapi TB
+                          </label> 
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="stb_1" value="4">
+                            4. Tidak dilakukan skrining
+                          </label> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Pengobatan Pencegahan PPK<br><small>Pengobatan Pencegahan dengan Kotrimoksazol</small></label>
+                      <div class="col-lg-2">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="ppk_1" value="1">
+                            Ya
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="ppk_1" value="0">
+                            Tidak
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">PP INH<br><small>Pengobatan Pencegahan dengan INH (isoniazid)</small></label>
+                      <div class="col-lg-2">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="inh_1" value="1">
+                            Ya
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="inh_1" value="0">
+                            Tidak
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Hasil Akhir<br> <small>(kode)</small></label>
+                      <div class="col-lg-9">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="hkr_1" value="1">
+                            1. Berobat
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="hkr_1" value="2">
+                            2. Gagal selama pemberian PP INH
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="hkr_1" value="3">
+                            3. Pindah
+                          </label> 
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="hkr_1" value="4">
+                            4. Meninggal
+                          </label> 
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="hkr_1" value="5">
+                            5. Efek samping Berat
+                          </label> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Obat ARV dan Dosis yang diberikan</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="obat_arv_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Sisa Obat</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="sisa_obat_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Adherence ART</label>
+                      <div class="col-sm-8">
+                        Periksalah adherence dengan menanyakan apakah pasien melupakan dosis obat. Tuliskan perkiraan tingkat adherence, misalnya (dosis 2 kali sehari)
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"></label>
+                      <div class="col-lg-9">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="adr_1" value="1">
+                            1. (> 95%) : artinya < 3 dosis lupa diminum dalam 30 hari
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="adr_1" value="2">
+                            2. (80-95%) : artinya 3-12 dosis lupa diminum dalam 30 hari
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="adr_1" value="3">
+                            3. (< 80%) : artinya > 12 dosis lupa diminum dalam 30 hari
+                          </label> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"></label>
+                      <div class="col-sm-8">
+                        Jika paduan ART yang diberikan terdiri dari berbagai dosis, maka pilihlah adherence obat yang terjelek.
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Efek Samping ART</label>
+                      <div class="col-lg-4">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_1">
+                            R = Ruam Kulit
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_2">
+                            Mua = Mual 
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_3">
+                            Mun = Muntah
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_4">
+                            D = Diare
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_5">
+                            N = Neuropati
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_6">
+                            Ikt = Ikterus
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_7">
+                            An = Anemi
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_8">
+                            Ll = Lelah
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_9">
+                            SK = Sakit Kepala
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_10">
+                            Dem = Demam
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_11">
+                            Hip = Hipertensifitas
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_12">
+                            Dep = Depresi
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_13">
+                            P = Pankreatitis
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_14">
+                            Lip = Lipodistofi
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_15">
+                            Ngan = Mengantuk
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="esart_1_16">
+                            Ln = Lain-lain
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Uraikan</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="keterangan_esart_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Jumlah CD4</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="jumlah_cd4_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Hasil Lab</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="hasil_lab_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Diberikan Kondom</label>
+                      <div class="col-lg-9">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="dkr_1" value="1">
+                            Ya
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="dkr_1" value="0">
+                            Tidak
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="dkr_1" value="2">
+                            Tidak Tersedia
+                          </label> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Jumlahnya</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="jumlah_kondom_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Rujuk ke Spesialis atau Masuk Rumah Sakit (MRS)</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" name="rsmrs_1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Akhir Follow-Up</label>
+                      <div class="col-lg-9">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="fll_1" value="1">
+                            M - Jika pasien meninggal
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="fll_1" value="2">
+                            LFU - Jika pasien > 3 bulan tidak datang ke layanan
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="fll_1" value="3">
+                            RK - Jika pasien dirujuk keluar
+                          </label> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{-- ////collapsible end//// --}}
+              <div id="last_row_follow_up">
+                <div class="btn-group">
+                  {{-- <button class="btn btn-primary" type="button" id="tambah_form_keluarga"><i class="icon_plus_alt2"></i> Tambah</button> --}}
+                  <button class="btn btn-primary" type="button" id="tambah_form_follow_up"><i class="icon_plus_alt2"></i> Tambah Follow Up</button>
+                </div>
+                <input type="hidden" name="jumlah_form_follow_up" id="jumlah_form_follow_up" value="1">
+              </div>
+            </div>
+
             <section class="panel">
-              <header class="panel-heading">Ikhtisar Follow-Up Perawatan Pasien HIV dan Terapi Antiretroviral (ART)</header>
+              <header class="panel-heading"></header>
               <div class="panel-body">
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Tanggal Kunjungan <small>(follow-up)</small></label>
-                  <div class="col-sm-8">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tgl_kunjungan_follow_up">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Rencana Tanggal Kunjungan</label>
-                  <div class="col-sm-8">
-                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="rencana_tgl_kunjungan">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Pasien Rujuk Masuk</label>
-                  <div class="col-lg-2">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="prm" value="1">
-                        Ya
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="prm" value="0">
-                        Tidak
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Dengan ART</label>
-                  <div class="col-lg-2">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="drt" value="1">
-                        Ya
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="drt" value="0">
-                        Tidak
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Nama Klinik Sebelumnya</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="nama_klinik_sebelumnya">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">BB</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="bbf">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">TB untuk anak</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="tbf">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Status Fungsional</label>
-                  <div class="col-lg-2">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="sfu" value="0">
-                        1. Kerja
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="sfu" value="1">
-                        2. Ambulatori
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="sfu" value="2">
-                        3. Baring
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Stad Klinis</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="stad_klinis">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Hamil/Metode KB</label>
-                  <div class="col-lg-2">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="hkb" value="1">
-                        Ya
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="hkb" value="0">
-                        Tidak
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Infeksi Oportunistik</label>
-                  <div class="col-lg-4">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="infop_1">
-                        K - Kandidiasis
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="infop_2">
-                        D - Diare cryptosporidia
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="infop_3">
-                        Cr - Mining itis cryptococal
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="infop_4">
-                        PCP - Pneumocystis
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="infop_5">
-                        CMV - Cytomeg alovirus
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="infop_6">
-                        Lain-Lain
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="infop_7">
-                        P - Peniliciliosis
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="infop_8">
-                        Z - Herpes Zoster
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="infop_9">
-                        S - Herpessimpleks
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="infop_10">
-                        T - Toxoplasmosis
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="infop_11">
-                        H - Hepatitis
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Uraikan</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_infop">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Obat untuk IO</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="obat_untuk_io">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Status TB</label>
-                  <div class="col-lg-9">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="stb" value="1">
-                        1. Tidak ada gejala/tanda
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="stb" value="2">
-                        2. Suspek TB (Rujuk ke klinik DOTS atau pemeriksaan sputum)
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="stb" value="3">
-                        3. Terapi TB
-                      </label> 
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="stb" value="4">
-                        4. Tidak dilakukan skrining
-                      </label> 
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Pengobatan Pencegahan PPK<br><small>Pengobatan Pencegahan dengan Kotrimoksazol</small></label>
-                  <div class="col-lg-2">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ppk" value="1">
-                        Ya
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ppk" value="0">
-                        Tidak
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">PP INH<br><small>Pengobatan Pencegahan dengan INH (isoniazid)</small></label>
-                  <div class="col-lg-2">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="inh" value="1">
-                        Ya
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="inh" value="0">
-                        Tidak
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Hasil Akhir<br> <small>(kode></small></label>
-                  <div class="col-lg-9">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="hkr" value="1">
-                        1. Berobat
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="hkr" value="2">
-                        2. Gagal selama pemberian PP INH
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="hkr" value="3">
-                        3. Pindah
-                      </label> 
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="hkr" value="4">
-                        4. Meninggal
-                      </label> 
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="hkr" value="5">
-                        5. Efek samping Berat
-                      </label> 
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Obat ARV dan Dosis yang diberikan</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="obat_arv">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Adherence ART</label>
-                  <div class="col-sm-8">
-                    Periksalah adherence dengan menanyakan apakah pasien melupakan dosis obat. Tuliskan perkiraan tingkat adherence, misalnya (dosis 2 kali sehari)
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label"></label>
-                  <div class="col-lg-9">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="adr" value="1">
-                        1. (> 95%) : artinya < 3 dosis lupa diminum dalam 30 hari
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="adr" value="2">
-                        2. (80-95%) : artinya 3-12 dosis lupa diminum dalam 30 hari
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="adr" value="3">
-                        3. (< 80%) : artinya > 12 dosis lupa diminum dalam 30 hari
-                      </label> 
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label"></label>
-                  <div class="col-sm-8">
-                    Jika paduan ART yang diberikan terdiri dari berbagai dosis, maka pilihlah adherence obat yang terjelek.
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Efek Samping ART</label>
-                  <div class="col-lg-4">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_1">
-                        R = Ruam Kulit
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_2">
-                        Mua = Mual 
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_3">
-                        Mun = Muntah
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_4">
-                        D = Diare
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_5">
-                        N = Neuropati
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_6">
-                        Ikt = Ikterus
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_7">
-                        An = Anemi
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_8">
-                        Ll = Lelah
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_9">
-                        SK = Sakit Kepala
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_10">
-                        Dem = Demam
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_11">
-                        Hip = Hipertensifitas
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_12">
-                        Dep = Depresi
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_13">
-                        P = Pankreatitis
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_14">
-                        Lip = Lipodistofi
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_15">
-                        Ngan = Mengantuk
-                      </label>
-                    </div>
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox" name="esart_16">
-                        Ln = Lain-lain
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Uraikan</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="keterangan_esart">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Jumlah CD4</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="jumlah_cd4">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Hasil Lab</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="hasil_lab">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Diberikan Kondom</label>
-                  <div class="col-lg-9">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="dkr" value="1">
-                        Ya
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="dkr" value="0">
-                        Tidak
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="dkr" value="2">
-                        Tidak Tersedia
-                      </label> 
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Jumlahnya</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="jumlah_kondom">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Rujuk ke Spesialis atau Masuk Rumah Sakit (MRS)</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" name="rsmrs">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 control-label">Akhir Follow-Up</label>
-                  <div class="col-lg-9">
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="fll" value="1">
-                        M - Jika pasien meninggal
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="fll" value="2">
-                        LFU - Jika pasien > 3 bulan tidak datang ke layanan
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="fll" value="3">
-                        RK - Jika pasien dirujuk keluar
-                      </label> 
-                    </div>
-                  </div>
-                </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Meninggal</label>
                   <div class="col-sm-8">
@@ -1759,6 +1793,8 @@
                 </div>
               </div>
             </section>
+
+
 
             <div>
               <button type="submit" class="btn btn-primary">Submit</button>
@@ -1793,5 +1829,32 @@
         });
       });
     </script>
-  </body>
-  <html>
+
+    {{-- menambah form follow up --}}
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#tambah_form_follow_up').click(function() {
+          var a = document.getElementById('jumlah_form_follow_up').value;
+          a = parseInt(a) + 1;
+          $('#last_row_follow_up').before('<div class="panel panel-default" id="follow_up_'+a+'"> <div class="panel-heading"> <h4 class="panel-title"> <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse'+a+'"> Follow Up '+a+'</a> </h4> </div> <div id="collapse'+a+'" class="panel-collapse collapse in"> <div class="panel-body"> <div class="form-group"> <label class="col-sm-2 control-label">Tanggal Kunjungan <small>(follow-up)</small></label> <div class="col-sm-8"> <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container tgl_kunjungan_follow_up" id="tgl_kunjungan_follow_up_'+a+'" name="tgl_kunjungan_follow_up_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Rencana Tanggal Kunjungan</label> <div class="col-sm-8"> <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="rencana_tgl_kunjungan_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Pasien Rujuk Masuk</label> <div class="col-lg-2"> <div class="radio"> <label> <input type="radio" name="prm_'+a+'" value="1"> Ya </label> </div> <div class="radio"> <label> <input type="radio" name="prm_'+a+'" value="0"> Tidak </label> </div> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Dengan ART</label> <div class="col-lg-2"> <div class="radio"> <label> <input type="radio" name="drt_'+a+'" value="1"> Ya </label> </div> <div class="radio"> <label> <input type="radio" name="drt_'+a+'" value="0"> Tidak </label> </div> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Nama Klinik Sebelumnya</label> <div class="col-sm-8"> <input type="text" class="form-control" name="nama_klinik_sebelumnya_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">BB</label> <div class="col-sm-8"> <input type="text" class="form-control" name="bbf_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">TB untuk anak</label> <div class="col-sm-8"> <input type="text" class="form-control" name="tbf_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Status Fungsional</label> <div class="col-lg-2"> <div class="radio"> <label> <input type="radio" name="sfu_'+a+'" value="0"> 1. Kerja </label> </div> <div class="radio"> <label> <input type="radio" name="sfu_'+a+'" value="1"> 2. Ambulatori </label> </div> <div class="radio"> <label> <input type="radio" name="sfu_'+a+'" value="2"> 3. Baring </label> </div> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Stad Klinis</label> <div class="col-sm-8"> <input type="text" class="form-control" name="stad_klinis_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Hamil</label> <div class="col-lg-2"> <div class="radio"> <label> <input type="radio" class="hkb" name="hkb_'+a+'" value="1"> Ya </label> </div> <div class="radio"> <label> <input type="radio" class="hkb" name="hkb_'+a+'" value="0"> Tidak </label> </div> </div> <label class="col-sm-2 control-label">Metode KB</label> <div class="col-lg-4"> <input type="text" class="form-control" class="mkb" id="mkb_'+a+'" name="mkb_'+a+'" disabled> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Infeksi Oportunistik</label> <div class="col-lg-4"> <div class="checkbox"> <label> <input type="checkbox" name="infop_'+a+'_1"> K - Kandidiasis </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="infop_'+a+'_2"> D - Diare cryptosporidia </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="infop_'+a+'_3"> Cr - Mining itis cryptococal </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="infop_'+a+'_4"> PCP - Pneumocystis </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="infop_'+a+'_5"> CMV - Cytomeg alovirus </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="infop_'+a+'_6"> Lain-Lain </label> </div> </div> <div class="col-lg-5"> <div class="checkbox"> <label> <input type="checkbox" name="infop_'+a+'_7"> P - Peniliciliosis </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="infop_'+a+'_8"> Z - Herpes Zoster </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="infop_'+a+'_9"> S - Herpessimpleks </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="infop_'+a+'_10"> T - Toxoplasmosis </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="infop_'+a+'_11"> H - Hepatitis </label> </div> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Uraikan</label> <div class="col-sm-8"> <input type="text" class="form-control" name="keterangan_infop_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Obat untuk IO</label> <div class="col-sm-8"> <input type="text" class="form-control" name="obat_untuk_io_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Status TB</label> <div class="col-lg-9"> <div class="radio"> <label> <input type="radio" name="stb_'+a+'" value="1"> 1. Tidak ada gejala/tanda </label> </div> <div class="radio"> <label> <input type="radio" name="stb_'+a+'" value="2"> 2. Suspek TB (Rujuk ke klinik DOTS atau pemeriksaan sputum) </label> </div> <div class="radio"> <label> <input type="radio" name="stb_'+a+'" value="3"> 3. Terapi TB </label> </div> <div class="radio"> <label> <input type="radio" name="stb_'+a+'" value="4"> 4. Tidak dilakukan skrining </label> </div> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Pengobatan Pencegahan PPK<br><small>Pengobatan Pencegahan dengan Kotrimoksazol</small></label> <div class="col-lg-2"> <div class="radio"> <label> <input type="radio" name="ppk_'+a+'" value="1"> Ya </label> </div> <div class="radio"> <label> <input type="radio" name="ppk_'+a+'" value="0"> Tidak </label> </div> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">PP INH<br><small>Pengobatan Pencegahan dengan INH (isoniazid)</small></label> <div class="col-lg-2"> <div class="radio"> <label> <input type="radio" name="inh_'+a+'" value="1"> Ya </label> </div> <div class="radio"> <label> <input type="radio" name="inh_'+a+'" value="0"> Tidak </label> </div> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Hasil Akhir<br> <small>(kode)</small></label> <div class="col-lg-9"> <div class="radio"> <label> <input type="radio" name="hkr_'+a+'" value="1"> 1. Berobat </label> </div> <div class="radio"> <label> <input type="radio" name="hkr_'+a+'" value="2"> 2. Gagal selama pemberian PP INH </label> </div> <div class="radio"> <label> <input type="radio" name="hkr_'+a+'" value="3"> 3. Pindah </label> </div> <div class="radio"> <label> <input type="radio" name="hkr_'+a+'" value="4"> 4. Meninggal </label> </div> <div class="radio"> <label> <input type="radio" name="hkr_'+a+'" value="5"> 5. Efek samping Berat </label> </div> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Obat ARV dan Dosis yang diberikan</label> <div class="col-sm-8"> <input type="text" class="form-control" name="obat_arv_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Sisa Obat</label> <div class="col-sm-8"> <input type="text" class="form-control" name="sisa_obat_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Adherence ART</label> <div class="col-sm-8"> Periksalah adherence dengan menanyakan apakah pasien melupakan dosis obat. Tuliskan perkiraan tingkat adherence, misalnya (dosis 2 kali sehari) </div> </div> <div class="form-group"> <label class="col-sm-2 control-label"></label> <div class="col-lg-9"> <div class="radio"> <label> <input type="radio" name="adr_'+a+'" value="1"> 1. (> 95%) : artinya < 3 dosis lupa diminum dalam 30 hari </label> </div> <div class="radio"> <label> <input type="radio" name="adr_'+a+'" value="2"> 2. (80-95%) : artinya 3-12 dosis lupa diminum dalam 30 hari </label> </div> <div class="radio"> <label> <input type="radio" name="adr_'+a+'" value="3"> 3. (< 80%) : artinya > 12 dosis lupa diminum dalam 30 hari </label> </div> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label"></label> <div class="col-sm-8"> Jika paduan ART yang diberikan terdiri dari berbagai dosis, maka pilihlah adherence obat yang terjelek. </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Efek Samping ART</label> <div class="col-lg-4"> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_1"> R = Ruam Kulit </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_2"> Mua = Mual </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_3"> Mun = Muntah </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_4"> D = Diare </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_5"> N = Neuropati </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_6"> Ikt = Ikterus </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_7"> An = Anemi </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_8"> Ll = Lelah </label> </div> </div> <div class="col-lg-5"> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_9"> SK = Sakit Kepala </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_10"> Dem = Demam </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_11"> Hip = Hipertensifitas </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_12"> Dep = Depresi </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_13"> P = Pankreatitis </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_14"> Lip = Lipodistofi </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_15"> Ngan = Mengantuk </label> </div> <div class="checkbox"> <label> <input type="checkbox" name="esart_'+a+'_16"> Ln = Lain-lain </label> </div> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Uraikan</label> <div class="col-sm-8"> <input type="text" class="form-control" name="keterangan_esart_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Jumlah CD4</label> <div class="col-sm-8"> <input type="text" class="form-control" name="jumlah_cd4_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Hasil Lab</label> <div class="col-sm-8"> <input type="text" class="form-control" name="hasil_lab_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Diberikan Kondom</label> <div class="col-lg-9"> <div class="radio"> <label> <input type="radio" name="dkr_'+a+'" value="1"> Ya </label> </div> <div class="radio"> <label> <input type="radio" name="dkr_'+a+'" value="0"> Tidak </label> </div> <div class="radio"> <label> <input type="radio" name="dkr_'+a+'" value="2"> Tidak Tersedia </label> </div> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Jumlahnya</label> <div class="col-sm-8"> <input type="text" class="form-control" name="jumlah_kondom_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Rujuk ke Spesialis atau Masuk Rumah Sakit (MRS)</label> <div class="col-sm-8"> <input type="text" class="form-control" name="rsmrs_'+a+'"> </div> </div> <div class="form-group"> <label class="col-sm-2 control-label">Akhir Follow-Up</label> <div class="col-lg-9"> <div class="radio"> <label> <input type="radio" name="fll_'+a+'" value="1"> M - Jika pasien meninggal </label> </div> <div class="radio"> <label> <input type="radio" name="fll_'+a+'" value="2"> LFU - Jika pasien > 3 bulan tidak datang ke layanan </label> </div> <div class="radio"> <label> <input type="radio" name="fll_'+a+'" value="3"> RK - Jika pasien dirujuk keluar </label> </div> </div> </div> </div> </div> </div>');
+          document.getElementById('jumlah_form_follow_up').value = a;
+        });
+      });
+    </script>
+
+    {{-- hamil --}}
+    <script type="text/javascript">
+      $(document).on('change', '.hkb', function() {
+        var text = $(this).attr('name');
+        var id_tag = text.substring(4);
+        var id_mkb = 'mkb_' + id_tag;
+        if(this.value == '1') {
+          $('#'+id_mkb).removeAttr('disabled');
+        }
+        else if (this.value == '0') {
+          $('#'+id_mkb).prop('disabled', true);
+        }
+      });
+    </script>
+</body>
+<html>

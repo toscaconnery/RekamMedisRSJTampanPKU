@@ -12,6 +12,7 @@ class RIRiwayatObatController extends Controller
 {
 	public function __construct()
 	{
+        $this->middleware('haspatient');
     	$this->data['title'] = 'Riwayat Penggunaan Obat (Rekonsiliasi Obat)';
 	}
 

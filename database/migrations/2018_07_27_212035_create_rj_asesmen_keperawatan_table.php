@@ -105,7 +105,7 @@ class CreateRJAsesmenKeperawatanTable extends Migration
             //evaluasi tindakan
             $table->text('implementasi')->nullable();
             $table->text('evaluasi')->nullable();
-
+            
             $table->timestamps();
         });
     }
