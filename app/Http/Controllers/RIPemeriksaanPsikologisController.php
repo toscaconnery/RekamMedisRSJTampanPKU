@@ -118,7 +118,7 @@ class RIPemeriksaanPsikologisController extends Controller
     	return redirect('daftar_dokumen');
     }
 
-    public function pdf_ri_psikologis()
+    public function ri_psikologis_pdf()
     {
         $this->get_ri_pemeriksaan_psikologis_data();
         ob_clean();

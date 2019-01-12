@@ -30,20 +30,16 @@
             <table class="table table-striped table-advance table-hover">
               <tbody>
                 <tr>
-                  <th><i class="icon_document_alt"></i> Dokumen</th>
-                  <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
-                  <th><i class="icon_profile"></i> Pengisi</th>
-                  <th><i class="icon_cogs"></i> Action</th>
-                </tr>
-                <tr>
                   <td>Pemeriksaan Psikologis</td>
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="{{url('')}}/ri_psikologis_pdf">PDF</a>
-                      <a class="btn btn-success" href="#">EDIT</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_pemeriksaan_psikologis_edit">Edit</i></a>
                     </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/ri_psikologis_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>

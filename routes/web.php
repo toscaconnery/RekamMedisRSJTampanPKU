@@ -1106,9 +1106,20 @@ Route::get('/ri_rencanaklien7', function () {
     return view('ri_rencanaklien7');
 });
 
+Route::get('/test_pdf', function () {
+    return view('test_pdf');
+});
 
+Route::get('/pdf_view', function () {
+    return view('pdf_view');
+});
 
+//dokumen rencana tindak keperawatan
+Route::get('/pdf_ri_tindak', 'Pdf_ri_Controller@pdf_ri_tindak');
 
+Route::get('/doc_ri_tindak', function () {
+    return view('/doc_ri_tindak');
+});
 
 // Route::get('/ri_panss_ec', function () {
 //     return view('ri_panss_ec');
@@ -1210,57 +1221,3 @@ Route::get('/ri_rencanaklien7', function () {
 // Route::get('/ri_transfer_eksternal', function () {
 //     return view('ri_transfer_eksternal');
 // });
-
-Route::get('/test_pdf', function () {
-    return view('test_pdf');
-});
-
-Route::get('/pdf_view', function () {
-    return view('pdf_view');
-});
-
-
-
-// 
-// pdf generate
-//
-
-
-
-
-
-//
-// Rawat Inap
-//
-
-
-
-
-
-
-
-
-
-
-
-//dokumen rencana tindak keperawatan
-Route::get('/pdf_ri_tindak', 'Pdf_ri_Controller@pdf_ri_tindak');
-
-Route::get('/doc_ri_tindak', function () {
-    return view('/doc_ri_tindak');
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

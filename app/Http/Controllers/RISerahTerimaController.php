@@ -42,7 +42,7 @@ class RISerahTerimaController extends Controller
         $daftar_dokumen->ri_serah_terima = True;
         $daftar_dokumen->save();
         
-    	return redirect('daftar_dokumen');
+    	return redirect('ri_serah_terima_read');
     }
 
     public function get_ri_serah_terima_data()
@@ -94,10 +94,8 @@ class RISerahTerimaController extends Controller
     	return redirect('daftar_dokumen');
     }
 
-    public function ri_serah_terima_pdf()
+    function convert()
     {
-        $this->get_ri_serah_terima_data();
-        
         if($this->data['jenis_kelamin']=='L')
         {
             $this->data['jenis_kelamin']='Laki-laki';
@@ -115,6 +113,13 @@ class RISerahTerimaController extends Controller
         {
             $this->data['jenis_kelamin_pasien']='Perempuan';
         }
+    }
+
+    public function ri_serah_terima_pdf()
+    {
+        $this->get_ri_serah_terima_data();
+        $this->convert();
+
         ob_clean();
 
         header('Content-type: application/pdf');
@@ -183,5 +188,3 @@ class RISerahTerimaController extends Controller
         $mpdf->Output('ri_serah_terima.pdf',\Mpdf\Output\Destination::INLINE);
     }
 }
-
-
