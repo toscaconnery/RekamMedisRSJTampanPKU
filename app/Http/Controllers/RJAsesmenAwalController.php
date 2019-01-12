@@ -36,6 +36,11 @@ class RJAsesmenAwalController extends Controller
 
     public function get_rj_asesmen_awal_perawat()
     {
+        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
+        $this->data['nama_perawat'] = $list_document->rj_asesmen_awal_perawat_petugas;
+        $this->data['nama_dokter'] = $list_document->rj_asesmen_awal_dokter_petugas;
+        $this->data['tanggal_perawat'] = $list_document->rj_asesmen_awal_perawat_date;
+        $this->data['tanggal_dokter'] = $list_document->rj_asesmen_awal_dokter_date;
         return view('page.rj.asesmen_awal_perawat', $this->data);
     }
 

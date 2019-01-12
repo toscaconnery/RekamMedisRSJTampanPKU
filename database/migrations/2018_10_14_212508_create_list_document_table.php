@@ -82,6 +82,8 @@ class CreateListDocumentTable extends Migration
 
             $table->string('rj_asesmen_awal_perawat_petugas',50)->nullable();
             $table->string('rj_asesmen_awal_dokter_petugas',50)->nullable();
+            $table->string('rj_asesmen_awal_perawat_date',50)->nullable();
+            $table->string('rj_asesmen_awal_dokter_date',50)->nullable();
             $table->string('rj_asesmen_awal_gigi_perawat_petugas',50)->nullable();
             $table->string('rj_asesmen_awal_gigi_dokter_petugas',50)->nullable();
             $table->string('rj_informasi_edukasi_petugas',50)->nullable();
