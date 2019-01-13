@@ -262,10 +262,10 @@
 
                     <tr>
                       <td style="vertical-align:middle">
-                        c. Lebih dari 70 tahun
+                        c. Lebih dari 80 tahun
                       </td>
                       <td style="text-align:center;">
-
+                        26
                       </td>
                       <td style="text-align:center;vertical-align:center">
                         <input type="checkbox" disabled class="form-control" {{isset($list_tanggal[0]) ? $laporan[$list_tanggal[0]]['p']['usia'] > 70 ? 'checked' : '' : ''}}>

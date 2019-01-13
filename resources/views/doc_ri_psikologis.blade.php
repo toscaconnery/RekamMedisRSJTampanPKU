@@ -12,8 +12,8 @@ header('Content-Type: application/pdf');
 <body style="">
 
 
-  <h2 align="center" style="font-size:110%;">EDUKASI PASIEN DAN KELUARGA</h2>
-  <p align="center" style="padding-top:-20px;">(Diisi oleh Pemberi Asuhan)</p>
+  <h2 align="center" style="font-size:110%;">PEMERIKSAAN PSIKOLOGIS</h2>
+  <p align="center" style="padding-top:-20px;">(Diisi oleh psikolog)</p>
   
   <div style="font-size: 85%;">  
   
