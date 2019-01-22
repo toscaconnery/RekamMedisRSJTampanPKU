@@ -93,6 +93,7 @@
                 <thead>
                     <tr>
                         <th><i class="icon_profile"></i> Nama Pasien</th>
+                        <th><i class="icon_profile"></i> Nomor RM</th>
                         <th><i class="icon_calendar"></i> Tanggal Lahir</th>
                         <th><i class="icon_pin_alt"></i> Alamat</th>
                         <th><i class="icon_cogs"></i> Action</th>
@@ -102,11 +103,12 @@
                   @foreach($pasien as $p)
                   <tr>
                     <td>{{$p->nama_pasien}}</td>
+                    <td></td>
                     <td>{{$p->tanggal_lahir}}</td>
                     <td>{{$p->alamat}}</td>
                     <td>
                       <div class="btn-group">
-                        <a class="btn btn-primary" href="{{url('')}}/put_selected_patient_id/{{$p->no_rm}}"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-primary btn-sm" href="{{url('')}}/put_selected_patient_id/{{$p->no_rm}}">Pilih Pasien</a>
                       </div>
                     </td>
                   </tr>

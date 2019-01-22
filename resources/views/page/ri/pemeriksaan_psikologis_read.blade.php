@@ -16,6 +16,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="page-header"><i class="fa fa-file-text-o"></i>PEMERIKSAAN PSIKOLOGIS</h3>
+          <a class="btn btn-default" href="{{url('')}}/ri_pemeriksaan_psikologis">Tambah Dokumen Baru</a>
         </div>
       </div>
       @include('layouts.bio')
@@ -34,7 +35,7 @@
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
                   <th><i class="icon_cogs"></i> Aksi</th>
-                  <th><i class="icon_document"></i> Dokumen</th>
+                  <th><i class="icon_document"></i> Cetak Dokumen</th>
                 </tr>
                 <tr>
                   <td>Pemeriksaan Psikologis</td>
