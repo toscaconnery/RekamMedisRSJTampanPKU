@@ -31,7 +31,7 @@
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
                   <th><i class="icon_cogs"></i> Aksi</th>
-                  <th><i class="icon_document"></i> Dokumen</th>
+                  <th><i class="icon_document"></i> Cetak Dokumen</th>
                 </tr>
                 <tr>
                   <td>Serah Terima Pasien Pulang</td>
