@@ -16,6 +16,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="page-header"><i class="fa fa-file-text-o"></i> PENUNDAAN PELAYANAN</h3>
+          <a class="btn btn-default" href="{{url('')}}/penundaan_pelayanan">Tambah Dokumen Baru</a>
         </div>
       </div>
       @include('layouts.bio')
@@ -33,7 +34,8 @@
                   <th><i class="icon_document_alt"></i> Dokumen</th>
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
-                  <th><i class="icon_cogs"></i> Action</th>
+                  <th><i class="icon_cogs"></i> Aksi</th>
+                  <th><i class="icon_document"></i> Cetak Dokumen</th>
                 </tr>
                 <tr>
                   <td>Penundaan Pelayanan</td>
@@ -41,9 +43,12 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="{{url('')}}/penundaan_pelayanan_pdf">PDF</a>
-                      <a class="btn btn-success" href="#">EDIT</a>
+                      <a class="btn btn-success" href="{{url('')}}/penundaan_pelayanan_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/penundaan_pelayanan_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>
@@ -169,6 +174,50 @@
                     <input type="text" disabled class="form-control" name="rs_tujuan" disabled value="{{$rs_tujuan}}">
                   </div>
                 </div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <header class="panel-heading">
+               
+              </header>
+              <div class="panel-body">
+                
+                <div class="form-group">
+                  <label class="control-label col-lg-2">Nama Pasien/Keluarga Pasien</label>
+                  <div class="col-lg-10">
+                    <input type="text" disabled class="form-control" name="sebab_lainnya" value="Butuh Isian">
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="control-label col-lg-2">Nama DPJP</label>
+                  <div class="col-lg-10">
+                    <input type="text" disabled class="form-control" name="" value="Butuh Isian">
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="control-label col-lg-2">Pemberi Informasi</label>
+                  <div class="col-lg-10">
+                    <input type="text" disabled class="form-control" name="" value="Butuh Isian">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-lg-2">Tanggal</label>
+                  <div class="col-lg-10">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="" required value="" disabled="">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-lg-2">Jam</label>
+                  <div class="col-lg-10">
+                    <input type="time" class="form-control" name="" required value="" disabled="">
+                  </div>
+                </div>
+
               </div>
             </section>
           </form>

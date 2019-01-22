@@ -16,6 +16,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="page-header"><i class="fa fa-file-text-o"></i> TRIASE PASIEN</h3>
+          <a class="btn btn-default" href="{{url('')}}/igd_triase">Tambah Dokumen Baru</a>
         </div>
       </div>
       @include('layouts.bio')
@@ -23,17 +24,15 @@
       <div class="row">
         <div class="col-lg-12">
           <section class="panel">
-            <header class="panel-heading">
-              Dokumen Triase Pasien
-            </header>
 
             <table class="table table-striped table-advance table-hover">
               <tbody>
-                <tr>
+                 <tr>
                   <th><i class="icon_document_alt"></i> Dokumen</th>
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
-                  <th><i class="icon_cogs"></i> Action</th>
+                  <th><i class="icon_cogs"></i> Aksi</th>
+                  <th><i class="icon_document"></i> Cetak Dokumen</th>
                 </tr>
                 <tr>
                   <td>Triase Pasien</td>
@@ -41,10 +40,11 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                      <a class="btn btn-primary" href="{{url('')}}/igd_triase_read">Lihat</a>
                     </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/igd_triase_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>
