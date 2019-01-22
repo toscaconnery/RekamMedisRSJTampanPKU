@@ -16,6 +16,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="page-header"><i class="fa fa-file-text-o"></i> PEMBERIAN INFORMASI</h3>
+          <a class="btn btn-default" href="{{url('')}}/ri_pemberian_informasi">Tambah Dokumen Baru</a>
         </div>
       </div>
       @include('layouts.bio')
@@ -33,7 +34,8 @@
                   <th><i class="icon_document_alt"></i> Dokumen</th>
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
-                  <th><i class="icon_cogs"></i> Action</th>
+                  <th><i class="icon_cogs"></i> Aksi</th>
+                  <th><i class="icon_document"></i> Cetak Dokumen</th>
                 </tr>
                 <tr>
                   <td>Pemberian Informasi</td>
@@ -41,9 +43,12 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="{{url('')}}/ri_informasi_pdf">PDF</a>
-                      <a class="btn btn-success" href="#">EDIT</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_pemberian_informasi_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/ri_pemberian_informasi_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>
@@ -67,7 +72,6 @@
                       <th style="width: 56%; text-align: center; vertical-align: middle;">Informasi yang disampaikan</th>
                       <th style="width: 15%; text-align: center; vertical-align: middle;">Pemberi Informasi</th>
                       <th style="width: 15%; text-align: center; vertical-align: middle;">Penerima Informasi</th>
-                      <th style="width: 4%; text-align: center; vertical-align: middle;">Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -82,7 +86,6 @@
                         </td>
                         <td><input type="text" disabled class="form-control" name="pemberi_{{$p['id_data']}}" required value="{{$p['pemberi']}}"></td>
                         <td><input type="text" disabled class="form-control" name="penerima_{{$p['id_data']}}" required value="{{$p['penerima']}}"></td>
-                        <td></td>
                       </tr>
                     @endforeach
                   </tbody>

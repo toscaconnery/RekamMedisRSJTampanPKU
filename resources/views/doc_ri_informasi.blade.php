@@ -17,7 +17,7 @@ header('Content-Type: application/pdf');
   <thead>
     <tr>
      <th class="big-box" width="15%">TANGGAL & JAM</th> 
-     <th class="big-box" width="20%">Informasi Yang disamp </th> 
+     <th class="big-box" width="20%">Informasi Yang disampaikan </th> 
      <th class="big-box" width="45%">Pemberi Informasi</th> 
      <th class="big-box" width="20%">VERIFIKASI DPJP</th> 
     </tr>
@@ -25,7 +25,7 @@ header('Content-Type: application/pdf');
   <tbody>
     @foreach($pasien as $p)
       <tr id="form_{{$p['id_data']}}">
-        <td class="box-c">{{$p['id_data']}}<br>{{$p['jam']}}</td>
+        <td class="box-c">{{$p['tanggal']}}<br>{{$p['jam']}}</td>
         <td class="box-c">{{$p['informasi']}}</td>
         <td class="box">{{$p['pemberi']}}</td>
         <td class="box-c" style="vertical-align:bottom"><br><br>{{$p['penerima']}}</td>

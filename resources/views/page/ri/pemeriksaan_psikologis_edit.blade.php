@@ -33,6 +33,7 @@
                   <th><i class="icon_document_alt"></i> Dokumen</th>
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
+                  <th><i class="icon_cogs"></i> Action</th>
                   <th><i class="icon_document"></i> Dokumen</th>
                 </tr>
                 <tr>
@@ -40,7 +41,12 @@
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>
-                    <a class="btn btn-default" href="{{url('')}}/ri_psikologis_pdf">Cetak</a>
+                    <div class="btn-group">
+                      <a class="btn btn-primary" href="{{url('')}}/ri_pemeriksaan_psikologis_read">Lihat</a>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/ri_pemeriksaan_psikologis_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>
