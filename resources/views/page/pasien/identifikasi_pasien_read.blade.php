@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="panel-body bio-graph-info">
-        <h1>No. RM : {{$no_rm}}</h1>
+        <h1>No. RM : {{str_pad($no_rm, 6, '0', STR_PAD_LEFT)}}</h1>
         <div class="row">
           <div class="bio-row">
             <p><span>Nama Pasien </span>: {{$nama_pasien}} </p>
@@ -51,7 +51,7 @@
                 <tr>
                   <td>Identifikasi Pasien</td>
                   <td>{{date('d/m/Y', strtotime($tanggal_pengisian))}}</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>

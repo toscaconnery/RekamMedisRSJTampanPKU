@@ -11,6 +11,7 @@ use App\Models\PenanggungJawab;
 use App\Models\ListDocument;
 use PDO;
 use Session;
+use Auth;
 
 class PasienController extends Controller
 {
@@ -99,14 +100,15 @@ class PasienController extends Controller
         $pasien->nama_pasien = $request->nama_pasien;
         $pasien->tanggal_lahir = $request->tanggal_lahir;
         $pasien->jenis_kelamin = $request->jenis_kelamin;
+        $pasien->petugas = Auth::user()->nama;
         $pasien->save();
 
         $this->data['no_rm'] = $pasien->no_rm;
-        $this->data['no_rm'] = $this->formating_no_rm($pasien->no_rm);
         $this->data['tanggal_pengisian'] = $pasien->created_at;
         $this->data['nama_pasien'] = $pasien->nama_pasien;
         $this->data['tanggal_lahir'] = $pasien->tanggal_lahir;
         $this->data['jenis_kelamin'] = $pasien->jenis_kelamin;
+        $this->data['nama_pengisi'] = $pasien->petugas;
 
         // $saved_data = DB::table('pasien')->where('nama_pasien', $request->nama_pasien)
         //                 ->where('tanggal_lahir', $request->tanggal_lahir)->first();
@@ -118,13 +120,6 @@ class PasienController extends Controller
         // $this->data['jenis_kelamin'] = $request->jenis_kelamin;
 
         return view('page.pasien.identifikasi_pasien_baru_2', $this->data);
-    }
-
-    public function formating_no_rm($arg1)
-    {
-        $new_format = str_pad($arg1, 6, '0', STR_PAD_LEFT);
-
-        return $new_format;
     }
 
     public function identifikasi_pasien_baru_final(Request $request)
@@ -167,6 +162,7 @@ class PasienController extends Controller
                 $pj->alamat = $request->alamat_pj[$index];
                 $pj->hubungan = $request->hubungan_pj[$index];
                 $pj->no_telp = $request->no_telp_pj[$index];
+                $pj->no_rm = $request->no_rm;
                 $pj->save();
             }
             $index++;
@@ -185,6 +181,7 @@ class PasienController extends Controller
         $this->data['tanggal_lahir'] = $pasien->tanggal_lahir;
         $this->data['jenis_kelamin'] = $pasien->jenis_kelamin;
         $this->data['tanggal_pengisian'] = $pasien->created_at;
+        $this->data['nama_pengisi'] = $pasien->petugas;
 
         $rincian_pasien = RincianPasien::where('no_rm', $id)->first();
         $this->data['no_telp'] = $rincian_pasien->no_telp;
@@ -203,7 +200,7 @@ class PasienController extends Controller
         $this->data['perubahan_rt'] = $rincian_pasien->perubahan_rt;
         $this->data['perubahan_rw'] = $rincian_pasien->perubahan_rw;
 
-        $pj = PenanggungJawab::where('id_regis', $id)->get();
+        $pj = PenanggungJawab::where('no_rm', $id)->get();
         $this->data['pj'] = array();
         foreach ($pj as $key => $value) {
             $this->data['pj'][$key] = array();
