@@ -55,7 +55,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-horizontal" method="post" action="ri_pemberian_informasi_edit">
+          <form class="form-horizontal" method="post" action="ri_informasi_edit">
             {{ csrf_field() }}
             <section class="panel">
               <header class="panel-heading">
