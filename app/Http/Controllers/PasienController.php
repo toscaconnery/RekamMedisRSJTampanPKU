@@ -88,7 +88,8 @@ class PasienController extends Controller
 
     public function identifikasi_pasien_baru_1()
     {
-        return view('page.pasien.identifikasi_pasien_baru_1');
+        $this->data['title'] = 'Identifikasi Pasien Baru';
+        return view('page.pasien.identifikasi_pasien_baru_1', $this->data);
     }
 
     public function identifikasi_pasien_baru_2(Request $request)
@@ -101,6 +102,7 @@ class PasienController extends Controller
         $pasien->save();
 
         $this->data['no_rm'] = $pasien->no_rm;
+        $this->data['no_rm'] = $this->formating_no_rm($pasien->no_rm);
         $this->data['tanggal_pengisian'] = $pasien->created_at;
         $this->data['nama_pasien'] = $pasien->nama_pasien;
         $this->data['tanggal_lahir'] = $pasien->tanggal_lahir;
@@ -116,6 +118,13 @@ class PasienController extends Controller
         // $this->data['jenis_kelamin'] = $request->jenis_kelamin;
 
         return view('page.pasien.identifikasi_pasien_baru_2', $this->data);
+    }
+
+    public function formating_no_rm($arg1)
+    {
+        $new_format = str_pad($arg1, 6, '0', STR_PAD_LEFT);
+
+        return $new_format;
     }
 
     public function identifikasi_pasien_baru_final(Request $request)
