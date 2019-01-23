@@ -1274,7 +1274,7 @@ class RJAsesmenAwalTumbuhKembangController extends Controller
         $this->data['tempat_belajar_sendiri']  = $this->yatidak($this->data['tempat_belajar_sendiri']);
         $this->data['les']  = $this->yatidak($this->data['les']);
 
-        if$this->data['bekerja_ketika_kasus'] == '1')
+        if($this->data['bekerja_ketika_kasus'] == '1')
         {
             $this->data['bekerja_ketika_kasus'] = 'Bekerja';
         }

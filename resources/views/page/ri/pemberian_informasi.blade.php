@@ -45,7 +45,7 @@
                     </div>
                   </td>
                   <td>
-                    <a class="btn btn-default" href="{{url('')}}/ri_informasi_pdf">Cetak</a>
+                    <a class="btn btn-default" href="{{url('')}}/rj_tumbuh_kembang_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>

@@ -16,6 +16,11 @@
     <div class="row">
       <div class="col-lg-12">
         <h3 class="page-header"><i class="fa fa-file-text-o"></i> ASESMEN AWAL PASIEN TUMBUH KEMBANG DAN EDUKASI TERPADU</h3>
+        <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_dokter">Tambah Dokumen Baru [Dokter]</a>
+        <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikolog">Tambah Dokumen Baru [Psikolog]</a>
+        <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikiatri">Tambah Dokumen Baru [Psikiatri]</a>
+        <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_klinik">Tambah Dokumen Baru [Klinik]</a>
+        <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_fisioterapi">Tambah Dokumen Baru [Fisioterapi]</a>
       </div>
     </div>
     @include('layouts.bio')
@@ -23,9 +28,6 @@
     <div class="row">
       <div class="col-lg-12">
         <section class="panel">
-          <header class="panel-heading">
-            Dokumen Asesmen Awal Pasien Tumbuh Kembang dan Edukasi Terpadu
-          </header>
 
           <table class="table table-striped table-advance table-hover">
             <tbody>
