@@ -45,7 +45,7 @@
                     </div>
                   </td>
                   <td>
-                    <a class="btn btn-default" href="{{url('')}}/doc_rj_asesmen">Cetak</a>
+                    <a class="btn btn-default" href="{{url('')}}/rj_asesmen_pdf">Cetak</a>
                   </td>
                 </tr>
                 <tr>
@@ -59,7 +59,7 @@
                     </div>
                   </td>
                   <td>
-                    <a class="btn btn-default" href="{{url('')}}/doc_rj_asesmen">Cetak</a>
+                    <a class="btn btn-default" href="{{url('')}}/rj_asesmen_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>
