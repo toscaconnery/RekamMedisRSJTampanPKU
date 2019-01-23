@@ -36,6 +36,7 @@ class RJAsesmenAwalController extends Controller
 
     public function get_rj_asesmen_awal_perawat()
     {
+        $id_pasien = Session::get('id_pasien');
         $list_document = ListDocument::where('id_regis', $id_pasien)->first();
         $this->data['nama_perawat'] = $list_document->rj_asesmen_awal_perawat_petugas;
         $this->data['nama_dokter'] = $list_document->rj_asesmen_awal_dokter_petugas;

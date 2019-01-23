@@ -16,6 +16,8 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="page-header"><i class="fa fa-file-text-o"></i> ASESMEN AWAL RAWAT JALAN</h3>
+          <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_dokter">Tambah Dokumen Baru [Dokter]</a>
+          <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_perawat">Tambah Dokumen Baru [Perawat]</a>
         </div>
       </div>
       @include('layouts.bio')
@@ -23,9 +25,6 @@
       <div class="row">
         <div class="col-lg-12">
           <section class="panel">
-            <header class="panel-heading">
-              Dokumen Asesmen Awal Rawat Jalan
-            </header>
 
             <table class="table table-striped table-advance table-hover">
               <tbody>
@@ -33,7 +32,8 @@
                   <th><i class="icon_document_alt"></i> Dokumen</th>
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
-                  <th><i class="icon_cogs"></i> Action</th>
+                  <th><i class="icon_cogs"></i> Aksi</th>
+                  <th><i class="icon_document"></i> Cetak Dokumen</th>
                 </tr>
                 <tr>
                   <td>Diisi oleh Perawat</td>
@@ -41,10 +41,12 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_pdf"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="{{url('')}}/rj_asesmen_awal_perawat"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="{{url('')}}/view_rj_asesmen_awal_perawat"><i class="icon_check_alt2"></i></a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_asesmen_awal_perawat_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/doc_rj_asesmen">Cetak</a>
                   </td>
                 </tr>
                 <tr>
@@ -53,9 +55,12 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_dokter"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="{{url('')}}/view_rj_asesmen_awal_dokter"><i class="icon_check_alt2"></i></a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_asesmen_awal_dokter_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/doc_rj_asesmen">Cetak</a>
                   </td>
                 </tr>                  
               </tbody>
