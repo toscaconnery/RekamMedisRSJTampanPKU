@@ -16,7 +16,6 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="page-header"><i class="fa fa-file-text-o"></i> ASESMEN WAJIB LAPOR DAN REHABILITASI MEDIS</h3>
-          <a class="btn btn-default" href="{{url('')}}/rj_lapor_rehabilitasi">Tambah Dokumen Baru</a>
         </div>
       </div>
       @include('layouts.bio')
@@ -40,7 +39,10 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/rj_lapor_rehabilitasi">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/rj_lapor_rehabilitasi_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_lapor_rehabilitasi_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>

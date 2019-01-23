@@ -39,6 +39,7 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/ri_pemeriksaan_psikologis">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/ri_pemeriksaan_psikologis_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/ri_pemeriksaan_psikologis_edit">Edit</i></a>
                       <a class="btn btn-danger" href="#">Hapus</a>

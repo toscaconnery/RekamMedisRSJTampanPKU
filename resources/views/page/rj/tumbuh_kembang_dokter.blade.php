@@ -66,7 +66,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>Dokter</td>
+                  <td>Psikiatri</td>
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>
@@ -82,7 +82,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>Dokter</td>
+                  <td>Klinik</td>
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>
@@ -98,7 +98,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>Dokter</td>
+                  <td>Fisioterapi</td>
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>

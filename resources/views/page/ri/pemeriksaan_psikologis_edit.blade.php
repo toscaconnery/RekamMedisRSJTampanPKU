@@ -16,7 +16,6 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="page-header"><i class="fa fa-file-text-o"></i>PEMERIKSAAN PSIKOLOGIS</h3>
-          <a class="btn btn-default" href="{{url('')}}/ri_pemeriksaan_psikologis">Tambah Dokumen Baru</a>
         </div>
       </div>
       @include('layouts.bio')
@@ -24,7 +23,7 @@
       <div class="row">
         <div class="col-lg-12">
           <section class="panel">
-          
+
             <table class="table table-striped table-advance table-hover">
               <tbody>
                 <tr>
@@ -40,11 +39,14 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/ri_pemeriksaan_psikologis">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/ri_pemeriksaan_psikologis_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_pemeriksaan_psikologis_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>
-                    <a class="btn btn-default" href="{{url('')}}/ri_pemeriksaan_psikologis_pdf">Cetak</a>
+                    <a class="btn btn-default" href="{{url('')}}/ri_psikologis_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>

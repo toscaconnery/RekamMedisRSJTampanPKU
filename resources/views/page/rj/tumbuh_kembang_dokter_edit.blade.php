@@ -16,11 +16,6 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="page-header"><i class="fa fa-file-text-o"></i> ASESMEN AWAL PASIEN TUMBUH KEMBANG DAN EDUKASI TERPADU</h3>
-          <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_dokter">Tambah Dokumen Baru [Dokter]</a>
-          <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikolog">Tambah Dokumen Baru [Psikolog]</a>
-          <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikiatri">Tambah Dokumen Baru [Psikiatri]</a>
-          <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_klinik">Tambah Dokumen Baru [Klinik]</a>
-          <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_fisioterapi">Tambah Dokumen Baru [Fisioterapi]</a>
         </div>
       </div>
       @include('layouts.bio')
@@ -39,12 +34,79 @@
                   <th><i class="icon_document"></i> Cetak Dokumen</th>
                 </tr>
                 <tr>
-                  <td>Asesmen Awal Pasien Tumbuh Kembang dan Edukasi Terpadu</td>
+                  <td>Dokter</td>
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_dokter">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_dokter_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_dokter_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/rj_tumbuhkembang_pdf">Cetak</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Psikolog</td>
+                  <td>20/08/2018</td>
+                  <td>[Nama Pengisi]</td>
+                  <td>
+                    <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikolog">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikolog_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikolog_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/rj_tumbuhkembang_pdf">Cetak</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Psikiatri</td>
+                  <td>20/08/2018</td>
+                  <td>[Nama Pengisi]</td>
+                  <td>
+                    <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikiatri">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikiatri_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_psikiatri_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/rj_tumbuhkembang_pdf">Cetak</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Klinik</td>
+                  <td>20/08/2018</td>
+                  <td>[Nama Pengisi]</td>
+                  <td>
+                    <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_klinik">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_klinik_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_klinik_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/rj_tumbuhkembang_pdf">Cetak</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Fisioterapi</td>
+                  <td>20/08/2018</td>
+                  <td>[Nama Pengisi]</td>
+                  <td>
+                    <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_fisioterapi">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_fisioterapi_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_asesmen_awal_tumbuh_kembang_fisioterapi_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>

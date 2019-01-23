@@ -9,6 +9,7 @@ use App\Models\IGDTindakanTerapi;
 use App\Models\IGDObatSaatIni;
 use App\Models\ListDocument;
 use Session;
+use View;
 
 class IGDAsesmenAwalRawatDaruratController extends Controller
 {
@@ -2543,7 +2544,7 @@ class IGDAsesmenAwalRawatDaruratController extends Controller
         $this->get_igd_asesmen_awal_rawat_darurat_perawat_data();
         $this->get_igd_asesmen_awal_rawat_darurat_dokter_data();
         
-        $this->convert()
+        $this->convert();
         ob_clean();
 
         header('Content-type: application/pdf');

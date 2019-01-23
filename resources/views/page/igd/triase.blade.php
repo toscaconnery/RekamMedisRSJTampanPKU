@@ -39,6 +39,7 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/igd_triase">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/igd_triase_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/igd_triase_edit">Edit</i></a>
                       <a class="btn btn-danger" href="#">Hapus</a>

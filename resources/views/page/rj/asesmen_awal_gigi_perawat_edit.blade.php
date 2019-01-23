@@ -16,12 +16,10 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="page-header"><i class="fa fa-file-text-o"></i> ASESMEN AWAL PASIEN GIGI RAWAT JALAN</h3>
-          <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_gigi_dokter">Tambah Dokumen Baru [Dokter]</a>
-          <a class="btn btn-default" href="{{url('')}}/rj_asesmen_awal_gigi_perawat">Tambah Dokumen Baru [Perawat]</a>
         </div>
       </div>
       @include('layouts.bio')
-
+      
       <div class="row">
         <div class="col-lg-12">
           <section class="panel">
@@ -36,18 +34,15 @@
                   <th><i class="icon_document"></i> Cetak Dokumen</th>
                 </tr>
                 <tr>
-                  <td>Diisi oleh Perawat</td>
+                  <td>Perawat</td>
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_perawat"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="{{url('')}}/view_rj_asesmen_awal_perawat"><i class="icon_check_alt2"></i></a>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/rj_asesmen_awal_gigi_perawat">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_gigi_perawat_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_asesmen_awal_gigi_perawat_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>
@@ -55,12 +50,15 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>Diisi oleh Dokter</td>
+                  <td>Dokter</td>
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/rj_asesmen_awal_gigi_dokter">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/rj_asesmen_awal_gigi_dokter_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_asesmen_awal_gigi_dokter_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>
