@@ -23,9 +23,6 @@
       <div class="row">
         <div class="col-lg-12">
           <section class="panel">
-            <header class="panel-heading">
-              Dokumen Asesmen Awal Pasien Rawat Darurat
-            </header>
 
             <table class="table table-striped table-advance table-hover">
               <tbody>
@@ -33,17 +30,39 @@
                   <th><i class="icon_document_alt"></i> Dokumen</th>
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
-                  <th><i class="icon_cogs"></i> Action</th>
+                  <th><i class="icon_cogs"></i> Aksi</th>
+                  <th><i class="icon_document"></i> Cetak Dokumen</th>
                 </tr>
                 <tr>
-                  <td>Asesmen Awal Pasien Rawat Darurat</td>
+                  <td>Dokter</td>
                   <td>20/08/2018</td>
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="{{url('')}}/igd_asesmen_pdf">PDF</a>
-                      <a class="btn btn-success" href="#">EDIT</a>
+                      <a class="btn btn-info" href="{{url('')}}/igd_asesmen_awal_rawat_darurat_dokter">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/igd_asesmen_awal_rawat_darurat_dokter_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/igd_asesmen_awal_rawat_darurat_dokter_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/igd_asesmen_pdf">Cetak</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Perawat</td>
+                  <td>20/08/2018</td>
+                  <td>[Nama Pengisi]</td>
+                  <td>
+                    <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/igd_asesmen_awal_rawat_darurat_perawat">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/igd_asesmen_awal_rawat_darurat_perawat_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/igd_asesmen_awal_rawat_darurat_perawat_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/igd_asesmen_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>
@@ -960,7 +979,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 control-label">Axies 3</label>
+                  <label class="col-sm-2 control-label">Axis 3</label>
                   <div class="col-sm-8">
                     <input disabled type="text" class="form-control" name="axis_3" value="{{$axis_3}}">
                   </div>
@@ -1124,6 +1143,7 @@
                           Lainnya
                         </label>
                       </div>
+                      <br>
                       <div class="col-lg-9">
                         <input disabled type="text" class="form-control" name="alasan_menolak_lainnya" placeholder="Sebutkan" value="{{$alasan_menolak_lainnya}}">
                       </div>

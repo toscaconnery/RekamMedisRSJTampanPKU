@@ -39,6 +39,7 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
+                      <a class="btn btn-default" href="{{url('')}}/ri_serah_terima">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/ri_serah_terima_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/ri_serah_terima_edit">Edit</i></a>
                       <a class="btn btn-danger" href="#">Hapus</a>

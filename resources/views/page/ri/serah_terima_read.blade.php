@@ -16,7 +16,6 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="page-header"><i class="fa fa-file-text-o"></i>FORMULIR SERAH TERIMA PASIEN PULANG</h3>
-          <a class="btn btn-default" href="{{url('')}}/ri_serah_terima">Tambah Dokumen Baru</a>
         </div>
       </div>
       @include('layouts.bio')
@@ -33,7 +32,6 @@
                   <th><i class="icon_profile"></i> Pengisi</th>
                   <th><i class="icon_cogs"></i> Aksi</th>
                   <th><i class="icon_document"></i> Cetak Dokumen</th>
-
                 </tr>
                 <tr>
                   <td>Serah Terima Pasien Pulang</td>
@@ -41,6 +39,8 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
+                      <a class="btn btn-default" href="{{url('')}}/ri_serah_terima">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_serah_terima_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/ri_serah_terima_edit">Edit</i></a>
                       <a class="btn btn-danger" href="#">Hapus</a>
                     </div>

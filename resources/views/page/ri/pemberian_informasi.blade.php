@@ -39,13 +39,14 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/ri_pemberian_informasi">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/ri_pemberian_informasi_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/ri_pemberian_informasi_edit">Edit</i></a>
                       <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>
-                    <a class="btn btn-default" href="{{url('')}}/ri_informasi_pdf">Cetak</a>
+                    <a class="btn btn-default" href="{{url('')}}/rj_tumbuh_kembang_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>

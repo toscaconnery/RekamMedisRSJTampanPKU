@@ -39,9 +39,10 @@
                   <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" disabled href="{{url('')}}/igd_triase_read">Lihat</a>
-                      <a class="btn btn-success" disabled href="{{url('')}}/igd_triase_edit">Edit</i></a>
-                      <a class="btn btn-danger" disabled href="#">Hapus</a>
+                      <a class="btn btn-info" href="{{url('')}}/igd_triase">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/igd_triase_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/igd_triase_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>

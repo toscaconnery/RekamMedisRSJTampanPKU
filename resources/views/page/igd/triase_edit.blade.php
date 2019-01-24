@@ -16,7 +16,6 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="page-header"><i class="fa fa-file-text-o"></i> TRIASE PASIEN</h3>
-          <a class="btn btn-default" href="{{url('')}}/igd_triase">Tambah Dokumen Baru</a>
         </div>
       </div>
       @include('layouts.bio')
@@ -27,7 +26,7 @@
 
             <table class="table table-striped table-advance table-hover">
               <tbody>
-                 <tr>
+                <tr>
                   <th><i class="icon_document_alt"></i> Dokumen</th>
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
@@ -40,7 +39,10 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/igd_triase">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/igd_triase_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/igd_triase_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>
