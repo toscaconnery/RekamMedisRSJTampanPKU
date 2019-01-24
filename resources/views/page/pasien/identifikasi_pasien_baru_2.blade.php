@@ -50,7 +50,7 @@
                 </tr>
                 <tr>
                   <td>Identifikasi Pasien</td>
-                  <td>{{date('d/m/Y', strtotime($tanggal_pengisian))}}</td>
+                  <td>{{date('j F Y', strtotime($tanggal_pengisian))}}</td>
                   <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">

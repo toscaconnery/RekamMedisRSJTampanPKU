@@ -32,6 +32,7 @@ class RJAsesmenAwalController extends Controller
     {
         $this->middleware('haspatient');
         $this->data['title'] = 'Asesmen Awal Pasien Rawat Jalan';
+        $this->id_pasien = Session::get('id_pasien');
     }
 
     public function get_rj_asesmen_awal_perawat()
@@ -47,7 +48,22 @@ class RJAsesmenAwalController extends Controller
 
     public function get_rj_asesmen_awal_dokter()
     {
-    	return view('page.rj.asesmen_awal_dokter', $this->data);
+        //cek_apakah sudah ada data
+        $asesmen_dokter = RJAsesmenDokter::where('id_regis', $this->id_pasien)->first();
+        if (!$asesmen_dokter) {
+            $asesmen_awal_perawat = RJAsesmenKeperawatan::where('id_regis', $this->id_pasien)->first();
+            $this->data['tanggal_pengisian_perawat'] = $asesmen_awal_perawat ? date('j F Y', strtotime($asesmen_awal_perawat->created_at)) : '';
+            $this->data['tanggal_pengisian_dokter']  = '';
+            $this->data['nama_pengisi_perawat']      = $asesmen_awal_perawat ?  $asesmen_awal_perawat->petugas : '';
+            $this->data['nama_pengisi_dokter']       = '';
+            // dd($this->data['tanggal_pengisian_perawat']); 
+            return view('page.rj.asesmen_awal_dokter', $this->data);
+        }
+        else {
+            return response('Can not');
+        }
+        dd($asesmen_dokter);
+    	
     }
 
     public function post_rj_asesmen_awal_dokter(Request $request)

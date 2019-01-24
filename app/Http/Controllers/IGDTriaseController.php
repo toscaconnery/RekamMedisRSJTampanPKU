@@ -7,6 +7,7 @@ use App\Models\IGDTriase;
 use App\Models\ListDocument;
 use Session;
 use View;
+use Auth;
 
 class IGDTriaseController extends Controller
 {
@@ -18,7 +19,8 @@ class IGDTriaseController extends Controller
     
     public function get_igd_triase()
     {
-    	return view('page.igd.triase');
+        $this->data['nama_pengisi'] = Auth::user()->nama;
+    	return view('page.igd.triase', $this->data);
     }
 
     public function post_igd_triase(Request $request)
@@ -29,6 +31,7 @@ class IGDTriaseController extends Controller
     	$data->tanggal_masuk = $request->tanggal_masuk;
     	$data->jam = $request->jam;
     	$data->keluhan_utama = $request->keluhan_utama;
+        $data->petugas = Auth::user()->nama;
     	if(isset($request->doa)) {
     		$data->doa = True;
     	}
@@ -186,6 +189,8 @@ class IGDTriaseController extends Controller
         $this->data['keluhan_utama'] = $pasien->keluhan_utama;
         $this->data['doa'] = $pasien->doa;
         $this->data['jenis'] = $pasien->jenis;
+        $this->data['tanggal_pengisian'] = $pasien->created_at;
+        $this->data['nama_pengisi'] = $pasien->petugas;
 
         $this->data['tekanan_darah'] = $pasien->tekanan_darah;
         $this->data['henti_jantung'] = $pasien->henti_jantung;
