@@ -23,27 +23,31 @@
     <div class="row">
       <div class="col-lg-12">
         <section class="panel">
-          <header class="panel-heading">
-            Asesmen Suicide dan Kekerasan Fisik Rawat Inap
-          </header>
+
           <table class="table table-striped table-advance table-hover">
             <tbody>
               <tr>
-                <th><i class="icon_document_alt"></i> Dokumen</th>
-                <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
-                <th><i class="icon_profile"></i> Pengisi</th>
-                <th><i class="icon_cogs"></i> Action</th>
-              </tr>
+                  <th><i class="icon_document_alt"></i> Dokumen</th>
+                  <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
+                  <th><i class="icon_profile"></i> Pengisi</th>
+                  <th><i class="icon_cogs"></i> Aksi</th>
+                  <th><i class="icon_document"></i> Cetak Dokumen</th>
+                </tr>
               <tr>
                 <td>Suicide dan Kekerasan Fisik</td>
                 <td>20/08/2018</td>
                 <td>[Nama Pengisi]</td>
                 <td>
-                  <div class="btn-group">
-                     <a class="btn btn-primary" href="{{url('')}}/ri_suicide_pdf">PDF</a>
-                      <a class="btn btn-danger" href="#">EDIT</i></a>
-                  </div>
-                </td>
+                    <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/ri_suicide_fisik">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_suicide_fisik_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_suicide_fisik_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/ri_suicide_pdf">Cetak</a>
+                  </td>
               </tr>
             </tbody>
           </table>

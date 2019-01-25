@@ -23,28 +23,31 @@
     <div class="row">
       <div class="col-lg-12">
         <section class="panel">
-          <header class="panel-heading">
-            Asesmen Suicide dan Kekerasan Fisik Rawat Inap
-          </header>
+
           <table class="table table-striped table-advance table-hover">
             <tbody>
               <tr>
-                <th><i class="icon_document_alt"></i> Dokumen</th>
-                <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
-                <th><i class="icon_profile"></i> Pengisi</th>
-                <th><i class="icon_cogs"></i> Action</th>
-              </tr>
+                  <th><i class="icon_document_alt"></i> Dokumen</th>
+                  <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
+                  <th><i class="icon_profile"></i> Pengisi</th>
+                  <th><i class="icon_cogs"></i> Aksi</th>
+                  <th><i class="icon_document"></i> Cetak Dokumen</th>
+                </tr>
               <tr>
                 <td>Suicide dan Kekerasan Fisik</td>
                 <td>20/08/2018</td>
                 <td>[Nama Pengisi]</td>
                 <td>
-                  <div class="btn-group">
-                    <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                    <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                    <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
-                  </div>
-                </td>
+                    <div class="btn-group">
+                      <a class="btn btn-info" href="{{url('')}}/ri_suicide_fisik">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_suicide_fisik_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_suicide_fisik_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
+                    </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/ri_suicide_pdf">Cetak</a>
+                  </td>
               </tr>
             </tbody>
           </table>
@@ -417,6 +420,36 @@
           </section>
         </div>
       </div>
+
+      <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <div class="panel-body">
+                <div class="form-group">
+                  <label class="col-sm-3 control-label"> LEVEL OF SUICIDE RISK RISK <span style="font-style: italic;">(Total Score)</span></label>
+                  <div class="col-sm-1">
+                    <input type="text" style="width: 3em;" class="form-control" readonly>
+                  </div>
+                  <div class="checkbox-inline">
+                    <label style="margin-right: 4em;">
+                      <input type="checkbox" name="suicide_level_1" id="suicide_level" disabled>
+                      LOW ( &#x3c;7 )
+                    </label>
+                    <label style="margin-right: 4em;">
+                      <input type="checkbox" name="suicide_level_2" id="suicide_level" disabled>
+                      MODERATE ( 7-14 )
+                    </label>
+                    <label style="margin-right: 4em;">
+                      <input type="checkbox" name="suicide_level_3" id="suicide_level" disabled>
+                      HIGH ( &#x3e;14 )
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
       <div class="row">
         <div class="col-lg-12">
           <div class="row">
@@ -877,6 +910,35 @@
           </section>
         </div>
       </div>
+
+      <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <div class="panel-body">
+                <div class="form-group">
+                  <label class="col-sm-3 control-label"> LEVEL OF VIOLENCE RISK <span style="font-style: italic;">(Total Score)</span></label>
+                  <div class="col-sm-1">
+                    <input type="text" style="width: 3em;" class="form-control" readonly>
+                  </div>
+                  <div class="checkbox-inline">
+                    <label style="margin-right: 4em;">
+                      <input type="checkbox" name="violence_level_1" id="violence_level" disabled>
+                      LOW ( &#x3c;7 )
+                    </label>
+                    <label style="margin-right: 4em;">
+                      <input type="checkbox" name="violence_level_2" id="violence_level" disabled>
+                      MODERATE ( 7-14 )
+                    </label>
+                    <label style="margin-right: 4em;">
+                      <input type="checkbox" name="violence_level_3" id="violence_level" disabled>
+                      HIGH ( &#x3e;14 )
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
 
       <div>
         <button type="submit" class="btn btn-primary">Submit</button>
