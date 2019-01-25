@@ -70,7 +70,7 @@ header('Content-Type: application/pdf');
       <td class="box" colspan="4"><b>PROTECTIVE FACTORS dan RESIKO LAINNYA (Describe) : </b> <br> {{$suicide_protective_factor}} </td>
     </tr>
     <tr>
-      <td class="box" colspan="4"><b>LEVEL OF SUICIDE RISK (Total Skor) : </b> <br> [not yet] </td>
+      <td class="box" colspan="4"><b>LEVEL OF SUICIDE RISK (Total Skor) : </b> <br> {{$suicide_score}} </td>
     </tr>
   </tbody>
 </table>
@@ -145,7 +145,7 @@ header('Content-Type: application/pdf');
       <td class="box" colspan="4"><b>PROTECTIVE FACTORS dan RESIKO LAINNYA (Describe) : </b> <br> {{$violence_protective_factor}} </td>
     </tr>
     <tr>
-      <td class="box" colspan="4"><b>LEVEL OF VIOLANCE RISK (Total Skor) : </b> <br> [isian] </td>
+      <td class="box" colspan="4"><b>LEVEL OF VIOLANCE RISK (Total Skor) : </b> <br> {{$violence_score}} </td>
     </tr>
     <tr>
       <td class="box" colspan="4"><b>OTHER RISK IDENTIFIED (AND RISK FACTORS) : </b> <br> {{$other_risk}} </td>

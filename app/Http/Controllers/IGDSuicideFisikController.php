@@ -317,6 +317,7 @@ class IGDSuicideFisikController extends Controller
         $pasien = IGDSuicideFisik::where('id_regis', $id_pasien)->first();
         
         $this->data['id_regis'] = $pasien->id_regis;
+        $this->get_igd_suicide_fisik_data();
 
         $this->data['a1'] = $this->answer($pasien->a1);
         $this->data['a2'] = $this->answer($pasien->a2);
