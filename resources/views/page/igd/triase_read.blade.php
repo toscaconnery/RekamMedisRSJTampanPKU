@@ -35,8 +35,8 @@
                 </tr>
                 <tr>
                   <td>Triase Pasien</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{date('j F Y', strtotime($tanggal_pengisian))}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/igd_triase">Isi</a>

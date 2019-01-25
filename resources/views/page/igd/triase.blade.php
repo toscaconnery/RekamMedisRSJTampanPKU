@@ -35,8 +35,8 @@
                 </tr>
                 <tr>
                   <td>Triase Pasien</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{date('j F Y', strtotime('today'))}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/igd_triase">Isi</a>
@@ -69,7 +69,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal masuk IGD</label>
                   <div class="col-sm-2">
-                    <input type="text" id="dp1" class="form-control required" name="tanggal_masuk">
+                    <input type="text" autocomplete="off" onkeydown="return false" class="form-control required sandbox-container" name="tanggal_masuk">
                   </div>
                 </div>
                 <div class="form-group">
