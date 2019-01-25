@@ -22,9 +22,6 @@
       <div class="row">
         <div class="col-lg-12">
           <section class="panel">
-            <header class="panel-heading">
-              Dokumen Hak dan Kewajiban
-            </header>
 
             <table class="table table-striped table-advance table-hover">
               <tbody>
@@ -32,7 +29,8 @@
                   <th><i class="icon_document_alt"></i> Dokumen</th>
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
-                  <th><i class="icon_cogs"></i> Action</th>
+                  <th><i class="icon_cogs"></i> Aksi</th>
+                  <th><i class="icon_document"></i> Cetak Dokumen</th>
                 </tr>
                 <tr>
                   <td>Hak dan Kewajiban</td>
@@ -40,9 +38,14 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="{{url('')}}/ri_hakkewajiban_pdf">PDF</a>
-                      <a class="btn btn-success" href="#">EDIT</a>
+                      <a class="btn btn-info" href="{{url('')}}/ri_hak_kewajiban">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_hak_kewajiban_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_hak_kewajiban_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/ri_hakkewajiban_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>
