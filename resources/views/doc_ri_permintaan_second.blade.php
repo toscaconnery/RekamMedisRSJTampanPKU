@@ -102,7 +102,7 @@ header('Content-Type: application/pdf');
         ( {{ $nama_saksi }} )
       </td>
       <td class="ttd2">
-        Pekanbaru, 25 September 2018<br>Pasien/Wali
+        Pekanbaru, {{$tanggal}}<br>Pasien/Wali
         <br>
         <br>
         <br>
