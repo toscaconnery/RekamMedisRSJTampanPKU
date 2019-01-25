@@ -23,9 +23,6 @@
       <div class="row">
         <div class="col-lg-12">
           <section class="panel">
-            <header class="panel-heading">
-              MENGIDENTIFIKASI SUMBER STRES (STRESOR)
-            </header>
 
             <table class="table table-striped table-advance table-hover">
               <tbody>
@@ -33,7 +30,8 @@
                   <th><i class="icon_document_alt"></i> Dokumen</th>
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
-                  <th><i class="icon_cogs"></i> Action</th>
+                  <th><i class="icon_cogs"></i> Aksi</th>
+                  <th><i class="icon_document"></i> Cetak Dokumen</th>
                 </tr>
                 <tr>
                   <td>Identifikasi Sumber Stres (Stresor)</td>
@@ -41,10 +39,14 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                      <a class="btn btn-info" href="{{url('')}}/rj_identifikasi_stresor">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/rj_identifikasi_stresor_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_identifikasi_stresor_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/rj_stressor_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>

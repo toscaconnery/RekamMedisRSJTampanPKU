@@ -23,9 +23,6 @@
       <div class="row">
         <div class="col-lg-12">
           <section class="panel">
-            <header class="panel-heading">
-              Dokumen Catatan Perkembangan Pasien Terintegrasi Rawat Jalan
-            </header>
 
             <table class="table table-striped table-advance table-hover">
               <tbody>
@@ -33,7 +30,8 @@
                   <th><i class="icon_document_alt"></i> Dokumen</th>
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
-                  <th><i class="icon_cogs"></i> Action</th>
+                  <th><i class="icon_cogs"></i> Aksi</th>
+                  <th><i class="icon_document"></i> Cetak Dokumen</th>
                 </tr>
                 <tr>
                   <td>Catatan Perkembangan Pasien Terintegrasi</td>
@@ -41,10 +39,14 @@
                   <td>[Nama Pengisi]</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
-                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                      <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                      <a class="btn btn-info" href="{{url('')}}/rj_perkembangan_pasien">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/rj_perkembangan_pasien_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/rj_perkembangan_pasien_edit">Edit</i></a>
+                      <a class="btn btn-danger" href="#">Hapus</a>
                     </div>
+                  </td>
+                  <td>
+                    <a class="btn btn-default" href="{{url('')}}/rj_catatan_perkembangan_pdf">Cetak</a>
                   </td>
                 </tr>
               </tbody>
@@ -64,7 +66,7 @@
               </header>
               <div class="form-group">
                 <div class="col-sm-2"></div>
-                <label class="col-sm-8 control-label">(Dituliskan dengan Format SOAP/ADIME, disertai dengan Target yang Terukur, Evaluasi Hasil Tatalaksana dituliskan dalam Asesmen.</label>
+                <label class="col-sm-8 control-label"><center>(Dituliskan dengan Format SOAP/ADIME, disertai dengan Target yang Terukur, Evaluasi Hasil Tatalaksana dituliskan dalam Asesmen.</center></label>
                 <div class="col-sm-2"></div>
               </div>
               <table class="table table-bordered">
@@ -87,7 +89,11 @@
                       <input type="text" class="form-control" name="profesi_1" value="">
                     </td>
                     <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_1">S : </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_1">S: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_1">O: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_1">A: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_1">P: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_1">Lainnya: </textarea>
                     </td>
                     <td><input type="checkbox" class="form-control" name="ttd_1"></td>
                     <td></td>
@@ -101,7 +107,11 @@
                       <input type="text" class="form-control" name="profesi_2" value="">
                     </td>
                     <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_2">O : </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_2">S: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_2">O: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_2">A: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_2">P: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_2">Lainnya: </textarea>
                     </td>
                     <td><input type="checkbox" class="form-control" name="ttd_2"></td>
                     <td></td>
@@ -115,7 +125,11 @@
                       <input type="text" class="form-control" name="profesi_3" value="">
                     </td>
                     <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_3">A : </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_3">S: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_3">O: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_3">A: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_3">P: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_3">Lainnya: </textarea>
                     </td>
                     <td><input type="checkbox" class="form-control" name="ttd_3"></td>
                     <td></td>
@@ -129,7 +143,11 @@
                       <input type="text" class="form-control" name="profesi_4" value="">
                     </td>
                     <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_4">P : </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_4">S: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_4">O: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_4">A: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_4">P: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_4">Lainnya: </textarea>
                     </td>
                     <td><input type="checkbox" class="form-control" name="ttd_4"></td>
                     <td></td>
@@ -143,7 +161,11 @@
                       <input type="text" class="form-control" name="profesi_5" value="">
                     </td>
                     <td>
-                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_5">L : </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_5">S: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_5">O: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_5">A: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_5">P: </textarea>
+                      <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_5">Lainnya: </textarea>
                     </td>
                     <td><input type="checkbox" class="form-control" name="ttd_5"></td>
                     <td></td>
