@@ -35,14 +35,14 @@
                 </tr>
                 <tr>
                   <td>Asesmen Wajib Lapor dan Rehabilitasi Medis</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/rj_lapor_rehabilitasi">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/rj_lapor_rehabilitasi_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/rj_lapor_rehabilitasi_edit">Edit</i></a>
-                      <a class="btn btn-danger" href="#">Hapus</a>
+                      <a class="btn btn-danger" href="#" onclick="delete_document()">Hapus</a>
                     </div>
                   </td>
                   <td>
@@ -1608,6 +1608,25 @@
         });
       });
     </script>
+
+    <script type="text/javascript">
+    function delete_document() {
+      Swal.fire({
+        title: 'Hapus dokumen ini?',
+        text: "Dokumen yang telah dihapus tidak akan bisa diakses lagi.",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, hapus dokumen ini',
+        cancelButtonText: 'Batalkan'
+      }).then((result) => {
+        if (result.value) {
+          window.location.href = '{{url('/rj_lapor_rehabilitasi_delete')}}';
+        }
+      })
+    }
+  </script>
 
     <script type="{{url('')}}/sweetalert/sweetalert2.min.js"></script>
     

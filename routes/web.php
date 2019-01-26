@@ -140,6 +140,7 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/rj_lapor_rehabilitasi_read', 'RJLaporRehabilitasiController@get_rj_lapor_rehabilitasi_read');
     Route::get('/rj_lapor_rehabilitasi_edit', 'RJLaporRehabilitasiController@get_rj_lapor_rehabilitasi_edit');
     Route::post('/rj_lapor_rehabilitasi_edit', 'RJLaporRehabilitasiController@post_rj_lapor_rehabilitasi_edit');
+    Route::get('/rj_lapor_rehabilitasi_delete', 'RJLaporRehabilitasiController@get_rj_lapor_rehabilitasi_delete');
     //dokumen informasi lapor rehabilitasi
     Route::get('/rj_lapor_rehabilitasi_pdf', 'RJLaporRehabilitasiController@rj_lapor_rehabilitasi_pdf');
     Route::get('/doc_rj_lapor_rehabilitasi', function () {

@@ -34,8 +34,8 @@
                 </tr>
                 <tr>
                   <td>Asesmen Wajib Lapor dan Rehabilitasi Medis</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/rj_lapor_rehabilitasi">Isi</a>
@@ -65,7 +65,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Tanggal Kedatangan</label>
                   <div class="col-sm-2">
-                    <input type="text" class="form-control sandbox-container" name="tanggal_kedatangan" required="">
+                    <input type="text" class="form-control sandbox-container" onkeydown="return false" autocomplete="off" name="tanggal_kedatangan" required="">
                   </div>
                 </div>
                 <div class="form-group">
