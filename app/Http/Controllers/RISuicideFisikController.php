@@ -293,6 +293,7 @@ class RISuicideFisikController extends Controller
         $pasien = RISuicideFisik::where('id', 1)->first();
         
         $this->data['id_regis'] = $pasien->id_regis;
+        $this->get_ri_suicide_fisik_data();
 
         $this->data['s1'] = $this->answer($pasien->s1);
         $this->data['s2'] = $this->answer($pasien->s2);
