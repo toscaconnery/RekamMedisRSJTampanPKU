@@ -33,6 +33,8 @@
 <link rel="stylesheet" href="{{url('')}}/calendar/bootstrap.min.css">
 {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
 
+<link rel="stylesheet" type="text/css" href="{{url('')}}/sweetalert2/dist/sweetalert2.min.css">
+
 <script type="text/javascript">
 	jQuery(function() {
 		$('.sandbox-container').datepicker({

@@ -35,8 +35,8 @@
                 </tr>
                 <tr>
                   <td>Kebutuhan Informasi dan edukasi </td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/rj_informasi_edukasi">Isi</a>

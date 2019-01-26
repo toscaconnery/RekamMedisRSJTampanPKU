@@ -35,3 +35,12 @@
 <!-- form validation -->
 <script type="text/javascript" src="{{url('')}}/admin_bootstrap/js/jquery.validate.min.js"></script>
 <script src="{{url('')}}/js/form-validation.js"></script>
+
+<script src="{{url('')}}/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="{{url('')}}/sweetalert2/dist/sweetalert2.min.js"></script>
+@if(Session::has('pasien_terpilih'))
+    @include('sweetalert.pasienterpilih')
+@endif
+@if(Session::has('pesan_kesalahan'))
+    @include('sweetalert.error')
+@endif

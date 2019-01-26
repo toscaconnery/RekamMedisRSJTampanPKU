@@ -980,31 +980,24 @@
     </script>
     <script>
         $(document).ready(function() {
-            /*
-            						var defaults = {
-            							  containerID: 'toTop', // fading element id
-            							containerHoverID: 'toTopHover', // fading element hover id
-            							scrollSpeed: 1200,
-            							easingType: 'linear' 
-            						 };
-                                  */
 
-                                  $().UItoTop({
-                                    easingType: 'easeOutQuart'
-                                });
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+        });
 
-                              });
-                          </script>
-                          <!--// end-smoth-scrolling -->
-                          <!-- /js -->
-                          <script src="{{url('')}}/list_document/js/bootstrap.js"></script>
-                          <!-- //js -->
-                          <script src="{{url('')}}/sweetalert2/dist/sweetalert2.all.min.js"></script>
-                          <script src="{{url('')}}/sweetalert2/dist/sweetalert2.min.js"></script>
+     });
+</script>
+<!--// end-smoth-scrolling -->
+<!-- /js -->
+<script src="{{url('')}}/list_document/js/bootstrap.js"></script>
+<!-- //js -->
 
-                          @if(Session::has('pasien_terpilih'))
-                            @include('sweetalert.pasienterpilih')
-                          @endif
-                      </body>
+<script src="{{url('')}}/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="{{url('')}}/sweetalert2/dist/sweetalert2.min.js"></script>
+@if(Session::has('pasien_terpilih'))
+    @include('sweetalert.pasienterpilih')
+@endif
 
-                      </html>
+</body>
+
+</html>

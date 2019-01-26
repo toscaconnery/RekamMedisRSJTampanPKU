@@ -87,29 +87,29 @@
                     <input type="hidden" name="previous_data" value="{{$previous_data}}">
                     @foreach($pasien as $p)
                     <tr>
-                      <td><input type="text" value="{{$p['tanggal']}}" class="form-control sandbox-container" autocomplete="off" onkeydown="return false" name="tanggal_{{$p['id_data']}}" required></td>
-                      <td><input type="text" value="{{$p['poliklinik']}}" class="form-control" name="poliklinik_{{$p['id_data']}}" required></td>
+                      <td><input type="text" disabled value="{{$p['tanggal']}}" class="form-control sandbox-container" autocomplete="off" onkeydown="return false" name="tanggal_{{$p['id_data']}}" required></td>
+                      <td><input type="text" disabled value="{{$p['poliklinik']}}" class="form-control" name="poliklinik_{{$p['id_data']}}" required></td>
                       <td>
-                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="informasi_{{$p['id_data']}}">{{$p['informasi']}}</textarea>
+                        <textarea disabled style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="informasi_{{$p['id_data']}}">{{$p['informasi']}}</textarea>
                       </td>
-                      <td><input type="text" value="{{$p['nama_edukator']}}" class="form-control" name="nama_edukator_{{$p['id_data']}}" required></td>
-                      <td><input type="checkbox" {{$p['ttd_edukator'] == True ? 'checked' : ''}} class="form-control" name="ttd_edukator_{{$p['id_data']}}"></td>
-                      <td><input type="text" value="{{$p['nama_sasaran']}}" class="form-control" name="nama_sasaran_{{$p['id_data']}}" required></td>
-                      <td><input type="checkbox" {{$p['ttd_sasaran'] == True ? 'checked' : ''}} class="form-control" name="ttd_sasaran_{{$p['id_data']}}"></td>
+                      <td><input disabled type="text" value="{{$p['nama_edukator']}}" class="form-control" name="nama_edukator_{{$p['id_data']}}" required></td>
+                      <td><input disabled type="checkbox" {{$p['ttd_edukator'] == True ? 'checked' : ''}} class="form-control" name="ttd_edukator_{{$p['id_data']}}"></td>
+                      <td><input disabled type="text" value="{{$p['nama_sasaran']}}" class="form-control" name="nama_sasaran_{{$p['id_data']}}" required></td>
+                      <td><input disabled type="checkbox" {{$p['ttd_sasaran'] == True ? 'checked' : ''}} class="form-control" name="ttd_sasaran_{{$p['id_data']}}"></td>
                       <td>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="evaluasi_{{$p['id_data']}}" {{$p['evaluasi'] == 1 ? 'checked' : ''}} value="1" required><span style="font-size: 3mm">Sudah mengerti</span><br>
+                            <input disabled type="radio" name="evaluasi_{{$p['id_data']}}" {{$p['evaluasi'] == 1 ? 'checked' : ''}} value="1" required><span style="font-size: 3mm">Sudah mengerti</span><br>
                           </label>
                         </div>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="evaluasi_{{$p['id_data']}}" {{$p['evaluasi'] == 2 ? 'checked' : ''}} value="2"><span style="font-size: 3mm">Re-edukasi</span><br>
+                            <input disabled type="radio" name="evaluasi_{{$p['id_data']}}" {{$p['evaluasi'] == 2 ? 'checked' : ''}} value="2"><span style="font-size: 3mm">Re-edukasi</span><br>
                           </label>
                         </div>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="evaluasi_{{$p['id_data']}}" {{$p['evaluasi'] == 3 ? 'checked' : ''}} value="3"><span style="font-size: 3mm">Re-demonstrasi</span>
+                            <input disabled type="radio" name="evaluasi_{{$p['id_data']}}" {{$p['evaluasi'] == 3 ? 'checked' : ''}} value="3"><span style="font-size: 3mm">Re-demonstrasi</span>
                           </label>
                         </div>
                       </td>
@@ -118,14 +118,6 @@
                     </tr>
                     @endforeach
                     
-                    <tr id="last_row">
-                      <td colspan="9">
-                        <div class="btn-group">
-                          <button class="btn btn-primary" type="button" id="tambah_form"><i class="icon_plus_alt2"></i> Tambah</button>
-                          <button class="btn btn-success" type="submit"><i class="icon_check_alt2"></i> Simpan</button>
-                        </div>
-                      </td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -139,34 +131,6 @@
 
   @include('layouts.tailscript')
   
-  {{-- menambah row inputan --}}
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#tambah_form').click(function() {
-        var a = document.getElementById('jumlah_form_new').value;
-        a = parseInt(a) + 1;
-        $('#last_row').before('<tr id="form_new_'+a+'"><td><input type="text" class="form-control sandbox-container" autocomplete="off" onkeydown="return false" name="tanggal_new_'+a+'" required></td><td><input type="text" class="form-control" name="poliklinik_new_'+a+'" required></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="informasi_new_'+a+'" required></textarea></td><td><input type="text" class="form-control" name="nama_edukator_new_'+a+'" required></td><td><input type="checkbox" class="form-control" name="ttd_edukator_new_'+a+'"></td><td><input type="text" class="form-control" name="nama_sasaran_new_'+a+'" required></td><td><input type="checkbox" class="form-control" name="ttd_sasaran_new_'+a+'"></td><td><div class="radio"> <label><input type="radio" name="evaluasi_new_'+a+'" value="1" required><span style="font-size: 3mm">Sudah mengerti</span><br></label> </div><div class="radio"> <label><input type="radio" name="evaluasi_new_'+a+'" value="2"><span style="font-size: 3mm">Re-edukasi</span><br></label> </div><div class="radio"> <label><input type="radio" name="evaluasi_new_'+a+'" value="3"><span style="font-size: 3mm">Re-demonstrasi</span></label> </div></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
-        document.getElementById('jumlah_form_new').value = a;
-        $('.sandbox-container').datepicker({
-          'format' : 'dd/mm/yyyy',
-          'autoclose' : true,
-          'todayHighlight' : true,
-          'toggleActive': true
-        });
-      });
-    });
-  </script>
-
-  {{-- menghapus row --}}
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(document).on('click', '.tombol_hapus', function() {
-        var x = $(this).attr('id');
-        var nomor = x.substring(13)
-        $('#form_'+nomor).remove();
-      });
-    });
-  </script>
   
 </body>
 <html>

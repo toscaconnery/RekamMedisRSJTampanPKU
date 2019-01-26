@@ -1,8 +1,10 @@
 <script type="text/javascript">  
-	swal({
+	Swal({
+	  position: 'center',
 	  type: 'error',
-	  title: 'Kesalahan',
-	  text: '{{Session::get('pesan_kesalahan')}}'
+	  title: '{{Session::get('pesan_kesalahan')}}',
+	  showConfirmButton: false,
+	  timer: 3000
 	})
 </script>
 @php

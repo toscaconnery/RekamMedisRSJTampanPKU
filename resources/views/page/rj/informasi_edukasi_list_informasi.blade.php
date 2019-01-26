@@ -35,8 +35,8 @@
                 </tr>
                 <tr>
                   <td>Kebutuhan Informasi dan edukasi </td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/rj_informasi_edukasi">Isi</a>
@@ -85,12 +85,12 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><input type="text" class="form-control sandbox-container" name="tanggal_1" required></td>
+                      <td><input type="text" class="form-control sandbox-container" onkeydown="return false" autocomplete="off" name="tanggal_1" required></td>
                       <td><input type="text" class="form-control" name="poliklinik_1" required></td>
                       <td>
                         <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="informasi_1" readonly>Penyakit yang diderita pasien</textarea>
                       </td>
-                      <td><input type="text" class="form-control sandbox-container" name="nama_edukator_1" required></td>
+                      <td><input type="text" class="form-control" name="nama_edukator_1" required></td>
                       <td><input type="checkbox" class="form-control" name="ttd_edukator_1"></td>
                       <td><input type="text" class="form-control" name="nama_sasaran_1" required></td>
                       <td><input type="checkbox" class="form-control" name="ttd_sasaran_1"></td>
@@ -115,7 +115,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><input type="text" class="form-control sandbox-container" name="tanggal_2" required></td>
+                      <td><input type="text" class="form-control sandbox-container" onkeydown="return false" autocomplete="off" name="tanggal_2" required></td>
                       <td><input type="text" class="form-control" name="poliklinik_2" required></td>
                       <td>
                         <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="informasi_2" readonly>Rencana tindakan terapi</textarea>
@@ -145,7 +145,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><input type="text" class="form-control sandbox-container" name="tanggal_3" required></td>
+                      <td><input type="text" class="form-control sandbox-container" onkeydown="return false" autocomplete="off" name="tanggal_3" required></td>
                       <td><input type="text" class="form-control" name="poliklinik_3" required></td>
                       <td>
                         <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="informasi_3" readonly>Pengobatan dan prosedur yang diberikan atau diperlukan</textarea>
@@ -175,7 +175,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td><input type="text" class="form-control sandbox-container" name="tanggal_4" required></td>
+                      <td><input type="text" class="form-control sandbox-container" onkeydown="return false" autocomplete="off" name="tanggal_4" required></td>
                       <td><input type="text" class="form-control" name="poliklinik_4" required></td>
                       <td>
                         <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="informasi_4" readonly>Hasil pelayanan, termasuk terjadinya kejadian yang diharapkan dan tidak diharapkan</textarea>
@@ -231,8 +231,14 @@
       $('#tambah_form').click(function() {
         var a = document.getElementById('jumlah_form').value;
         a = parseInt(a) + 1;
-        $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" class="form-control sandbox-container" name="tanggal_'+a+'" required></td><td><input type="text" class="form-control" name="poliklinik_'+a+'" required></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="informasi_'+a+'" required></textarea></td><td><input type="text" class="form-control" name="nama_edukator_'+a+'" required></td><td><input type="checkbox" class="form-control" name="ttd_edukator_'+a+'"></td><td><input type="text" class="form-control" name="nama_sasaran_'+a+'" required></td><td><input type="checkbox" class="form-control" name="ttd_sasaran_'+a+'"></td><td><div class="radio"> <label><input type="radio" name="evaluasi_'+a+'" value="1" required><span style="font-size: 3mm">Sudah mengerti</span><br></label> </div><div class="radio"> <label><input type="radio" name="evaluasi_'+a+'" value="2"><span style="font-size: 3mm">Re-edukasi</span><br></label> </div><div class="radio"> <label><input type="radio" name="evaluasi_'+a+'" value="3"><span style="font-size: 3mm">Re-demonstrasi</span></label> </div></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+        $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" class="form-control sandbox-container" onkeydown="return false" autocomplete="off" name="tanggal_'+a+'" required></td><td><input type="text" class="form-control" name="poliklinik_'+a+'" required></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="informasi_'+a+'" required></textarea></td><td><input type="text" class="form-control" name="nama_edukator_'+a+'" required></td><td><input type="checkbox" class="form-control" name="ttd_edukator_'+a+'"></td><td><input type="text" class="form-control" name="nama_sasaran_'+a+'" required></td><td><input type="checkbox" class="form-control" name="ttd_sasaran_'+a+'"></td><td><div class="radio"> <label><input type="radio" name="evaluasi_'+a+'" value="1" required><span style="font-size: 3mm">Sudah mengerti</span><br></label> </div><div class="radio"> <label><input type="radio" name="evaluasi_'+a+'" value="2"><span style="font-size: 3mm">Re-edukasi</span><br></label> </div><div class="radio"> <label><input type="radio" name="evaluasi_'+a+'" value="3"><span style="font-size: 3mm">Re-demonstrasi</span></label> </div></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
         document.getElementById('jumlah_form').value = a;
+        $('.sandbox-container').datepicker({
+          'format' : 'dd/mm/yyyy',
+          'autoclose' : true,
+          'todayHighlight' : true,
+          'toggleActive': true
+        });
       });
     });
   </script>
