@@ -42,7 +42,7 @@
                       <a class="btn btn-info" href="{{url('')}}/rj_informasi_edukasi">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/rj_informasi_edukasi_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/rj_informasi_edukasi_edit">Edit</i></a>
-                      <a class="btn btn-danger" href="#">Hapus</a>
+                      <a class="btn btn-danger" onclick="delete_document()" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>
@@ -425,7 +425,7 @@
                 </div>
                 <div>
                   {{-- <button type="submit" class="btn btn-primary">Submit</button> --}}
-                  <a href="{{url('')}}/rj_informasi_edukasi_list_informasi"><button type="button" class="btn btn-primary">List Edukasi</button></a>
+                  <a href="{{url('')}}/rj_informasi_edukasi_list_informasi_read"><button type="button" class="btn btn-primary">List Edukasi</button></a>
                 </div>
               </div>
             </section>
@@ -438,6 +438,24 @@
 
   @include('layouts.tailscript')
   
+  <script type="text/javascript">
+    function delete_document() {
+      Swal.fire({
+        title: 'Hapus dokumen ini?',
+        text: "Dokumen yang telah dihapus tidak akan bisa diakses lagi.",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, hapus dokumen ini',
+        cancelButtonText: 'Batalkan'
+      }).then((result) => {
+        if (result.value) {
+          window.location.href = '{{url('/rj_informasi_edukasi_delete')}}';
+        }
+      })
+    }
+  </script>
 
 </body>
 

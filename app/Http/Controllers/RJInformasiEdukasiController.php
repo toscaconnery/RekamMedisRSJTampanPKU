@@ -405,6 +405,10 @@ class RJInformasiEdukasiController extends Controller
     {
         $this->get_list_document();
         $this->get_rj_informasi_edukasi_list_informasi_data();
+        if (!$this->data['previous_data']) {
+            return redirect('rj_informasi_edukasi_list_informasi');
+        }
+
         return view('page.rj.informasi_edukasi_list_informasi_read', $this->data);
     }
 
@@ -489,6 +493,27 @@ class RJInformasiEdukasiController extends Controller
             }
         }
         return redirect('daftar_dokumen');
+    }
+
+    public function get_rj_informasi_edukasi_delete() 
+    {
+        $id_pasien = Session::get('id_pasien');
+
+        // menghapus informasi edukasi list informasi
+        RJInformasiEdukasi::where('id_regis', $id_pasien)->delete();
+
+        // menghapus informasi edukasi
+        RJEdukasiDiperoleh::where('id_regis', $id_pasien)->delete();
+
+        // mengosongkan data di list dokumen
+        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
+        $list_document->rj_informasi_edukasi = false;
+        $list_document->rj_informasi_edukasi_petugas = null;
+        $list_document->save();
+        
+        Session::put('pesan_berhasil', 'Dokumen berhasil dihapus');
+
+        return redirect('/');
     }
 
     public function rj_infoedu_pdf()

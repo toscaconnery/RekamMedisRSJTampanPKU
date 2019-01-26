@@ -123,6 +123,7 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/rj_informasi_edukasi_read', 'RJInformasiEdukasiController@get_rj_informasi_edukasi_read');
     Route::get('/rj_informasi_edukasi_edit', 'RJInformasiEdukasiController@get_rj_informasi_edukasi_edit');
     Route::post('/rj_informasi_edukasi_edit', 'RJInformasiEdukasiController@post_rj_informasi_edukasi_edit');
+    Route::get('/rj_informasi_edukasi_delete', 'RJInformasiEdukasiController@get_rj_informasi_edukasi_delete');
     Route::get('/rj_informasi_edukasi_list_informasi', 'RJInformasiEdukasiController@get_rj_informasi_edukasi_list_informasi');
     Route::post('/rj_informasi_edukasi_list_informasi', 'RJInformasiEdukasiController@post_rj_informasi_edukasi_list_informasi');
     Route::get('/rj_informasi_edukasi_list_informasi_read', 'RJInformasiEdukasiController@get_rj_informasi_edukasi_list_informasi_read');

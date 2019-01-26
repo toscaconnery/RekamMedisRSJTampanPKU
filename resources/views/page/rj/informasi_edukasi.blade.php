@@ -426,7 +426,7 @@
                 </div>
                 <div>
                   <button type="submit" class="btn btn-primary">Submit</button>
-                  <a href="{{url('')}}/rj_informasi_edukasi_list_informasi"><button type="button" class="btn btn-primary">List Edukasi</button></a>
+                  <a href="{{url('')}}/rj_informasi_edukasi_list_informasi_read"><button type="button" class="btn btn-primary">List Edukasi</button></a>
                 </div>
               </div>
             </section>

@@ -184,6 +184,10 @@
       @include('sweetalert.pasienbelumdipilih')
     @endif
 
+    @if(Session::has('pesan_berhasil'))
+      @include('sweetalert.success')
+    @endif
+
     
 </body>
 
