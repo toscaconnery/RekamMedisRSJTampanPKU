@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateTableRjAsesmenDokter extends Migration
+class UpdateRjAsesmenKeperawatanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class UpdateTableRjAsesmenDokter extends Migration
      */
     public function up()
     {
-        Schema::table('rj_asesmen_dokter', function($table) {
-            $table->string('petugas',60);
+        Schema::table('rj_asesmen_keperawatan', function($table) {
+            $table->integer('skor_resiko_jatuh')->default(0);
         });
     }
 
@@ -25,8 +25,8 @@ class UpdateTableRjAsesmenDokter extends Migration
      */
     public function down()
     {
-        Schema::table('rj_asesmen_dokter', function($table) {
-            $table->dropColumn('petugas');
+        Schema::table('rj_asesmen_keperawatan', function($table) {
+            $table->dropColumn('skor_resiko_jatuh');
         });
     }
 }

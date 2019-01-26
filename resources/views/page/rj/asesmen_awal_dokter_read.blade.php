@@ -35,8 +35,8 @@
                 </tr>
                 <tr>
                   <td>Perawat</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian_perawat}}</td>
+                  <td>{{$nama_pengisi_perawat}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/rj_asesmen_awal_perawat">Isi</a>
@@ -51,8 +51,8 @@
                 </tr>
                 <tr>
                   <td>Dokter</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian_dokter}}</td>
+                  <td>{{$nama_pengisi_dokter}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/rj_asesmen_awal_dokter">Isi</a>

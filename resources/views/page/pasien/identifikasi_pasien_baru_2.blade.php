@@ -161,11 +161,11 @@
                   </div>
                   <label class="col-sm-1 control-label">RT</label>
                   <div class="col-sm-1">
-                    <input type="text" class="form-control" name="rt" required="">
+                    <input type="text" class="form-control rtrwnumber" maxlength="3" min="1" max="999" name="rt" required="">
                   </div>
                   <label class="col-sm-1 control-label">RW</label>
                   <div class="col-sm-1">
-                    <input type="text" class="form-control" name="rw" required="">
+                    <input type="text" class="form-control rtrwnumber" maxlength="3" min="1" max="999" name="rw" required="">
                   </div>
                 </div>
                 <div class="form-group">
@@ -181,11 +181,11 @@
                   </div>
                   <label class="col-sm-1 control-label">RT</label>
                   <div class="col-sm-1">
-                    <input type="text" class="form-control" name="perubahan_rt">
+                    <input type="text" class="form-control rtrwnumber" maxlength="3" min="1" max="999" name="perubahan_rt">
                   </div>
                   <label class="col-sm-1 control-label">RW</label>
                   <div class="col-sm-1">
-                    <input type="text" class="form-control" name="perubahan_rw">
+                    <input type="text" class="form-control rtrwnumber" maxlength="3" min="1" max="999" name="perubahan_rw">
                   </div>
                 </div>
               </div>
@@ -237,6 +237,17 @@
               $('#add').click( function() {
                 $('#dynamic_field').append('<div class="panel-body"><div class="form-group"><label class="col-sm-2 control-label">Nama</label><div class="col-sm-10"><input type="text" class="form-control" name="nama_pj[]"></div></div><div class="form-group"><label class="col-sm-2 control-label">Alamat</label><div class="col-sm-10"><input type="text" class="form-control" name="alamat_pj[]"></div></div><div class="form-group"><label class="col-sm-2 control-label">Hubungan</label><div class="col-sm-10"><input type="text" class="form-control" name="hubungan_pj[]"></div></div><div class="form-group"><label class="col-sm-2 control-label">Telp</label><div class="col-sm-10"><input type="text" class="form-control" name="no_telp_pj[]"></div></div></div>');
               });
+            });
+          </script>
+
+          <script type="text/javascript">
+            $(document).ready( function() {
+              $('.rtrwnumber').on('keyup', function (event) {
+                var newValue = this.value.replace(/[^0-9]/gi, '');
+                if (this.value != newValue) {
+                  this.value = newValue;
+                }
+              })
             });
           </script>
 

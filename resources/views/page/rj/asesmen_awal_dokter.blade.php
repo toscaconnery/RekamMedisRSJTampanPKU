@@ -84,7 +84,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Wawancara dengan </label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" name="pewawancara">
+                    <input type="text" class="form-control" name="pewawancara" value="{{Auth::user()->nama}}">
                   </div>
                 </div>
                 <div class="form-group">

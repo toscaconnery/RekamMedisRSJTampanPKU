@@ -32,38 +32,42 @@ class RJAsesmenAwalController extends Controller
     {
         $this->middleware('haspatient');
         $this->data['title'] = 'Asesmen Awal Pasien Rawat Jalan';
-        $this->id_pasien = Session::get('id_pasien');
+    }
+
+    public function get_list_document()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        
+        $this->data['tanggal_pengisian_dokter'] = '';
+        $this->data['tanggal_pengisian_perawat'] = '';
+        $this->data['nama_pengisi_dokter']       = $daftar_dokumen->rj_asesmen_awal_dokter_petugas;
+        $this->data['nama_pengisi_perawat']      = $daftar_dokumen->rj_asesmen_awal_perawat_petugas;
+        //harusnya tanggal pembuatan juga disimpan di list_document
+        if ($daftar_dokumen->rj_asesmen_awal_dokter) {
+            $tanggal = RJAsesmenDokter::where('id_regis', $id_pasien)->first()->created_at;
+            $this->data['tanggal_pengisian_dokter'] = date('j F Y', strtotime($tanggal));
+        }
+        if ($daftar_dokumen->rj_asesmen_awal_perawat) {
+            $tanggal = RJAsesmenKeperawatan::where('id_regis', $id_pasien)->first()->created_at;
+            $this->data['tanggal_pengisian_perawat'] = date('j F Y', strtotime($tanggal));
+        }
     }
 
     public function get_rj_asesmen_awal_perawat()
     {
-        $id_pasien = Session::get('id_pasien');
-        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
-        $this->data['nama_perawat'] = $list_document->rj_asesmen_awal_perawat_petugas;
-        $this->data['nama_dokter'] = $list_document->rj_asesmen_awal_dokter_petugas;
-        $this->data['tanggal_perawat'] = $list_document->rj_asesmen_awal_perawat_date;
-        $this->data['tanggal_dokter'] = $list_document->rj_asesmen_awal_dokter_date;
+        $this->get_list_document();
+        if ($this->data['tanggal_pengisian_perawat'])
+            return redirect('rj_asesmen_awal_perawat_read');
         return view('page.rj.asesmen_awal_perawat', $this->data);
     }
 
     public function get_rj_asesmen_awal_dokter()
     {
-        //cek_apakah sudah ada data
-        $asesmen_dokter = RJAsesmenDokter::where('id_regis', $this->id_pasien)->first();
-        if (!$asesmen_dokter) {
-            $asesmen_awal_perawat = RJAsesmenKeperawatan::where('id_regis', $this->id_pasien)->first();
-            $this->data['tanggal_pengisian_perawat'] = $asesmen_awal_perawat ? date('j F Y', strtotime($asesmen_awal_perawat->created_at)) : '';
-            $this->data['tanggal_pengisian_dokter']  = '';
-            $this->data['nama_pengisi_perawat']      = $asesmen_awal_perawat ?  $asesmen_awal_perawat->petugas : '';
-            $this->data['nama_pengisi_dokter']       = '';
-            // dd($this->data['tanggal_pengisian_perawat']); 
-            return view('page.rj.asesmen_awal_dokter', $this->data);
-        }
-        else {
-            return response('Can not');
-        }
-        dd($asesmen_dokter);
-    	
+        $this->get_list_document();
+        if ($this->data['tanggal_pengisian_dokter'])
+            return redirect('rj_asesmen_awal_dokter_read');
+        return view('page.rj.asesmen_awal_dokter', $this->data);
     }
 
     public function post_rj_asesmen_awal_dokter(Request $request)
@@ -386,12 +390,18 @@ class RJAsesmenAwalController extends Controller
 
     public function get_rj_asesmen_awal_dokter_read()
     {
+        $this->get_list_document();
+        if (!$this->data['tanggal_pengisian_dokter'])
+            return redirect('/');
         $this->get_rj_asesmen_awal_dokter_data();
         return view('page.rj.asesmen_awal_dokter_read', $this->data);
     }
 
     public function get_rj_asesmen_awal_dokter_edit()
     {
+        $this->get_list_document();
+        if (!$this->data['tanggal_pengisian_dokter'])
+            return redirect('/');
         $this->get_rj_asesmen_awal_dokter_data();
         return view('page.rj.asesmen_awal_dokter_edit', $this->data);
     }
@@ -1124,6 +1134,9 @@ class RJAsesmenAwalController extends Controller
         // $asesmen_keperawatan->id_regis = $id_pasien;
         $asesmen_keperawatan->implementasi = $request->implementasi;
         $asesmen_keperawatan->evaluasi = $request->evaluasi;
+
+        $asesmen_keperawatan->petugas = Auth::user()->nama;
+
         // $data->save();
         $asesmen_keperawatan->save();
 
@@ -1488,12 +1501,18 @@ class RJAsesmenAwalController extends Controller
 
     public function get_rj_asesmen_awal_perawat_read()
     {
+        $this->get_list_document();
+        if (!$this->data['tanggal_pengisian_perawat'])
+            return redirect('/');
         $this->get_rj_asesmen_awal_perawat_data();
         return view('page.rj.asesmen_awal_perawat_read', $this->data);
     }
 
     public function get_rj_asesmen_awal_perawat_edit()
     {
+        $this->get_list_document();
+        if (!$this->data['tanggal_pengisian_perawat'])
+            return redirect('/');
         $this->get_rj_asesmen_awal_perawat_data();
         return view('page.rj.asesmen_awal_perawat_edit', $this->data);
     }
