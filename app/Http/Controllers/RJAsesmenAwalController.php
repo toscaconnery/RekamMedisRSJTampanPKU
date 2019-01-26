@@ -990,6 +990,7 @@ class RJAsesmenAwalController extends Controller
         // HUMPTY DUMPTY /////////////
 
         $asesmen_keperawatan->jenis_resiko_jatuh = $request->jenis_resiko_jatuh;
+        $asesmen_keperawatan->skor_resiko_jatuh = 0;
         if($request->jenis_resiko_jatuh == 'humpty_dumpty')
         {
             $asesmen_keperawatan->usia = $request->usia;
@@ -997,7 +998,86 @@ class RJAsesmenAwalController extends Controller
             $asesmen_keperawatan->gangguan_kognitif = $request->gangguan_kognitif;
             $asesmen_keperawatan->faktor_lingkungan = $request->faktor_lingkungan;
             $asesmen_keperawatan->waktu_respon_obat = $request->waktu_respon_obat;
-            $asesmen_keperawatan->penggunaan_obat = $request->penggunaan_obat;            
+            $asesmen_keperawatan->penggunaan_obat = $request->penggunaan_obat;
+
+            //penghitungan skor
+            ////////////////////////
+            if ($asesmen_keperawatan->usia == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 4;
+            }
+            elseif ($asesmen_keperawatan->usia == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 3;
+            }
+            elseif ($asesmen_keperawatan->usia == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($asesmen_keperawatan->usia == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
+            ///////////////////////////
+            $jenis_kelamin = Session::get('jenis_kelamin');
+            if ($jenis_kelamin == 'L') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($jenis_kelamin == 'P') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
+            ////////////////////////
+            if ($asesmen_keperawatan->diagnosis_hd == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 4;
+            }
+            elseif ($asesmen_keperawatan->diagnosis_hd == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 3;
+            }
+            elseif ($asesmen_keperawatan->diagnosis_hd == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($asesmen_keperawatan->diagnosis_hd == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
+            //////////////////////////
+            if ($asesmen_keperawatan->gangguan_kognitif == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 3;
+            }
+            elseif ($asesmen_keperawatan->gangguan_kognitif == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($asesmen_keperawatan->gangguan_kognitif == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
+            ////////////////////
+            if ($asesmen_keperawatan->faktor_lingkungan == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 4;
+            }
+            elseif ($asesmen_keperawatan->faktor_lingkungan == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 3;
+            }
+            elseif ($asesmen_keperawatan->faktor_lingkungan == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($asesmen_keperawatan->faktor_lingkungan == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
+            ////////////////////////
+            if ($asesmen_keperawatan->waktu_respon_obat == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 3;
+            }
+            elseif ($asesmen_keperawatan->waktu_respon_obat == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($asesmen_keperawatan->waktu_respon_obat == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
+            ////////////////////////
+            if ($asesmen_keperawatan->penggunaan_obat == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 3;
+            }
+            elseif ($asesmen_keperawatan->penggunaan_obat == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($asesmen_keperawatan->penggunaan_obat == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
         }
         elseif($request->jenis_resiko_jatuh == 'morse')
         {
@@ -1007,22 +1087,173 @@ class RJAsesmenAwalController extends Controller
             $asesmen_keperawatan->terpasang_infus = $request->terpasang_infus;
             $asesmen_keperawatan->gaya_berjalan = $request->gaya_berjalan;
             $asesmen_keperawatan->status_mental_mrs = $request->status_mental_mrs;
+
+            if ($asesmen_keperawatan->riwayat_jatuh_mrs == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 25;
+            }
+            elseif ($asesmen_keperawatan->riwayat_jatuh_mrs == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+            ////////////////////
+            if ($asesmen_keperawatan->diagnosis_sekunder == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 15;
+            }
+            elseif ($asesmen_keperawatan->diagnosis_sekunder == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+            ///////////////////
+            if ($asesmen_keperawatan->alat_bantu == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 30;
+            }
+            elseif ($asesmen_keperawatan->alat_bantu == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 15;
+            }
+            elseif ($asesmen_keperawatan->alat_bantu == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+            //////////////////////
+            if ($asesmen_keperawatan->terpasang_infus == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 20;
+            }
+            elseif ($asesmen_keperawatan->terpasang_infus == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+            ///////////////////
+            if ($asesmen_keperawatan->gaya_berjalan == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 20;
+            }
+            elseif ($asesmen_keperawatan->gaya_berjalan == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->gaya_berjalan == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+            ////////////////
+            if ($asesmen_keperawatan->status_mental_mrs == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 15;
+            }
+            elseif ($asesmen_keperawatan->status_mental_mrs == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+
+
         }
         elseif($request->jenis_resiko_jatuh == 'edmunson')
         {
+            $asesmen_keperawatan->umur_edm = $request->umur_edm;
             $asesmen_keperawatan->status_mental_edm = $request->status_mental_edm;
-            $asesmen_keperawatan->diagnosis_edm = $request->diagnosis_edm;
             $asesmen_keperawatan->eliminasi = $request->eliminasi;
             $asesmen_keperawatan->pengobatan = $request->pengobatan;
             $asesmen_keperawatan->diagnosa = $request->diagnosa;
             $asesmen_keperawatan->ambulasi = $request->ambulasi;
             $asesmen_keperawatan->nutrisi = $request->nutrisi;
+            $asesmen_keperawatan->gangguan_pola_tidur = $request->gangguan_pola_tidur;
             $asesmen_keperawatan->riwayat_jatuh_edm = $request->riwayat_jatuh_edm;
+
+            if ($asesmen_keperawatan->umur_edm == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->umur_edm == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->umur_edm == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 26;
+            }
+            ///////////////////////
+            if ($asesmen_keperawatan->status_mental_edm == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 4;
+            }
+            elseif ($asesmen_keperawatan->status_mental_edm == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            elseif ($asesmen_keperawatan->status_mental_edm == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 13;
+            }
+            elseif ($asesmen_keperawatan->status_mental_edm == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 14;
+            }
+            /////////////////////////
+            if ($asesmen_keperawatan->eliminasi == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->eliminasi == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            elseif ($asesmen_keperawatan->eliminasi == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->eliminasi == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            elseif ($asesmen_keperawatan->eliminasi == '5') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            //////////////////////
+            if ($asesmen_keperawatan->pengobatan == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->pengobatan == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->pengobatan == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->pengobatan == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            ///////////////////////
+            if ($asesmen_keperawatan->diagnosa == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->diagnosa == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->diagnosa == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->diagnosa == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            ///////////////////////
+            if ($asesmen_keperawatan->ambulasi == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 7;
+            }
+            elseif ($asesmen_keperawatan->ambulasi == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->ambulasi == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->ambulasi == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->ambulasi == '5') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 15;
+            }
+            //////////////////////////
+            if ($asesmen_keperawatan->nutrisi == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            elseif ($asesmen_keperawatan->nutrisi == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+            ////////////////////////
+            if ($asesmen_keperawatan->gangguan_pola_tidur == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->gangguan_pola_tidur == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            //////////////////////
+            if ($asesmen_keperawatan->riwayat_jatuh_edm == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->riwayat_jatuh_edm == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+
         }
 
-        
-        // $diagnosa = new RJDiagnosaKeperawatan;
-        // $diagnosa->id_regis = $id_pasien;
         $umum = "";
         if(isset($request->umum_1)) {
             $umum .= "1-";
@@ -1123,21 +1354,12 @@ class RJAsesmenAwalController extends Controller
 
         $asesmen_keperawatan->obat_parental = $request->obat_parental;
         $asesmen_keperawatan->ekg = $request->ekg;
-        // $diagnosa->save();
 
         // EVALUASI TINDAKAN /////////
         // EVALUASI TINDAKAN /////////
-        // EVALUASI TINDAKAN /////////
-        // EVALUASI TINDAKAN /////////
-
-        // $data = new RJEvaluasiTindakan;
-        // $asesmen_keperawatan->id_regis = $id_pasien;
         $asesmen_keperawatan->implementasi = $request->implementasi;
         $asesmen_keperawatan->evaluasi = $request->evaluasi;
 
-        $asesmen_keperawatan->petugas = Auth::user()->nama;
-
-        // $data->save();
         $asesmen_keperawatan->save();
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
@@ -1149,225 +1371,6 @@ class RJAsesmenAwalController extends Controller
         return redirect('rj_asesmen_awal_perawat_read');
     }
 
-
-    // public function get_rj_asesmen_awal_dokter_read_2()
-    // {
-    //     $pasien = RJDataMedis::where('id', 1)->first();
-        
-    //     $this->data['id_regis'] = $pasien->id_regis;
-    //     $this->data['pewawancara'] = $pasien->pewawancara;
-    //     $this->data['keluhan_utama'] = $pasien->keluhan_utama;
-        
-    //     if(!is_null($pasien->riwayat_penyakit_sekarang)) {
-    //         $this->data['riwayat_penyakit_sekarang'] = $pasien->riwayat_penyakit_sekarang;
-    //     }
-
-    //     if(!is_null($pasien->riwayat_penyakit_dahulu)) {
-    //         $this->data['riwayat_penyakit_dahulu'] = $pasien->riwayat_penyakit_dahulu;
-    //     }
-
-    //     $this->data['riwayat_napza'] = $pasien->riwayat_napza;
-        
-    //     if(!is_null($pasien->lama_pemakaian)) {
-    //         $this->data['lama_pemakaian'] = $pasien->lama_pemakaian;
-    //     }
-
-    //     if(!is_null($pasien->cara_pemakaian)) {
-    //         $this->data['cara_pemakaian'] = $pasien->cara_pemakaian;
-    //     }
-
-    //     if(!is_null($pasien->latar_belakang_pemakaian)) {
-    //         $this->data['latar_belakang_pemakaian'] = $pasien->latar_belakang_pemakaian;
-    //     }
-
-    //     $this->data['riwayat_pendidikan'] = $pasien->riwayat_pekerjaan;
-    //     $this->data['riwayat_pekerjaan'] = $pasien->riwayat_pekerjaan;
-    //     $this->data['riwayat_perkawinan'] = $pasien->riwayat_perkawinan;
-        
-    //     if(!is_null($pasien->riwayat)) {
-    //         $this->data['riwayat'] = $pasien->riwayat;
-    //         $this->data['riwayat_penyakit_lainnya'] = $pasien->riwayat_penyakit_lainnya;
-    //     }
-
-    //     $this->data['riwayat_operasi'] = $pasien->riwayat_operasi;
-        
-    //     if(!is_null($pasien->jenis_operasi)) {
-    //         $this->data['jenis_operasi'] = $pasien->jenis_operasi;
-    //     }    
-
-    //     if(!is_null($pasien->waktu_operasi)) {
-    //         $this->data['waktu_operasi'] = $pasien->waktu_operasi;
-    //     }  
-
-    //     $this->data['riwayat_tranfusi'] = $pasien->riwayat_tranfusi;
-    //     $this->data['reaksi_tranfusi'] = $pasien->reaksi_tranfusi;
-
-    //     if(!is_null($pasien->reaksi_timbul)) {
-    //         $this->data['reaksi_timbul'] = $pasien->reaksi_timbul;
-    //     }
-    //     if(!is_null($pasien->waktu_operasi)) {
-    //         $this->data['riwayat_penyakit_dalam_keluarga'] = $pasien->riwayat_penyakit_dalam_keluarga;
-    //     }
-    //     if(!is_null($pasien->waktu_operasi)) {
-    //         $this->data['riwayat_pengobatan'] = $pasien->riwayat_pengobatan;
-    //     }
-    //     if(!is_null($pasien->riwayat_alergi)) {
-    //         $this->data['riwayat_alergi'] = $pasien->riwayat_alergi;
-    //     }
-
-    //     // OBAT YANG DIMINUM SAAT INI //////////
-    //     // OBAT YANG DIMINUM SAAT INI //////////
-    //     // OBAT YANG DIMINUM SAAT INI //////////
-    //     // OBAT YANG DIMINUM SAAT INI //////////
-
-    //     $obat = RJObatSaatIni::where('id', 1)->first();
-        
-    //     $this->data['id_regis'] = $obat->id_regis;
-
-    //     $this->data['nama_obat'] = $obat->nama_obat;
-    //     $this->data['dibawa'] = $obat->dibawa;
-    //     $this->data['jumlah'] = $obat->jumlah;
-    //     $this->data['tidak_dibawa'] = $obat->tidak_dibawa;
-    //     $this->data['keterangan'] = $obat->keterangan;
-
-    //     // PEMERIKSAAN FISIK ///////////
-    //     // PEMERIKSAAN FISIK ///////////
-    //     // PEMERIKSAAN FISIK ///////////
-    //     // PEMERIKSAAN FISIK ///////////
-
-    //     $pemeriksaan = RJPemeriksaanFisik::where('id', 1)->first();
-        
-    //     $this->data['id_regis'] = $pemeriksaan->id_regis;
-    //     $this->data['kepala'] = $pemeriksaan->kepala;
-    //     $this->data['leher'] = $pemeriksaan->leher;
-    //     $this->data['dada'] = $pemeriksaan->dada;
-    //     $this->data['jantung'] = $pemeriksaan->jantung;
-    //     $this->data['paru'] = $pemeriksaan->paru;
-    //     $this->data['perut'] = $pemeriksaan->perut;
-    //     $this->data['anggota_gerak'] = $pemeriksaan->anggota_gerak;
-
-    //     // STATUS PSIKIATRI ///////////
-    //     // STATUS PSIKIATRI ///////////
-    //     // STATUS PSIKIATRI ///////////
-    //     // STATUS PSIKIATRI ///////////
-
-    //     $status = RJStatusPsikiatri::where('id', 1)->first();
-        
-    //     $this->data['id_regis'] = $status->id_regis;
-    //     $this->data['penampilan'] = $status->penampilan;
-    //     $this->data['kesadaran'] = $status->kesadaran;
-    //     $this->data['orientasi'] = $status->orientasi;
-    //     $this->data['sikap'] = $status->sikap;
-    //     $this->data['keterangan'] = $status->keterangan;
-    //     $this->data['proses_pikir'] = $status->proses_pikir;
-    //     $this->data['bentuk_pikir'] = $status->bentuk_pikir;
-    //     $this->data['isi_pikir'] = $status->isi_pikir;
-    //     $this->data['mood'] = $status->mood;
-    //     $this->data['afek'] = $status->afek;
-    //     $this->data['halusinasi'] = $status->halusinasi;
-    //     $this->data['ilusi'] = $status->ilusi;
-    //     $this->data['konsentrasi'] = $status->konsentrasi;
-    //     $this->data['ingat'] = $status->ingat;
-    //     $this->data['abstrak'] = $status->abstrak;
-    //     $this->data['impuls'] = $status->impuls;
-    //     $this->data['nilai'] = $status->nilai;
-    //     $this->data['tilikan'] = $status->tilikan;
-    //     $this->data['dipercaya'] = $status->dipercaya;
-
-    //     // STATUS NEUROLOGI ////////////
-    //     // STATUS NEUROLOGI ////////////
-    //     // STATUS NEUROLOGI ////////////
-    //     // STATUS NEUROLOGI ////////////
-
-    //     $neuro = RJStatusNeurologi::where('id', 1)->first();
-        
-    //     $this->data['id_regis'] = $neuro->id_regis;
-    //     $this->data['meningeal'] = $neuro->meningeal;
-    //     $this->data['nervus'] = $neuro->nervus;
-    //     $this->data['motorik'] = $neuro->motorik;
-    //     $this->data['cerebellum'] = $neuro->cerebellum;
-    //     $this->data['vegetatif'] = $neuro->vegetatif;
-
-    //     // PEMERIKSAAN PENUNJANG ///////////
-    //     // PEMERIKSAAN PENUNJANG ///////////
-    //     // PEMERIKSAAN PENUNJANG ///////////
-    //     // PEMERIKSAAN PENUNJANG ///////////
-
-    //     // $pemeriksaan = new RJPemeriksaanPenunjang;
-    //     // $pemeriksaan->id_regis = 1;
-    //     // $pemeriksaan->jenis = $request->jenis;
-    //     // $pemeriksaan->jam_pemeriksaan = $request->jam_pemeriksaan;
-    //     // $pemeriksaan->jam_hasil = $request->jam_hasil;
-    //     // $pemeriksaan->keterangan = $request->keterangan;
-    //     // $pemeriksaan->laboratorium = $request->laboratorium;
-    //     // $pemeriksaan->radiologi = $request->radiologi;
-    //     // $pemeriksaan->ekg = $request->ekg;
-    //     // $pemeriksaan->lainnya = $request->lainnya;
-    //     // $pemeriksaan->save();
-
-        
-    //     // INSTRUMEN PENILAIAN ///////////////////
-    //     // INSTRUMEN PENILAIAN ///////////////////
-    //     // INSTRUMEN PENILAIAN ///////////////////
-    //     // INSTRUMEN PENILAIAN ///////////////////
-    //     $instrumen = RJInstrumenPenilaian::where('id', 1)->first();
-        
-    //     $this->data['id_regis'] = $instrumen->id_regis;
-    //     $this->data['gaduh_gelisah'] = $instrumen->gaduh_gelisah;
-    //     $this->data['ketidakoperatifan'] = $instrumen->ketidakoperatifan;
-    //     $this->data['permusuhan'] = $instrumen->permusuhan;
-    //     $this->data['pengendalian_impuls'] = $instrumen->pengendalian_impuls;
-    //     $this->data['ketegangan'] = $instrumen->ketegangan;
-    //     $this->data['bangsal'] = $instrumen->bangsal;
-    //     $this->data['tanggal_pemeriksaan'] = $instrumen->tanggal_pemeriksaan;
-    //     $this->data['panss_ec'] = $instrumen->panss_ec;
-    //     $this->data['gaff'] = $instrumen->gaff;
-
-    //     // DIAGNOSIS TINDAKAN TERAPI /////////////
-    //     // DIAGNOSIS TINDAKAN TERAPI /////////////
-    //     // DIAGNOSIS TINDAKAN TERAPI /////////////
-    //     // DIAGNOSIS TINDAKAN TERAPI /////////////
-
-    //     $diagnosis = RJDiagnosisTindakanTerapi::where('id', 1)->first();
-        
-    //     $this->data['id_regis'] = $diagnosis->id_regis;
-    //     $this->data['axis1'] = $diagnosis->axis1;
-    //     $this->data['axis2'] = $diagnosis->axis2;
-    //     $this->data['axis3'] = $diagnosis->axis3;
-    //     $this->data['axis4'] = $diagnosis->axis4;
-    //     $this->data['axis5'] = $diagnosis->axis5;
-    //     $this->data['utama'] = $diagnosis->utama;
-    //     $this->data['sekunder'] = $diagnosis->sekunder;
-    //     $this->data['jam'] = $diagnosis->jam;
-    //     $this->data['tindakan_terapi'] = $diagnosis->tindakan_terapi;
-    //     $this->data['daftar_masalah'] = $diagnosis->daftar_masalah;
-        
-    //     // TINDAK LANJUT ///////////////////
-    //     // TINDAK LANJUT ///////////////////
-    //     // TINDAK LANJUT ///////////////////
-    //     // TINDAK LANJUT ///////////////////
-        
-    //     $tindak = RJTindakLanjut::where('id', 1)->first();
-        
-    //     $this->data['id_regis'] = $tindak->id_regis;
-    //     $this->data['tindak_lanjut'] = $tindak->tindak_lanjut;
-    //     $this->data['perlu_dikontrol'] = $tindak->perlu_dikontrol;
-    //     $this->data['tanggal_kontrol'] = $tindak->tanggal_kontrol;
-    //     $this->data['ruangan'] = $tindak->ruangan;
-    //     $this->data['indikasi_rawat_inap'] = $tindak->indikasi_rawat_inap;
-    //     $this->data['alasan_menolak'] = $tindak->alasan_menolak;
-    //     $this->data['dirujuk_ke'] = $tindak->dirujuk_ke;
-    //     $this->data['alasan_dirujuk'] = $tindak->alasan_dirujuk;
-    //     $this->data['kesadaran'] = $tindak->kesadaran;
-    //     $this->data['kesadaran_lainnya'] = $tindak->kesadaran_lainnya;
-    //     $this->data['tensi'] = $tindak->tensi;
-    //     $this->data['nadi'] = $tindak->nadi;
-    //     $this->data['pernafasan'] = $tindak->pernafasan;
-    //     $this->data['suhu'] = $tindak->suhu;
-
-
-    //     return view('page.rj.asesmen_awal_dokter_read', $this->data);
-    // }
 
     public function get_rj_asesmen_awal_perawat_data()
     {
@@ -1473,14 +1476,16 @@ class RJAsesmenAwalController extends Controller
         $this->data['terpasang_infus'] = $pasien->terpasang_infus;
         $this->data['gaya_berjalan'] = $pasien->gaya_berjalan;
         $this->data['status_mental_mrs'] = $pasien->status_mental_mrs;
+        $this->data['umur_edm'] = $pasien->umur_edm;
         $this->data['status_mental_edm'] = $pasien->status_mental_edm;
-        $this->data['diagnosis_edm'] = $pasien->diagnosis_edm;
         $this->data['eliminasi'] = $pasien->eliminasi;
         $this->data['pengobatan'] = $pasien->pengobatan;
         $this->data['diagnosa'] = $pasien->diagnosa;
         $this->data['ambulasi'] = $pasien->ambulasi;
         $this->data['nutrisi'] = $pasien->nutrisi;
+        $this->data['gangguan_pola_tidur'] = $pasien->gangguan_pola_tidur;
         $this->data['riwayat_jatuh_edm'] = $pasien->riwayat_jatuh_edm;
+        $this->data['skor_resiko_jatuh'] = $pasien->skor_resiko_jatuh;
         $umum = explode('-', $pasien->umum);
         $this->data['umum'] = array();
         foreach ($umum as $key => $value) {
@@ -1522,6 +1527,7 @@ class RJAsesmenAwalController extends Controller
 
         $id_pasien = Session::get('id_pasien');
         $asesmen_keperawatan = RJAsesmenKeperawatan::where('id_regis', $id_pasien)->first();
+        $asesmen_keperawatan->id_regis = $id_pasien;
         $asesmen_keperawatan->id_user = Auth::user()->id;
         $asesmen_keperawatan->alasan_kunjungan = $request->alasan_kunjungan;
         $asesmen_keperawatan->hubungan_keluarga = $request->hubungan_keluarga;
@@ -1888,19 +1894,94 @@ class RJAsesmenAwalController extends Controller
         // HUMPTY DUMPTY /////////////
 
         $asesmen_keperawatan->jenis_resiko_jatuh = $request->jenis_resiko_jatuh;
+        $asesmen_keperawatan->skor_resiko_jatuh = 0;
         if($request->jenis_resiko_jatuh == 'humpty_dumpty')
         {
-            // $asesmen_keperawatan = new HumptyDumpty;
-            // $asesmen_keperawatan->id_regis = $id_pasien;
-            // $asesmen_keperawatan->jenis_form = 'awal';
             $asesmen_keperawatan->usia = $request->usia;
             $asesmen_keperawatan->diagnosis_hd = $request->diagnosis_hd;
             $asesmen_keperawatan->gangguan_kognitif = $request->gangguan_kognitif;
             $asesmen_keperawatan->faktor_lingkungan = $request->faktor_lingkungan;
             $asesmen_keperawatan->waktu_respon_obat = $request->waktu_respon_obat;
             $asesmen_keperawatan->penggunaan_obat = $request->penggunaan_obat;
-            // $asesmen_keperawatan->save();
-            
+
+            //penghitungan skor
+            ////////////////////////
+            if ($asesmen_keperawatan->usia == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 4;
+            }
+            elseif ($asesmen_keperawatan->usia == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 3;
+            }
+            elseif ($asesmen_keperawatan->usia == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($asesmen_keperawatan->usia == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
+            ///////////////////////////
+            $jenis_kelamin = Session::get('jenis_kelamin');
+            if ($jenis_kelamin == 'L') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($jenis_kelamin == 'P') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
+            ////////////////////////
+            if ($asesmen_keperawatan->diagnosis_hd == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 4;
+            }
+            elseif ($asesmen_keperawatan->diagnosis_hd == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 3;
+            }
+            elseif ($asesmen_keperawatan->diagnosis_hd == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($asesmen_keperawatan->diagnosis_hd == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
+            //////////////////////////
+            if ($asesmen_keperawatan->gangguan_kognitif == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 3;
+            }
+            elseif ($asesmen_keperawatan->gangguan_kognitif == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($asesmen_keperawatan->gangguan_kognitif == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
+            ////////////////////
+            if ($asesmen_keperawatan->faktor_lingkungan == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 4;
+            }
+            elseif ($asesmen_keperawatan->faktor_lingkungan == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 3;
+            }
+            elseif ($asesmen_keperawatan->faktor_lingkungan == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($asesmen_keperawatan->faktor_lingkungan == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
+            ////////////////////////
+            if ($asesmen_keperawatan->waktu_respon_obat == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 3;
+            }
+            elseif ($asesmen_keperawatan->waktu_respon_obat == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($asesmen_keperawatan->waktu_respon_obat == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
+            ////////////////////////
+            if ($asesmen_keperawatan->penggunaan_obat == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 3;
+            }
+            elseif ($asesmen_keperawatan->penggunaan_obat == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 2;
+            }
+            elseif ($asesmen_keperawatan->penggunaan_obat == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 1;
+            }
         }
         elseif($request->jenis_resiko_jatuh == 'morse')
         {
@@ -1910,22 +1991,173 @@ class RJAsesmenAwalController extends Controller
             $asesmen_keperawatan->terpasang_infus = $request->terpasang_infus;
             $asesmen_keperawatan->gaya_berjalan = $request->gaya_berjalan;
             $asesmen_keperawatan->status_mental_mrs = $request->status_mental_mrs;
+
+            if ($asesmen_keperawatan->riwayat_jatuh_mrs == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 25;
+            }
+            elseif ($asesmen_keperawatan->riwayat_jatuh_mrs == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+            ////////////////////
+            if ($asesmen_keperawatan->diagnosis_sekunder == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 15;
+            }
+            elseif ($asesmen_keperawatan->diagnosis_sekunder == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+            ///////////////////
+            if ($asesmen_keperawatan->alat_bantu == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 30;
+            }
+            elseif ($asesmen_keperawatan->alat_bantu == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 15;
+            }
+            elseif ($asesmen_keperawatan->alat_bantu == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+            //////////////////////
+            if ($asesmen_keperawatan->terpasang_infus == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 20;
+            }
+            elseif ($asesmen_keperawatan->terpasang_infus == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+            ///////////////////
+            if ($asesmen_keperawatan->gaya_berjalan == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 20;
+            }
+            elseif ($asesmen_keperawatan->gaya_berjalan == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->gaya_berjalan == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+            ////////////////
+            if ($asesmen_keperawatan->status_mental_mrs == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 15;
+            }
+            elseif ($asesmen_keperawatan->status_mental_mrs == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+
+
         }
         elseif($request->jenis_resiko_jatuh == 'edmunson')
         {
+            $asesmen_keperawatan->umur_edm = $request->umur_edm;
             $asesmen_keperawatan->status_mental_edm = $request->status_mental_edm;
-            $asesmen_keperawatan->diagnosis_edm = $request->diagnosis_edm;
             $asesmen_keperawatan->eliminasi = $request->eliminasi;
             $asesmen_keperawatan->pengobatan = $request->pengobatan;
             $asesmen_keperawatan->diagnosa = $request->diagnosa;
             $asesmen_keperawatan->ambulasi = $request->ambulasi;
             $asesmen_keperawatan->nutrisi = $request->nutrisi;
+            $asesmen_keperawatan->gangguan_pola_tidur = $request->gangguan_pola_tidur;
             $asesmen_keperawatan->riwayat_jatuh_edm = $request->riwayat_jatuh_edm;
+
+            if ($asesmen_keperawatan->umur_edm == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->umur_edm == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->umur_edm == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 26;
+            }
+            ///////////////////////
+            if ($asesmen_keperawatan->status_mental_edm == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 4;
+            }
+            elseif ($asesmen_keperawatan->status_mental_edm == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            elseif ($asesmen_keperawatan->status_mental_edm == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 13;
+            }
+            elseif ($asesmen_keperawatan->status_mental_edm == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 14;
+            }
+            /////////////////////////
+            if ($asesmen_keperawatan->eliminasi == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->eliminasi == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            elseif ($asesmen_keperawatan->eliminasi == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->eliminasi == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            elseif ($asesmen_keperawatan->eliminasi == '5') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            //////////////////////
+            if ($asesmen_keperawatan->pengobatan == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->pengobatan == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->pengobatan == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->pengobatan == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            ///////////////////////
+            if ($asesmen_keperawatan->diagnosa == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->diagnosa == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->diagnosa == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->diagnosa == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            ///////////////////////
+            if ($asesmen_keperawatan->ambulasi == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 7;
+            }
+            elseif ($asesmen_keperawatan->ambulasi == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->ambulasi == '3') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 10;
+            }
+            elseif ($asesmen_keperawatan->ambulasi == '4') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->ambulasi == '5') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 15;
+            }
+            //////////////////////////
+            if ($asesmen_keperawatan->nutrisi == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            elseif ($asesmen_keperawatan->nutrisi == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 0;
+            }
+            ////////////////////////
+            if ($asesmen_keperawatan->gangguan_pola_tidur == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->gangguan_pola_tidur == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+            //////////////////////
+            if ($asesmen_keperawatan->riwayat_jatuh_edm == '1') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 8;
+            }
+            elseif ($asesmen_keperawatan->riwayat_jatuh_edm == '2') {
+                $asesmen_keperawatan->skor_resiko_jatuh += 12;
+            }
+
         }
 
-        
-        // $diagnosa = new RJDiagnosaKeperawatan;
-        // $diagnosa->id_regis = $id_pasien;
         $umum = "";
         if(isset($request->umum_1)) {
             $umum .= "1-";
@@ -2028,8 +2260,10 @@ class RJAsesmenAwalController extends Controller
         $asesmen_keperawatan->ekg = $request->ekg;
 
         // EVALUASI TINDAKAN /////////
+        // EVALUASI TINDAKAN /////////
         $asesmen_keperawatan->implementasi = $request->implementasi;
         $asesmen_keperawatan->evaluasi = $request->evaluasi;
+
         $asesmen_keperawatan->save();
 
         return redirect('rj_asesmen_awal_perawat_read');

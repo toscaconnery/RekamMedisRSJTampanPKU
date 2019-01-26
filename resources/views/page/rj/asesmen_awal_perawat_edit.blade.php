@@ -1098,6 +1098,18 @@
                   <div class="col-lg-2"></div><h4>EDMUNSON (Jiwa) </h4>
                   <div class="form-group"></div>
                   <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">USIA</label>
+                    <div class="col-lg-7">
+                      <select class="form-control m-bot15" name="umur_edm">
+                        <option></option>
+                        <option {{$umur_edm == 1 ? 'selected' : ''}} value="1">Kurang dari 50 tahun </option>
+                        <option {{$umur_edm == 2 ? 'selected' : ''}} value="2">50 - 70 tahun</option>
+                        <option {{$umur_edm == 3 ? 'selected' : ''}} value="3">Lebih dari 80 tahun</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">STATUS MENTAL</label>
                     <div class="col-lg-7">
                       <select class="form-control m-bot15" name="status_mental_edm">
@@ -1110,18 +1122,6 @@
                     </div>
                   </div>
 
-                  <div class="form-group">
-                    <label class="control-label col-lg-2" for="inputSuccess">DIAGNOSIS</label>
-                    <div class="col-lg-7">
-                      <select class="form-control m-bot15" name="diagnosis_edm">
-                        <option></option>
-                        <option {{$diagnosis_edm == 1 ? 'selected' : ''}} value="1">Kelainan Neurologi </option>
-                        <option {{$diagnosis_edm == 2 ? 'selected' : ''}} value="2">Perubahan dalam oksigenasi(masalah saluran nafas, dehidtrasi, anemia, anoreksia, sinkop / sakit kepala, dll)</option>
-                        <option {{$diagnosis_edm == 3 ? 'selected' : ''}} value="3">Kelainan psikis / prilaku</option>
-                        <option {{$diagnosis_edm == 4 ? 'selected' : ''}} value="4">Diagnosis lain</option>
-                      </select>
-                    </div>
-                  </div>
 
                   <div class="form-group">
                     <label class="control-label col-lg-2" for="inputSuccess">ELIMINASI</label>
@@ -1185,6 +1185,17 @@
                         <option {{$nutrisi == 1 ? 'selected' : ''}} value="1">Mengkonsumsi sedikit makanan atau minuman  dalam 24 jam terakhir</option>
                         <option {{$nutrisi == 2 ? 'selected' : ''}} value="2">Tidak ada kelainan dengan nafsu makan</option>
                         <option {{$nutrisi == 3 ? 'selected' : ''}} value="3">Gangguan pola tidur yang dilaporkan oleh pasien, keluarga atau petugas</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label col-lg-2" for="inputSuccess">GANGGUAN POLA TIDUR</label>
+                    <div class="col-lg-7">
+                      <select class="form-control m-bot15" name="gangguan_pola_tidur">
+                        <option></option>
+                        <option {{$gangguan_pola_tidur == 1 ? 'selected' : ''}} value="1">Tidak ada gangguan tidur</option>
+                        <option {{$gangguan_pola_tidur == 2 ? 'selected' : ''}} value="2">Ada keluhan gangguan tidur yang dilaporkan oleh pasien, keluarga atau petugas</option>
                       </select>
                     </div>
                   </div>
