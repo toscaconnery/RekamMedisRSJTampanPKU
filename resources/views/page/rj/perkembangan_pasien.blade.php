@@ -35,8 +35,8 @@
                 </tr>
                 <tr>
                   <td>Catatan Perkembangan Pasien Terintegrasi</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/rj_perkembangan_pasien">Isi</a>
@@ -86,7 +86,7 @@
                       <input type="time" class="form-control" name="jam_1" required>
                     </td>
                     <td>
-                      <input type="text" class="form-control" name="profesi_1" value="">
+                      <input type="text" class="form-control" name="profesi_1" required>
                     </td>
                     <td>
                       <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_1">S: </textarea>
@@ -104,7 +104,7 @@
                       <input type="time" class="form-control" name="jam_2" required>
                     </td>
                     <td>
-                      <input type="text" class="form-control" name="profesi_2" value="">
+                      <input type="text" class="form-control" name="profesi_2" required>
                     </td>
                     <td>
                       <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_2">S: </textarea>
@@ -122,7 +122,7 @@
                       <input type="time" class="form-control" name="jam_3" required>
                     </td>
                     <td>
-                      <input type="text" class="form-control" name="profesi_3" value="">
+                      <input type="text" class="form-control" name="profesi_3" required>
                     </td>
                     <td>
                       <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_3">S: </textarea>
@@ -140,7 +140,7 @@
                       <input type="time" class="form-control" name="jam_4" required>
                     </td>
                     <td>
-                      <input type="text" class="form-control" name="profesi_4" value="">
+                      <input type="text" class="form-control" name="profesi_4" required>
                     </td>
                     <td>
                       <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_4">S: </textarea>
@@ -158,7 +158,7 @@
                       <input type="time" class="form-control" name="jam_5" required>
                     </td>
                     <td>
-                      <input type="text" class="form-control" name="profesi_5" value="">
+                      <input type="text" class="form-control" name="profesi_5" required>
                     </td>
                     <td>
                       <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_5">S: </textarea>
@@ -197,6 +197,12 @@
           a = parseInt(a) + 1;
           $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_'+a+'" required><input type="time" class="form-control" name="jam_'+a+'" required></td><td><input type="text" class="form-control" name="profesi_'+a+'" value=""></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="ttd_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
           document.getElementById('jumlah_form').value = a;
+          $('.sandbox-container').datepicker({
+            'format' : 'dd/mm/yyyy',
+            'autoclose' : true,
+            'todayHighlight' : true,
+            'toggleActive': true
+          });
         });
       });
     </script>

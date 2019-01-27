@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\RJPerkembanganPasien;
 use App\Models\ListDocument;
 use Session;
+use Auth;
 use View;
 
 class RJPerkembanganPasienController extends Controller
@@ -16,8 +17,23 @@ class RJPerkembanganPasienController extends Controller
         $this->data['title'] = 'Catatan Perkembangan Pasien Rawat Jalan';
     }
 
+    public function get_list_document()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        
+        $this->data['tanggal_pengisian'] = '';
+        $this->data['nama_pengisi']       = $daftar_dokumen->rj_perkembangan_pasien_petugas;
+
+        if ($daftar_dokumen->rj_perkembangan_pasien) {
+            $tanggal = RJPerkembanganPasien::where('id_regis', $id_pasien)->first()->created_at;
+            $this->data['tanggal_pengisian'] = date('j F Y', strtotime($tanggal));
+        }
+    }
+
     public function get_rj_perkembangan_pasien()
     {
+        $this->get_list_document();
     	return view('page.rj.perkembangan_pasien', $this->data);
     }
 
@@ -50,6 +66,7 @@ class RJPerkembanganPasienController extends Controller
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
         $daftar_dokumen->rj_perkembangan_pasien = True;
+        $daftar_dokumen->rj_perkembangan_pasien_petugas = Auth::user()->nama;
         $daftar_dokumen->save();
     	return redirect('rj_perkembangan_pasien_read');
     }
@@ -81,12 +98,14 @@ class RJPerkembanganPasienController extends Controller
 
     public function get_rj_perkembangan_pasien_read()
     {
+        $this->get_list_document();
         $this->get_rj_perkembangan_pasien_data();
         return view('page.rj.perkembangan_pasien_read', $this->data);
     }
 
     public function get_rj_perkembangan_pasien_edit()
     {
+        $this->get_list_document();
         $this->get_rj_perkembangan_pasien_data();
         return view('page.rj.perkembangan_pasien_edit', $this->data);
     }
