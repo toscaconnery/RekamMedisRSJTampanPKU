@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\RJTesKonselingHIV;
 use App\Models\ListDocument;
+use App\Models\RincianPasien;
 use Session;
+use Auth;
 use View;
 
 class RJTesKonselingHIVController extends Controller
@@ -16,9 +18,53 @@ class RJTesKonselingHIVController extends Controller
 		$this->data['title'] = "Tes & Konseling HIV";
 	}
 
+    public function get_list_document()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        
+        $this->data['tanggal_pengisian'] = '';
+        $this->data['nama_pengisi']       = $daftar_dokumen->rj_tes_konseling_hiv_petugas;
+
+        if ($daftar_dokumen->rj_tes_konseling_hiv) {
+            $tanggal = RJTesKonselingHIV::where('id_regis', $id_pasien)->first()->created_at;
+            $this->data['tanggal_pengisian'] = date('j F Y', strtotime($tanggal));
+        }
+    }
+
+    public function get_identitas()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data_pasien = RincianPasien::where('no_rm', $id_pasien)->first();
+        $this->data['nama_ibu'] = $data_pasien->nama_ibu;
+    }
+
     public function get_tes_konseling_hiv()
     {
+        $this->get_list_document();
+        if ($this->data['tanggal_pengisian']) {
+            return redirect('rj_tes_konseling_hiv_read');
+        }
+        $this->get_identitas();
     	return view('page.rj.tes_konseling_hiv', $this->data);
+    }
+
+    public function get_tes_konseling_hiv_delete()
+    {
+        $id_pasien = Session::get('id_pasien');
+
+        // menghapus dokumen
+        RJTesKonselingHIV::where('id_regis', $id_pasien)->delete();
+
+        // mengosongkan data di list dokumen
+        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
+        $list_document->rj_tes_konseling_hiv = false;
+        $list_document->rj_tes_konseling_hiv_petugas = null;
+        $list_document->save();
+        
+        Session::put('pesan_berhasil', 'Dokumen berhasil dihapus');
+
+        return redirect('/');
     }
 
     public function post_tes_konseling_hiv(Request $request)
@@ -253,6 +299,7 @@ class RJTesKonselingHIVController extends Controller
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
         $daftar_dokumen->rj_tes_konseling_hiv = True;
+        $daftar_dokumen->rj_tes_konseling_hiv_petugas = Auth::user()->nama;
         $daftar_dokumen->save();
 
     	return redirect('rj_tes_konseling_hiv_read');
@@ -378,12 +425,22 @@ class RJTesKonselingHIVController extends Controller
 
     public function get_tes_konseling_hiv_read()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
         $this->get_tes_konseling_hiv_data();
     	return view('page.rj.tes_konseling_hiv_read', $this->data);
     }
 
     public function get_tes_konseling_hiv_edit()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
         $this->get_tes_konseling_hiv_data();
         return view('page.rj.tes_konseling_hiv_edit', $this->data);
     }

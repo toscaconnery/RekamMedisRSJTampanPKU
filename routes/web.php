@@ -175,6 +175,7 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/rj_tes_konseling_hiv_read', 'RJTesKonselingHIVController@get_tes_konseling_hiv_read');
     Route::get('/rj_tes_konseling_hiv_edit', 'RJTesKonselingHIVController@get_tes_konseling_hiv_edit');
     Route::post('/rj_tes_konseling_hiv_edit', 'RJTesKonselingHIVController@post_tes_konseling_hiv_edit');
+    Route::get('/rj_tes_konseling_hiv_delete', 'RJTesKonselingHIVController@get_tes_konseling_hiv_delete');
     //dokumen konseling HIV
     Route::get('/rj_konselinghiv_pdf', 'RJTesKonselingHIVController@rj_konselinghiv_pdf');
     Route::get('/doc_rj_konselinghiv', function () {

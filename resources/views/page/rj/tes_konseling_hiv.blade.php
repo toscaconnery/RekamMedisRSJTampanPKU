@@ -35,8 +35,8 @@
                 </tr>
                 <tr>
                   <td>Formulir Tes dan Konseling HIV</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/rj_tes_konseling_hiv">Isi</a>
@@ -90,7 +90,7 @@
                 <div class="form-group">
                   <label class="col-lg-2 control-label">Nama Ibu Kandung</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" name="nama_ibu_kandung" required>
+                    <input type="text" class="form-control" name="nama_ibu_kandung" value="{{$nama_ibu}}" required>
                   </div>
                 </div>
               </div>
