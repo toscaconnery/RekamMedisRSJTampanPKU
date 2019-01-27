@@ -37,7 +37,7 @@ class RJHIVAntiRetrovalController extends Controller
     {
         $this->get_list_document();
         if ($this->data['tanggal_pengisian']) {
-            return redirect('rj_hiv_anti_retroval');
+            return redirect('rj_hiv_anti_retroval_read');
         }
         $id_pasien = Session::get('id_pasien');
         $detail_pasien = RincianPasien::where('no_rm', $id_pasien)->first();

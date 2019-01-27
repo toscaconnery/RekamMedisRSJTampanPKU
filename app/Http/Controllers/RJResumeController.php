@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\RJResume;
 use App\Models\ListDocument;
 use Session;
+use Auth;
 use View;
 
 class RJResumeController extends Controller
@@ -16,9 +17,27 @@ class RJResumeController extends Controller
         $this->data['title'] = 'Resume Rawat Jalan';
     }
 
+    public function get_list_document()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        
+        $this->data['tanggal_pengisian'] = '';
+        $this->data['nama_pengisi']       = $daftar_dokumen->rj_resume_petugas;
+
+        if ($daftar_dokumen->rj_resume) {
+            $tanggal = RJResume::where('id_regis', $id_pasien)->first()->created_at;
+            $this->data['tanggal_pengisian'] = date('j F Y', strtotime($tanggal));
+        }
+    }
+
     public function get_rj_resume()
     {
-    	return view('page.rj.resume', $this->data);
+        $this->get_list_document();
+        if ($this->data['tanggal_pengisian']) {
+            return redirect('rj_resume_read');
+        }
+        return view('page.rj.resume', $this->data);
     }
 
     public function post_rj_resume(Request $request)
@@ -47,8 +66,9 @@ class RJResumeController extends Controller
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
         $daftar_dokumen->rj_resume = True;
+        $daftar_dokumen->rj_resume_petugas = Auth::user()->nama;
         $daftar_dokumen->save();
-    	return redirect('daftar_dokumen');
+    	return redirect('rj_resume_read');
     }
 
     public function get_rj_resume_data()
@@ -76,12 +96,22 @@ class RJResumeController extends Controller
 
     public function get_rj_resume_read()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
         $this->get_rj_resume_data();
         return view('page.rj.resume_read', $this->data);
     }
 
     public function get_rj_resume_edit()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
         $this->get_rj_resume_data();
         return view('page.rj.resume_edit', $this->data);
     }
@@ -100,14 +130,20 @@ class RJResumeController extends Controller
             $str_riwayat = 'riwayat_'.$value;
             $str_nama_petugas = 'nama_petugas_'.$value;
 
-            $data = RJResume::where('id', $value)->first();
-            $data->tanggal = $request->$str_tanggal;
-            $data->diagnosis_prosedur = $request->$str_diagnosis_prosedur;
-            $data->kode_icd = $request->$str_kode_icd;
-            $data->obat = $request->$str_obat;
-            $data->riwayat = $request->$str_riwayat;
-            $data->nama_petugas = $request->$str_nama_petugas;
-            $data->save();
+            if (!isset($request->$str_tanggal)) {
+                //ini memang menggunakan 'id', bukan 'id_regis'
+                RJResume::where('id', $value)->delete();
+            }
+            else {
+                $data = RJResume::where('id', $value)->first();
+                $data->tanggal = $request->$str_tanggal;
+                $data->diagnosis_prosedur = $request->$str_diagnosis_prosedur;
+                $data->kode_icd = $request->$str_kode_icd;
+                $data->obat = $request->$str_obat;
+                $data->riwayat = $request->$str_riwayat;
+                $data->nama_petugas = $request->$str_nama_petugas;
+                $data->save();
+            }
         }
 
         //new
@@ -131,6 +167,26 @@ class RJResumeController extends Controller
                 $data->save();
             }
         }
+
+        return redirect('rj_resume_read');
+    }
+
+    public function get_rj_resume_delete()
+    {
+        $id_pasien = Session::get('id_pasien');
+
+        // menghapus semua dokumen
+        RJResume::where('id_regis', $id_pasien)->delete();
+
+        // mengosongkan data di list dokumen
+        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
+        $list_document->rj_resume = false;
+        $list_document->rj_resume_petugas = null;
+        $list_document->save();
+        
+        Session::put('pesan_berhasil', 'Dokumen berhasil dihapus');
+
+        return redirect('/');
     }
 
     public function rj_resume_pdf()

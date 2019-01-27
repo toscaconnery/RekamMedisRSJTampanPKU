@@ -247,6 +247,7 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/rj_resume_read', 'RJResumeController@get_rj_resume_read');
     Route::get('/rj_resume_edit', 'RJResumeController@get_rj_resume_edit');
     Route::post('/rj_resume_edit', 'RJResumeController@post_rj_resume_edit');
+    Route::get('/rj_resume_delete', 'RJResumeController@get_rj_resume_delete');
     //dokumen resume rawat jalan
     Route::get('/rj_resume_pdf', 'RJResumeController@rj_resume_pdf');
     Route::get('/doc_rj_resume', function () {

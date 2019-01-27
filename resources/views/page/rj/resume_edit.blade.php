@@ -38,14 +38,14 @@
                 </tr>
                 <tr>
                   <td>Resume Rawat Jalan</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/rj_resume">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/rj_resume_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/rj_resume_edit">Edit</i></a>
-                      <a class="btn btn-danger" href="#">Hapus</a>
+                      <a class="btn btn-danger" onclick="delete_document()" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>
@@ -87,8 +87,8 @@
                       $idx = 1;
                     @endphp
                     @foreach($pasien as $p)
-                      <tr>
-                        <td>{{$idx}}.</td>
+                      <tr id="form_resume_{{$p['id_data']}}">
+                        <td class="row_number">{{$idx}}.</td>
                         <td><input type="text" autocomplete="off" onkeydown="return false" class="form-control required sandbox-container" name="tanggal_{{$p['id_data']}}" value="{{$p['tanggal']}}"></td>
                         <td><input type="text" class="form-control required" name="diagnosis_prosedur_{{$p['id_data']}}" value="{{$p['diagnosis_prosedur']}}"></td>
                         <td><input type="text" class="form-control required" name="kode_icd_{{$p['id_data']}}" value="{{$p['kode_icd']}}"></td>
@@ -96,6 +96,7 @@
                         <td><input type="text" class="form-control required" name="riwayat_{{$p['id_data']}}" value="{{$p['riwayat']}}"></td>
                         <td><input type="text" class="form-control required" name="nama_petugas_{{$p['id_data']}}" value="{{$p['nama_petugas']}}"></td>
                         <td>
+                          <div class="btn-group"><button class="btn btn-default tombol_hapus_resume" type="button" id="tombol_hapus_resume_{{$p['id_data']}}"><i class="icon_close_alt2"></i></button></div>
                         </td>
                       </tr>
                       @php
@@ -134,10 +135,47 @@
         var b = document.getElementById('idx').value;
         b = parseInt(b) + 1;
         document.getElementById('idx').value = b;
-        $('#last_row_resume').before('<tr id="form_resume_new_'+a+'"><td>'+b+'.</td><td><input type="text" autocomplete="off" onkeydown="return false" class="form-control required sandbox-container" name="tanggal_new_'+a+'"></td><td><input type="text" class="form-control required" name="diagnosis_prosedur_new_'+a+'"></td><td><input type="text" class="form-control required" name="kode_icd_new_'+a+'"></td><td><input type="text" class="form-control required" name="obat_new_'+a+'"></td><td><input type="text" class="form-control required" name="riwayat_new_'+a+'"></td><td><input type="text" class="form-control required" name="nama_petugas_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_resume" type="button" id="tombol_hapus_resume_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+        $('#last_row_resume').before('<tr id="form_resume_new_'+a+'"><td class="row_number">'+b+'.</td><td><input type="text" autocomplete="off" onkeydown="return false" class="form-control required sandbox-container" name="tanggal_new_'+a+'"></td><td><input type="text" class="form-control required" name="diagnosis_prosedur_new_'+a+'"></td><td><input type="text" class="form-control required" name="kode_icd_new_'+a+'"></td><td><input type="text" class="form-control required" name="obat_new_'+a+'"></td><td><input type="text" class="form-control required" name="riwayat_new_'+a+'"></td><td><input type="text" class="form-control required" name="nama_petugas_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_resume" type="button" id="tombol_hapus_resume_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
         document.getElementById('jumlah_form_resume_new').value = a;
+        $('.sandbox-container').datepicker({
+          'format' : 'dd/mm/yyyy',
+          'autoclose' : true,
+          'todayHighlight' : true,
+          'toggleActive': true
+        });
+        refresh_row_number();
       });
     });
+  </script>
+
+  <script type="text/javascript">
+    function refresh_row_number() {
+      var index_row_number = 1;
+      $('.row_number').each(function(i) {
+        $(this).html(index_row_number);
+        index_row_number++;
+      }); 
+    };
+  </script>
+
+  <script type="text/javascript">
+    //melakukan reset dokumen  
+    function delete_document() {
+      Swal.fire({
+        title: 'Hapus dokumen ini?',
+        text: "Dokumen yang telah dihapus tidak akan bisa diakses lagi.",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, hapus dokumen ini',
+        cancelButtonText: 'Batalkan'
+      }).then((result) => {
+        if (result.value) {
+          window.location.href = '{{url('/rj_resume_delete')}}';
+        }
+      })
+    }
   </script>
 
   {{-- menghapus row resume--}}
@@ -146,7 +184,18 @@
       $(document).on('click', '.tombol_hapus_resume', function() {
         var x = $(this).attr('id');
         var nomor = x.substring(20)
-        $('#form_resume_'+nomor).remove();
+        var jumlah = $('.row_number').length;
+        if (jumlah < 2) {
+          Swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: 'Paling tidak harus terdapat satu data! Jika ingin menghapus semua data, tekan tombol Hapus',
+          })
+        }
+        else {
+          $('#form_resume_'+nomor).remove();
+          refresh_row_number();
+        }
       });
     });
   </script>

@@ -38,8 +38,8 @@
                 </tr>
                 <tr>
                   <td>Resume Rawat Jalan</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/rj_resume">Isi</a>
@@ -83,7 +83,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1.</td>
+                      <td class="row_number">1.</td>
                       <td><input type="text" autocomplete="off" onkeydown="return false" class="form-control required sandbox-container" name="tanggal_1"></td>
                       <td><input type="text" class="form-control required" name="diagnosis_prosedur_1"></td>
                       <td><input type="text" class="form-control required" name="kode_icd_1"></td>
@@ -121,10 +121,27 @@
       $('#tambah_form_resume').click(function() {
         var a = document.getElementById('jumlah_form_resume').value;
         a = parseInt(a) + 1;
-        $('#last_row_resume').before('<tr id="form_resume_'+a+'"><td>'+a+'</td><td><input type="text" autocomplete="off" onkeydown="return false" class="form-control required sandbox-container" name="tanggal_'+a+'"></td><td><input type="text" class="form-control required" name="diagnosis_prosedur_'+a+'"></td><td><input type="text" class="form-control required" name="kode_icd_'+a+'"></td><td><input type="text" class="form-control required" name="obat_'+a+'"></td><td><input type="text" class="form-control required" name="riwayat_'+a+'"></td><td><input type="text" class="form-control required" name="nama_petugas_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_resume" type="button" id="tombol_hapus_resume_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+        $('#last_row_resume').before('<tr id="form_resume_'+a+'"><td class="row_number">'+a+'</td><td><input type="text" autocomplete="off" onkeydown="return false" class="form-control required sandbox-container" name="tanggal_'+a+'"></td><td><input type="text" class="form-control required" name="diagnosis_prosedur_'+a+'"></td><td><input type="text" class="form-control required" name="kode_icd_'+a+'"></td><td><input type="text" class="form-control required" name="obat_'+a+'"></td><td><input type="text" class="form-control required" name="riwayat_'+a+'"></td><td><input type="text" class="form-control required" name="nama_petugas_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_resume" type="button" id="tombol_hapus_resume_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
         document.getElementById('jumlah_form_resume').value = a;
+        $('.sandbox-container').datepicker({
+          'format' : 'dd/mm/yyyy',
+          'autoclose' : true,
+          'todayHighlight' : true,
+          'toggleActive': true
+        });
+        refresh_row_number();
       });
     });
+  </script>
+
+  <script type="text/javascript">
+    function refresh_row_number() {
+      var index_row_number = 1;
+      $('.row_number').each(function(i) {
+        $(this).html(index_row_number);
+        index_row_number++;
+      }); 
+    };
   </script>
 
   {{-- menghapus row resume--}}
@@ -134,6 +151,7 @@
         var x = $(this).attr('id');
         var nomor = x.substring(20)
         $('#form_resume_'+nomor).remove();
+        refresh_row_number();
       });
     });
   </script>
