@@ -123,6 +123,21 @@ class RIRisikoNyeriController extends Controller
             $this->data['waktu'] = 'Malam';
         }
 
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RIRisikoNyeri::where('id_regis', $id_pasien)->orderBy('tanggal', 'desc')->get();
+        $this->data['pasien'] = array();
+        foreach ($pasien as $key => $value) {
+            if(!isset($this->data['pasien'][$value->tanggal])) {
+                $this->data['pasien'][$value->tanggal] = array();
+                $this->data['pasien'][$value->tanggal]['p'] = NULL;
+                $this->data['pasien'][$value->tanggal]['s'] = NULL;
+                $this->data['pasien'][$value->tanggal]['m'] = NULL;
+            }
+            $this->data['pasien'][$value->tanggal]['p'] = $value->skala_p;
+            $this->data['pasien'][$value->tanggal]['s'] = $value->skala_s;
+            $this->data['pasien'][$value->tanggal]['m'] = $value->skala_m;
+            $this->data['pasien'][$value->tanggal]['id'] = $value->id;
+        }
 
         $view = View::make('doc_ri_nyeri',$this->data);
         $contents = $view->render();

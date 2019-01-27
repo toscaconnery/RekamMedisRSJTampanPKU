@@ -23,18 +23,38 @@ header('Content-Type: application/pdf');
       </tr>
     </thead>
     
+
+
     <tbody>
-      <tr>
-        <td class="default" style="text-align:center;height:30px;">
-          {{ $tanggal }}
-        </td>
-        <td class="default" style="text-align:center;height:30px;">
-          {{ $waktu }}
-        </td>
-        <td class="default" style="text-align:center;height:30px;">
-          {{ $skala }}
-        </td>
-      </tr>       
+      @foreach($pasien as $key => $value)
+        <tr>
+          <td class="default" style="width: 33.3%; text-align: center;vertical-align:middle;" rowspan="3">
+            {{ $key }}
+          </td>
+          <td class="default" style="width: 33.3%; text-align: center;vertical-align:middle;">
+            P
+          </td>
+          <td class="default" style="width: 33.3%; text-align: center;vertical-align:middle;"> 
+           {{ $value['p'] }}
+          </td>
+        </tr>
+        <tr style="background-color: #fafafa">
+          <td class="default" style="width: 33.3%; text-align: center;vertical-align:middle;">
+            S
+          </td>
+          <td class="default" style="width: 33.3%; text-align: center;vertical-align:middle;"> 
+           {{ $value['s'] }}
+          </td>
+        </tr>
+        <tr style="background-color: #f4f5f7">
+          <td class="default" style="width: 33.3%; text-align: center;vertical-align:middle;">
+            M
+          </td>
+          <td class="default" style="width: 33.3%; text-align: center;vertical-align:middle;"> 
+            {{ $value['m'] }}
+          </td>
+        </tr>
+      @endforeach
     </tbody>
   </table>
 
