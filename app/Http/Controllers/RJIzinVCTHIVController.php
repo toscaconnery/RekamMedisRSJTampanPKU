@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\RJIzinVCTHIV;
 use App\Models\ListDocument;
 use Session;
+use Auth;
 use View;
 
 class RJIzinVCTHIVController extends Controller
@@ -13,12 +14,48 @@ class RJIzinVCTHIVController extends Controller
 	public function __construct()
 	{
         $this->middleware('haspatient');
-		$this->data['title'] = 'Transfer Pasien Internal Rumah Sakit';
+		$this->data['title'] = 'Izin VCT Untuk Tes HIV';
 	}
+
+    public function get_list_document()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        
+        $this->data['tanggal_pengisian'] = '';
+        $this->data['nama_pengisi']       = $daftar_dokumen->rj_izin_vct_hiv_petugas;
+
+        if ($daftar_dokumen->rj_izin_vct_hiv) {
+            $tanggal = RJIzinVCTHIV::where('id_regis', $id_pasien)->first()->created_at;
+            $this->data['tanggal_pengisian'] = date('j F Y', strtotime($tanggal));
+        }
+    }
 
     public function get_rj_izin_vct_hiv()
     {
+        $this->get_list_document();
+        if ($this->data['tanggal_pengisian']) {
+            return redirect('rj_izin_vct_hiv_read');
+        }
     	return view('page.rj.izin_vct_hiv', $this->data);
+    }
+
+    public function get_rj_izin_vct_hiv_delete()
+    {
+        $id_pasien = Session::get('id_pasien');
+
+        // menghapus dokumen
+        RJIzinVCTHIV::where('id_regis', $id_pasien)->delete();
+
+        // mengosongkan data di list dokumen
+        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
+        $list_document->rj_izin_vct_hiv = false;
+        $list_document->rj_izin_vct_hiv_petugas = null;
+        $list_document->save();
+        
+        Session::put('pesan_berhasil', 'Dokumen berhasil dihapus');
+
+        return redirect('/');
     }
 
     public function post_rj_izin_vct_hiv(Request $request)
@@ -35,9 +72,10 @@ class RJIzinVCTHIVController extends Controller
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
         $daftar_dokumen->rj_izin_vct_hiv = True;
+        $daftar_dokumen->rj_izin_vct_hiv_petugas = Auth::user()->nama;
         $daftar_dokumen->save();
 
-        return redirect('daftar_dokumen');
+        return redirect('rj_izin_vct_hiv_read');
     }
 
     public function get_rj_izin_vct_hiv_data()
@@ -54,12 +92,22 @@ class RJIzinVCTHIVController extends Controller
 
     public function get_rj_izin_vct_hiv_read()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
         $this->get_rj_izin_vct_hiv_data();
         return view('page.rj.izin_vct_hiv_read', $this->data);
     }
 
     public function get_rj_izin_vct_hiv_edit(Request $request)
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
         $this->get_rj_izin_vct_hiv_data();
         return view('page.rj.izin_vct_hiv_edit', $this->data);
     }
@@ -73,7 +121,7 @@ class RJIzinVCTHIVController extends Controller
         $data->hubungan = $request->hubungan;
         $data->save();
 
-        return redirect('daftar_dokumen');
+        return redirect('rj_izin_vct_hiv_read');
 
     }
 

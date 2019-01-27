@@ -187,6 +187,7 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/rj_izin_vct_hiv_read', 'RJIzinVCTHIVController@get_rj_izin_vct_hiv_read');
     Route::get('/rj_izin_vct_hiv_edit', 'RJIzinVCTHIVController@get_rj_izin_vct_hiv_edit');
     Route::post('/rj_izin_vct_hiv_edit', 'RJIzinVCTHIVController@post_rj_izin_vct_hiv_edit');
+    Route::get('/rj_izin_vct_hiv_delete', 'RJIzinVCTHIVController@get_rj_izin_vct_hiv_delete');
     //dokumen izinvct
     Route::get('/rj_izinvct_pdf', 'RJIzinVCTHIVController@rj_izinvct_pdf');
     Route::get('/doc_rj_izinvct', function () {
