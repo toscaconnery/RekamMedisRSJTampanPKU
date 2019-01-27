@@ -23,9 +23,6 @@
       <div class="row">
         <div class="col-lg-12">
           <section class="panel">
-            <header class="panel-heading">
-              Rencana Tindakan Keperawatan Klien
-            </header>
 
             <table class="table table-striped table-advance table-hover">
               <tbody>
@@ -33,8 +30,8 @@
                   <th><i class="icon_document_alt"></i> Dokumen</th>
                   <th><i class="icon_calendar"></i> Tanggal Pengisian</th>
                   <th><i class="icon_profile"></i> Pengisi</th>
-                  <th><i class="icon_cogs"></i> Status</th>
-                  <th><i class="icon_cogs"></i> Action</th>
+                  <th><i class="icon_mail_alt"></i> Status</th>
+                  <th><i class="icon_cogs"></i> Aksi</th>
                 </tr>
                 <tr>
                   <td>Rencana Tindakan Keperawatan Klien Dengan Perilaku Kekerasan</td>
@@ -43,9 +40,9 @@
                   <td>{{$file->ri_rencana_klien_1 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-info" href="#">Lihat</a>
-                      <a class="btn btn-success" href="#">PDF</a>
-                      <a class="btn btn-primary" href="#">Edit</a>
+                      <a class="btn btn-info" href="{{url('')}}/ri_rencana_klien_1">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_rencana_klien_1_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_rencana_klien_1_edit">Edit</i></a>
                     </div>
                   </td>
                 </tr>
@@ -56,9 +53,9 @@
                   <td>{{$file->ri_rencana_klien_2 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-info" href="#">Lihat</a>
-                      <a class="btn btn-success" href="#">PDF</a>
-                      <a class="btn btn-primary" href="#">Edit</a>
+                      <a class="btn btn-info" href="{{url('')}}/ri_rencana_klien_2">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_rencana_klien_2_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_rencana_klien_2_edit">Edit</i></a>
                     </div>
                   </td>
                 </tr>
@@ -69,9 +66,9 @@
                   <td>{{$file->ri_rencana_klien_3 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-info" href="#">Lihat</a>
-                      <a class="btn btn-success" href="#">PDF</a>
-                      <a class="btn btn-primary" href="#">Edit</a>
+                      <a class="btn btn-info" href="{{url('')}}/ri_rencana_klien_3">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_rencana_klien_3_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_rencana_klien_3_edit">Edit</i></a>
                     </div>
                   </td>
                 </tr>
@@ -82,9 +79,9 @@
                   <td>{{$file->ri_rencana_klien_4 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-info" href="#">Lihat</a>
-                      <a class="btn btn-success" href="#">PDF</a>
-                      <a class="btn btn-primary" href="#">Edit</a>
+                      <a class="btn btn-info" href="{{url('')}}/ri_rencana_klien_4">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_rencana_klien_4_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_rencana_klien_4_edit">Edit</i></a>
                     </div>
                   </td>
                 </tr>
@@ -95,9 +92,9 @@
                   <td>{{$file->ri_rencana_klien_5 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-info" href="#">Lihat</a>
-                      <a class="btn btn-success" href="#">PDF</a>
-                      <a class="btn btn-primary" href="#">Edit</a>
+                      <a class="btn btn-info" href="{{url('')}}/ri_rencana_klien_5">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_rencana_klien_5_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_rencana_klien_5_edit">Edit</i></a>
                     </div>
                   </td>
                 </tr>
@@ -108,9 +105,9 @@
                   <td>{{$file->ri_rencana_klien_6 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-info" href="#">Lihat</a>
-                      <a class="btn btn-success" href="#">PDF</a>
-                      <a class="btn btn-primary" href="#">Edit</a>
+                      <a class="btn btn-info" href="{{url('')}}/ri_rencana_klien_6">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_rencana_klien_6_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_rencana_klien_6_edit">Edit</i></a>
                     </div>
                   </td>
                 </tr>
@@ -121,9 +118,9 @@
                   <td>{{$file->ri_rencana_klien_7 == True ? 'Terisi' : 'Tidak Terisi'}}</td>
                   <td>
                     <div class="btn-group">
-                      <a class="btn btn-info" href="#">Lihat</a>
-                      <a class="btn btn-success" href="#">PDF</a>
-                      <a class="btn btn-primary" href="#">Edit</a>
+                      <a class="btn btn-info" href="{{url('')}}/ri_rencana_klien_7">Isi</a>
+                      <a class="btn btn-primary" href="{{url('')}}/ri_rencana_klien_7_read">Lihat</a>
+                      <a class="btn btn-success" href="{{url('')}}/ri_rencana_klien_7_edit">Edit</i></a>
                     </div>
                   </td>
                 </tr>
