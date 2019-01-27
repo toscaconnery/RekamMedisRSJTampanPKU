@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\RJIdentifikasiStresor;
 use App\Models\ListDocument;
+use App\Models\RincianPasien;
 use Session;
+use Auth;
 use View;
 
 class RJIdentifikasiStresorController extends Controller
@@ -16,9 +18,37 @@ class RJIdentifikasiStresorController extends Controller
         $this->data['title'] = 'Identifikasi Stresor';
     }
 
+    public function get_list_document()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        
+        $this->data['tanggal_pengisian'] = '';
+        $this->data['nama_pengisi']       = $daftar_dokumen->rj_identifikasi_stresor_petugas;
+
+        if ($daftar_dokumen->rj_identifikasi_stresor) {
+            $tanggal = RJIdentifikasiStresor::where('id_regis', $id_pasien)->first()->created_at;
+            $this->data['tanggal_pengisian'] = date('j F Y', strtotime($tanggal));
+        }
+    }
+
+    public function get_identitas()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $data_pasien = RincianPasien::where('no_rm', $id_pasien)->first();
+        $this->data['pekerjaan'] = $data_pasien->pekerjaan;
+        $this->data['pendidikan'] = $data_pasien->pendidikan;
+        $this->data['pernikahan'] = $data_pasien->pernikahan;
+    }
+
     public function get_rj_identifikasi_stresor()
     {
-    	return view('page.rj.identifikasi_stresor');
+        $this->get_list_document();
+        if ($this->data['tanggal_pengisian']) {
+            return redirect('rj_identifikasi_stresor_read');
+        }
+        $this->get_identitas();
+    	return view('page.rj.identifikasi_stresor', $this->data);
     }
 
     public function post_rj_identifikasi_stresor(Request $request)
@@ -37,6 +67,7 @@ class RJIdentifikasiStresorController extends Controller
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
         $daftar_dokumen->rj_identifikasi_stresor = True;
+        $daftar_dokumen->rj_identifikasi_stresor_petugas = Auth::user()->nama;
         $daftar_dokumen->save();
 
     	return redirect('rj_identifikasi_stresor_read');
@@ -44,7 +75,8 @@ class RJIdentifikasiStresorController extends Controller
 
     public function get_rj_identifikasi_stresor_data()
     {
-        $pasien = RJIdentifikasiStresor::where('id', 1)->first();
+        $id_pasien = Session::get('id_pasien');
+        $pasien = RJIdentifikasiStresor::where('id_regis', $id_pasien)->first();
         
         $this->data['id_regis'] = $pasien->id_regis;
         $this->data['lingkungan_fisik'] = $pasien->lingkungan_fisik;
@@ -59,6 +91,12 @@ class RJIdentifikasiStresorController extends Controller
 
     public function get_rj_identifikasi_stresor_read()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
+        $this->get_identitas();
         $this->get_rj_identifikasi_stresor_data();
         return view('page.rj.identifikasi_stresor_read', $this->data);
 
@@ -66,6 +104,12 @@ class RJIdentifikasiStresorController extends Controller
 
     public function get_rj_identifikasi_stresor_edit()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
+        $this->get_identitas();
         $this->get_rj_identifikasi_stresor_data();
         return view('page.rj.identifikasi_stresor_edit', $this->data);
     }
@@ -84,6 +128,24 @@ class RJIdentifikasiStresorController extends Controller
         $data->cara_mengatasi = $request->cara_mengatasi;
         $data->save();
         return redirect('rj_identifikasi_stresor_read');
+    }
+
+    public function get_rj_identifikasi_stresor_delete()
+    {
+        $id_pasien = Session::get('id_pasien');
+
+        // menghapus informasi edukasi list informasi
+        RJIdentifikasiStresor::where('id_regis', $id_pasien)->delete();
+
+        // mengosongkan data di list dokumen
+        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
+        $list_document->rj_identifikasi_stresor = false;
+        $list_document->rj_identifikasi_stresor_petugas = null;
+        $list_document->save();
+        
+        Session::put('pesan_berhasil', 'Dokumen berhasil dihapus');
+
+        return redirect('/');
     }
 
     public function rj_stressor_pdf()

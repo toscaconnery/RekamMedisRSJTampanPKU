@@ -35,14 +35,14 @@
                 </tr>
                 <tr>
                   <td>Identifikasi Sumber Stres (Stresor)</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/rj_identifikasi_stresor">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/rj_identifikasi_stresor_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/rj_identifikasi_stresor_edit">Edit</i></a>
-                      <a class="btn btn-danger" href="#">Hapus</a>
+                      <a class="btn btn-danger" onclick="delete_document()" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>
@@ -59,6 +59,33 @@
         <div class="col-lg-12">
           <form class="form-horizontal" method="post" action="rj_identifikasi_stresor_edit">
             {{ csrf_field() }}
+
+            <section class="panel">
+              <header class="panel-heading">
+                Identitas <font style="font-style: italic; color: #e83e3e">(Not editable)</font>
+              </header>
+              <div class="panel-body">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Status Perkawinan</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" value="{{$pernikahan}}" disabled>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Pendidikan</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" value="{{$pendidikan}}" disabled>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Pekerjaan / Organisasi</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" value="{{$pekerjaan}}" disabled>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             <section class="panel">
               <header class="panel-heading">
                 Pengaruh
@@ -134,6 +161,25 @@
     </section>
 
     @include('layouts.tailscript')
+
+    <script type="text/javascript">
+      function delete_document() {
+        Swal.fire({
+          title: 'Hapus dokumen ini?',
+          text: "Dokumen yang telah dihapus tidak akan bisa diakses lagi.",
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Ya, hapus dokumen ini',
+          cancelButtonText: 'Batalkan'
+        }).then((result) => {
+          if (result.value) {
+            window.location.href = '{{url('/rj_identifikasi_stresor_delete')}}';
+          }
+        })
+      }
+    </script>
     
   </body>
   <html>

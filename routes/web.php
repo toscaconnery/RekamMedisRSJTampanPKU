@@ -163,6 +163,7 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/rj_identifikasi_stresor_read', 'RJIdentifikasiStresorController@get_rj_identifikasi_stresor_read');
     Route::get('/rj_identifikasi_stresor_edit', 'RJIdentifikasiStresorController@get_rj_identifikasi_stresor_edit');
     Route::post('/rj_identifikasi_stresor_edit', 'RJIdentifikasiStresorController@post_rj_identifikasi_stresor_edit');
+    Route::get('/rj_identifikasi_stresor_delete', 'RJIdentifikasiStresorController@get_rj_identifikasi_stresor_delete');
     //dokumen stressor
     Route::get('/rj_stressor_pdf', 'RJIdentifikasiStresorController@rj_stressor_pdf');
     Route::get('/doc_rj_stressor', function () {
