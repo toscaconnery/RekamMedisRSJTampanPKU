@@ -35,7 +35,7 @@
                 </tr>
                 <tr>
                   <td>Triase Pasien</td>
-                  <td>{{date('j F Y', strtotime('today'))}}</td>
+                  <td>{{$tanggal_pengisian}}</td>
                   <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
@@ -645,6 +645,26 @@
         }
       });
     </script>
+
+    <script type='text/javascript'>
+         $(document).ready(function() {
+            //option A            
+            $("form").submit(function(e){
+                // alert('submit intercepted');
+                if($('input[name="jenis"]').is(':checked')) {
+                  $(this).submit();
+                }
+                else {
+                  Swal.fire({
+                    type: 'error',
+                    title: 'Jenis triase masih kosong',
+                    text: 'Silahkan pilih jenis triase pasien terlebih dahulu',
+                  })
+                  e.preventDefault(e);
+                };
+            });
+        });
+        </script>
 
   </body>
   <html>

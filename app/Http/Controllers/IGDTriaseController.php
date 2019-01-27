@@ -16,10 +16,27 @@ class IGDTriaseController extends Controller
         $this->middleware('haspatient');
         $this->data['title'] = 'Triase Pasien';
     }
+
+    public function get_list_document()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        
+        $this->data['tanggal_pengisian'] = '';
+        $this->data['nama_pengisi']       = $daftar_dokumen->igd_triase_petugas;
+
+        if ($daftar_dokumen->igd_triase) {
+            $tanggal = IGDTriase::where('id_regis', $id_pasien)->first()->created_at;
+            $this->data['tanggal_pengisian'] = date('j F Y', strtotime($tanggal));
+        }
+    }
     
     public function get_igd_triase()
     {
-        $this->data['nama_pengisi'] = Auth::user()->nama;
+        $this->get_list_document();
+        if ($this->data['tanggal_pengisian']) {
+            return redirect('igd_triase_read');
+        }
     	return view('page.igd.triase', $this->data);
     }
 
@@ -31,7 +48,6 @@ class IGDTriaseController extends Controller
     	$data->tanggal_masuk = $request->tanggal_masuk;
     	$data->jam = $request->jam;
     	$data->keluhan_utama = $request->keluhan_utama;
-        $data->petugas = Auth::user()->nama;
     	if(isset($request->doa)) {
     		$data->doa = True;
     	}
@@ -173,9 +189,10 @@ class IGDTriaseController extends Controller
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
         $daftar_dokumen->igd_triase = True;
+        $daftar_dokumen->igd_triase_petugas = Auth::user()->nama;
         $daftar_dokumen->save();
 
-    	return redirect('daftar_dokumen');
+    	return redirect('igd_triase_read');
     }
 
     public function get_igd_triase_data()
@@ -221,12 +238,22 @@ class IGDTriaseController extends Controller
 
     public function get_igd_triase_read()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
         $this->get_igd_triase_data();
         return view('page.igd.triase_read', $this->data);
     }
 
     public function get_igd_triase_edit()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
         $this->get_igd_triase_read();
         return view('page.igd.triase_edit', $this->data);
     }
@@ -400,7 +427,25 @@ class IGDTriaseController extends Controller
         }
         $pasien->save();
 
-        return redirect('daftar_dokumen');
+        return redirect('igd_triase_read');
+    }
+
+    public function get_igd_triase_delete()
+    {
+        $id_pasien = Session::get('id_pasien');
+
+        // menghapus semua dokumen
+        IGDTriase::where('id_regis', $id_pasien)->delete();
+
+        // mengosongkan data di list dokumen
+        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
+        $list_document->igd_triase = false;
+        $list_document->igd_triase_petugas = null;
+        $list_document->save();
+        
+        Session::put('pesan_berhasil', 'Dokumen berhasil dihapus');
+
+        return redirect('/');
     }
 
     public function igd_triase_pdf()

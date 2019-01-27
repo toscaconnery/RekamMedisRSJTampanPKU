@@ -35,14 +35,14 @@
                 </tr>
                 <tr>
                   <td>Triase Pasien</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/igd_triase">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/igd_triase_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/igd_triase_edit">Edit</i></a>
-                      <a class="btn btn-danger" href="#">Hapus</a>
+                      <a class="btn btn-danger" onclick="delete_document()" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>
@@ -651,6 +651,26 @@
         }
       });
     </script>
+
+    <script type="text/javascript">
+    //menghapus dokumen  
+    function delete_document() {
+      Swal.fire({
+        title: 'Hapus dokumen ini?',
+        text: "Dokumen yang telah dihapus tidak akan bisa diakses lagi.",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, hapus dokumen ini',
+        cancelButtonText: 'Batalkan'
+      }).then((result) => {
+        if (result.value) {
+          window.location.href = '{{url('/igd_triase_delete')}}';
+        }
+      })
+    }
+  </script>
 
   </body>
   <html>

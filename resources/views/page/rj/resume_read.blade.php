@@ -45,7 +45,7 @@
                       <a class="btn btn-info" href="{{url('')}}/rj_resume">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/rj_resume_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/rj_resume_edit">Edit</i></a>
-                      <a class="btn btn-danger" href="#">Hapus</a>
+                      <a class="btn btn-danger" onclick="delete_document()" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>
@@ -113,5 +113,26 @@
   </section>
 
   @include('layouts.tailscript')
+
+  <script type="text/javascript">
+    //melakukan reset dokumen  
+    function delete_document() {
+      Swal.fire({
+        title: 'Hapus dokumen ini?',
+        text: "Dokumen yang telah dihapus tidak akan bisa diakses lagi.",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya, hapus dokumen ini',
+        cancelButtonText: 'Batalkan'
+      }).then((result) => {
+        if (result.value) {
+          window.location.href = '{{url('/rj_resume_delete')}}';
+        }
+      })
+    }
+  </script>
+
 </body>
 <html>

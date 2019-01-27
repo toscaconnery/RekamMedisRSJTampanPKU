@@ -259,6 +259,7 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/igd_triase_read', 'IGDTriaseController@get_igd_triase_read');
     Route::get('/igd_triase_edit', 'IGDTriaseController@get_igd_triase_edit');
     Route::post('/igd_triase_edit', 'IGDTriaseController@post_igd_triase_edit');
+    Route::get('/igd_triase_delete', 'IGDTriaseController@get_igd_triase_delete');
     //dokumen igd_triase_pasien
     Route::get('/igd_triase_pdf', 'IGDTriaseController@igd_triase_pdf');
     Route::get('/doc_igd_triase', function () {
