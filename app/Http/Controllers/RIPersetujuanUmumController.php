@@ -116,11 +116,11 @@ class RIPersetujuanUmumController extends Controller
                             </td>    
 
                             <td class="doc_headerright_ans">
-                            <p>:  123456</p><br>
-                            <p>:  Joko Pangestu</p><br>
-                            <p>:  13/08/1992</p><br>
-                            <p>:  L</p><br>
-                            </td>                       
+                            <p>:  '.Session::get('id_pasien').'</p><br>
+                            <p>:  '.Session::get("nama").'</p><br>
+                            <p>:  '.Session::get("tanggal_lahir").'</p><br>
+                            <p>:  '.Session::get("jenis_kelamin").'</p><br>
+                            </td>                        
                         </tr>
   
                 </tbody>
