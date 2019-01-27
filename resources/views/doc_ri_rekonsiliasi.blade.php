@@ -26,7 +26,7 @@ header('Content-Type: application/pdf');
       <td class="konten_answer">: {{$field3}}</td>
     </tr>
     <tr>
-      <td class="konten_question" colspan="2"><?php if(isset($macam_kasus[1])) echo 'Tidak terdapat alergi'; else echo 'Riwayat Alergi/intoleransi (spesifikasi')?></td>
+      <td class="konten_question" colspan="2"><?php if(isset($macam_kasus[1])) echo 'Tidak terdapat alergi'; else echo 'Riwayat Alergi/intoleransi (spesifikasi)'?></td>
     </tr>
   </table>
 </div>
