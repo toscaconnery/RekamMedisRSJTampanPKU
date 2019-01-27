@@ -34,14 +34,14 @@
                 </tr>
                 <tr>
                   <td>Ikhtisar Perawatan HIV dan Terapi Antiretroviral (ART)</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/rj_hiv_anti_retroval">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/rj_hiv_anti_retroval_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/rj_hiv_anti_retroval_edit">Edit</i></a>
-                      <a class="btn btn-danger" href="#">Hapus</a>
+                      <a class="btn btn-danger" onclick="delete_document()" href="#">Hapus</a>
                     </div>
                   </td>
                   <td>
@@ -1416,6 +1416,12 @@
           a = parseInt(a) + 1;
           $('#last_row_keluarga').before('<tr id="form_'+a+'"> <td> <input type="text" class="form-control" name="nama_'+a+'"> </td> <td> <input type="text" class="form-control" name="hub_'+a+'"> </td> <td> <input type="number" class="form-control" name="umur_'+a+'"> </td> <td> <select class="form-control" name="hiv_'+a+'"> <option selected hidden></option> <option value="+">+</option> <option value="-">-</option> </select> </td> <td> <select class="form-control" name="art_'+a+'"> <option selected hidden></option> <option value="+">+</option> <option value="-">-</option> </select> </td> <td> <input type="text" class="form-control" name="noregnas_'+a+'"> </td> </tr>');
           document.getElementById('jumlah_form_keluarga').value = a;
+          $('.sandbox-container').datepicker({
+            'format' : 'dd/mm/yyyy',
+            'autoclose' : true,
+            'todayHighlight' : true,
+            'toggleActive': true
+          });
         });
       });
     </script>
@@ -1428,8 +1434,34 @@
           a = parseInt(a) + 1;
           $('#last_row_art').before('<tr id="art_'+a+'"> <td><input type="text" class="form-control" name="nama_panduan_orisinil_art_'+a+'"></td> <td> <input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_art_'+a+'"> </td> <td> <select class="form-control" name="substitusi_art_'+a+'"> <option selected hidden></option> <option value="1">1. Toksisitas/efek samping</option> <option value="2">2. Hamil</option> <option value="3">3. Risiko hamil</option> <option value="4">4. TB baru</option> <option value="5">5. Ada obat baru</option> <option value="6">6. Stock obat habis</option> <option value="7">7. Alasan lain</option> </select> </td> <td> <select class="form-control" name="switch_art_'+a+'"> <option value="0" selected hidden></option> <option value="1">1. Toksisitas/efek samping</option> <option value="2">2. Hamil</option> <option value="3">3. Risiko hamil</option> <option value="4">4. TB baru</option> <option value="5">5. Ada obat baru</option> <option value="6">6. Stock obat habis</option> <option value="7">7. Alasan lain</option> <option value="8">8. Gagal pengobatan secara klinis</option> <option value="9">9. Gagal Imunologis</option> <option value="10">10. Gagal virologis</option> </select> </td> <td> <select class="form-control" name="stop_art_'+a+'"> <option selected hidden></option> <option value="1">1. Toksisitas/efek samping</option> <option value="2">2. Hamil</option> <option value="3">3. Gagal_pengobatan</option> <option value="4">4. Adherens buruk</option> <option value="5">5. Sakit/MRS</option> <option value="6">6. Stok obat habis</option> <option value="7">7. Kekurangan biaya</option> <option value="8">8. Keputusan pasien lainnya</option> <option value="9">9. Lain-lain</option> </select> </td> <td> <input type="text" class="form-control" name="restar_art_'+a+'"> </td> <td> <input type="text" class="form-control" name="alasan_art_'+a+'"> </td> <td> <input type="text" class="form-control" name="nama_panduan_baru_art_'+a+'"> </td> </tr>');
           document.getElementById('jumlah_form_art').value = a;
+          $('.sandbox-container').datepicker({
+            'format' : 'dd/mm/yyyy',
+            'autoclose' : true,
+            'todayHighlight' : true,
+            'toggleActive': true
+          });
         });
       });
     </script>
+
+    <script type="text/javascript">
+      function delete_document() {
+        Swal.fire({
+          title: 'Hapus dokumen ini?',
+          text: "Dokumen yang telah dihapus tidak akan bisa diakses lagi.",
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Ya, hapus dokumen ini',
+          cancelButtonText: 'Batalkan'
+        }).then((result) => {
+          if (result.value) {
+            window.location.href = '{{url('/rj_hiv_anti_retroval_delete')}}';
+          }
+        })
+      }
+    </script>
+
   </body>
   <html>

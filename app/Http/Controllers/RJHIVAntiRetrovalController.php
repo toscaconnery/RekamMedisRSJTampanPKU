@@ -8,6 +8,7 @@ use App\Models\RJAntiretrovalFollowUp;
 use App\Models\ListDocument;
 use App\Models\RincianPasien;
 use Session;
+use Auth;
 use View;
 
 class RJHIVAntiRetrovalController extends Controller
@@ -18,8 +19,26 @@ class RJHIVAntiRetrovalController extends Controller
     	$this->data['title'] = 'Ikhtisar Perawatan HIV dan Terapi Antiretroval (ART)';
     }
 
+    public function get_list_document()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        
+        $this->data['tanggal_pengisian'] = '';
+        $this->data['nama_pengisi']       = $daftar_dokumen->rj_hiv_anti_retroval_petugas;
+
+        if ($daftar_dokumen->rj_hiv_anti_retroval) {
+            $tanggal = RJHIVAntiRetroval::where('id_regis', $id_pasien)->first()->created_at;
+            $this->data['tanggal_pengisian'] = date('j F Y', strtotime($tanggal));
+        }
+    }
+
     public function get_rj_hiv_anti_retroval()
     {
+        $this->get_list_document();
+        if ($this->data['tanggal_pengisian']) {
+            return redirect('rj_hiv_anti_retroval');
+        }
         $id_pasien = Session::get('id_pasien');
         $detail_pasien = RincianPasien::where('no_rm', $id_pasien)->first();
         $this->data['nama_ibu'] = $detail_pasien->nama_ibu;
@@ -368,9 +387,10 @@ class RJHIVAntiRetrovalController extends Controller
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
         $daftar_dokumen->rj_hiv_anti_retroval = True;
+        $daftar_dokumen->rj_hiv_anti_retroval_petugas = Auth::user()->nama;
         $daftar_dokumen->save();
 
-    	return redirect('daftar_dokumen');
+    	return redirect('rj_hiv_anti_retroval_read');
     }
 
     public function get_rj_hiv_anti_retroval_data()
@@ -514,14 +534,42 @@ class RJHIVAntiRetrovalController extends Controller
     
     }
 
+    public function get_rj_hiv_anti_retroval_delete()
+    {
+        $id_pasien = Session::get('id_pasien');
+
+        // menghapus dokumen
+        RJHIVAntiRetroval::where('id_regis', $id_pasien)->delete();
+
+        // mengosongkan data di list dokumen
+        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
+        $list_document->rj_hiv_anti_retroval = false;
+        $list_document->rj_hiv_anti_retroval_petugas = null;
+        $list_document->save();
+        
+        Session::put('pesan_berhasil', 'Dokumen berhasil dihapus');
+
+        return redirect('/');
+    }
+
     public function get_rj_hiv_anti_retroval_read()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
         $this->get_rj_hiv_anti_retroval_data();
         return view('page.rj.hiv_anti_retroval_read', $this->data);
     }
 
     public function get_rj_hiv_anti_retroval_edit()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
         $this->get_rj_hiv_anti_retroval_data();
         return view('page.rj.hiv_anti_retroval_edit', $this->data);
     }
@@ -793,7 +841,7 @@ class RJHIVAntiRetrovalController extends Controller
         $data->nama_klinik_baru = $request->nama_klinik_baru;
         $data->save();
 
-        return redirect('daftar_dokumen');
+        return redirect('rj_hiv_anti_retroval_read');
     }
 
     function convert()

@@ -199,6 +199,7 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/rj_hiv_anti_retroval_read', 'RJHIVAntiRetrovalController@get_rj_hiv_anti_retroval_read');
     Route::get('/rj_hiv_anti_retroval_edit', 'RJHIVAntiRetrovalController@get_rj_hiv_anti_retroval_edit');
     Route::post('/rj_hiv_anti_retroval_edit', 'RJHIVAntiRetrovalController@post_rj_hiv_anti_retroval_edit');
+    Route::get('/rj_hiv_anti_retroval_delete', 'RJHIVAntiRetrovalController@get_rj_hiv_anti_retroval_delete');
     //dokumen ikhtisar HIV
     Route::get('/rj_ikhtisarhiv_pdf', 'RJHIVAntiRetrovalController@rj_ikhtisarhiv_pdf');
     Route::get('/doc_rj_ikhtisarhiv', function () {
