@@ -282,6 +282,7 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/igd_catatan_kemajuan_read', 'IGDCatatanKemajuanController@get_igd_catatan_kemajuan_read');
     Route::get('/igd_catatan_kemajuan_edit', 'IGDCatatanKemajuanController@get_igd_catatan_kemajuan_edit');
     Route::post('/igd_catatan_kemajuan_edit', 'IGDCatatanKemajuanController@post_igd_catatan_kemajuan_edit');
+    Route::get('/igd_catatan_kemajuan_delete', 'IGDCatatanKemajuanController@get_igd_catatan_kemajuan_delete');
     //dokumen igd_catatan_kemajuan
     Route::get('/igd_kemajuan_pdf', 'IGDCatatanKemajuanController@igd_kemajuan_pdf');
     Route::get('/doc_igd_kemajuan', function () {

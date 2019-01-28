@@ -34,8 +34,8 @@
                 </tr>
                 <tr>
                   <td>Pemberian Informasi</td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/igd_catatan_kemajuan">Isi</a>
@@ -75,9 +75,9 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr id="form_1">
+                    <tr id="form_1" class="row_number">
                       <td>
-                        <input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control sandbox-container" name="tanggal_1">
+                        <input type="text" value="{{date("d/m/Y")}}" onkeydown="return false" autocomplete="off" size="16" class="form-control sandbox-container" name="tanggal_1">
                         <input type="time" class="form-control" name="jam_1" required>
                       </td>
                       <td>
@@ -119,8 +119,14 @@
       $('#tambah_form').click(function() {
         var a = document.getElementById('jumlah_form').value;
         a = parseInt(a) + 1;
-        $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control sandbox-container" name="tanggal_'+a+'"><input type="time" class="form-control" name="jam_'+a+'" required></td><td><textarea class="form-control" rows="3" name="catatan_kemajuan_'+a+'"></textarea></td><td><textarea class="form-control" rows="3" name="tindakan_terapi_'+a+'"></textarea></td><td><input type="text" class="form-control" name="nama_user_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+        $('#last_row').before('<tr id="form_'+a+'" class="row_number"><td><input type="text" onkeydown="return false" autocomplete="off" value="{{date("d/m/Y")}}" size="16" class="form-control sandbox-container" name="tanggal_'+a+'"><input type="time" class="form-control" name="jam_'+a+'" required></td><td><textarea class="form-control" rows="3" name="catatan_kemajuan_'+a+'"></textarea></td><td><textarea class="form-control" rows="3" name="tindakan_terapi_'+a+'"></textarea></td><td><input type="text" class="form-control" name="nama_user_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
         document.getElementById('jumlah_form').value = a;
+        $('.sandbox-container').datepicker({
+          'format' : 'dd/mm/yyyy',
+          'autoclose' : true,
+          'todayHighlight' : true,
+          'toggleActive': true
+        });
       });
     });
   </script>
@@ -131,7 +137,17 @@
       $(document).on('click', '.tombol_hapus', function() {
         var x = $(this).attr('id');
         var nomor = x.substring(13);
-        $('#form_'+nomor).remove();
+        var jumlah = $('.row_number').length;
+        if (jumlah < 2) {
+          Swal.fire({
+            type: 'error',
+            title: 'Oops...',
+            text: 'Paling tidak harus terdapat satu data! Jika ingin menghapus semua data, tekan tombol Hapus',
+          })
+        }
+        else {
+          $('#form_'+nomor).remove();
+        }
       });
     });
   </script>

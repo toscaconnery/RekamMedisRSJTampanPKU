@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\IGDCatatanKemajuan;
 use App\Models\ListDocument;
 use Session;
+use Auth;
 use View;
 
 class IGDCatatanKemajuanController extends Controller
@@ -16,8 +17,26 @@ class IGDCatatanKemajuanController extends Controller
 		$this->data['title'] = 'Catatan Kemajuan';
 	}
 
+    public function get_list_document()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        
+        $this->data['tanggal_pengisian'] = '';
+        $this->data['nama_pengisi']       = $daftar_dokumen->igd_catatan_kemajuan_petugas;
+
+        if ($daftar_dokumen->igd_catatan_kemajuan) {
+            $tanggal = IGDCatatanKemajuan::where('id_regis', $id_pasien)->first()->created_at;
+            $this->data['tanggal_pengisian'] = date('j F Y', strtotime($tanggal));
+        }
+    }
+
     public function get_igd_catatan_kemajuan()
     {
+        $this->get_list_document();
+        if ($this->data['tanggal_pengisian']) {
+            return redirect('rj_resume_read');
+        }
     	return view('page.igd.catatan_kemajuan', $this->data);
     }
 
@@ -45,9 +64,10 @@ class IGDCatatanKemajuanController extends Controller
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
         $daftar_dokumen->igd_catatan_kemajuan = True;
+        $daftar_dokumen->igd_catatan_kemajuan_petugas = Auth::user()->nama;
         $daftar_dokumen->save();
 
-    	return redirect('daftar_dokumen');
+    	return redirect('igd_catatan_kemajuan_read');
     }
 
     public function get_igd_catatan_kemajuan_data()
@@ -79,12 +99,22 @@ class IGDCatatanKemajuanController extends Controller
 
     public function get_igd_catatan_kemajuan_read()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
         $this->get_igd_catatan_kemajuan_data();
         return view('page.igd.catatan_kemajuan_read', $this->data);
     }
 
     public function get_igd_catatan_kemajuan_edit()
     {
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
         $this->get_igd_catatan_kemajuan_data();
         return view('page.igd.catatan_kemajuan_edit', $this->data);
     }
@@ -102,12 +132,19 @@ class IGDCatatanKemajuanController extends Controller
             $str_catatan_kemajuan = 'catatan_kemajuan_'.$value;
             $str_tindakan_terapi = 'tindakan_terapi_'.$value;
             $str_nama_user = 'nama_user_'.$value;
-            $data->tanggal = $request->$str_tanggal;
-            $data->jam = $request->$str_jam;
-            $data->catatan_kemajuan = $request->$str_catatan_kemajuan;
-            $data->tindakan_terapi = $request->$str_tindakan_terapi;
-            $data->nama_user = $request->$str_nama_user;
-            $data->save();
+
+            if (!isset($request->$str_tanggal)) {
+                 //ini memang menggunakan 'id', bukan 'id_regis'
+                IGDCatatanKemajuan::where('id', $value)->delete();
+            }
+            else {
+                $data->tanggal = $request->$str_tanggal;
+                $data->jam = $request->$str_jam;
+                $data->catatan_kemajuan = $request->$str_catatan_kemajuan;
+                $data->tindakan_terapi = $request->$str_tindakan_terapi;
+                $data->nama_user = $request->$str_nama_user;
+                $data->save();
+            }
         }
        
 
@@ -132,7 +169,26 @@ class IGDCatatanKemajuanController extends Controller
                 }
             }
         }
-        return redirect('daftar_dokumen');
+        return redirect('igd_catatan_kemajuan_read');
+    }
+
+
+    public function get_igd_catatan_kemajuan_delete()
+    {
+        $id_pasien = Session::get('id_pasien');
+
+        // menghapus semua dokumen
+        IGDCatatanKemajuan::where('id_regis', $id_pasien)->delete();
+
+        // mengosongkan data di list dokumen
+        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
+        $list_document->igd_catatan_kemajuan = false;
+        $list_document->igd_catatan_kemajuan_petugas = null;
+        $list_document->save();
+        
+        Session::put('pesan_berhasil', 'Dokumen berhasil dihapus');
+
+        return redirect('/');
     }
 
     public function igd_kemajuan_pdf()
