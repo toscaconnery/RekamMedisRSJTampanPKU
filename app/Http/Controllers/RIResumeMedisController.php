@@ -7,6 +7,7 @@ use App\Models\RIResumeMedis;
 use App\Models\ListDocument;
 use Session;
 use View;
+use Auth;
 
 class RIResumeMedisController extends Controller
 {
@@ -16,8 +17,27 @@ class RIResumeMedisController extends Controller
         $this->data['title'] = 'Resume Rawat Inap';
     }
 
+    public function get_list_document()
+    {
+        $id_pasien = Session::get('id_pasien');
+        $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->first();
+        
+        $this->data['tanggal_pengisian'] = '';
+        $this->data['nama_pengisi']       = $daftar_dokumen->ri_resume_medis_petugas;
+
+        if ($daftar_dokumen->ri_resume_medis) {
+            $tanggal = RIResumeMedis::where('id_regis', $id_pasien)->first()->created_at;
+            $this->data['tanggal_pengisian'] = date('j F Y', strtotime($tanggal));
+        }
+    }
+
     public function get_ri_resume_medis()
     {
+        $this->get_list_document();
+        if ($this->data['tanggal_pengisian']) {
+            return redirect('rj_resume_read');
+        }
+
     	return view('page.ri.resume_medis', $this->data);
     }
 
@@ -108,6 +128,7 @@ class RIResumeMedisController extends Controller
 
         $daftar_dokumen = ListDocument::where('id_regis', $id_pasien)->get()->first();
         $daftar_dokumen->ri_resume_medis = True;
+        $daftar_dokumen->ri_resume_medis_petugas = Auth::user()->nama;
         $daftar_dokumen->save();
 
         return redirect("daftar_dokumen");
@@ -187,11 +208,23 @@ class RIResumeMedisController extends Controller
     }
 
     public function get_ri_resume_medis_read(){
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
+
         $this->get_ri_resume_medis_data();
         return view('page.ri.resume_medis_read', $this->data);
     }
 
     public function get_ri_resume_medis_edit(){
+        $this->get_list_document();
+        if (!$this->data['nama_pengisi']) {
+            Session::put('pesan_kesalahan', 'Dokumen tidak ditemukan');
+            return redirect('/');
+        }
+
         $this->get_ri_resume_medis_data();
         return view('page.ri.resume_medis_edit', $this->data);
     }
@@ -282,6 +315,28 @@ class RIResumeMedisController extends Controller
         $data->save();
         return redirect('daftar_dokumen');
     }
+
+
+
+    public function get_ri_resume_medis_delete()
+    {
+        $id_pasien = Session::get('id_pasien');
+
+        // menghapus semua dokumen
+        RIResumeMedis::where('id_regis', $id_pasien)->delete();
+
+        // mengosongkan data di list dokumen
+        $list_document = ListDocument::where('id_regis', $id_pasien)->first();
+        $list_document->ri_resume_medis = false;
+        $list_document->ri_resume_medis_petugas = null;
+        $list_document->save();
+        
+        Session::put('pesan_berhasil', 'Dokumen berhasil dihapus');
+
+        return redirect('/');
+    }
+
+
 
     public function ri_resume_pdf()
     {

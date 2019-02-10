@@ -35,14 +35,14 @@
                 </tr>
               <tr>
                 <td>Resume Medis</td>
-                <td>20/08/2018</td>
-                <td>[Nama Pengisi]</td>
+                <td>{{$tanggal_pengisian}}</td>
+                <td>{{$nama_pengisi}}</td>
                 <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/ri_resume_medis">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/ri_resume_medis_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/ri_resume_medis_edit">Edit</i></a>
-                      <a class="btn btn-danger" href="#">Hapus</a>
+                      <a class="btn btn-danger" href="{{url('')}}/ri_resume_medis_delete">Hapus</a>
                     </div>
                   </td>
                   <td>
@@ -549,6 +549,12 @@
         a = parseInt(a) + 1;
         $('#last_row_tindakan').before('<tr id="form_tindakan_'+a+'"><td><input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_'+a+'"></td><td><input type="text" class="form-control" name="nama_tindakan_'+a+'"></td><td><input type="text" class="form-control" name="kode_icd_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus_tindakan" type="button" id="tombol_hapus_tindakan_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
         document.getElementById('jumlah_form_tindakan').value = a;
+        $('.sandbox-container').datepicker({
+          'format' : 'dd/mm/yyyy',
+          'autoclose' : true,
+          'todayHighlight' : true,
+          'toggleActive': true
+        });
       });
     });
   </script>

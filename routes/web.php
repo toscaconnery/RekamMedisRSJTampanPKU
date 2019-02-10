@@ -323,6 +323,7 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/ri_resume_medis_read', 'RIResumeMedisController@get_ri_resume_medis_read');
     Route::get('/ri_resume_medis_edit', 'RIResumeMedisController@get_ri_resume_medis_edit');
     Route::post('/ri_resume_medis_edit', 'RIResumeMedisController@post_ri_resume_medis_edit');
+    Route::get('/ri_resume_medis_delete', 'RIResumeMedisController@get_ri_resume_medis_delete');
     //dokumen resume medis rawat inap
     Route::get('/ri_resume_pdf', 'RIResumeMedisController@ri_resume_pdf');
     Route::get('/doc_ri_resume', function () {

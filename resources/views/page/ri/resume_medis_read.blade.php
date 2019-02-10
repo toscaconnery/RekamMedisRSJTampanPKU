@@ -35,14 +35,14 @@
                 </tr>
               <tr>
                 <td>Resume Medis</td>
-                <td>20/08/2018</td>
-                <td>[Nama Pengisi]</td>
+                <td>{{$tanggal_pengisian}}</td>
+                <td>{{$nama_pengisi}}</td>
                 <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/ri_resume_medis">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/ri_resume_medis_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/ri_resume_medis_edit">Edit</i></a>
-                      <a class="btn btn-danger" href="#">Hapus</a>
+                      <a class="btn btn-danger" href="{{url('')}}/ri_resume_medis_delete">Hapus</a>
                     </div>
                   </td>
                   <td>

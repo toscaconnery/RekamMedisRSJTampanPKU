@@ -35,7 +35,7 @@ class IGDCatatanKemajuanController extends Controller
     {
         $this->get_list_document();
         if ($this->data['tanggal_pengisian']) {
-            return redirect('rj_resume_read');
+            return redirect('igd_catatan_kemajuan_read');
         }
     	return view('page.igd.catatan_kemajuan', $this->data);
     }
