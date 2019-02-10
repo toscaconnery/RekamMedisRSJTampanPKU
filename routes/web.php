@@ -294,6 +294,7 @@ Route::group(['middleware' => 'loggedin'], function() {
     Route::get('/igd_catatan_perkembangan_read', 'IGDCatatanPerkembanganController@get_igd_catatan_perkembangan_read');
     Route::get('/igd_catatan_perkembangan_edit', 'IGDCatatanPerkembanganController@get_igd_catatan_perkembangan_edit');
     Route::post('/igd_catatan_perkembangan_edit', 'IGDCatatanPerkembanganController@post_igd_catatan_perkembangan_edit');
+    Route::get('/igd_catatan_perkembangan_delete', 'IGDCatatanPerkembanganController@get_igd_catatan_perkembangan_delete');
     //dokumen igd_catatan_perkembangan
     Route::get('/igd_perkembangan_pdf', 'IGDCatatanPerkembanganController@igd_perkembangan_pdf');
     Route::get('/doc_igd_perkembangan', function () {

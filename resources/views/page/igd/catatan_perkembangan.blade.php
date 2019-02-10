@@ -34,8 +34,8 @@
                 </tr>
                 <tr>
                   <td>Catatan Kemajuan </td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/igd_catatan_perkembangan">Isi</a>
@@ -123,6 +123,12 @@
         a = parseInt(a) + 1;
         $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control sandbox-container" name="tanggal_'+a+'"><input type="time" class="form-control" name="jam_'+a+'" required></td><td><textarea class="form-control" rows="3" name="profesi_bagian_'+a+'" style="resize: none;"></textarea></td><td><textarea class="form-control" rows="3" name="hasil_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="verifikasi_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
         document.getElementById('jumlah_form').value = a;
+        $('.sandbox-container').datepicker({
+          'format' : 'dd/mm/yyyy',
+          'autoclose' : true,
+          'todayHighlight' : true,
+          'toggleActive': true
+        });
       });
     });
   </script>

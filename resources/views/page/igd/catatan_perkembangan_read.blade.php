@@ -34,14 +34,14 @@
                 </tr>
                 <tr>
                   <td>Catatan Kemajuan </td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/igd_catatan_perkembangan">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/igd_catatan_perkembangan_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/igd_catatan_perkembangan_edit">Edit</i></a>
-                      <a class="btn btn-danger" href="#">Hapus</a>
+                      <a class="btn btn-danger" href="{{url('')}}/igd_catatan_perkembangan_delete">Hapus</a>
                     </div>
                   </td>
                   <td>

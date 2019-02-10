@@ -20,7 +20,6 @@ class haspatient
             $request->session()->put('pasien_belum_dipilih', 1);
             return redirect('/');
         }
-        dd("ada pasien");
         return $next($request);
     }
 }

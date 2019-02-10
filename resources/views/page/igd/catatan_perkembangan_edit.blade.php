@@ -34,14 +34,14 @@
                 </tr>
                 <tr>
                   <td>Catatan Kemajuan </td>
-                  <td>20/08/2018</td>
-                  <td>[Nama Pengisi]</td>
+                  <td>{{$tanggal_pengisian}}</td>
+                  <td>{{$nama_pengisi}}</td>
                   <td>
                     <div class="btn-group">
                       <a class="btn btn-info" href="{{url('')}}/igd_catatan_perkembangan">Isi</a>
                       <a class="btn btn-primary" href="{{url('')}}/igd_catatan_perkembangan_read">Lihat</a>
                       <a class="btn btn-success" href="{{url('')}}/igd_catatan_perkembangan_edit">Edit</i></a>
-                      <a class="btn btn-danger" href="#">Hapus</a>
+                      <a class="btn btn-danger" href="{{url('')}}/igd_catatan_perkembangan_delete">Hapus</a>
                     </div>
                   </td>
                   <td>
@@ -125,6 +125,12 @@
         a = parseInt(a) + 1;
         $('#last_row').before('<tr id="form_new_'+a+'"><td><input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control sandbox-container" name="tanggal_new_'+a+'"><input type="time" class="form-control" name="jam_new_'+a+'" required></td><td><textarea class="form-control" rows="3" name="profesi_bagian_new_'+a+'" style="resize: none;"></textarea></td><td><textarea class="form-control" rows="3" name="hasil_new_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="verifikasi_new_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_new_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
         document.getElementById('jumlah_form_new').value = a;
+        $('.sandbox-container').datepicker({
+          'format' : 'dd/mm/yyyy',
+          'autoclose' : true,
+          'todayHighlight' : true,
+          'toggleActive': true
+        });
       });
     });
   </script>
