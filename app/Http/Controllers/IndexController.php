@@ -13,9 +13,9 @@ class IndexController extends Controller
     public function __construct()
     {
         //check if the user has logged in
-        if(!Auth::user()) {
+        // if(!Auth::user()) {
             // return redirect('/login')->send();
-        }
+        // }
     }
 
 

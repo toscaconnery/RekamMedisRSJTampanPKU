@@ -174,7 +174,9 @@ class PasienController extends Controller
     {
         $this->middleware('haspatient');
         $this->data['title'] = 'Identifikasi Pasien';
-        
+            
+        $this->data['error_exist'] = false;
+
         $pasien = Pasien::where('no_rm', $id)->first();
         $this->data['no_rm'] = $pasien->no_rm;
         $this->data['nama_pasien'] = $pasien->nama_pasien;
@@ -183,6 +185,12 @@ class PasienController extends Controller
         $this->data['tanggal_pengisian'] = $pasien->created_at;
         $this->data['nama_pengisi'] = $pasien->petugas;
 
+        $exist = RincianPasien::where('no_rm', $id)->count();
+        if ($exist == 0) {
+            Session::put('pesan_kesalahan', 'Data Rusak. Rincian pasien tidak berhasil ditemukan.');
+            $this->data['error_exist'] = true;
+            return false;
+        }
         $rincian_pasien = RincianPasien::where('no_rm', $id)->first();
         $this->data['no_telp'] = $rincian_pasien->no_telp;
         $this->data['pernikahan'] = $rincian_pasien->pernikahan;
@@ -213,11 +221,32 @@ class PasienController extends Controller
 
     public function identifikasi_pasien_read($id = null)
     {
+        //Jika URL tidak memiliki ID pasien, tebak ID pasien yang ingin dilihat.
         if(!isset($id)) {
             $id = Session::get('id_pasien');
         }
-        $this->identifikasi_pasien_data($id);
-        return view('page.pasien.identifikasi_pasien_read', $this->data);
+        
+        //Berikan pesan kesalahan jika tidak berhasil menebak pasien yang ingin dilhat
+        if (empty($id)) {
+            Session::put('pesan_kesalahan', 'Tidak ada pasien yang terpilih. Silahkan pilih satu pasien terlebih dahulu.');
+            return redirect('/');
+        }
+
+        //Cek apakah ID pasien yang dipilih benar-benar ada.
+        $exist = Pasien::where('no_rm', $id)->count();
+        if ($exist > 0) {
+            $this->identifikasi_pasien_data($id);
+            //Karena data pasien terbagi di dua tabel, perlu dicek apakah datanya tersedia dikedua tabel tersebut.
+            if ($this->data['error_exist']) {
+                return redirect('/');
+            }
+            return view('page.pasien.identifikasi_pasien_read', $this->data);
+        } 
+        else {
+            Session::put('pesan_kesalahan', 'Pasien tidak ditemukan');
+            return redirect('/');
+        }
+
     }
 
     public function identifikasi_pasien_edit()
