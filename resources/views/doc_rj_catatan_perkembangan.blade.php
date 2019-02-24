@@ -30,7 +30,7 @@ header('Content-Type: application/pdf');
       <td class="box-c">{{$p['tanggal']}}<br>{{$p['jam']}}</td>
       <td class="box-c">{{$p['profesi']}}</td>
       <td class="box">{{$p['keterangan']}}</td>
-      <td class="box-c"><br><br></td>
+      <td class="box-c"><br><br>[nama]</td>
     </tr>
     @endforeach
   </tbody>

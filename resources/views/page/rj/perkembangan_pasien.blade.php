@@ -15,7 +15,7 @@
     <section class="wrapper">
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="page-header"><i class="fa fa-file-text-o"></i> Catatan Perkembangan Pasien Terintegrasi Rawat Jalan</h3>
+          <h3 class="page-header"><i class="fa fa-file-text-o"></i>Catatan Perkembangan Pasien Terintegrasi Rawat Jalan</h3>
         </div>
       </div>
       @include('layouts.bio')
@@ -185,6 +185,7 @@
         </div>
       </div>
     </section>
+    
 
     @include('layouts.tailscript')
 
@@ -195,7 +196,7 @@
           var a = document.getElementById('jumlah_form').value;
           // alert('a');
           a = parseInt(a) + 1;
-          $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_'+a+'" required><input type="time" class="form-control" name="jam_'+a+'" required></td><td><input type="text" class="form-control" name="profesi_'+a+'" value=""></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="5" class="form-control" name="keterangan_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="ttd_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+          $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" autocomplete="off" onkeydown="return false" class="form-control sandbox-container" name="tanggal_'+a+'" required><input type="time" class="form-control" name="jam_'+a+'" required></td><td><input type="text" class="form-control" name="profesi_'+a+'" value=""></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_'+a+'">S: </textarea><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_'+a+'">O: </textarea><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_'+a+'">A: </textarea><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_'+a+'">P: </textarea><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="keterangan_'+a+'">Lainnya: </textarea></td><td><input type="checkbox" class="form-control" name="ttd_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
           document.getElementById('jumlah_form').value = a;
           $('.sandbox-container').datepicker({
             'format' : 'dd/mm/yyyy',

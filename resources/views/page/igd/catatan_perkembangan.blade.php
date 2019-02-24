@@ -84,7 +84,11 @@
                         <textarea class="form-control" rows="3" name="profesi_bagian_1" style="resize: none;"></textarea>
                       </td>
                       <td>
-                        <textarea class="form-control" rows="3" name="hasil_1"></textarea>
+                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="hasil_1">S: </textarea>
+                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="hasil_1">O: </textarea>
+                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="hasil_1">A: </textarea>
+                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="hasil_1">P: </textarea>
+                        <textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="hasil_1">Lainnya: </textarea>
                       </td>
                       <td>
                         <input type="checkbox" class="form-control" name="verifikasi_1">
@@ -121,7 +125,7 @@
       $('#tambah_form').click(function() {
         var a = document.getElementById('jumlah_form').value;
         a = parseInt(a) + 1;
-        $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control sandbox-container" name="tanggal_'+a+'"><input type="time" class="form-control" name="jam_'+a+'" required></td><td><textarea class="form-control" rows="3" name="profesi_bagian_'+a+'" style="resize: none;"></textarea></td><td><textarea class="form-control" rows="3" name="hasil_'+a+'"></textarea></td><td><input type="checkbox" class="form-control" name="verifikasi_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
+        $('#last_row').before('<tr id="form_'+a+'"><td><input type="text" value="{{date("d/m/Y")}}" size="16" class="form-control sandbox-container" name="tanggal_'+a+'"><input type="time" class="form-control" name="jam_'+a+'" required></td><td><textarea class="form-control" rows="3" name="profesi_bagian_'+a+'" style="resize: none;"></textarea></td><td><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="hasil_'+a+'">S: </textarea><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="hasil_'+a+'">O: </textarea><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="hasil_'+a+'">A: </textarea><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="hasil_'+a+'">P: </textarea><textarea style="resize: vertical; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;" rows="1" class="form-control" name="hasil_'+a+'">Lainnya: </textarea></td></textarea></td><td><input type="checkbox" class="form-control" name="verifikasi_'+a+'"></td><td><div class="btn-group"><button class="btn btn-default tombol_hapus" type="button" id="tombol_hapus_'+a+'"><i class="icon_close_alt2"></i></button></div></td></tr>');
         document.getElementById('jumlah_form').value = a;
         $('.sandbox-container').datepicker({
           'format' : 'dd/mm/yyyy',
